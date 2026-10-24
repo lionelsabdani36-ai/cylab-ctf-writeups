@@ -7,11 +7,23 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 5 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 64 / 526+ challenges
+- **Total Solved:** 69 / 526+ challenges
 
 ---
 
-## Log Tantangan Terselesaikan (Batch 1 — 23 Oktober 2026)
+## Log Tantangan Terselesaikan
+
+### Batch 2 (24 Oktober 2026)
+
+| No | ID | Nama Tantangan | Kategori | Tingkat | Flag | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 778 | Perceptron Train Classic 1 | Artificial Intelligence | Easy | `academy{perceptron_classic_5rates_a95545ef}` | **SOLVED** | 2026-10-24 |
+| 2 | 777 | Perceptron Train Classic 0 | Artificial Intelligence | Easy | `academy{perceptron_classic_mode_02a3669e}` | **SOLVED** | 2026-10-24 |
+| 3 | 776 | Perceptron Train 3-Bit Parity | Artificial Intelligence | Easy | `academy{3b1t_p4r1ty_unl34rn4bl3_l1n34rly_5d1cd0f2}` | **SOLVED** | 2026-10-24 |
+| 4 | 775 | Perceptron Play Naught | Artificial Intelligence | Easy | `academy{n4ught_bu7_53p4r4b13_cf9e7c6f}` | **SOLVED** | 2026-10-24 |
+| 5 | 774 | Perceptron Play Alpha | Artificial Intelligence | Easy | `academy{11n34r1y_53p4r4813_a4f2a27b}` | **SOLVED** | 2026-10-24 |
+
+### Batch 1 (23 Oktober 2026)
 
 | No | ID | Nama Tantangan | Kategori | Tingkat | Flag | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
