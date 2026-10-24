@@ -7,22 +7,51 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 82 / 526+ challenges
+- **Total Solved:** 91 / 526+ challenges
 
 ---
 
-## Learning Paths Completed
-- [x] **Python in CTF's** (Playlist 15) — **6/6 Modules Completed (100%)**
-  - [x] Module 108: `Python in CTF's` (Video Instruction)
-  - [x] Module 109: `fixme1.py` (Challenge 240) -> `academy{1nd3nt1ty_cr1515_f63757ad}`
-  - [x] Module 110: `fixme2.py` (Challenge 241) -> `academy{3qu4l1ty_n0t_4551gnm3nt_ad29eab9}`
-  - [x] Module 111: `PW Crack 1` (Challenge 245) -> Solved
-  - [x] Module 112: `PW Crack 2` (Challenge 246) -> Solved
-  - [x] Module 113: `what's a net cat?` (Challenge 34) -> Solved
+## Assignments & Learning Paths Completed
+- [x] **Assignment: Seleksi Tim 2 (Guardian 71)** — **4/4 Learning Paths (100% Completed)**
+  - [x] General Skills in CTF's (Playlist 14)
+  - [x] The Beginner's Guide to the Challenge Library (Playlist 18)
+  - [x] Python in CTF's (Playlist 15)
+  - [x] Cryptography and Challenge Library Learning Intro (Playlist 17)
+- [x] **Learning Path: Python in CTF's** (Playlist 15) — **6/6 Modules Completed (100%)**
+- [x] **Learning Path: Cryptography and Challenge Library Learning Intro** (Playlist 17) — **15/15 Modules Completed (100%)**
+  - [x] Module 131: PicoLock (Game)
+  - [x] Module 132: Caesar Ciphers Explanation (Theory)
+  - [x] Module 133: caesar (Challenge 64) -> `academy{crossingtherubiconulqcojpd}`
+  - [x] Module 134: Base64 Explanation (Theory)
+  - [x] Module 135: interencdec (Challenge 418) -> `academy{caesar_d3cr9pt3d_82243097}`
+  - [x] Module 136: New Caesar (Challenge 158) -> `academy{et_tu?_a91448ca}`
+  - [x] Module 137: Resources (Theory)
+  - [x] Module 138: Mind your Ps and Qs (Challenge 162) -> `academy{sma11_N_n0_g0od_a3ac7152}`
+  - [x] Module 139: Mini RSA (Challenge 188) -> `academy{e_sh0u1d_b3_lArg3r_35f26e1a}`
+  - [x] Module 140: rsa_oracle (Challenge 422) -> `academy{su((3ss_(r@ck1ng_r3@_4263a53c}`
+  - [x] Module 141: Intro (Theory)
+  - [x] Module 142: PowerAnalysis: Warmup (Challenge 366) -> `academy{2c6f64dd531cfdc60257085fac8336c6}`
+  - [x] Module 143: PowerAnalysis: Part 1 (Challenge 364) -> `academy{b13adff8b4d1a89da8ba668043276276}`
+  - [x] Module 144: PowerAnalysis: Part 2 (Challenge 365) -> `academy{a202f6234c28153cf01c4dce23b7f9f5}`
+  - [x] Module 145: Outro (Theory)
 
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Cryptography & Side-Channels (Seleksi Tim 2 / 24 Oktober 2026)
+
+| No | ID | Nama Tantangan | Kategori | Tingkat | Flag | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 64 | caesar | Cryptography | Easy | `academy{crossingtherubiconulqcojpd}` | **SOLVED** | 2026-10-24 |
+| 2 | 418 | interencdec | Cryptography | Easy | `academy{caesar_d3cr9pt3d_82243097}` | **SOLVED** | 2026-10-24 |
+| 3 | 158 | New Caesar | Cryptography | Medium | `academy{et_tu?_a91448ca}` | **SOLVED** | 2026-10-24 |
+| 4 | 162 | Mind your Ps and Qs | Cryptography | Easy | `academy{sma11_N_n0_g0od_a3ac7152}` | **SOLVED** | 2026-10-24 |
+| 5 | 188 | Mini RSA | Cryptography | Medium | `academy{e_sh0u1d_b3_lArg3r_35f26e1a}` | **SOLVED** | 2026-10-24 |
+| 6 | 422 | rsa_oracle | Cryptography | Medium | `academy{su((3ss_(r@ck1ng_r3@_4263a53c}` | **SOLVED** | 2026-10-24 |
+| 7 | 366 | PowerAnalysis: Warmup | Cryptography | Medium | `academy{2c6f64dd531cfdc60257085fac8336c6}` | **SOLVED** | 2026-10-24 |
+| 8 | 364 | PowerAnalysis: Part 1 | Cryptography | Hard | `academy{b13adff8b4d1a89da8ba668043276276}` | **SOLVED** | 2026-10-24 |
+| 9 | 365 | PowerAnalysis: Part 2 | Cryptography | Hard | `academy{a202f6234c28153cf01c4dce23b7f9f5}` | **SOLVED** | 2026-10-24 |
 
 ### Learning Path Completion (24 Oktober 2026)
 
