@@ -7,11 +7,29 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 80 / 526+ challenges
+- **Total Solved:** 82 / 526+ challenges
+
+---
+
+## Learning Paths Completed
+- [x] **Python in CTF's** (Playlist 15) — **6/6 Modules Completed (100%)**
+  - [x] Module 108: `Python in CTF's` (Video Instruction)
+  - [x] Module 109: `fixme1.py` (Challenge 240) -> `academy{1nd3nt1ty_cr1515_f63757ad}`
+  - [x] Module 110: `fixme2.py` (Challenge 241) -> `academy{3qu4l1ty_n0t_4551gnm3nt_ad29eab9}`
+  - [x] Module 111: `PW Crack 1` (Challenge 245) -> Solved
+  - [x] Module 112: `PW Crack 2` (Challenge 246) -> Solved
+  - [x] Module 113: `what's a net cat?` (Challenge 34) -> Solved
 
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Learning Path Completion (24 Oktober 2026)
+
+| No | ID | Nama Tantangan | Kategori | Tingkat | Flag | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 240 | fixme1.py | General Skills | Easy | `academy{1nd3nt1ty_cr1515_f63757ad}` | **SOLVED** | 2026-10-24 |
+| 2 | 241 | fixme2.py | General Skills | Easy | `academy{3qu4l1ty_n0t_4551gnm3nt_ad29eab9}` | **SOLVED** | 2026-10-24 |
 
 ### Batch 3 (24 Oktober 2026 - Instant 10-Solve Run)
 
