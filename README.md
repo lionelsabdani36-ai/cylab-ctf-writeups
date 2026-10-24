@@ -5,7 +5,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Jadwal & Metrik Eksekusi
-- **Frekuensi:** 5 Challenge / Hari
+- **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
 - **Total Solved:** 69 / 526+ challenges
 
