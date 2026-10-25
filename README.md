@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 91 / 526+ challenges
+- **Total Solved:** 101 / 526+ challenges
 
 ---
 
@@ -38,6 +38,21 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 4 (25 Oktober 2026 - Daily 10-Solve Run)
+
+| No | ID | Nama Tantangan | Kategori | Tingkat | Flag | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 757 | ping-cmd | General Skills | Easy | `academy{p1nG_c0mm@nd_3xpL0it_su33essFuL_0b4c0edc}` | **SOLVED** | 2026-10-25 |
+| 2 | 740 | Piece by Piece | General Skills | Easy | `academy{z1p_and_spl1t_f1l3s_4r3_fun_6af185ac}` | **SOLVED** | 2026-10-25 |
+| 3 | 739 | Old Sessions | Web Exploitation | Easy | `academy{s3t_s3ss10n_3xp1rat10n5_3fdcb5e2}` | **SOLVED** | 2026-10-25 |
+| 4 | 735 | SUDO MAKE ME A SANDWICH | General Skills | Easy | `academy{ju57_5ud0_17_d8ae35f9}` | **SOLVED** | 2026-10-25 |
+| 5 | 727 | Quizploit | Binary Exploitation | Easy | `academy{my_bIn@4y_3xpl0it_fL@g_95fef02a}` | **SOLVED** | 2026-10-25 |
+| 6 | 719 | StegoRSA | Cryptography | Easy | `academy{rs4_k3y_1n_1mg_21d0a083}` | **SOLVED** | 2026-10-25 |
+| 7 | 715 | Shared Secrets | Cryptography | Easy | `academy{dh_s3cr3t_e3954beb}` | **SOLVED** | 2026-10-25 |
+| 8 | 712 | Password Profiler | General Skills | Easy | `academy{aliceaj7515}` | **SOLVED** | 2026-10-25 |
+| 9 | 710 | MultiCode | General Skills | Easy | `academy{nested_enc0ding_74af0c65}` | **SOLVED** | 2026-10-25 |
+| 10 | 698 | Binary Digits | Forensics | Easy | `academy{h1dd3n_1n_th3_b1n4ry_6d751a5b}` | **SOLVED** | 2026-10-25 |
 
 ### Cryptography & Side-Channels (Seleksi Tim 2 / 24 Oktober 2026)
 
