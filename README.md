@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 122 / 526+ challenges
+- **Total Solved:** 132 / 525 challenges
 
 ---
 
@@ -38,6 +38,21 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 7 (26 Oktober 2026 - Evening 10-Solve Run)
+
+| No | ID | Nama Tantangan | Kategori | Tingkat | Flag | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 406 | Bookmarklet | Web Exploitation | Easy | `academy{p@g3_turn3r_f1291985}` | **SOLVED** | 2026-10-26 |
+| 2 | 426 | Unminify | Web Exploitation | Easy | `academy{pr3tty_c0d3_c7ba568b}` | **SOLVED** | 2026-10-26 |
+| 3 | 427 | WebDecode | Web Exploitation | Easy | `academy{web_succ3ssfully_d3c0ded_9d72a8f6}` | **SOLVED** | 2026-10-26 |
+| 4 | 275 | Inspect HTML | Web Exploitation | Easy | `academy{1n5p3t0r_0f_h7ml_cdc35adf}` | **SOLVED** | 2026-10-26 |
+| 5 | 274 | Includes | Web Exploitation | Easy | `academy{1nclu51v17y_1of2_f7w_2of2_ce526b3b}` | **SOLVED** | 2026-10-26 |
+| 6 | 278 | Local Authority | Web Exploitation | Easy | `academy{j5_15_7r4n5p4r3n7_28ad420c}` | **SOLVED** | 2026-10-26 |
+| 7 | 242 | Glitch Cat | General Skills | Easy | `academy{gl17ch_m3_n07_3881dce3}` | **SOLVED** | 2026-10-26 |
+| 8 | 243 | HashingJobApp | General Skills | Easy | `academy{4ppl1c4710n_r3c31v3d_467e06bf}` | **SOLVED** | 2026-10-26 |
+| 9 | 414 | endianness | General Skills | Easy | `academy{3ndi4n_sw4p_su33ess_e14d0ec1}` | **SOLVED** | 2026-10-26 |
+| 10 | 404 | binhexa | General Skills | Easy | `academy{b1tw^3se_0p3eR@tI0n_su33essFuL_e453a847}` | **SOLVED** | 2026-10-26 |
 
 ### Batch 6 (26 Oktober 2026 - Afternoon 10+ Solve Run)
 
