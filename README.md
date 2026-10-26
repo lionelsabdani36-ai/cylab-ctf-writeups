@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 111 / 526+ challenges
+- **Total Solved:** 122 / 526+ challenges
 
 ---
 
@@ -38,6 +38,22 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 6 (26 Oktober 2026 - Afternoon 10+ Solve Run)
+
+| No | ID | Nama Tantangan | Kategori | Tingkat | Flag | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 444 | Scan Surprise | Forensics | Easy | `academy{p33k_@_b00_5f0d36e7}` | **SOLVED** | 2026-10-26 |
+| 2 | 425 | Time Machine | General Skills | Easy | `academy{t1m3m@ch1n3_aaac4598}` | **SOLVED** | 2026-10-26 |
+| 3 | 423 | Secret of the Polyglot | Forensics | Easy | `academy{f1u3n7_1n_pn9_&_pdf_07226ac4}` | **SOLVED** | 2026-10-26 |
+| 4 | 411 | Commitment Issues | General Skills | Easy | `academy{s@n1t1z3_21c298e5}` | **SOLVED** | 2026-10-26 |
+| 5 | 410 | Collaborative Development | General Skills | Easy | `academy{t3@mw0rk_m@k3s_th3_dr3@m_w0rk_f92d3827}` | **SOLVED** | 2026-10-26 |
+| 6 | 408 | CanYouSee | Forensics | Easy | `academy{ME74D47A_HIDD3N_a81d9431}` | **SOLVED** | 2026-10-26 |
+| 7 | 371 | repetitions | General Skills | Easy | `academy{base64_n3st3d_dic0d!n8_d0wnl04d3d_c7808bff}` | **SOLVED** | 2026-10-26 |
+| 8 | 250 | runme.py | General Skills | Easy | `academy{run_s4n1ty_run}` | **SOLVED** | 2026-10-26 |
+| 9 | 238 | Codebook | General Skills | Easy | `academy{c0d3b00k_455157_570b049a}` | **SOLVED** | 2026-10-26 |
+| 10 | 104 | Transformation | Reverse Engineering | Easy | `academy{16_bits_inst34d_of_8_790ba37e}` | **SOLVED** | 2026-10-26 |
+| 11 | 68 | The Numbers | Cryptography | Easy | `picoCTF{THENUMBERSMASON}` | **SOLVED** | 2026-10-26 |
 
 ### Batch 5 (26 Oktober 2026 - Daily 10-Solve Run)
 
