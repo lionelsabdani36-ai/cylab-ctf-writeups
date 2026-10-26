@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 132 / 525 challenges
+- **Total Solved:** 142 / 525 challenges
 
 ---
 
@@ -38,6 +38,21 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 8 (26 Oktober 2026 - Night 10-Solve Blitz Run)
+
+| No | ID | Nama Tantangan | Kategori | Tingkat | Flag | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 62 | 13 | Cryptography | Easy | `academy{not_too_bad_of_a_problem}` | **SOLVED** | 2026-10-26 |
+| 2 | 66 | dont-use-client-side | Web Exploitation | Easy | `academy{no_clients_plz_737003cf}` | **SOLVED** | 2026-10-26 |
+| 3 | 46 | logon | Web Exploitation | Easy | `academy{th3_c0nsp1r4cy_l1v3s_f77a0420}` | **SOLVED** | 2026-10-26 |
+| 4 | 132 | GET aHEAD | Web Exploitation | Easy | `academy{r3j3ct_th3_du4l1ty_57f62d9}` | **SOLVED** | 2026-10-26 |
+| 5 | 161 | Scavenger Hunt | Web Exploitation | Easy | `academy{th4ts_4_l0t_0f_pl4c3s_2_lO0k_2b9c61f}` | **SOLVED** | 2026-10-26 |
+| 6 | 173 | Cookies | Web Exploitation | Easy | `academy{3v3ry1_l0v3s_c00k135_90a3a7cb}` | **SOLVED** | 2026-10-26 |
+| 7 | 405 | Blame Game | General Skills | Easy | `academy{@sk_th3_1nt3rn_8bd9c746}` | **SOLVED** | 2026-10-26 |
+| 8 | 419 | IntroToBurp | Web Exploitation | Easy | `academy{#0TP_Bypvss_SuCc3$S_4d564d34}` | **SOLVED** | 2026-10-26 |
+| 9 | 442 | Binary Search | General Skills | Easy | `academy{g00d_gu355_8d52ff5b}` | **SOLVED** | 2026-10-26 |
+| 10 | 450 | Verify | Forensics | Easy | `academy{trust_but_verify_a1859a21}` | **SOLVED** | 2026-10-26 |
 
 ### Batch 7 (26 Oktober 2026 - Evening 10-Solve Run)
 
