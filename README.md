@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 142 / 525 challenges
+- **Total Solved:** 152 / 525 challenges
 
 ---
 
@@ -38,6 +38,21 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 9 (26 Oktober 2026 - Late Night 10-Solve Sprint Run)
+
+| No | ID | Nama Tantangan | Kategori | Tingkat | Flag | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 471 | FANTASY CTF | General Skills | Easy | `academy{m1113n1um_3d1710n_07462474}` | **SOLVED** | 2026-10-26 |
+| 2 | 469 | Cookie Monster Secret Recipe | Web Exploitation | Easy | `academy{c00k1e_m0nster_l0ves_c00kies_1E06422A}` | **SOLVED** | 2026-10-26 |
+| 3 | 520 | Crack the Gate 1 | Web Exploitation | Easy | `academy{brut4_f0rc4_dc8f7ab6}` | **SOLVED** | 2026-10-26 |
+| 4 | 476 | head-dump | Web Exploitation | Easy | `academy{Pat!3nt_15_Th3_K3y_cc0f4fda}` | **SOLVED** | 2026-10-26 |
+| 5 | 492 | SSTI1 | Web Exploitation | Easy | `academy{s4rv3r_s1d3_t3mp14t3_1nj3ct10n5_4r3_c001_31d5a337}` | **SOLVED** | 2026-10-26 |
+| 6 | 475 | hashcrack | Cryptography | Easy | `academy{UseStr0nG_h@shEs_&PaSswDs!_062c2b77}` | **SOLVED** | 2026-10-26 |
+| 7 | 470 | EVEN RSA CAN BE BROKEN??? | Cryptography | Easy | `academy{tw0_1$_pr!m3207f407f}` | **SOLVED** | 2026-10-26 |
+| 8 | 472 | Flag Hunters | Reverse Engineering | Easy | `academy{70637h3r_f0r3v3r_42783b07}` | **SOLVED** | 2026-10-26 |
+| 9 | 433 | format string 0 | Binary Exploitation | Easy | `academy{7h3_cu570m3r_15_n3v3r_SEGFAULT_9582df7b}` | **SOLVED** | 2026-10-26 |
+| 10 | 438 | heap 0 | Binary Exploitation | Easy | `academy{my_first_heap_overflow_dc62a472}` | **SOLVED** | 2026-10-26 |
 
 ### Batch 8 (26 Oktober 2026 - Night 10-Solve Blitz Run)
 
