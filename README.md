@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 101 / 526+ challenges
+- **Total Solved:** 111 / 526+ challenges
 
 ---
 
@@ -38,6 +38,21 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 5 (26 Oktober 2026 - Daily 10-Solve Run)
+
+| No | ID | Nama Tantangan | Kategori | Tingkat | Flag | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 530 | Riddle Registry | Forensics | Easy | `academy{puzzl3d_m3tadata_f0und!_2d947385}` | **SOLVED** | 2026-10-26 |
+| 2 | 527 | Log Hunt | General Skills | Easy | `academy{us3_y0urlinux_sk1lls_cedfa5fb}` | **SOLVED** | 2026-10-26 |
+| 3 | 524 | Hidden in plainsight | Forensics | Easy | `academy{h1dd3n_1n_1m4g3_d0c4a4e2}` | **SOLVED** | 2026-10-26 |
+| 4 | 523 | Flag in Flame | Forensics | Easy | `academy{forensics_analysis_is_amazing_2043dbd1}` | **SOLVED** | 2026-10-26 |
+| 5 | 519 | Corrupted file | Forensics | Easy | `academy{r3st0r1ng_th3_by73s_a6f66bd7}` | **SOLVED** | 2026-10-26 |
+| 6 | 505 | DISKO 1 | Forensics | Easy | `academy{1t5_ju5t_4_5tr1n9_19d7626c}` | **SOLVED** | 2026-10-26 |
+| 7 | 463 | Rust fixme 3 | General Skills | Easy | `academy{n0w_y0uv3_f1x3d_1h3m_411}` | **SOLVED** | 2026-10-26 |
+| 8 | 462 | Rust fixme 2 | General Skills | Easy | `academy{4r3_y0u_h4v1n5_fun_y31?}` | **SOLVED** | 2026-10-26 |
+| 9 | 461 | Rust fixme 1 | General Skills | Easy | `academy{4r3_y0u_4_ru$t4c30n_n0w?}` | **SOLVED** | 2026-10-26 |
+| 10 | 460 | RED | Forensics | Easy | `academy{r3d_1s_th3_ult1m4t3_cur3_f0r_54dn355_}` | **SOLVED** | 2026-10-26 |
 
 ### Batch 4 (25 Oktober 2026 - Daily 10-Solve Run)
 
