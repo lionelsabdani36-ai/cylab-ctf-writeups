@@ -1,0 +1,356 @@
+{
+  "suite": "Omnirush Automated Solver Validation & Test Execution",
+  "batch": 11,
+  "timestamp_utc": "2026-10-27 04:53:00 UTC",
+  "total_challenges": 11,
+  "passed": 11,
+  "all_passed": true,
+  "reproducibility_rate": 1.0,
+  "latency_metrics": {
+    "mean_computational_ms": 336.08,
+    "mean_network_bound_ms": 102.44
+  },
+  "challenges": [
+    {
+      "id": 19,
+      "name": "so_meta",
+      "category": "Forensics",
+      "script": "solve_19_so_meta.py",
+      "type": "Network/Forensics",
+      "status": "PASS",
+      "reproducibility": {
+        "identical_runs": true,
+        "iterations": 3,
+        "flags_returned": [
+          "academy{s0_m3ta_d4aa0408}",
+          "academy{s0_m3ta_d4aa0408}",
+          "academy{s0_m3ta_d4aa0408}"
+        ]
+      },
+      "performance": {
+        "mean_ms": 119.05,
+        "min_ms": 111.46,
+        "max_ms": 122.93,
+        "std_ms": 6.57
+      },
+      "flag_integrity": {
+        "flag": "academy{s0_m3ta_d4aa0408}",
+        "length": 25,
+        "format_valid": true,
+        "expected_pattern_match": true,
+        "sha256": "3c01ebd895b055da144c6c8041846a4d38e3c883232096d2cabc912044a134cc"
+      },
+      "errors": []
+    },
+    {
+      "id": 12,
+      "name": "vault_door_1",
+      "category": "Reverse Engineering",
+      "script": "solve_12_vault_door_1.py",
+      "type": "Network/Static Analysis",
+      "status": "PASS",
+      "reproducibility": {
+        "identical_runs": true,
+        "iterations": 3,
+        "flags_returned": [
+          "academy{d35cr4mbl3_tH3_cH4r4cT3r5_179fbd}",
+          "academy{d35cr4mbl3_tH3_cH4r4cT3r5_179fbd}",
+          "academy{d35cr4mbl3_tH3_cH4r4cT3r5_179fbd}"
+        ]
+      },
+      "performance": {
+        "mean_ms": 94.29,
+        "min_ms": 89.03,
+        "max_ms": 100.4,
+        "std_ms": 5.73
+      },
+      "flag_integrity": {
+        "flag": "academy{d35cr4mbl3_tH3_cH4r4cT3r5_179fbd}",
+        "length": 41,
+        "format_valid": true,
+        "expected_pattern_match": true,
+        "sha256": "3f26fbb8cadc573024d29db50ca94492ded3576b872240b371645f39677577f9"
+      },
+      "errors": []
+    },
+    {
+      "id": 43,
+      "name": "easy1",
+      "category": "Cryptography",
+      "script": "solve_43_easy1.py",
+      "type": "Computational/Vigenere",
+      "status": "PASS",
+      "reproducibility": {
+        "identical_runs": true,
+        "iterations": 3,
+        "flags_returned": [
+          "academy{CRYPTOISFUN}",
+          "academy{CRYPTOISFUN}",
+          "academy{CRYPTOISFUN}"
+        ]
+      },
+      "performance": {
+        "mean_ms": 12.36,
+        "min_ms": 11.21,
+        "max_ms": 14.57,
+        "std_ms": 1.91
+      },
+      "flag_integrity": {
+        "flag": "academy{CRYPTOISFUN}",
+        "length": 20,
+        "format_valid": true,
+        "expected_pattern_match": true,
+        "sha256": "3b0c3309976a726649664ac4249c6c81cf145de551d7fb4ce4797d777b9bbe7e"
+      },
+      "errors": []
+    },
+    {
+      "id": 60,
+      "name": "vault_door_3",
+      "category": "Reverse Engineering",
+      "script": "solve_60_vault_door_3.py",
+      "type": "Computational/Permutation",
+      "status": "PASS",
+      "reproducibility": {
+        "identical_runs": true,
+        "iterations": 3,
+        "flags_returned": [
+          "academy{jU5t_a_s1mpl3_an4gr4m_4_u_bfac26}",
+          "academy{jU5t_a_s1mpl3_an4gr4m_4_u_bfac26}",
+          "academy{jU5t_a_s1mpl3_an4gr4m_4_u_bfac26}"
+        ]
+      },
+      "performance": {
+        "mean_ms": 12.63,
+        "min_ms": 11.02,
+        "max_ms": 14.53,
+        "std_ms": 1.77
+      },
+      "flag_integrity": {
+        "flag": "academy{jU5t_a_s1mpl3_an4gr4m_4_u_bfac26}",
+        "length": 41,
+        "format_valid": true,
+        "expected_pattern_match": true,
+        "sha256": "d35990f6dc183784fc7fe9dc747c6918a429723106a8454118ab38c3b626e98e"
+      },
+      "errors": []
+    },
+    {
+      "id": 71,
+      "name": "vault_door_4",
+      "category": "Reverse Engineering",
+      "script": "solve_71_vault_door_4.py",
+      "type": "Computational/Multi-Base",
+      "status": "PASS",
+      "reproducibility": {
+        "identical_runs": true,
+        "iterations": 3,
+        "flags_returned": [
+          "academy{jU5t_4_bUnCh_0f_bYt3s_88a31dad6c}",
+          "academy{jU5t_4_bUnCh_0f_bYt3s_88a31dad6c}",
+          "academy{jU5t_4_bUnCh_0f_bYt3s_88a31dad6c}"
+        ]
+      },
+      "performance": {
+        "mean_ms": 11.45,
+        "min_ms": 10.77,
+        "max_ms": 11.91,
+        "std_ms": 0.6
+      },
+      "flag_integrity": {
+        "flag": "academy{jU5t_4_bUnCh_0f_bYt3s_88a31dad6c}",
+        "length": 41,
+        "format_valid": true,
+        "expected_pattern_match": true,
+        "sha256": "9a68da3ba6f9cae534d9a5309b159cf174e1f611781c3bc0cd466802402088aa"
+      },
+      "errors": []
+    },
+    {
+      "id": 77,
+      "name": "vault_door_5",
+      "category": "Reverse Engineering",
+      "script": "solve_77_vault_door_5.py",
+      "type": "Computational/Base64-URL",
+      "status": "PASS",
+      "reproducibility": {
+        "identical_runs": true,
+        "iterations": 3,
+        "flags_returned": [
+          "academy{c0nv3rt1ng_fr0m_ba5e_64_953e9301}",
+          "academy{c0nv3rt1ng_fr0m_ba5e_64_953e9301}",
+          "academy{c0nv3rt1ng_fr0m_ba5e_64_953e9301}"
+        ]
+      },
+      "performance": {
+        "mean_ms": 19.69,
+        "min_ms": 19.33,
+        "max_ms": 19.87,
+        "std_ms": 0.31
+      },
+      "flag_integrity": {
+        "flag": "academy{c0nv3rt1ng_fr0m_ba5e_64_953e9301}",
+        "length": 41,
+        "format_valid": true,
+        "expected_pattern_match": true,
+        "sha256": "7eb97aa27069e82b716053986d08ca09eb0f2a6294f780212a733d08d8e3c510"
+      },
+      "errors": []
+    },
+    {
+      "id": 45,
+      "name": "vault_door_6",
+      "category": "Reverse Engineering",
+      "script": "solve_45_vault_door_6.py",
+      "type": "Computational/XOR Stream",
+      "status": "PASS",
+      "reproducibility": {
+        "identical_runs": true,
+        "iterations": 3,
+        "flags_returned": [
+          "academy{n0t_mUcH_h4rD3r_tH4n_x0r_cfee664}",
+          "academy{n0t_mUcH_h4rD3r_tH4n_x0r_cfee664}",
+          "academy{n0t_mUcH_h4rD3r_tH4n_x0r_cfee664}"
+        ]
+      },
+      "performance": {
+        "mean_ms": 11.12,
+        "min_ms": 10.78,
+        "max_ms": 11.66,
+        "std_ms": 0.48
+      },
+      "flag_integrity": {
+        "flag": "academy{n0t_mUcH_h4rD3r_tH4n_x0r_cfee664}",
+        "length": 41,
+        "format_valid": true,
+        "expected_pattern_match": true,
+        "sha256": "1d09a66ef020807992838814d865d93d1cb20bbf9b93965cff527dba5cd1be6a"
+      },
+      "errors": []
+    },
+    {
+      "id": 40,
+      "name": "mr_worldwide",
+      "category": "Cryptography",
+      "script": "solve_40_mr_worldwide.py",
+      "type": "Computational/Geocoding",
+      "status": "PASS",
+      "reproducibility": {
+        "identical_runs": true,
+        "iterations": 3,
+        "flags_returned": [
+          "academy{KODIAK_ALASKA}",
+          "academy{KODIAK_ALASKA}",
+          "academy{KODIAK_ALASKA}"
+        ]
+      },
+      "performance": {
+        "mean_ms": 10.83,
+        "min_ms": 10.58,
+        "max_ms": 11.07,
+        "std_ms": 0.25
+      },
+      "flag_integrity": {
+        "flag": "academy{KODIAK_ALASKA}",
+        "length": 22,
+        "format_valid": true,
+        "expected_pattern_match": true,
+        "sha256": "f8a6a7cd6310931e49bb948d26c648b72148f83dd9a104a21081d3fa862abc67"
+      },
+      "errors": []
+    },
+    {
+      "id": 51,
+      "name": "whitepages",
+      "category": "Forensics",
+      "script": "solve_51_whitepages.py",
+      "type": "Network/Steganography",
+      "status": "PASS",
+      "reproducibility": {
+        "identical_runs": true,
+        "iterations": 3,
+        "flags_returned": [
+          "academy{not_all_spaces_are_created_equal_19fc1787ee14ef2c56ee0cddc142a0d9}",
+          "academy{not_all_spaces_are_created_equal_19fc1787ee14ef2c56ee0cddc142a0d9}",
+          "academy{not_all_spaces_are_created_equal_19fc1787ee14ef2c56ee0cddc142a0d9}"
+        ]
+      },
+      "performance": {
+        "mean_ms": 93.98,
+        "min_ms": 90.71,
+        "max_ms": 96.06,
+        "std_ms": 2.87
+      },
+      "flag_integrity": {
+        "flag": "academy{not_all_spaces_are_created_equal_19fc1787ee14ef2c56ee0cddc142a0d9}",
+        "length": 74,
+        "format_valid": true,
+        "expected_pattern_match": true,
+        "sha256": "ab6d8dc666b6996d1cd2eab4dd805ed5e40583ad8405a504c3a443900ee83b8d"
+      },
+      "errors": []
+    },
+    {
+      "id": 6,
+      "name": "john_pollard",
+      "category": "Cryptography",
+      "script": "solve_6_john_pollard.py",
+      "type": "Computational/RSA Factorization",
+      "status": "PASS",
+      "reproducibility": {
+        "identical_runs": true,
+        "iterations": 3,
+        "flags_returned": [
+          "academy{73176001,67867967}",
+          "academy{73176001,67867967}",
+          "academy{73176001,67867967}"
+        ]
+      },
+      "performance": {
+        "mean_ms": 2599.18,
+        "min_ms": 2504.0,
+        "max_ms": 2668.38,
+        "std_ms": 85.21
+      },
+      "flag_integrity": {
+        "flag": "academy{73176001,67867967}",
+        "length": 26,
+        "format_valid": true,
+        "expected_pattern_match": true,
+        "sha256": "575dffabf261130379583b8919cbdb96ace170723b37a5021f867fbda81775b6"
+      },
+      "errors": []
+    },
+    {
+      "id": 21,
+      "name": "tapping",
+      "category": "Cryptography",
+      "script": "solve_21_tapping.py",
+      "type": "Computational/Morse Code",
+      "status": "PASS",
+      "reproducibility": {
+        "identical_runs": true,
+        "iterations": 3,
+        "flags_returned": [
+          "academy{m0rs3c0d31sfun178da798}",
+          "academy{m0rs3c0d31sfun178da798}",
+          "academy{m0rs3c0d31sfun178da798}"
+        ]
+      },
+      "performance": {
+        "mean_ms": 11.37,
+        "min_ms": 11.31,
+        "max_ms": 11.41,
+        "std_ms": 0.05
+      },
+      "flag_integrity": {
+        "flag": "academy{m0rs3c0d31sfun178da798}",
+        "length": 31,
+        "format_valid": true,
+        "expected_pattern_match": true,
+        "sha256": "0e3654c2dcf1742a2351a4ee17a4cdf68235e1707b7372fac8957558eeeb376f"
+      },
+      "errors": []
+    }
+  ]
+}

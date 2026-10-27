@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 162 / 525 challenges
+- **Total Solved:** 173 / 525 challenges
 
 ---
 
@@ -38,6 +38,22 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 11 (27 Oktober 2026 - Daily 10+ Solve Sprint Run)
+
+| No | ID | Nama Tantangan | Kategori | Tingkat | Flag | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 19 | So Meta | Forensics | Medium | `academy{s0_m3ta_d4aa0408}` | **SOLVED** | 2026-10-27 |
+| 2 | 12 | vault-door-1 | Reverse Engineering | Medium | `academy{d35cr4mbl3_tH3_cH4r4cT3r5_179fbd}` | **SOLVED** | 2026-10-27 |
+| 3 | 43 | Easy1 | Cryptography | Medium | `academy{CRYPTOISFUN}` | **SOLVED** | 2026-10-27 |
+| 4 | 60 | vault-door-3 | Reverse Engineering | Medium | `academy{jU5t_a_s1mpl3_an4gr4m_4_u_bfac26}` | **SOLVED** | 2026-10-27 |
+| 5 | 71 | vault-door-4 | Reverse Engineering | Medium | `academy{jU5t_4_bUnCh_0f_bYt3s_88a31dad6c}` | **SOLVED** | 2026-10-27 |
+| 6 | 77 | vault-door-5 | Reverse Engineering | Medium | `academy{c0nv3rt1ng_fr0m_ba5e_64_953e9301}` | **SOLVED** | 2026-10-27 |
+| 7 | 45 | vault-door-6 | Reverse Engineering | Medium | `academy{n0t_mUcH_h4rD3r_tH4n_x0r_cfee664}` | **SOLVED** | 2026-10-27 |
+| 8 | 40 | Mr-Worldwide | Cryptography | Medium | `academy{KODIAK_ALASKA}` | **SOLVED** | 2026-10-27 |
+| 9 | 51 | WhitePages | Forensics | Medium | `academy{not_all_spaces_are_created_equal_19fc1787ee14ef2c56ee0cddc142a0d9}` | **SOLVED** | 2026-10-27 |
+| 10 | 6 | john_pollard | Cryptography | Medium | `academy{73176001,67867967}` | **SOLVED** | 2026-10-27 |
+| 11 | 21 | Tapping | Cryptography | Medium | `academy{m0rs3c0d31sfun178da798}` | **SOLVED** | 2026-10-27 |
 
 ### Batch 10 (27 Oktober 2026 - Accelerated 10-Solve Sprint Run)
 
