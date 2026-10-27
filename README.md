@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 152 / 525 challenges
+- **Total Solved:** 162 / 525 challenges
 
 ---
 
@@ -38,6 +38,21 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 10 (27 Oktober 2026 - Accelerated 10-Solve Sprint Run)
+
+| No | ID | Nama Tantangan | Kategori | Tingkat | Flag | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 251 | Serpentine | General Skills | Easy | `academy{7h3_r04d_l355_7r4v3l3d_825b10ae}` | **SOLVED** | 2026-10-27 |
+| 2 | 459 | Ph4nt0m 1ntrud3r | Forensics | Easy | `academy{1t_w4snt_th4t_34sy_tbh_4r_dd2075f0}` | **SOLVED** | 2026-10-27 |
+| 3 | 506 | DISKO 2 | Forensics | Easy | `academy{4_P4Rt_1t_i5_51b913f5}` | **SOLVED** | 2026-10-27 |
+| 4 | 507 | DISKO 3 | Forensics | Easy | `academy{n3v3r_z1p_2_h1d3_2f899900}` | **SOLVED** | 2026-10-27 |
+| 5 | 522 | Crack the Power | Cryptography | Medium | `academy{t1ny_e_227220c9}` | **SOLVED** | 2026-10-27 |
+| 6 | 237 | WPA-ing Out | Forensics | Medium | `academy{mickeymouse}` | **SOLVED** | 2026-10-27 |
+| 7 | 528 | M1n10n'5_53cr37 | Reverse Engineering | Medium | `academy{1t_w4sn7_h4rd_unr4v3l1n9_th3_m0b1l3_c0d3}` | **SOLVED** | 2026-10-27 |
+| 8 | 490 | PIE TIME | Binary Exploitation | Medium | `academy{b4s1c_p051t10n_1nd3p3nd3nc3_7944b1a7}` | **SOLVED** | 2026-10-27 |
+| 9 | 491 | PIE TIME 2 | Binary Exploitation | Medium | `academy{p13_5h0u1dn'7_134k_13db9a90}` | **SOLVED** | 2026-10-27 |
+| 10 | 488 | SSTI2 | Web Exploitation | Medium | `academy{sst1_f1lt3r_byp4ss_0a432894}` | **SOLVED** | 2026-10-27 |
 
 ### Batch 9 (26 Oktober 2026 - Late Night 10-Solve Sprint Run)
 
