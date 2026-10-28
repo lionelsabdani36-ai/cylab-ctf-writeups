@@ -1,24 +1,48 @@
-# Stonks (picoCTF 2021, Binary Exploitation, Challenge 105)
+# Writeup: Stonks (Challenge ID: 105)
 
-## Vulnerability
+- **Platform:** CyLab Security Academy (picoCTF)
+- **Category:** Binary Exploitation / Format String
+- **Difficulty:** Medium
+- **Author:** madStacks
+- **Event:** picoCTF 2021
+- **Points:** 300
+- **Flag:** `academy{I_l05t_4ll_my_m0n3y_9f0ca844}`
 
-Classic format-string bug in `buy_stonks()`: the program reads the flag file
-`api` into a heap buffer, then prints attacker input with a bare
-`printf(user_buf)`. Any `%x`/`%llx` specifiers in the API-token prompt leak
-stack/heap words — including the flag bytes.
+---
 
-## Exploit
+## Problem Statement & Scope
+Aplikasi trading "stonks" via netcat membaca file `api` (berisi flag) ke buffer, lalu mencetak input pengguna dengan `printf(user_buf)` tanpa format — format-string leak klasik.
 
-1. Choose menu option `1` (buy stonks).
-2. At the `API token?` prompt, send many `%llx` specifiers (e.g. 60).
-3. The response echoes hex words; the flag appears as consecutive ASCII-range
-   words. Reverse each word's byte order (little-endian) and concatenate:
-   `bytes.fromhex(word)[::-1]` for each printable word spells
-   `academy{...}` (original picoCTF flag was
-   `picoCTF{I_l05t_4ll_my_m0n3y_...}`).
+---
+
+## Teori & Akar Kerentanan (Root Cause Theory)
+1. **Format-string vulnerability:** `printf(token)` menafsirkan `%p`/`%x` pada input sebagai penentu baca stack; penyerang membaca memori proses termasuk buffer flag.
+2. **Rekonstruksi little-endian:** tiap word tercetak (mis. `0x64616361`) adalah 4 byte ASCII terbalik (`61 63 61 64` = "acad"); gabungkan word-word ASCII berurutan untuk membaca flag.
+3. Alur menu: pilih `1` (buy stonks) agar program sampai ke prompt `API token?`, lalu kirim muatan format.
+
+---
+
+## Rekonstruksi Eksploitasi Step-by-Step
+1. Provision instance, hubungkan socket, kirim `1`.
+2. Pada prompt token kirim `%p.` × 60, baca seluruh output.
+3. Identifikasi word-word ASCII berurutan: `64616361 7b796d65 306c5f49 345f7435 6d5f6c6c 306d5f79 5f79336e 63306639 34343861 0a7d`.
+4. Decode tiap word little-endian → `academy{I_l05t_4ll_my_m0n3y_9f0ca844}`.
+5. Submit via API → `correct: true`.
+
+---
+
+## Flag & Verifikasi
+- **Flag:** `academy{I_l05t_4ll_my_m0n3y_9f0ca844}`
+- **Verifikasi:** POST `/api/submissions/` mengembalikan `{"correct": true}` (HTTP Status 201).
+
+---
+
+## Takeaway Kompetensi LKS & Mitigasi Defensif
+- **Selalu gunakan format statis:** `printf("%s", buf)` — jangan pernah meneruskan input pengguna sebagai string format.
+- **Teknik baca word terbalik** (`bytes.fromhex(w)[::-1]`) adalah pola wajib LKS untuk semua leak format-string/hexdump.
+- Compiler flag `-Wformat-security` menangkap pola ini saat build.
+
+---
 
 ## Solver
-
-`scripts/solve_105_stonks.py <host> <port>` — leaks and auto-decodes.
-
-Submitted via `POST /api/submissions/`.
+Lihat `scripts/solve_105_stonks.py` (sudah ada di repo) — leak `%p`, rangkai word ASCII, cetak flag.

@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 186 / 525 challenges
+- **Total Solved:** 196 / 525 challenges
 
 ---
 
@@ -38,6 +38,21 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 13 (28 Oktober 2026 - Medium Mixed-Category Sprint, 10/10)
+
+| No | ID | Nama Tantangan | Kategori | Tingkat | Flag | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 35 | Based | General Skills | Medium | `academy{learning_about_converting_values_Ee545DDA}` | **SOLVED** | 2026-10-28 |
+| 2 | 38 | waves over lambda | Cryptography | Medium | `frequency_is_c_over_lambda_vddcgoslot` | **SOLVED** | 2026-10-28 |
+| 3 | 49 | flag_shop | General Skills | Medium | `academy{m0n3y_bag5_E89fCE0e}` | **SOLVED** | 2026-10-28 |
+| 4 | 69 | Client-side-again | Web Exploitation | Medium | `academy{not_this_again_3b977f}` | **SOLVED** | 2026-10-28 |
+| 5 | 80 | Irish-Name-Repo 1 | Web Exploitation | Medium | `academy{s0m3_SQL_d3fba797}` | **SOLVED** | 2026-10-28 |
+| 6 | 84 | shark on wire 2 | Forensics | Medium | `academy{p1LLf3r3d_data_v1a_st3g0}` | **SOLVED** | 2026-10-28 |
+| 7 | 105 | Stonks | Binary Exploitation | Medium | `academy{I_l05t_4ll_my_m0n3y_9f0ca844}` | **SOLVED** | 2026-10-28 |
+| 8 | 124 | More Cookies | Web Exploitation | Medium | `academy{cO0ki3s_yum_df66be3e}` | **SOLVED** | 2026-10-28 |
+| 9 | 128 | Web Gauntlet 3 | Web Exploitation | Medium | `academy{k3ep_1t_sh0rt_2e11b173}` | **SOLVED** | 2026-10-28 |
+| 10 | 130 | MacroHard WeakEdge | Forensics | Medium | `academy{D1d_u_kn0w_ppts_r_z1p5}` | **SOLVED** | 2026-10-28 |
 
 ### Batch 14 (28 Oktober 2026 - Mini-Competition & picoCTF 2021 Sprint, 3/3 dari 30)
 
