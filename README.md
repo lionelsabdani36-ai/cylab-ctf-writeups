@@ -60,12 +60,12 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 |:---|:---|:---|:---|:---|:---|:---|:---|
 | 1 | 87 | Pitter, Patter, Platters | Cryptography | Easy | `academy{b3_5t111_mL|_<3_d18a1e1e}` | **SOLVED** | 2026-10-28 |
 | 2 | 88 | Web Gauntlet | Web Exploitation | Easy | `academy{y0u_m4d3_1t_ecb312a6}` | **SOLVED** | 2026-10-28 |
-| 3 | 90 | Guessing Game 1 | Binary Exploitation | Easy | solver siap, submit saat slot on-demand bebas | **IN PROGRESS** | 2026-10-28 |
+| 3 | 90 | Guessing Game 1 | Binary Exploitation | Easy | `academy{r0p_y0u_l1k3_4_hurr1c4n3_3ea9d94813b570b2}` | **SOLVED** | 2026-10-28 |
 | 4 | 91 | Nothing Up My Sleeve | Forensics | Easy | `academy{c0ngr4ts_0n_y0ur_s4n1ty}` | **SOLVED** | 2026-10-28 |
 | 5 | 100 | Pixelated | Forensics | Easy | `academy{2f16d0c4}` | **SOLVED** | 2026-10-28 |
 | 6 | 101 | Weird File | Forensics | Easy | `academy{m4cr0s_r_d4ng3r0us}` | **SOLVED** | 2026-10-28 |
-| 7 | 105 | Stonks | Binary Exploitation | Easy | solver siap, submit saat slot on-demand bebas | **IN PROGRESS** | 2026-10-28 |
-| 8 | 108 | Startup Company | Web Exploitation | Easy | solver siap, submit saat slot on-demand bebas | **IN PROGRESS** | 2026-10-28 |
+| 7 | 105 | Stonks | Binary Exploitation | Easy | `academy{I_l05t_4ll_my_m0n3y_9f0ca844}` | **SOLVED** | 2026-10-28 |
+| 8 | 108 | Startup Company | Web Exploitation | Easy | `academy{1_c4nn0t_s33_y0u_66b27680}` | **SOLVED** | 2026-10-28 |
 | 9 | 109 | It is my Birthday | General Skills | Easy | `academy{c0ngr4ts_u_r_1nv1t3d_44f9d0a}` | **SOLVED** | 2026-10-28 |
 | 10 | 110 | Wireshark twoo twooo twoo... | Forensics | Easy | `academy{dns_3xf1l_ftw_deadbeef}` | **SOLVED** | 2026-10-28 |
 

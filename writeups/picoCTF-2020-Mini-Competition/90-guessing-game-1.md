@@ -1,40 +1,68 @@
-# Guessing Game 1 (picoCTF 2020 Mini-Competition, Binary Exploitation, Challenge 90)
+# Writeup: Guessing Game 1 (Challenge ID: 90)
 
-## Vulnerability
+- **Platform:** CyLab Security Academy (picoCTF)
+- **Category:** Binary Exploitation / ret2syscall ROP
+- **Difficulty:** Easy
+- **Event:** picoCTF 2020 Mini-Competition
+- **Points:** 200
+- **Flag:** `academy{r0p_y0u_l1k3_4_hurr1c4n3_3ea9d94813b570b2}`
 
-`win()` reads up to 360 bytes with `fgets` into a 112-byte stack buffer and
-has **no stack protector** (`__stack_chk_fail` is never referenced from
-`win`/`do_stuff`/`main`). Saved RBP sits at offset 112, saved RIP at
-offset 120. Binary is static, non-PIE, so gadget addresses are fixed.
+---
 
-The guessing game itself needs no brute force: `get_random()` uses glibc
-`rand()` without any `srand()` call, so the seed is the default (1) and the
-first answer is always `rand()%100+1 = 84`. Verified locally against glibc
-and against the challenge binary.
+## Problem Statement & Scope
+Game tebak angka via netcat. Jawaban `rand() % 100 + 1` tanpa `srand()`
+(sead default → jawaban pertama selalu **84**). Menang memanggil `win()` yang
+`fgets(winner, 360, stdin)` ke frame stack `0x70` byte tanpa stack protector
+— overflow klasik menuju kontrol RIP. Biner statik non-PIE: alamat gadget
+tetap, `.bss` writable di `0x4c9360`.
 
-## Exploit (ret2syscall execve, two stages)
+---
 
-Gadgets (fixed addresses, no PIE):
+## Teori & Akar Kerentanan (Root Cause Theory)
+1. **PRNG tanpa seed:** glibc `rand()` tanpa `srand()` deterministik
+   (seed 1) → tidak perlu brute force, jawab `84`.
+2. **Stack buffer overflow:** `fgets(360)` ke buffer frame `0x70` menimpa
+   saved RBP (offset 112) dan RIP (offset **120**, terverifikasi live).
+3. **ret2syscall dua tahap:** tanpa `system()` di biner, pakai gadget
+   `read` untuk mendaratkan `/bin/sh` + rantai `execve` di `.bss`,
+   lalu `ret` ke sana (bypass kebutuhan alamat stack/ASLR).
 
-| Gadget | Address |
-|--------|---------|
-| `pop rdi; ret` | 0x40206f |
-| `pop rsi; ret` | 0x40a0de |
-| `pop rdx; xor eax,eax; pop rbp; pop r12; ret` | 0x422b69 |
-| `pop rax; ret` | 0x4518e7 |
-| `syscall; ret` | 0x41b406 |
-| `__read` | 0x450e80 |
+---
 
-Writable `.bss` at 0x4c9400.
+## Rekonstruksi Eksploitasi Step-by-Step
+1. Provision instance (`PUT .../instance/` → 204, poll → `RUNNING`,
+   `nc chatelaine.cylabacademy.net <port>`).
+2. Kirim `84` → `win()` → prompt `Name?`.
+3. Stage 1 (120 padding + ROP): `read(0, BSS=0x4c9460, 0x180)`, lalu
+   `ret BSS`. Gadget (objdump-terverifikasi):
+   `pop rdi` 0x40206f · `pop rsi;pop r15` 0x40206d ·
+   `pop rax;pop rdx;pop rbx` 0x486bba (aligned) ·
+   `pop rdx;xor eax,eax;pop rbp;pop r12` 0x422b69 ·
+   `syscall` 0x41b406 · `read` 0x450e80.
+4. Stage 2 (via read ke BSS): `/bin/sh\x00` +
+   `execve(BSS, NULL, NULL)` (`rdi=BSS, rsi=0, rdx=0, rax=59, syscall`).
+5. `id; cat flag*` → `academy{r0p_y0u_l1k3_4_hurr1c4n3_3ea9d94813b570b2}`.
+6. Submit via API → `{"correct": true}` (HTTP 201).
 
-Stage 1 (stack overflow in `win()`): `read(0, 0x4c9400, 0x200)`, then return
-into 0x4c9400. Stage 2 (read via stdin into `.bss`): the string `/bin/sh`
-followed by `execve(0x4c9400, NULL, NULL)` (`rdi=BSS, rsi=0, rdx=0, rax=59,
-syscall`).
+---
+
+## Flag & Verifikasi
+- **Flag:** `academy{r0p_y0u_l1k3_4_hurr1c4n3_3ea9d94813b570b2}`
+- **Verifikasi:** POST `/api/submissions/` mengembalikan `{"correct": true}`
+  (HTTP 201); `solved_by_user: true` pada `GET /api/challenges/90/`.
+
+---
+
+## Takeaway Kompetensi LKS & Mitigasi Defensif
+- **Seed PRNG dari entropi aman** (`getrandom`/`srand(time^pid)`); jangan
+  andalkan `rand()` default untuk logika game/undian.
+- **Batasi baca input** (`fgets(buf, sizeof(buf), ...)`) + aktifkan
+  stack protector (`-fstack-protector-strong`), NX + PIE + ASLR penuh.
+- Teknik `read-then-ret-to-.bss` adalah pola wajib LKS untuk biner statik
+  tanpa `system()` — kuasai rantai `pop r*/syscall`.
+
+---
 
 ## Solver
-
-`scripts/solve_90_guessing_game_1.py [host] [port]` — sends `84`, the ROP
-stage 1, then the stage-2 blob, and prints the shell output (`cat flag*`).
-
-Submitted via `POST /api/submissions/`.
+Lihat `scripts/solve_90_guessing_game_1.py [host] [port]` — kirim `84`,
+stage-1 ROP `read`, stage-2 `execve`, cetak output shell.

