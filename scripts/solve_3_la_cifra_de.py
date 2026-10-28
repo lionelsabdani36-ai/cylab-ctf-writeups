@@ -62,7 +62,6 @@ def vig_dec(txt, key):
         if 'a' <= ch <= 'z':
             k = ord(key[ki % len(key)]) - 65
             out.append(chr((ord(ch) - 97 - k) % 26 + 97))
-            )
             ki += 1
         elif 'A' <= ch <= 'Z':
             k = ord(key[ki % len(key)]) - 65

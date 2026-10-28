@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 176 / 525 challenges
+- **Total Solved:** 186 / 525 challenges
 
 ---
 
@@ -39,13 +39,23 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
-### Batch 12 (28 Oktober 2026 - Context-Lean 3-Solve Run)
+### Batch 12 (28 Oktober 2026 - 10-Solve Verification & Forensics Sprint)
 
 | No | ID | Nama Tantangan | Kategori | Tingkat | Flag | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
 | 1 | 482 | n0s4n1ty 1 | Web Exploitation | Easy | `academy{wh47_c4n_u_d0_wPHP_12aa2ff5}` | **SOLVED** | 2026-10-28 |
 | 2 | 746 | tea-cash | Binary Exploitation | Medium | `academy{ef29b8f2d75bd216bf505de0d02fddef}` | **SOLVED** | 2026-10-28 |
 | 3 | 747 | Secret Box | Web Exploitation | Medium | `academy{sq1_1nject10n_4cc7170a}` | **SOLVED** | 2026-10-28 |
+| 4 | 3 | la cifra de | Cryptography | Easy | `academy{h311p50_0x_u1mc3x3_b1vw3x181ag1pg}` | **SOLVED** | 2026-10-28 |
+| 5 | 15 | mus1c | General Skills | Easy | `academy{rrrocknrn0113r}` | **SOLVED** | 2026-10-28 |
+| 6 | 129 | Matryoshka doll | Forensics | Easy | `academy{ZNTyvSDXRNO1d0xCkBRMhAoiafpCTvgW}` | **SOLVED** | 2026-10-28 |
+| 7 | 175 | crackme-py | Reverse Engineering | Easy | `academy{1m_4_p34nut_a20db6f76f27d8}` | **SOLVED** | 2026-10-28 |
+| 8 | 316 | Vigenere | Cryptography | Easy | `academy{D0NT_US3_V1G3N3R3_C1PH3R_y0393es7}` | **SOLVED** | 2026-10-28 |
+| 9 | 53 | c0rrupt | Forensics | Easy | `academy{c0rrupt10n_1847995}` | **SOLVED** | 2026-10-28 |
+| 10 | 81 | like1000 | Forensics | Easy | `academy{l0t5_0f_TAR5}` | **SOLVED** | 2026-10-28 |
+| 11 | 82 | 1_wanna_b3_a_r0ck5tar | General Skills | Easy | `academy{BONJOVI}` | **SOLVED** | 2026-10-28 |
+| 12 | 111 | ARMssembly 1 | Reverse Engineering | Easy | `academy{00000014}` | **SOLVED** | 2026-10-28 |
+| 13 | 112 | tunn3l v1s10n | Forensics | Easy | `academy{qu1t3_a_v13w_2020}` | **SOLVED** | 2026-10-28 |
 
 ### Batch 11 (27 Oktober 2026 - Daily 10+ Solve Sprint Run)
 
