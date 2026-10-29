@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 202 / 525 challenges
+- **Total Solved:** 212 / 525 challenges
 
 ---
 
@@ -38,6 +38,21 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 17b (29 Oktober 2026 - Medium Mixed-Category Sprint, 10/10)
+
+| No | ID | Nama Tantangan | Kategori | Tingkat | Flag | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---:|
+| 1 | 210 | spelling-quiz | Cryptography | Medium | `picoCTF{perhaps_the_dog_jumped_over_was_just_tired}` | **SOLVED** | 2026-10-29 |
+| 2 | 216 | clutter-overflow | Binary Exploitation | Medium | `picoCTF{c0ntr0ll3d_clutt3r_1n_my_buff3r}` | **SOLVED** | 2026-10-29 |
+| 3 | 236 | JAuth | Web Exploitation | Medium | `academy{succ3ss_@u7h3nt1c@710n_99bf4b72}` | **SOLVED** | 2026-10-29 |
+| 4 | 252 | basic-file-exploit | Binary Exploitation | Medium | `academy{M4K3_5UR3_70_CH3CK_Y0UR_1NPU75_6A9F6821}` | **SOLVED** | 2026-10-29 |
+| 5 | 255 | Bbbbloat | Reverse Engineering | Medium | `academy{cu7_7h3_bl047_1cf3a481}` | **SOLVED** | 2026-10-29 |
+| 6 | 256 | bloat.py | Reverse Engineering | Medium | `academy{d30bfu5c4710n_f7w_d77083fe}` | **SOLVED** | 2026-10-29 |
+| 7 | 259 | buffer overflow 2 | Binary Exploitation | Medium | `academy{argum3nt5_4_d4yZ_0f3d7e91}` | **SOLVED** | 2026-10-29 |
+| 8 | 261 | credstuff | Cryptography | Easy | `academy{C7e1F_54V35_71M3}` | **SOLVED** | 2026-10-29 |
+| 9 | 262 | CVE-XXXX-XXXX | Vulnerability Research | Easy | `academy{CVE-2021-34527}` | **SOLVED** | 2026-10-29 |
+| 10 | 264 | Eavesdrop | Forensics | Medium | `academy{nc_73115_411_02612719}` | **SOLVED** | 2026-10-29 |
 
 ### Batch 17 (29 Oktober 2026 - picoCTF 2026 Easy+Medium Sprint, 3/3)
 
