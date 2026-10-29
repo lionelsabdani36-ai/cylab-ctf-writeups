@@ -39,6 +39,14 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 16 (29 Oktober 2026 - picoCTF 2026 Easy Lab Sprint, 3/3)
+
+| No | ID | Nama Tantangan | Kategori | Tingkat | Flag | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---:|
+| 1 | 759 | Printer Shares | General Skills | Easy | `academy{5mb_pr1nter_5h4re5_80a1eed5}` | **SOLVED** | 2026-10-29 |
+| 2 | 762 | bytemancy 1 | General Skills | Easy | `academy{h0w_m4ny_e's???_6fd2faa9}` | **SOLVED** | 2026-10-29 |
+| 3 | 764 | MY GIT | General Skills | Easy | `academy{1mp3rs0n4t4_g17_345y_f382bd68}` | **SOLVED** | 2026-10-29 |
+
 ### Batch 15 (28 Oktober 2026 - Cryptography Static Sprint, 3/3)
 
 | No | ID | Nama Tantangan | Kategori | Tingkat | Flag | Status | Tanggal |
