@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 199 / 525 challenges
+- **Total Solved:** 202 / 525 challenges
 
 ---
 
@@ -38,6 +38,14 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 17 (29 Oktober 2026 - picoCTF 2026 Easy+Medium Sprint, 3/3)
+
+| No | ID | Nama Tantangan | Kategori | Tingkat | Flag | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---:|
+| 1 | 742 | bytemancy 0 | General Skills | Easy | `academy{pr1n74813_ch4r5_544482cc}` | **SOLVED** | 2026-10-29 |
+| 2 | 767 | Secure Password Database | Reverse Engineering | Medium | `academy{d0nt_trust_us3rs}` | **SOLVED** | 2026-10-29 |
+| 3 | 765 | No FA | Web Exploitation | Medium | `academy{n0_r4t3_n0_4uth_96369057}` | **SOLVED** | 2026-10-29 |
 
 ### Batch 16 (29 Oktober 2026 - picoCTF 2026 Easy Lab Sprint, 3/3)
 
