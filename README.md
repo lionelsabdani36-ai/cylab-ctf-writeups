@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 212 / 525 challenges
+- **Total Solved:** 222 / 525 challenges
 
 ---
 
@@ -38,6 +38,21 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 20 (29 Oktober 2026 - picoCTF 2026/2025 Crypto+Forensics Sprint, 10/10)
+
+| No | ID | Nama Tantangan | Kategori | Tingkat | Flag | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---:|
+| 1 | 466 | Tap into Hash | Reverse Engineering | Medium | `academy{block_3SRhViRbT1qcX_XUjM0r49cH_qCzmJZzBK_3a847c57}` | **SOLVED** | 2026-10-29 |
+| 2 | 701 | Black Cobra Pepper | Cryptography | Medium | `academy{spi1cy!}` | **SOLVED** | 2026-10-29 |
+| 3 | 702 | ClusterRSA | Cryptography | Medium | `academy{mul71_rsa_411fc267}` | **SOLVED** | 2026-10-29 |
+| 4 | 704 | DISKO 4 | Forensics | Medium | `academy{d3l_d0n7_h1d3_w3ll_9748d144}` | **SOLVED** | 2026-10-29 |
+| 5 | 705 | Forensics Git 0 | Forensics | Medium | `academy{g17_1n_7h3_d15k_041217d8}` | **SOLVED** | 2026-10-29 |
+| 6 | 706 | Forensics Git 1 | Forensics | Medium | `academy{g17_r3m3mb3r5_d4ddf904}` | **SOLVED** | 2026-10-29 |
+| 7 | 707 | Forensics Git 2 | Forensics | Medium | `academy{g17_r35cu3_16ac6bf3}` | **SOLVED** | 2026-10-29 |
+| 8 | 713 | Related Messages | Cryptography | Medium | `academy{m3ssage_w1th_typ0}` | **SOLVED** | 2026-10-29 |
+| 9 | 718 | Small Trouble | Cryptography | Medium | `academy{sm4ll_d_46c3352b}` | **SOLVED** | 2026-10-29 |
+| 10 | 722 | Timestamped Secrets | Cryptography | Medium | `academy{sa3S_sEc9t_3b464909}` | **SOLVED** | 2026-10-29 |
 
 ### Batch 17b (29 Oktober 2026 - Medium Mixed-Category Sprint, 10/10)
 
