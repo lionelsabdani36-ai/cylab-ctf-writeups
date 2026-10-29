@@ -1,0 +1,41 @@
+#!/usr/bin/env python3
+"""Solver for Challenge 314 unpackme.py (picoCTF 2022, Reverse Engineering).
+
+The script ships a Fernet token (`payload`) plus the key in source:
+key_str = 'correctstaplecorrectstaplecorrec' (32 chars) -> base64 -> Fernet key.
+Decrypting reveals an inner script that prints the flag when given password
+'batteryhorse'. Static decryption is enough; no need to run the payload.
+
+Usage: solve_314_unpackme_py.py [unpackme.flag.py path]
+Verified: academy{175_chr157m45_4d521283} (POST /api/submissions/ -> correct:true)
+"""
+import base64
+import re
+import sys
+
+EXPECTED = "academy{175_chr157m45_4d521283}"
+
+URL = ("https://challenge-files.cylabacademy.net/library/"
+       "d78f54f4620ec8d4a6f17fa02080e00306f51d33831dd2ea2d1a1366905d3c47/"
+       "unpackme.flag.py")
+
+
+def solve(path: str = "unpackme.flag.py") -> str:
+    from cryptography.fernet import Fernet
+    src = open(path, "rb").read()
+    m = re.search(rb"b'([A-Za-z0-9_\-=]+)'", src)
+    assert m, "Fernet token not found in %s" % path
+    blob = m.group(1)
+    key_b64 = base64.b64encode(b"correctstaplecorrectstaplecorrec")
+    plain = Fernet(key_b64).decrypt(blob).decode()
+    m2 = re.search(r"academy\{[^}]*\}", plain)
+    assert m2, "no flag in decrypted payload: %r" % plain[:200]
+    flag = m2.group(0)
+    print("password: batteryhorse")
+    print("flag:", flag)
+    assert flag == EXPECTED, flag
+    return EXPECTED
+
+
+if __name__ == "__main__":
+    print(solve(sys.argv[1] if len(sys.argv) > 1 else "unpackme.flag.py"))
