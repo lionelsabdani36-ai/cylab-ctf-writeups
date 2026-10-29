@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 204 / 525 challenges
+- **Total Solved:** 207 / 525 challenges
 
 ---
 
@@ -38,6 +38,12 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 22 (29 Oktober 2026 - Medium Sprint: sudo/nano, HAProxy failover, RE bypass, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+| 1 | 748 | ABSOLUTE NANO | General Skills | Medium | `academy{n4n0_411_7h3_w4y_81311b87}` | **SOLVED** | 2026-10-29 |
+| 2 | 756 | Failure Failure | General Skills | Medium | `academy{f41l0v3r_f0r_7h3_w1n_7897afd6}` | **SOLVED** | 2026-10-29 |
+| 3 | 761 | Bypass Me | Reverse Engineering | Medium | `academy{d3bugg3r_p0w3r_is_4w3s0m3_e85bfcda}` | **SOLVED** | 2026-10-29 |
 
 ### Batch 21 (29 Oktober 2026 - Medium Mixed Sprint, 6/6)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
