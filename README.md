@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 192 / 525 challenges
+- **Total Solved:** 198 / 525 challenges
 
 ---
 
@@ -38,6 +38,17 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 16 (29 Oktober 2026 - picoCTF 2022/2023 Mixed Sprint, 6/10)
+
+| No | ID | Nama Tantangan | Kategori | Tingkat | Flag | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---:|
+| 1 | 309 | substitution2 | Cryptography | Easy | `academy{N6R4M_4N41Y515_15_73D10U5_FD56C357}` | **SOLVED** | 2026-10-29 |
+| 2 | 311 | Torrent Analyze | Forensics | Easy | `academy{ubuntu-19.10-desktop-amd64.iso}` | **SOLVED** | 2026-10-29 |
+| 3 | 312 | transposition-trial | Cryptography | Easy | `academy{7R4N5P051N6_15_3XP3N51V3_5571D3F8}` | **SOLVED** | 2026-10-29 |
+| 4 | 313 | unpackme | Reverse Engineering | Easy | `academy{up><_m3_f7w_a6924bf9}` | **SOLVED** | 2026-10-29 |
+| 5 | 319 | x-sixty-what | Binary Exploitation | Easy | `academy{b1663r_15_b3773r_fb3754c3}` | **SOLVED** | 2026-10-29 |
+| 6 | 348 | FindAndOpen | Forensics | Easy | `academy{R34DING_LOKd_fil56_succ3ss_9989a41b}` | **SOLVED** | 2026-10-29 |
 
 ### Batch 18-retry (29 Oktober 2026 - picoCTF 2026 Mixed Sprint, 5/5)
 
