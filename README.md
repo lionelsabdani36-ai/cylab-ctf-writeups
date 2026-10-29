@@ -39,11 +39,14 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
-### Batch 21 (29 Oktober 2026 - Medium Mixed Sprint, 3/3)
+### Batch 21 (29 Oktober 2026 - Medium Mixed Sprint, 6/6)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 | 1 | 134 | Shop | Reverse Engineering | Medium | `academy{b4d_brogrammer_0ca0fc368}` | **SOLVED** | 2026-10-29 |
 | 2 | 138 | Whats Your Input | General Skills | Medium | `academy{v4lua4bl3_1npu7_6fd920cb}` | **SOLVED** | 2026-10-29 |
 | 3 | 139 | Milkslap | Forensics | Medium | `academy{imag3_m4n1pul4t10n_sl4p5}` | **SOLVED** | 2026-10-29 |
+| 4 | 131 | Some Assembly Required 2 | Web Exploitation | Medium | `academy{217f0babdae45710109bb2e6ac1b134a}` | **SOLVED** | 2026-10-29 |
+| 5 | 143 | Binary Gauntlet 2 | Binary Exploitation | Medium | `e78e7bce9bd41d8acee927343d9d6ba4` | **SOLVED** | 2026-10-29 |
+| 6 | 152 | Some Assembly Required 1 | Web Exploitation | Medium | `academy{8c87cb4dcc87959c351f832e6a165296}` | **SOLVED** | 2026-10-29 |
 
 ### Batch 16 (29 Oktober 2026 - picoCTF 2022/2023 Mixed Sprint, 9/10)
 
