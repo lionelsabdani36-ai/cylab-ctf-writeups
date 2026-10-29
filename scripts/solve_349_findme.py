@@ -6,7 +6,9 @@ password=test! -> 302 to /next-page/id=<b64#1>. That page JS-redirects to
 /next-page/id=<b64#2>, then to /home. The two base64 segments concatenate
 into the flag: 'academy{proxies_al' + 'l_the_way_661fc398}'.
 
-Lab is on-demand (PUT /api/challenges/349/instance/); host:port rotates.
+Lab is on-demand (PUT /api/challenges/349/instance/); host:port rotates
+(read the URL from the instance description). Live labs observed on
+xebec.cylabacademy.net ports 42429, 33456, 11375.
 Usage: solve_349_findme.py [base-url]
 Verified: academy{proxies_all_the_way_661fc398} (POST /api/submissions/ -> correct:true)
 """
@@ -16,7 +18,7 @@ import sys
 import urllib.error
 import urllib.request
 
-BASE = "http://xebec.cylabacademy.net:33456"
+BASE = "http://xebec.cylabacademy.net:11375"
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
       "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36")
 EXPECTED = "academy{proxies_all_the_way_661fc398}"
