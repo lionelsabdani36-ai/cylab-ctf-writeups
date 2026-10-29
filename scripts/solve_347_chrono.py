@@ -5,7 +5,10 @@ SSH lab (picoplayer@chatelaine.cylabacademy.net:<port>, password from the
 instance description). Classic cron-hunting: no user crontab, but the flag
 sits in cleartext as a comment inside /etc/crontab.
 
-Lab is on-demand (PUT /api/challenges/347/instance/); host:port rotates.
+Lab is on-demand (PUT /api/challenges/347/instance/); host:port and password
+rotate (read both from the instance description). Live labs observed:
+chatelaine.cylabacademy.net:45197, xebec.cylabacademy.net:40548
+(password 0SlcDTpc5Y for both at solve time).
 Usage: solve_347_chrono.py [host] [port] [password]
 Verified: academy{Sch3DUL7NG_T45K3_L1NUX_9bb09823} (POST /api/submissions/ -> correct:true)
 """
@@ -13,8 +16,8 @@ import re
 import subprocess
 import sys
 
-HOST = "chatelaine.cylabacademy.net"
-PORT = 25769
+HOST = "xebec.cylabacademy.net"
+PORT = 40548
 PASSWORD = "0SlcDTpc5Y"
 EXPECTED = "academy{Sch3DUL7NG_T45K3_L1NUX_9bb09823}"
 
