@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 210 / 525 challenges
+- **Total Solved:** 213 / 525 challenges
 
 ---
 
@@ -38,6 +38,12 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 24 (30 Oktober 2026 - picoCTF 2021 Medium Sprint: Flask-secret, SQLite-filter, SHAttered, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+| 1 | 177 | Most Cookies | Web Exploitation | Medium | `academy{cO0ki3s_yum_7ea44b33}` | **SOLVED** | 2026-10-30 |
+| 2 | 174 | Web Gauntlet 2 | Web Exploitation | Medium | `academy{0n3_m0r3_t1m3_38c285e0}` | **SOLVED** | 2026-10-30 |
+| 3 | 169 | It is my Birthday 2 | Cryptography | Medium | `academy{h4ppy_b1rthd4y_2_m3_8248ffdd}` | **SOLVED** | 2026-10-30 |
 
 ### Batch 23 (30 Oktober 2026 - picoCTF 2026 Medium Sprint: UPX/XOR-RE, credential stuffing, MD5-IDOR, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
