@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 213 / 525 challenges
+- **Total Solved:** 215 / 525 challenges
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 25 (30 Oktober 2026 - picoCTF 2021 Medium Sprint: RSA-CRT dp-36bit, PHP-unserialize, 2/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+| 1 | 120 | It's Not My Fault 2 | Cryptography | Medium | `academy{p0lyn0m14l_4r17hm371c_73chn1qu35_4r3_u53ful_1n_m4ny_f13ld5!!!}` | **SOLVED** | 2026-10-30 |
+| 2 | 180 | Super Serial | Web Exploitation | Medium | `academy{1_c4nn0t_s33_y0u_cf804c42}` | **SOLVED** | 2026-10-30 |
+| 3 | 133 | Binary Gauntlet 3 | Binary Exploitation | Medium | - | PENDING (analisis fmt-str+overflow; libc mismatch) | - |
+| - | 116 | speeds and feeds | - | - | - | SKIP (under maintenance) | - |
 
 ### Batch 24 (30 Oktober 2026 - picoCTF 2021 Medium Sprint: Flask-secret, SQLite-filter, SHAttered, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
