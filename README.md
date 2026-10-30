@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 218 / 525 challenges
+- **Total Solved:** 221 / 525 challenges
 
 ---
 
@@ -38,6 +38,12 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 27 (30 Oktober 2026 - Medium Sprint: OS-command-injection, nested-file-forensics, path-traversal, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+| 1 | 202 | caas | Web Exploitation | Medium | `picoCTF{moooo...0o}` (format event asli) | **SOLVED** | 2026-10-30 |
+| 2 | 268 | File types | Forensics | Medium | `academy{f1len@m3_m@n1pul@t10n_f0r_0b2cur17y_35957b68}` | **SOLVED** | 2026-10-30 |
+| 3 | 270 | Forbidden Paths | Web Exploitation | Medium | `academy{7h3_p47h_70_5ucc355_afd5d939}` | **SOLVED** | 2026-10-30 |
 
 ### Batch 26 (30 Oktober 2026 - Mixed Sprint: ret2shellcode, X.509-CSR, spellcheck-bypass, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
