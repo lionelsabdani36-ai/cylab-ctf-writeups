@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 207 / 525 challenges
+- **Total Solved:** 210 / 525 challenges
 
 ---
 
@@ -38,6 +38,12 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 23 (30 Oktober 2026 - picoCTF 2026 Medium Sprint: UPX/XOR-RE, credential stuffing, MD5-IDOR, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+| 1 | 745 | Hidden Cipher 1 | Reverse Engineering | Medium | `academy{xor_unpack_4nalys1s_f3d3a874}` | **SOLVED** | 2026-10-30 |
+| 2 | 749 | Credential Stuffing | Web Exploitation | Medium | `academy{d0nt_r3u5e_cr3d3nt1als_9dee1556}` | **SOLVED** | 2026-10-30 |
+| 3 | 750 | Hashgate | Web Exploitation | Medium | `academy{id0r_unl0ck_cbbb8f45}` | **SOLVED** | 2026-10-30 |
 
 ### Batch 22 (29 Oktober 2026 - Medium Sprint: sudo/nano, HAProxy failover, RE bypass, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
