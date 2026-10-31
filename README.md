@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 234 / 525 challenges (Platform Live Solved: 313 / 525)
+- **Total Solved:** 237 / 525 challenges (Platform Live Solved: 316 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 33 (31 Oktober 2026 - Network & Image Forensics & Java Bytecode Sprint: PCAP Cleartext Stream Carving, PNG Polyglot Embedded ZIP Carving, JVM Constant Pool Plaintext Recovery, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 362 | PcapPoisoning | Forensics | Medium | `academy{P64P_4N4L7S1S_SU55355FUL_7a51913b}` | **SOLVED** | 2026-10-31 |
+| 2 | 350 | hideme | Forensics | Medium | `academy{Hiddinng_An_imag3_within_@n_ima9e_404ff71e}` | **SOLVED** | 2026-10-31 |
+| 3 | 375 | Safe Opener 2 | Reverse Engineering | Medium | `academy{SAf3_0p3n3rr_y0u_solv3d_it_7f70e636}` | **SOLVED** | 2026-10-31 |
 
 ### Batch 32 (31 Oktober 2026 - Network Forensics & Reverse Engineering Sprint: TCP Stream Reassembly & Byte Shift Inversion, Cellular Rogue Tower & IMSI-Derived XOR Recovery, 7-bit ASCII Bitstream Transposition, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
