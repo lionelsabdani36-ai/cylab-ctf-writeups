@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 228 / 525 challenges (Platform Live Solved: 307 / 525)
+- **Total Solved:** 231 / 525 challenges (Platform Live Solved: 310 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 31 (31 Oktober 2026 - Cryptography & Reverse Engineering Sprint: Affine Cipher Oracle Reversal, SHA256 Weak Salt Rainbow Table, Insecure PRNG Time Seeding, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 473 | Guess My Cheese (Part 1) | Cryptography | Medium | `academy{ChEeSy8b0897b1}` | **SOLVED** | 2026-10-31 |
+| 2 | 474 | Guess My Cheese (Part 2) | Cryptography | Medium | `academy{cHeEsYdaa8c59e}` | **SOLVED** | 2026-10-31 |
+| 3 | 468 | Chronohack | Reverse Engineering | Medium | `academy{UseSecure#$_Random@j3n3r@T0rs2627fc3a}` | **SOLVED** | 2026-10-31 |
 
 ### Batch 30 (31 Oktober 2026 - Reverse Engineering Medium Sprint: Scalar Multiplier Reversal, Hex Gatekeeper Reversal, Malicious Extension Fernet Recovery, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
