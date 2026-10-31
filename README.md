@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 221 / 525 challenges
+- **Total Solved:** 222 / 525 challenges
 
 ---
 
@@ -38,6 +38,11 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 28 (31 Oktober 2026 - K8s Secret Analysis, 1/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 732 | KSECRETS | General Skills | Medium |  | **SOLVED** | 2026-10-31 |
 
 ### Batch 27 (30 Oktober 2026 - Medium Sprint: OS-command-injection, nested-file-forensics, path-traversal, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
