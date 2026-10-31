@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 222 / 525 challenges
+- **Total Solved:** 225 / 525 challenges (Platform Live Solved: 304 / 525)
 
 ---
 
@@ -39,10 +39,17 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 29 (31 Oktober 2026 - Cryptography Sprint: Custom Stream Cipher, LFSR 8-bit, LFSR-AES-ECB, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 412 | Custom encryption | Cryptography | Medium | `academy{custom_d2cr0pt6d_203edf41}` | **SOLVED** | 2026-10-31 |
+| 2 | 716 | shift registers | Cryptography | Medium | `academy{l1n3ar_f33dback_sh1ft_r3g}` | **SOLVED** | 2026-10-31 |
+| 3 | 703 | cryptomaze | Cryptography | Medium | `academy{scr8mbledt_flvg_cc02eb30}` | **SOLVED** | 2026-10-31 |
+
 ### Batch 28 (31 Oktober 2026 - K8s Secret Analysis, 1/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
-| 1 | 732 | KSECRETS | General Skills | Medium |  | **SOLVED** | 2026-10-31 |
+| 1 | 732 | KSECRETS | General Skills | Medium | `academy{ks3cr375_41n7_s4f3_766edbce}` | **SOLVED** | 2026-10-31 |
 
 ### Batch 27 (30 Oktober 2026 - Medium Sprint: OS-command-injection, nested-file-forensics, path-traversal, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
