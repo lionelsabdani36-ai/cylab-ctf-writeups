@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 225 / 525 challenges (Platform Live Solved: 304 / 525)
+- **Total Solved:** 228 / 525 challenges (Platform Live Solved: 307 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 30 (31 Oktober 2026 - Reverse Engineering Medium Sprint: Scalar Multiplier Reversal, Hex Gatekeeper Reversal, Malicious Extension Fernet Recovery, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 751 | Hidden Cipher 2 | Reverse Engineering | Medium | `academy{m4th_b3h1nd_c1ph3r_3c573aef}` | **SOLVED** | 2026-10-31 |
+| 2 | 731 | Gatekeeper | Reverse Engineering | Medium | `academy{3_digit_hex_GT_999_fed7fa16}` | **SOLVED** | 2026-10-31 |
+| 3 | 697 | The Add/On Trap | Reverse Engineering | Medium | `academy{Us3_4dd/0ns_v3ry_c4r3fully1}` | **SOLVED** | 2026-10-31 |
 
 ### Batch 29 (31 Oktober 2026 - Cryptography Sprint: Custom Stream Cipher, LFSR 8-bit, LFSR-AES-ECB, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
