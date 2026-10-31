@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 231 / 525 challenges (Platform Live Solved: 310 / 525)
+- **Total Solved:** 234 / 525 challenges (Platform Live Solved: 313 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 32 (31 Oktober 2026 - Network Forensics & Reverse Engineering Sprint: TCP Stream Reassembly & Byte Shift Inversion, Cellular Rogue Tower & IMSI-Derived XOR Recovery, 7-bit ASCII Bitstream Transposition, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 717 | Silent Stream | Reverse Engineering | Medium | `academy{tr4ck_th3_tr4ff1c_4e0b942e}` | **SOLVED** | 2026-10-31 |
+| 2 | 714 | Rogue Tower | Forensics | Medium | `academy{r0gu3_c3ll_t0w3r_931ea9c0}` | **SOLVED** | 2026-10-31 |
+| 3 | 458 | perplexed | Reverse Engineering | Medium | `academy{0n3_bi7_4t_a_7im3}` | **SOLVED** | 2026-10-31 |
 
 ### Batch 31 (31 Oktober 2026 - Cryptography & Reverse Engineering Sprint: Affine Cipher Oracle Reversal, SHA256 Weak Salt Rainbow Table, Insecure PRNG Time Seeding, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
