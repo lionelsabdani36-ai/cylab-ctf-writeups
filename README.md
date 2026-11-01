@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 237 / 525 challenges (Platform Live Solved: 316 / 525)
+- **Total Solved:** 240 / 525 challenges (Platform Live Solved: 319 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 34 (01 November 2026 - Reverse Engineering & Mobile Forensics Sprint: ELF Stack Immediate & Rodata Carving, UPX Runtime Unpacking, Android APK Resource Carving, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 372 | Reverse | Reverse Engineering | Medium | `academy{3lf_r3v3r5ing_succe55ful_19e99671}` | **SOLVED** | 2026-11-01 |
+| 2 | 421 | packer | Reverse Engineering | Medium | `academy{U9X_UnP4ck1N6_B1n4Ri3S_9cb319ae}` | **SOLVED** | 2026-11-01 |
+| 3 | 420 | Mob psycho | Forensics | Medium | `academy{ax8mC0RU6ve_NX85l4ax8mCl_054e3cc4}` | **SOLVED** | 2026-11-01 |
 
 ### Batch 33 (31 Oktober 2026 - Network & Image Forensics & Java Bytecode Sprint: PCAP Cleartext Stream Carving, PNG Polyglot Embedded ZIP Carving, JVM Constant Pool Plaintext Recovery, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
