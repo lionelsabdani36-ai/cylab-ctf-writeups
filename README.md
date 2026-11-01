@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 249 / 525 challenges (Platform Live Solved: 328 / 525)
+- **Total Solved:** 252 / 525 challenges (Platform Live Solved: 331 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 38 (01 November 2026 - Forensics Sprint: Sleuthkit Partition Parsing & AES Artifact Decryption, PNG RFC 2083 Defiltering & MSB Bitplane Extraction, Ext4 Directory Entry Metadata Carving, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 285 | Operation Orchid | Forensics | Medium | `academy{h4un71ng_p457_0b36d810}` | **SOLVED** | 2026-11-01 |
+| 2 | 359 | MSB | Forensics | Medium | `academy{15_y0ur_que57_qu1x071c_0r_h3r01c_80119e7f}` | **SOLVED** | 2026-11-01 |
+| 3 | 413 | Dear Diary | Forensics | Medium | `academy{1_533_n4m35_a1eed517}` | **SOLVED** | 2026-11-01 |
 
 ### Batch 37 (01 November 2026 - Reverse Engineering & Cryptography Sprint: GDB Instruction Pointer Manipulation, Morse Audio Demodulation, Python Bytecode Deobfuscation & Stream XOR, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
