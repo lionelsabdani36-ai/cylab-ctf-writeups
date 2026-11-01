@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 246 / 525 challenges (Platform Live Solved: 325 / 525)
+- **Total Solved:** 249 / 525 challenges (Platform Live Solved: 328 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 37 (01 November 2026 - Reverse Engineering & Cryptography Sprint: GDB Instruction Pointer Manipulation, Morse Audio Demodulation, Python Bytecode Deobfuscation & Stream XOR, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 273 | GDB Test Drive | Reverse Engineering | Medium | `academy{d3bugg3r_dr1v3_4cc75120}` | **SOLVED** | 2026-11-01 |
+| 2 | 280 | morse-code | Cryptography | Medium | `academy{WH47_H47H_90D_W20U9H7}` | **SOLVED** | 2026-11-01 |
+| 3 | 428 | weirdSnake | Reverse Engineering | Medium | `academy{N0t_sO_coNfus1ng_sn@ke_d322ee40}` | **SOLVED** | 2026-11-01 |
 
 ### Batch 36 (01 November 2026 - Forensics, Reverse Engineering & Cryptography Sprint: 32-bit Dword Endianness Swap, C++ std::string Static Reversal, Custom Cyclical Stream Cipher Inversion, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
