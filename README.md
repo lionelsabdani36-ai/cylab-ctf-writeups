@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 243 / 525 challenges (Platform Live Solved: 322 / 525)
+- **Total Solved:** 246 / 525 challenges (Platform Live Solved: 325 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 36 (01 November 2026 - Forensics, Reverse Engineering & Cryptography Sprint: 32-bit Dword Endianness Swap, C++ std::string Static Reversal, Custom Cyclical Stream Cipher Inversion, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 415 | endianness-v2 | Forensics | Medium | `academy{cert!f1Ed_iNd!4n_s0rrY_3nDian_5c667703}` | **SOLVED** | 2026-11-01 |
+| 2 | 416 | FactCheck | Reverse Engineering | Medium | `academy{wELF_d0N3_mate_9480e1e2}` | **SOLVED** | 2026-11-01 |
+| 3 | 407 | C3 | Cryptography | Medium | `academy{adlibs}` | **SOLVED** | 2026-11-01 |
 
 ### Batch 35 (01 November 2026 - Reverse Engineering & Cryptography Sprint: JVM Bytecode Static Recovery, Android Multi-DEX String Carving, Steghide DCT Extraction & Atbash Decryption, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
