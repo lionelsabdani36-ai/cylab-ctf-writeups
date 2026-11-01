@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 240 / 525 challenges (Platform Live Solved: 319 / 525)
+- **Total Solved:** 243 / 525 challenges (Platform Live Solved: 322 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 35 (01 November 2026 - Reverse Engineering & Cryptography Sprint: JVM Bytecode Static Recovery, Android Multi-DEX String Carving, Steghide DCT Extraction & Atbash Decryption, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 271 | Fresh Java | Reverse Engineering | Medium | `academy{700l1ng_r3qu1r3d_5e462060}` | **SOLVED** | 2026-11-01 |
+| 2 | 381 | timer | Reverse Engineering | Medium | `academy{t1m3r_r3v3rs3d_succ355fully_17496}` | **SOLVED** | 2026-11-01 |
+| 3 | 351 | HideToSee | Cryptography | Medium | `academy{atbash_crack_6167bd8e}` | **SOLVED** | 2026-11-01 |
 
 ### Batch 34 (01 November 2026 - Reverse Engineering & Mobile Forensics Sprint: ELF Stack Immediate & Rodata Carving, UPX Runtime Unpacking, Android APK Resource Carving, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
