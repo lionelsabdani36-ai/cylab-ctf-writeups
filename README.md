@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 255 / 525 challenges (Platform Live Solved: 334 / 525)
+- **Total Solved:** 258 / 525 challenges (Platform Live Solved: 337 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 40 (02 November 2026 - Reverse Engineering Sprint: Multi-Process Windows Anti-Debugging & Active Attachment Bypasses, UPX Packed PE Analysis & PDB Symbol Extraction, Custom LZMA .ATOM Packing & Condition Variable Instrumentation, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 430 | WinAntiDbg0x200 | Reverse Engineering | Medium | `academy{0x200_debug_f0r_Win_cf686cdb}` | **SOLVED** | 2026-11-02 |
+| 2 | 431 | WinAntiDbg0x300 | Reverse Engineering | Medium | `academy{Wind0ws_antid3bg_0x300_1415757f}` | **SOLVED** | 2026-11-02 |
+| 3 | 451 | Binary Instrumentation 1 | Reverse Engineering | Medium | `academy{w4ke_m3_up_w1th_fr1da_f27acc38}` | **SOLVED** | 2026-11-02 |
 
 ### Batch 39 (02 November 2026 - Reverse Engineering & Forensics Sprint: Mechanical Gear Kinematics & 3D DAE Byte Serialization, Windows EVTX Multi-Event Triage & Malware Persistence Carving, PE32 Anti-Debugging PEB Bypass & Multi-Round Hamming Stream Inversion, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
