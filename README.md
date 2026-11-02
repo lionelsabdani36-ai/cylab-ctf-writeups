@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 261 / 525 challenges (Platform Live Solved: 340 / 525)
+- **Total Solved:** 264 / 525 challenges (Platform Live Solved: 343 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 42 (02 November 2026 - Binary Exploitation & Reverse Engineering Sprint: x86_64 Stack Buffer Overflow & SSE 16-byte Alignment, 32-bit x86 Frame Pointer Hijack & Insecure fgets(), Symmetric Linear Transposition Cipher Reversal, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 755 | Echo Escape 1 | Binary Exploitation | Medium | `academy{3ch0_s3rv1c3_br34k5_7fcd4fec}` | **SOLVED** | 2026-11-02 |
+| 2 | 736 | Echo Escape 2 | Binary Exploitation | Medium | `academy{fgets_0v3rfl0w42_8cb8052a}` | **SOLVED** | 2026-11-02 |
+| 3 | 79 | reverse_cipher | Reverse Engineering | Medium | `academy{r3v3rs356673ca1}` | **SOLVED** | 2026-11-02 |
 
 ### Batch 41 (02 November 2026 - Reverse Engineering & Web Exploitation Sprint: Custom LZMA .ATOM Packing & Windows API WriteFile Interception, Popcount Caesar Keystream Reversal & TCP Socket Automation, Client-Side Regex Inspection & Parameter Bypasses, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
