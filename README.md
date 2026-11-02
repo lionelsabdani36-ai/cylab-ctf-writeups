@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 258 / 525 challenges (Platform Live Solved: 337 / 525)
+- **Total Solved:** 261 / 525 challenges (Platform Live Solved: 340 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 41 (02 November 2026 - Reverse Engineering & Web Exploitation Sprint: Custom LZMA .ATOM Packing & Windows API WriteFile Interception, Popcount Caesar Keystream Reversal & TCP Socket Automation, Client-Side Regex Inspection & Parameter Bypasses, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 452 | Binary Instrumentation 2 | Reverse Engineering | Medium | `academy{fr1da_f0r_b1n_in5trum3nt4tion!_b21aef39}` | **SOLVED** | 2026-11-02 |
+| 2 | 409 | Classic Crackme 0x100 | Reverse Engineering | Medium | `academy{s0lv3_angry_symb0ls_08254898}` | **SOLVED** | 2026-11-02 |
+| 3 | 356 | MatchTheRegex | Web Exploitation | Medium | `academy{succ3ssfully_matchtheregex_4d5352dc}` | **SOLVED** | 2026-11-02 |
 
 ### Batch 40 (02 November 2026 - Reverse Engineering Sprint: Multi-Process Windows Anti-Debugging & Active Attachment Bypasses, UPX Packed PE Analysis & PDB Symbol Extraction, Custom LZMA .ATOM Packing & Condition Variable Instrumentation, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
