@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 264 / 525 challenges (Platform Live Solved: 343 / 525)
+- **Total Solved:** 267 / 525 challenges (Platform Live Solved: 346 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 43 (02 November 2026 - Binary Exploitation & Web Security Sprint: Stack Memory Corruption via Unbounded strcpy(), Heap Pointer Offset Calculation & Whitespace Bypass, Insecure Client Header Trust & X-Forwarded-For Rate-Limit Bypass, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 525 | Input Injection 1 | Binary Exploitation | Medium | `academy{0v3rfl0w_c0mm4nd_72792d0d}` | **SOLVED** | 2026-11-02 |
+| 2 | 526 | Input Injection 2 | Binary Exploitation | Medium | `academy{us3rn4m3_2_sh3ll_819f0acb}` | **SOLVED** | 2026-11-02 |
+| 3 | 521 | Crack the Gate 2 | Web Exploitation | Medium | `academy{xff_byp4ss_brut3_b6771b85}` | **SOLVED** | 2026-11-02 |
 
 ### Batch 42 (02 November 2026 - Binary Exploitation & Reverse Engineering Sprint: x86_64 Stack Buffer Overflow & SSE 16-byte Alignment, 32-bit x86 Frame Pointer Hijack & Insecure fgets(), Symmetric Linear Transposition Cipher Reversal, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
