@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 267 / 525 challenges (Platform Live Solved: 346 / 525)
+- **Total Solved:** 270 / 525 challenges (Platform Live Solved: 349 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 44 (02 November 2026 - Cryptography & Algorithmic Number Theory Sprint: RSA Quadratic Discriminant Factoring via Leaked Sum-Of-Primes, 4th-Order Linear Recurrence Closed-Form & Fast Modular Matrix Exponentiation, Pollard's p-1 Factoring on B-Smooth RSA Modulus, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 310 | Sum-O-Primes | Cryptography | Medium | `academy{pl33z_n0_g1v3_c0ngru3nc3_0f_5qu4r35_b18bb8b6}` | **SOLVED** | 2026-11-02 |
+| 2 | 297 | Sequences | Cryptography | Medium | `academy{b1g_numb3rs_56b2970a}` | **SOLVED** | 2026-11-02 |
+| 3 | 315 | Very Smooth | Cryptography | Medium | `academy{p0ll4rd_f4ct0r1z4at10n_FTW_48d4cbdf}` | **SOLVED** | 2026-11-02 |
 
 ### Batch 43 (02 November 2026 - Binary Exploitation & Web Security Sprint: Stack Memory Corruption via Unbounded strcpy(), Heap Pointer Offset Calculation & Whitespace Bypass, Insecure Client Header Trust & X-Forwarded-For Rate-Limit Bypass, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
