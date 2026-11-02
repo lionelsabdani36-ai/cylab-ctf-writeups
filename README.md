@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 252 / 525 challenges (Platform Live Solved: 331 / 525)
+- **Total Solved:** 255 / 525 challenges (Platform Live Solved: 334 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 39 (02 November 2026 - Reverse Engineering & Forensics Sprint: Mechanical Gear Kinematics & 3D DAE Byte Serialization, Windows EVTX Multi-Event Triage & Malware Persistence Carving, PE32 Anti-Debugging PEB Bypass & Multi-Round Hamming Stream Inversion, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 385 | Virtual Machine 0 | Reverse Engineering | Medium | `academy{g34r5_0f_m0r3_c95d6542}` | **SOLVED** | 2026-11-02 |
+| 2 | 456 | Event-Viewing | Forensics | Medium | `academy{Ev3nt_vi3wv3r_1s_a_pr3tty_us3ful_t00l_81ba3fe9}` | **SOLVED** | 2026-11-02 |
+| 3 | 429 | WinAntiDbg0x100 | Reverse Engineering | Medium | `academy{d3bug_f0r_th3_Win_0x100_411bc019}` | **SOLVED** | 2026-11-02 |
 
 ### Batch 38 (01 November 2026 - Forensics Sprint: Sleuthkit Partition Parsing & AES Artifact Decryption, PNG RFC 2083 Defiltering & MSB Bitplane Extraction, Ext4 Directory Entry Metadata Carving, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
