@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 279 / 525 challenges (Platform Live Solved: 358 / 525)
+- **Total Solved:** 282 / 525 challenges (Platform Live Solved: 361 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 48 (03 November 2026 - Linux Internals, Binary Exploitation & Web Security Sprint: System Man-DB Documentation Extraction, 64-bit Format String Stack Leak & Polyglot PNG/PHP Webshell RCE, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 384 | useless | General Skills | Medium | `academy{us3l3ss_ch4ll3ng3_3xpl0it3d_4318}` | **SOLVED** | 2026-11-03 |
+| 2 | 434 | format string 1 | Binary Exploitation | Medium | `academy{4n1m41_57y13_4x4_f14g_f7ab2890}` | **SOLVED** | 2026-11-03 |
+| 3 | 445 | Trickster | Web Exploitation | Medium | `academy{c3rt!fi3d_Xp3rt_tr1ckst3r_df3f5bef}` | **SOLVED** | 2026-11-03 |
 
 ### Batch 47 (03 November 2026 - Reverse Engineering, Binary Exploitation & Web Security Sprint: CoreWars Redcode Instant Suicide, 32-bit Two's Complement Integer Overflow & XML External Entity /etc/passwd Disclosure, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
