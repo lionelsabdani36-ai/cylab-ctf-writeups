@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 285 / 525 challenges (Platform Live Solved: 364 / 525)
+- **Total Solved:** 288 / 525 challenges (Platform Live Solved: 367 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 50 (03 November 2026 - CoreWars Redcode Virtual Machine & Linux SUID TOCTOU Sprint: MARS Dwarf Bomber, Pre-Decrement Imp-Gate 100-Round Sweep & SUID Time-of-Check to Time-of-Use Race Condition, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 369 | Ready Gladiator 1 | Reverse Engineering | Medium | `academy{1mp_1n_7h3_cr055h41r5_db62826b}` | **SOLVED** | 2026-11-03 |
+| 2 | 370 | Ready Gladiator 2 | Reverse Engineering | Medium | `academy{d3m0n_3xpung3r_2e26bfb2}` | **SOLVED** | 2026-11-03 |
+| 3 | 380 | tic-tac | Binary Exploitation | Medium | `academy{ToctoU_!s_3a5y_f506ee91}` | **SOLVED** | 2026-11-03 |
 
 ### Batch 49 (03 November 2026 - Linux Privilege Escalation, Sudo Misconfiguration & Module Hijacking Sprint: SUID Environment Variable Injection, Sudo Vi GTFOBins Shell Escape & Python sys.path Library Hijacking, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
