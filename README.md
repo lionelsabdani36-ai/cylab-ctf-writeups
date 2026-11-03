@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 270 / 525 challenges (Platform Live Solved: 349 / 525)
+- **Total Solved:** 273 / 525 challenges (Platform Live Solved: 352 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 45 (03 November 2026 - Cryptography Sprint: RSA Low Public Exponent Root Extraction, Insecure Custom Addition Block Chaining Reversal to AES-ECB, Repeating-Key XOR Involution Decomposition & Known-Plaintext Recovery, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 73 | miniRSA | Cryptography | Hard | `academy{n33d_a_lArg3r_e_e2b360ae}` | **SOLVED** | 2026-11-03 |
+| 2 | 76 | AES-ABC | Cryptography | Hard | `academy{d0Nt_r0ll_yoUr_0wN_aES}` | **SOLVED** | 2026-11-03 |
+| 3 | 208 | XtraORdinary | Cryptography | Hard | `picoCTF{w41t_s0_1_d1dnt_1nv3nt_x0r???}` | **SOLVED** | 2026-11-03 |
 
 ### Batch 44 (02 November 2026 - Cryptography & Algorithmic Number Theory Sprint: RSA Quadratic Discriminant Factoring via Leaked Sum-Of-Primes, 4th-Order Linear Recurrence Closed-Form & Fast Modular Matrix Exponentiation, Pollard's p-1 Factoring on B-Smooth RSA Modulus, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
