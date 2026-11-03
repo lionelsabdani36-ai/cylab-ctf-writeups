@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 288 / 525 challenges (Platform Live Solved: 367 / 525)
+- **Total Solved:** 291 / 525 challenges (Platform Live Solved: 370 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 51 (03 November 2026 - Linux Heap Exploitation Trilogy: Heap Buffer Overflow, Non-PIE Function Pointer Hijack & Use-After-Free Chunk Recycling Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 439 | heap 1 | Binary Exploitation | Medium | `academy{starting_to_get_the_hang_9727cc8d}` | **SOLVED** | 2026-11-03 |
+| 2 | 435 | heap 2 | Binary Exploitation | Medium | `academy{and_down_the_road_we_go_f5e464ff}` | **SOLVED** | 2026-11-03 |
+| 3 | 440 | heap 3 | Binary Exploitation | Medium | `academy{now_thats_free_real_estate_6ed71fb5}` | **SOLVED** | 2026-11-03 |
 
 ### Batch 50 (03 November 2026 - CoreWars Redcode Virtual Machine & Linux SUID TOCTOU Sprint: MARS Dwarf Bomber, Pre-Decrement Imp-Gate 100-Round Sweep & SUID Time-of-Check to Time-of-Use Race Condition, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
