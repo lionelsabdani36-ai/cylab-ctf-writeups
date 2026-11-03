@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 282 / 525 challenges (Platform Live Solved: 361 / 525)
+- **Total Solved:** 285 / 525 challenges (Platform Live Solved: 364 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 49 (03 November 2026 - Linux Privilege Escalation, Sudo Misconfiguration & Module Hijacking Sprint: SUID Environment Variable Injection, Sudo Vi GTFOBins Shell Escape & Python sys.path Library Hijacking, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 387 | VNE | Binary Exploitation | Medium | `academy{Power_t0_man!pul4t3_3nv_72f8870f}` | **SOLVED** | 2026-11-03 |
+| 2 | 363 | Permissions | General Skills | Medium | `academy{uS1ng_v1m_3dit0r_9f6b56dd}` | **SOLVED** | 2026-11-03 |
+| 3 | 352 | hijacking | Binary Exploitation | Medium | `academy{pYth0nn_libraryH!j@CK!n9_15d0fa80}` | **SOLVED** | 2026-11-03 |
 
 ### Batch 48 (03 November 2026 - Linux Internals, Binary Exploitation & Web Security Sprint: System Man-DB Documentation Extraction, 64-bit Format String Stack Leak & Polyglot PNG/PHP Webshell RCE, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
