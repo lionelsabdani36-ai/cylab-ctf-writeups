@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 273 / 525 challenges (Platform Live Solved: 352 / 525)
+- **Total Solved:** 276 / 525 challenges (Platform Live Solved: 355 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 46 (03 November 2026 - Reverse Engineering & Binary Instrumentation Sprint: LZMA Stream .ATOM Unpacking, Windows API Socket Logic & Data Segment Reconstruction, ELF 64-bit Stack Frame Reversal & OpenSSL MD5 Keygen, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 699 | Binary Instrumentation 3 | Reverse Engineering | Hard | `academy{411_4r3_4p15_n07h1n9_3l53_34f98e4f}` | **SOLVED** | 2026-11-03 |
+| 2 | 700 | Binary Instrumentation 4 | Reverse Engineering | Hard | `academy{n3tw0rk_1s_4P1s_4S_W311_3a23cea2}` | **SOLVED** | 2026-11-03 |
+| 3 | 276 | Keygenme | Reverse Engineering | Hard | `academy{br1ng_y0ur_0wn_k3y_5b5d983e}` | **SOLVED** | 2026-11-03 |
 
 ### Batch 45 (03 November 2026 - Cryptography Sprint: RSA Low Public Exponent Root Extraction, Insecure Custom Addition Block Chaining Reversal to AES-ECB, Repeating-Key XOR Involution Decomposition & Known-Plaintext Recovery, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
