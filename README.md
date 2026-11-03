@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 291 / 525 challenges (Platform Live Solved: 370 / 525)
+- **Total Solved:** 294 / 525 challenges (Platform Live Solved: 373 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 52 (03 November 2026 - Memory Corruption, GOT Overwrite & Threat Intelligence Signature Crafting Sprint: Arbitrary Byte Write via %hhn, Libc Leak & Dynamic GOT Hijack to system(), UPX PE32 Multi-Rule YARA Detection, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 448 | format string 2 | Binary Exploitation | Medium | `academy{f0rm47_57r?_f0rm47_m3m_1c092a1e}` | **SOLVED** | 2026-11-03 |
+| 2 | 449 | format string 3 | Binary Exploitation | Medium | `academy{G07_G07?_a42d872f}` | **SOLVED** | 2026-11-03 |
+| 3 | 483 | YaraRules0x100 | General Skills | Medium | `academy{yara_rul35_r0ckzzz_3fd2bd06}` | **SOLVED** | 2026-11-03 |
 
 ### Batch 51 (03 November 2026 - Linux Heap Exploitation Trilogy: Heap Buffer Overflow, Non-PIE Function Pointer Hijack & Use-After-Free Chunk Recycling Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
