@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 276 / 525 challenges (Platform Live Solved: 355 / 525)
+- **Total Solved:** 279 / 525 challenges (Platform Live Solved: 358 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 47 (03 November 2026 - Reverse Engineering, Binary Exploitation & Web Security Sprint: CoreWars Redcode Instant Suicide, 32-bit Two's Complement Integer Overflow & XML External Entity /etc/passwd Disclosure, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 368 | Ready Gladiator 0 | Reverse Engineering | Medium | `academy{h3r0_t0_z3r0_4m1r1gh7_1c8e5812}` | **SOLVED** | 2026-11-03 |
+| 2 | 382 | two-sum | Binary Exploitation | Medium | `academy{Tw0_Sum_Integer_Bu773R_0v3rfl0w_d95e96f0}` | **SOLVED** | 2026-11-03 |
+| 3 | 376 | SOAP | Web Exploitation | Medium | `academy{XML_3xtern@l_3nt1t1ty_503913d8}` | **SOLVED** | 2026-11-03 |
 
 ### Batch 46 (03 November 2026 - Reverse Engineering & Binary Instrumentation Sprint: LZMA Stream .ATOM Unpacking, Windows API Socket Logic & Data Segment Reconstruction, ELF 64-bit Stack Frame Reversal & OpenSSL MD5 Keygen, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
