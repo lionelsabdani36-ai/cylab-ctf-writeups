@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 297 / 525 challenges (Platform Live Solved: 376 / 525)
+- **Total Solved:** 300 / 525 challenges (Platform Live Solved: 379 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 54 (04 November 2026 - Format String Stack Pointer Leak, SQLite Metadata Enumeration & Root Symlink Traversal Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 269 | flag leak | Binary Exploitation | Medium | `academy{L34k1ng_Fl4g_0ff_St4ck_0845a0aa}` | **SOLVED** | 2026-11-04 |
+| 2 | 358 | More SQLi | Web Exploitation | Medium | `academy{G3tting_5QL_1nJ3c7I0N_l1k3_y0u_sh0ulD_b5ff84c8}` | **SOLVED** | 2026-11-04 |
+| 3 | 437 | dont-you-love-banners | General Skills | Medium | `academy{b4nn3r_gr4bb1n9_su((3sfu11y_d3ce8df1}` | **SOLVED** | 2026-11-04 |
 
 ### Batch 53 (04 November 2026 - Web Application Security, Credential Stuffing Rate-Limit Evasion, Apache .htaccess MIME Remapping Webshell & Nginx GeoIP2 Tor Routing Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
