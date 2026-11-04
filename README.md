@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 303 / 525 challenges (Platform Live Solved: 382 / 525)
+- **Total Solved:** 306 / 525 challenges (Platform Live Solved: 384 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 56 (04 November 2026 - Forensic Metadata Patching, Non-Alpha Shell Escape & x86_64 Format String Hijack Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 432 | Blast from the past | Forensics | Medium | `academy{71m3_7r4v311ng_p1c7ur3_085c715f}` | **SOLVED** | 2026-11-04 |
+| 2 | 436 | SansAlpha | General Skills | Medium | `academy{7h15_mu171v3r53_15_m4dn355_9b767f07}` | **SOLVED** | 2026-11-04 |
+| 3 | 485 | Echo Valley | Binary Exploitation | Medium | `academy{f1ckl3_f0rmat_f1asc0}` | **SOLVED** | 2026-11-04 |
 
 ### Batch 55 (04 November 2026 - Remote Terminal Operations, Python Flask Dynamic Eval Bypass & PHP Array Type Juggling Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
