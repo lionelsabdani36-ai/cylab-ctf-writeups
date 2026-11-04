@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 306 / 525 challenges (Platform Live Solved: 384 / 525)
+- **Total Solved:** 309 / 525 challenges (Platform Live Solved: 387 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 57 (04 November 2026 - Polyalphabetic Nibble Substitution, Common Factor RSA & Håstad Broadcast Attack Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 148 | New Vignere | Cryptography | Hard | `academy{468293b06253c715005873e333d98dbc}` | **SOLVED** | 2026-11-04 |
+| 2 | 209 | triple-secure | Cryptography | Hard | `picoCTF{1_gu3ss_tr1pl3_rs4_1snt_tr1pl3_s3cur3!!!!!!}` | **SOLVED** | 2026-11-04 |
+| 3 | 212 | college-rowing-team | Cryptography | Hard | `picoCTF{1_gu3ss_p30pl3_p4d_m3ss4g3s_f0r_4_r34s0n}` | **SOLVED** | 2026-11-04 |
 
 ### Batch 56 (04 November 2026 - Forensic Metadata Patching, Non-Alpha Shell Escape & x86_64 Format String Hijack Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
