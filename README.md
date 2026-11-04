@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 294 / 525 challenges (Platform Live Solved: 373 / 525)
+- **Total Solved:** 297 / 525 challenges (Platform Live Solved: 376 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 53 (04 November 2026 - Web Application Security, Credential Stuffing Rate-Limit Evasion, Apache .htaccess MIME Remapping Webshell & Nginx GeoIP2 Tor Routing Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 743 | Fool the Lockout | Web Exploitation | Medium | `academy{f00l_7h4t_l1m1t3r_2fa1cd8e}` | **SOLVED** | 2026-11-04 |
+| 2 | 518 | byp4ss3d | Web Exploitation | Medium | `academy{s3rv3r_byp4ss_b1e8386b}` | **SOLVED** | 2026-11-04 |
+| 3 | 725 | North-South | Web Exploitation | Medium | `academy{g30_b453d_r0u71n9_5e58725f}` | **SOLVED** | 2026-11-04 |
 
 ### Batch 52 (03 November 2026 - Memory Corruption, GOT Overwrite & Threat Intelligence Signature Crafting Sprint: Arbitrary Byte Write via %hhn, Libc Leak & Dynamic GOT Hijack to system(), UPX PE32 Multi-Rule YARA Detection, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
