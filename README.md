@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 370 / 525 challenges (Platform Live Solved: 403 / 525)
+- **Total Solved:** 373 / 525 challenges (Platform Live Solved: 403 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 77 (05 November 2026 - Python Trialware Reverse Engineering, HTTP ROT13 Inspection & TFTP Steghide Forensics Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 121 | keygenme-py | Reverse Engineering | Medium | `academy{1n_7h3_kk3y_of_9edf443b}` | **SOLVED** | 2026-11-05 |
+| 2 | 115 | Wireshark doo dooo do doo... | Forensics | Medium | `academy{p33kab00_1_s33_u_deadbeef}` | **SOLVED** | 2026-11-05 |
+| 3 | 103 | Trivial Flag Transfer Protocol | Forensics | Medium | `academy{h1dd3n_1n_pLa1n_51GHT_18375919}` | **SOLVED** | 2026-11-05 |
 
 ### Batch 76 (05 November 2026 - PNG LSB Steganography, PCAP UDP Stream Analysis & Maritime Visual Ciphers Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
