@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 343 / 525 challenges (Platform Live Solved: 403 / 525)
+- **Total Solved:** 346 / 525 challenges (Platform Live Solved: 403 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 68 (05 November 2026 - Forensics XMP Metadata, CLI Path Autocompletion & ELF Flag Parsing Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 186 | information | Forensics | Easy | `academy{the_m3tadata_1s_modified}` | **SOLVED** | 2026-11-05 |
+| 2 | 176 | Tab, Tab, Attack | General Skills | Easy | `academy{l3v3l_up!_t4k3_4_r35t!_9d928112}` | **SOLVED** | 2026-11-05 |
+| 3 | 170 | Wave a flag | General Skills | Easy | `academy{b1scu1ts_4nd_gr4vy_57d8c79}` | **SOLVED** | 2026-11-05 |
 
 ### Batch 67 (05 November 2026 - Password Hash Cracking, Dictionary Exhaustion & MD5 Pre-image Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
