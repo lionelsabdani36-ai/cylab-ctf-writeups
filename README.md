@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 379 / 525 challenges (Platform Live Solved: 403 / 525)
+- **Total Solved:** 382 / 525 challenges (Platform Live Solved: 403 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 80 (05 November 2026 - HTTP User-Agent Header Spoofing, JWT Secret Cracking & Pre-ROT13 SQL Injection Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 9 | picobrowser | Web Exploitation | Medium | `academy{p1c0_s3cr3t_ag3nt_33592427}` | **SOLVED** | 2026-11-05 |
+| 2 | 25 | JaWT Scratchpad | Web Exploitation | Medium | `academy{jawt_was_just_what_you_thought_3ecb761a}` | **SOLVED** | 2026-11-05 |
+| 3 | 8 | Irish-Name-Repo 3 | Web Exploitation | Medium | `academy{3v3n_m0r3_SQL_033fd51c}` | **SOLVED** | 2026-11-05 |
 
 ### Batch 79 (05 November 2026 - Raw TCP Socket Discovery, Linux FHS Directory Traversal & Stdout Pipeline Filtration Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
