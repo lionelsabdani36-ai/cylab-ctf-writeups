@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 358 / 525 challenges (Platform Live Solved: 403 / 525)
+- **Total Solved:** 361 / 525 challenges (Platform Live Solved: 403 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 73 (05 November 2026 - Linux Execution Semantics, CLI Argument Parsing & Large Corpus Text Carving Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 266 | file-run1 | Reverse Engineering | Medium | `academy{U51N6_Y0Ur_F1r57_F113_4640f37e}` | **SOLVED** | 2026-11-05 |
+| 2 | 267 | file-run2 | Reverse Engineering | Medium | `academy{F1r57_4rgum3n7_3819dbe5}` | **SOLVED** | 2026-11-05 |
+| 3 | 279 | Lookey here | Forensics | Medium | `academy{gr3p_15_@w3s0m3_33595e98}` | **SOLVED** | 2026-11-05 |
 
 ### Batch 72 (05 November 2026 - Binary Strings Extraction, Java Static Reversing & File Signature Spoofing Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
