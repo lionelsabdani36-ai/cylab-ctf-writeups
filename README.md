@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 325 / 525 challenges (Platform Live Solved: 403 / 525)
+- **Total Solved:** 328 / 525 challenges (Platform Live Solved: 403 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 62 (05 November 2026 - x86_64 Conditional Branching, Dynamic GDB Breakpoints & Loop Invariant Tracing Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 394 | Bit-O-Asm-4 | Reverse Engineering | Easy | `academy{654773}` | **SOLVED** | 2026-11-05 |
+| 2 | 395 | GDB baby step 1 | Reverse Engineering | Easy | `academy{549698}` | **SOLVED** | 2026-11-05 |
+| 3 | 396 | GDB baby step 2 | Reverse Engineering | Easy | `academy{307019}` | **SOLVED** | 2026-11-05 |
 
 ### Batch 61 (05 November 2026 - x86_64 Register Data Movement, Stack Addressing & Integer Arithmetic Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
