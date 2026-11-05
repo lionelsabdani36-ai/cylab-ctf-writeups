@@ -1,0 +1,245 @@
+{
+  "760": {
+    "id": 760,
+    "name": "Smart_Overflow",
+    "category": "Blockchain",
+    "difficulty": 2,
+    "event": "picoCTF 2026",
+    "description": "Welcome! \n\nThe contract tracks balances using `uint256` math. It should be impossible to get the flag...\nContract: <a href='https://challenge-files.cylabacademy.net/library/870fa09276fe5105526aba20060c43f11639dedb446e5e1e00a8cc7d24c62d76/IntOverflowBank.sol' download>here</a>",
+    "hints": [
+      "What happens when balances[msg.sender] becomes smaller after a deposit?",
+      "Look at the flag reveal condition carefully.",
+      "Why do attackers like integers?"
+    ],
+    "on_demand": true,
+    "error_reason": null
+  },
+  "754": {
+    "id": 754,
+    "name": "Autorev 1",
+    "category": "Reverse Engineering",
+    "difficulty": 2,
+    "event": "picoCTF 2026",
+    "description": "You think you can reverse engineer? Let's test out your speed",
+    "hints": [],
+    "on_demand": true,
+    "error_reason": null
+  },
+  "733": {
+    "id": 733,
+    "name": "offset-cycle",
+    "category": "Binary Exploitation",
+    "difficulty": 2,
+    "event": "picoCTF 2026",
+    "description": "It's a race against time. Solve the binary exploit ASAP.",
+    "hints": [
+      "Each binary is different.",
+      "gdb and pwntools are installed on the machine; pwntools' cyclic (`pwn cyclic`) finds the offset."
+    ],
+    "on_demand": true,
+    "error_reason": null
+  },
+  "723": {
+    "id": 723,
+    "name": "Access_Control",
+    "category": "Blockchain",
+    "difficulty": 2,
+    "event": "picoCTF 2026",
+    "description": "We've created a simple contract to store a secret flag. But you currently are not the owner of the contract... Only the owner of the contract should be able to access it. We're sure we've made it secure this time. \nContract: <a href='https://challenge-files.cylabacademy.net/library/4ace2f9c4b176be6fd783cffab3351b8de943d802146d3d77adaa487d93ed78a/AccessControl.sol' download>here</a>",
+    "hints": [
+      "Wait, maybe you can be the owner?"
+    ],
+    "on_demand": true,
+    "error_reason": null
+  },
+  "529": {
+    "id": 529,
+    "name": "Pico Bank",
+    "category": "Reverse Engineering",
+    "difficulty": 2,
+    "event": "picoMini by CMU-Africa",
+    "description": "In a bustling city where innovation meets finance, Pico Bank has emerged as a beacon of cutting-edge security. Promising state-of-the-art protection for your assets, the bank claims its mobile application is impervious to all forms of cyber threats. Pico Bank\u2019s tagline, \"Security Beyond the Limits,\" echoes through its high-tech marketing campaigns, assuring users of their utmost safety.\n\nAs a cybersecurity enthusiast, your mission is to test these bold claims. You\u2019ve been hired by a secretive organization to put Pico Bank\u2019s mobile app through a rigorous security assessment. The flag might be in one or more locations, and additional information reveals that a Pico Bank user\u2019s credentials were leaked in an unusual way. Your task is to crack the username and password based on the following profile information: His name is Alex Johnson with the email johnson@picobank.com, Date of Birth: March 14, 1990, Last Transaction Amount: $345.67, Pet name: tricky, and Favorite Color: Blue.\n\nTo perform this challenge, you can use any Android emulator. Some examples include [Genymotion Android Emulator](https://www.genymotion.com/product-desktop/download/) or [Android Studio](https://developer.android.com/studio).",
+    "hints": [
+      "Use tools like JadxGUI or apktool to inspect the APK.",
+      "Look at the app's network requests, especially for login and OTP.",
+      "The flag has two parts.",
+      "Check the server\u2019s response after entering the correct OTP.",
+      "Investigate the transaction history for unusual data."
+    ],
+    "on_demand": true,
+    "error_reason": null
+  },
+  "494": {
+    "id": 494,
+    "name": "Pachinko",
+    "category": "Web Exploitation",
+    "difficulty": 2,
+    "event": "picoCTF 2025",
+    "description": "History has failed us, but no matter.\n\n<a href='https://challenge-files.cylabacademy.net/library/05811f9f3ba7253920faabd5a8b2308ee44ade0e89a016380957f654cb168262/server.tar.gz' download>Server source</a>\n\nThere are two flags in this challenge. Submit flag one here, and flag two in **Pachinko Revisited**.",
+    "hints": [],
+    "on_demand": true,
+    "error_reason": null
+  },
+  "489": {
+    "id": 489,
+    "name": "hash-only-2",
+    "category": "Binary Exploitation",
+    "difficulty": 2,
+    "event": "picoCTF 2025",
+    "description": "Here is a binary that has enough privilege to read the content of the flag file but will only let you know its hash. If only it could just give you the actual content!",
+    "hints": [],
+    "on_demand": true,
+    "error_reason": null
+  },
+  "487": {
+    "id": 487,
+    "name": "hash-only-1",
+    "category": "Binary Exploitation",
+    "difficulty": 2,
+    "event": "picoCTF 2025",
+    "description": "Here is a binary that has enough privilege to read the content of the flag file but will only let you know its hash. If only it could just give you the actual content!",
+    "hints": [],
+    "on_demand": true,
+    "error_reason": null
+  },
+  "481": {
+    "id": 481,
+    "name": "flags are stepic",
+    "category": "Forensics",
+    "difficulty": 2,
+    "event": "picoCTF 2025",
+    "description": "A group of underground hackers might be using this legit site to communicate. Use your forensic techniques to uncover their message",
+    "hints": [
+      "In the country that doesn't exist, the flag persists"
+    ],
+    "on_demand": true,
+    "error_reason": null
+  },
+  "480": {
+    "id": 480,
+    "name": "WebSockFish",
+    "category": "Web Exploitation",
+    "difficulty": 2,
+    "event": "picoCTF 2025",
+    "description": "Can you win in a convincing manner against this chess bot? He won't go easy on you!",
+    "hints": [
+      "Try understanding the code and how the websocket client is interacting with the server"
+    ],
+    "on_demand": true,
+    "error_reason": null
+  },
+  "479": {
+    "id": 479,
+    "name": "Quantum Scrambler",
+    "category": "Reverse Engineering",
+    "difficulty": 2,
+    "event": "picoCTF 2025",
+    "description": "We invented a new cypher that uses \"quantum entanglement\" to encode the flag. Do\nyou have what it takes to decode it?",
+    "hints": [
+      "Run `eval` on the cypher to interpret it as a python object",
+      "Print the outer list one object per line",
+      "Feed in a known plaintext through the scrambler"
+    ],
+    "on_demand": true,
+    "error_reason": null
+  },
+  "454": {
+    "id": 454,
+    "name": "Bitlocker-2",
+    "category": "Forensics",
+    "difficulty": 2,
+    "event": "picoCTF 2025",
+    "description": "Jacky has learnt about the importance of strong passwords and made sure to encrypt the BitLocker drive with a very long and complex password. We managed to capture the RAM while this drive was opened however. See if you can break through the encryption!\n\nDownload the disk image <a href='https://challenge-files.cylabacademy.net/library/3b0242af5d82d92b69b6700cf309c3dac24003fb693464a4675aff16d566e22e/bitlocker-2.dd' download>here</a> and the RAM dump <a href='https://challenge-files.cylabacademy.net/library/3b0242af5d82d92b69b6700cf309c3dac24003fb693464a4675aff16d566e22e/memdump.mem.gz' download>here</a>\n",
+    "hints": [
+      "Try using a volatility plugin"
+    ],
+    "on_demand": false,
+    "error_reason": null
+  },
+  "453": {
+    "id": 453,
+    "name": "Bitlocker-1",
+    "category": "Forensics",
+    "difficulty": 2,
+    "event": "picoCTF 2025",
+    "description": "Jacky is not very knowledgable about the best security passwords and used a simple password to encrypt their BitLocker drive. See if you can break through the encryption!\n\nDownload the disk image <a href='https://challenge-files.cylabacademy.net/library/64f3717335653d50c3af0ab2059fdb85f5783732354bb91f9951739877573fa4/bitlocker-1.dd' download>here</a>\n",
+    "hints": [
+      "Hash cracking"
+    ],
+    "on_demand": false,
+    "error_reason": null
+  },
+  "443": {
+    "id": 443,
+    "name": "No Sql Injection",
+    "category": "Web Exploitation",
+    "difficulty": 2,
+    "event": "picoCTF 2024",
+    "description": "Can you try to get access to this website to get the flag?\n\nYou can download the source <a href='https://challenge-files.cylabacademy.net/library/e816616cce018bb909bf10b0a5771f5a6995338ad05cdb94f0a34692d83ac3b9/app.tar.gz' download>here</a>.",
+    "hints": [
+      "Not only SQL injection exist but also NonSQL injection exists.",
+      "Make sure you look at everything the server is sending back."
+    ],
+    "on_demand": true,
+    "error_reason": null
+  },
+  "378": {
+    "id": 378,
+    "name": "Specialer",
+    "category": "General Skills",
+    "difficulty": 2,
+    "event": "picoCTF 2023",
+    "description": "Reception of Special has been cool to say the least. That's why we made an\nexclusive version of Special, called Secure Comprehensive Interface for\nAffecting Linux Empirically Rad, or just 'Specialer'. With Specialer, we really\ntried to remove the distractions from using a shell. Yes, we took out spell\nchecker because of everybody's complaining. But we think you will be excited\nabout our new, reduced feature set for keeping you focused on what needs it the\nmost.  Please start an instance to test your very own copy of Specialer.",
+    "hints": [
+      "What programs do you have access to?"
+    ],
+    "on_demand": true,
+    "error_reason": null
+  },
+  "355": {
+    "id": 355,
+    "name": "Java Code Analysis!?!",
+    "category": "Web Exploitation",
+    "difficulty": 2,
+    "event": "picoCTF 2023",
+    "description": "BookShelf Pico, my premium online book-reading service.\n\nI believe that my website is super secure. I challenge you to prove me wrong by reading the 'Flag' book!",
+    "hints": [
+      "Maybe try to find the JWT Signing Key (\"secret key\") in the source code? Maybe it's hardcoded somewhere? Or maybe try to crack it?",
+      "The 'role' and 'userId' fields in the JWT can be of interest to you!",
+      "The 'controllers', 'services' and 'security' java packages in the given source code might need your attention. We've provided a README.md file that contains some documentation.",
+      "Upgrade your 'role' with the *new* (cracked) JWT. And re-login for the new role to get reflected in browser's localStorage."
+    ],
+    "on_demand": true,
+    "error_reason": null
+  },
+  "284": {
+    "id": 284,
+    "name": "Operation Oni",
+    "category": "Forensics",
+    "difficulty": 2,
+    "event": "picoCTF 2022",
+    "description": "Download this disk image, find the key and log into the remote machine.\n\nNote: if you are using the webshell, download and extract the disk image into\n`/tmp` not your home directory.",
+    "hints": [],
+    "on_demand": true,
+    "error_reason": null
+  },
+  "133": {
+    "id": 133,
+    "name": "Binary Gauntlet 3",
+    "category": "Binary Exploitation",
+    "difficulty": 2,
+    "event": "picoCTF 2021",
+    "description": "The stack is no longer executable. The flag for this challenge does not include the standard `academy{}` wrapper.",
+    "hints": [],
+    "on_demand": true,
+    "error_reason": null
+  },
+  "116": {
+    "id": 116,
+    "name": "speeds and feeds",
+    "category": "Reverse Engineering",
+    "difficulty": 2,
+    "event": "picoCTF 2021",
+    "error": "HTTP Error 403: Forbidden"
+  }
+}

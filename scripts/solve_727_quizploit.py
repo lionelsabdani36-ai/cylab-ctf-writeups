@@ -34,8 +34,7 @@ def solve(host, port):
             buf += chunk
             if '>>' in buf or 'academy{' in buf:
                 break
-        s.sendall(f'{ans}
-'.encode())
+        s.sendall(f'{ans}\n'.encode())
 
     final_buf = ''
     while True:

@@ -1,0 +1,920 @@
+{
+  "tier_1_medium_sweep": [
+    {
+      "id": 760,
+      "name": "Smart_Overflow",
+      "category": "Blockchain",
+      "difficulty": 2,
+      "event": "picoCTF 2026"
+    },
+    {
+      "id": 754,
+      "name": "Autorev 1",
+      "category": "Reverse Engineering",
+      "difficulty": 2,
+      "event": "picoCTF 2026"
+    },
+    {
+      "id": 733,
+      "name": "offset-cycle",
+      "category": "Binary Exploitation",
+      "difficulty": 2,
+      "event": "picoCTF 2026"
+    },
+    {
+      "id": 723,
+      "name": "Access_Control",
+      "category": "Blockchain",
+      "difficulty": 2,
+      "event": "picoCTF 2026"
+    },
+    {
+      "id": 529,
+      "name": "Pico Bank",
+      "category": "Reverse Engineering",
+      "difficulty": 2,
+      "event": "picoMini by CMU-Africa"
+    },
+    {
+      "id": 494,
+      "name": "Pachinko",
+      "category": "Web Exploitation",
+      "difficulty": 2,
+      "event": "picoCTF 2025"
+    },
+    {
+      "id": 489,
+      "name": "hash-only-2",
+      "category": "Binary Exploitation",
+      "difficulty": 2,
+      "event": "picoCTF 2025"
+    },
+    {
+      "id": 487,
+      "name": "hash-only-1",
+      "category": "Binary Exploitation",
+      "difficulty": 2,
+      "event": "picoCTF 2025"
+    },
+    {
+      "id": 481,
+      "name": "flags are stepic",
+      "category": "Forensics",
+      "difficulty": 2,
+      "event": "picoCTF 2025"
+    },
+    {
+      "id": 480,
+      "name": "WebSockFish",
+      "category": "Web Exploitation",
+      "difficulty": 2,
+      "event": "picoCTF 2025"
+    },
+    {
+      "id": 479,
+      "name": "Quantum Scrambler",
+      "category": "Reverse Engineering",
+      "difficulty": 2,
+      "event": "picoCTF 2025"
+    },
+    {
+      "id": 454,
+      "name": "Bitlocker-2",
+      "category": "Forensics",
+      "difficulty": 2,
+      "event": "picoCTF 2025"
+    },
+    {
+      "id": 453,
+      "name": "Bitlocker-1",
+      "category": "Forensics",
+      "difficulty": 2,
+      "event": "picoCTF 2025"
+    },
+    {
+      "id": 443,
+      "name": "No Sql Injection",
+      "category": "Web Exploitation",
+      "difficulty": 2,
+      "event": "picoCTF 2024"
+    },
+    {
+      "id": 378,
+      "name": "Specialer",
+      "category": "General Skills",
+      "difficulty": 2,
+      "event": "picoCTF 2023"
+    },
+    {
+      "id": 355,
+      "name": "Java Code Analysis!?!",
+      "category": "Web Exploitation",
+      "difficulty": 2,
+      "event": "picoCTF 2023"
+    },
+    {
+      "id": 284,
+      "name": "Operation Oni",
+      "category": "Forensics",
+      "difficulty": 2,
+      "event": "picoCTF 2022"
+    },
+    {
+      "id": 133,
+      "name": "Binary Gauntlet 3",
+      "category": "Binary Exploitation",
+      "difficulty": 2,
+      "event": "picoCTF 2021"
+    },
+    {
+      "id": 116,
+      "name": "speeds and feeds",
+      "category": "Reverse Engineering",
+      "difficulty": 2,
+      "event": "picoCTF 2021"
+    }
+  ],
+  "tier_2_forensics_crypto": [
+    {
+      "id": 728,
+      "name": "Secure Dot Product",
+      "category": "Cryptography",
+      "difficulty": 3,
+      "event": "picoCTF 2026"
+    },
+    {
+      "id": 709,
+      "name": "MSS_ADVANCE Revenge",
+      "category": "Cryptography",
+      "difficulty": 3,
+      "event": "picoCTF 2026"
+    },
+    {
+      "id": 495,
+      "name": "Ricochet",
+      "category": "Cryptography",
+      "difficulty": 3,
+      "event": "picoCTF 2025"
+    },
+    {
+      "id": 493,
+      "name": "ChaCha Slide",
+      "category": "Cryptography",
+      "difficulty": 3,
+      "event": "picoCTF 2025"
+    },
+    {
+      "id": 417,
+      "name": "flag_printer",
+      "category": "Cryptography",
+      "difficulty": 3,
+      "event": "picoCTF 2024"
+    },
+    {
+      "id": 383,
+      "name": "UnforgottenBits",
+      "category": "Forensics",
+      "difficulty": 3,
+      "event": "picoCTF 2023"
+    },
+    {
+      "id": 379,
+      "name": "SRA",
+      "category": "Cryptography",
+      "difficulty": 3,
+      "event": "picoCTF 2023"
+    },
+    {
+      "id": 354,
+      "name": "Invisible WORDs",
+      "category": "Forensics",
+      "difficulty": 3,
+      "event": "picoCTF 2023"
+    },
+    {
+      "id": 298,
+      "name": "SideChannel",
+      "category": "Forensics",
+      "difficulty": 3,
+      "event": "picoCTF 2022"
+    },
+    {
+      "id": 283,
+      "name": "NSA Backdoor",
+      "category": "Cryptography",
+      "difficulty": 3,
+      "event": "picoCTF 2022"
+    },
+    {
+      "id": 211,
+      "name": "corrupt-key-2",
+      "category": "Cryptography",
+      "difficulty": 3,
+      "event": "picoMini by redpwn"
+    },
+    {
+      "id": 207,
+      "name": "corrupt-key-1",
+      "category": "Cryptography",
+      "difficulty": 3,
+      "event": "picoMini by redpwn"
+    },
+    {
+      "id": 206,
+      "name": "scrambled-bytes",
+      "category": "Forensics",
+      "difficulty": 3,
+      "event": "picoMini by redpwn"
+    },
+    {
+      "id": 141,
+      "name": "Very very very Hidden",
+      "category": "Forensics",
+      "difficulty": 3,
+      "event": "picoCTF 2021"
+    },
+    {
+      "id": 140,
+      "name": "Double DES",
+      "category": "Cryptography",
+      "difficulty": 3,
+      "event": "picoCTF 2021"
+    },
+    {
+      "id": 136,
+      "name": "Clouds",
+      "category": "Cryptography",
+      "difficulty": 3,
+      "event": "picoCTF 2021"
+    },
+    {
+      "id": 127,
+      "name": "Compress and Attack",
+      "category": "Cryptography",
+      "difficulty": 3,
+      "event": "picoCTF 2021"
+    },
+    {
+      "id": 123,
+      "name": "It's Not My Fault 1",
+      "category": "Cryptography",
+      "difficulty": 3,
+      "event": "picoCTF 2021"
+    },
+    {
+      "id": 117,
+      "name": "Surfing the Waves",
+      "category": "Forensics",
+      "difficulty": 3,
+      "event": "picoCTF 2021"
+    },
+    {
+      "id": 114,
+      "name": "Play Nice",
+      "category": "Cryptography",
+      "difficulty": 3,
+      "event": "picoCTF 2021"
+    },
+    {
+      "id": 107,
+      "name": "Scrambled: RSA",
+      "category": "Cryptography",
+      "difficulty": 3,
+      "event": "picoCTF 2021"
+    },
+    {
+      "id": 83,
+      "name": "Investigative Reversing 3",
+      "category": "Forensics",
+      "difficulty": 3,
+      "event": "picoCTF 2019"
+    },
+    {
+      "id": 78,
+      "name": "b00tl3gRSA3",
+      "category": "Cryptography",
+      "difficulty": 3,
+      "event": "picoCTF 2019"
+    },
+    {
+      "id": 70,
+      "name": "Investigative Reversing 0",
+      "category": "Forensics",
+      "difficulty": 3,
+      "event": "picoCTF 2019"
+    },
+    {
+      "id": 61,
+      "name": "rsa-pop-quiz",
+      "category": "Cryptography",
+      "difficulty": 3,
+      "event": "picoCTF 2019"
+    },
+    {
+      "id": 56,
+      "name": "B1g_Mac",
+      "category": "Forensics",
+      "difficulty": 3,
+      "event": "picoCTF 2019"
+    },
+    {
+      "id": 54,
+      "name": "Investigative Reversing 4",
+      "category": "Forensics",
+      "difficulty": 3,
+      "event": "picoCTF 2019"
+    },
+    {
+      "id": 47,
+      "name": "investigation_encoded_1",
+      "category": "Forensics",
+      "difficulty": 3,
+      "event": "picoCTF 2019"
+    },
+    {
+      "id": 42,
+      "name": "WebNet1",
+      "category": "Forensics",
+      "difficulty": 3,
+      "event": "picoCTF 2019"
+    },
+    {
+      "id": 36,
+      "name": "investigation_encoded_2",
+      "category": "Forensics",
+      "difficulty": 3,
+      "event": "picoCTF 2019"
+    },
+    {
+      "id": 32,
+      "name": "WebNet0",
+      "category": "Forensics",
+      "difficulty": 3,
+      "event": "picoCTF 2019"
+    },
+    {
+      "id": 28,
+      "name": "m00nwalk2",
+      "category": "Forensics",
+      "difficulty": 3,
+      "event": "picoCTF 2019"
+    },
+    {
+      "id": 27,
+      "name": "Investigative Reversing 1",
+      "category": "Forensics",
+      "difficulty": 3,
+      "event": "picoCTF 2019"
+    },
+    {
+      "id": 13,
+      "name": "Investigative Reversing 2",
+      "category": "Forensics",
+      "difficulty": 3,
+      "event": "picoCTF 2019"
+    },
+    {
+      "id": 2,
+      "name": "b00tl3gRSA2",
+      "category": "Cryptography",
+      "difficulty": 3,
+      "event": "picoCTF 2019"
+    }
+  ],
+  "tier_3_reverse_engineering": [
+    {
+      "id": 737,
+      "name": "JITFP",
+      "category": "Reverse Engineering",
+      "difficulty": 3,
+      "event": "picoCTF 2026"
+    },
+    {
+      "id": 386,
+      "name": "Virtual Machine 1",
+      "category": "Reverse Engineering",
+      "difficulty": 3,
+      "event": "picoCTF 2023"
+    },
+    {
+      "id": 361,
+      "name": "No way out",
+      "category": "Reverse Engineering",
+      "difficulty": 3,
+      "event": "picoCTF 2023"
+    },
+    {
+      "id": 318,
+      "name": "Wizardlike",
+      "category": "Reverse Engineering",
+      "difficulty": 3,
+      "event": "picoCTF 2022"
+    },
+    {
+      "id": 222,
+      "name": "not crypto",
+      "category": "Reverse Engineering",
+      "difficulty": 3,
+      "event": "picoMini by redpwn"
+    },
+    {
+      "id": 221,
+      "name": "MATRIX",
+      "category": "Reverse Engineering",
+      "difficulty": 3,
+      "event": "picoMini by redpwn"
+    },
+    {
+      "id": 220,
+      "name": "breadth",
+      "category": "Reverse Engineering",
+      "difficulty": 3,
+      "event": "picoMini by redpwn"
+    },
+    {
+      "id": 219,
+      "name": "riscy business",
+      "category": "Reverse Engineering",
+      "difficulty": 3,
+      "event": "picoMini by redpwn"
+    },
+    {
+      "id": 183,
+      "name": "ARMssembly 4",
+      "category": "Reverse Engineering",
+      "difficulty": 3,
+      "event": "picoCTF 2021"
+    },
+    {
+      "id": 171,
+      "name": "gogo",
+      "category": "Reverse Engineering",
+      "difficulty": 3,
+      "event": "picoCTF 2021"
+    },
+    {
+      "id": 151,
+      "name": "Rolling My Own",
+      "category": "Reverse Engineering",
+      "difficulty": 3,
+      "event": "picoCTF 2021"
+    },
+    {
+      "id": 149,
+      "name": "Checkpass",
+      "category": "Reverse Engineering",
+      "difficulty": 3,
+      "event": "picoCTF 2021"
+    },
+    {
+      "id": 122,
+      "name": "Easy as GDB",
+      "category": "Reverse Engineering",
+      "difficulty": 3,
+      "event": "picoCTF 2021"
+    },
+    {
+      "id": 119,
+      "name": "Powershelly",
+      "category": "Reverse Engineering",
+      "difficulty": 3,
+      "event": "picoCTF 2021"
+    },
+    {
+      "id": 102,
+      "name": "Let's get dynamic",
+      "category": "Reverse Engineering",
+      "difficulty": 3,
+      "event": "picoCTF 2021"
+    },
+    {
+      "id": 92,
+      "name": "OTP Implementation",
+      "category": "Reverse Engineering",
+      "difficulty": 3,
+      "event": "picoCTF 2020 Mini-Competition"
+    },
+    {
+      "id": 63,
+      "name": "droids2",
+      "category": "Reverse Engineering",
+      "difficulty": 3,
+      "event": "picoCTF 2019"
+    },
+    {
+      "id": 57,
+      "name": "B1ll_Gat35",
+      "category": "Reverse Engineering",
+      "difficulty": 3,
+      "event": "picoCTF 2019"
+    },
+    {
+      "id": 39,
+      "name": "Need For Speed",
+      "category": "Reverse Engineering",
+      "difficulty": 3,
+      "event": "picoCTF 2019"
+    },
+    {
+      "id": 23,
+      "name": "droids3",
+      "category": "Reverse Engineering",
+      "difficulty": 3,
+      "event": "picoCTF 2019"
+    },
+    {
+      "id": 17,
+      "name": "droids4",
+      "category": "Reverse Engineering",
+      "difficulty": 3,
+      "event": "picoCTF 2019"
+    },
+    {
+      "id": 14,
+      "name": "droids1",
+      "category": "Reverse Engineering",
+      "difficulty": 3,
+      "event": "picoCTF 2019"
+    },
+    {
+      "id": 11,
+      "name": "droids0",
+      "category": "Reverse Engineering",
+      "difficulty": 3,
+      "event": "picoCTF 2019"
+    }
+  ],
+  "tier_4_interactive_pwn_web_chain": [
+    {
+      "id": 763,
+      "name": "Heap Havoc",
+      "category": "Binary Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2026"
+    },
+    {
+      "id": 758,
+      "name": "Pizza Router",
+      "category": "Binary Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2026"
+    },
+    {
+      "id": 753,
+      "name": "Reentrance",
+      "category": "Blockchain",
+      "difficulty": 3,
+      "event": "picoCTF 2026"
+    },
+    {
+      "id": 752,
+      "name": "ORDER ORDER",
+      "category": "Web Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2026"
+    },
+    {
+      "id": 744,
+      "name": "Front_Running",
+      "category": "Blockchain",
+      "difficulty": 3,
+      "event": "picoCTF 2026"
+    },
+    {
+      "id": 741,
+      "name": "Printer Shares 3",
+      "category": "General Skills",
+      "difficulty": 3,
+      "event": "picoCTF 2026"
+    },
+    {
+      "id": 738,
+      "name": "offset-cycleV2",
+      "category": "Binary Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2026"
+    },
+    {
+      "id": 734,
+      "name": "Printer Shares 2",
+      "category": "General Skills",
+      "difficulty": 3,
+      "event": "picoCTF 2026"
+    },
+    {
+      "id": 726,
+      "name": "paper-2",
+      "category": "Web Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2026"
+    },
+    {
+      "id": 496,
+      "name": "secure-email-service",
+      "category": "Web Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2025"
+    },
+    {
+      "id": 486,
+      "name": "handoff",
+      "category": "Binary Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2025"
+    },
+    {
+      "id": 478,
+      "name": "Pachinko Revisited",
+      "category": "Web Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2025"
+    },
+    {
+      "id": 447,
+      "name": "elements",
+      "category": "Web Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2024"
+    },
+    {
+      "id": 446,
+      "name": "babygame03",
+      "category": "Binary Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2024"
+    },
+    {
+      "id": 441,
+      "name": "high frequency troubles",
+      "category": "Binary Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2024"
+    },
+    {
+      "id": 360,
+      "name": "msfroggenerator2",
+      "category": "Web Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2023"
+    },
+    {
+      "id": 353,
+      "name": "Horsetrack",
+      "category": "Binary Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2023"
+    },
+    {
+      "id": 346,
+      "name": "babygame02",
+      "category": "Binary Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2023"
+    },
+    {
+      "id": 344,
+      "name": "cancri-sp",
+      "category": "Web Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2023"
+    },
+    {
+      "id": 317,
+      "name": "wine",
+      "category": "Binary Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2022"
+    },
+    {
+      "id": 306,
+      "name": "stack cache",
+      "category": "Binary Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2022"
+    },
+    {
+      "id": 302,
+      "name": "solfire",
+      "category": "Binary Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2022"
+    },
+    {
+      "id": 292,
+      "name": "ropfu",
+      "category": "Binary Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2022"
+    },
+    {
+      "id": 282,
+      "name": "noted",
+      "category": "Web Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2022"
+    },
+    {
+      "id": 277,
+      "name": "Live Art",
+      "category": "Web Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2022"
+    },
+    {
+      "id": 272,
+      "name": "function overwrite",
+      "category": "Binary Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2022"
+    },
+    {
+      "id": 260,
+      "name": "buffer overflow 3",
+      "category": "Binary Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2022"
+    },
+    {
+      "id": 218,
+      "name": "vr-school",
+      "category": "Binary Exploitation",
+      "difficulty": 3,
+      "event": "picoMini by redpwn"
+    },
+    {
+      "id": 217,
+      "name": "homework",
+      "category": "Binary Exploitation",
+      "difficulty": 3,
+      "event": "picoMini by redpwn"
+    },
+    {
+      "id": 215,
+      "name": "fermat-strings",
+      "category": "Binary Exploitation",
+      "difficulty": 3,
+      "event": "picoMini by redpwn"
+    },
+    {
+      "id": 214,
+      "name": "lockdown-horses",
+      "category": "Binary Exploitation",
+      "difficulty": 3,
+      "event": "picoMini by redpwn"
+    },
+    {
+      "id": 213,
+      "name": "SaaS",
+      "category": "Binary Exploitation",
+      "difficulty": 3,
+      "event": "picoMini by redpwn"
+    },
+    {
+      "id": 204,
+      "name": "notepad",
+      "category": "Web Exploitation",
+      "difficulty": 3,
+      "event": "picoMini by redpwn"
+    },
+    {
+      "id": 190,
+      "name": "Bithug",
+      "category": "Web Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2021"
+    },
+    {
+      "id": 187,
+      "name": "Unsubscriptions Are Free",
+      "category": "Binary Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2021"
+    },
+    {
+      "id": 185,
+      "name": "X marks the spot",
+      "category": "Web Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2021"
+    },
+    {
+      "id": 184,
+      "name": "filtered-shellcode",
+      "category": "Binary Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2021"
+    },
+    {
+      "id": 182,
+      "name": "Some Assembly Required 4",
+      "category": "Web Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2021"
+    },
+    {
+      "id": 181,
+      "name": "Bizz Fuzz",
+      "category": "Binary Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2021"
+    },
+    {
+      "id": 179,
+      "name": "Here's a LIBC",
+      "category": "Binary Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2021"
+    },
+    {
+      "id": 178,
+      "name": "Turboflan",
+      "category": "Binary Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2021"
+    },
+    {
+      "id": 172,
+      "name": "The Office",
+      "category": "Binary Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2021"
+    },
+    {
+      "id": 168,
+      "name": "Kit Engine",
+      "category": "Binary Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2021"
+    },
+    {
+      "id": 164,
+      "name": "Stonk Market",
+      "category": "Binary Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2021"
+    },
+    {
+      "id": 153,
+      "name": "Some Assembly Required 3",
+      "category": "Web Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2021"
+    },
+    {
+      "id": 146,
+      "name": "Cache Me Outside",
+      "category": "Binary Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2021"
+    },
+    {
+      "id": 135,
+      "name": "Download Horsepower",
+      "category": "Binary Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2021"
+    },
+    {
+      "id": 89,
+      "name": "Guessing Game 2",
+      "category": "Binary Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2020 Mini-Competition"
+    },
+    {
+      "id": 75,
+      "name": "zero_to_hero",
+      "category": "Binary Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2019"
+    },
+    {
+      "id": 55,
+      "name": "sice_cream",
+      "category": "Binary Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2019"
+    },
+    {
+      "id": 50,
+      "name": "seed-sPRiNG",
+      "category": "Binary Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2019"
+    },
+    {
+      "id": 33,
+      "name": "Java Script Kiddie 2",
+      "category": "Web Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2019"
+    },
+    {
+      "id": 29,
+      "name": "Java Script Kiddie",
+      "category": "Web Exploitation",
+      "difficulty": 3,
+      "event": "picoCTF 2019"
+    }
+  ]
+}

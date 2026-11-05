@@ -1,0 +1,3950 @@
+[
+  {
+    "id": 760,
+    "name": "Smart_Overflow",
+    "author": "OB",
+    "difficulty": 2,
+    "event": {
+      "id": 79,
+      "name": "picoCTF 2026"
+    },
+    "category": {
+      "id": 37,
+      "name": "Blockchain"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 29,
+    "positive_rating_count": 28,
+    "users_solved": 1685,
+    "users_solved_during_event": 986,
+    "event_points": 300,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 754,
+    "name": "Autorev 1",
+    "author": "SkrubLawd",
+    "difficulty": 2,
+    "event": {
+      "id": 79,
+      "name": "picoCTF 2026"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 48,
+    "positive_rating_count": 39,
+    "users_solved": 2296,
+    "users_solved_during_event": 1115,
+    "event_points": 200,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 733,
+    "name": "offset-cycle",
+    "author": "Aditya Sudhansu",
+    "difficulty": 2,
+    "event": {
+      "id": 79,
+      "name": "picoCTF 2026"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 34,
+    "positive_rating_count": 30,
+    "users_solved": 1798,
+    "users_solved_during_event": 1076,
+    "event_points": 300,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 723,
+    "name": "Access_Control",
+    "author": "OB",
+    "difficulty": 2,
+    "event": {
+      "id": 79,
+      "name": "picoCTF 2026"
+    },
+    "category": {
+      "id": 37,
+      "name": "Blockchain"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 37,
+    "positive_rating_count": 35,
+    "users_solved": 1641,
+    "users_solved_during_event": 1259,
+    "event_points": 200,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 529,
+    "name": "Pico Bank",
+    "author": "Prince Niyonshuti N.",
+    "difficulty": 2,
+    "event": {
+      "id": 77,
+      "name": "picoMini by CMU-Africa"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 46,
+    "positive_rating_count": 32,
+    "users_solved": 876,
+    "users_solved_during_event": 228,
+    "event_points": 400,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 494,
+    "name": "Pachinko",
+    "author": "notdeghost",
+    "difficulty": 2,
+    "event": {
+      "id": 74,
+      "name": "picoCTF 2025"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "tags": [
+      {
+        "id": 63,
+        "name": "browser_webshell_solvable"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 492,
+    "positive_rating_count": 118,
+    "users_solved": 10042,
+    "users_solved_during_event": 1481,
+    "event_points": 300,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 489,
+    "name": "hash-only-2",
+    "author": "Junias Bonou",
+    "difficulty": 2,
+    "event": {
+      "id": 74,
+      "name": "picoCTF 2025"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [
+      {
+        "id": 63,
+        "name": "browser_webshell_solvable"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 141,
+    "positive_rating_count": 122,
+    "users_solved": 4451,
+    "users_solved_during_event": 1334,
+    "event_points": 200,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 487,
+    "name": "hash-only-1",
+    "author": "Junias Bonou",
+    "difficulty": 2,
+    "event": {
+      "id": 74,
+      "name": "picoCTF 2025"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [
+      {
+        "id": 63,
+        "name": "browser_webshell_solvable"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 185,
+    "positive_rating_count": 166,
+    "users_solved": 5702,
+    "users_solved_during_event": 1811,
+    "event_points": 100,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 481,
+    "name": "flags are stepic",
+    "author": "Ricky",
+    "difficulty": 2,
+    "event": {
+      "id": 74,
+      "name": "picoCTF 2025"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [
+      {
+        "id": 63,
+        "name": "browser_webshell_solvable"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 258,
+    "positive_rating_count": 86,
+    "users_solved": 4819,
+    "users_solved_during_event": 1473,
+    "event_points": 100,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 480,
+    "name": "WebSockFish",
+    "author": "Venax",
+    "difficulty": 2,
+    "event": {
+      "id": 74,
+      "name": "picoCTF 2025"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "tags": [
+      {
+        "id": 63,
+        "name": "browser_webshell_solvable"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 206,
+    "positive_rating_count": 109,
+    "users_solved": 4348,
+    "users_solved_during_event": 1228,
+    "event_points": 200,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 479,
+    "name": "Quantum Scrambler",
+    "author": "Michael Crotty",
+    "difficulty": 2,
+    "event": {
+      "id": 74,
+      "name": "picoCTF 2025"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [
+      {
+        "id": 63,
+        "name": "browser_webshell_solvable"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 144,
+    "positive_rating_count": 126,
+    "users_solved": 4260,
+    "users_solved_during_event": 1200,
+    "event_points": 200,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 454,
+    "name": "Bitlocker-2",
+    "author": "Venax",
+    "difficulty": 2,
+    "event": {
+      "id": 74,
+      "name": "picoCTF 2025"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 109,
+    "positive_rating_count": 60,
+    "users_solved": 2497,
+    "users_solved_during_event": 556,
+    "event_points": 300,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "This problem cannot be solved in the webshell.",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 453,
+    "name": "Bitlocker-1",
+    "author": "Venax",
+    "difficulty": 2,
+    "event": {
+      "id": 74,
+      "name": "picoCTF 2025"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 139,
+    "positive_rating_count": 131,
+    "users_solved": 4159,
+    "users_solved_during_event": 1264,
+    "event_points": 200,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "This problem cannot be solved in the webshell.",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 443,
+    "name": "No Sql Injection",
+    "author": "NGIRIMANA Schadrack",
+    "difficulty": 2,
+    "event": {
+      "id": 73,
+      "name": "picoCTF 2024"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "tags": [
+      {
+        "id": 63,
+        "name": "browser_webshell_solvable"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 213,
+    "positive_rating_count": 201,
+    "users_solved": 11293,
+    "users_solved_during_event": 1531,
+    "event_points": 200,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 378,
+    "name": "Specialer",
+    "author": "LT 'syreal' Jones, et al.",
+    "difficulty": 2,
+    "event": {
+      "id": 72,
+      "name": "picoCTF 2023"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "tags": [
+      {
+        "id": 51,
+        "name": "bash"
+      },
+      {
+        "id": 52,
+        "name": "ssh"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 290,
+    "positive_rating_count": 256,
+    "users_solved": 11207,
+    "users_solved_during_event": 1379,
+    "event_points": 400,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 355,
+    "name": "Java Code Analysis!?!",
+    "author": "Nandan Desai",
+    "difficulty": 2,
+    "event": {
+      "id": 72,
+      "name": "picoCTF 2023"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 277,
+    "positive_rating_count": 257,
+    "users_solved": 7537,
+    "users_solved_during_event": 964,
+    "event_points": 300,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 284,
+    "name": "Operation Oni",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 2,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [
+      {
+        "id": 27,
+        "name": "disk"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 145,
+    "positive_rating_count": 138,
+    "users_solved": 6302,
+    "users_solved_during_event": 1425,
+    "event_points": 300,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "Note: you must launch a challenge instance in order to view your disk image download link.",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 133,
+    "name": "Binary Gauntlet 3",
+    "author": "madStacks",
+    "difficulty": 2,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 14,
+    "positive_rating_count": 10,
+    "users_solved": 304,
+    "users_solved_during_event": 120,
+    "event_points": 80,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 116,
+    "name": "speeds and feeds",
+    "author": "Ryan Ramseyer",
+    "difficulty": 2,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 591,
+    "positive_rating_count": 516,
+    "users_solved": 18062,
+    "users_solved_during_event": 1186,
+    "event_points": 50,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": true,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 763,
+    "name": "Heap Havoc",
+    "author": "Yahaya Meddy",
+    "difficulty": 3,
+    "event": {
+      "id": 79,
+      "name": "picoCTF 2026"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 33,
+    "positive_rating_count": 28,
+    "users_solved": 1610,
+    "users_solved_during_event": 920,
+    "event_points": 200,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 758,
+    "name": "Pizza Router",
+    "author": "Palash Oswal",
+    "difficulty": 3,
+    "event": {
+      "id": 79,
+      "name": "picoCTF 2026"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 26,
+    "positive_rating_count": 8,
+    "users_solved": 703,
+    "users_solved_during_event": 466,
+    "event_points": 400,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 753,
+    "name": "Reentrance",
+    "author": "OB",
+    "difficulty": 3,
+    "event": {
+      "id": 79,
+      "name": "picoCTF 2026"
+    },
+    "category": {
+      "id": 37,
+      "name": "Blockchain"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 23,
+    "positive_rating_count": 22,
+    "users_solved": 1210,
+    "users_solved_during_event": 881,
+    "event_points": 400,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 752,
+    "name": "ORDER ORDER",
+    "author": "Darkraicg492",
+    "difficulty": 3,
+    "event": {
+      "id": 79,
+      "name": "picoCTF 2026"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 69,
+    "positive_rating_count": 65,
+    "users_solved": 1818,
+    "users_solved_during_event": 605,
+    "event_points": 300,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 744,
+    "name": "Front_Running",
+    "author": "OB",
+    "difficulty": 3,
+    "event": {
+      "id": 79,
+      "name": "picoCTF 2026"
+    },
+    "category": {
+      "id": 37,
+      "name": "Blockchain"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 28,
+    "positive_rating_count": 26,
+    "users_solved": 1247,
+    "users_solved_during_event": 974,
+    "event_points": 300,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 741,
+    "name": "Printer Shares 3",
+    "author": "Janice He",
+    "difficulty": 3,
+    "event": {
+      "id": 79,
+      "name": "picoCTF 2026"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 47,
+    "positive_rating_count": 45,
+    "users_solved": 1726,
+    "users_solved_during_event": 1040,
+    "event_points": 300,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 738,
+    "name": "offset-cycleV2",
+    "author": "Aditya Sudhansu",
+    "difficulty": 3,
+    "event": {
+      "id": 79,
+      "name": "picoCTF 2026"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 29,
+    "positive_rating_count": 18,
+    "users_solved": 1109,
+    "users_solved_during_event": 884,
+    "event_points": 400,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 737,
+    "name": "JITFP",
+    "author": "syreal",
+    "difficulty": 3,
+    "event": {
+      "id": 79,
+      "name": "picoCTF 2026"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 38,
+    "positive_rating_count": 22,
+    "users_solved": 726,
+    "users_solved_during_event": 480,
+    "event_points": 500,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 734,
+    "name": "Printer Shares 2",
+    "author": "Janice He",
+    "difficulty": 3,
+    "event": {
+      "id": 79,
+      "name": "picoCTF 2026"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 73,
+    "positive_rating_count": 25,
+    "users_solved": 1491,
+    "users_solved_during_event": 934,
+    "event_points": 200,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 728,
+    "name": "Secure Dot Product",
+    "author": "watermelon, Donkey",
+    "difficulty": 3,
+    "event": {
+      "id": 79,
+      "name": "picoCTF 2026"
+    },
+    "category": {
+      "id": 2,
+      "name": "Cryptography"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 16,
+    "positive_rating_count": 11,
+    "users_solved": 1022,
+    "users_solved_during_event": 688,
+    "event_points": 300,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 726,
+    "name": "paper-2",
+    "author": "ehhthing",
+    "difficulty": 3,
+    "event": {
+      "id": 79,
+      "name": "picoCTF 2026"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 25,
+    "positive_rating_count": 24,
+    "users_solved": 329,
+    "users_solved_during_event": 103,
+    "event_points": 500,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 709,
+    "name": "MSS_ADVANCE Revenge",
+    "author": "Cayden (SuperBeetleGamer) Liao",
+    "difficulty": 3,
+    "event": {
+      "id": 79,
+      "name": "picoCTF 2026"
+    },
+    "category": {
+      "id": 2,
+      "name": "Cryptography"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 32,
+    "positive_rating_count": 22,
+    "users_solved": 1221,
+    "users_solved_during_event": 838,
+    "event_points": 400,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 496,
+    "name": "secure-email-service",
+    "author": "ehhthing, strellic",
+    "difficulty": 3,
+    "event": {
+      "id": 74,
+      "name": "picoCTF 2025"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "tags": [
+      {
+        "id": 63,
+        "name": "browser_webshell_solvable"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 24,
+    "positive_rating_count": 19,
+    "users_solved": 744,
+    "users_solved_during_event": 12,
+    "event_points": 500,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 495,
+    "name": "Ricochet",
+    "author": "asinghani",
+    "difficulty": 3,
+    "event": {
+      "id": 74,
+      "name": "picoCTF 2025"
+    },
+    "category": {
+      "id": 2,
+      "name": "Cryptography"
+    },
+    "tags": [
+      {
+        "id": 63,
+        "name": "browser_webshell_solvable"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 29,
+    "positive_rating_count": 19,
+    "users_solved": 128,
+    "users_solved_during_event": 56,
+    "event_points": 500,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 493,
+    "name": "ChaCha Slide",
+    "author": "asinghani",
+    "difficulty": 3,
+    "event": {
+      "id": 74,
+      "name": "picoCTF 2025"
+    },
+    "category": {
+      "id": 2,
+      "name": "Cryptography"
+    },
+    "tags": [
+      {
+        "id": 63,
+        "name": "browser_webshell_solvable"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 59,
+    "positive_rating_count": 58,
+    "users_solved": 506,
+    "users_solved_during_event": 213,
+    "event_points": 400,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 486,
+    "name": "handoff",
+    "author": "SkrubLawd",
+    "difficulty": 3,
+    "event": {
+      "id": 74,
+      "name": "picoCTF 2025"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [
+      {
+        "id": 63,
+        "name": "browser_webshell_solvable"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 64,
+    "positive_rating_count": 57,
+    "users_solved": 912,
+    "users_solved_during_event": 322,
+    "event_points": 400,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 478,
+    "name": "Pachinko Revisited",
+    "author": "notdeghost",
+    "difficulty": 3,
+    "event": {
+      "id": 74,
+      "name": "picoCTF 2025"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "tags": [
+      {
+        "id": 63,
+        "name": "browser_webshell_solvable"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 19,
+    "positive_rating_count": 14,
+    "users_solved": 224,
+    "users_solved_during_event": 14,
+    "event_points": 500,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 447,
+    "name": "elements",
+    "author": "ehhthing",
+    "difficulty": 3,
+    "event": {
+      "id": 73,
+      "name": "picoCTF 2024"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 41,
+    "positive_rating_count": 32,
+    "users_solved": 1232,
+    "users_solved_during_event": 39,
+    "event_points": 500,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "Online mode was a \"for fun\" feature present in the picoCTF 2024 competition, but has been removed for the picoGym and is not required for solving the problem.",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 446,
+    "name": "babygame03",
+    "author": "Palash Oswal",
+    "difficulty": 3,
+    "event": {
+      "id": 73,
+      "name": "picoCTF 2024"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [
+      {
+        "id": 42,
+        "name": "game"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 49,
+    "positive_rating_count": 44,
+    "users_solved": 549,
+    "users_solved_during_event": 217,
+    "event_points": 400,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 441,
+    "name": "high frequency troubles",
+    "author": "pepsipu",
+    "difficulty": 3,
+    "event": {
+      "id": 73,
+      "name": "picoCTF 2024"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [
+      {
+        "id": 74,
+        "name": "heap"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 19,
+    "positive_rating_count": 18,
+    "users_solved": 221,
+    "users_solved_during_event": 31,
+    "event_points": 500,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 417,
+    "name": "flag_printer",
+    "author": "ehhthing",
+    "difficulty": 3,
+    "event": {
+      "id": 73,
+      "name": "picoCTF 2024"
+    },
+    "category": {
+      "id": 2,
+      "name": "Cryptography"
+    },
+    "tags": [
+      {
+        "id": 63,
+        "name": "browser_webshell_solvable"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 40,
+    "positive_rating_count": 19,
+    "users_solved": 519,
+    "users_solved_during_event": 77,
+    "event_points": 500,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 386,
+    "name": "Virtual Machine 1",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 3,
+    "event": {
+      "id": 72,
+      "name": "picoCTF 2023"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [
+      {
+        "id": 58,
+        "name": "Analog"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 62,
+    "positive_rating_count": 20,
+    "users_solved": 592,
+    "users_solved_during_event": 271,
+    "event_points": 300,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 383,
+    "name": "UnforgottenBits",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 3,
+    "event": {
+      "id": 72,
+      "name": "picoCTF 2023"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [
+      {
+        "id": 27,
+        "name": "disk"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 55,
+    "positive_rating_count": 37,
+    "users_solved": 875,
+    "users_solved_during_event": 77,
+    "event_points": 500,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 379,
+    "name": "SRA",
+    "author": "f0xtr0t",
+    "difficulty": 3,
+    "event": {
+      "id": 72,
+      "name": "picoCTF 2023"
+    },
+    "category": {
+      "id": 2,
+      "name": "Cryptography"
+    },
+    "tags": [
+      {
+        "id": 26,
+        "name": "rsa"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 82,
+    "positive_rating_count": 74,
+    "users_solved": 1130,
+    "users_solved_during_event": 341,
+    "event_points": 400,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 361,
+    "name": "No way out",
+    "author": "Kris",
+    "difficulty": 3,
+    "event": {
+      "id": 72,
+      "name": "picoCTF 2023"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 118,
+    "positive_rating_count": 95,
+    "users_solved": 2268,
+    "users_solved_during_event": 636,
+    "event_points": 200,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 360,
+    "name": "msfroggenerator2",
+    "author": "ehhthing",
+    "difficulty": 3,
+    "event": {
+      "id": 72,
+      "name": "picoCTF 2023"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 28,
+    "positive_rating_count": 27,
+    "users_solved": 807,
+    "users_solved_during_event": 23,
+    "event_points": 500,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 354,
+    "name": "Invisible WORDs",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 3,
+    "event": {
+      "id": 72,
+      "name": "picoCTF 2023"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [
+      {
+        "id": 32,
+        "name": "steganography"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 69,
+    "positive_rating_count": 40,
+    "users_solved": 1665,
+    "users_solved_during_event": 172,
+    "event_points": 300,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 353,
+    "name": "Horsetrack",
+    "author": "madStacks",
+    "difficulty": 3,
+    "event": {
+      "id": 72,
+      "name": "picoCTF 2023"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 24,
+    "positive_rating_count": 17,
+    "users_solved": 240,
+    "users_solved_during_event": 75,
+    "event_points": 300,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 346,
+    "name": "babygame02",
+    "author": "Palash Oswal",
+    "difficulty": 3,
+    "event": {
+      "id": 72,
+      "name": "picoCTF 2023"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [
+      {
+        "id": 42,
+        "name": "game"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 63,
+    "positive_rating_count": 36,
+    "users_solved": 1031,
+    "users_solved_during_event": 275,
+    "event_points": 200,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 344,
+    "name": "cancri-sp",
+    "author": "NotDeGhost",
+    "difficulty": 3,
+    "event": {
+      "id": 72,
+      "name": "picoCTF 2023"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 8,
+    "positive_rating_count": 7,
+    "users_solved": 210,
+    "users_solved_during_event": 8,
+    "event_points": 500,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 318,
+    "name": "Wizardlike",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 3,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [
+      {
+        "id": 7,
+        "name": "binary"
+      },
+      {
+        "id": 42,
+        "name": "game"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 151,
+    "positive_rating_count": 99,
+    "users_solved": 1544,
+    "users_solved_during_event": 573,
+    "event_points": 500,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 317,
+    "name": "wine",
+    "author": "Neel Bhavsar",
+    "difficulty": 3,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [
+      {
+        "id": 41,
+        "name": "windows"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 70,
+    "positive_rating_count": 45,
+    "users_solved": 1442,
+    "users_solved_during_event": 561,
+    "event_points": 300,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 306,
+    "name": "stack cache",
+    "author": "Palash Oswal",
+    "difficulty": 3,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [
+      {
+        "id": 33,
+        "name": "cache"
+      },
+      {
+        "id": 34,
+        "name": "compiler"
+      },
+      {
+        "id": 35,
+        "name": "undefined_behavior"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 54,
+    "positive_rating_count": 40,
+    "users_solved": 1097,
+    "users_solved_during_event": 407,
+    "event_points": 400,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 302,
+    "name": "solfire",
+    "author": "notdeghost",
+    "difficulty": 3,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [
+      {
+        "id": 31,
+        "name": "blockchain"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 14,
+    "positive_rating_count": 12,
+    "users_solved": 173,
+    "users_solved_during_event": 7,
+    "event_points": 500,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 298,
+    "name": "SideChannel",
+    "author": "Anish Singhani",
+    "difficulty": 3,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 203,
+    "positive_rating_count": 197,
+    "users_solved": 4261,
+    "users_solved_during_event": 964,
+    "event_points": 400,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 292,
+    "name": "ropfu",
+    "author": "Sanjay C / LT 'syreal' Jones",
+    "difficulty": 3,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [
+      {
+        "id": 29,
+        "name": "ROP"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 112,
+    "positive_rating_count": 105,
+    "users_solved": 2401,
+    "users_solved_during_event": 604,
+    "event_points": 300,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 283,
+    "name": "NSA Backdoor",
+    "author": "Joshua Inscoe",
+    "difficulty": 3,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 2,
+      "name": "Cryptography"
+    },
+    "tags": [
+      {
+        "id": 24,
+        "name": "backdoor"
+      },
+      {
+        "id": 25,
+        "name": "diffie_hellman"
+      },
+      {
+        "id": 26,
+        "name": "rsa"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 59,
+    "positive_rating_count": 51,
+    "users_solved": 1003,
+    "users_solved_during_event": 351,
+    "event_points": 500,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 282,
+    "name": "noted",
+    "author": "ehhthing",
+    "difficulty": 3,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 83,
+    "positive_rating_count": 72,
+    "users_solved": 2353,
+    "users_solved_during_event": 122,
+    "event_points": 500,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 277,
+    "name": "Live Art",
+    "author": "zwad3",
+    "difficulty": 3,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 22,
+    "positive_rating_count": 17,
+    "users_solved": 568,
+    "users_solved_during_event": 10,
+    "event_points": 500,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 272,
+    "name": "function overwrite",
+    "author": "Neel Bhavsar",
+    "difficulty": 3,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [
+      {
+        "id": 16,
+        "name": "Array_bounds"
+      },
+      {
+        "id": 17,
+        "name": "Function_pointers"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 123,
+    "positive_rating_count": 121,
+    "users_solved": 1954,
+    "users_solved_during_event": 520,
+    "event_points": 400,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 260,
+    "name": "buffer overflow 3",
+    "author": "Sanjay C / Palash Oswal",
+    "difficulty": 3,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [
+      {
+        "id": 11,
+        "name": "canary"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 155,
+    "positive_rating_count": 138,
+    "users_solved": 2560,
+    "users_solved_during_event": 791,
+    "event_points": 300,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 222,
+    "name": "not crypto",
+    "author": "asphyxia",
+    "difficulty": 3,
+    "event": {
+      "id": 67,
+      "name": "picoMini by redpwn"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 54,
+    "positive_rating_count": 43,
+    "users_solved": 2317,
+    "users_solved_during_event": 44,
+    "event_points": 150,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 221,
+    "name": "MATRIX",
+    "author": "asphyxia",
+    "difficulty": 3,
+    "event": {
+      "id": 67,
+      "name": "picoMini by redpwn"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 61,
+    "positive_rating_count": 58,
+    "users_solved": 779,
+    "users_solved_during_event": 5,
+    "event_points": 500,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 220,
+    "name": "breadth",
+    "author": "asphyxia",
+    "difficulty": 3,
+    "event": {
+      "id": 67,
+      "name": "picoMini by redpwn"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 32,
+    "positive_rating_count": 26,
+    "users_solved": 1092,
+    "users_solved_during_event": 35,
+    "event_points": 200,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 219,
+    "name": "riscy business",
+    "author": "asphyxia",
+    "difficulty": 3,
+    "event": {
+      "id": 67,
+      "name": "picoMini by redpwn"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 33,
+    "positive_rating_count": 30,
+    "users_solved": 830,
+    "users_solved_during_event": 9,
+    "event_points": 350,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 218,
+    "name": "vr-school",
+    "author": "notdeghost",
+    "difficulty": 3,
+    "event": {
+      "id": 67,
+      "name": "picoMini by redpwn"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 4,
+    "positive_rating_count": 4,
+    "users_solved": 416,
+    "users_solved_during_event": 3,
+    "event_points": 500,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 217,
+    "name": "homework",
+    "author": "tpa",
+    "difficulty": 3,
+    "event": {
+      "id": 67,
+      "name": "picoMini by redpwn"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 15,
+    "positive_rating_count": 14,
+    "users_solved": 455,
+    "users_solved_during_event": 3,
+    "event_points": 400,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 215,
+    "name": "fermat-strings",
+    "author": "notdeghost",
+    "difficulty": 3,
+    "event": {
+      "id": 67,
+      "name": "picoMini by redpwn"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 29,
+    "positive_rating_count": 29,
+    "users_solved": 798,
+    "users_solved_during_event": 13,
+    "event_points": 250,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 214,
+    "name": "lockdown-horses",
+    "author": "kfb",
+    "difficulty": 3,
+    "event": {
+      "id": 67,
+      "name": "picoMini by redpwn"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 13,
+    "positive_rating_count": 12,
+    "users_solved": 607,
+    "users_solved_during_event": 7,
+    "event_points": 450,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 213,
+    "name": "SaaS",
+    "author": "notdeghost",
+    "difficulty": 3,
+    "event": {
+      "id": 67,
+      "name": "picoMini by redpwn"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 14,
+    "positive_rating_count": 12,
+    "users_solved": 764,
+    "users_solved_during_event": 9,
+    "event_points": 350,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 211,
+    "name": "corrupt-key-2",
+    "author": "Tux",
+    "difficulty": 3,
+    "event": {
+      "id": 67,
+      "name": "picoMini by redpwn"
+    },
+    "category": {
+      "id": 2,
+      "name": "Cryptography"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 22,
+    "positive_rating_count": 22,
+    "users_solved": 545,
+    "users_solved_during_event": 1,
+    "event_points": 500,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 207,
+    "name": "corrupt-key-1",
+    "author": "Tux",
+    "difficulty": 3,
+    "event": {
+      "id": 67,
+      "name": "picoMini by redpwn"
+    },
+    "category": {
+      "id": 2,
+      "name": "Cryptography"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 44,
+    "positive_rating_count": 39,
+    "users_solved": 951,
+    "users_solved_during_event": 3,
+    "event_points": 350,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 206,
+    "name": "scrambled-bytes",
+    "author": "kfb",
+    "difficulty": 3,
+    "event": {
+      "id": 67,
+      "name": "picoMini by redpwn"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 62,
+    "positive_rating_count": 39,
+    "users_solved": 1602,
+    "users_solved_during_event": 24,
+    "event_points": 200,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 204,
+    "name": "notepad",
+    "author": "ginkoid",
+    "difficulty": 3,
+    "event": {
+      "id": 67,
+      "name": "picoMini by redpwn"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 133,
+    "positive_rating_count": 114,
+    "users_solved": 3532,
+    "users_solved_during_event": 19,
+    "event_points": 250,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 190,
+    "name": "Bithug",
+    "author": "zwad3",
+    "difficulty": 3,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 42,
+    "positive_rating_count": 38,
+    "users_solved": 2422,
+    "users_solved_during_event": 48,
+    "event_points": 500,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "The hint for this challenge should read:\r\n\r\nEvery user gets their own target repository to attack called_/<user>.git, but no permission to read it.",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 187,
+    "name": "Unsubscriptions Are Free",
+    "author": "thelshell",
+    "difficulty": 3,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 90,
+    "positive_rating_count": 79,
+    "users_solved": 2513,
+    "users_solved_during_event": 144,
+    "event_points": 100,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 185,
+    "name": "X marks the spot",
+    "author": "madStacks",
+    "difficulty": 3,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 78,
+    "positive_rating_count": 71,
+    "users_solved": 1779,
+    "users_solved_during_event": 182,
+    "event_points": 250,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 184,
+    "name": "filtered-shellcode",
+    "author": "madStacks",
+    "difficulty": 3,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 59,
+    "positive_rating_count": 57,
+    "users_solved": 1054,
+    "users_solved_during_event": 105,
+    "event_points": 160,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 183,
+    "name": "ARMssembly 4",
+    "author": "Dylan McGuire",
+    "difficulty": 3,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 36,
+    "positive_rating_count": 27,
+    "users_solved": 1779,
+    "users_solved_during_event": 277,
+    "event_points": 170,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 182,
+    "name": "Some Assembly Required 4",
+    "author": "Sears Schulz",
+    "difficulty": 3,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 25,
+    "positive_rating_count": 23,
+    "users_solved": 1589,
+    "users_solved_during_event": 137,
+    "event_points": 200,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 181,
+    "name": "Bizz Fuzz",
+    "author": "madStacks",
+    "difficulty": 3,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 21,
+    "positive_rating_count": 16,
+    "users_solved": 1304,
+    "users_solved_during_event": 31,
+    "event_points": 80,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 179,
+    "name": "Here's a LIBC",
+    "author": "madStacks",
+    "difficulty": 3,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 123,
+    "positive_rating_count": 119,
+    "users_solved": 2480,
+    "users_solved_during_event": 175,
+    "event_points": 90,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 178,
+    "name": "Turboflan",
+    "author": "wparks",
+    "difficulty": 3,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 23,
+    "positive_rating_count": 21,
+    "users_solved": 325,
+    "users_solved_during_event": 33,
+    "event_points": 600,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 172,
+    "name": "The Office",
+    "author": "madStacks",
+    "difficulty": 3,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 21,
+    "positive_rating_count": 19,
+    "users_solved": 441,
+    "users_solved_during_event": 36,
+    "event_points": 400,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 171,
+    "name": "gogo",
+    "author": "thelshell",
+    "difficulty": 3,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 94,
+    "positive_rating_count": 70,
+    "users_solved": 2070,
+    "users_solved_during_event": 200,
+    "event_points": 110,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 168,
+    "name": "Kit Engine",
+    "author": "wparks",
+    "difficulty": 3,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 36,
+    "positive_rating_count": 35,
+    "users_solved": 492,
+    "users_solved_during_event": 98,
+    "event_points": 375,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 164,
+    "name": "Stonk Market",
+    "author": "madStacks",
+    "difficulty": 3,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 32,
+    "positive_rating_count": 32,
+    "users_solved": 631,
+    "users_solved_during_event": 34,
+    "event_points": 180,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 153,
+    "name": "Some Assembly Required 3",
+    "author": "Sears Schulz",
+    "difficulty": 3,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 70,
+    "positive_rating_count": 52,
+    "users_solved": 2320,
+    "users_solved_during_event": 229,
+    "event_points": 150,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 151,
+    "name": "Rolling My Own",
+    "author": "Luke Rindels",
+    "difficulty": 3,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 47,
+    "positive_rating_count": 43,
+    "users_solved": 711,
+    "users_solved_during_event": 82,
+    "event_points": 300,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 149,
+    "name": "Checkpass",
+    "author": "Jay Bosamiya",
+    "difficulty": 3,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 32,
+    "positive_rating_count": 26,
+    "users_solved": 694,
+    "users_solved_during_event": 71,
+    "event_points": 375,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 146,
+    "name": "Cache Me Outside",
+    "author": "madStacks",
+    "difficulty": 3,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 115,
+    "positive_rating_count": 86,
+    "users_solved": 2532,
+    "users_solved_during_event": 117,
+    "event_points": 70,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 141,
+    "name": "Very very very Hidden",
+    "author": "Sara",
+    "difficulty": 3,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 61,
+    "positive_rating_count": 35,
+    "users_solved": 2812,
+    "users_solved_during_event": 85,
+    "event_points": 300,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 140,
+    "name": "Double DES",
+    "author": "madStacks",
+    "difficulty": 3,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 2,
+      "name": "Cryptography"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 71,
+    "positive_rating_count": 54,
+    "users_solved": 1970,
+    "users_solved_during_event": 213,
+    "event_points": 120,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 136,
+    "name": "Clouds",
+    "author": "madStacks",
+    "difficulty": 3,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 2,
+      "name": "Cryptography"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 25,
+    "positive_rating_count": 24,
+    "users_solved": 358,
+    "users_solved_during_event": 16,
+    "event_points": 500,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 135,
+    "name": "Download Horsepower",
+    "author": "wparks",
+    "difficulty": 3,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 31,
+    "positive_rating_count": 29,
+    "users_solved": 395,
+    "users_solved_during_event": 55,
+    "event_points": 450,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 127,
+    "name": "Compress and Attack",
+    "author": "Jake Beley",
+    "difficulty": 3,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 2,
+      "name": "Cryptography"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 80,
+    "positive_rating_count": 75,
+    "users_solved": 2375,
+    "users_solved_during_event": 163,
+    "event_points": 130,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 123,
+    "name": "It's Not My Fault 1",
+    "author": "rkm0959",
+    "difficulty": 3,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 2,
+      "name": "Cryptography"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 39,
+    "positive_rating_count": 34,
+    "users_solved": 1458,
+    "users_solved_during_event": 82,
+    "event_points": 100,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 122,
+    "name": "Easy as GDB",
+    "author": "McKade",
+    "difficulty": 3,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 61,
+    "positive_rating_count": 57,
+    "users_solved": 1117,
+    "users_solved_during_event": 142,
+    "event_points": 160,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 119,
+    "name": "Powershelly",
+    "author": "Sara",
+    "difficulty": 3,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 56,
+    "positive_rating_count": 22,
+    "users_solved": 1041,
+    "users_solved_during_event": 100,
+    "event_points": 180,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 117,
+    "name": "Surfing the Waves",
+    "author": "William Batista",
+    "difficulty": 3,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 53,
+    "positive_rating_count": 27,
+    "users_solved": 2448,
+    "users_solved_during_event": 68,
+    "event_points": 150,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 114,
+    "name": "Play Nice",
+    "author": "madStacks",
+    "difficulty": 3,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 2,
+      "name": "Cryptography"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 100,
+    "positive_rating_count": 42,
+    "users_solved": 3352,
+    "users_solved_during_event": 410,
+    "event_points": 110,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 107,
+    "name": "Scrambled: RSA",
+    "author": "Sara",
+    "difficulty": 3,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 2,
+      "name": "Cryptography"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 55,
+    "positive_rating_count": 43,
+    "users_solved": 1138,
+    "users_solved_during_event": 99,
+    "event_points": 140,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 102,
+    "name": "Let's get dynamic",
+    "author": "Ryan Ramseyer",
+    "difficulty": 3,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 60,
+    "positive_rating_count": 41,
+    "users_solved": 1629,
+    "users_solved_during_event": 230,
+    "event_points": 150,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 92,
+    "name": "OTP Implementation",
+    "author": "madStacks",
+    "difficulty": 3,
+    "event": {
+      "id": 3,
+      "name": "picoCTF 2020 Mini-Competition"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 92,
+    "positive_rating_count": 88,
+    "users_solved": 1062,
+    "users_solved_during_event": 163,
+    "event_points": 300,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 89,
+    "name": "Guessing Game 2",
+    "author": "madStacks",
+    "difficulty": 3,
+    "event": {
+      "id": 3,
+      "name": "picoCTF 2020 Mini-Competition"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 71,
+    "positive_rating_count": 61,
+    "users_solved": 790,
+    "users_solved_during_event": 89,
+    "event_points": 250,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 83,
+    "name": "Investigative Reversing 3",
+    "author": "Santiago C/Danny T",
+    "difficulty": 3,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 30,
+    "positive_rating_count": 28,
+    "users_solved": 1361,
+    "users_solved_during_event": 0,
+    "event_points": 400,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 78,
+    "name": "b00tl3gRSA3",
+    "author": "invisibility",
+    "difficulty": 3,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 2,
+      "name": "Cryptography"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 43,
+    "positive_rating_count": 41,
+    "users_solved": 2069,
+    "users_solved_during_event": 0,
+    "event_points": 450,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 75,
+    "name": "zero_to_hero",
+    "author": "Claude",
+    "difficulty": 3,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 30,
+    "positive_rating_count": 29,
+    "users_solved": 492,
+    "users_solved_during_event": 0,
+    "event_points": 500,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 70,
+    "name": "Investigative Reversing 0",
+    "author": "Danny Tunitis",
+    "difficulty": 3,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 91,
+    "positive_rating_count": 83,
+    "users_solved": 3135,
+    "users_solved_during_event": 0,
+    "event_points": 300,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 63,
+    "name": "droids2",
+    "author": "Jason",
+    "difficulty": 3,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 42,
+    "positive_rating_count": 39,
+    "users_solved": 2850,
+    "users_solved_during_event": 0,
+    "event_points": 400,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 61,
+    "name": "rsa-pop-quiz",
+    "author": "wparks/nmontierth",
+    "difficulty": 3,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 2,
+      "name": "Cryptography"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 240,
+    "positive_rating_count": 129,
+    "users_solved": 4375,
+    "users_solved_during_event": 0,
+    "event_points": 200,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 57,
+    "name": "B1ll_Gat35",
+    "author": "Alex Bushkin",
+    "difficulty": 3,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 23,
+    "positive_rating_count": 12,
+    "users_solved": 1323,
+    "users_solved_during_event": 0,
+    "event_points": 400,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 56,
+    "name": "B1g_Mac",
+    "author": "Santiago C",
+    "difficulty": 3,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 39,
+    "positive_rating_count": 30,
+    "users_solved": 3526,
+    "users_solved_during_event": 0,
+    "event_points": 500,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 55,
+    "name": "sice_cream",
+    "author": "Samuel",
+    "difficulty": 3,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 15,
+    "positive_rating_count": 12,
+    "users_solved": 158,
+    "users_solved_during_event": 0,
+    "event_points": 500,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 54,
+    "name": "Investigative Reversing 4",
+    "author": "Santiago C/Danny T",
+    "difficulty": 3,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 38,
+    "positive_rating_count": 35,
+    "users_solved": 1841,
+    "users_solved_during_event": 0,
+    "event_points": 400,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 50,
+    "name": "seed-sPRiNG",
+    "author": "John Hammond",
+    "difficulty": 3,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 61,
+    "positive_rating_count": 49,
+    "users_solved": 897,
+    "users_solved_during_event": 0,
+    "event_points": 350,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 47,
+    "name": "investigation_encoded_1",
+    "author": "Santiago C",
+    "difficulty": 3,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 26,
+    "positive_rating_count": 18,
+    "users_solved": 872,
+    "users_solved_during_event": 0,
+    "event_points": 450,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 42,
+    "name": "WebNet1",
+    "author": "Jason",
+    "difficulty": 3,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 76,
+    "positive_rating_count": 73,
+    "users_solved": 6288,
+    "users_solved_during_event": 0,
+    "event_points": 450,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 39,
+    "name": "Need For Speed",
+    "author": "Alexander Bushkin",
+    "difficulty": 3,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 69,
+    "positive_rating_count": 64,
+    "users_solved": 1858,
+    "users_solved_during_event": 0,
+    "event_points": 400,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 36,
+    "name": "investigation_encoded_2",
+    "author": "Santiago C",
+    "difficulty": 3,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 19,
+    "positive_rating_count": 17,
+    "users_solved": 766,
+    "users_solved_during_event": 0,
+    "event_points": 500,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 33,
+    "name": "Java Script Kiddie 2",
+    "author": "John Johnson",
+    "difficulty": 3,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 43,
+    "positive_rating_count": 32,
+    "users_solved": 1292,
+    "users_solved_during_event": 0,
+    "event_points": 450,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 32,
+    "name": "WebNet0",
+    "author": "Jason",
+    "difficulty": 3,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 104,
+    "positive_rating_count": 99,
+    "users_solved": 7044,
+    "users_solved_during_event": 0,
+    "event_points": 350,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 29,
+    "name": "Java Script Kiddie",
+    "author": "John Johnson",
+    "difficulty": 3,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 100,
+    "positive_rating_count": 86,
+    "users_solved": 2751,
+    "users_solved_during_event": 0,
+    "event_points": 400,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 28,
+    "name": "m00nwalk2",
+    "author": "Joon",
+    "difficulty": 3,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 107,
+    "positive_rating_count": 100,
+    "users_solved": 5092,
+    "users_solved_during_event": 0,
+    "event_points": 300,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 27,
+    "name": "Investigative Reversing 1",
+    "author": "Danny Tunitis",
+    "difficulty": 3,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 55,
+    "positive_rating_count": 52,
+    "users_solved": 2117,
+    "users_solved_during_event": 0,
+    "event_points": 350,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 23,
+    "name": "droids3",
+    "author": "Jason",
+    "difficulty": 3,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 28,
+    "positive_rating_count": 26,
+    "users_solved": 2803,
+    "users_solved_during_event": 0,
+    "event_points": 450,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 17,
+    "name": "droids4",
+    "author": "Jason",
+    "difficulty": 3,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 41,
+    "positive_rating_count": 36,
+    "users_solved": 3083,
+    "users_solved_during_event": 0,
+    "event_points": 500,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 14,
+    "name": "droids1",
+    "author": "Jason",
+    "difficulty": 3,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 36,
+    "positive_rating_count": 34,
+    "users_solved": 3103,
+    "users_solved_during_event": 0,
+    "event_points": 350,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 13,
+    "name": "Investigative Reversing 2",
+    "author": "Santiago C/Danny Tunitis",
+    "difficulty": 3,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 37,
+    "positive_rating_count": 34,
+    "users_solved": 1622,
+    "users_solved_during_event": 0,
+    "event_points": 350,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 11,
+    "name": "droids0",
+    "author": "Jason",
+    "difficulty": 3,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 45,
+    "positive_rating_count": 41,
+    "users_solved": 3664,
+    "users_solved_during_event": 0,
+    "event_points": 300,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 2,
+    "name": "b00tl3gRSA2",
+    "author": "invisibility",
+    "difficulty": 3,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 2,
+      "name": "Cryptography"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 77,
+    "positive_rating_count": 70,
+    "users_solved": 4303,
+    "users_solved_during_event": 0,
+    "event_points": 400,
+    "solved_by_user": false,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  }
+]

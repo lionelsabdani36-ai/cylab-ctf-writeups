@@ -1,0 +1,2364 @@
+[
+  {
+    "id": 401,
+    "name": "Picker II",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": null,
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [
+      {
+        "id": 1,
+        "name": "Python"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 311,
+    "positive_rating_count": 295,
+    "users_solved": 11738,
+    "users_solved_during_event": null,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 400,
+    "name": "Picker I",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": null,
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [
+      {
+        "id": 1,
+        "name": "Python"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 384,
+    "positive_rating_count": 362,
+    "users_solved": 18695,
+    "users_solved_during_event": null,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 399,
+    "name": "Local Target",
+    "author": "OverTheWire.org / LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": null,
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [
+      {
+        "id": 9,
+        "name": "gets"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 165,
+    "positive_rating_count": 151,
+    "users_solved": 7933,
+    "users_solved_during_event": null,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 398,
+    "name": "GDB baby step 4",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": null,
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [
+      {
+        "id": 62,
+        "name": "x86_64"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 197,
+    "positive_rating_count": 183,
+    "users_solved": 9686,
+    "users_solved_during_event": null,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 397,
+    "name": "GDB baby step 3",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": null,
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [
+      {
+        "id": 62,
+        "name": "x86_64"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 286,
+    "positive_rating_count": 179,
+    "users_solved": 9702,
+    "users_solved_during_event": null,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 396,
+    "name": "GDB baby step 2",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": null,
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [
+      {
+        "id": 62,
+        "name": "x86_64"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 223,
+    "positive_rating_count": 214,
+    "users_solved": 11964,
+    "users_solved_during_event": null,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 395,
+    "name": "GDB baby step 1",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": null,
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [
+      {
+        "id": 62,
+        "name": "x86_64"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 221,
+    "positive_rating_count": 209,
+    "users_solved": 14234,
+    "users_solved_during_event": null,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 394,
+    "name": "Bit-O-Asm-4",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": null,
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [
+      {
+        "id": 62,
+        "name": "x86_64"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 219,
+    "positive_rating_count": 211,
+    "users_solved": 12241,
+    "users_solved_during_event": null,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 393,
+    "name": "Bit-O-Asm-3",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": null,
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [
+      {
+        "id": 62,
+        "name": "x86_64"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 240,
+    "positive_rating_count": 231,
+    "users_solved": 13082,
+    "users_solved_during_event": null,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 392,
+    "name": "Bit-O-Asm-2",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": null,
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [
+      {
+        "id": 62,
+        "name": "x86_64"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 216,
+    "positive_rating_count": 195,
+    "users_solved": 14784,
+    "users_solved_during_event": null,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 391,
+    "name": "Bit-O-Asm-1",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": null,
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [
+      {
+        "id": 62,
+        "name": "x86_64"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 240,
+    "positive_rating_count": 214,
+    "users_solved": 16771,
+    "users_solved_during_event": null,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 390,
+    "name": "ASCII Numbers",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": null,
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 440,
+    "positive_rating_count": 390,
+    "users_solved": 39972,
+    "users_solved_during_event": null,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 389,
+    "name": "ASCII FTW",
+    "author": "Abhishek Agarwal",
+    "difficulty": 1,
+    "event": null,
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 224,
+    "positive_rating_count": 198,
+    "users_solved": 10712,
+    "users_solved_during_event": null,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 322,
+    "name": "Big Zip",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": null,
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 1433,
+    "positive_rating_count": 1384,
+    "users_solved": 80758,
+    "users_solved_during_event": null,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 320,
+    "name": "First Find",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": null,
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 961,
+    "positive_rating_count": 867,
+    "users_solved": 79793,
+    "users_solved_during_event": null,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 246,
+    "name": "PW Crack 2",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": {
+      "id": 69,
+      "name": "Beginner picoMini 2022"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "tags": [
+      {
+        "id": 6,
+        "name": "password_cracking"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 1131,
+    "positive_rating_count": 1079,
+    "users_solved": 87493,
+    "users_solved_during_event": 3662,
+    "event_points": 35,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 245,
+    "name": "PW Crack 1",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": {
+      "id": 69,
+      "name": "Beginner picoMini 2022"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "tags": [
+      {
+        "id": 6,
+        "name": "password_cracking"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 1213,
+    "positive_rating_count": 1112,
+    "users_solved": 91202,
+    "users_solved_during_event": 3983,
+    "event_points": 25,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 239,
+    "name": "convertme.py",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": {
+      "id": 69,
+      "name": "Beginner picoMini 2022"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "tags": [
+      {
+        "id": 1,
+        "name": "Python"
+      },
+      {
+        "id": 3,
+        "name": "base"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 928,
+    "positive_rating_count": 814,
+    "users_solved": 85404,
+    "users_solved_during_event": 4951,
+    "event_points": 15,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 189,
+    "name": "Magikarp Ground Mission",
+    "author": "syreal",
+    "difficulty": 1,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 2121,
+    "positive_rating_count": 2006,
+    "users_solved": 108208,
+    "users_solved_during_event": 2924,
+    "event_points": 30,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 186,
+    "name": "information",
+    "author": "susie",
+    "difficulty": 1,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 5129,
+    "positive_rating_count": 2618,
+    "users_solved": 152874,
+    "users_solved_during_event": 1879,
+    "event_points": 10,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 176,
+    "name": "Tab, Tab, Attack",
+    "author": "syreal",
+    "difficulty": 1,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 2046,
+    "positive_rating_count": 1789,
+    "users_solved": 141493,
+    "users_solved_during_event": 3265,
+    "event_points": 20,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 170,
+    "name": "Wave a flag",
+    "author": "syreal",
+    "difficulty": 1,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 4152,
+    "positive_rating_count": 3817,
+    "users_solved": 226678,
+    "users_solved_during_event": 4318,
+    "event_points": 10,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 163,
+    "name": "Static ain't always noise",
+    "author": "syreal",
+    "difficulty": 1,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 1445,
+    "positive_rating_count": 1265,
+    "users_solved": 105194,
+    "users_solved_during_event": 3150,
+    "event_points": 20,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 156,
+    "name": "Nice netcat...",
+    "author": "syreal",
+    "difficulty": 1,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 2510,
+    "positive_rating_count": 2322,
+    "users_solved": 166745,
+    "users_solved_during_event": 4158,
+    "event_points": 15,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 147,
+    "name": "Obedient Cat",
+    "author": "syreal",
+    "difficulty": 1,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 9830,
+    "positive_rating_count": 9016,
+    "users_solved": 381134,
+    "users_solved_during_event": 6830,
+    "event_points": 5,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 144,
+    "name": "Mod 26",
+    "author": "Pandu",
+    "difficulty": 1,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 2,
+      "name": "Cryptography"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 5347,
+    "positive_rating_count": 4988,
+    "users_solved": 325988,
+    "users_solved_during_event": 6357,
+    "event_points": 10,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 86,
+    "name": "2warm",
+    "author": "Sanjay C/Danny Tunitis",
+    "difficulty": 1,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 2219,
+    "positive_rating_count": 1866,
+    "users_solved": 184829,
+    "users_solved_during_event": 0,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 85,
+    "name": "First Grep",
+    "author": "Alex Fulton/Danny Tunitis",
+    "difficulty": 1,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 1699,
+    "positive_rating_count": 1585,
+    "users_solved": 138405,
+    "users_solved_during_event": 0,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 67,
+    "name": "Bases",
+    "author": "Sanjay C/Danny T",
+    "difficulty": 1,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 1471,
+    "positive_rating_count": 1285,
+    "users_solved": 138569,
+    "users_solved_during_event": 0,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 58,
+    "name": "Warmed Up",
+    "author": "Sanjay C/Danny Tunitis",
+    "difficulty": 1,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 2245,
+    "positive_rating_count": 1824,
+    "users_solved": 188319,
+    "users_solved_during_event": 0,
+    "event_points": 50,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 44,
+    "name": "Glory of the Garden",
+    "author": "jedavis/Danny",
+    "difficulty": 1,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 1353,
+    "positive_rating_count": 1221,
+    "users_solved": 100594,
+    "users_solved_during_event": 0,
+    "event_points": 50,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 37,
+    "name": "strings it",
+    "author": "Sanjay C/Danny Tunitis",
+    "difficulty": 1,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 1811,
+    "positive_rating_count": 1579,
+    "users_solved": 127093,
+    "users_solved_during_event": 0,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 34,
+    "name": "what's a net cat?",
+    "author": "Sanjay C/Danny Tunitis",
+    "difficulty": 1,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 2525,
+    "positive_rating_count": 2366,
+    "users_solved": 171074,
+    "users_solved_during_event": 0,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 22,
+    "name": "Lets Warm Up",
+    "author": "Sanjay C/Danny Tunitis",
+    "difficulty": 1,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 2040,
+    "positive_rating_count": 1591,
+    "users_solved": 171718,
+    "users_solved_during_event": 0,
+    "event_points": 50,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 18,
+    "name": "Insp3ct0r",
+    "author": "zaratec/danny",
+    "difficulty": 1,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 3723,
+    "positive_rating_count": 3462,
+    "users_solved": 193533,
+    "users_solved_during_event": 0,
+    "event_points": 50,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 7,
+    "name": "vault-door-training",
+    "author": "Mark E. Haase",
+    "difficulty": 1,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 1654,
+    "positive_rating_count": 1245,
+    "users_solved": 103997,
+    "users_solved_during_event": 0,
+    "event_points": 50,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 4,
+    "name": "where are the robots",
+    "author": "zaratec/Danny",
+    "difficulty": 1,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 2634,
+    "positive_rating_count": 2300,
+    "users_solved": 151865,
+    "users_solved_during_event": 0,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 729,
+    "name": "Sql Map1",
+    "author": "Aditya Sudhansu",
+    "difficulty": 2,
+    "event": {
+      "id": 79,
+      "name": "picoCTF 2026"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 71,
+    "positive_rating_count": 50,
+    "users_solved": 3449,
+    "users_solved_during_event": 1140,
+    "event_points": 300,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 403,
+    "name": "Picker IV",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 2,
+    "event": null,
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 186,
+    "positive_rating_count": 175,
+    "users_solved": 7887,
+    "users_solved_during_event": null,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 402,
+    "name": "Picker III",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 2,
+    "event": null,
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [
+      {
+        "id": 1,
+        "name": "Python"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 317,
+    "positive_rating_count": 301,
+    "users_solved": 9085,
+    "users_solved_during_event": null,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 373,
+    "name": "rotation",
+    "author": "Loic Shema",
+    "difficulty": 2,
+    "event": {
+      "id": 72,
+      "name": "picoCTF 2023"
+    },
+    "category": {
+      "id": 2,
+      "name": "Cryptography"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 322,
+    "positive_rating_count": 285,
+    "users_solved": 30465,
+    "users_solved_during_event": 5497,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 345,
+    "name": "babygame01",
+    "author": "Palash Oswal",
+    "difficulty": 2,
+    "event": {
+      "id": 72,
+      "name": "picoCTF 2023"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [
+      {
+        "id": 42,
+        "name": "game"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 253,
+    "positive_rating_count": 150,
+    "users_solved": 4998,
+    "users_solved_during_event": 1121,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 307,
+    "name": "substitution0",
+    "author": "Will Hong",
+    "difficulty": 2,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 2,
+      "name": "Cryptography"
+    },
+    "tags": [
+      {
+        "id": 36,
+        "name": "Substitution"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 356,
+    "positive_rating_count": 329,
+    "users_solved": 29882,
+    "users_solved_during_event": 4424,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 305,
+    "name": "St3g0",
+    "author": "LT 'syreal' Jones (ft. djrobin17)",
+    "difficulty": 2,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [
+      {
+        "id": 32,
+        "name": "steganography"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 317,
+    "positive_rating_count": 219,
+    "users_solved": 18804,
+    "users_solved_during_event": 1876,
+    "event_points": 300,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 301,
+    "name": "Sleuthkit Intro",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 2,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [
+      {
+        "id": 30,
+        "name": "sleuthkit"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 396,
+    "positive_rating_count": 354,
+    "users_solved": 31639,
+    "users_solved_during_event": 3028,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 300,
+    "name": "Sleuthkit Apprentice",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 2,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [
+      {
+        "id": 27,
+        "name": "disk"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 416,
+    "positive_rating_count": 399,
+    "users_solved": 23182,
+    "users_solved_during_event": 1872,
+    "event_points": 200,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 286,
+    "name": "Packets Primer",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 2,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [
+      {
+        "id": 12,
+        "name": "pcap"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 335,
+    "positive_rating_count": 301,
+    "users_solved": 34727,
+    "users_solved_during_event": 4125,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 279,
+    "name": "Lookey here",
+    "author": "LT 'syreal' Jones / Mubarak Mikail",
+    "difficulty": 2,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [
+      {
+        "id": 21,
+        "name": "grep"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 371,
+    "positive_rating_count": 306,
+    "users_solved": 30562,
+    "users_solved_during_event": 5114,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 267,
+    "name": "file-run2",
+    "author": "Will Hong",
+    "difficulty": 2,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 251,
+    "positive_rating_count": 175,
+    "users_solved": 23697,
+    "users_solved_during_event": 5023,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 266,
+    "name": "file-run1",
+    "author": "Will Hong",
+    "difficulty": 2,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 350,
+    "positive_rating_count": 219,
+    "users_solved": 27612,
+    "users_solved_during_event": 5220,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 265,
+    "name": "Enhance!",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 2,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [
+      {
+        "id": 13,
+        "name": "svg"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 1104,
+    "positive_rating_count": 962,
+    "users_solved": 54692,
+    "users_solved_during_event": 4921,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 258,
+    "name": "buffer overflow 1",
+    "author": "Sanjay C / Palash Oswal",
+    "difficulty": 2,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 360,
+    "positive_rating_count": 315,
+    "users_solved": 13296,
+    "users_solved_during_event": 1699,
+    "event_points": 200,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 257,
+    "name": "buffer overflow 0",
+    "author": "Alex Fulton / Palash Oswal",
+    "difficulty": 2,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [
+      {
+        "id": 9,
+        "name": "gets"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 727,
+    "positive_rating_count": 647,
+    "users_solved": 41284,
+    "users_solved_during_event": 4149,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 249,
+    "name": "PW Crack 5",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 2,
+    "event": {
+      "id": 69,
+      "name": "Beginner picoMini 2022"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "tags": [
+      {
+        "id": 5,
+        "name": "hashing"
+      },
+      {
+        "id": 6,
+        "name": "password_cracking"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 1170,
+    "positive_rating_count": 1079,
+    "users_solved": 49979,
+    "users_solved_during_event": 2493,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 248,
+    "name": "PW Crack 4",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 2,
+    "event": {
+      "id": 69,
+      "name": "Beginner picoMini 2022"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "tags": [
+      {
+        "id": 5,
+        "name": "hashing"
+      },
+      {
+        "id": 6,
+        "name": "password_cracking"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 1145,
+    "positive_rating_count": 1043,
+    "users_solved": 56349,
+    "users_solved_during_event": 2859,
+    "event_points": 85,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 247,
+    "name": "PW Crack 3",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 2,
+    "event": {
+      "id": 69,
+      "name": "Beginner picoMini 2022"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "tags": [
+      {
+        "id": 5,
+        "name": "hashing"
+      },
+      {
+        "id": 6,
+        "name": "password_cracking"
+      }
+    ],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 1204,
+    "positive_rating_count": 846,
+    "users_solved": 65744,
+    "users_solved_during_event": 3315,
+    "event_points": 75,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 205,
+    "name": "advanced-potion-making",
+    "author": "bigC",
+    "difficulty": 2,
+    "event": {
+      "id": 67,
+      "name": "picoMini by redpwn"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 201,
+    "positive_rating_count": 133,
+    "users_solved": 9553,
+    "users_solved_during_event": 67,
+    "event_points": 100,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 167,
+    "name": "Binary Gauntlet 0",
+    "author": "madStacks",
+    "difficulty": 2,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 140,
+    "positive_rating_count": 24,
+    "users_solved": 1418,
+    "users_solved_during_event": 983,
+    "event_points": 10,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 166,
+    "name": "Python Wrangling",
+    "author": "syreal",
+    "difficulty": 2,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 4880,
+    "positive_rating_count": 3759,
+    "users_solved": 184704,
+    "users_solved_during_event": 3228,
+    "event_points": 10,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 160,
+    "name": "ARMssembly 0",
+    "author": "Dylan McGuire",
+    "difficulty": 2,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 275,
+    "positive_rating_count": 180,
+    "users_solved": 10644,
+    "users_solved_during_event": 433,
+    "event_points": 40,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 159,
+    "name": "Dachshund Attacks",
+    "author": "Sara",
+    "difficulty": 2,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 2,
+      "name": "Cryptography"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 172,
+    "positive_rating_count": 151,
+    "users_solved": 9985,
+    "users_solved_during_event": 581,
+    "event_points": 80,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 154,
+    "name": "No Padding, No Problem",
+    "author": "Sara",
+    "difficulty": 2,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 2,
+      "name": "Cryptography"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 117,
+    "positive_rating_count": 106,
+    "users_solved": 5332,
+    "users_solved_during_event": 323,
+    "event_points": 90,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 137,
+    "name": "Disk, disk, sleuth! II",
+    "author": "syreal",
+    "difficulty": 2,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 349,
+    "positive_rating_count": 314,
+    "users_solved": 20189,
+    "users_solved_during_event": 777,
+    "event_points": 130,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 125,
+    "name": "Easy Peasy",
+    "author": "madStacks",
+    "difficulty": 2,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 2,
+      "name": "Cryptography"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 463,
+    "positive_rating_count": 271,
+    "users_solved": 12100,
+    "users_solved_during_event": 420,
+    "event_points": 40,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 121,
+    "name": "keygenme-py",
+    "author": "syreal",
+    "difficulty": 2,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 1637,
+    "positive_rating_count": 1540,
+    "users_solved": 46201,
+    "users_solved_during_event": 1249,
+    "event_points": 30,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 115,
+    "name": "Wireshark doo dooo do doo...",
+    "author": "Dylan",
+    "difficulty": 2,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 739,
+    "positive_rating_count": 635,
+    "users_solved": 43444,
+    "users_solved_during_event": 1508,
+    "event_points": 50,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 113,
+    "name": "Disk, disk, sleuth!",
+    "author": "syreal",
+    "difficulty": 2,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 282,
+    "positive_rating_count": 253,
+    "users_solved": 15611,
+    "users_solved_during_event": 1013,
+    "event_points": 110,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 103,
+    "name": "Trivial Flag Transfer Protocol",
+    "author": "Danny",
+    "difficulty": 2,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 588,
+    "positive_rating_count": 533,
+    "users_solved": 17410,
+    "users_solved_during_event": 465,
+    "event_points": 90,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 74,
+    "name": "What Lies Within",
+    "author": "Julio/Danny",
+    "difficulty": 2,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 384,
+    "positive_rating_count": 303,
+    "users_solved": 28564,
+    "users_solved_during_event": 0,
+    "event_points": 150,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 59,
+    "name": "Irish-Name-Repo 2",
+    "author": "Xingyang Pan",
+    "difficulty": 2,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 267,
+    "positive_rating_count": 231,
+    "users_solved": 20453,
+    "users_solved_during_event": 0,
+    "event_points": 350,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 52,
+    "name": "extensions",
+    "author": "Sanjay C/Danny",
+    "difficulty": 2,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 504,
+    "positive_rating_count": 457,
+    "users_solved": 36857,
+    "users_solved_during_event": 0,
+    "event_points": 150,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 48,
+    "name": "plumbing",
+    "author": "Alex Fulton/Danny Tunitis",
+    "difficulty": 2,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 1471,
+    "positive_rating_count": 1426,
+    "users_solved": 57660,
+    "users_solved_during_event": 0,
+    "event_points": 200,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 31,
+    "name": "Flags",
+    "author": "Danny",
+    "difficulty": 2,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 2,
+      "name": "Cryptography"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 455,
+    "positive_rating_count": 252,
+    "users_solved": 27975,
+    "users_solved_during_event": 0,
+    "event_points": 200,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 30,
+    "name": "shark on wire 1",
+    "author": "Danny",
+    "difficulty": 2,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 318,
+    "positive_rating_count": 279,
+    "users_solved": 25112,
+    "users_solved_during_event": 0,
+    "event_points": 150,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 26,
+    "name": "m00nwalk",
+    "author": "Joon",
+    "difficulty": 2,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 167,
+    "positive_rating_count": 151,
+    "users_solved": 8279,
+    "users_solved_during_event": 0,
+    "event_points": 250,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 25,
+    "name": "JaWT Scratchpad",
+    "author": "John Hammond",
+    "difficulty": 2,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 248,
+    "positive_rating_count": 213,
+    "users_solved": 8909,
+    "users_solved_during_event": 0,
+    "event_points": 400,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 9,
+    "name": "picobrowser",
+    "author": "Archit",
+    "difficulty": 2,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 579,
+    "positive_rating_count": 527,
+    "users_solved": 39244,
+    "users_solved_during_event": 0,
+    "event_points": 200,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  },
+  {
+    "id": 8,
+    "name": "Irish-Name-Repo 3",
+    "author": "Xingyang Pan",
+    "difficulty": 2,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "tags": [],
+    "sponsor": null,
+    "include_in_gym": true,
+    "rating_count": 360,
+    "positive_rating_count": 342,
+    "users_solved": 16838,
+    "users_solved_during_event": 0,
+    "event_points": 400,
+    "solved_by_user": true,
+    "solved_by_team": false,
+    "under_maintenance": false,
+    "bookmarked": false,
+    "errata": "",
+    "active_assignments": [],
+    "retired": false
+  }
+]

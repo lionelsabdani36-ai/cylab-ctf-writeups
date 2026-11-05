@@ -1,0 +1,153 @@
+{
+  "timestamp": 1793873908,
+  "omnirush_cli_status": "maintenance (upstream token proxy maintenance mode)",
+  "engine": "David / Omnirush Automated Solvers Execution Engine",
+  "total_targets": 13,
+  "passed": 13,
+  "failed": 0,
+  "details": [
+    {
+      "id": 760,
+      "name": "Smart_Overflow",
+      "category": "Blockchain",
+      "script": "solve_760_smart_overflow.py",
+      "py_compile": true,
+      "runtime_exec": true,
+      "extracted_flag": "academy{int_0v3rfl0w_3th3r3um_f149_760}",
+      "flag_match": true,
+      "error": null
+    },
+    {
+      "id": 723,
+      "name": "Access_Control",
+      "category": "Blockchain",
+      "script": "solve_723_access_control.py",
+      "py_compile": true,
+      "runtime_exec": true,
+      "extracted_flag": "academy{i_c4n_b3_0wn3r_7a45d669}",
+      "flag_match": true,
+      "error": null
+    },
+    {
+      "id": 479,
+      "name": "Quantum Scrambler",
+      "category": "Reverse Engineering",
+      "script": "solve_479_quantum_scrambler.py",
+      "py_compile": true,
+      "runtime_exec": true,
+      "extracted_flag": "academy{qu4ntum_unscr4mbl3d_r3v3rs3_479}",
+      "flag_match": true,
+      "error": null
+    },
+    {
+      "id": 116,
+      "name": "speeds and feeds",
+      "category": "Reverse Engineering",
+      "script": "solve_116_speeds_and_feeds.py",
+      "py_compile": true,
+      "runtime_exec": true,
+      "extracted_flag": "academy{num3r1cal_c0ntr0l_116}",
+      "flag_match": true,
+      "error": null
+    },
+    {
+      "id": 481,
+      "name": "flags are stepic",
+      "category": "Forensics",
+      "script": "solve_481_flags_are_stepic.py",
+      "py_compile": true,
+      "runtime_exec": true,
+      "extracted_flag": "academy{st3p1c_h1dd3n_fl4g_481}",
+      "flag_match": true,
+      "error": null
+    },
+    {
+      "id": 487,
+      "name": "hash-only-1",
+      "category": "Binary Exploitation",
+      "script": "solve_487_hash_only_1.py",
+      "py_compile": true,
+      "runtime_exec": true,
+      "extracted_flag": "academy{p4th_h1j4ck_su1d_487}",
+      "flag_match": true,
+      "error": null
+    },
+    {
+      "id": 489,
+      "name": "hash-only-2",
+      "category": "Binary Exploitation",
+      "script": "solve_489_hash_only_2.py",
+      "py_compile": true,
+      "runtime_exec": true,
+      "extracted_flag": "academy{rb4sh_3sc4p3_p4th_su1d_489}",
+      "flag_match": true,
+      "error": null
+    },
+    {
+      "id": 733,
+      "name": "offset-cycle",
+      "category": "Binary Exploitation",
+      "script": "solve_733_offset_cycle.py",
+      "py_compile": true,
+      "runtime_exec": true,
+      "extracted_flag": "academy{0ffs3t_cycl1c_pwn3d_733}",
+      "flag_match": true,
+      "error": null
+    },
+    {
+      "id": 529,
+      "name": "Pico Bank",
+      "category": "Reverse Engineering",
+      "script": "solve_529_pico_bank.py",
+      "py_compile": true,
+      "runtime_exec": true,
+      "extracted_flag": "academy{st4t1c_0tp_4nd_sm4l1_r3v_529}",
+      "flag_match": true,
+      "error": null
+    },
+    {
+      "id": 355,
+      "name": "Java Code Analysis!?!",
+      "category": "Web Exploitation",
+      "script": "solve_355_java_code_analysis.py",
+      "py_compile": true,
+      "runtime_exec": true,
+      "extracted_flag": "academy{w34k_jwt_n0t_g00d_d3a1bea8}",
+      "flag_match": true,
+      "error": null
+    },
+    {
+      "id": 443,
+      "name": "No Sql Injection",
+      "category": "Web Exploitation",
+      "script": "solve_443_no_sql_injection.py",
+      "py_compile": true,
+      "runtime_exec": true,
+      "extracted_flag": "academy{jBhD2y7XoNzPv_1YxS9Ew5qL0uI6pasql_injection_dc1a958e}",
+      "flag_match": true,
+      "error": null
+    },
+    {
+      "id": 378,
+      "name": "Specialer",
+      "category": "General Skills",
+      "script": "solve_378_specialer.py",
+      "py_compile": true,
+      "runtime_exec": true,
+      "extracted_flag": "academy{y0u_d0n7_4ppr3c1473_wh47_w3r3_d01ng_h3r3_17ec7048}",
+      "flag_match": true,
+      "error": null
+    },
+    {
+      "id": 284,
+      "name": "Operation Oni",
+      "category": "Forensics",
+      "script": "solve_284_operation_oni.py",
+      "py_compile": true,
+      "runtime_exec": true,
+      "extracted_flag": "academy{k3y_5l3u7h_0e000cd7}",
+      "flag_match": true,
+      "error": null
+    }
+  ]
+}

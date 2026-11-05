@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 318 / 525 challenges (Platform Live Solved: 395 / 525)
+- **Total Solved:** 322 / 525 challenges (Platform Live Solved: 400 / 525)
 
 ---
 
@@ -38,6 +38,15 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Grand Sprint - Tier 1 Medium Sweep (05 November 2026 - RBAC JWT Forgery, NoSQL Operator Injection, Restricted Bash Escape, Inode Key Carving & Unprotected EVM State Transition, 5/5)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 355 | Java Code Analysis!?! | Web Exploitation | Medium | `academy{w34k_jwt_n0t_g00d_d3a1bea8}` | **SOLVED** | 2026-11-05 |
+| 2 | 443 | No Sql Injection | Web Exploitation | Medium | `academy{jBhD2y7XoNzPv_1YxS9Ew5qL0uI6pasql_injection_dc1a958e}` | **SOLVED** | 2026-11-05 |
+| 3 | 378 | Specialer | General Skills | Medium | `academy{y0u_d0n7_4ppr3c1473_wh47_w3r3_d01ng_h3r3_17ec7048}` | **SOLVED** | 2026-11-05 |
+| 4 | 284 | Operation Oni | Forensics | Medium | `academy{k3y_5l3u7h_0e000cd7}` | **SOLVED** | 2026-11-05 |
+| 5 | 723 | Access_Control | Blockchain | Medium | `academy{i_c4n_b3_0wn3r_7a45d669}` | **SOLVED** | 2026-11-05 |
 
 ### Batch 60 (05 November 2026 - POSIX Shared Memory Concurrency & ARMv8-A AArch64 Tracing Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |

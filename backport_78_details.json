@@ -1,0 +1,1702 @@
+{
+  "401": {
+    "id": 401,
+    "name": "Picker II",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": null,
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "description": "Can you figure out how this program works to get the flag?",
+    "hints": [
+      "Can you do what `win` does with your input to the program?"
+    ],
+    "endpoints": [],
+    "on_demand": true,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "400": {
+    "id": 400,
+    "name": "Picker I",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": null,
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "description": "This service can provide you with a random number, but can it do anything else?",
+    "hints": [
+      "Can you point the program to a function that does something useful for you?"
+    ],
+    "endpoints": [],
+    "on_demand": true,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "399": {
+    "id": 399,
+    "name": "Local Target",
+    "author": "OverTheWire.org / LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": null,
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "description": "Smash the stack",
+    "hints": [
+      "Do anything you can to change `num`.",
+      "When you change `num`, view the value as hexadecimal."
+    ],
+    "endpoints": [],
+    "on_demand": true,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "398": {
+    "id": 398,
+    "name": "GDB baby step 4",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": null,
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "description": "`main` calls a function that multiplies `eax` by a constant. The flag for this\nchallenge is that constant in decimal base. If the constant you find is 0x1000,\nthe flag will be `academy{4096}`.\nDebug <a href='https://challenge-files.cylabacademy.net/library/5c4fe0af7766d02123d4ebea4a32b3b461fc6c5947049092d61d47518f298068/debugger0_d' download>this</a>.",
+    "hints": [
+      "A function can be referenced by either its name or its starting address in\n  gdb."
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "397": {
+    "id": 397,
+    "name": "GDB baby step 3",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": null,
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "description": "Now for something a little different. `0x2262c96b` is loaded into memory in the\n`main` function. Examine byte-wise the memory that the constant is loaded in by\nusing the GDB command `x/4xb addr`. The flag is the four bytes as they are\nstored in memory. If you find the bytes `0x11  0x22  0x33  0x44` in the memory\nlocation, your flag would be: `academy{0x11223344}`.\nDebug <a href='https://challenge-files.cylabacademy.net/library/5eb60afe8ad6df789decfd9d5af027dc8184bfbc20e953f76ed38bd9ce3d9582/debugger0_c' download>this</a>.",
+    "hints": [
+      "You'll need to breakpoint the instruction after the memory load.",
+      "Use the gdb command `x/4xb addr` with the memory location as the address\n  `addr` to examine. [GDB manual page](https://ftp.gnu.org/old-gnu/Manuals/gdb/html_node/gdb_55.html).",
+      "Any registers in `addr` should be prepended with `$` like `$rbp`.",
+      "Don't use square brackets for `addr`",
+      "What is [endianness](https://en.wikipedia.org/wiki/Endianness)?"
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "396": {
+    "id": 396,
+    "name": "GDB baby step 2",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": null,
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "description": "Can you figure out what is in the `eax` register at the end of the `main`\nfunction? Put your answer in the academy flag format: `academy{n}` where `n` is\nthe contents of the `eax` register in the decimal number base. If the answer\nwas `0x11` your flag would be `academy{17}`.\nDebug <a href='https://challenge-files.cylabacademy.net/library/eea5e81c4ce7d6dcb85a3fe7d2edae4465705d230c68c45365cb9f24a69dfcf1/debugger0_b' download>this</a>.",
+    "hints": [
+      "You could calculate `eax` yourself, or you could set a breakpoint for after\n  the calculcation and inspect `eax` to let the program do the heavy-lifting for\n  you."
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "395": {
+    "id": 395,
+    "name": "GDB baby step 1",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": null,
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "description": "Can you figure out what is in the `eax` register at the end of the `main`\nfunction? Put your answer in the academy flag format: `academy{n}` where `n` is\nthe contents of the `eax` register in the decimal number base. If the answer\nwas `0x11` your flag would be `academy{17}`.\nDisassemble <a href='https://challenge-files.cylabacademy.net/library/03b038548e2a34973bde05a78fadc1f09467a1d03ffbfb9e4b48bd44e87c0e70/debugger0_a' download>this</a>.",
+    "hints": [
+      "gdb is a very good debugger to use for this problem and many others!",
+      "`main` is actually a recognized symbol that can be used with gdb commands."
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "394": {
+    "id": 394,
+    "name": "Bit-O-Asm-4",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": null,
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "description": "Can you figure out what is in the `eax` register? Put your answer in the\nacademy flag format: `academy{n}` where `n` is the contents of the `eax`\nregister in the decimal number base. If the answer was `0x11` your flag would\nbe `academy{17}`.\nDownload the assembly dump <a href='https://challenge-files.cylabacademy.net/library/b14a53c80d0f28fa842055ab567694917ef71b9f466545c3597aa8940284e212/disassembler-dump0_d.txt' download>here</a>.",
+    "hints": [
+      "Don't tell anyone I told you this, but you can solve this problem without\n  understanding the compare/jump relationship.",
+      "Of course, if you're really good, you'll only need one attempt to solve this\n  problem."
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "393": {
+    "id": 393,
+    "name": "Bit-O-Asm-3",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": null,
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "description": "Can you figure out what is in the `eax` register? Put your answer in the\nacademy flag format: `academy{n}` where `n` is the contents of the `eax`\nregister in the decimal number base. If the answer was `0x11` your flag would\nbe `academy{17}`.\nDownload the assembly dump <a href='https://challenge-files.cylabacademy.net/library/f16508f6e8ba4c520e7541081aee169bf4f5cab84d6852b697299b8cf4aff76a/disassembler-dump0_c.txt' download>here</a>.",
+    "hints": [
+      "Not everything in this disassembly listing is optimal."
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "392": {
+    "id": 392,
+    "name": "Bit-O-Asm-2",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": null,
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "description": "Can you figure out what is in the `eax` register? Put your answer in the\nacademy flag format: `academy{n}` where `n` is the contents of the `eax`\nregister in the decimal number base. If the answer was `0x11` your flag would\nbe `academy{17}`.\nDownload the assembly dump <a href='https://challenge-files.cylabacademy.net/library/0325d59cb3b29a78bb7872b19f37856d51973b33085362dd4fe5f4cbe7aef80c/disassembler-dump0_b.txt' download>here</a>.",
+    "hints": [
+      "`PTR`'s or 'pointers', reference a location in memory where values can be stored."
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "391": {
+    "id": 391,
+    "name": "Bit-O-Asm-1",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": null,
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "description": "Can you figure out what is in the `eax` register? Put your answer in the\nacademy flag format: `academy{n}` where `n` is the contents of the `eax`\nregister in the decimal number base. If the answer was `0x11` your flag would\nbe `academy{17}`.\nDownload the assembly dump <a href='https://challenge-files.cylabacademy.net/library/f24a79de39123fb31928d2d4baf2de2385e587d089b95005083051f9afb90fa9/disassembler-dump0_a.txt' download>here</a>.",
+    "hints": [
+      "As with most assembly, there is a lot of noise in the instruction dump. Find\n  the one line that pertains to this question and don't second guess yourself!"
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "390": {
+    "id": 390,
+    "name": "ASCII Numbers",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": null,
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "description": "Convert the following string of ASCII numbers into a readable string:\n`0x61 0x63 0x61 0x64 0x65 0x6d 0x79 0x7b 0x34 0x35 0x63 0x31 0x31 0x5f 0x6e 0x30 0x5f 0x71 0x75 0x33 0x35 0x37 0x31 0x30 0x6e 0x35 0x5f 0x31 0x6c 0x6c 0x5f 0x74 0x33 0x31 0x31 0x5f 0x79 0x33 0x5f 0x6e 0x30 0x5f 0x6c 0x31 0x33 0x35 0x5f 0x65 0x39 0x36 0x63 0x38 0x63 0x61 0x38 0x7d `",
+    "hints": [
+      "CyberChef is a great tool for any encoding but especially ASCII.",
+      "Try CyberChef's 'From Hex' function"
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "389": {
+    "id": 389,
+    "name": "ASCII FTW",
+    "author": "Abhishek Agarwal",
+    "difficulty": 1,
+    "event": null,
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "description": "This program has constructed the flag using hex ascii values. Identify the flag text by disassembling the program.\nYou can download the file from <a href='https://challenge-files.cylabacademy.net/library/60ac124e46a3c8894d62ac83ba929cdebd78f28658dc91611d4aae76ad1cb41a/asciiftw' download>here</a>.",
+    "hints": [
+      "The combined range of hex-ascii for English alphabets and numerical digits is from 30 to 7A.",
+      "Online hex-ascii converters can be helpful."
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "322": {
+    "id": 322,
+    "name": "Big Zip",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": null,
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "description": "Unzip this archive and find the flag.\n- <a href='https://challenge-files.cylabacademy.net/library/b150f6f4d21f46fc2bba57ef49c7305541fa8e9bfa4241dfe8d066b99de56200/big-zip-files.zip' download>Download zip file</a>",
+    "hints": [
+      "Can grep be instructed to look at every file in a directory and its\n  subdirectories?"
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "320": {
+    "id": 320,
+    "name": "First Find",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": null,
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "description": "Unzip this archive and find the file named 'uber-secret.txt'\n- <a href='https://challenge-files.cylabacademy.net/library/72ca8cb60e55a597886dfb8e20bdb28d3ea7e73ca72987eb813a3558a8dd22bf/files.zip' download>Download zip file</a>",
+    "hints": [],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "246": {
+    "id": 246,
+    "name": "PW Crack 2",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": {
+      "id": 69,
+      "name": "Beginner picoMini 2022"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "description": "Can you crack the password to get the flag?\nDownload the password checker <a href='https://challenge-files.cylabacademy.net/library/da3b21f411362ad5c273b3a48a829e1a6f011d43998fabc480a2b1f3585aff0b/level2.py' download>here</a> and you'll\nneed the encrypted <a href='https://challenge-files.cylabacademy.net/library/da3b21f411362ad5c273b3a48a829e1a6f011d43998fabc480a2b1f3585aff0b/level2.flag.txt.enc' download>flag</a> in the same directory\ntoo.",
+    "hints": [
+      "Does that encoding look familiar?",
+      "The `str_xor` function does not need to be reverse engineered for this\n  challenge."
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 35
+  },
+  "245": {
+    "id": 245,
+    "name": "PW Crack 1",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": {
+      "id": 69,
+      "name": "Beginner picoMini 2022"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "description": "Can you crack the password to get the flag?\nDownload the password checker <a href='https://challenge-files.cylabacademy.net/library/b3e85410c57956866b9dffa5c2abe8be9060cec09f76df39d3302aeee3d98953/level1.py' download>here</a> and you'll\nneed the encrypted <a href='https://challenge-files.cylabacademy.net/library/b3e85410c57956866b9dffa5c2abe8be9060cec09f76df39d3302aeee3d98953/level1.flag.txt.enc' download>flag</a> in the same\ndirectory too.",
+    "hints": [
+      "To view the file in the webshell, do: `$ nano level1.py`",
+      "To exit `nano`, press Ctrl and x and follow the on-screen prompts.",
+      "The `str_xor` function does not need to be reverse engineered for this\n  challenge."
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 25
+  },
+  "239": {
+    "id": 239,
+    "name": "convertme.py",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 1,
+    "event": {
+      "id": 69,
+      "name": "Beginner picoMini 2022"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "description": "Run the Python script and convert the given number from decimal to binary to\nget the flag.\n<a href='https://challenge-files.cylabacademy.net/library/d507213597114cdf0943d7f7c585eab624e16586a7cdcb88229fd24c143128a1/convertme.py' download>Download Python script</a>",
+    "hints": [
+      "Look up a decimal to binary number conversion app on the web or use your\n  computer's calculator!",
+      "The `str_xor` function does not need to be reverse engineered for this\n  challenge.",
+      "If you have Python on your computer, you can download the script normally and\n  run it. Otherwise, use the `wget` command in the webshell.",
+      "To use `wget` in the webshell, first right click on the download link and\n  select 'Copy Link' or 'Copy Link Address'",
+      "Type everything after the dollar sign in the webshell: `$ wget `, then\n  paste the link after the space after `wget` and press enter. This will\n  download the script for you in the webshell so you can run it!",
+      "Finally, to run the script, type everything after the dollar sign and then\n  press enter: `$ python3 convertme.py`"
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 15
+  },
+  "189": {
+    "id": 189,
+    "name": "Magikarp Ground Mission",
+    "author": "syreal",
+    "difficulty": 1,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "description": "Do you know how to move between directories and read files in the shell? Start the container, `ssh` to it, and then `ls` once connected to begin.",
+    "hints": [
+      "Finding a cheatsheet for bash would be really helpful!"
+    ],
+    "endpoints": [],
+    "on_demand": true,
+    "error_reason": null,
+    "event_points": 30
+  },
+  "186": {
+    "id": 186,
+    "name": "information",
+    "author": "susie",
+    "difficulty": 1,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "description": "Files can always be changed in a secret way. Can you find the flag?\n<a href='https://challenge-files.cylabacademy.net/library/c585b4adbdaa06f409db7bf5012c2e58e9aab24669764a5f1cf0f9ce0d60dcfd/cat.jpg' download>cat.jpg</a>",
+    "hints": [
+      "Look at the details of the file",
+      "Make sure to submit the flag as academy{XXXXX}"
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 10
+  },
+  "176": {
+    "id": 176,
+    "name": "Tab, Tab, Attack",
+    "author": "syreal",
+    "difficulty": 1,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "description": "Using tabcomplete in the Terminal will add years to your life, esp. when dealing with long rambling directory structures and filenames.\n<a href='https://challenge-files.cylabacademy.net/library/298b799316c13103156a84f949a6cb6e02efd5cdb0ee09700231527df92ed468/Addadshashanammu.zip' download>Addadshashanammu.zip</a>",
+    "hints": [
+      "After `unzip`ing, this problem can be solved with 11 button-presses...(mostly Tab)..."
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 20
+  },
+  "170": {
+    "id": 170,
+    "name": "Wave a flag",
+    "author": "syreal",
+    "difficulty": 1,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "description": "Can you invoke help flags for a tool or binary? This program has extraordinarily helpful information...\n<a href='https://challenge-files.cylabacademy.net/library/66dd9288cd84ecc152a833ed9b86decbf99f8f652f2989fa5bd37801de613ed6/warm' download>warm</a>",
+    "hints": [
+      "This program will only work in the webshell or another Linux computer.",
+      "To get the file accessible in your shell, enter the following in the Terminal prompt: `$ wget <URL here>`, where the url can be found in the details section.",
+      "Run this program by entering the following in the Terminal prompt: `$ ./warm`, but you'll first have to make it executable with `$ chmod +x warm`",
+      "-h and --help are the most common arguments to give to programs to get more information from them!",
+      "Not every program implements help features like -h and --help."
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 10
+  },
+  "163": {
+    "id": 163,
+    "name": "Static ain't always noise",
+    "author": "syreal",
+    "difficulty": 1,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "description": "Can you look at the data in this binary? The bash script might help!\n<a href='https://challenge-files.cylabacademy.net/library/fbc420391fe28e2adcd05096604decb354d8ada0a715fc63dff030026865407b/static' download>static</a>, <a href='https://challenge-files.cylabacademy.net/library/fbc420391fe28e2adcd05096604decb354d8ada0a715fc63dff030026865407b/ltdis.sh' download>ltdis.sh</a>",
+    "hints": [],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 20
+  },
+  "156": {
+    "id": 156,
+    "name": "Nice netcat...",
+    "author": "syreal",
+    "difficulty": 1,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "description": "There is a nice program that you can talk to by using this command in a shell:",
+    "hints": [
+      "You can practice using netcat with this Challenge Library problem: [what's a netcat?](/library/34)",
+      "You can practice reading and writing ASCII with this Challenge Library problem: [Let's Warm Up](/library/22)"
+    ],
+    "endpoints": [],
+    "on_demand": true,
+    "error_reason": null,
+    "event_points": 15
+  },
+  "147": {
+    "id": 147,
+    "name": "Obedient Cat",
+    "author": "syreal",
+    "difficulty": 1,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "description": "This file has a flag in plain sight (aka \"in-the-clear\").\n<a href='https://challenge-files.cylabacademy.net/library/11b9e730524b026e2bce9e561dad9e8f1905b575e3fc6a1477eb1698b59e6585/flag' download>flag</a>",
+    "hints": [
+      "Any hints about entering a command into the Terminal (such as the next one), will start with a '$'... everything after the dollar sign will be typed (or copy and pasted) into your Terminal.",
+      "To get the file accessible in your shell, enter the following in the Terminal prompt: `$ wget ` and a link to the flag. The link can be copied from the details section.",
+      "`$ man cat`"
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 5
+  },
+  "144": {
+    "id": 144,
+    "name": "Mod 26",
+    "author": "Pandu",
+    "difficulty": 1,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 2,
+      "name": "Cryptography"
+    },
+    "description": "Cryptography can be easy, do you know what ROT13 is?\n<a href='https://challenge-files.cylabacademy.net/library/f3d35996f9541b57c61263b98a9520596dbb45867d87d5f079d883b76348c5d8/values.txt' download>values.txt</a>",
+    "hints": [
+      "This can be solved online if you don't want to do it by hand!"
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 10
+  },
+  "86": {
+    "id": 86,
+    "name": "2warm",
+    "author": "Sanjay C/Danny Tunitis",
+    "difficulty": 1,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "description": "Can you convert the number 42 (base 10) to binary (base 2)?\n",
+    "hints": [
+      "Submit your answer in our competition's flag format. For example, if your answer was '11111', you would submit 'academy{11111}' as the flag."
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "85": {
+    "id": 85,
+    "name": "First Grep",
+    "author": "Alex Fulton/Danny Tunitis",
+    "difficulty": 1,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "description": "Can you find the flag in the file? This would be really tedious to look through manually, something tells me there is a better way.\nThe flag is in this <a href='https://challenge-files.cylabacademy.net/library/5d7f4358263155557302dec0109cb10471df58afe72ce4507fc85ade2e3476c3/file' download>file</a>.",
+    "hints": [
+      "grep [tutorial](https://ryanstutorials.net/linuxtutorial/grep.php)"
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "67": {
+    "id": 67,
+    "name": "Bases",
+    "author": "Sanjay C/Danny T",
+    "difficulty": 1,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "description": "What does this `bDNhcm5fdGgzX3IwcDM1` mean? I think it has something to do with bases.\n",
+    "hints": [
+      "Submit your answer in our flag format. For example, if your answer was 'hello', you would submit 'academy{hello}' as the flag."
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "58": {
+    "id": 58,
+    "name": "Warmed Up",
+    "author": "Sanjay C/Danny Tunitis",
+    "difficulty": 1,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "description": "What is 0x3D (base 16) in decimal (base 10)?\n",
+    "hints": [
+      "Submit your answer in our flag format. For example, if your answer was '22', you would submit 'academy{22}' as the flag."
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 50
+  },
+  "44": {
+    "id": 44,
+    "name": "Glory of the Garden",
+    "author": "jedavis/Danny",
+    "difficulty": 1,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "description": "This file contains more than it seems.\nGet the flag from <a href='https://challenge-files.cylabacademy.net/library/3c60c5a7f7a8067606c51d4b4b3c7913fae709b11e2f2c7adbc0a0b4cda452ff/garden.jpg' download>garden.jpg</a>.",
+    "hints": [
+      "What is a hex editor?"
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 50
+  },
+  "37": {
+    "id": 37,
+    "name": "strings it",
+    "author": "Sanjay C/Danny Tunitis",
+    "difficulty": 1,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "description": "\nCan you find the flag in <a href='https://challenge-files.cylabacademy.net/library/dede17d717e026b75f6b9e7fb2c1601b46093ced6f209b8f6b27ffd883a9ae2f/strings' download>file</a> without running it?",
+    "hints": [
+      "[strings](https://linux.die.net/man/1/strings)"
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "34": {
+    "id": 34,
+    "name": "what's a net cat?",
+    "author": "Sanjay C/Danny Tunitis",
+    "difficulty": 1,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "description": "",
+    "hints": [
+      "nc [tutorial](https://linux.die.net/man/1/nc)"
+    ],
+    "endpoints": [],
+    "on_demand": true,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "22": {
+    "id": 22,
+    "name": "Lets Warm Up",
+    "author": "Sanjay C/Danny Tunitis",
+    "difficulty": 1,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "description": "If I told you a word started with 0x70 in hexadecimal, what would it start with in ASCII?\n",
+    "hints": [
+      "Submit your answer in our flag format. For example, if your answer was 'hello', you would submit 'academy{hello}' as the flag."
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 50
+  },
+  "18": {
+    "id": 18,
+    "name": "Insp3ct0r",
+    "author": "zaratec/danny",
+    "difficulty": 1,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "description": "Kishor Balan tipped us off that the following code may need inspection:",
+    "hints": [
+      "How do you inspect web code on a browser?",
+      "There's 3 parts"
+    ],
+    "endpoints": [],
+    "on_demand": true,
+    "error_reason": null,
+    "event_points": 50
+  },
+  "7": {
+    "id": 7,
+    "name": "vault-door-training",
+    "author": "Mark E. Haase",
+    "difficulty": 1,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "description": "Your mission is to enter Dr. Evil's laboratory and retrieve the blueprints for his Doomsday Project. The laboratory is protected by a series of locked vault doors. Each door is controlled by a computer and requires a password to open. Unfortunately, our undercover agents have not been able to obtain the secret passwords for the vault doors, but one of our junior agents obtained the source code for each vault's computer! You will need to read the source code for each level to figure out what the password is for that vault door. As a warmup, we have created a replica vault in our training facility.\n\nThe source code for the training vault is here: <a href='https://challenge-files.cylabacademy.net/library/78ec91618d4c4219c55fbe2c9fc67ec6e248664564e6b2f13a54534aaf1d1000/VaultDoorTraining.java' download>VaultDoorTraining.java</a>\n",
+    "hints": [],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 50
+  },
+  "4": {
+    "id": 4,
+    "name": "where are the robots",
+    "author": "zaratec/Danny",
+    "difficulty": 1,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "description": "Can you find the robots?",
+    "hints": [
+      "What part of the website could tell you where the creator doesn't want you to look?"
+    ],
+    "endpoints": [],
+    "on_demand": true,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "729": {
+    "id": 729,
+    "name": "Sql Map1",
+    "author": "Aditya Sudhansu",
+    "difficulty": 2,
+    "event": {
+      "id": 79,
+      "name": "picoCTF 2026"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "description": "You\u2019ve been hired by a shadowy group of pentesters who love a good puzzle.\nThe system looks ordinary, but appearances lie.\nSomewhere inside, sloppy code and legacy hashing practices left a tiny, perfect doorway for an attacker.\n\nYour mission \u2014 should you choose to accept it \u2014 is to slip through that doorway,\nact as a legit user and retrieve the secret flag.",
+    "hints": [
+      "Search box looks interesting.",
+      "Passwords should not be stored in md5 format.",
+      "CrackStation is a great online tool for cracking hashes.",
+      "Sample SqlMap command: ```sqlmap -u <URL_for_search> --cookie=\"PHPSESSID=1111111111111\" -p <vulnerable_parameter> --batch --tables```"
+    ],
+    "endpoints": [],
+    "on_demand": true,
+    "error_reason": null,
+    "event_points": 300
+  },
+  "403": {
+    "id": 403,
+    "name": "Picker IV",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 2,
+    "event": null,
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "description": "Can you figure out how this program works to get the flag?",
+    "hints": [
+      "With Python, there are no binaries. With compiled languages like C, there is\n  source code, and there are binaries. Binaries are created from source code,\n  they are a conversion from the human-readable source code, to the highly\n  efficient machine language, in this case: x86_64.",
+      "How can you find the address that `win` is at?"
+    ],
+    "endpoints": [],
+    "on_demand": true,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "402": {
+    "id": 402,
+    "name": "Picker III",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 2,
+    "event": null,
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "description": "Can you figure out how this program works to get the flag?",
+    "hints": [
+      "Is there any way to modify the function table?"
+    ],
+    "endpoints": [],
+    "on_demand": true,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "373": {
+    "id": 373,
+    "name": "rotation",
+    "author": "Loic Shema",
+    "difficulty": 2,
+    "event": {
+      "id": 72,
+      "name": "picoCTF 2023"
+    },
+    "category": {
+      "id": 2,
+      "name": "Cryptography"
+    },
+    "description": "You will find the flag after decrypting this file\nDownload the encrypted flag <a href='https://challenge-files.cylabacademy.net/library/545f29dd6d01fbbfe2cb0c2616132c3b10c64c676d94c9cc88d3fc15020078a2/encrypted.txt' download>here</a>.",
+    "hints": [
+      "Sometimes rotation is right"
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "345": {
+    "id": 345,
+    "name": "babygame01",
+    "author": "Palash Oswal",
+    "difficulty": 2,
+    "event": {
+      "id": 72,
+      "name": "picoCTF 2023"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "description": "Get the flag and reach the exit.",
+    "hints": [
+      "Use 'w','a','s','d' to move around.",
+      "There may be secret commands to make your life easy."
+    ],
+    "endpoints": [],
+    "on_demand": true,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "307": {
+    "id": 307,
+    "name": "substitution0",
+    "author": "Will Hong",
+    "difficulty": 2,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 2,
+      "name": "Cryptography"
+    },
+    "description": "A message has come in but it seems to be all scrambled. Luckily it seems to\nhave the key at the beginning. Can you crack this substitution cipher?\nDownload the message <a href='https://challenge-files.cylabacademy.net/library/c81cd186dacb4ad82560df3b81fe365fc1c38a1c7dca9a73a9604c5345ab4473/message.txt' download>here</a>.",
+    "hints": [
+      "Try a frequency attack. An online tool might help."
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "305": {
+    "id": 305,
+    "name": "St3g0",
+    "author": "LT 'syreal' Jones (ft. djrobin17)",
+    "difficulty": 2,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "description": "Download this image and find the flag.\n- <a href='https://challenge-files.cylabacademy.net/library/f9cf770d7b39e9524e2be7e75cfa654af2ec8dd65c7f09f55093394e4e1d9f79/academy.flag.png' download>Download image</a>",
+    "hints": [
+      "We know the end sequence of the message will be `$t3g0`."
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 300
+  },
+  "301": {
+    "id": 301,
+    "name": "Sleuthkit Intro",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 2,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "description": "Download the disk image and use `mmls` on it to find the size of the Linux\npartition. Connect to the remote checker service to check your answer and get\nthe flag.\n\nNote: if you are using the webshell, download and extract the disk image into\n`/tmp` not your home directory.\n\n<a href='https://challenge-files.cylabacademy.net/library/d8718cbbc14dcd9f9aad532a51d7a01b00e1715ca3b1d654dfef687d0b15cbf5/disk.img.gz' download>Download disk image</a>",
+    "hints": [],
+    "endpoints": [],
+    "on_demand": true,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "300": {
+    "id": 300,
+    "name": "Sleuthkit Apprentice",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 2,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "description": "Download this disk image and find the flag.\n\nNote: if you are using the webshell, download and extract the disk image into\n`/tmp` not your home directory.\n- <a href='https://challenge-files.cylabacademy.net/library/135adeee1de1ceb2e2838061773078678e93ff1d16535b39a17481b2ba5868ff/disk.flag.img.gz' download>Download compressed disk image</a>",
+    "hints": [],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 200
+  },
+  "286": {
+    "id": 286,
+    "name": "Packets Primer",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 2,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "description": "Download the packet capture file and use packet analysis software to find the\nflag.\n- <a href='https://challenge-files.cylabacademy.net/library/bf6ce90b17a773e3381a0b32b3bc624a0c8818e09346f5cee59e9fc66088934a/network-dump.flag.pcap' download>Download packet capture</a>",
+    "hints": [
+      "Wireshark, if you can install and use it, is probably the most beginner\n  friendly packet analysis software product."
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "279": {
+    "id": 279,
+    "name": "Lookey here",
+    "author": "LT 'syreal' Jones / Mubarak Mikail",
+    "difficulty": 2,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "description": "Attackers have hidden information in a very large mass of data in the past,\nmaybe they are still doing it.\nDownload the data <a href='https://challenge-files.cylabacademy.net/library/1e5b915df467718ade9bc65b9de2094f73159c40c620fbea7bfec17f657252b3/anthem.flag.txt' download>here</a>.",
+    "hints": [
+      "Download the file and search for the flag based on the known prefix."
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "267": {
+    "id": 267,
+    "name": "file-run2",
+    "author": "Will Hong",
+    "difficulty": 2,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "description": "Another program, but this time, it seems to want some input. What happens if\nyou try to run it on the command line with input \"Hello!\"?\nDownload the program <a href='https://challenge-files.cylabacademy.net/library/ce5aa95ac9190d4d57106ecfcea8b60f5ef64535ddcbc052a561c922f2f19fbf/run' download>here</a>.",
+    "hints": [
+      "Try running it and add the phrase \"Hello!\" with a space in front\n  (i.e. \"./run Hello!\")"
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "266": {
+    "id": 266,
+    "name": "file-run1",
+    "author": "Will Hong",
+    "difficulty": 2,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "description": "A program has been provided to you, what happens if you try to run it on the\ncommand line?\nDownload the program <a href='https://challenge-files.cylabacademy.net/library/4cb47d716d0004f01f73bbcc894465736c68b3c2d78e32c622e5a63c2bcb885e/run' download>here</a>.",
+    "hints": [
+      "To run the program at all, you must make it executable (i.e. `$ chmod +x run`)",
+      "Try running it by adding a '.' in front of the path to the file (i.e. `$ ./run`)"
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "265": {
+    "id": 265,
+    "name": "Enhance!",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 2,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "description": "Download this image file and find the flag.\n- <a href='https://challenge-files.cylabacademy.net/library/248587d9a868db74a285623697f78ef3d87561aaa16ff1fb211fe88cd72f4a6c/drawing.flag.svg' download>Download image file</a>",
+    "hints": [],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "258": {
+    "id": 258,
+    "name": "buffer overflow 1",
+    "author": "Sanjay C / Palash Oswal",
+    "difficulty": 2,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "description": "Control the return address",
+    "hints": [
+      "Make sure you consider big Endian vs small Endian.",
+      "Changing the address of the return pointer can call different functions."
+    ],
+    "endpoints": [],
+    "on_demand": true,
+    "error_reason": null,
+    "event_points": 200
+  },
+  "257": {
+    "id": 257,
+    "name": "buffer overflow 0",
+    "author": "Alex Fulton / Palash Oswal",
+    "difficulty": 2,
+    "event": {
+      "id": 70,
+      "name": "picoCTF 2022"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "description": "Let's start off simple, can you overflow the correct buffer? The program is\navailable <a href='https://challenge-files.cylabacademy.net/library/ec051fa8f6f038c69b302cb5d328ee981142c18c6d02943b7ff60108dc21876d/vuln' download>here</a>. You can view source\n<a href='https://challenge-files.cylabacademy.net/library/ec051fa8f6f038c69b302cb5d328ee981142c18c6d02943b7ff60108dc21876d/vuln.c' download>here</a>.",
+    "hints": [
+      "How can you trigger the flag to print?",
+      "If you try to do the math by hand, maybe try and add a few more characters.\n  Sometimes there are things you aren't expecting.",
+      "Run `man gets` and read the BUGS section. How many characters can the program\n  really read?"
+    ],
+    "endpoints": [],
+    "on_demand": true,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "249": {
+    "id": 249,
+    "name": "PW Crack 5",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 2,
+    "event": {
+      "id": 69,
+      "name": "Beginner picoMini 2022"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "description": "Can you crack the password to get the flag?\nDownload the password checker <a href='https://challenge-files.cylabacademy.net/library/ab8c1cf7e7d8fda84ad80d01a77290b4ea24c6998837de149a179b1216941290/level5.py' download>here</a> and you'll\nneed the encrypted <a href='https://challenge-files.cylabacademy.net/library/ab8c1cf7e7d8fda84ad80d01a77290b4ea24c6998837de149a179b1216941290/level5.flag.txt.enc' download>flag</a> and the\n<a href='https://challenge-files.cylabacademy.net/library/ab8c1cf7e7d8fda84ad80d01a77290b4ea24c6998837de149a179b1216941290/level5.hash.bin' download>hash</a> in the same directory too. Here's a\n<a href='https://challenge-files.cylabacademy.net/library/ab8c1cf7e7d8fda84ad80d01a77290b4ea24c6998837de149a179b1216941290/dictionary.txt' download>dictionary</a> with all possible passwords based\non the password conventions we've seen so far.",
+    "hints": [
+      "Opening a file in Python is crucial to using the provided dictionary.",
+      "You may need to trim the whitespace from the dictionary word before hashing.\n  Look up the Python string function, `strip`",
+      "The `str_xor` function does not need to be reverse engineered for this\n  challenge."
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "248": {
+    "id": 248,
+    "name": "PW Crack 4",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 2,
+    "event": {
+      "id": 69,
+      "name": "Beginner picoMini 2022"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "description": "Can you crack the password to get the flag?\nDownload the password checker <a href='https://challenge-files.cylabacademy.net/library/846131a53233d7d11fb53d10ebe53b2addb4693a7f39e2f464fed1d85226b899/level4.py' download>here</a> and you'll\nneed the encrypted <a href='https://challenge-files.cylabacademy.net/library/846131a53233d7d11fb53d10ebe53b2addb4693a7f39e2f464fed1d85226b899/level4.flag.txt.enc' download>flag</a> and the\n<a href='https://challenge-files.cylabacademy.net/library/846131a53233d7d11fb53d10ebe53b2addb4693a7f39e2f464fed1d85226b899/level4.hash.bin' download>hash</a> in the same directory too.\n\nThere are 100 potential passwords with only 1 being correct. You can find these\nby examining the password checker script.",
+    "hints": [
+      "A for loop can help you do many things very quickly.",
+      "The `str_xor` function does not need to be reverse engineered for this\n  challenge."
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 85
+  },
+  "247": {
+    "id": 247,
+    "name": "PW Crack 3",
+    "author": "LT 'syreal' Jones",
+    "difficulty": 2,
+    "event": {
+      "id": 69,
+      "name": "Beginner picoMini 2022"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "description": "Can you crack the password to get the flag?\nDownload the password checker <a href='https://challenge-files.cylabacademy.net/library/0b854ebb7dc61eaf9e9781840b77b52a5044c592a2ad693c8a8e4637b8c2e07d/level3.py' download>here</a> and you'll\nneed the encrypted <a href='https://challenge-files.cylabacademy.net/library/0b854ebb7dc61eaf9e9781840b77b52a5044c592a2ad693c8a8e4637b8c2e07d/level3.flag.txt.enc' download>flag</a> and the\n<a href='https://challenge-files.cylabacademy.net/library/0b854ebb7dc61eaf9e9781840b77b52a5044c592a2ad693c8a8e4637b8c2e07d/level3.hash.bin' download>hash</a> in the same directory too.\n\nThere are 7 potential passwords with 1 being correct. You can find these by\nexamining the password checker script.",
+    "hints": [
+      "To view the level3.hash.bin file in the webshell, do: `$ bvi level3.hash.bin`",
+      "To exit `bvi` type `:q` and press enter.",
+      "The `str_xor` function does not need to be reverse engineered for this\n  challenge."
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 75
+  },
+  "205": {
+    "id": 205,
+    "name": "advanced-potion-making",
+    "author": "bigC",
+    "difficulty": 2,
+    "event": {
+      "id": 67,
+      "name": "picoMini by redpwn"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "description": "<p>Ron just found his own copy of advanced potion making, but its been corrupted by some kind of spell. Help him recover it!  </p>",
+    "hints": [],
+    "endpoints": [
+      {
+        "label": "Download advanced-potion-making",
+        "endpoint": "<a href=\"https://challenge-files.cylabacademy.net/picoMini+by+redpwn/Forensics/advanced-potion-making/advanced-potion-making\">advanced-potion-making</a>"
+      }
+    ],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 100
+  },
+  "167": {
+    "id": 167,
+    "name": "Binary Gauntlet 0",
+    "author": "madStacks",
+    "difficulty": 2,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 6,
+      "name": "Binary Exploitation"
+    },
+    "description": "This series of problems has to do with binary protections and how they affect exploiting a very simple program. How far can you make it in the gauntlet? The flag for this challenge does not include the standard `academy{}` wrapper.",
+    "hints": [],
+    "endpoints": [],
+    "on_demand": true,
+    "error_reason": null,
+    "event_points": 10
+  },
+  "166": {
+    "id": 166,
+    "name": "Python Wrangling",
+    "author": "syreal",
+    "difficulty": 2,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "description": "Python scripts are invoked kind of like programs in the Terminal...\nCan you run <a href='https://challenge-files.cylabacademy.net/library/1f8bb290392a5ab6795ba98cf621ec507bd52be282f62f32e35c43e0d7fc2415/ende.py' download>ende.py</a> using <a href='https://challenge-files.cylabacademy.net/library/1f8bb290392a5ab6795ba98cf621ec507bd52be282f62f32e35c43e0d7fc2415/password.txt' download>password.txt</a> to get <a href='https://challenge-files.cylabacademy.net/library/1f8bb290392a5ab6795ba98cf621ec507bd52be282f62f32e35c43e0d7fc2415/flag.txt.en' download>flag.txt.en</a>?",
+    "hints": [
+      "Get the Python script accessible in your shell by entering the following command in the Terminal prompt: `$ wget ` followed by a link to the script. The link can be copied from the details section.",
+      "`$ man python`"
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 10
+  },
+  "160": {
+    "id": 160,
+    "name": "ARMssembly 0",
+    "author": "Dylan McGuire",
+    "difficulty": 2,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "description": "What integer does this program print?\n\nFlag format: academy{XXXXXXXX} -> (hex, lowercase, no 0x, and 32 bits. ex. 5614267 would be academy{0055aabb})\nUse arguments a and b: 2432642318 and 3919355441\n\nFile: <a href='https://challenge-files.cylabacademy.net/library/2aee1bfb8502d5360e5d9f5b6f68bbefb2a62a6e45ba42cc6a198a0eab1a71a3/chall.S' download>chall.S</a>",
+    "hints": [
+      "Simple compare"
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 40
+  },
+  "159": {
+    "id": 159,
+    "name": "Dachshund Attacks",
+    "author": "Sara",
+    "difficulty": 2,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 2,
+      "name": "Cryptography"
+    },
+    "description": "What if $$d$$ is too small?",
+    "hints": [
+      "What do you think about my pet? <a href='https://challenge-files.cylabacademy.net/library/6cd8b14e695aa720bc18c8b0126d94ef9dfc0e5cace6a56bb1cde26010495e74/dachshund.jpg' download>dachshund.jpg</a>"
+    ],
+    "endpoints": [],
+    "on_demand": true,
+    "error_reason": null,
+    "event_points": 80
+  },
+  "154": {
+    "id": 154,
+    "name": "No Padding, No Problem",
+    "author": "Sara",
+    "difficulty": 2,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 2,
+      "name": "Cryptography"
+    },
+    "description": "Oracles can be your best friend, they will decrypt anything, except the flag's ciphertext. How will you break it?",
+    "hints": [
+      "What can you do with a different pair of ciphertext and plaintext? What if it is not so different after all..."
+    ],
+    "endpoints": [],
+    "on_demand": true,
+    "error_reason": null,
+    "event_points": 90
+  },
+  "137": {
+    "id": 137,
+    "name": "Disk, disk, sleuth! II",
+    "author": "syreal",
+    "difficulty": 2,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "description": "All we know is the file with the flag is named `down-at-the-bottom.txt`...\n<a href='https://challenge-files.cylabacademy.net/library/1ad46cf0cde486d380800280d3b5008df7b7e68cf728942585d570098f1aef5f/dds2-alpine.flag.img.gz' download>dds2-alpine.flag.img.gz</a>",
+    "hints": [
+      "The sleuthkit has some great tools for this challenge as well.",
+      "Sleuthkit docs here are so helpful: [TSK Tool Overview](http://wiki.sleuthkit.org/index.php?title=TSK_Tool_Overview)",
+      "This disk can also be booted with qemu!"
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 130
+  },
+  "125": {
+    "id": 125,
+    "name": "Easy Peasy",
+    "author": "madStacks",
+    "difficulty": 2,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 2,
+      "name": "Cryptography"
+    },
+    "description": "A one-time pad is unbreakable, but can you manage to recover the flag? (Wrap with academy{})",
+    "hints": [
+      "Maybe there's a way to make this a 2x pad."
+    ],
+    "endpoints": [],
+    "on_demand": true,
+    "error_reason": null,
+    "event_points": 40
+  },
+  "121": {
+    "id": 121,
+    "name": "keygenme-py",
+    "author": "syreal",
+    "difficulty": 2,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 3,
+      "name": "Reverse Engineering"
+    },
+    "description": "\n<a href='https://challenge-files.cylabacademy.net/library/2ae1afa675115ff8bf18b4d6edd0a7230c6231a75c3f5d33562372ee88be12cb/keygenme-trial.py' download>keygenme-trial.py</a>",
+    "hints": [],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 30
+  },
+  "115": {
+    "id": 115,
+    "name": "Wireshark doo dooo do doo...",
+    "author": "Dylan",
+    "difficulty": 2,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "description": "Can you find the flag?\n<a href='https://challenge-files.cylabacademy.net/library/bcc244e5738c2a9af3a7fd84a79e1bf8436dc32716855581a60e27e526133fd7/shark1.pcapng' download>shark1.pcapng</a>",
+    "hints": [],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 50
+  },
+  "113": {
+    "id": 113,
+    "name": "Disk, disk, sleuth!",
+    "author": "syreal",
+    "difficulty": 2,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "description": "Use `srch_strings` from the sleuthkit and some terminal-fu to find a flag in this disk image.\n<a href='https://challenge-files.cylabacademy.net/library/34106bdd624e0aec8af0ba0e9c52e7fd45d5d1415761ffc98b2130cace440057/dds1-alpine.flag.img.gz' download>dds1-alpine.flag.img.gz</a>",
+    "hints": [
+      "Have you ever used `file` to determine what a file was?",
+      "Relevant terminal-fu in Challenge Library: https://learn.cylabacademy.org/library/85",
+      "Mastering this terminal-fu would enable you to find the flag in a single command: https://learn.cylabacademy.org/library/48",
+      "Using your own computer, you could use qemu to boot from this disk!"
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 110
+  },
+  "103": {
+    "id": 103,
+    "name": "Trivial Flag Transfer Protocol",
+    "author": "Danny",
+    "difficulty": 2,
+    "event": {
+      "id": 34,
+      "name": "picoCTF 2021"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "description": "Figure out how they moved the flag.\n<a href='https://challenge-files.cylabacademy.net/library/c867f9c01ef11f33b38ca48b413b5b9b3067891682c49225c0cc97c32bcb4082/tftp.pcapng' download>tftp.pcapng</a>",
+    "hints": [
+      "What are some other ways to hide data?"
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 90
+  },
+  "74": {
+    "id": 74,
+    "name": "What Lies Within",
+    "author": "Julio/Danny",
+    "difficulty": 2,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "description": "\nThere's something in the <a href='https://challenge-files.cylabacademy.net/library/5235bfccd8f3cc2d059ee828f774846542f28f7ec66cb4f0c6ceb536c38026d4/buildings.png' download>building</a>. Can you retrieve the flag?",
+    "hints": [
+      "There is data encoded somewhere... there might be an online decoder."
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 150
+  },
+  "59": {
+    "id": 59,
+    "name": "Irish-Name-Repo 2",
+    "author": "Xingyang Pan",
+    "difficulty": 2,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "description": "Someone has bypassed the login before, and now it's being strengthened. Try to see if you can still login!",
+    "hints": [
+      "the password is being filtered"
+    ],
+    "endpoints": [],
+    "on_demand": true,
+    "error_reason": null,
+    "event_points": 350
+  },
+  "52": {
+    "id": 52,
+    "name": "extensions",
+    "author": "Sanjay C/Danny",
+    "difficulty": 2,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "description": "This is a really weird text file. Can you find the flag?\nGet the flag from <a href='https://challenge-files.cylabacademy.net/library/a5d365fedad883763fb28c78e25a1765220bef6501848c84f2a7a7adf74d83cd/flag.txt' download>TXT</a>.",
+    "hints": [
+      "How do operating systems know what kind of file it is? (It's not just the ending!)",
+      "Make sure to submit the flag as academy{XXXXX}"
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 150
+  },
+  "48": {
+    "id": 48,
+    "name": "plumbing",
+    "author": "Alex Fulton/Danny Tunitis",
+    "difficulty": 2,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 5,
+      "name": "General Skills"
+    },
+    "description": "Sometimes you need to handle process data outside of a file. Can you find a way to keep the output from this program and search for the flag?",
+    "hints": [
+      "Remember the flag format is academy{XXXX}",
+      "What's a pipe? No not that kind of pipe... This [kind](http://www.linfo.org/pipes.html)"
+    ],
+    "endpoints": [],
+    "on_demand": true,
+    "error_reason": null,
+    "event_points": 200
+  },
+  "31": {
+    "id": 31,
+    "name": "Flags",
+    "author": "Danny",
+    "difficulty": 2,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 2,
+      "name": "Cryptography"
+    },
+    "description": "\nWhat do the <a href='https://challenge-files.cylabacademy.net/library/187296d0c352a8451662153842fc9794b9f247a1ac949978113ddfcb9a1bb76f/flag.png' download>flags</a> mean?",
+    "hints": [
+      "The flag is in the format PICOCTF{}"
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 200
+  },
+  "30": {
+    "id": 30,
+    "name": "shark on wire 1",
+    "author": "Danny",
+    "difficulty": 2,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "description": "\nWe found this <a href='https://challenge-files.cylabacademy.net/library/e64f2c2aaf9bf531af7be1787c1407c47a4cc7b57f251d5108a1151e9721a2d6/shark-on-wire-1-capture.pcap' download>packet capture</a>. Recover the flag.",
+    "hints": [
+      "Try using a tool like Wireshark, What are streams?"
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 150
+  },
+  "26": {
+    "id": 26,
+    "name": "m00nwalk",
+    "author": "Joon",
+    "difficulty": 2,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 4,
+      "name": "Forensics"
+    },
+    "description": "\nDecode this <a href='https://challenge-files.cylabacademy.net/library/d825fde6581b1311eafdd403da1cc96f1f98fe3fe84cd71d850310ebb3908088/message.wav' download>message</a> from the moon.",
+    "hints": [
+      "How did pictures from the moon landing get sent back to Earth?",
+      "What is the CMU mascot?, that might help select a RX option"
+    ],
+    "endpoints": [],
+    "on_demand": false,
+    "error_reason": null,
+    "event_points": 250
+  },
+  "25": {
+    "id": 25,
+    "name": "JaWT Scratchpad",
+    "author": "John Hammond",
+    "difficulty": 2,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "description": "Check the admin scratchpad!",
+    "hints": [
+      "What is that cookie?",
+      "Have you heard of JWT?"
+    ],
+    "endpoints": [],
+    "on_demand": true,
+    "error_reason": null,
+    "event_points": 400
+  },
+  "9": {
+    "id": 9,
+    "name": "picobrowser",
+    "author": "Archit",
+    "difficulty": 2,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "description": "This website can be rendered only by **picobrowser**, go and catch the flag!",
+    "hints": [
+      "You don't need to download a new web browser"
+    ],
+    "endpoints": [],
+    "on_demand": true,
+    "error_reason": null,
+    "event_points": 200
+  },
+  "8": {
+    "id": 8,
+    "name": "Irish-Name-Repo 3",
+    "author": "Xingyang Pan",
+    "difficulty": 2,
+    "event": {
+      "id": 1,
+      "name": "picoCTF 2019"
+    },
+    "category": {
+      "id": 1,
+      "name": "Web Exploitation"
+    },
+    "description": "Try to see if you can login as admin!",
+    "hints": [
+      "Seems like the password is encrypted."
+    ],
+    "endpoints": [],
+    "on_demand": true,
+    "error_reason": null,
+    "event_points": 400
+  }
+}
