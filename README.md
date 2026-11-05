@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 376 / 525 challenges (Platform Live Solved: 403 / 525)
+- **Total Solved:** 379 / 525 challenges (Platform Live Solved: 403 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 79 (05 November 2026 - Raw TCP Socket Discovery, Linux FHS Directory Traversal & Stdout Pipeline Filtration Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 34 | what's a net cat? | General Skills | Easy | `academy{nEtCat_Mast3ry_abbFbc0e}` | **SOLVED** | 2026-11-05 |
+| 2 | 189 | Magikarp Ground Mission | General Skills | Easy | `academy{xxsh_0ut_0f_//4t3r_47c47679}` | **SOLVED** | 2026-11-05 |
+| 3 | 48 | plumbing | General Skills | Medium | `academy{digital_plumb3r_ef32328E}` | **SOLVED** | 2026-11-05 |
 
 ### Batch 78 (05 November 2026 - Netcat ASCII Decimals, Frontend Source Inspection & Robots Exclusion Reconnaissance Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
