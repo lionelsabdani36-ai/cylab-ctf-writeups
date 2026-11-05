@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 337 / 525 challenges (Platform Live Solved: 403 / 525)
+- **Total Solved:** 340 / 525 challenges (Platform Live Solved: 403 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 66 (05 November 2026 - Hardcoded Credential Extraction, ASCII Deobfuscation & Radix Conversion Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 245 | PW Crack 1 | General Skills | Easy | `academy{545h_r1ng1ng_4a96bf39}` | **SOLVED** | 2026-11-05 |
+| 2 | 246 | PW Crack 2 | General Skills | Easy | `academy{tr45h_51ng1ng_ab548076}` | **SOLVED** | 2026-11-05 |
+| 3 | 239 | convertme.py | General Skills | Easy | `academy{4ll_y0ur_b4535_fff0af3d}` | **SOLVED** | 2026-11-05 |
 
 ### Batch 65 (05 November 2026 - Hexadecimal ASCII Decoding, Deep Filesystem Grep & Hidden Dotfile Carving Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
