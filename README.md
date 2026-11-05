@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 364 / 525 challenges (Platform Live Solved: 403 / 525)
+- **Total Solved:** 367 / 525 challenges (Platform Live Solved: 403 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 75 (05 November 2026 - SVG XML Structure, Network Packet Dissection & Fernet Decryption Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 265 | Enhance! | Forensics | Medium | `academy{3nh4nc3d_001f8059}` | **SOLVED** | 2026-11-05 |
+| 2 | 286 | Packets Primer | Forensics | Medium | `academy{p4ck37_5h4rk_7ff5a1b3}` | **SOLVED** | 2026-11-05 |
+| 3 | 166 | Python Wrangling | General Skills | Medium | `academy{4p0110_1n_7h3_h0us3_d6af8f37}` | **SOLVED** | 2026-11-05 |
 
 ### Batch 74 (05 November 2026 - Classical Ciphers, Substitution Cryptanalysis & PNG LSB Steganography Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
