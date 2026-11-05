@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 355 / 525 challenges (Platform Live Solved: 403 / 525)
+- **Total Solved:** 358 / 525 challenges (Platform Live Solved: 403 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 72 (05 November 2026 - Binary Strings Extraction, Java Static Reversing & File Signature Spoofing Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 37 | strings it | General Skills | Easy | `academy{5tRIng5_1T_b1e21039}` | **SOLVED** | 2026-11-05 |
+| 2 | 7 | vault-door-training | Reverse Engineering | Easy | `academy{w4rm1ng_Up_w1tH_jAv4_8352733cecd}` | **SOLVED** | 2026-11-05 |
+| 3 | 52 | extensions | Forensics | Medium | `academy{now_you_know_about_extensions}` | **SOLVED** | 2026-11-05 |
 
 ### Batch 71 (05 November 2026 - Hexadecimal Radix, ASCII Character Sets & JPEG Steganographic Carving Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
