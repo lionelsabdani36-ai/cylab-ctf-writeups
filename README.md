@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 309 / 525 challenges (Platform Live Solved: 387 / 525)
+- **Total Solved:** 312 / 525 challenges (Platform Live Solved: 390 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 58 (05 November 2026 - Big-Endian Byte Packing, Bit Transposition Inversion & x86 Disassembly Loop Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 65 | vault-door-7 | Reverse Engineering | Medium | `academy{A_b1t_0f_b1t_sh1fTiNg_575f3602ad}` | **SOLVED** | 2026-11-05 |
+| 2 | 10 | vault-door-8 | Reverse Engineering | Medium | `academy{s0m3_m0r3_b1t_sh1fTiNg_14c0f2f11}` | **SOLVED** | 2026-11-05 |
+| 3 | 16 | asm2 | Reverse Engineering | Hard | `0x84` | **SOLVED** | 2026-11-05 |
 
 ### Batch 57 (04 November 2026 - Polyalphabetic Nibble Substitution, Common Factor RSA & Håstad Broadcast Attack Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
