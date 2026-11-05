@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 322 / 525 challenges (Platform Live Solved: 400 / 525)
+- **Total Solved:** 325 / 525 challenges (Platform Live Solved: 403 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 61 (05 November 2026 - x86_64 Register Data Movement, Stack Addressing & Integer Arithmetic Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 391 | Bit-O-Asm-1 | Reverse Engineering | Easy | `academy{48}` | **SOLVED** | 2026-11-05 |
+| 2 | 392 | Bit-O-Asm-2 | Reverse Engineering | Easy | `academy{654874}` | **SOLVED** | 2026-11-05 |
+| 3 | 393 | Bit-O-Asm-3 | Reverse Engineering | Easy | `academy{2619997}` | **SOLVED** | 2026-11-05 |
 
 ### Grand Sprint - Tier 1 Medium Sweep (05 November 2026 - RBAC JWT Forgery, NoSQL Operator Injection, Restricted Bash Escape, Inode Key Carving & Unprotected EVM State Transition, 5/5)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
