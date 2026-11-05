@@ -1,0 +1,51 @@
+#!/usr/bin/env python3
+"""
+Solver for CyLab Challenge ID 390: ASCII Numbers (picoCTF 2023 / picoGym Exclusive)
+Category: General Skills / Hexadecimal Character Encoding
+Difficulty: Easy
+Standard Reference: NIST SP 800-115 (Character Encoding Analysis & Data Interpretation)
+
+Description:
+Convert the following string of ASCII numbers into a readable string:
+`0x61 0x63 0x61 0x64 0x65 0x6d 0x79 0x7b 0x34 0x35 0x63 0x31 0x31 0x5f 0x6e 0x30 0x5f 0x71 0x75 0x33 0x35 0x37 0x31 0x30 0x6e 0x35 0x5f 0x31 0x6c 0x6c 0x5f 0x74 0x33 0x31 0x31 0x5f 0x79 0x33 0x5f 0x6e 0x30 0x5f 0x6c 0x31 0x33 0x35 0x5f 0x65 0x39 0x36 0x63 0x38 0x63 0x61 0x38 0x7d `
+
+Encoding Theory:
+- In ASCII (ANSI X3.4-1968), each alphanumeric and punctuation character is mapped to a 7-bit numeric integer (0-127).
+- The hex tokens represent hexadecimal byte literals prefixed with '0x'.
+- Parsing each hex value to its integer ordinal and decoding to ASCII character points reconstructs the plaintext flag string.
+
+Recovered Flag: academy{45c11_n0_qu35710n5_1ll_t311_y3_n0_l135_e96c8ca8}
+Verified: POST /api/submissions/ -> correct: true
+"""
+
+import sys
+
+RAW_HEX_STREAM = (
+    "0x61 0x63 0x61 0x64 0x65 0x6d 0x79 0x7b 0x34 0x35 0x63 0x31 0x31 0x5f 0x6e 0x30 0x5f "
+    "0x71 0x75 0x33 0x35 0x37 0x31 0x30 0x6e 0x35 0x5f 0x31 0x6c 0x6c 0x5f 0x74 0x33 0x31 "
+    "0x31 0x5f 0x79 0x33 0x5f 0x6e 0x30 0x5f 0x6c 0x31 0x33 0x35 0x5f 0x65 0x39 0x36 0x63 "
+    "0x38 0x63 0x61 0x38 0x7d"
+)
+EXPECTED_FLAG = "academy{45c11_n0_qu35710n5_1ll_t311_y3_n0_l135_e96c8ca8}"
+
+
+def decode_hex_ascii(hex_stream: str) -> str:
+    tokens = [t.strip() for t in hex_stream.strip().split() if t.strip()]
+    byte_vals = bytearray()
+    for token in tokens:
+        val = int(token, 16) if token.startswith("0x") else int(token, 16)
+        byte_vals.append(val)
+    return byte_vals.decode("ascii")
+
+
+def solve(hex_input: str | None = None) -> str:
+    stream = hex_input if hex_input else RAW_HEX_STREAM
+    flag = decode_hex_ascii(stream)
+    assert flag == EXPECTED_FLAG, f"Flag mismatch: {flag} vs {EXPECTED_FLAG}"
+    return flag
+
+
+if __name__ == "__main__":
+    custom_input = " ".join(sys.argv[1:]) if len(sys.argv) > 1 else None
+    recovered = solve(custom_input)
+    print(f"[+] Recovered Flag: {recovered}")

@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 334 / 525 challenges (Platform Live Solved: 403 / 525)
+- **Total Solved:** 337 / 525 challenges (Platform Live Solved: 403 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 65 (05 November 2026 - Hexadecimal ASCII Decoding, Deep Filesystem Grep & Hidden Dotfile Carving Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 390 | ASCII Numbers | General Skills | Easy | `academy{45c11_n0_qu35710n5_1ll_t311_y3_n0_l135_e96c8ca8}` | **SOLVED** | 2026-11-05 |
+| 2 | 322 | Big Zip | General Skills | Easy | `academy{gr3p_15_m4g1c_ef8790dc}` | **SOLVED** | 2026-11-05 |
+| 3 | 320 | First Find | General Skills | Easy | `academy{f1nd_15_f457_ab443fd1}` | **SOLVED** | 2026-11-05 |
 
 ### Batch 64 (05 November 2026 - Stack Frame Alignment, Dynamic Eval Dispatch & Python Sandbox Bypass Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
