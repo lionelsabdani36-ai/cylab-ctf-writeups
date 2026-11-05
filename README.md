@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 340 / 525 challenges (Platform Live Solved: 403 / 525)
+- **Total Solved:** 343 / 525 challenges (Platform Live Solved: 403 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 67 (05 November 2026 - Password Hash Cracking, Dictionary Exhaustion & MD5 Pre-image Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 247 | PW Crack 3 | General Skills | Medium | `academy{m45h_fl1ng1ng_b8034615}` | **SOLVED** | 2026-11-05 |
+| 2 | 248 | PW Crack 4 | General Skills | Medium | `academy{fl45h_5pr1ng1ng_c1e14a37}` | **SOLVED** | 2026-11-05 |
+| 3 | 249 | PW Crack 5 | General Skills | Medium | `academy{h45h_sl1ng1ng_e062d0ff}` | **SOLVED** | 2026-11-05 |
 
 ### Batch 66 (05 November 2026 - Hardcoded Credential Extraction, ASCII Deobfuscation & Radix Conversion Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
