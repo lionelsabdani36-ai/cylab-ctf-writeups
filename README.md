@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 315 / 525 challenges (Platform Live Solved: 392 / 525)
+- **Total Solved:** 318 / 525 challenges (Platform Live Solved: 395 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 60 (05 November 2026 - POSIX Shared Memory Concurrency & ARMv8-A AArch64 Tracing Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 24 | Forky | Reverse Engineering | Hard | `academy{-721750240}` | **SOLVED** | 2026-11-05 |
+| 2 | 150 | ARMssembly 2 | Reverse Engineering | Hard | `academy{e815ef32}` | **SOLVED** | 2026-11-05 |
+| 3 | 106 | ARMssembly 3 | Reverse Engineering | Hard | `academy{00000024}` | **SOLVED** | 2026-11-05 |
 
 ### Batch 59 (05 November 2026 - x86 Register Bitwise Slicing, Telescoping String Progression & Branch Divergence Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
