@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 346 / 525 challenges (Platform Live Solved: 403 / 525)
+- **Total Solved:** 349 / 525 challenges (Platform Live Solved: 403 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 69 (05 November 2026 - Binary Static Carving, POSIX File I/O & ROT13 Modular Cryptography Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 163 | Static ain't always noise | General Skills | Easy | `academy{d15a5m_t34s3r_fac3431a}` | **SOLVED** | 2026-11-05 |
+| 2 | 147 | Obedient Cat | General Skills | Easy | `academy{s4n1ty_v3r1f13d_61ddac22}` | **SOLVED** | 2026-11-05 |
+| 3 | 144 | Mod 26 | Cryptography | Easy | `academy{next_time_I'll_try_2_rounds_of_rot13_5c5f5b36}` | **SOLVED** | 2026-11-05 |
 
 ### Batch 68 (05 November 2026 - Forensics XMP Metadata, CLI Path Autocompletion & ELF Flag Parsing Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
