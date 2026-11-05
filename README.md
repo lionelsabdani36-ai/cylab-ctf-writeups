@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 331 / 525 challenges (Platform Live Solved: 403 / 525)
+- **Total Solved:** 334 / 525 challenges (Platform Live Solved: 403 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 64 (05 November 2026 - Stack Frame Alignment, Dynamic Eval Dispatch & Python Sandbox Bypass Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 399 | Local Target | Binary Exploitation | Easy | `academy{l0c4l5_1n_5c0p3_ee58441a}` | **SOLVED** | 2026-11-05 |
+| 2 | 400 | Picker I | Reverse Engineering | Easy | `academy{4_d14m0nd_1n_7h3_r0ugh_ce4b5d5b}` | **SOLVED** | 2026-11-05 |
+| 3 | 401 | Picker II | Reverse Engineering | Easy | `academy{f1l73r5_f41l_c0d3_r3f4c70r_m1gh7_5ucc33d_95d44590}` | **SOLVED** | 2026-11-05 |
 
 ### Batch 63 (05 November 2026 - Little-Endian Memory Layout, Inter-procedural Arithmetic & Stack String Recovery Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
