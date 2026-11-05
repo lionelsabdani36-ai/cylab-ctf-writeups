@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 328 / 525 challenges (Platform Live Solved: 403 / 525)
+- **Total Solved:** 331 / 525 challenges (Platform Live Solved: 403 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 63 (05 November 2026 - Little-Endian Memory Layout, Inter-procedural Arithmetic & Stack String Recovery Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 397 | GDB baby step 3 | Reverse Engineering | Easy | `academy{0x6bc96222}` | **SOLVED** | 2026-11-05 |
+| 2 | 398 | GDB baby step 4 | Reverse Engineering | Easy | `academy{12905}` | **SOLVED** | 2026-11-05 |
+| 3 | 389 | ASCII FTW | Reverse Engineering | Easy | `academy{ASCII_IS_EASY_AC3E0C8C}` | **SOLVED** | 2026-11-05 |
 
 ### Batch 62 (05 November 2026 - x86_64 Conditional Branching, Dynamic GDB Breakpoints & Loop Invariant Tracing Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
