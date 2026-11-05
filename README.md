@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 373 / 525 challenges (Platform Live Solved: 403 / 525)
+- **Total Solved:** 376 / 525 challenges (Platform Live Solved: 403 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 78 (05 November 2026 - Netcat ASCII Decimals, Frontend Source Inspection & Robots Exclusion Reconnaissance Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 156 | Nice netcat... | General Skills | Easy | `academy{g00d_k1tty!_n1c3_k1tty!_6d1e6}` | **SOLVED** | 2026-11-05 |
+| 2 | 18 | Insp3ct0r | Web Exploitation | Easy | `academy{tru3_d3t3ct1ve_0r_ju5t_lucky?d6c61154}` | **SOLVED** | 2026-11-05 |
+| 3 | 4 | where are the robots | Web Exploitation | Easy | `academy{ca1cu1at1ng_Mach1n3s_5ed99}` | **SOLVED** | 2026-11-05 |
 
 ### Batch 77 (05 November 2026 - Python Trialware Reverse Engineering, HTTP ROT13 Inspection & TFTP Steghide Forensics Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
