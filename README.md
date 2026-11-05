@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 352 / 525 challenges (Platform Live Solved: 403 / 525)
+- **Total Solved:** 355 / 525 challenges (Platform Live Solved: 403 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 71 (05 November 2026 - Hexadecimal Radix, ASCII Character Sets & JPEG Steganographic Carving Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 58 | Warmed Up | General Skills | Easy | `academy{61}` | **SOLVED** | 2026-11-05 |
+| 2 | 22 | Lets Warm Up | General Skills | Easy | `academy{p}` | **SOLVED** | 2026-11-05 |
+| 3 | 44 | Glory of the Garden | Forensics | Easy | `academy{more_than_m33ts_the_3y3ff3b9e86}` | **SOLVED** | 2026-11-05 |
 
 ### Batch 70 (05 November 2026 - Radix Conversion, POSIX Regex Grep & Base64 Data Encoding Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
