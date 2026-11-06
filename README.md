@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 394 / 525 challenges (Platform Live Solved: 403 / 525)
+- **Total Solved:** 397 / 525 challenges (Platform Live Solved: 403 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 85 (06 November 2026 - Python Function Table Hijacking, Control Flow Pointer Redirection & Stack Underflow Grid Exploitation Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 402 | Picker III | Reverse Engineering | Medium | `academy{7h15_15_wh47_w3_g37_w17h_u53r5_1n_ch4rg3_3e57e558}` | **SOLVED** | 2026-11-06 |
+| 2 | 403 | Picker IV | Binary Exploitation | Medium | `academy{n3v3r_jump_t0_u53r_5uppl13d_4ddr35535_f0fec8d0}` | **SOLVED** | 2026-11-06 |
+| 3 | 345 | babygame01 | Binary Exploitation | Medium | `academy{gamer_m0d3_enabled_9ad09239}` | **SOLVED** | 2026-11-06 |
 
 ### Batch 84 (06 November 2026 - Stack Smashing, Return Address Hijacking & 64-Bit Gauntlet Memory Exploitation Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
