@@ -1,63 +1,5 @@
 [
   {
-    "id": 454,
-    "name": "Bitlocker-2",
-    "author": "Venax",
-    "difficulty": 2,
-    "event": {
-      "id": 74,
-      "name": "picoCTF 2025"
-    },
-    "category": {
-      "id": 4,
-      "name": "Forensics"
-    },
-    "tags": [],
-    "sponsor": null,
-    "include_in_gym": true,
-    "rating_count": 109,
-    "positive_rating_count": 60,
-    "users_solved": 2497,
-    "users_solved_during_event": 556,
-    "event_points": 300,
-    "solved_by_user": false,
-    "solved_by_team": false,
-    "under_maintenance": false,
-    "bookmarked": false,
-    "errata": "This problem cannot be solved in the webshell.",
-    "active_assignments": [],
-    "retired": false
-  },
-  {
-    "id": 453,
-    "name": "Bitlocker-1",
-    "author": "Venax",
-    "difficulty": 2,
-    "event": {
-      "id": 74,
-      "name": "picoCTF 2025"
-    },
-    "category": {
-      "id": 4,
-      "name": "Forensics"
-    },
-    "tags": [],
-    "sponsor": null,
-    "include_in_gym": true,
-    "rating_count": 139,
-    "positive_rating_count": 131,
-    "users_solved": 4159,
-    "users_solved_during_event": 1264,
-    "event_points": 200,
-    "solved_by_user": false,
-    "solved_by_team": false,
-    "under_maintenance": false,
-    "bookmarked": false,
-    "errata": "This problem cannot be solved in the webshell.",
-    "active_assignments": [],
-    "retired": false
-  },
-  {
     "id": 763,
     "name": "Heap Havoc",
     "author": "Yahaya Meddy",
@@ -281,35 +223,6 @@
     "users_solved": 726,
     "users_solved_during_event": 480,
     "event_points": 500,
-    "solved_by_user": false,
-    "solved_by_team": false,
-    "under_maintenance": false,
-    "bookmarked": false,
-    "errata": "",
-    "active_assignments": [],
-    "retired": false
-  },
-  {
-    "id": 734,
-    "name": "Printer Shares 2",
-    "author": "Janice He",
-    "difficulty": 3,
-    "event": {
-      "id": 79,
-      "name": "picoCTF 2026"
-    },
-    "category": {
-      "id": 5,
-      "name": "General Skills"
-    },
-    "tags": [],
-    "sponsor": null,
-    "include_in_gym": true,
-    "rating_count": 73,
-    "positive_rating_count": 25,
-    "users_solved": 1491,
-    "users_solved_during_event": 934,
-    "event_points": 200,
     "solved_by_user": false,
     "solved_by_team": false,
     "under_maintenance": false,

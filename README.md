@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 418 / 525 challenges (Platform Live Solved: 418 / 525)
+- **Total Solved:** 421 / 525 challenges (Platform Live Solved: 421 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 94 (06 November 2026 - Windows BitLocker Volume Forensic, Volatility FVEK Extraction & SMB Multi-User Privilege Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 453 | Bitlocker-1 | Forensics | Medium | `academy{us3_b3tt3r_p4ssw0rd5_pl5!_3242adb1}` | **SOLVED** | 2026-11-06 |
+| 2 | 454 | Bitlocker-2 | Forensics | Medium | `academy{B1tl0ck3r_dr1v3_d3crypt3d_9029ae5b}` | **SOLVED** | 2026-11-06 |
+| 3 | 734 | Printer Shares 2 | General Skills | Hard | `academy{5mb_pr1nter_5h4re5_5ecure_b243735c}` | **SOLVED** | 2026-11-06 |
 
 ### Batch 93 (06 November 2026 - Procedural Reversing, Client-Side Game State & WebSocket UCI Protocol Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
