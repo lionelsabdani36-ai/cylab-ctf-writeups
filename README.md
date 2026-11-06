@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 89 (06 November 2026 - POSIX Timer SIGALRM Bypass, Android JNI Native Reversing & Dynamic Key Recovery Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 39 | Need For Speed | Reverse Engineering | Hard | `academy{Good job keeping bus #1fb8d167 speeding along!}` | **SOLVED** | 2026-11-06 |
+| 2 | 11 | droids0 | Reverse Engineering | Hard | `academy{a.moose.once.bit.my.sister}` | **SOLVED** | 2026-11-06 |
+| 3 | 14 | droids1 | Reverse Engineering | Hard | `academy{pining.for.the.fjords}` | **SOLVED** | 2026-11-06 |
+
 ### Batch 88 (06 November 2026 - CNC G-Code Trajectory Reversal, Spatial LSB Steganography & SUID PATH Hijacking Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
