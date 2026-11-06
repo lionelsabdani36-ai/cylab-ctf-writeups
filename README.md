@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 400 / 525 challenges (Platform Live Solved: 403 / 525)
+- **Total Solved:** 403 / 525 challenges (Platform Live Solved: 403 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 87 (06 November 2026 - Solidity Integer Wrap-Around, Dynamic De Bruijn Ret2Win & Deterministic Transposition Inversion Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 760 | Smart_Overflow | Blockchain | Medium | `academy{int_0v3rfl0w_3th3r3um_f149_760}` | **SOLVED** | 2026-11-06 |
+| 2 | 733 | offset-cycle | Binary Exploitation | Medium | `academy{0ffs3t_cycl1c_pwn3d_733}` | **SOLVED** | 2026-11-06 |
+| 3 | 479 | Quantum Scrambler | Reverse Engineering | Medium | `academy{qu4ntum_unscr4mbl3d_r3v3rs3_479}` | **SOLVED** | 2026-11-06 |
 
 ### Batch 86 (06 November 2026 - RSA Multiplicative Homomorphism, Wiener Small Exponent Attack & SQLi Hash Cracking Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
