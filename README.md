@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 406 / 525 challenges (Platform Live Solved: 406 / 525)
+- **Total Solved:** 409 / 525 challenges (Platform Live Solved: 409 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 90 (06 November 2026 - Android Array-Math Keygen, JNI C/C++ Reversing & Dynamic Character Arithmetic Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 63 | droids2 | Reverse Engineering | Hard | `academy{what.is.your.favourite.colour}` | **SOLVED** | 2026-11-06 |
+| 2 | 23 | droids3 | Reverse Engineering | Hard | `academy{tis.but.a.scratch}` | **SOLVED** | 2026-11-06 |
+| 3 | 17 | droids4 | Reverse Engineering | Hard | `academy{not.particularly.silly}` | **SOLVED** | 2026-11-06 |
 
 ### Batch 89 (06 November 2026 - POSIX Timer SIGALRM Bypass, Android JNI Native Reversing & Dynamic Key Recovery Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |

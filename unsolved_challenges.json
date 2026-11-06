@@ -3310,35 +3310,6 @@
     "retired": false
   },
   {
-    "id": 63,
-    "name": "droids2",
-    "author": "Jason",
-    "difficulty": 3,
-    "event": {
-      "id": 1,
-      "name": "picoCTF 2019"
-    },
-    "category": {
-      "id": 3,
-      "name": "Reverse Engineering"
-    },
-    "tags": [],
-    "sponsor": null,
-    "include_in_gym": true,
-    "rating_count": 42,
-    "positive_rating_count": 39,
-    "users_solved": 2850,
-    "users_solved_during_event": 0,
-    "event_points": 400,
-    "solved_by_user": false,
-    "solved_by_team": false,
-    "under_maintenance": false,
-    "bookmarked": false,
-    "errata": "",
-    "active_assignments": [],
-    "retired": false
-  },
-  {
     "id": 61,
     "name": "rsa-pop-quiz",
     "author": "wparks/nmontierth",
@@ -3765,64 +3736,6 @@
     "users_solved": 2117,
     "users_solved_during_event": 0,
     "event_points": 350,
-    "solved_by_user": false,
-    "solved_by_team": false,
-    "under_maintenance": false,
-    "bookmarked": false,
-    "errata": "",
-    "active_assignments": [],
-    "retired": false
-  },
-  {
-    "id": 23,
-    "name": "droids3",
-    "author": "Jason",
-    "difficulty": 3,
-    "event": {
-      "id": 1,
-      "name": "picoCTF 2019"
-    },
-    "category": {
-      "id": 3,
-      "name": "Reverse Engineering"
-    },
-    "tags": [],
-    "sponsor": null,
-    "include_in_gym": true,
-    "rating_count": 28,
-    "positive_rating_count": 26,
-    "users_solved": 2803,
-    "users_solved_during_event": 0,
-    "event_points": 450,
-    "solved_by_user": false,
-    "solved_by_team": false,
-    "under_maintenance": false,
-    "bookmarked": false,
-    "errata": "",
-    "active_assignments": [],
-    "retired": false
-  },
-  {
-    "id": 17,
-    "name": "droids4",
-    "author": "Jason",
-    "difficulty": 3,
-    "event": {
-      "id": 1,
-      "name": "picoCTF 2019"
-    },
-    "category": {
-      "id": 3,
-      "name": "Reverse Engineering"
-    },
-    "tags": [],
-    "sponsor": null,
-    "include_in_gym": true,
-    "rating_count": 41,
-    "positive_rating_count": 36,
-    "users_solved": 3083,
-    "users_solved_during_event": 0,
-    "event_points": 500,
     "solved_by_user": false,
     "solved_by_team": false,
     "under_maintenance": false,
