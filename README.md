@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 430 / 525 challenges (Platform Live Solved: 430 / 525)
+- **Total Solved:** 433 / 525 challenges (Platform Live Solved: 433 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 98 (06 November 2026 - Cache Eviction Side-Channel, Shamir Secret Sharing Lattice Reduction & MIME Header Injection Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 726 | paper-2 | Web Exploitation | Hard | `academy{i_l1ke_frames_on_my_canvas_953d5fff}` | **SOLVED** | 2026-11-06 |
+| 2 | 709 | MSS_ADVANCE Revenge | Cryptography | Hard | `academy{MSS_Advance_but_we_brought_it_back_and_made_it_harder!!!}` | **SOLVED** | 2026-11-06 |
+| 3 | 496 | secure-email-service | Web Exploitation | Hard | `academy{always_a_step_ahead_fb2a1a8c}` | **SOLVED** | 2026-11-06 |
 
 ### Batch 97 (06 November 2026 - Executable Stack Trampoline, JIT Pointer Permutation & SHA-512 Length Extension Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
