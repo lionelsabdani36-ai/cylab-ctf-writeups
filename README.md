@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 409 / 525 challenges (Platform Live Solved: 409 / 525)
+- **Total Solved:** 412 / 525 challenges (Platform Live Solved: 412 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 91 (06 November 2026 - Roguelike Memory Dumper, 16-Bit WORD Steganography & Unity Static Asset Carving Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 318 | Wizardlike | Reverse Engineering | Hard | `academy{ur_4_w1z4rd_4ca90492}` | **SOLVED** | 2026-11-06 |
+| 2 | 354 | Invisible WORDs | Forensics | Hard | `academy{w0rd_d4wg_y0u_f0und_5h3113ys_m4573rp13c3_75527d56}` | **SOLVED** | 2026-11-06 |
+| 3 | 361 | No way out | Reverse Engineering | Hard | `academy{WELCOME_TO_UNITY!!}` | **SOLVED** | 2026-11-06 |
 
 ### Batch 90 (06 November 2026 - Android Array-Math Keygen, JNI C/C++ Reversing & Dynamic Character Arithmetic Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |

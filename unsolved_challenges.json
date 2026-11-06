@@ -1,34 +1,5 @@
 [
   {
-    "id": 760,
-    "name": "Smart_Overflow",
-    "author": "OB",
-    "difficulty": 2,
-    "event": {
-      "id": 79,
-      "name": "picoCTF 2026"
-    },
-    "category": {
-      "id": 37,
-      "name": "Blockchain"
-    },
-    "tags": [],
-    "sponsor": null,
-    "include_in_gym": true,
-    "rating_count": 29,
-    "positive_rating_count": 28,
-    "users_solved": 1685,
-    "users_solved_during_event": 986,
-    "event_points": 300,
-    "solved_by_user": false,
-    "solved_by_team": false,
-    "under_maintenance": false,
-    "bookmarked": false,
-    "errata": "",
-    "active_assignments": [],
-    "retired": false
-  },
-  {
     "id": 754,
     "name": "Autorev 1",
     "author": "SkrubLawd",
@@ -48,64 +19,6 @@
     "positive_rating_count": 39,
     "users_solved": 2296,
     "users_solved_during_event": 1115,
-    "event_points": 200,
-    "solved_by_user": false,
-    "solved_by_team": false,
-    "under_maintenance": false,
-    "bookmarked": false,
-    "errata": "",
-    "active_assignments": [],
-    "retired": false
-  },
-  {
-    "id": 733,
-    "name": "offset-cycle",
-    "author": "Aditya Sudhansu",
-    "difficulty": 2,
-    "event": {
-      "id": 79,
-      "name": "picoCTF 2026"
-    },
-    "category": {
-      "id": 6,
-      "name": "Binary Exploitation"
-    },
-    "tags": [],
-    "sponsor": null,
-    "include_in_gym": true,
-    "rating_count": 34,
-    "positive_rating_count": 30,
-    "users_solved": 1798,
-    "users_solved_during_event": 1076,
-    "event_points": 300,
-    "solved_by_user": false,
-    "solved_by_team": false,
-    "under_maintenance": false,
-    "bookmarked": false,
-    "errata": "",
-    "active_assignments": [],
-    "retired": false
-  },
-  {
-    "id": 723,
-    "name": "Access_Control",
-    "author": "OB",
-    "difficulty": 2,
-    "event": {
-      "id": 79,
-      "name": "picoCTF 2026"
-    },
-    "category": {
-      "id": 37,
-      "name": "Blockchain"
-    },
-    "tags": [],
-    "sponsor": null,
-    "include_in_gym": true,
-    "rating_count": 37,
-    "positive_rating_count": 35,
-    "users_solved": 1641,
-    "users_solved_during_event": 1259,
     "event_points": 200,
     "solved_by_user": false,
     "solved_by_team": false,
@@ -213,74 +126,6 @@
     "retired": false
   },
   {
-    "id": 487,
-    "name": "hash-only-1",
-    "author": "Junias Bonou",
-    "difficulty": 2,
-    "event": {
-      "id": 74,
-      "name": "picoCTF 2025"
-    },
-    "category": {
-      "id": 6,
-      "name": "Binary Exploitation"
-    },
-    "tags": [
-      {
-        "id": 63,
-        "name": "browser_webshell_solvable"
-      }
-    ],
-    "sponsor": null,
-    "include_in_gym": true,
-    "rating_count": 185,
-    "positive_rating_count": 166,
-    "users_solved": 5702,
-    "users_solved_during_event": 1811,
-    "event_points": 100,
-    "solved_by_user": false,
-    "solved_by_team": false,
-    "under_maintenance": false,
-    "bookmarked": false,
-    "errata": "",
-    "active_assignments": [],
-    "retired": false
-  },
-  {
-    "id": 481,
-    "name": "flags are stepic",
-    "author": "Ricky",
-    "difficulty": 2,
-    "event": {
-      "id": 74,
-      "name": "picoCTF 2025"
-    },
-    "category": {
-      "id": 4,
-      "name": "Forensics"
-    },
-    "tags": [
-      {
-        "id": 63,
-        "name": "browser_webshell_solvable"
-      }
-    ],
-    "sponsor": null,
-    "include_in_gym": true,
-    "rating_count": 258,
-    "positive_rating_count": 86,
-    "users_solved": 4819,
-    "users_solved_during_event": 1473,
-    "event_points": 100,
-    "solved_by_user": false,
-    "solved_by_team": false,
-    "under_maintenance": false,
-    "bookmarked": false,
-    "errata": "",
-    "active_assignments": [],
-    "retired": false
-  },
-  {
     "id": 480,
     "name": "WebSockFish",
     "author": "Venax",
@@ -305,40 +150,6 @@
     "positive_rating_count": 109,
     "users_solved": 4348,
     "users_solved_during_event": 1228,
-    "event_points": 200,
-    "solved_by_user": false,
-    "solved_by_team": false,
-    "under_maintenance": false,
-    "bookmarked": false,
-    "errata": "",
-    "active_assignments": [],
-    "retired": false
-  },
-  {
-    "id": 479,
-    "name": "Quantum Scrambler",
-    "author": "Michael Crotty",
-    "difficulty": 2,
-    "event": {
-      "id": 74,
-      "name": "picoCTF 2025"
-    },
-    "category": {
-      "id": 3,
-      "name": "Reverse Engineering"
-    },
-    "tags": [
-      {
-        "id": 63,
-        "name": "browser_webshell_solvable"
-      }
-    ],
-    "sponsor": null,
-    "include_in_gym": true,
-    "rating_count": 144,
-    "positive_rating_count": 126,
-    "users_solved": 4260,
-    "users_solved_during_event": 1200,
     "event_points": 200,
     "solved_by_user": false,
     "solved_by_team": false,
@@ -407,141 +218,6 @@
     "retired": false
   },
   {
-    "id": 443,
-    "name": "No Sql Injection",
-    "author": "NGIRIMANA Schadrack",
-    "difficulty": 2,
-    "event": {
-      "id": 73,
-      "name": "picoCTF 2024"
-    },
-    "category": {
-      "id": 1,
-      "name": "Web Exploitation"
-    },
-    "tags": [
-      {
-        "id": 63,
-        "name": "browser_webshell_solvable"
-      }
-    ],
-    "sponsor": null,
-    "include_in_gym": true,
-    "rating_count": 213,
-    "positive_rating_count": 201,
-    "users_solved": 11293,
-    "users_solved_during_event": 1531,
-    "event_points": 200,
-    "solved_by_user": false,
-    "solved_by_team": false,
-    "under_maintenance": false,
-    "bookmarked": false,
-    "errata": "",
-    "active_assignments": [],
-    "retired": false
-  },
-  {
-    "id": 378,
-    "name": "Specialer",
-    "author": "LT 'syreal' Jones, et al.",
-    "difficulty": 2,
-    "event": {
-      "id": 72,
-      "name": "picoCTF 2023"
-    },
-    "category": {
-      "id": 5,
-      "name": "General Skills"
-    },
-    "tags": [
-      {
-        "id": 51,
-        "name": "bash"
-      },
-      {
-        "id": 52,
-        "name": "ssh"
-      }
-    ],
-    "sponsor": null,
-    "include_in_gym": true,
-    "rating_count": 290,
-    "positive_rating_count": 256,
-    "users_solved": 11207,
-    "users_solved_during_event": 1379,
-    "event_points": 400,
-    "solved_by_user": false,
-    "solved_by_team": false,
-    "under_maintenance": false,
-    "bookmarked": false,
-    "errata": "",
-    "active_assignments": [],
-    "retired": false
-  },
-  {
-    "id": 355,
-    "name": "Java Code Analysis!?!",
-    "author": "Nandan Desai",
-    "difficulty": 2,
-    "event": {
-      "id": 72,
-      "name": "picoCTF 2023"
-    },
-    "category": {
-      "id": 1,
-      "name": "Web Exploitation"
-    },
-    "tags": [],
-    "sponsor": null,
-    "include_in_gym": true,
-    "rating_count": 277,
-    "positive_rating_count": 257,
-    "users_solved": 7537,
-    "users_solved_during_event": 964,
-    "event_points": 300,
-    "solved_by_user": false,
-    "solved_by_team": false,
-    "under_maintenance": false,
-    "bookmarked": false,
-    "errata": "",
-    "active_assignments": [],
-    "retired": false
-  },
-  {
-    "id": 284,
-    "name": "Operation Oni",
-    "author": "LT 'syreal' Jones",
-    "difficulty": 2,
-    "event": {
-      "id": 70,
-      "name": "picoCTF 2022"
-    },
-    "category": {
-      "id": 4,
-      "name": "Forensics"
-    },
-    "tags": [
-      {
-        "id": 27,
-        "name": "disk"
-      }
-    ],
-    "sponsor": null,
-    "include_in_gym": true,
-    "rating_count": 145,
-    "positive_rating_count": 138,
-    "users_solved": 6302,
-    "users_solved_during_event": 1425,
-    "event_points": 300,
-    "solved_by_user": false,
-    "solved_by_team": false,
-    "under_maintenance": false,
-    "bookmarked": false,
-    "errata": "Note: you must launch a challenge instance in order to view your disk image download link.",
-    "active_assignments": [],
-    "retired": false
-  },
-  {
     "id": 133,
     "name": "Binary Gauntlet 3",
     "author": "madStacks",
@@ -565,35 +241,6 @@
     "solved_by_user": false,
     "solved_by_team": false,
     "under_maintenance": false,
-    "bookmarked": false,
-    "errata": "",
-    "active_assignments": [],
-    "retired": false
-  },
-  {
-    "id": 116,
-    "name": "speeds and feeds",
-    "author": "Ryan Ramseyer",
-    "difficulty": 2,
-    "event": {
-      "id": 34,
-      "name": "picoCTF 2021"
-    },
-    "category": {
-      "id": 3,
-      "name": "Reverse Engineering"
-    },
-    "tags": [],
-    "sponsor": null,
-    "include_in_gym": true,
-    "rating_count": 591,
-    "positive_rating_count": 516,
-    "users_solved": 18062,
-    "users_solved_during_event": 1186,
-    "event_points": 50,
-    "solved_by_user": false,
-    "solved_by_team": false,
-    "under_maintenance": true,
     "bookmarked": false,
     "errata": "",
     "active_assignments": [],
@@ -1351,35 +998,6 @@
     "retired": false
   },
   {
-    "id": 361,
-    "name": "No way out",
-    "author": "Kris",
-    "difficulty": 3,
-    "event": {
-      "id": 72,
-      "name": "picoCTF 2023"
-    },
-    "category": {
-      "id": 3,
-      "name": "Reverse Engineering"
-    },
-    "tags": [],
-    "sponsor": null,
-    "include_in_gym": true,
-    "rating_count": 118,
-    "positive_rating_count": 95,
-    "users_solved": 2268,
-    "users_solved_during_event": 636,
-    "event_points": 200,
-    "solved_by_user": false,
-    "solved_by_team": false,
-    "under_maintenance": false,
-    "bookmarked": false,
-    "errata": "",
-    "active_assignments": [],
-    "retired": false
-  },
-  {
     "id": 360,
     "name": "msfroggenerator2",
     "author": "ehhthing",
@@ -1400,40 +1018,6 @@
     "users_solved": 807,
     "users_solved_during_event": 23,
     "event_points": 500,
-    "solved_by_user": false,
-    "solved_by_team": false,
-    "under_maintenance": false,
-    "bookmarked": false,
-    "errata": "",
-    "active_assignments": [],
-    "retired": false
-  },
-  {
-    "id": 354,
-    "name": "Invisible WORDs",
-    "author": "LT 'syreal' Jones",
-    "difficulty": 3,
-    "event": {
-      "id": 72,
-      "name": "picoCTF 2023"
-    },
-    "category": {
-      "id": 4,
-      "name": "Forensics"
-    },
-    "tags": [
-      {
-        "id": 32,
-        "name": "steganography"
-      }
-    ],
-    "sponsor": null,
-    "include_in_gym": true,
-    "rating_count": 69,
-    "positive_rating_count": 40,
-    "users_solved": 1665,
-    "users_solved_during_event": 172,
-    "event_points": 300,
     "solved_by_user": false,
     "solved_by_team": false,
     "under_maintenance": false,
@@ -1525,44 +1109,6 @@
     "positive_rating_count": 7,
     "users_solved": 210,
     "users_solved_during_event": 8,
-    "event_points": 500,
-    "solved_by_user": false,
-    "solved_by_team": false,
-    "under_maintenance": false,
-    "bookmarked": false,
-    "errata": "",
-    "active_assignments": [],
-    "retired": false
-  },
-  {
-    "id": 318,
-    "name": "Wizardlike",
-    "author": "LT 'syreal' Jones",
-    "difficulty": 3,
-    "event": {
-      "id": 70,
-      "name": "picoCTF 2022"
-    },
-    "category": {
-      "id": 3,
-      "name": "Reverse Engineering"
-    },
-    "tags": [
-      {
-        "id": 7,
-        "name": "binary"
-      },
-      {
-        "id": 42,
-        "name": "game"
-      }
-    ],
-    "sponsor": null,
-    "include_in_gym": true,
-    "rating_count": 151,
-    "positive_rating_count": 99,
-    "users_solved": 1544,
-    "users_solved_during_event": 573,
     "event_points": 500,
     "solved_by_user": false,
     "solved_by_team": false,
@@ -3542,35 +3088,6 @@
     "retired": false
   },
   {
-    "id": 39,
-    "name": "Need For Speed",
-    "author": "Alexander Bushkin",
-    "difficulty": 3,
-    "event": {
-      "id": 1,
-      "name": "picoCTF 2019"
-    },
-    "category": {
-      "id": 3,
-      "name": "Reverse Engineering"
-    },
-    "tags": [],
-    "sponsor": null,
-    "include_in_gym": true,
-    "rating_count": 69,
-    "positive_rating_count": 64,
-    "users_solved": 1858,
-    "users_solved_during_event": 0,
-    "event_points": 400,
-    "solved_by_user": false,
-    "solved_by_team": false,
-    "under_maintenance": false,
-    "bookmarked": false,
-    "errata": "",
-    "active_assignments": [],
-    "retired": false
-  },
-  {
     "id": 36,
     "name": "investigation_encoded_2",
     "author": "Santiago C",
@@ -3745,35 +3262,6 @@
     "retired": false
   },
   {
-    "id": 14,
-    "name": "droids1",
-    "author": "Jason",
-    "difficulty": 3,
-    "event": {
-      "id": 1,
-      "name": "picoCTF 2019"
-    },
-    "category": {
-      "id": 3,
-      "name": "Reverse Engineering"
-    },
-    "tags": [],
-    "sponsor": null,
-    "include_in_gym": true,
-    "rating_count": 36,
-    "positive_rating_count": 34,
-    "users_solved": 3103,
-    "users_solved_during_event": 0,
-    "event_points": 350,
-    "solved_by_user": false,
-    "solved_by_team": false,
-    "under_maintenance": false,
-    "bookmarked": false,
-    "errata": "",
-    "active_assignments": [],
-    "retired": false
-  },
-  {
     "id": 13,
     "name": "Investigative Reversing 2",
     "author": "Santiago C/Danny Tunitis",
@@ -3794,35 +3282,6 @@
     "users_solved": 1622,
     "users_solved_during_event": 0,
     "event_points": 350,
-    "solved_by_user": false,
-    "solved_by_team": false,
-    "under_maintenance": false,
-    "bookmarked": false,
-    "errata": "",
-    "active_assignments": [],
-    "retired": false
-  },
-  {
-    "id": 11,
-    "name": "droids0",
-    "author": "Jason",
-    "difficulty": 3,
-    "event": {
-      "id": 1,
-      "name": "picoCTF 2019"
-    },
-    "category": {
-      "id": 3,
-      "name": "Reverse Engineering"
-    },
-    "tags": [],
-    "sponsor": null,
-    "include_in_gym": true,
-    "rating_count": 45,
-    "positive_rating_count": 41,
-    "users_solved": 3664,
-    "users_solved_during_event": 0,
-    "event_points": 300,
     "solved_by_user": false,
     "solved_by_team": false,
     "under_maintenance": false,
