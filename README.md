@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 397 / 525 challenges (Platform Live Solved: 403 / 525)
+- **Total Solved:** 400 / 525 challenges (Platform Live Solved: 403 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 86 (06 November 2026 - RSA Multiplicative Homomorphism, Wiener Small Exponent Attack & SQLi Hash Cracking Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 154 | No Padding, No Problem | Cryptography | Medium | `academy{m4ll34bl3_rs4_d3crypt10n_n0_p4dd1ng}` | **SOLVED** | 2026-11-06 |
+| 2 | 159 | Dachshund Attacks | Cryptography | Medium | `academy{d4ch5hund_w13n3r_5m4ll_d_4tt4ck}` | **SOLVED** | 2026-11-06 |
+| 3 | 729 | Sql Map1 | Web Exploitation | Medium | `academy{sqlm4p_md5_cr4ck_d00rw4y_729}` | **SOLVED** | 2026-11-06 |
 
 ### Batch 85 (06 November 2026 - Python Function Table Hijacking, Control Flow Pointer Redirection & Stack Underflow Grid Exploitation Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
