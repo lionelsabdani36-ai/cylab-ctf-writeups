@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 433 / 525 challenges (Platform Live Solved: 433 / 525)
+- **Total Solved:** 436 / 525 challenges (Platform Live Solved: 436 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 99 (06 November 2026 - ChaCha20 Nonce Reuse, Stack Pivot Ret2BSS & Prototype Pollution DOM XSS Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 493 | ChaCha Slide | Cryptography | Hard | `academy{7urn_17_84ck_n0w_77243c82}` | **SOLVED** | 2026-11-06 |
+| 2 | 486 | handoff | Binary Exploitation | Hard | `academy{p1v0ted_ftw_e4ab0a56}` | **SOLVED** | 2026-11-06 |
+| 3 | 447 | elements | Web Exploitation | Hard | `academy{little_alchemy_was_the_0g_game_does_anyone_rememb3r_9889fd4a}` | **SOLVED** | 2026-11-06 |
 
 ### Batch 98 (06 November 2026 - Cache Eviction Side-Channel, Shamir Secret Sharing Lattice Reduction & MIME Header Injection Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
