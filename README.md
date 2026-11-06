@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 403 / 525 challenges (Platform Live Solved: 403 / 525)
+- **Total Solved:** 406 / 525 challenges (Platform Live Solved: 406 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 88 (06 November 2026 - CNC G-Code Trajectory Reversal, Spatial LSB Steganography & SUID PATH Hijacking Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 116 | speeds and feeds | Reverse Engineering | Medium | `academy{num3r1cal_c0ntr0l_116}` | **SOLVED** | 2026-11-06 |
+| 2 | 481 | flags are stepic | Forensics | Medium | `academy{st3p1c_h1dd3n_fl4g_481}` | **SOLVED** | 2026-11-06 |
+| 3 | 487 | hash-only-1 | Binary Exploitation | Medium | `academy{p4th_h1j4ck_su1d_487}` | **SOLVED** | 2026-11-06 |
 
 ### Batch 87 (06 November 2026 - Solidity Integer Wrap-Around, Dynamic De Bruijn Ret2Win & Deterministic Transposition Inversion Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
