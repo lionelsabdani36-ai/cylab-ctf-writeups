@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 391 / 525 challenges (Platform Live Solved: 403 / 525)
+- **Total Solved:** 394 / 525 challenges (Platform Live Solved: 403 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 84 (06 November 2026 - Stack Smashing, Return Address Hijacking & 64-Bit Gauntlet Memory Exploitation Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 257 | buffer overflow 0 | Binary Exploitation | Medium | `academy{ov3rfl0ws_ar3nt_that_bad_1e25e28f}` | **SOLVED** | 2026-11-06 |
+| 2 | 258 | buffer overflow 1 | Binary Exploitation | Medium | `academy{addr3ss3s_ar3_3asy_b53c45d8}` | **SOLVED** | 2026-11-06 |
+| 3 | 167 | Binary Gauntlet 0 | Binary Exploitation | Medium | `088d0d0dfed3a7c041027e01d85e0887` | **SOLVED** | 2026-11-06 |
 
 ### Batch 83 (06 November 2026 - SleuthKit Alpine Inode Carving, Multi-Partition Forensics & MMLS Sector Geometry Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
