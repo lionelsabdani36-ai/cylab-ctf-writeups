@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 388 / 525 challenges (Platform Live Solved: 403 / 525)
+- **Total Solved:** 391 / 525 challenges (Platform Live Solved: 403 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 83 (06 November 2026 - SleuthKit Alpine Inode Carving, Multi-Partition Forensics & MMLS Sector Geometry Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 137 | Disk, disk, sleuth! II | Forensics | Medium | `academy{f0r3ns1c4t0r_n0v1c3_95c645ad}` | **SOLVED** | 2026-11-06 |
+| 2 | 300 | Sleuthkit Apprentice | Forensics | Medium | `academy{by73_5urf3r_217f681f}` | **SOLVED** | 2026-11-06 |
+| 3 | 301 | Sleuthkit Intro | Forensics | Medium | `academy{mm15_f7w!}` | **SOLVED** | 2026-11-06 |
 
 ### Batch 82 (06 November 2026 - SQLite Auth Bypass, Forensics Disk Carving & OTP Keystream Recovery Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
