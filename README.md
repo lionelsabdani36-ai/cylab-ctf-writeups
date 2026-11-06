@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 424 / 525 challenges (Platform Live Solved: 424 / 525)
+- **Total Solved:** 427 / 525 challenges (Platform Live Solved: 427 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 96 (06 November 2026 - Second-Order SQLi Report Exfiltration, Mempool Front-Running & SMB Cron Privilege Escalation Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 752 | ORDER ORDER | Web Exploitation | Hard | `academy{s3c0nd_0rd3r_1t_1s_4611c226}` | **SOLVED** | 2026-11-06 |
+| 2 | 744 | Front_Running | Blockchain | Hard | `academy{fr0nt_runn1ng_m3mp00l_sn1p3_744_9f12d8a4}` | **SOLVED** | 2026-11-06 |
+| 3 | 741 | Printer Shares 3 | General Skills | Hard | `academy{5mb_cr0n_pr1nt3r_h1j4ck_741_3e91b582}` | **SOLVED** | 2026-11-06 |
 
 ### Batch 95 (06 November 2026 - Linux Heap Chunk Corruption, Router Command Injection & EVM Reentrancy Attack Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
