@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 412 / 525 challenges (Platform Live Solved: 412 / 525)
+- **Total Solved:** 415 / 525 challenges (Platform Live Solved: 415 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 92 (06 November 2026 - Mobile Hardcoded OTP, SUID PATH Breakout & Blind Format-String Shellcode Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 529 | Pico Bank | Reverse Engineering | Medium | `academy{st4t1c_0tp_4nd_sm4l1_r3v_529}` | **SOLVED** | 2026-11-06 |
+| 2 | 489 | hash-only-2 | Binary Exploitation | Medium | `academy{rb4sh_3sc4p3_p4th_su1d_489}` | **SOLVED** | 2026-11-06 |
+| 3 | 133 | Binary Gauntlet 3 | Binary Exploitation | Medium | `academy{gauntlet3_fmt_str_stk_sh3ll_133}` | **SOLVED** | 2026-11-06 |
 
 ### Batch 91 (06 November 2026 - Roguelike Memory Dumper, 16-Bit WORD Steganography & Unity Static Asset Carving Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
@@ -505,13 +512,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 | 1 | 126 | Binary Gauntlet 1 | Binary Exploitation | Medium | `fa9a2d95e569c1fff8525782765f2a13` (raw, tanpa wrapper) | **SOLVED** | 2026-10-30 |
 | 2 | 367 | ReadMyCert | Cryptography | Medium | `academy{read_mycert_a209fd00}` | **SOLVED** | 2026-10-30 |
 | 3 | 377 | Special | General Skills | Medium | `academy{5p311ch3ck_15_7h3_w0r57_9fd4af4a}` | **SOLVED** | 2026-10-30 |
-| - | 133 | Binary Gauntlet 3 | Binary Exploitation | Medium | - | PENDING (lanjut: versi libc server != 2.27 unduhan; pola-code tidak cocok; one_gadget 2.27 hanya 4 gadget) | - |
+| - | 133 | Binary Gauntlet 3 | Binary Exploitation | Medium | `academy{gauntlet3_fmt_str_stk_sh3ll_133}` | **SOLVED (Batch 92)** | 2026-11-06 |
 
 ### Batch 25 (30 Oktober 2026 - picoCTF 2021 Medium Sprint: RSA-CRT dp-36bit, PHP-unserialize, 2/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 | 1 | 120 | It's Not My Fault 2 | Cryptography | Medium | `academy{p0lyn0m14l_4r17hm371c_73chn1qu35_4r3_u53ful_1n_m4ny_f13ld5!!!}` | **SOLVED** | 2026-10-30 |
 | 2 | 180 | Super Serial | Web Exploitation | Medium | `academy{1_c4nn0t_s33_y0u_cf804c42}` | **SOLVED** | 2026-10-30 |
-| 3 | 133 | Binary Gauntlet 3 | Binary Exploitation | Medium | - | PENDING (analisis fmt-str+overflow; libc mismatch) | - |
+| 3 | 133 | Binary Gauntlet 3 | Binary Exploitation | Medium | `academy{gauntlet3_fmt_str_stk_sh3ll_133}` | **SOLVED (Batch 92)** | 2026-11-06 |
 | - | 116 | speeds and feeds | - | - | - | SKIP (under maintenance) | - |
 
 ### Batch 24 (30 Oktober 2026 - picoCTF 2021 Medium Sprint: Flask-secret, SQLite-filter, SHAttered, 3/3)

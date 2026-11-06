@@ -29,35 +29,6 @@
     "retired": false
   },
   {
-    "id": 529,
-    "name": "Pico Bank",
-    "author": "Prince Niyonshuti N.",
-    "difficulty": 2,
-    "event": {
-      "id": 77,
-      "name": "picoMini by CMU-Africa"
-    },
-    "category": {
-      "id": 3,
-      "name": "Reverse Engineering"
-    },
-    "tags": [],
-    "sponsor": null,
-    "include_in_gym": true,
-    "rating_count": 46,
-    "positive_rating_count": 32,
-    "users_solved": 876,
-    "users_solved_during_event": 228,
-    "event_points": 400,
-    "solved_by_user": false,
-    "solved_by_team": false,
-    "under_maintenance": false,
-    "bookmarked": false,
-    "errata": "",
-    "active_assignments": [],
-    "retired": false
-  },
-  {
     "id": 494,
     "name": "Pachinko",
     "author": "notdeghost",
@@ -83,40 +54,6 @@
     "users_solved": 10042,
     "users_solved_during_event": 1481,
     "event_points": 300,
-    "solved_by_user": false,
-    "solved_by_team": false,
-    "under_maintenance": false,
-    "bookmarked": false,
-    "errata": "",
-    "active_assignments": [],
-    "retired": false
-  },
-  {
-    "id": 489,
-    "name": "hash-only-2",
-    "author": "Junias Bonou",
-    "difficulty": 2,
-    "event": {
-      "id": 74,
-      "name": "picoCTF 2025"
-    },
-    "category": {
-      "id": 6,
-      "name": "Binary Exploitation"
-    },
-    "tags": [
-      {
-        "id": 63,
-        "name": "browser_webshell_solvable"
-      }
-    ],
-    "sponsor": null,
-    "include_in_gym": true,
-    "rating_count": 141,
-    "positive_rating_count": 122,
-    "users_solved": 4451,
-    "users_solved_during_event": 1334,
-    "event_points": 200,
     "solved_by_user": false,
     "solved_by_team": false,
     "under_maintenance": false,
@@ -214,35 +151,6 @@
     "under_maintenance": false,
     "bookmarked": false,
     "errata": "This problem cannot be solved in the webshell.",
-    "active_assignments": [],
-    "retired": false
-  },
-  {
-    "id": 133,
-    "name": "Binary Gauntlet 3",
-    "author": "madStacks",
-    "difficulty": 2,
-    "event": {
-      "id": 34,
-      "name": "picoCTF 2021"
-    },
-    "category": {
-      "id": 6,
-      "name": "Binary Exploitation"
-    },
-    "tags": [],
-    "sponsor": null,
-    "include_in_gym": true,
-    "rating_count": 14,
-    "positive_rating_count": 10,
-    "users_solved": 304,
-    "users_solved_during_event": 120,
-    "event_points": 80,
-    "solved_by_user": false,
-    "solved_by_team": false,
-    "under_maintenance": false,
-    "bookmarked": false,
-    "errata": "",
     "active_assignments": [],
     "retired": false
   },
