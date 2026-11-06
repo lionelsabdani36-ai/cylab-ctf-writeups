@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 385 / 525 challenges (Platform Live Solved: 403 / 525)
+- **Total Solved:** 388 / 525 challenges (Platform Live Solved: 403 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 82 (06 November 2026 - SQLite Auth Bypass, Forensics Disk Carving & OTP Keystream Recovery Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 59 | Irish-Name-Repo 2 | Web Exploitation | Medium | `academy{m0R3_SQL_plz_69744d2d}` | **SOLVED** | 2026-11-06 |
+| 2 | 113 | Disk, disk, sleuth! | Forensics | Medium | `academy{f0r3ns1c4t0r_n30phyt3_6502313d}` | **SOLVED** | 2026-11-06 |
+| 3 | 125 | Easy Peasy | Cryptography | Medium | `academy{b81c6135ae8d388b5edc7cbd387d05a2}` | **SOLVED** | 2026-11-06 |
 
 ### Batch 81 (06 November 2026 - AArch64 Assembly Branch Logic, SSTV Audio Demodulation & PNG Magic Byte Forensics Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
