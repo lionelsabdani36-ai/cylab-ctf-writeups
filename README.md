@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 415 / 525 challenges (Platform Live Solved: 415 / 525)
+- **Total Solved:** 418 / 525 challenges (Platform Live Solved: 418 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 93 (06 November 2026 - Procedural Reversing, Client-Side Game State & WebSocket UCI Protocol Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 754 | Autorev 1 | Reverse Engineering | Medium | `academy{4u7o_r3v_g0_brrr_78c345aa}` | **SOLVED** | 2026-11-06 |
+| 2 | 494 | Pachinko | Web Exploitation | Medium | `academy{p4ch1nk0_f146_0n3_e947b9d7}` | **SOLVED** | 2026-11-06 |
+| 3 | 480 | WebSockFish | Web Exploitation | Medium | `academy{c1i3nt_s1d3_w3b_s0ck3t5_0d3d41e1}` | **SOLVED** | 2026-11-06 |
 
 ### Batch 92 (06 November 2026 - Mobile Hardcoded OTP, SUID PATH Breakout & Blind Format-String Shellcode Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
