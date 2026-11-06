@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 436 / 525 challenges (Platform Live Solved: 436 / 525)
+- **Total Solved:** 439 / 525 challenges (Platform Live Solved: 439 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 100 (06 November 2026 - RF Nonce MITM, WASM CPU OOB Wraparound & 32-bit Stack Partial EIP Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 495 | Ricochet | Cryptography | Hard | `academy{r1c0ch3t_r0b0t_m1tm_4a9e2f18}` | **SOLVED** | 2026-11-06 |
+| 2 | 478 | Pachinko Revisited | Web Exploitation | Hard | `academy{p4ch1nk0_r3v15173d_flag_two_3f8a1c9e}` | **SOLVED** | 2026-11-06 |
+| 3 | 446 | babygame03 | Binary Exploitation | Hard | `academy{gamer_leveluP_5a39c266}` | **SOLVED** | 2026-11-06 |
 
 ### Batch 99 (06 November 2026 - ChaCha20 Nonce Reuse, Stack Pivot Ret2BSS & Prototype Pollution DOM XSS Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
