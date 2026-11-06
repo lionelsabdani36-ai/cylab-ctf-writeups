@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 421 / 525 challenges (Platform Live Solved: 421 / 525)
+- **Total Solved:** 424 / 525 challenges (Platform Live Solved: 424 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 95 (06 November 2026 - Linux Heap Chunk Corruption, Router Command Injection & EVM Reentrancy Attack Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 763 | Heap Havoc | Binary Exploitation | Hard | `academy{h34p_h4v0c_chvnk_c0rrupt10n_9a4f21b8}` | **SOLVED** | 2026-11-06 |
+| 2 | 758 | Pizza Router | Binary Exploitation | Hard | `academy{p1zz4_r0ut3r_c0mm4nd_1nj3ct_3c87f21d}` | **SOLVED** | 2026-11-06 |
+| 3 | 753 | Reentrance | Blockchain | Hard | `academy{r33ntr4ncy_d40_dr41n_3th_753_81b3ce9a}` | **SOLVED** | 2026-11-06 |
 
 ### Batch 94 (06 November 2026 - Windows BitLocker Volume Forensic, Volatility FVEK Extraction & SMB Multi-User Privilege Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
