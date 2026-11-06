@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 382 / 525 challenges (Platform Live Solved: 403 / 525)
+- **Total Solved:** 385 / 525 challenges (Platform Live Solved: 403 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 81 (06 November 2026 - AArch64 Assembly Branch Logic, SSTV Audio Demodulation & PNG Magic Byte Forensics Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 160 | ARMssembly 0 | Reverse Engineering | Medium | `academy{e99c9e31}` | **SOLVED** | 2026-11-06 |
+| 2 | 26 | m00nwalk | Forensics | Medium | `picoCTF{beep_boop_im_in_space}` | **SOLVED** | 2026-11-06 |
+| 3 | 205 | advanced-potion-making | Forensics | Medium | `picoCTF{w1z4rdry}` | **SOLVED** | 2026-11-06 |
 
 ### Batch 80 (05 November 2026 - HTTP User-Agent Header Spoofing, JWT Secret Cracking & Pre-ROT13 SQL Injection Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
