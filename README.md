@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 427 / 525 challenges (Platform Live Solved: 427 / 525)
+- **Total Solved:** 430 / 525 challenges (Platform Live Solved: 430 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 97 (06 November 2026 - Executable Stack Trampoline, JIT Pointer Permutation & SHA-512 Length Extension Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 738 | offset-cycleV2 | Binary Exploitation | Hard | `academy{Y0U_AGa1n_Us3d_pwNt00L5_45fb3e0b}` | **SOLVED** | 2026-11-06 |
+| 2 | 737 | JITFP | Reverse Engineering | Hard | `academy{j1t_fptrs_ptraC3_737_8de}` | **SOLVED** | 2026-11-06 |
+| 3 | 728 | Secure Dot Product | Cryptography | Hard | `academy{n0t_so_s3cure_.x_w1th_sh@512_1bb6154f}` | **SOLVED** | 2026-11-06 |
 
 ### Batch 96 (06 November 2026 - Second-Order SQLi Report Exfiltration, Mempool Front-Running & SMB Cron Privilege Escalation Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
