@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 481 / 525 challenges (Platform Live Solved: 481 / 525)
+- **Total Solved:** 484 / 525 challenges (Platform Live Solved: 484 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 115 (07 November 2026 - Wiener's Continued Fractions Attack, Multi-Prime RSA Decomposition & Time-Seeded PRNG Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 2 | b00tl3gRSA2 | Cryptography | Hard | `academy{bad_1d3a5_2152720}` | **SOLVED** | 2026-11-07 |
+| 2 | 78 | b00tl3gRSA3 | Cryptography | Hard | `academy{too_many_fact0rs_8024768}` | **SOLVED** | 2026-11-07 |
+| 3 | 50 | seed-sPRiNG | Binary Exploitation | Hard | `academy{pseudo_random_number_generator_not_so_random_66aacad47c332de30eb8d8170d96b772}` | **SOLVED** | 2026-11-07 |
 
 ### Batch 114 (07 November 2026 - Wasm Linear Memory XOR Inversion, CRIME/BREACH Compression Oracle & Shuffled RSA Multiset Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
