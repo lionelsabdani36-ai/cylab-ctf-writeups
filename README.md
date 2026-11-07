@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 451 / 525 challenges (Platform Live Solved: 451 / 525)
+- **Total Solved:** 454 / 525 challenges (Platform Live Solved: 454 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 105 (07 November 2026 - Self-XSS Login-CSRF Window SOP Bypass, React Custom-Element State XSS & Function Pointer OOB Relocation Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 282 | noted | Web Exploitation | Hard | `academy{p00rth0s_parl1ment_0f_p3p3gas_386f0184}` | **SOLVED** | 2026-11-07 |
+| 2 | 277 | Live Art | Web Exploitation | Hard | `academy{beam_me_up_reacty_90b651ae}` | **SOLVED** | 2026-11-07 |
+| 3 | 272 | function overwrite | Binary Exploitation | Hard | `academy{0v3rwrit1ng_P01nt3rs_529bfb38}` | **SOLVED** | 2026-11-07 |
 
 ### Batch 104 (07 November 2026 - Timing Side-Channel PIN Leak, x86 Static ROP execve & Kleptographic DH Pohlig-Hellman CRT Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
