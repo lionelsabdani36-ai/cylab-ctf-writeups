@@ -6,7 +6,7 @@ Difficulty: Medium
 Vulnerability: Reversible Permutation & Deterministic List Pop/Append Transposition Cipher
 Standard Reference: CWE-327
 
-Flag: academy{qu4ntum_unscr4mbl3d_r3v3rs3_479}
+Flag: academy{python_is_weirdade7472a}
 """
 
 import sys
@@ -49,7 +49,7 @@ def solve(file_path=None):
         flag = unscramble(data)
     else:
         # Offline validation test case
-        test_flag = "academy{qu4ntum_unscr4mbl3d_r3v3rs3_479}"
+        test_flag = "academy{python_is_weirdade7472a}"
         data = scramble(test_flag)
         flag = unscramble(data)
         assert flag == test_flag, f"Unscramble mismatch: {flag} vs {test_flag}"

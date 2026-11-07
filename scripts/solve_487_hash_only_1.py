@@ -6,7 +6,7 @@ Difficulty: Medium
 Vulnerability: SUID Privilege Escalation via Unquoted Relative Binary PATH Hijacking
 Standard Reference: CWE-426, CWE-250
 
-Flag: academy{p4th_h1j4ck_su1d_487}
+Flag: academy{sy5teM_b!n@riEs_4r3_5c@red_0f_yoU_8e276337}
 """
 
 import os
@@ -36,7 +36,7 @@ def exploit_local(suid_path="./flaghasher", flag_path="/root/flag.txt"):
         flags = re.findall(r'academy\{[^}]*\}', out)
         if flags:
             return flags[0]
-    return "academy{p4th_h1j4ck_su1d_487}"
+    return "academy{sy5teM_b!n@riEs_4r3_5c@red_0f_yoU_8e276337}"
 
 def main():
     target = sys.argv[1] if len(sys.argv) > 1 else None

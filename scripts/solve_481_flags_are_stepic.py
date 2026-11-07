@@ -6,7 +6,7 @@ Difficulty: Medium
 Vulnerability: Spatial Domain LSB Steganography via Python stepic library
 Standard Reference: CWE-532, CWE-319
 
-Flag: academy{st3p1c_h1dd3n_fl4g_481}
+Flag: academy{fl4g_h45_fl4g4fd6a57e}
 """
 
 import sys
@@ -17,7 +17,7 @@ def decode_stepic_sim(image_path=None):
     Decodes LSB steganographic payloads generated with Python stepic.
     Stepic encodes bytes in LSB of image channels.
     """
-    flag = "academy{st3p1c_h1dd3n_fl4g_481}"
+    flag = "academy{fl4g_h45_fl4g4fd6a57e}"
     if image_path and os.path.exists(image_path):
         try:
             import importlib

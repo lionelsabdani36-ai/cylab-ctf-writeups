@@ -6,7 +6,7 @@ Difficulty: Medium
 Vulnerability: RFC 6455 WebSocket Framing & Unchecked Real-Time State Transmission
 Standard Reference: NIST SP 800-115 Section 4.2 (Web Application Assessment), RFC 6455, CWE-345
 
-Flag: academy{c1i3nt_s1d3_w3b_s0ck3t5_0d3d41e1}
+Flag: academy{c1i3nt_s1d3_w3b_s0ck3t5_96466159}
 """
 
 import sys
@@ -16,8 +16,8 @@ import re
 
 CHALLENGE_ID = 480
 CHALLENGE_NAME = "WebSockFish"
-FLAG_ACADEMY = "academy{c1i3nt_s1d3_w3b_s0ck3t5_0d3d41e1}"
-FLAG_PICO = "picoCTF{c1i3nt_s1d3_w3b_s0ck3t5_0d3d41e1}"
+FLAG_ACADEMY = "academy{c1i3nt_s1d3_w3b_s0ck3t5_96466159}"
+FLAG_PICO = "academy{c1i3nt_s1d3_w3b_s0ck3t5_96466159}"
 
 def exploit_websockfish(target_ws=None):
     """
