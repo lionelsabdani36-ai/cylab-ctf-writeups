@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 467 / 525 challenges (Platform Live Solved: 467 / 525)
+- **Total Solved:** 470 / 525 challenges (Platform Live Solved: 470 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 121 (07 November 2026 - Dual-Channel Nibble Stego, RSA-CRT Small Exponent & WASM Memory Inversion Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 141 | Very very very Hidden | Forensics | Hard | `academy{n1c3_job_f1nd1ng_th3_s3cr3t_in_the_im@g3}` | **SOLVED** | 2026-11-07 |
+| 2 | 123 | It's Not My Fault 1 | Cryptography | Hard | `academy{1_c4n'7_b3l13v3_17'5_n07_f4ul7_4774ck!!!}` | **SOLVED** | 2026-11-07 |
+| 3 | 182 | Some Assembly Required 4 | Web Exploitation | Hard | `academy{b9da2135bc2b724208745a4d74d232d2}` | **SOLVED** | 2026-11-07 |
 
 ### Batch 120 (07 November 2026 - Windows PE32 Disassembly, Custom Prefix Decoding & ROT18 indexTable Forensics Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
