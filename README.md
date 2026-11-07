@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 494 / 525 challenges (Platform Live Solved: 494 / 525 | Total Writeup & Script Coverage: 525 / 525 [100%])
+- **Total Solved:** 497 / 525 challenges (Platform Live Solved: 497 / 525 | Total Writeup & Script Coverage: 525 / 525 [100%])
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 130 (07 November 2026 - 2D Perceptron Parameter Recovery, 1D Stream Coaxing & 2D Anti-Collision Bitstream Verification Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 770 | Neuron Express 2D-0 | Artificial Intelligence | Easy | `academy{n3ur0n_expr_2d_0159e40e}` | **SOLVED** | 2026-11-07 |
+| 2 | 771 | Neuron Meet 0 | Artificial Intelligence | Easy | `academy{n3ur0n_m3t_227803d1}` | **SOLVED** | 2026-11-07 |
+| 3 | 772 | Neuron Meet 2D-0 | Artificial Intelligence | Easy | `academy{2d_n3ur0n_m3t_8c453797}` | **SOLVED** | 2026-11-07 |
 
 ### Batch 129 (07 November 2026 - Multi-Layer Base64 Caesar Inversion, Agentic Safety Guardrails & Perceptron Parameter Extraction Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
