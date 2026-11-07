@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 499 / 525 challenges (Platform Live Solved: 499 / 525)
+- **Total Solved:** 502 / 525 challenges (Platform Live Solved: 502 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 120 (07 November 2026 - Windows PE32 Disassembly, Custom Prefix Decoding & ROT18 indexTable Forensics Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 57 | B1ll_Gat35 | Reverse Engineering | Hard | `academy{These are the access codes to the vault: 1063340}` | **SOLVED** | 2026-11-07 |
+| 2 | 47 | investigation_encoded_1 | Forensics | Hard | `academy{encodedxxkpbxrzrn}` | **SOLVED** | 2026-11-07 |
+| 3 | 36 | investigation_encoded_2 | Forensics | Hard | `academy{t1m3f1i35000000000004f54f0f0}` | **SOLVED** | 2026-11-07 |
 
 ### Batch 119 (07 November 2026 - Interleaved LSB Steganography, Multi-File Sharding & NTFS Timestamp Forensics Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
