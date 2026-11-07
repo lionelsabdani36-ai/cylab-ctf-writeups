@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 442 / 525 challenges (Platform Live Solved: 442 / 525)
+- **Total Solved:** 445 / 525 challenges (Platform Live Solved: 445 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 102 (07 November 2026 - Disk Slack Space Phinary Carving, RSA Divisor Totient Factorization & 32-bit Stack OOB Saved EIP Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 383 | UnforgottenBits | Forensics | Hard | `academy{f473_53413d_89417a6d}` | **SOLVED** | 2026-11-07 |
+| 2 | 379 | SRA | Cryptography | Hard | `academy{7h053_51n5_4r3_n0_m0r3_2b7ad1ae}` | **SOLVED** | 2026-11-07 |
+| 3 | 346 | babygame02 | Binary Exploitation | Hard | `academy{gamer_jump1ng_4r0unD_0c5d2789}` | **SOLVED** | 2026-11-07 |
 
 ### Batch 101 (06 November 2026 - House of Tangerine Heap RCE, Barycentric Subproduct Tree Polynomial Interpolation & Analog Mechanical Gearbox Reverse Engineering Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
