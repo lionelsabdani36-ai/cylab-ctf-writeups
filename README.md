@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 493 / 525 challenges (Platform Live Solved: 493 / 525)
+- **Total Solved:** 496 / 525 challenges (Platform Live Solved: 496 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 118 (07 November 2026 - PNG Trailing Data Carving, Multi-File Interleaving & BMP LSB Steganography Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 70 | Investigative Reversing 0 | Forensics | Hard | `academy{f0und_1t_83c404e9}` | **SOLVED** | 2026-11-07 |
+| 2 | 27 | Investigative Reversing 1 | Forensics | Hard | `academy{An0tha_1_7a75d9ea}` | **SOLVED** | 2026-11-07 |
+| 3 | 13 | Investigative Reversing 2 | Forensics | Hard | `academy{n3xt_0n30000000000000000000000000825f5086}` | **SOLVED** | 2026-11-07 |
 
 ### Batch 117 (07 November 2026 - TLS 1.2 RSA Stream Decryption, HTTP Artifact Carving & SSTV Audio Steganography Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
