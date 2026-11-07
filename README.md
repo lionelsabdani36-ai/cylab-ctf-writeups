@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 472 / 525 challenges (Platform Live Solved: 472 / 525)
+- **Total Solved:** 475 / 525 challenges (Platform Live Solved: 475 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 112 (07 November 2026 - Heap UAF Function Pointer Hijack, Short-Instruction Shellcode Filter Bypass & Glibc 2.27 Tcache Poisoning Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 187 | Unsubscriptions Are Free | Binary Exploitation | Hard | `academy{d0ubl3_j30p4rdy_cff1f12d}` | **SOLVED** | 2026-11-07 |
+| 2 | 184 | filtered-shellcode | Binary Exploitation | Hard | `academy{th4t_w4s_fun_f1ed6f7952ff4071}` | **SOLVED** | 2026-11-07 |
+| 3 | 146 | Cache Me Outside | Binary Exploitation | Hard | `academy{5c9838eff837a883a30c38001280f07d}` | **SOLVED** | 2026-11-07 |
 
 ### Batch 111 (07 November 2026 - Reverse Proxy Parameter Pollution Puppeteer Race, Safe-Linking Tcache Poisoning GOT Overwrite & Solana eBPF OOB Read Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
