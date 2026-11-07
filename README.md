@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 460 / 525 challenges (Platform Live Solved: 460 / 525)
+- **Total Solved:** 463 / 525 challenges (Platform Live Solved: 463 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 108 (07 November 2026 - Seccomp Memory Scanning Exfiltration, RSA Coppersmith Small-Roots & UDP PRNG Pcap Carving Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 213 | SaaS | Binary Exploitation | Hard | `academy{f0ll0w_th3_m4p_t0_g3t_th3_fl4g}` | **SOLVED** | 2026-11-07 |
+| 2 | 207 | corrupt-key-1 | Cryptography | Hard | `academy{d741543f172970457e6a9aaa890935b8}` | **SOLVED** | 2026-11-07 |
+| 3 | 206 | scrambled-bytes | Forensics | Hard | `academy{n0_t1m3_t0_w4st3_5hufflin9_ar0und}` | **SOLVED** | 2026-11-07 |
 
 ### Batch 107 (07 November 2026 - Binary Diffing Decoy Isolation, RISC-V Byte Scrambling Reversal & Format String Arbitrary Write Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
