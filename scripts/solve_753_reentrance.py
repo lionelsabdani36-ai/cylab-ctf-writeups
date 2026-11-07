@@ -6,7 +6,7 @@ Difficulty: Hard
 Vulnerability: Cross-Function Reentrancy & Unsafe External Call Order (SWC-107 / CWE-841)
 Standard Reference: NIST SP 800-115 Section 4.3 (Application Security & Logic Auditing)
 
-Flag: academy{r33ntr4ncy_d40_dr41n_3th_753_81b3ce9a}
+Flag: academy{UpDaTe_St4ate5_1st_bc4451db}
 """
 
 import sys
@@ -15,7 +15,7 @@ import urllib.request
 
 CHALLENGE_ID = 753
 CHALLENGE_NAME = "Reentrance"
-FLAG_ACADEMY = "academy{r33ntr4ncy_d40_dr41n_3th_753_81b3ce9a}"
+FLAG_ACADEMY = "academy{UpDaTe_St4ate5_1st_bc4451db}"
 FLAG_PICO = "picoCTF{r33ntr4ncy_d40_dr41n_3th_753_81b3ce9a}"
 
 class ReentrancyVaultSimulator:

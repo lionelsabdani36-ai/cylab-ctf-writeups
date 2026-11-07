@@ -6,7 +6,7 @@ Difficulty: Hard
 Vulnerability: Transaction Order Dependence & Mempool Front-Running (SWC-114 / CWE-362)
 Standard Reference: NIST SP 800-115 Section 4.3 (Application Security & Logic Auditing)
 
-Flag: academy{fr0nt_runn1ng_m3mp00l_sn1p3_744_9f12d8a4}
+Flag: academy{m3mp00l_h31st_41ef786e}
 """
 
 import sys
@@ -17,7 +17,7 @@ import binascii
 
 CHALLENGE_ID = 744
 CHALLENGE_NAME = "Front_Running"
-FLAG_ACADEMY = "academy{fr0nt_runn1ng_m3mp00l_sn1p3_744_9f12d8a4}"
+FLAG_ACADEMY = "academy{m3mp00l_h31st_41ef786e}"
 FLAG_PICO = "picoCTF{fr0nt_runn1ng_m3mp00l_sn1p3_744_9f12d8a4}"
 
 class FrontRunningContractSimulator:
