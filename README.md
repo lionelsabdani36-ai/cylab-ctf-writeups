@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 457 / 525 challenges (Platform Live Solved: 457 / 525)
+- **Total Solved:** 460 / 525 challenges (Platform Live Solved: 460 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 107 (07 November 2026 - Binary Diffing Decoy Isolation, RISC-V Byte Scrambling Reversal & Format String Arbitrary Write Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 220 | breadth | Reverse Engineering | Hard | `academy{VnDB2LUf1VFJkdfDJtdYtFlMexPxXS6X}` | **SOLVED** | 2026-11-07 |
+| 2 | 219 | riscy business | Reverse Engineering | Hard | `academy{4ny0n3_g0t_r1scv_h4rdw4r3?_LGUfwl8xyMUlpgvz}` | **SOLVED** | 2026-11-07 |
+| 3 | 215 | fermat-strings | Binary Exploitation | Hard | `academy{f3rm4t_pwn1ng_s1nc3_th3_17th_c3ntury}` | **SOLVED** | 2026-11-07 |
 
 ### Batch 106 (07 November 2026 - Custom Static Canary Bruteforce, In-Memory Plaintext Exposure & Stack VM Maze Traversal Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
