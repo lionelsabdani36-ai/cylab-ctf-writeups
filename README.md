@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 491 / 525 challenges (Platform Live Solved: 491 / 525 | Total Writeup & Script Coverage: 525 / 525 [100%])
+- **Total Solved:** 494 / 525 challenges (Platform Live Solved: 494 / 525 | Total Writeup & Script Coverage: 525 / 525 [100%])
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 129 (07 November 2026 - Multi-Layer Base64 Caesar Inversion, Agentic Safety Guardrails & Perceptron Parameter Extraction Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 418 | interencdec | Cryptography | Easy | `academy{caesar_d3cr9pt3d_82243097}` | **SOLVED** | 2026-11-07 |
+| 2 | 768 | Assistant or Agent? | Artificial Intelligence | Easy | `academy{4551574n7_0r_463n7_c17cee7a}` | **SOLVED** | 2026-11-07 |
+| 3 | 769 | Neuron Express 0 | Artificial Intelligence | Easy | `academy{n3ur0n_expr_f075f57b}` | **SOLVED** | 2026-11-07 |
 
 ### Batch 128 (07 November 2026 - Nimbus Palindromic Differential, V8 setHorsepower OOB RWX & Base16 Caesar Verification Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
