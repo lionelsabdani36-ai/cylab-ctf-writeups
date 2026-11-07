@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 475 / 525 challenges (Platform Live Solved: 475 / 525)
+- **Total Solved:** 478 / 525 challenges (Platform Live Solved: 478 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 113 (07 November 2026 - Ret2libc 64-Bit ASLR GOT Leak, Meet-in-the-Middle 2DES & Extended 6x6 Playfair Reversal Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 179 | Here's a LIBC | Binary Exploitation | Hard | `academy{1_<3_sm4sh_st4cking_cf205091ad15ab6d}` | **SOLVED** | 2026-11-07 |
+| 2 | 140 | Double DES | Cryptography | Hard | `academy{cb120914153b84dbc68fedd574b395f2}` | **SOLVED** | 2026-11-07 |
+| 3 | 114 | Play Nice | Cryptography | Hard | `academy{2e71b99fd3d07af3808f8dff2652ae0e}` | **SOLVED** | 2026-11-07 |
 
 ### Batch 112 (07 November 2026 - Heap UAF Function Pointer Hijack, Short-Instruction Shellcode Filter Bypass & Glibc 2.27 Tcache Poisoning Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
