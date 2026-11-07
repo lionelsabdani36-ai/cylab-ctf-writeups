@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 439 / 525 challenges (Platform Live Solved: 439 / 525)
+- **Total Solved:** 442 / 525 challenges (Platform Live Solved: 442 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 101 (06 November 2026 - House of Tangerine Heap RCE, Barycentric Subproduct Tree Polynomial Interpolation & Analog Mechanical Gearbox Reverse Engineering Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 441 | high frequency troubles | Binary Exploitation | Hard | `academy{mm4p_mm4573r_de3d190b}` | **SOLVED** | 2026-11-06 |
+| 2 | 417 | flag_printer | Cryptography | Hard | `academy{i_do_hope_you_used_the_favorite_algorithm_of_every_engineering_student}` | **SOLVED** | 2026-11-06 |
+| 3 | 386 | Virtual Machine 1 | Reverse Engineering | Hard | `academy{m0r3_g34r5_3g4d_4261e7cd}` | **SOLVED** | 2026-11-06 |
 
 ### Batch 100 (06 November 2026 - RF Nonce MITM, WASM CPU OOB Wraparound & 32-bit Stack Partial EIP Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
