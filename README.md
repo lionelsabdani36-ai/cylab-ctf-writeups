@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 478 / 525 challenges (Platform Live Solved: 478 / 525)
+- **Total Solved:** 481 / 525 challenges (Platform Live Solved: 481 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 114 (07 November 2026 - Wasm Linear Memory XOR Inversion, CRIME/BREACH Compression Oracle & Shuffled RSA Multiset Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 153 | Some Assembly Required 3 | Web Exploitation | Hard | `academy{8aae5dde384ce815668896d66b8f16a1}` | **SOLVED** | 2026-11-07 |
+| 2 | 127 | Compress and Attack | Cryptography | Hard | `academy{sheriff_you_solved_the_crime}` | **SOLVED** | 2026-11-07 |
+| 3 | 107 | Scrambled: RSA | Cryptography | Hard | `academy{bad_1d3a5_3525501}` | **SOLVED** | 2026-11-07 |
 
 ### Batch 113 (07 November 2026 - Ret2libc 64-Bit ASLR GOT Leak, Meet-in-the-Middle 2DES & Extended 6x6 Playfair Reversal Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
