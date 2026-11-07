@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 470 / 525 challenges (Platform Live Solved: 470 / 525)
+- **Total Solved:** 473 / 525 challenges (Platform Live Solved: 473 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 122 (07 November 2026 - AArch64 Assembly Tracing, SPN Mathematical Inversion & PCM Amplitude Quantization Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 183 | ARMssembly 4 | Reverse Engineering | Hard | `academy{3988daab}` | **SOLVED** | 2026-11-07 |
+| 2 | 149 | Checkpass | Reverse Engineering | Hard | `academy{t1mingS1deChann3l_c55b1a90e29d2f}` | **SOLVED** | 2026-11-07 |
+| 3 | 117 | Surfing the Waves | Forensics | Hard | `academy{mU21C_1s_1337_63f2299a}` | **SOLVED** | 2026-11-07 |
 
 ### Batch 121 (07 November 2026 - Dual-Channel Nibble Stego, RSA-CRT Small Exponent & WASM Memory Inversion Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
