@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 484 / 525 challenges (Platform Live Solved: 484 / 525)
+- **Total Solved:** 487 / 525 challenges (Platform Live Solved: 487 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 116 (07 November 2026 - Client-Side Obfuscation Reversal, 32-Digit Key PNG Constraint & RSA Pop Quiz Algebraic Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 29 | Java Script Kiddie | Web Exploitation | Hard | `academy{b8c2d4d4ccc483bf434b0f35f3e60f70}` | **SOLVED** | 2026-11-07 |
+| 2 | 33 | Java Script Kiddie 2 | Web Exploitation | Hard | `academy{358283c70402f9dd5e5d1708c257dac7}` | **SOLVED** | 2026-11-07 |
+| 3 | 61 | rsa-pop-quiz | Cryptography | Hard | `academy{wA8_th4t$_ill3aGal..oCfEd0082}` | **SOLVED** | 2026-11-07 |
 
 ### Batch 115 (07 November 2026 - Wiener's Continued Fractions Attack, Multi-Prime RSA Decomposition & Time-Seeded PRNG Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
