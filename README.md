@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 463 / 525 challenges (Platform Live Solved: 463 / 525)
+- **Total Solved:** 466 / 525 challenges (Platform Live Solved: 466 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 109 (07 November 2026 - Seccomp ORW ROP, Backslash Path Traversal SSTI & Blind XPath Injection Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 214 | lockdown-horses | Binary Exploitation | Hard | `academy{n0_sh3ll_v3ry_flag_xdd}` | **SOLVED** | 2026-11-07 |
+| 2 | 204 | notepad | Web Exploitation | Hard | `academy{styl1ng_susp1c10usly_s1m1l4r_t0_p4steb1n}` | **SOLVED** | 2026-11-07 |
+| 3 | 185 | X marks the spot | Web Exploitation | Hard | `academy{h0p3fully_u_t0ok_th3_r1ght_xp4th_28cb0023}` | **SOLVED** | 2026-11-07 |
 
 ### Batch 108 (07 November 2026 - Seccomp Memory Scanning Exfiltration, RSA Coppersmith Small-Roots & UDP PRNG Pcap Carving Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
