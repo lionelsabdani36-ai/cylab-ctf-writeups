@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 479 / 525 challenges (Platform Live Solved: 479 / 525)
+- **Total Solved:** 482 / 525 challenges (Platform Live Solved: 482 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 125 (07 November 2026 - PowerShell Inversion, 32-Bit Format String Ret2Libc & Glibc 2.23 Fastbin Dup FSOP Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 119 | Powershelly | Reverse Engineering | Hard | `academy{2018highw@y_2_pow3r!}` | **SOLVED** | 2026-11-07 |
+| 2 | 89 | Guessing Game 2 | Binary Exploitation | Hard | `academy{p0p_r0p_4nd_dr0p_1t_506b81e98597929e}` | **SOLVED** | 2026-11-07 |
+| 3 | 55 | sice_cream | Binary Exploitation | Hard | `academy{th3_r3al_questi0n_is_why_1s_libc_2.23_still_4_th1ng_8d25b643}` | **SOLVED** | 2026-11-07 |
 
 ### Batch 124 (07 November 2026 - Go Element-Wise XOR Reversal, Resistant Code Shellcode Synthesis & Glibc 2.29 Tcache Double Free Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
