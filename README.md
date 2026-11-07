@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 445 / 525 challenges (Platform Live Solved: 445 / 525)
+- **Total Solved:** 448 / 525 challenges (Platform Live Solved: 448 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 103 (07 November 2026 - Chromium CDP Argument Injection, Win32 PE Ret2Win & Stack Residue ROP Leak Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 344 | cancri-sp | Web Exploitation | Hard | `academy{d0ce6edc}` | **SOLVED** | 2026-11-07 |
+| 2 | 317 | wine | Binary Exploitation | Hard | `academy{Un_v3rr3_d3_v1n_cdac4d01}` | **SOLVED** | 2026-11-07 |
+| 3 | 306 | stack cache | Binary Exploitation | Hard | `academy{Cle4N_uP_M3m0rY_8d5089b9}` | **SOLVED** | 2026-11-07 |
 
 ### Batch 102 (07 November 2026 - Disk Slack Space Phinary Carving, RSA Divisor Totient Factorization & 32-bit Stack OOB Saved EIP Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
