@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 482 / 525 challenges (Platform Live Solved: 482 / 525)
+- **Total Solved:** 485 / 525 challenges (Platform Live Solved: 485 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 126 (07 November 2026 - Webhook SSRF Smuggling, 32-Bit Control Flow De-obfuscation & V8 Native Built-in RWX Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 190 | Bithug | Web Exploitation | Hard | `academy{good_job_at_gitting_good}` | **SOLVED** | 2026-11-07 |
+| 2 | 181 | Bizz Fuzz | Binary Exploitation | Hard | `academy{y0u_found_m3}` | **SOLVED** | 2026-11-07 |
+| 3 | 168 | Kit Engine | Binary Exploitation | Hard | `academy{vr00m_vr00m_48f07b402a4020e0}` | **SOLVED** | 2026-11-07 |
 
 ### Batch 125 (07 November 2026 - PowerShell Inversion, 32-Bit Format String Ret2Libc & Glibc 2.23 Fastbin Dup FSOP Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
