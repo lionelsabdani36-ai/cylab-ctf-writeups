@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 476 / 525 challenges (Platform Live Solved: 476 / 525)
+- **Total Solved:** 479 / 525 challenges (Platform Live Solved: 479 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 124 (07 November 2026 - Go Element-Wise XOR Reversal, Resistant Code Shellcode Synthesis & Glibc 2.29 Tcache Double Free Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 171 | gogo | Reverse Engineering | Hard | `academy{p1kap1ka_p1c018269cc6}` | **SOLVED** | 2026-11-07 |
+| 2 | 151 | Rolling My Own | Reverse Engineering | Hard | `academy{r011ing_y0ur_0wn_crypt0_15_h4rd!_a76a098c}` | **SOLVED** | 2026-11-07 |
+| 3 | 75 | zero_to_hero | Binary Exploitation | Hard | `academy{i_th0ught_2.29_f1x3d_d0ubl3_fr33?_cf9BaE62}` | **SOLVED** | 2026-11-07 |
 
 ### Batch 123 (07 November 2026 - Transposition Inversion, Dynamic Stack Quadwords & State-Machine Jumble Reversing Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
