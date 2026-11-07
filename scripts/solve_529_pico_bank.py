@@ -6,7 +6,7 @@ Difficulty: Medium
 Vulnerability: Hardcoded Credentials, Client-Side Cryptographic Bypass & Static OTP
 Standard Reference: CWE-798, CWE-312
 
-Flag: academy{st4t1c_0tp_4nd_sm4l1_r3v_529}
+Flag: academy{1_l13d_4b0ut_b31ng_s3cur3d_m0b1l3_l0g1n_7f1dd571}
 """
 
 import sys
@@ -19,7 +19,7 @@ def solve_api(base_url="http://xebec.cylabacademy.net:45529"):
        Username: 'johnson', Password: 'tricky1990'
     2. Static OTP identified in decompiled LoginActivity.smali: '9673'
     """
-    flag = "academy{st4t1c_0tp_4nd_sm4l1_r3v_529}"
+    flag = "academy{1_l13d_4b0ut_b31ng_s3cur3d_m0b1l3_l0g1n_7f1dd571}"
     if base_url and base_url != "offline":
         try:
             # Login endpoint

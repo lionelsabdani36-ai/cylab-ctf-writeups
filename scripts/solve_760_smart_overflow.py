@@ -6,7 +6,7 @@ Difficulty: Medium
 Vulnerability: Unchecked uint256 Integer Overflow in Solidity < 0.8.0
 Standard Reference: CWE-190, SWC-101
 
-Flag: academy{int_0v3rfl0w_3th3r3um_f149_760}
+Flag: academy{Sm4r7_OverFL0ws_ExI5t_030e799e}
 """
 
 import sys
@@ -18,7 +18,7 @@ UINT256_MAX = 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 class SmartOverflowSimulator:
     """Simulates IntOverflowBank.sol contract state logic."""
-    def __init__(self, flag="academy{int_0v3rfl0w_3th3r3um_f149_760}"):
+    def __init__(self, flag="academy{Sm4r7_OverFL0ws_ExI5t_030e799e}"):
         self.balances = {}
         self.revealed = False
         self.flag = flag
