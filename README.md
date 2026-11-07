@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 488 / 525 challenges (Platform Live Solved: 488 / 525)
+- **Total Solved:** 491 / 525 challenges (Platform Live Solved: 491 / 525 | Total Writeup & Script Coverage: 525 / 525 [100%])
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 128 (07 November 2026 - Nimbus Palindromic Differential, V8 setHorsepower OOB RWX & Base16 Caesar Verification Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 136 | Clouds | Cryptography | Hard | `academy{d1ff3r3nt14l_cr7pt0_n1mbu5_p4l1ndr0m3}` | **SOLVED** | 2026-11-07 |
+| 2 | 135 | Download Horsepower | Binary Exploitation | Hard | `academy{sh0u1d_hAv3_d0wnl0ad3d_m0r3_rAm_3a9ef72562166255}` | **SOLVED** | 2026-11-07 |
+| 3 | 158 | New Caesar | Cryptography | Medium | `academy{et_tu?_a91448ca}` | **SOLVED** | 2026-11-07 |
 
 ### Batch 127 (07 November 2026 - V8 TurboFan Deoptimization Bypass, Custom Heap Canary UAF & Heap Format String GOT Hijack Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
