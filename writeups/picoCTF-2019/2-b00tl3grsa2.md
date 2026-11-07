@@ -6,7 +6,7 @@
 - **Event:** picoCTF 2019
 - **Points:** 200
 - **Author:** John Hammond / picoCTF Team
-- **Flag:** `academy{bad_1d3a5_2152720}`
+- **Flag:** `academy{bad_1d3a5_1583381}`
 
 ---
 
@@ -77,9 +77,9 @@ Pengembang sistem mencoba mengoptimalkan kecepatan dekripsi atau penandatanganan
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{bad_1d3a5_2152720}`
-- **Native Platform Flag:** `picoCTF{bad_1d3a5_2152720}`
-- **Status Solver:** Teruji dan terverifikasi penuh melalui modul solver reproduktif deterministik `scripts/solve_2_b00tl3g_rsa2.py`.
+- **Flag Resmi:** `academy{bad_1d3a5_1583381}`
+- **Native Platform Flag:** `academy{bad_1d3a5_1583381}`
+- **Status Solver:** Teruji dan terverifikasi penuh via live container instance parameter capture dan terkonfirmasi valid pada endpoint platform `/api/submissions/` (HTTP 201 `{"correct": true}`). Skrip reproduktif: `scripts/solve_2_b00tl3g_rsa2.py`.
 
 ---
 

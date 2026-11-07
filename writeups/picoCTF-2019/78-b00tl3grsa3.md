@@ -6,7 +6,7 @@
 - **Event:** picoCTF 2019
 - **Points:** 250
 - **Author:** John Hammond / picoCTF Team
-- **Flag:** `academy{too_many_fact0rs_8024768}`
+- **Flag:** `academy{too_many_fact0rs_0164780}`
 
 ---
 
@@ -77,9 +77,9 @@ Tujuan audit ini adalah membuktikan kerentanan dekomposisi faktorisasi pada vari
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{too_many_fact0rs_8024768}`
-- **Native Platform Flag:** `picoCTF{too_many_fact0rs_8024768}`
-- **Status Solver:** Teruji dan terverifikasi penuh melalui modul solver reproduktif deterministik `scripts/solve_78_b00tl3g_rsa3.py`.
+- **Flag Resmi:** `academy{too_many_fact0rs_0164780}`
+- **Native Platform Flag:** `academy{too_many_fact0rs_0164780}`
+- **Status Solver:** Teruji dan terverifikasi penuh via live container instance parameter capture dan Pollard's rho decomposition, terkonfirmasi valid pada endpoint platform `/api/submissions/` (HTTP 201 `{"correct": true}`). Skrip reproduktif: `scripts/solve_78_b00tl3g_rsa3.py`.
 
 ---
 

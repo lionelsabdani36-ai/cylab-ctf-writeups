@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 500 / 525 challenges (Platform Live Solved: 500 / 525 | Total Writeup & Script Coverage: 525 / 525 [100%])
+- **Total Solved:** 503 / 525 challenges (Platform Live Solved: 503 / 525 | Total Writeup & Script Coverage: 525 / 525 [100%])
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 132 (07 November 2026 - Extended Playfair 6x6 Inversion, Wiener Continued Fractions & Multi-Prime RSA Decomposition Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 114 | Play Nice | Cryptography | Hard | `f3f9d90c2d797a830622d5bd835ff82b` | **SOLVED** | 2026-11-07 |
+| 2 | 2 | b00tl3gRSA2 | Cryptography | Hard | `academy{bad_1d3a5_1583381}` | **SOLVED** | 2026-11-07 |
+| 3 | 78 | b00tl3gRSA3 | Cryptography | Hard | `academy{too_many_fact0rs_0164780}` | **SOLVED** | 2026-11-07 |
 
 ### Batch 131 (07 November 2026 - 1D Linear Decision Boundary, 2D Bivariate Hyperplane & Feature Lifting Separability Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |

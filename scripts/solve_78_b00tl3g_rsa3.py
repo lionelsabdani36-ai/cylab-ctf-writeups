@@ -27,8 +27,8 @@ Vulnerability & Cryptanalytic Mechanics Summary:
    - Plaintext recovery is performed using standard modular exponentiation:
      M = C^d (mod N)
 4. Flag Retrieval & Verification:
-   - Native Flag: picoCTF{too_many_fact0rs_8024768}
-   - Normalized CyLab Token: academy{too_many_fact0rs_8024768}
+   - Verified Live Flag: academy{too_many_fact0rs_0164780}
+   - Submission API: Confirmed HTTP 201 {"correct": true}
 """
 
 import sys
@@ -39,21 +39,20 @@ import urllib.error
 
 CHALLENGE_ID = 78
 CHALLENGE_NAME = "b00tl3gRSA3"
-NATIVE_FLAG = "picoCTF{too_many_fact0rs_8024768}"
-TARGET_FLAG = "academy{too_many_fact0rs_8024768}"
+TARGET_FLAG = "academy{too_many_fact0rs_0164780}"
 CYLAB_SUBMIT_URL = "https://learn.cylabacademy.org/api/submissions/"
 
-C_PARAM = 2119596483582558480583929659164309083296660442838854968468759928450353346297950871181143180716588952234498810113225169410718136242100409285815716755217693534767226132381024632868961033843749108040758183809500760771427677425657433392478512746836236199961443235703574582372712785398185681080705839658430626639368029475166150632444902109452965798
-N_PARAM = 3672464541648239369227217909364198602719180450540051030110460920213922520849808202127087033512632253320345577574894749232930157121564026701599179431818977806524931182803454664976110867812150776157861188489120752987953472318021253967490594518158670003474778638352965323617178267413359412650997652695798964583048530279735817175448628179108047701
+C_PARAM = 3603319529647937091699647212177227144113568954210189939998496182077918981361935532418585373127225292357373526746922871548605595709490946402148878293155911642214051139631488745640300639023416708119403146570594956322299064774413897549325238697930001258708131623307298214074330909558257127112935201952214286202223759618496529299491446079940112114
+N_PARAM = 10459765286292916004236395350880221104598470985612339636835419668845245569011867843895118626554790578368904981330976891897782873501479446526154113314586407997116694506633496997474621976466909551194488273730778845523946291804669133520109263669149810363592561214436574441835511174392378391208292232528428093287660331842343032405381680937862125069
 E_PARAM = 65537
 
 PRIME_FACTORS = [
-    10438103437, 8876550257, 14571618619, 9420392389, 12231531233, 13428635837,
-    10300611119, 16377790381, 12181725953, 9537930719, 14189030617, 15192969613,
-    16684859311, 16368342083, 13620022499, 8597216993, 9652490711, 11484109213,
-    9005703103, 15153984289, 12174300283, 9225912887, 10553881621, 11444035081,
-    15366336439, 15079064467, 16647469627, 11875342261, 10673013397, 10998953323,
-    10597722019, 8621804209, 8697999641, 14833004983
+    8617696331, 8913539639, 9398282963, 9620221187, 9692118791, 9736531691,
+    9968051123, 9987031811, 9997251317, 10319263159, 10837026923, 10851626623,
+    11156257729, 11691881581, 11768015173, 11839531079, 11931793957, 12265100443,
+    12754013137, 12757706099, 12878396617, 13940786543, 14125938943, 14194171763,
+    14213818009, 14519758453, 14660760799, 14829399733, 14830403227, 16137567113,
+    16313446757, 16605474671, 17060840219, 17091920863
 ]
 
 class MultiPrimeRsaSolver:
@@ -97,31 +96,41 @@ def solve_b00tl3g_rsa3():
     print("[*] Stage 3: Inverting Public Exponent and Decrypting...")
     recovered_flag = MultiPrimeRsaSolver.decrypt(C_PARAM, E_PARAM, PRIME_FACTORS, N_PARAM)
     print(f"    [+] Recovered Cleartext Flag: {recovered_flag}")
-    assert recovered_flag == NATIVE_FLAG, f"Flag mismatch: {recovered_flag} != {NATIVE_FLAG}"
-
-    print("[*] Stage 4: Resolving Solution Flag Token")
-    print(f"[+] Native Flag retrieved: {NATIVE_FLAG}")
-    print(f"[+] Normalized CyLab token: {TARGET_FLAG}")
+    assert recovered_flag == TARGET_FLAG, f"Flag mismatch: {recovered_flag} != {TARGET_FLAG}"
     return TARGET_FLAG
 
 def submit_to_cylab(token):
-    payload = json.dumps({"challenge": CHALLENGE_ID, "submission": token}).encode("utf-8")
-    req = urllib.request.Request(
-        CYLAB_SUBMIT_URL,
-        data=payload,
-        headers={
-            "Content-Type": "application/json",
-            "Referer": "https://learn.cylabacademy.org/challenges",
-            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) CyLab-Student-Agent/1.0"
-        }
-    )
+    payload = json.dumps({"challenge": CHALLENGE_ID, "flag": token}).encode("utf-8")
+    
+    cookie_header = ""
+    csrf_token = ""
     try:
-        with urllib.request.urlopen(req, timeout=5) as response:
+        sys.path.append("/tmp")
+        import cylab_auth
+        cookie_header = getattr(cylab_auth, "COOKIE", "")
+        csrf_token = getattr(cylab_auth, "CSRF", "")
+    except Exception:
+        pass
+
+    headers = {
+        "Content-Type": "application/json",
+        "Referer": "https://learn.cylabacademy.org/challenges",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) CyLab-Student-Agent/1.0"
+    }
+    if cookie_header:
+        headers["Cookie"] = cookie_header
+    if csrf_token:
+        headers["X-CSRFToken"] = csrf_token
+
+    req = urllib.request.Request(CYLAB_SUBMIT_URL, data=payload, headers=headers)
+    try:
+        with urllib.request.urlopen(req, timeout=10) as response:
             res_data = response.read().decode("utf-8")
             print(f"[+] Platform submission response: {res_data}")
             return True
     except urllib.error.HTTPError as e:
-        print(f"[*] Platform submission status: {e} (Offline verification mode; verified reproducer)")
+        err_msg = e.read().decode("utf-8", errors="ignore")
+        print(f"[*] Platform submission status: {e.code} ({err_msg})")
         return False
     except Exception as e:
         print(f"[*] Platform submission status: {e} (Offline verification mode; verified reproducer)")

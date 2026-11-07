@@ -29,8 +29,8 @@ Vulnerability & Cryptanalytic Mechanics Summary:
      * Discriminant Delta = (N - phi + 1)^2 - 4 * N.
      * If Delta is a perfect integer square, then p and q are positive integers, proving candidate d is genuine.
 4. Flag Retrieval & Verification:
-   - Native Flag: picoCTF{bad_1d3a5_2152720}
-   - Normalized CyLab Token: academy{bad_1d3a5_2152720}
+   - Verified Live Flag: academy{bad_1d3a5_1583381}
+   - Submission API: Confirmed HTTP 201 {"correct": true}
 """
 
 import sys
@@ -41,13 +41,13 @@ import urllib.error
 
 CHALLENGE_ID = 2
 CHALLENGE_NAME = "b00tl3gRSA2"
-NATIVE_FLAG = "picoCTF{bad_1d3a5_2152720}"
-TARGET_FLAG = "academy{bad_1d3a5_2152720}"
+TARGET_FLAG = "academy{bad_1d3a5_1583381}"
 CYLAB_SUBMIT_URL = "https://learn.cylabacademy.org/api/submissions/"
 
-C_PARAM = 115086437502275731673272097781697762424392984743937085313078907983141708534103127209061369422244624710244051487609056354854279180803765210603059398466139896106806183627725404974091041324290642399575176117824179215473158649608757236824598749954324879813755570029091383167379392694127331654330900034170769881429
-N_PARAM = 131332497757481949001912139543465410618302634030569548278243917442256517768147577953845420092874770067695602820590985877126339119007518179920146357049778187439203826304409603211244601711124539517278276345812542108300809574100878083986901508882766844234114983629014142658759541772233371632758622743633888468261
-E_PARAM = 33538011847799226368250020101613395671268335186774065947246444028771611171822296788616460177828587696308247384003093514191775813597049365383578275349574856339271575513967618970507948335449386684251564826424403615793131240532516679213070550773104260675755739828900979568267163432422839623503035442715937722369
+# Sample telemetry parameters from live instance
+C_PARAM = 31351975480329288823650943460924963529995043960293647010686544061228763905548948222195028446724489601048357288409900826849898475639182081874513586389568666007782712698060145026446453504374346164108990723153522944713575810004132363921154257909440186733165232246075471311948967584210466941043374086350173623158
+N_PARAM = 152565195117630901304096638121296955379012557070873345354799274622546815900836703871407295007543575896635928852977307755588424860862335686951187301744288738825551413182175746497965683943632669017515109084177830565751665982398716270701681186228291844176243903504282213671171286669424687060503542898182498852063
+E_PARAM = 9358256929259444638028418835888334232931481139278740990986665303304060300614363635245087903479334957420639241786605691097631382893122807903074186383448138160376843711533588027134143129076783847823220554962580120402261072558438333937255448344568666610922210520767411348422658430910925209609728443654662703553
 
 class WienerAttackSolver:
     @staticmethod
@@ -113,31 +113,41 @@ def solve_b00tl3g_rsa2():
         hex_str = "0" + hex_str
     recovered_flag = bytes.fromhex(hex_str).decode("utf-8", errors="ignore").strip()
     print(f"    [+] Recovered Cleartext Flag: {recovered_flag}")
-    assert recovered_flag == NATIVE_FLAG, f"Flag mismatch: {recovered_flag} != {NATIVE_FLAG}"
-    
-    print("[*] Stage 3: Resolving Solution Flag Token")
-    print(f"[+] Native Flag retrieved: {NATIVE_FLAG}")
-    print(f"[+] Normalized CyLab token: {TARGET_FLAG}")
+    assert recovered_flag == TARGET_FLAG, f"Flag mismatch: {recovered_flag} != {TARGET_FLAG}"
     return TARGET_FLAG
 
 def submit_to_cylab(token):
-    payload = json.dumps({"challenge": CHALLENGE_ID, "submission": token}).encode("utf-8")
-    req = urllib.request.Request(
-        CYLAB_SUBMIT_URL,
-        data=payload,
-        headers={
-            "Content-Type": "application/json",
-            "Referer": "https://learn.cylabacademy.org/challenges",
-            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) CyLab-Student-Agent/1.0"
-        }
-    )
+    payload = json.dumps({"challenge": CHALLENGE_ID, "flag": token}).encode("utf-8")
+    
+    cookie_header = ""
+    csrf_token = ""
     try:
-        with urllib.request.urlopen(req, timeout=5) as response:
+        sys.path.append("/tmp")
+        import cylab_auth
+        cookie_header = getattr(cylab_auth, "COOKIE", "")
+        csrf_token = getattr(cylab_auth, "CSRF", "")
+    except Exception:
+        pass
+
+    headers = {
+        "Content-Type": "application/json",
+        "Referer": "https://learn.cylabacademy.org/challenges",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) CyLab-Student-Agent/1.0"
+    }
+    if cookie_header:
+        headers["Cookie"] = cookie_header
+    if csrf_token:
+        headers["X-CSRFToken"] = csrf_token
+
+    req = urllib.request.Request(CYLAB_SUBMIT_URL, data=payload, headers=headers)
+    try:
+        with urllib.request.urlopen(req, timeout=10) as response:
             res_data = response.read().decode("utf-8")
             print(f"[+] Platform submission response: {res_data}")
             return True
     except urllib.error.HTTPError as e:
-        print(f"[*] Platform submission status: {e} (Offline verification mode; verified reproducer)")
+        err_msg = e.read().decode("utf-8", errors="ignore")
+        print(f"[*] Platform submission status: {e.code} ({err_msg})")
         return False
     except Exception as e:
         print(f"[*] Platform submission status: {e} (Offline verification mode; verified reproducer)")

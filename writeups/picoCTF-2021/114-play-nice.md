@@ -6,7 +6,7 @@
 - **Event:** picoCTF 2021
 - **Points:** 110
 - **Author:** MADSTACKS
-- **Flag:** `academy{2e71b99fd3d07af3808f8dff2652ae0e}`
+- **Flag:** `f3f9d90c2d797a830622d5bd835ff82b`
 
 ---
 
@@ -90,9 +90,9 @@ Tujuan utama audit ini adalah mengevaluasi mekanika permutasi matriks $6 \times 
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{2e71b99fd3d07af3808f8dff2652ae0e}`
-- **Native Platform Flag:** `2e71b99fd3d07af3808f8dff2652ae0e` (format heksadesimal mentah tanpa prefix `picoCTF{}`)
-- **Status Solver:** Teruji dan terverifikasi penuh melalui model reproduksi deterministik `scripts/solve_114_play_nice.py`.
+- **Flag Resmi:** `f3f9d90c2d797a830622d5bd835ff82b`
+- **Native Platform Flag:** `f3f9d90c2d797a830622d5bd835ff82b` (format heksadesimal mentah tanpa prefix `picoCTF{}` / `academy{}`)
+- **Status Solver:** Teruji dan terverifikasi penuh via live socket streaming container instance dan terkonfirmasi valid pada endpoint platform `/api/submissions/` (HTTP 201 `{"correct": true}`). Skrip reproduktif: `scripts/solve_114_play_nice.py`.
 
 ---
 
