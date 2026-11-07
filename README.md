@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 466 / 525 challenges (Platform Live Solved: 466 / 525)
+- **Total Solved:** 469 / 525 challenges (Platform Live Solved: 469 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 110 (07 November 2026 - Heap UAF Type Confusion Syscall ROP, Befunge-93 Off-By-One Arbitrary Read & RSA Multivariate Coppersmith LLL Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 218 | vr-school | Binary Exploitation | Hard | `academy{0nl1ne_d3bat3_sux}` | **SOLVED** | 2026-11-07 |
+| 2 | 217 | homework | Binary Exploitation | Hard | `academy{good_job_full_score_8a7b9c2d}` | **SOLVED** | 2026-11-07 |
+| 3 | 211 | corrupt-key-2 | Cryptography | Hard | `academy{b7a39d8461f0e25c8291aa89c03b47f1}` | **SOLVED** | 2026-11-07 |
 
 ### Batch 109 (07 November 2026 - Seccomp ORW ROP, Backslash Path Traversal SSTI & Blind XPath Injection Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
