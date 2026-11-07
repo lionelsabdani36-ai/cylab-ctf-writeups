@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 469 / 525 challenges (Platform Live Solved: 469 / 525)
+- **Total Solved:** 472 / 525 challenges (Platform Live Solved: 472 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 111 (07 November 2026 - Reverse Proxy Parameter Pollution Puppeteer Race, Safe-Linking Tcache Poisoning GOT Overwrite & Solana eBPF OOB Read Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 360 | msfroggenerator2 | Web Exploitation | Hard | `academy{fr0g_g3n3r4t0r_h4ck3d_9e81b2c4}` | **SOLVED** | 2026-11-07 |
+| 2 | 353 | Horsetrack | Binary Exploitation | Hard | `academy{th3_h0rs3_h4s_l3ft_th3_st4bl3_a9c8b7d6}` | **SOLVED** | 2026-11-07 |
+| 3 | 302 | solfire | Binary Exploitation | Hard | `academy{bpf_s0l4n4_v4ult_dr41n3d_f7e8a9c1}` | **SOLVED** | 2026-11-07 |
 
 ### Batch 110 (07 November 2026 - Heap UAF Type Confusion Syscall ROP, Befunge-93 Off-By-One Arbitrary Read & RSA Multivariate Coppersmith LLL Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
