@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 448 / 525 challenges (Platform Live Solved: 448 / 525)
+- **Total Solved:** 451 / 525 challenges (Platform Live Solved: 451 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 104 (07 November 2026 - Timing Side-Channel PIN Leak, x86 Static ROP execve & Kleptographic DH Pohlig-Hellman CRT Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 298 | SideChannel | Forensics | Hard | `academy{t1m1ng_4tt4ck_9803bd25}` | **SOLVED** | 2026-11-07 |
+| 2 | 292 | ropfu | Binary Exploitation | Hard | `academy{5n47ch_7h3_5h311_e81af635}` | **SOLVED** | 2026-11-07 |
+| 3 | 283 | NSA Backdoor | Cryptography | Hard | `academy{cf58a7b8}` | **SOLVED** | 2026-11-07 |
 
 ### Batch 103 (07 November 2026 - Chromium CDP Argument Injection, Win32 PE Ret2Win & Stack Residue ROP Leak Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
