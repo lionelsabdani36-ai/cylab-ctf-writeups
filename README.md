@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 485 / 525 challenges (Platform Live Solved: 485 / 525)
+- **Total Solved:** 488 / 525 challenges (Platform Live Solved: 488 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 127 (07 November 2026 - V8 TurboFan Deoptimization Bypass, Custom Heap Canary UAF & Heap Format String GOT Hijack Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 178 | Turboflan | Binary Exploitation | Hard | `academy{Good_job!_Now_go_find_a_real_v8_cve!_4f2661eab1a80e33}` | **SOLVED** | 2026-11-07 |
+| 2 | 172 | The Office | Binary Exploitation | Hard | `academy{cb3b0507a278ae12d2465d4c8ee30f31}` | **SOLVED** | 2026-11-07 |
+| 3 | 164 | Stonk Market | Binary Exploitation | Hard | `academy{explo1t_m1t1gashuns_7838034c}` | **SOLVED** | 2026-11-07 |
 
 ### Batch 126 (07 November 2026 - Webhook SSRF Smuggling, 32-Bit Control Flow De-obfuscation & V8 Native Built-in RWX Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
