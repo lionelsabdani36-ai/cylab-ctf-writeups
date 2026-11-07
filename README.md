@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 454 / 525 challenges (Platform Live Solved: 454 / 525)
+- **Total Solved:** 457 / 525 challenges (Platform Live Solved: 457 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 106 (07 November 2026 - Custom Static Canary Bruteforce, In-Memory Plaintext Exposure & Stack VM Maze Traversal Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 260 | buffer overflow 3 | Binary Exploitation | Hard | `academy{Stat1C_c4n4r13s_4R3_b4D_f9792127}` | **SOLVED** | 2026-11-07 |
+| 2 | 222 | not crypto | Reverse Engineering | Hard | `academy{c0mp1l3r_0pt1m1z4t10n_15_pur3_w1z4rdry_but_n0_pr0bl3m?}` | **SOLVED** | 2026-11-07 |
+| 3 | 221 | MATRIX | Reverse Engineering | Hard | `academy{y0uv3_3sc4p3d_th3_m4ze...f0r_n0w-hYkq2D9PmrA5GpEq}` | **SOLVED** | 2026-11-07 |
 
 ### Batch 105 (07 November 2026 - Self-XSS Login-CSRF Window SOP Bypass, React Custom-Element State XSS & Function Pointer OOB Relocation Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
