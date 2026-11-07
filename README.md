@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 473 / 525 challenges (Platform Live Solved: 473 / 525)
+- **Total Solved:** 476 / 525 challenges (Platform Live Solved: 476 / 525)
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 123 (07 November 2026 - Transposition Inversion, Dynamic Stack Quadwords & State-Machine Jumble Reversing Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 122 | Easy as GDB | Reverse Engineering | Hard | `academy{I_5D3_A11DA7_f73c8ead}` | **SOLVED** | 2026-11-07 |
+| 2 | 102 | Let's get dynamic | Reverse Engineering | Hard | `academy{dyn4m1c_4n4ly1s_1s_5up3r_us3ful_0c8f18c}` | **SOLVED** | 2026-11-07 |
+| 3 | 92 | OTP Implementation | Reverse Engineering | Hard | `academy{cust0m_jumbl3s_4r3nt_4_g0Od_1d3A_731cd140}` | **SOLVED** | 2026-11-07 |
 
 ### Batch 122 (07 November 2026 - AArch64 Assembly Tracing, SPN Mathematical Inversion & PCM Amplitude Quantization Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
