@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 148 (08 November 2026 - Heap Bound Information Disclosure, Unthrottled 2FA Brute-Force & Git Author Impersonation Audit Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 767 | Secure Password Database | Reverse Engineering | Medium | `academy{d0nt_trust_us3rs}` | **SOLVED** | 2026-11-08 |
+| 2 | 765 | No FA | Web Exploitation | Medium | `academy{n0_r4t3_n0_4uth_96369057}` | **SOLVED** | 2026-11-08 |
+| 3 | 764 | MY GIT | General Skills | Easy | `academy{1mp3rs0n4t4_g17_345y_f382bd68}` | **SOLVED** | 2026-11-08 |
+
 ### Batch 147 (08 November 2026 - Perceptron XOR Inseparability Upper Bound, AI Dialogue Verification Governance & POSIX Text Transformation Reversal Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
