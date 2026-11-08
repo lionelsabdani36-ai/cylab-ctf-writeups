@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 512 / 525 challenges (Platform Live Solved: 512 / 525 | Total Writeup & Script Coverage: 525 / 525 [100%])
+- **Total Solved:** 515 / 525 challenges (Platform Live Solved: 515 / 525 | Total Writeup & Script Coverage: 525 / 525 [100%])
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 136 (08 November 2026 - Signed Negative Index Function Pointer Hijack, Residual Stack Cache Extraction & Windows PE 32-bit Ret2Win Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 272 | function overwrite | Binary Exploitation | Hard | `academy{0v3rwrit1ng_P01nt3rs_2ba33ab3}` | **SOLVED** | 2026-11-08 |
+| 2 | 306 | stack cache | Binary Exploitation | Hard | `academy{Cle4N_uP_M3m0rY_03b36e86}` | **SOLVED** | 2026-11-08 |
+| 3 | 317 | wine | Binary Exploitation | Hard | `academy{Un_v3rr3_d3_v1n_2bde233f}` | **SOLVED** | 2026-11-08 |
 
 ### Batch 135 (08 November 2026 - Glibc Tcache Heap Poisoning, Use-After-Free Function Hijack & Blind XPath Boolean Oracle Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |

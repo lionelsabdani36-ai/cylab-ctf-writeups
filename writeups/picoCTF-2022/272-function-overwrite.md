@@ -6,7 +6,7 @@
 - **Event:** picoCTF 2022
 - **Points:** 400
 - **Author:** Neel Bhavsar
-- **Flag:** `academy{0v3rwrit1ng_P01nt3rs_529bfb38}`
+- **Flag:** `academy{0v3rwrit1ng_P01nt3rs_2ba33ab3}`
 
 ---
 
@@ -30,20 +30,21 @@ Tantangan `function overwrite` menyajikan program biner ELF 32-bit (`vuln`) dan 
    ```
    Variabel `num1` bertipe *signed integer* (`int`). Pengecekan `num1 < 10` hanya memvalidasi batas atas (*upper bound*), tetapi sama sekali mengabaikan batas bawah (*lower bound*, `num1 >= 0`). Oleh karena itu, nilai indeks negatif apa pun (misal `-1`, `-16`) akan lolos validasi logika dan menghasilkan akses memori *out-of-bounds* (OOB) mundur di ruang memori sebelum `fun`.
 2. **Korupsi Function Pointer (CWE-822):**
-   Dalam biner 32-bit yang dikompilasi tanpa PIE (*Position Independent Executable*), pointer fungsi `check` dialokasikan secara statis di alamat memori tetap sebelum array `fun`. Dengan indeks offset relatif `num1 = -16`, ekspresi `fun[-16] += num2` memungkinkan penyerang menambahkan nilai sembarang langsung ke alamat yang disimpan dalam `check` (*Arbitrary Value Addition / Write-What-Where*).
+   Dalam biner 32-bit yang dikompilasi tanpa PIE (*Position Independent Executable*), pointer fungsi `check` dialokasikan secara statis di alamat memori tetap sebelum array `fun` (`check` pada `0x0804c034` dan `fun` pada `0x0804c060`). Dengan selisih jarak $-44$ byte, indeks offset relatif elemen integer 32-bit adalah `num1 = -44 / 4 = -11`. Ekspresi `fun[-11] += num2` memungkinkan penyerang menambahkan nilai sembarang langsung ke alamat yang disimpan dalam `check` (*Arbitrary Value Addition / Write-What-Where*).
 3. **Mekanisme Penebusan Checker:**
    - `hard_checker`: Memeriksa apakah skor cerita bernilai `13371337`. Karena panjang cerita dibatasi pada buffer 64 byte (skor maksimum $64 \times 127 = 8128$), kondisi ini mustahil dipenuhi secara matematis.
    - `easy_checker`: Memeriksa apakah skor cerita bernilai `1337`. Kondisi ini dapat dengan mudah dipenuhi melalui rekayasa kombinasi karakter ASCII.
-   Dengan menghitung selisih alamat $\Delta = \text{easy\_checker} - \text{hard\_checker} = -314$, menambahkan $\Delta$ ke `fun[-16]` mengubah nilai `check` menjadi alamat `easy_checker`.
+   Dengan menghitung selisih alamat $\Delta = \text{easy\_checker} - \text{hard\_checker} = 0x08049238 - 0x0804936e = -310$, menambahkan $\Delta$ ke `fun[-11]` mengubah nilai `check` menjadi alamat `easy_checker`.
 
 ---
 
 ## Rekonstruksi Eksploitasi Step-by-Step
 1. **Perhitungan Selisih Alamat Simbol Biner:**
    Analisis simbol biner melalui `objdump -t vuln` atau GDB mengungkapkan:
-   - Alamat `hard_checker`: `0x080493fd`
-   - Alamat `easy_checker`: `0x080492c3`
-   - Nilai penambah: $\Delta = 0x080492c3 - 0x080493fd = -314$.
+   - Alamat `hard_checker`: `0x0804936e`
+   - Alamat `easy_checker`: `0x08049238`
+   - Nilai penambah: $\Delta = 0x08049238 - 0x0804936e = -310$.
+   - Alamat `check`: `0x0804c034`, Alamat `fun`: `0x0804c060` $\rightarrow$ Indeks `num1 = (0x0804c034 - 0x0804c060) / 4 = -11`.
 2. **Penyusunan String Cerita (Skor ASCII Tepat 1337):**
    Diperlukan string yang menghasilkan total nilai ASCII tepat `1337`:
    - Karakter tilde `~` memiliki nilai ASCII `126`.
@@ -52,17 +53,17 @@ Tantangan `function overwrite` menyajikan program biner ELF 32-bit (`vuln`) dan 
    - String cerita yang digunakan: `"~~~~~~~~~~M"`.
 3. **Pemberian Input Interaktif ke Program:**
    - Input 1 (Story): `~~~~~~~~~~M`
-   - Input 2 (Array Index & Value): `-16 -314`
+   - Input 2 (Array Index & Value): `-11 -310`
 4. **Verifikasi Alur Eksekusi & Penerimaan Flag:**
    Rutin `check(story, len)` memanggil `easy_checker("~~~~~~~~~~M", 11)`. Kondisi `score == 1337` bernilai benar, membuka `flag.txt`, dan mencetak output:
-   `picoCTF{0v3rwrit1ng_P01nt3rs_529bfb38}` dinormalisasi ke token resmi CyLab: `academy{0v3rwrit1ng_P01nt3rs_529bfb38}`.
+   `academy{0v3rwrit1ng_P01nt3rs_2ba33ab3}`.
 
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{0v3rwrit1ng_P01nt3rs_529bfb38}`
-- **Native PicoCTF Flag:** `picoCTF{0v3rwrit1ng_P01nt3rs_529bfb38}`
-- **Status Solver:** Terverifikasi 100% pada simulasi alur penulisan OOB function pointer di `scripts/solve_272_function_overwrite.py`.
+- **Flag Resmi:** `academy{0v3rwrit1ng_P01nt3rs_2ba33ab3}`
+- **Native PicoCTF Flag:** `picoCTF{0v3rwrit1ng_P01nt3rs_2ba33ab3}`
+- **Status Solver:** Terverifikasi 100% pada platform REST API CyLab (`POST /api/submissions/` -> HTTP 201 `correct: true`) via live socket injection.
 
 ---
 

