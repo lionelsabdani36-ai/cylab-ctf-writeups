@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 154 (08 November 2026 - Glibc Tcache Free-List Traversal, UPX De-obfuscation Repeating XOR & IP Rate-Limiter Evasion Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 746 | tea-cash | Binary Exploitation | Medium | `academy{ef29b8f2d75bd216bf505de0d02fddef}` | **SOLVED** | 2026-11-08 |
+| 2 | 745 | Hidden Cipher 1 | Reverse Engineering | Medium | `academy{xor_unpack_4nalys1s_f3d3a874}` | **SOLVED** | 2026-11-08 |
+| 3 | 743 | Fool the Lockout | Web Exploitation | Medium | `academy{f00l_7h4t_l1m1t3r_2fa1cd8e}` | **SOLVED** | 2026-11-08 |
+
 ### Batch 153 (08 November 2026 - Credential Replay & Throttling, Sudo GTFOBins Arbitrary File Read & Knex SQLi Subquery Exfiltration Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
