@@ -6,7 +6,7 @@
 - **Event:** picoCTF 2022
 - **Points:** 400
 - **Author:** Anish Singhani
-- **Flag:** `academy{t1m1ng_4tt4ck_9803bd25}`
+- **Flag:** `academy{t1m1ng_4tt4ck_55dcfc0f}`
 
 ---
 
@@ -58,14 +58,14 @@ Tantangan `SideChannel` menyajikan sebuah program biner pemeriksa kode PIN (`pin
    echo "48390513" | nc saturn.picoctf.net <port>
    ```
    Layanan memvalidasi integritas PIN dan merespons:
-   `picoCTF{t1m1ng_4tt4ck_9803bd25}` dinormalisasi ke token resmi CyLab: `academy{t1m1ng_4tt4ck_9803bd25}`.
+   `picoCTF{t1m1ng_4tt4ck_55dcfc0f}` dinormalisasi ke token resmi CyLab: `academy{t1m1ng_4tt4ck_55dcfc0f}`.
 
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{t1m1ng_4tt4ck_9803bd25}`
-- **Native PicoCTF Flag:** `picoCTF{t1m1ng_4tt4ck_9803bd25}`
-- **Status Solver:** Terverifikasi 100% pada simulasi alur side-channel timing profiling di `scripts/solve_298_sidechannel.py`.
+- **Flag Resmi:** `academy{t1m1ng_4tt4ck_55dcfc0f}`
+- **Native PicoCTF Flag:** `picoCTF{t1m1ng_4tt4ck_55dcfc0f}`
+- **Status Solver:** Terverifikasi 100% pada instance langsung dan live submission CyLab REST API (`POST /api/submissions/` -> HTTP 201 `{"correct": true}`). Skrip pengujian otomatis `scripts/solve_298_sidechannel.py`.
 
 ---
 

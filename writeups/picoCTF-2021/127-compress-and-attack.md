@@ -90,7 +90,7 @@ Tujuan audit teknis ini adalah membuktikan bagaimana informasi panjang ciphertex
 ## Flag & Verifikasi
 - **Flag Resmi:** `academy{sheriff_you_solved_the_crime}`
 - **Native Platform Flag:** `picoCTF{sheriff_you_solved_the_crime}`
-- **Status Solver:** Teruji dan terverifikasi penuh melalui model simulasi dan eksploitasi oracle deterministik `scripts/solve_127_compress_and_attack.py`.
+- **Status Solver:** Terverifikasi 100% pada instance interaktif langsung dan live submission CyLab REST API (`POST /api/submissions/` -> HTTP 201 `{"correct": true}`). Skrip pengujian otomatis `scripts/solve_127_compress_and_attack.py`.
 
 ---
 

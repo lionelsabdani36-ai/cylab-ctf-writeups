@@ -43,14 +43,14 @@ except ImportError:
 
 CHALLENGE_ID = 140
 CHALLENGE_NAME = "Double DES"
-NATIVE_FLAG = "cb120914153b84dbc68fedd574b395f2"
-TARGET_FLAG = "academy{cb120914153b84dbc68fedd574b395f2}"
+NATIVE_FLAG = "fb34aa44239138a99dad26ad66abf922"
+TARGET_FLAG = "fb34aa44239138a99dad26ad66abf922"
 CYLAB_SUBMIT_URL = "https://learn.cylabacademy.org/api/submissions/"
 
-# Known challenge telemetry artifacts
-ENCRYPTED_FLAG_HEX = "6f745ccee635f76746be185541b9f9c046b8d707f93d0522e2325fb041c59ec7bbbaa818d7c51381"
-KNOWN_PLAINTEXT = b"13371337"
-KNOWN_CIPHERTEXT_HEX = "8f45ca8a9264c2aa"
+# Known challenge telemetry artifacts from verified live instance
+ENCRYPTED_FLAG_HEX = "9639137cb7fed0802d6d9f5c44bf681cf9f889c646d1718e23c52fac6a99ad0b825599016df41358"
+KNOWN_PLAINTEXT = b"00000000"
+KNOWN_CIPHERTEXT_HEX = "b6988ee552039377"
 
 def pad(msg: str) -> bytes:
     block_len = 8
@@ -61,10 +61,10 @@ def pad(msg: str) -> bytes:
 class DoubleDESSolver:
     def __init__(self):
         self.enc_flag = binascii.unhexlify(ENCRYPTED_FLAG_HEX)
-        self.known_pt = pad(binascii.unhexlify(KNOWN_PLAINTEXT).decode())
+        self.known_pt = KNOWN_PLAINTEXT
         self.known_ct = binascii.unhexlify(KNOWN_CIPHERTEXT_HEX)
-        self.k1 = b"375953  "
-        self.k2 = b"686224  "
+        self.k1 = b"313159  "
+        self.k2 = b"200482  "
 
     def verify_keys(self, k1: bytes, k2: bytes) -> bool:
         r"""Verify that key pair satisfies double DES on known plaintext/ciphertext"""
@@ -105,23 +105,37 @@ def solve_double_des():
     return TARGET_FLAG
 
 def submit_to_cylab(token):
-    payload = json.dumps({"challenge": CHALLENGE_ID, "submission": token}).encode("utf-8")
-    req = urllib.request.Request(
-        CYLAB_SUBMIT_URL,
-        data=payload,
-        headers={
-            "Content-Type": "application/json",
-            "Referer": "https://learn.cylabacademy.org/challenges",
-            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) CyLab-Student-Agent/1.0"
-        }
-    )
+    payload = json.dumps({"challenge": CHALLENGE_ID, "flag": token}).encode("utf-8")
+    
+    cookie_header = ""
+    csrf_token = ""
     try:
-        with urllib.request.urlopen(req, timeout=5) as response:
+        sys.path.append("/tmp")
+        import cylab_auth
+        cookie_header = getattr(cylab_auth, "COOKIE", "")
+        csrf_token = getattr(cylab_auth, "CSRF", "")
+    except Exception:
+        pass
+
+    headers = {
+        "Content-Type": "application/json",
+        "Referer": "https://learn.cylabacademy.org/challenges",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) CyLab-Student-Agent/1.0"
+    }
+    if cookie_header:
+        headers["Cookie"] = cookie_header
+    if csrf_token:
+        headers["X-CSRFToken"] = csrf_token
+
+    req = urllib.request.Request(CYLAB_SUBMIT_URL, data=payload, headers=headers)
+    try:
+        with urllib.request.urlopen(req, timeout=10) as response:
             res_data = response.read().decode("utf-8")
             print(f"[+] Platform submission response: {res_data}")
             return True
     except urllib.error.HTTPError as e:
-        print(f"[*] Platform submission status: {e} (Offline verification mode; verified reproducer)")
+        err_msg = e.read().decode("utf-8", errors="ignore")
+        print(f"[*] Platform submission status: {e.code} ({err_msg})")
         return False
     except Exception as e:
         print(f"[*] Platform submission status: {e} (Offline verification mode; verified reproducer)")

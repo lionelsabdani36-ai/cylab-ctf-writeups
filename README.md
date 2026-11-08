@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 506 / 525 challenges (Platform Live Solved: 506 / 525 | Total Writeup & Script Coverage: 525 / 525 [100%])
+- **Total Solved:** 509 / 525 challenges (Platform Live Solved: 509 / 525 | Total Writeup & Script Coverage: 525 / 525 [100%])
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 134 (08 November 2026 - Timing Side-Channel PIN Recovery, CRIME DEFLATE Stream Oracle & Meet-in-the-Middle 2DES Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 298 | SideChannel | Forensics | Hard | `academy{t1m1ng_4tt4ck_55dcfc0f}` | **SOLVED** | 2026-11-08 |
+| 2 | 127 | Compress and Attack | Cryptography | Hard | `academy{sheriff_you_solved_the_crime}` | **SOLVED** | 2026-11-08 |
+| 3 | 140 | Double DES | Cryptography | Hard | `fb34aa44239138a99dad26ad66abf922` | **SOLVED** | 2026-11-08 |
 
 ### Batch 133 (08 November 2026 - SMB Information Leak, Cron Privilege Elevation & Glibc PRNG Seed Prediction Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |

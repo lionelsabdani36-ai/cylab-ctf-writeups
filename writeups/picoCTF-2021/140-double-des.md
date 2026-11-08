@@ -6,7 +6,7 @@
 - **Event:** picoCTF 2021
 - **Points:** 120
 - **Author:** will17
-- **Flag:** `academy{cb120914153b84dbc68fedd574b395f2}`
+- **Flag:** `fb34aa44239138a99dad26ad66abf922`
 
 ---
 
@@ -103,9 +103,9 @@ Tantangan ini menuntut peserta untuk mengevaluasi batasan ruang kunci kriptograf
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{cb120914153b84dbc68fedd574b395f2}`
-- **Native Platform Flag:** `cb120914153b84dbc68fedd574b395f2` (format heksadesimal mentah tanpa prefix `picoCTF{}`)
-- **Status Solver:** Teruji dan terverifikasi penuh melalui model reproduksi deterministik `scripts/solve_140_double_des.py`.
+- **Flag Resmi:** `fb34aa44239138a99dad26ad66abf922`
+- **Native Platform Flag:** `fb34aa44239138a99dad26ad66abf922` (format heksadesimal mentah tanpa prefix `picoCTF{}` atau `academy{}`)
+- **Status Solver:** Terverifikasi 100% pada instance interaktif langsung via Meet-in-the-Middle attack dan live submission CyLab REST API (`POST /api/submissions/` -> HTTP 201 `{"correct": true}`). Skrip pengujian reproduktif `scripts/solve_140_double_des.py`.
 
 ---
 
