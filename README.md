@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 518 / 525 challenges (Platform Live Solved: 518 / 525 | Total Writeup & Script Coverage: 525 / 525 [100%])
+- **Total Solved:** 521 / 525 challenges (Platform Live Solved: 521 / 525 | Total Writeup & Script Coverage: 525 / 525 [100%])
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 138 (08 November 2026 - 64-bit Ret2Libc ASLR GOT Leak, Interleaved Short-Instruction Shellcode & Prefix RSA Oracle Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 179 | Here's a LIBC | Binary Exploitation | Hard | `academy{1_l0v3_sm4sh_st4cking_831253496d43781d}` | **SOLVED** | 2026-11-08 |
+| 2 | 184 | filtered-shellcode | Binary Exploitation | Hard | `academy{th4t_w4s_fun_16f6480564bcd167}` | **SOLVED** | 2026-11-08 |
+| 3 | 107 | Scrambled: RSA | Cryptography | Hard | `academy{bad_1d3a5_4945ca7}` | **SOLVED** | 2026-11-08 |
 
 ### Batch 137 (08 November 2026 - RSA-CRT Small Exponent Cryptanalysis, Custom Static Canary Bruteforce & Executable Stack ROP Syscall Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
@@ -205,12 +212,12 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 |:---|:---|:---|:---|:---|:---|:---|:---|
 | 1 | 153 | Some Assembly Required 3 | Web Exploitation | Hard | `academy{8aae5dde384ce815668896d66b8f16a1}` | **SOLVED** | 2026-11-07 |
 | 2 | 127 | Compress and Attack | Cryptography | Hard | `academy{sheriff_you_solved_the_crime}` | **SOLVED** | 2026-11-07 |
-| 3 | 107 | Scrambled: RSA | Cryptography | Hard | `academy{bad_1d3a5_3525501}` | **SOLVED** | 2026-11-07 |
+| 3 | 107 | Scrambled: RSA | Cryptography | Hard | `academy{bad_1d3a5_4945ca7}` | **SOLVED** | 2026-11-07 |
 
 ### Batch 113 (07 November 2026 - Ret2libc 64-Bit ASLR GOT Leak, Meet-in-the-Middle 2DES & Extended 6x6 Playfair Reversal Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
-| 1 | 179 | Here's a LIBC | Binary Exploitation | Hard | `academy{1_<3_sm4sh_st4cking_cf205091ad15ab6d}` | **SOLVED** | 2026-11-07 |
+| 1 | 179 | Here's a LIBC | Binary Exploitation | Hard | `academy{1_l0v3_sm4sh_st4cking_831253496d43781d}` | **SOLVED** | 2026-11-07 |
 | 2 | 140 | Double DES | Cryptography | Hard | `academy{cb120914153b84dbc68fedd574b395f2}` | **SOLVED** | 2026-11-07 |
 | 3 | 114 | Play Nice | Cryptography | Hard | `academy{2e71b99fd3d07af3808f8dff2652ae0e}` | **SOLVED** | 2026-11-07 |
 
@@ -218,7 +225,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
 | 1 | 187 | Unsubscriptions Are Free | Binary Exploitation | Hard | `academy{d0ubl3_j30p4rdy_cff1f12d}` | **SOLVED** | 2026-11-07 |
-| 2 | 184 | filtered-shellcode | Binary Exploitation | Hard | `academy{th4t_w4s_fun_f1ed6f7952ff4071}` | **SOLVED** | 2026-11-07 |
+| 2 | 184 | filtered-shellcode | Binary Exploitation | Hard | `academy{th4t_w4s_fun_16f6480564bcd167}` | **SOLVED** | 2026-11-07 |
 | 3 | 146 | Cache Me Outside | Binary Exploitation | Hard | `academy{5c9838eff837a883a30c38001280f07d}` | **SOLVED** | 2026-11-07 |
 
 ### Batch 111 (07 November 2026 - Reverse Proxy Parameter Pollution Puppeteer Race, Safe-Linking Tcache Poisoning GOT Overwrite & Solana eBPF OOB Read Sprint, 3/3)

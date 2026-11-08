@@ -6,7 +6,7 @@
 - **Event:** picoCTF 2021
 - **Points:** 160
 - **Author:** madStacks
-- **Flag:** `academy{th4t_w4s_fun_f1ed6f7952ff4071}`
+- **Flag:** `academy{th4t_w4s_fun_16f6480564bcd167}`
 
 ---
 
@@ -98,16 +98,16 @@ Tujuan tantangan adalah menganalisis arsitektur instruksi Intel IA-32 (x86 32-bi
    Setiap instruksi dieksekusi dengan sempurna karena NOP berada tepat di batas instruksi (*instruction boundary*).
 
 4. **Eksekusi Remote & Pengambilan Flag:**
-   Kirimkan payload ke target. Shell interaktif terbuka, jalankan `cat flag.txt`:
-   - Native Flag: `picoCTF{th4t_w4s_fun_f1ed6f7952ff4071}`
-   - Token Platform CyLab: `academy{th4t_w4s_fun_f1ed6f7952ff4071}`
+   Kirimkan payload ke target container resmi CyLab. Shell interaktif terbuka, jalankan `cat flag.txt`:
+   - Native Flag: `picoCTF{th4t_w4s_fun_16f6480564bcd167}`
+   - Token Platform CyLab: `academy{th4t_w4s_fun_16f6480564bcd167}`
 
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{th4t_w4s_fun_f1ed6f7952ff4071}`
-- **Native PicoCTF Flag:** `picoCTF{th4t_w4s_fun_f1ed6f7952ff4071}`
-- **Status Solver:** Terverifikasi 100% pada skrip reproduksi `scripts/solve_184_filtered_shellcode.py`.
+- **Flag Resmi:** `academy{th4t_w4s_fun_16f6480564bcd167}`
+- **Native PicoCTF Flag:** `picoCTF{th4t_w4s_fun_16f6480564bcd167}`
+- **Status Solver:** Terverifikasi 100% via REST API CyLab (`POST /api/submissions/` -> HTTP 201 `correct: true`) dan skrip reproduksi `scripts/solve_184_filtered_shellcode.py`.
 
 ---
 

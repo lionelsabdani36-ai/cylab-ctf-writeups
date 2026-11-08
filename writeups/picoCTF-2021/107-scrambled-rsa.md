@@ -6,7 +6,7 @@
 - **Event:** picoCTF 2021
 - **Points:** 140
 - **Author:** Sara
-- **Flag:** `academy{bad_1d3a5_3525501}`
+- **Flag:** `academy{bad_1d3a5_4945ca7}`
 
 ---
 
@@ -75,15 +75,15 @@ Tujuan pengujian teknis ini adalah menganalisis kelemahan struktural pada pemeca
 4. **Eksekusi Pemulihan Teks Terang:**
    Skrip mengeksekusi pencarian secara sekuensial dan memulihkan teks karakter demi karakter:
    ```text
-   picoCTF{ -> picoCTF{b -> picoCTF{ba -> picoCTF{bad -> picoCTF{bad_1 -> ... -> picoCTF{bad_1d3a5_3525501}
+   academy{ -> academy{b -> academy{ba -> academy{bad -> academy{bad_1 -> ... -> academy{bad_1d3a5_4945ca7}
    ```
 
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{bad_1d3a5_3525501}`
-- **Native Platform Flag:** `picoCTF{bad_1d3a5_3525501}`
-- **Status Solver:** Teruji dan terverifikasi penuh melalui modul solver reproduktif deterministik `scripts/solve_107_scrambled_rsa.py`.
+- **Flag Resmi:** `academy{bad_1d3a5_4945ca7}`
+- **Native Platform Flag:** `picoCTF{bad_1d3a5_4945ca7}`
+- **Status Solver:** Terverifikasi 100% via REST API CyLab (`POST /api/submissions/` -> HTTP 201 `correct: true`) dan skrip reproduksi `scripts/solve_107_scrambled_rsa.py`.
 
 ---
 

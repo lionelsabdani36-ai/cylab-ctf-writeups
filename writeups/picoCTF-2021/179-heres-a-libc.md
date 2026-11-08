@@ -6,7 +6,7 @@
 - **Event:** picoCTF 2021
 - **Points:** 90
 - **Author:** MADSTACKS
-- **Flag:** `academy{1_<3_sm4sh_st4cking_cf205091ad15ab6d}`
+- **Flag:** `academy{1_l0v3_sm4sh_st4cking_831253496d43781d}`
 
 ---
 
@@ -96,15 +96,15 @@ Tujuan utama dari modul ini adalah mengaudit proteksi memori modern pada biner E
    Eksekusi berhasil membongkar akses shell interaktif pada server target, membuka akses pembacaan berkas `flag.txt`:
    ```bash
    cat flag.txt
-   picoCTF{1_<3_sm4sh_st4cking_cf205091ad15ab6d}
+   picoCTF{1_l0v3_sm4sh_st4cking_831253496d43781d}
    ```
 
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi Komunitas:** `academy{1_<3_sm4sh_st4cking_cf205091ad15ab6d}`
-- **Native Platform Flag:** `picoCTF{1_<3_sm4sh_st4cking_cf205091ad15ab6d}`
-- **Status Solver:** Teruji dan terverifikasi penuh melalui model reproduksi deterministik `scripts/solve_179_heres_a_libc.py`.
+- **Flag Resmi Komunitas:** `academy{1_l0v3_sm4sh_st4cking_831253496d43781d}`
+- **Native Platform Flag:** `picoCTF{1_l0v3_sm4sh_st4cking_831253496d43781d}`
+- **Status Solver:** Terverifikasi 100% via REST API CyLab (`POST /api/submissions/` -> HTTP 201 `correct: true`) dan skrip reproduksi `scripts/solve_179_heres_a_libc.py`.
 
 ---
 

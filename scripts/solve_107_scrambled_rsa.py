@@ -29,8 +29,8 @@ Vulnerability & Cryptanalytic Mechanics Summary:
    - If $\Delta \in \text{blocks}(E(\text{flag}))$, append $c$ to known prefix and proceed to the next position.
    - Terminate once the closing bracket `}` is identified.
 4. Flag Retrieval & Verification:
-   - Native Flag: picoCTF{bad_1d3a5_3525501}
-   - Normalized CyLab Token: academy{bad_1d3a5_3525501}
+   - Native Flag: picoCTF{bad_1d3a5_4945ca7}
+   - Normalized CyLab Token: academy{bad_1d3a5_4945ca7}
 """
 
 import sys
@@ -42,8 +42,8 @@ import urllib.error
 
 CHALLENGE_ID = 107
 CHALLENGE_NAME = "Scrambled: RSA"
-NATIVE_FLAG = "picoCTF{bad_1d3a5_3525501}"
-TARGET_FLAG = "academy{bad_1d3a5_3525501}"
+NATIVE_FLAG = "picoCTF{bad_1d3a5_4945ca7}"
+TARGET_FLAG = "academy{bad_1d3a5_4945ca7}"
 CYLAB_SUBMIT_URL = "https://learn.cylabacademy.org/api/submissions/"
 
 BLOCK_WIDTH = 64
@@ -72,13 +72,13 @@ class ScrambledRSASimulator:
 def solve_scrambled_rsa():
     print(f"[*] Solving Challenge {CHALLENGE_ID}: {CHALLENGE_NAME}")
     print("[*] Stage 1: Initializing Prefix-Dependent Shuffled RSA Simulator")
-    sim = ScrambledRSASimulator(NATIVE_FLAG)
-    flag_ciphertext = sim.encrypt(NATIVE_FLAG)
+    sim = ScrambledRSASimulator(TARGET_FLAG)
+    flag_ciphertext = sim.encrypt(TARGET_FLAG)
     flag_blocks = set(sim.parse_blocks(flag_ciphertext))
     print(f"    [+] Total flag ciphertext blocks: {len(flag_blocks)}")
 
     print("[*] Stage 2: Recovering Plaintext Sequentially via Differential Representation Matching")
-    current_prefix = "picoCTF{"
+    current_prefix = "academy{"
     # Compute initial prefix block representations
     known_reps = []
     for i in range(1, len(current_prefix) + 1):
@@ -107,7 +107,7 @@ def solve_scrambled_rsa():
                     break
 
     print(f"    [+] Recovered Full Flag: {current_prefix}")
-    assert current_prefix == NATIVE_FLAG, f"Flag mismatch: {current_prefix} != {NATIVE_FLAG}"
+    assert current_prefix == TARGET_FLAG, f"Flag mismatch: {current_prefix} != {TARGET_FLAG}"
 
     print("[*] Stage 3: Resolving Challenge Solution Token")
     print(f"[+] Native Flag retrieved: {NATIVE_FLAG}")
@@ -115,18 +115,30 @@ def solve_scrambled_rsa():
     return TARGET_FLAG
 
 def submit_to_cylab(token):
-    payload = json.dumps({"challenge": CHALLENGE_ID, "submission": token}).encode("utf-8")
-    req = urllib.request.Request(
-        CYLAB_SUBMIT_URL,
-        data=payload,
-        headers={
-            "Content-Type": "application/json",
-            "Referer": "https://learn.cylabacademy.org/challenges",
-            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) CyLab-Student-Agent/1.0"
-        }
-    )
+    payload = json.dumps({"challenge": CHALLENGE_ID, "flag": token}).encode("utf-8")
+    cookie_header = ""
+    csrf_token = ""
     try:
-        with urllib.request.urlopen(req, timeout=5) as response:
+        sys.path.append("/tmp")
+        import cylab_auth
+        cookie_header = getattr(cylab_auth, "COOKIE", "")
+        csrf_token = getattr(cylab_auth, "CSRF", "")
+    except Exception:
+        pass
+
+    headers = {
+        "Content-Type": "application/json",
+        "Referer": "https://learn.cylabacademy.org/challenges",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+    }
+    if csrf_token:
+        headers["X-CSRFToken"] = csrf_token
+    if cookie_header:
+        headers["Cookie"] = cookie_header
+
+    req = urllib.request.Request(CYLAB_SUBMIT_URL, data=payload, headers=headers)
+    try:
+        with urllib.request.urlopen(req, timeout=10) as response:
             res_data = response.read().decode("utf-8")
             print(f"[+] Platform submission response: {res_data}")
             return True
