@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 150 (08 November 2026 - Stack Overlap Reversing, EVM Unchecked Integer Wrap-Around & HA Shared Rate-Limiting Failover Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 761 | Bypass Me | Reverse Engineering | Medium | `academy{d3bugg3r_p0w3r_is_4w3s0m3_e85bfcda}` | **SOLVED** | 2026-11-08 |
+| 2 | 760 | Smart_Overflow | Blockchain | Medium | `academy{Sm4r7_OverFL0ws_ExI5t_030e799e}` | **SOLVED** | 2026-11-08 |
+| 3 | 756 | Failure Failure | General Skills | Medium | `academy{f41l0v3r_f0r_7h3_w1n_7897afd6}` | **SOLVED** | 2026-11-08 |
+
 ### Batch 149 (08 November 2026 - ASCII Decimal Socket Streaming, Anonymous SMB Share Enumeration & Pipe Command Injection Audit Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
