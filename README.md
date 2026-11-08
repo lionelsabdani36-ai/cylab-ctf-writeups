@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 155 (08 November 2026 - ASCII Decimal Socket Streaming, Split PKZIP Stream Reassembly & Flask Session Timeout Evasion Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 742 | bytemancy 0 | General Skills | Easy | `academy{pr1n74813_ch4r5_544482cc}` | **SOLVED** | 2026-11-08 |
+| 2 | 740 | Piece by Piece | General Skills | Easy | `academy{z1p_and_spl1t_f1l3s_4r3_fun_6af185ac}` | **SOLVED** | 2026-11-08 |
+| 3 | 739 | Old Sessions | Web Exploitation | Easy | `academy{s3t_s3ss10n_3xp1rat10n5_3fdcb5e2}` | **SOLVED** | 2026-11-08 |
+
 ### Batch 154 (08 November 2026 - Glibc Tcache Free-List Traversal, UPX De-obfuscation Repeating XOR & IP Rate-Limiter Evasion Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
