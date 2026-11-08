@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 146 (08 November 2026 - Multi-Rate Hebbian Convergence, Convex Hull Enclosure Ceiling & XNOR Separability Boundary Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 779 | Perceptron Train Classic 2 Alpha | Artificial Intelligence | Easy | `academy{perceptron_classic_2_alpha_5rates_13e2875c}` | **SOLVED** | 2026-11-08 |
+| 2 | 780 | Perceptron Train Hole in Middle | Artificial Intelligence | Easy | `academy{h0l3_1n_m1ddl3_unl34rn4bl3_l1n34rly_c85a6043}` | **SOLVED** | 2026-11-08 |
+| 3 | 781 | Perceptron Train XNOR | Artificial Intelligence | Easy | `academy{xn0r_unl34rn4bl3_by_p3rc3ptr0ns_da5e1216}` | **SOLVED** | 2026-11-08 |
+
 ### Batch 145 (08 November 2026 - Perceptron 3D Parity Separability Ceiling, Novikoff Discrete Convergence & Stateful Multi-Rate Tuning Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
