@@ -6,7 +6,7 @@
 - **Event:** picoCTF 2022
 - **Points:** 500
 - **Author:** zwad3
-- **Flag:** `academy{beam_me_up_reacty_90b651ae}`
+- **Flag:** `academy{beam_me_up_reacty_cc2d3a25}`
 
 ---
 
@@ -62,14 +62,14 @@ Tantangan `Live Art` menyajikan aplikasi *single-page application* (SPA) berbasi
    - Kegagalan `src="none"` mengeksekusi payload, membaca `localStorage.getItem('username')`, dan mengirimkannya ke listener penyerang.
 4. **Hasil Verifikasi Flag:**
    Data yang diterima pada listener penyerang:
-   `picoCTF{beam_me_up_reacty_90b651ae}` dinormalisasi ke token resmi CyLab: `academy{beam_me_up_reacty_90b651ae}`.
+   `academy{beam_me_up_reacty_cc2d3a25}` via live exfiltration HTTP beacon.
 
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{beam_me_up_reacty_90b651ae}`
+- **Flag Resmi:** `academy{beam_me_up_reacty_cc2d3a25}`
 - **Native PicoCTF Flag:** `picoCTF{beam_me_up_reacty_90b651ae}`
-- **Status Solver:** Terverifikasi 100% pada simulasi siklus audit React state remounting di `scripts/solve_277_live_art.py`.
+- **Status Solver:** Terverifikasi live HTTP 201 (`correct: true`) pada platform CyLab Security Academy via `scripts/solve_277_live_art.py`.
 
 ---
 

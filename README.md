@@ -323,7 +323,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
 | 1 | 282 | noted | Web Exploitation | Hard | `academy{p00rth0s_parl1ment_0f_p3p3gas_386f0184}` | **SOLVED** | 2026-11-07 |
-| 2 | 277 | Live Art | Web Exploitation | Hard | `academy{beam_me_up_reacty_90b651ae}` | **SOLVED** | 2026-11-07 |
+| 2 | 277 | Live Art | Web Exploitation | Hard | `academy{beam_me_up_reacty_cc2d3a25}` | **SOLVED** | 2026-11-08 |
 | 3 | 272 | function overwrite | Binary Exploitation | Hard | `academy{0v3rwrit1ng_P01nt3rs_529bfb38}` | **SOLVED** | 2026-11-07 |
 
 ### Batch 104 (07 November 2026 - Timing Side-Channel PIN Leak, x86 Static ROP execve & Kleptographic DH Pohlig-Hellman CRT Sprint, 3/3)
