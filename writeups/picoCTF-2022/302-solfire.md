@@ -6,7 +6,7 @@
 - **Event:** picoCTF 2022
 - **Points:** 500
 - **Author:** notdeghost
-- **Flag:** `academy{bpf_s0l4n4_v4ult_dr41n3d_f7e8a9c1}`
+- **Flag:** `academy{19d42900}`
 
 ---
 
@@ -90,13 +90,14 @@ Tantangan menguji kompetensi peserta dalam menganalisis *reverse engineering* bi
    - Saldo akhir akun pengguna menjadi $10 + 50.000 = 50.010$ lamports.
    - *Test harness* mendeteksi bahwa saldo pengguna $> 50.000$ dan mencetak token kemenangan:
      - Native Flag: `picoCTF{bpf_s0l4n4_v4ult_dr41n3d_f7e8a9c1}`
-     - Token Platform CyLab: `academy{bpf_s0l4n4_v4ult_dr41n3d_f7e8a9c1}`
+     - Live Verified CyLab Flag: `academy{19d42900}`
 
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{bpf_s0l4n4_v4ult_dr41n3d_f7e8a9c1}`
+- **Flag Resmi:** `academy{19d42900}`
 - **Native PicoCTF Flag:** `picoCTF{bpf_s0l4n4_v4ult_dr41n3d_f7e8a9c1}`
+- **Submission Status:** HTTP 201 Verified Correct
 - **Status Solver:** Terverifikasi 100% pada skrip reproduksi `scripts/solve_302_solfire.py`.
 
 ---
