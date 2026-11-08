@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 149 (08 November 2026 - ASCII Decimal Socket Streaming, Anonymous SMB Share Enumeration & Pipe Command Injection Audit Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 762 | bytemancy 1 | General Skills | Easy | `academy{h0w_m4ny_e's???_6fd2faa9}` | **SOLVED** | 2026-11-08 |
+| 2 | 759 | Printer Shares | General Skills | Easy | `academy{5mb_pr1nter_5h4re5_80a1eed5}` | **SOLVED** | 2026-11-08 |
+| 3 | 757 | ping-cmd | General Skills | Easy | `academy{p1nG_c0mm@nd_3xpL0it_su33essFuL_0b4c0edc}` | **SOLVED** | 2026-11-08 |
+
 ### Batch 148 (08 November 2026 - Heap Bound Information Disclosure, Unthrottled 2FA Brute-Force & Git Author Impersonation Audit Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
