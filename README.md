@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 152 (08 November 2026 - Second-Order SQLi & SQLite Schema Recon, Dynamic Math-Keyed Keystream Reversal & Hashgate IDOR Audit Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 752 | ORDER ORDER | Web Exploitation | Hard | `academy{s3c0nd_0rd3r_1t_1s_3616770c}` | **SOLVED** | 2026-11-08 |
+| 2 | 751 | Hidden Cipher 2 | Reverse Engineering | Medium | `academy{m4th_b3h1nd_c1ph3r_3c573aef}` | **SOLVED** | 2026-11-08 |
+| 3 | 750 | Hashgate | Web Exploitation | Medium | `academy{id0r_unl0ck_cbbb8f45}` | **SOLVED** | 2026-11-08 |
+
 ### Batch 151 (08 November 2026 - Stack Alignment ret2win, Procedural Reversing Pattern & EVM Checks-Effects-Interactions Reentrancy Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
@@ -427,7 +434,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ### Batch 96 (06 November 2026 - Second-Order SQLi Report Exfiltration, Mempool Front-Running & SMB Cron Privilege Escalation Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
-| 1 | 752 | ORDER ORDER | Web Exploitation | Hard | `academy{s3c0nd_0rd3r_1t_1s_4611c226}` | **SOLVED** | 2026-11-06 |
+| 1 | 752 | ORDER ORDER | Web Exploitation | Hard | `academy{s3c0nd_0rd3r_1t_1s_3616770c}` | **SOLVED** | 2026-11-06 |
 | 2 | 744 | Front_Running | Blockchain | Hard | `academy{fr0nt_runn1ng_m3mp00l_sn1p3_744_9f12d8a4}` | **SOLVED** | 2026-11-06 |
 | 3 | 741 | Printer Shares 3 | General Skills | Hard | `academy{5mb_cr0n_pr1nt3r_h1j4ck_741_3e91b582}` | **SOLVED** | 2026-11-06 |
 
