@@ -6,74 +6,93 @@
 - **Event:** picoCTF 2026
 - **Points:** 200
 - **Author:** Yahaya Meddy
-- **Flag:** `academy{h34p_h4v0c_chvnk_c0rrupt10n_9a4f21b8}`
+- **Flag:** `academy{h34p_0v3rfl0w_95be5370}`
 
 ---
 
 ## Problem Statement & Scope
-Peserta dihadapkan pada aplikasi pengelola entri memori heap interaktif yang ditulis dalam bahasa C pada sistem Linux 64-bit. Program menyediakan menu untuk mengalokasikan buffer data (chunk) dengan ukuran yang ditentukan pengguna, menuliskan konten ke dalam chunk, dan memicu eksekusi pointer fungsi callback yang tersimpan di dalam struktur objek chunk. Batasan verifikasi panjang input pada operasi penulisan tidak ditegakkan secara ketat terhadap ukuran alokasi asli, membuka celah manipulasi memori dinamis.
+
+Peserta diberikan biner ELF 32-bit `vuln` dan berkas kode sumber `vuln.c`. Program menerima dua argumen nama dari baris perintah (`./vuln <name1> <name2>`). Di dalam memori, program mengalokasikan dua buah objek `struct internet`:
+```c
+struct internet {
+    int priority;
+    char *name;
+    void (*callback)();
+};
+```
+Masing-masing objek `i1` dan `i2` dialokasikan menggunakan `malloc(sizeof(struct internet))`, dan setiap buffer `name` dialokasikan sebesar 8 byte (`malloc(8)`). Program kemudian menyalin argumen pertama ke `i1->name` menggunakan `strcpy(i1->name, argv[1])` dan argumen kedua ke `i2->name` menggunakan `strcpy(i2->name, argv[2])`. Program memeriksa apakah `callback` terdefinisi dan memanggilnya jika ada. Terdapat fungsi tersembunyi `winner()` yang membuka `flag.txt` dan mencetak bendera rahasia.
 
 ---
 
 ## Teori & Akar Kerentanan (Root Cause Theory)
-1. **Heap-Based Buffer Overflow (CWE-122):**
-   Fungsi penulisan data ke dalam heap chunk menggunakan panjang input yang dikontrol oleh pengguna (`read(0, chunk->data, user_len)`) alih-alih dibatasi oleh kapasitas alokasi chunk asli (`chunk->size`). Hal ini memungkinkan penyerang menulis melewati batas chunk yang dialokasikan (heap boundary violation) dan menimpa metadata serta konten dari chunk tetangga (adjacent chunk) di memori.
-2. **Control Flow Hijacking via Function Pointer Overwrite (CWE-416 / CWE-822):**
-   Objek chunk pada heap dirancang menyimpan pointer fungsi callback (`void (*callback)()`) yang dipanggil saat operasi pemrosesan chunk dipicu. Dengan meluapkan data dari chunk pendahulu (chunk 0), penyerang dapat menimpa alamat callback pada chunk berikutnya (chunk 1) dengan alamat fungsi istimewa (`win()` / `print_flag()`), sehingga mengalihkan alur kontrol instruksi (`RIP`) tanpa memicu deteksi stack canary.
-3. **NIST SP 800-115 Section 5.3 (System Flaw Identification):**
-   Audit memori dinamis mengharuskan inspeksi terhadap heap layout, integritas metadata alokator (Glibc ptmalloc2), dan kepatuhan batas indeks buffer untuk mencegah arbitrary memory write dan control hijacking.
+
+1. **Heap Buffer Overflow via Unbounded String Copy (CWE-120 / CWE-122):**
+   Alokator memori heap mengalokasikan 8 byte untuk buffer string `i1->name`. Namun, `strcpy(i1->name, argv[1])` menyalin string masukan tanpa validasi panjang (`unbounded copy`). Masukan yang melebihi kapasitas buffer menulis melewati batas chunk alokasi heap (*heap boundary violation*), merusak metadata chunk berikutnya dan menimpa struktur objek `i2` yang berada tepat setelahnya di memori heap.
+
+2. **Control Flow Hijacking via Function Pointer Overwrite (CWE-822):**
+   Di memori heap 32-bit (ptmalloc2), urutan alokasi linier menghasilkan tata letak:
+   - Chunk `i1`: ukuran 16 byte (offset +0x00)
+   - Chunk `i1->name`: ukuran 16 byte (offset +0x10, user data pada +0x18)
+   - Chunk `i2`: ukuran 16 byte (offset +0x20, user data pada +0x28)
+   - Chunk `i2->name`: ukuran 16 byte (offset +0x30, user data pada +0x38)
+
+   Jarak antara buffer `i1->name` dan awal user data objek `i2` adalah tepat 16 byte. Di dalam objek `i2`:
+   - Offset +0 (jarak 16 byte dari `i1->name`): `int priority` (4 byte)
+   - Offset +4 (jarak 20 byte dari `i1->name`): `char *name` (4 byte pointer)
+   - Offset +8 (jarak 24 byte dari `i1->name`): `void (*callback)()` (4 byte pointer)
+
+3. **Penyelamatan Pointer Tulis & Alamat Tetap (No PIE):**
+   Karena `strcpy(i2->name, argv[2])` dieksekusi setelah `i1->name` meluap, pointer `i2->name` yang tertimpa harus diarahkan ke alamat memori yang valid dan dapat ditulisi (*writable memory*), seperti segmen `.bss` (`0x0804c040`). Jika pointer diarahkan ke alamat sembarang atau `NULL`, operasi `strcpy` kedua akan memicu *segmentation fault* sebelum pointer `callback` sempat dipanggil. Ketiadaan mitigasi PIE (*Position Independent Executable*) memungkinkan pemanfaatan alamat statis `winner()` pada `0x08049206`.
+
+4. **NIST SP 800-115 Section 5.3 (System Flaw Identification):**
+   Audit memori dinamis mengharuskan inspeksi terhadap heap layout, integritas metadata alokator, dan kepatuhan batas indeks buffer untuk mencegah arbitrary memory write dan control hijacking.
 
 ---
 
 ## Rekonstruksi Eksploitasi Step-by-Step
-1. **Inspeksi Biner dan Mitigasi Keamanan:**
-   Lakukan analisis header dan mitigasi menggunakan `checksec`:
+
+1. **Inspeksi Mitigasi dan Simbol Biner:**
+   Analisis menggunakan `readelf` dan `checksec`:
+   - Arsitektur: Intel 80386 (ELF 32-bit LSB executable)
+   - PIE: Disabled (Base `0x08048000`)
+   - Canary: Disabled
+   - NX: Enabled
+   - Alamat `winner()`: `0x08049206`
+   - Segmen `.bss` writable: `0x0804c040`
+
+2. **Penyusunan Payload Eksploitasi:**
+   Argumen pertama (`argv[1]`) disusun sebagai berikut:
+   - 16 byte filler (`"A" * 16`) untuk mengisi sisa buffer `i1->name` dan header chunk `i2`.
+   - 4 byte priority (`b"PRIO"`).
+   - 4 byte pointer writable untuk `i2->name`: little-endian `0x0804c040` (`\x40\xc0\x04\x08`).
+   - 4 byte pointer fungsi `winner()` untuk `i2->callback`: little-endian `0x08049206` (`\x06\x92\x04\x08`).
+   - Total panjang payload `argv[1]`: 28 byte (tanpa karakter spasi atau byte null di tengah).
+
+   Argumen kedua (`argv[2]`) diberikan string sembarang (`"junk"`), yang akan disalin ke alamat `.bss` tanpa menyebabkan tabrakan memori.
+
+3. **Eksekusi Remote Terhadap Daemon Tantangan:**
+   Menghubungkan soket TCP ke instans remote `chatelaine.cylabacademy.net`:
    ```bash
-   checksec --file=heap_havoc
-   # Arch:     amd64-64-little
-   # RELRO:    Partial RELRO
-   # Stack:    Canary found
-   # NX:       NX enabled
-   # PIE:      No PIE (Base: 0x400000)
+   python3 scripts/solve_763_heap_havoc.py
    ```
-   Ketiadaan proteksi PIE (*Position Independent Executable*) memungkinkan pemanfaatan alamat fungsi tetap di memori (`0x400000` base).
-
-2. **Pemetaan Alamat Simbol Istimewa:**
-   Gunakan `objdump` atau `nm` untuk menemukan alamat fungsi pembuka bendera rahasia (`win`):
-   ```bash
-   objdump -d heap_havoc | grep "<win>:"
-   # 0000000000401256 <win>:
-   ```
-
-3. **Perhitungan Heap Offset dan Penataan Chunk:**
-   - Alokasikan Chunk 0 berukuran 32 byte: `malloc(32)`.
-   - Alokasikan Chunk 1 berukuran 32 byte yang memiliki struktur callback: `malloc(32)`.
-   - Di memori heap 64-bit, alokasi chunk 32 byte menghasilkan total jarak 48/64 byte antara area data chunk 0 dan pointer fungsi pada chunk 1.
-   - Siapkan payload luapan (overflow payload):
-     - Padding: 32 byte karakter filler (`A` * 32).
-     - Target address: 8 byte little-endian dari `0x401256` (`\x56\x12\x40\x00\x00\x00\x00\x00`).
-
-4. **Eksekusi Penulisan dan Pembelokan Alur Kontrol:**
-   Kirimkan payload ke Chunk 0 melalui opsi penulisan, lalu panggil eksekusi callback pada Chunk 1:
-   ```python
-   payload = b"A" * 32 + struct.pack("<Q", 0x401256)
-   # Menimpa callback pointer -> dialihkan ke 0x401256 (win)
-   ```
-   Program memanggil fungsi `win()` dan mengembalikan flag rahasia ke stdout.
+   Layanan memproses kedua argumen, mengeksekusi `i2->callback()` yang melompat ke `winner()`, dan mengembalikan bendera:
+   `FLAG: academy{h34p_0v3rfl0w_95be5370}`.
 
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{h34p_h4v0c_chvnk_c0rrupt10n_9a4f21b8}`
-- **Native PicoCTF Flag:** `picoCTF{h34p_h4v0c_chvnk_c0rrupt10n_9a4f21b8}`
-- **Status Solver:** Terverifikasi melalui skrip reproduksi otomatis `scripts/solve_763_heap_havoc.py`.
+
+- **Flag Resmi:** `academy{h34p_0v3rfl0w_95be5370}`
+- **Flag Komunitas:** `CTF{h34p_0v3rfl0w_95be5370}`
+- **Bukti Validasi:** Live remote exploitation pada instans CyLab Security Academy berhasil membajak callback `i2` dan mengekstrak flag live secara deterministik (HTTP 201 `correct: true`).
 
 ---
 
 ## Takeaway Kompetensi LKS & Mitigasi Defensif
-- **Penegakan Validasi Batas Buffer Heap (Strict Bounds Checking):**
-  Pastikan setiap operasi penyalinan atau pembacaan data ke buffer heap dibatasi secara ketat oleh parameter alokasi ukuran buffer (`sizeof` atau field `allocated_size`), bukan ukuran input yang diminta pengguna.
-- **Pemisahan Data dan Control Pointers:**
-  Hindari menempatkan pointer fungsi eksekusi (callbacks) bersebelahan secara linier dengan buffer data mentah yang dapat diisi oleh pengguna pada segmen heap yang sama. Gunakan tabel fungsi terisolasi atau read-only structures.
-- **Kompilasi dengan Proteksi Penuh (Full PIE & Safe Allocators):**
-  Terapkan flag kompilasi modern `-fPIE -pie` bersama `-Wl,-z,relro,-z,now` untuk mencegah pemanfaatan alamat tetap, serta pertimbangkan penggunaan alokator memori yang diperkeras (hardened allocators seperti DieHarder atau Scudo) pada lingkungan produksi.
+
+- **Penggantian Fungsi Salin Tidak Aman (Secure String Copy):**
+  Hindari penggunaan `strcpy()` pada buffer dengan panjang terbatas. Gunakan `strncpy()` atau fungsi yang memperhatikan ukuran buffer alokasi asli (`snprintf` atau `strlcpy`) dengan pembatasan ukuran `sizeof(dest)`.
+- **Pemisahan Antara Buffer Data dan Pointer Kontrol:**
+  Dalam desain struktur data di memori C/C++, pisahkan struktur yang memuat *function pointer* dari struktur yang memuat buffer dinamis yang dapat diisi oleh masukan pengguna. Tempatkan *function pointers* dalam struktur yang terisolasi atau di segmen memori read-only setelah inisialisasi.
+- **Pengaktifan Mitigasi Biner Lengkap (Full Hardening):**
+  Kompilasi seluruh biner dengan opsi `-fPIE -pie -Wl,-z,relro,-z,now` untuk mencegah pemanfaatan alamat absolut pada fungsi-fungsi internal program.

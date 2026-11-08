@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 142 (08 November 2026 - Heap Callback Control Hijack, Analog Differential Gear Kinematics & V8 Float64 Shellcode Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 763 | Heap Havoc | Binary Exploitation | Hard | `academy{h34p_0v3rfl0w_95be5370}` | **SOLVED** | 2026-11-08 |
+| 2 | 386 | Virtual Machine 1 | Reverse Engineering | Hard | `academy{m0r3_g34r5_3g4d_601f2760}` | **SOLVED** | 2026-11-08 |
+| 3 | 168 | Kit Engine | Binary Exploitation | Hard | `academy{vr00m_vr00m_0eae4872890d01a6}` | **SOLVED** | 2026-11-08 |
+
 ### Batch 141 (08 November 2026 - RWX Stack Trampoline Backward Leap, Out-of-Bounds EIP Overwrite & SUID CodeBank Ret2Win Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
