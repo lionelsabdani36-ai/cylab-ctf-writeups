@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 153 (08 November 2026 - Credential Replay & Throttling, Sudo GTFOBins Arbitrary File Read & Knex SQLi Subquery Exfiltration Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 749 | Credential Stuffing | Web Exploitation | Medium | `academy{d0nt_r3u5e_cr3d3nt1als_9dee1556}` | **SOLVED** | 2026-11-08 |
+| 2 | 748 | ABSOLUTE NANO | General Skills | Medium | `academy{n4n0_411_7h3_w4y_81311b87}` | **SOLVED** | 2026-11-08 |
+| 3 | 747 | Secret Box | Web Exploitation | Medium | `academy{sq1_1nject10n_4cc7170a}` | **SOLVED** | 2026-11-08 |
+
 ### Batch 152 (08 November 2026 - Second-Order SQLi & SQLite Schema Recon, Dynamic Math-Keyed Keystream Reversal & Hashgate IDOR Audit Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
