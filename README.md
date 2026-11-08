@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 145 (08 November 2026 - Perceptron 3D Parity Separability Ceiling, Novikoff Discrete Convergence & Stateful Multi-Rate Tuning Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 776 | Perceptron Train 3-Bit Parity | Artificial Intelligence | Easy | `academy{3b1t_p4r1ty_unl34rn4bl3_l1n34rly_5d1cd0f2}` | **SOLVED** | 2026-11-08 |
+| 2 | 777 | Perceptron Train Classic 0 | Artificial Intelligence | Easy | `academy{perceptron_classic_mode_02a3669e}` | **SOLVED** | 2026-11-08 |
+| 3 | 778 | Perceptron Train Classic 1 | Artificial Intelligence | Easy | `academy{perceptron_classic_5rates_a95545ef}` | **SOLVED** | 2026-11-08 |
+
 ### Batch 144 (08 November 2026 - Glibc Safe-Linking Tcache Poisoning, Layered Multi-Deobfuscation & Syslog Fragment Assembly Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
