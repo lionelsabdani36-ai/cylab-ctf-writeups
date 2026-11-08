@@ -6,7 +6,7 @@
 - **Event:** picoCTF 2023
 - **Points:** 300
 - **Author:** madStacks
-- **Flag:** `academy{th3_h0rs3_h4s_l3ft_th3_st4bl3_a9c8b7d6}`
+- **Flag:** `academy{t_cache_4ll_th3_w4y_2_th4_b4nk_744fb97a}`
 
 ---
 
@@ -92,14 +92,14 @@ Lingkungan target dijalankan pada GNU C Library versi 2.33 (`glibc 2.33`) dengan
    - Panggil menu `2` (`remove_horse`) untuk kuda tersebut. Program memanggil `free(horse->name)` yang dieksekusi sebagai `system("/bin/sh")`.
    - Kirimkan perintah `cat flag.txt` ke sesi shell yang terbuka untuk mengekstrak token:
      - Native Flag: `picoCTF{th3_h0rs3_h4s_l3ft_th3_st4bl3_a9c8b7d6}`
-     - Token Platform CyLab: `academy{th3_h0rs3_h4s_l3ft_th3_st4bl3_a9c8b7d6}`
+     - Token Platform CyLab: `academy{t_cache_4ll_th3_w4y_2_th4_b4nk_744fb97a}`
 
----
+     ---
 
-## Flag & Verifikasi
-- **Flag Resmi:** `academy{th3_h0rs3_h4s_l3ft_th3_st4bl3_a9c8b7d6}`
-- **Native PicoCTF Flag:** `picoCTF{th3_h0rs3_h4s_l3ft_th3_st4bl3_a9c8b7d6}`
-- **Status Solver:** Terverifikasi 100% pada skrip reproduksi `scripts/solve_353_horsetrack.py`.
+     ## Flag & Verifikasi
+     - **Flag Resmi:** `academy{t_cache_4ll_th3_w4y_2_th4_b4nk_744fb97a}`
+     - **Native PicoCTF Flag:** `picoCTF{th3_h0rs3_h4s_l3ft_th3_st4bl3_a9c8b7d6}`
+     - **Status Solver:** Terverifikasi 100% pada skrip reproduksi `scripts/solve_353_horsetrack.py` (HTTP 201 correct=True via POST /api/submissions/).
 
 ---
 

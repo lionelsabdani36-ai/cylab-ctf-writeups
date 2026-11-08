@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 144 (08 November 2026 - Glibc Safe-Linking Tcache Poisoning, Layered Multi-Deobfuscation & Syslog Fragment Assembly Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 353 | Horsetrack | Binary Exploitation | Hard | `academy{t_cache_4ll_th3_w4y_2_th4_b4nk_744fb97a}` | **SOLVED** | 2026-11-08 |
+| 2 | 710 | MultiCode | General Skills | Easy | `academy{nested_enc0ding_74af0c65}` | **SOLVED** | 2026-11-08 |
+| 3 | 527 | Log Hunt | General Skills | Easy | `academy{us3_y0urlinux_sk1lls_cedfa5fb}` | **SOLVED** | 2026-11-08 |
+
 ### Batch 143 (08 November 2026 - Custom Heap Canary UAF, V8 JSArray OOB Horsepower & Dynamic PTRACE JIT Indirection Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
