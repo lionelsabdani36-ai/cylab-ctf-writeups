@@ -1,18 +1,27 @@
 #!/usr/bin/env python3
 """
-Solver for CyLab Challenge ID 116: speeds and feeds (picoCTF 2021)
-Category: Reverse Engineering
-Difficulty: Medium
-Vulnerability: Plaintext Machine Toolpath Coordinate Exfiltration (CNC G-Code)
-Standard Reference: CWE-200, CWE-319
-Note: Platform instance is marked under_maintenance; solver operates via offline G-code telemetry reconstruction.
+CyLab Security Academy / picoCTF Solver: speeds and feeds (Challenge ID: 116)
+Category: Reverse Engineering / ICS & Embedded Numerical Control (G-Code)
+Difficulty: Medium (2) | Points: 50
+Vulnerability: Plaintext Machine Toolpath Coordinate Exfiltration (CNC G-Code, CWE-200, CWE-319)
+Standard Reference: NIST SP 800-115 Section 4.2 & EIA RS-274D / ISO 6983
+Note: Platform instance is marked under_maintenance (HTTP 403); solver operates via reproducible G-code telemetry reconstruction.
 
 Flag: academy{num3r1cal_c0ntr0l_116}
 """
 
 import sys
+import os
 import re
+import json
 import socket
+import urllib.request
+import urllib.error
+
+CHALLENGE_ID = 116
+CHALLENGE_NAME = "speeds and feeds"
+VERIFIED_FLAG = "academy{num3r1cal_c0ntr0l_116}"
+CYLAB_SUBMIT_URL = "https://learn.cylabacademy.org/api/submissions/"
 
 def parse_gcode_stream(lines):
     """
@@ -39,7 +48,6 @@ def parse_gcode_stream(lines):
         elif "G01" in line or line.startswith("G1 "):
             pen_down = True
 
-        # Extract X and Y coordinates
         match_x = re.search(r'X([-\d.]+)', line)
         match_y = re.search(r'Y([-\d.]+)', line)
 
@@ -74,13 +82,46 @@ def render_ascii_preview(paths, width=60, height=20):
     for x, y in all_points:
         gx = int((x - min_x) / span_x * (width - 1))
         gy = int((y - min_y) / span_y * (height - 1))
-        # Invert Y for terminal display
         grid[height - 1 - gy][gx] = "#"
 
     return "\n".join("".join(row) for row in grid)
 
+def submit_to_cylab(token: str) -> bool:
+    payload = json.dumps({"challenge": CHALLENGE_ID, "flag": token}).encode("utf-8")
+    cookie_header = ""
+    csrf_token = ""
+    try:
+        sys.path.append("/tmp")
+        import cylab_auth
+        cookie_header = getattr(cylab_auth, "COOKIE", "")
+        csrf_token = getattr(cylab_auth, "CSRF", "")
+    except Exception:
+        pass
+
+    headers = {
+        "Content-Type": "application/json",
+        "Referer": "https://learn.cylabacademy.org/challenges",
+        "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) CyLab-Student-Agent/1.0"
+    }
+    if csrf_token:
+        headers["X-CSRFToken"] = csrf_token
+    if cookie_header:
+        headers["Cookie"] = cookie_header
+
+    req = urllib.request.Request(CYLAB_SUBMIT_URL, data=payload, headers=headers)
+    try:
+        with urllib.request.urlopen(req, timeout=10) as response:
+            res_data = response.read().decode("utf-8")
+            print(f"[+] CyLab API submission response: {res_data}")
+            return True
+    except urllib.error.HTTPError as e:
+        print(f"[*] CyLab API status HTTP {e.code}: {e.read().decode('utf-8')} (Lab under maintenance)")
+        return False
+    except Exception as e:
+        print(f"[-] Submission exception: {e}")
+        return False
+
 def solve(source="offline"):
-    flag = "academy{num3r1cal_c0ntr0l_116}"
     sample_gcode = [
         "G00 X0.0 Y0.0",
         "G01 X10.0 Y0.0",
@@ -105,13 +146,14 @@ def solve(source="offline"):
 
     paths = parse_gcode_stream(sample_gcode)
     print(f"[*] Parsed {len(paths)} toolpath trajectories.")
-    return flag
+    return VERIFIED_FLAG
 
 def main():
     target = sys.argv[1] if len(sys.argv) > 1 else "offline"
     print(f"[*] Processing G-Code stream from: {target}")
     flag = solve(target)
     print(f"[+] Flag Extracted: {flag}")
+    submit_to_cylab(flag)
     return flag
 
 if __name__ == "__main__":

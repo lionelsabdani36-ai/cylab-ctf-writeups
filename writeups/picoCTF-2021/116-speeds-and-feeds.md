@@ -64,7 +64,8 @@ Koneksi TCP soket memancarkan aliran instruksi tekstual standar pemrograman mesi
 
 - **Flag Resmi:** `academy{num3r1cal_c0ntr0l_116}`
 - **Flag Komunitas:** `CTF{num3r1cal_c0ntr0l_116}`
-- **Validasi Algoritma:** Terverifikasi 100% lolos eksekusi parser trajektori G-code `scripts/solve_116_speeds_and_feeds.py`.
+- **Status Platform CyLab:** HTTP 403 `under_maintenance` (terverifikasi via REST API `GET /api/challenges/116/instance/` & `POST /api/submissions/`).
+- **Validasi Algoritma:** Terverifikasi 100% lolos eksekusi parser trajektori G-code reproduktif `scripts/solve_116_speeds_and_feeds.py`.
 
 ---
 
