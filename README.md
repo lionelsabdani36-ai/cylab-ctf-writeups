@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 151 (08 November 2026 - Stack Alignment ret2win, Procedural Reversing Pattern & EVM Checks-Effects-Interactions Reentrancy Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 755 | Echo Escape 1 | Binary Exploitation | Medium | `academy{3ch0_s3rv1c3_br34k5_7fcd4fec}` | **SOLVED** | 2026-11-08 |
+| 2 | 754 | Autorev 1 | Reverse Engineering | Medium | `academy{4u7o_r3v_g0_brrr_78c345aa}` | **SOLVED** | 2026-11-08 |
+| 3 | 753 | Reentrance | Blockchain | Hard | `academy{UpDaTe_St4ate5_1st_bc4451db}` | **SOLVED** | 2026-11-08 |
+
 ### Batch 150 (08 November 2026 - Stack Overlap Reversing, EVM Unchecked Integer Wrap-Around & HA Shared Rate-Limiting Failover Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
