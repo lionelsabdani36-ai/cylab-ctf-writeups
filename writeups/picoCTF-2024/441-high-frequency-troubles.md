@@ -6,7 +6,7 @@
 - **Event:** picoCTF 2024
 - **Points:** 500
 - **Author:** pepsipu
-- **Flag:** `academy{mm4p_mm4573r_de3d190b}`
+- **Flag:** `academy{mm4p_mm4573r_c97765a6}`
 
 ---
 
@@ -91,9 +91,9 @@ Tantangan `high frequency troubles` menyajikan layanan jaringan berbasis Linux x
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{mm4p_mm4573r_de3d190b}`
+- **Flag Resmi (Live Dynamic CyLab):** `academy{mm4p_mm4573r_c97765a6}`
 - **Native PicoCTF Flag:** `picoCTF{mm4p_mm4573r_de3d190b}`
-- **Status Solver:** Terverifikasi 100% pada simulasi alur House of Tangerine dan validasi Safe Linking di `scripts/solve_441_high_frequency_troubles.py`.
+- **Status Solver:** Terverifikasi 100% pada kontainer live CyLab (`nc xebec.cylabacademy.net 33708`) dengan ROP chain eksekusi `cat flag.txt` melalui `scripts/solve_441_high_frequency_troubles.py`. Telah disubmit dan tervalidasi via REST API (`correct: true`).
 
 ---
 
