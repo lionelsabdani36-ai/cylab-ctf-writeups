@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 147 (08 November 2026 - Perceptron XOR Inseparability Upper Bound, AI Dialogue Verification Governance & POSIX Text Transformation Reversal Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 782 | Perceptron Train XOR | Artificial Intelligence | Easy | `academy{x0r_unl34rn4bl3_by_p3rc3ptr0ns_d7c0c598}` | **SOLVED** | 2026-11-08 |
+| 2 | 783 | Trust But Verify | Artificial Intelligence | Easy | `academy{7ru57_15_34rn3d_65d5434b}` | **SOLVED** | 2026-11-08 |
+| 3 | 766 | Undo | General Skills | Easy | `academy{Revers1ng_t3xt_Tr4nsf0rm@t10ns_c77d80cc}` | **SOLVED** | 2026-11-08 |
+
 ### Batch 146 (08 November 2026 - Multi-Rate Hebbian Convergence, Convex Hull Enclosure Ceiling & XNOR Separability Boundary Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
