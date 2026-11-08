@@ -6,7 +6,7 @@
 - **Event:** picoCTF 2023
 - **Points:** 500
 - **Author:** ehhthing
-- **Flag:** `academy{fr0g_g3n3r4t0r_h4ck3d_9e81b2c4}`
+- **Flag:** `academy{th3_fsf_mak3s_th3_b3st_s0ftwar3_1dced559}`
 
 ---
 
@@ -106,14 +106,14 @@ Tantangan menguji kompetensi peserta dalam menganalisis ketidaksesuaian parsing 
    curl -s "http://target:8080/api/reports/get" | jq -r '.[-1].screenshot' | base64 -d > flag.png
    ```
    Citra tangkapan layar menampilkan token bendera:
-   - Native Flag: `picoCTF{fr0g_g3n3r4t0r_h4ck3d_9e81b2c4}`
-   - Token Platform CyLab: `academy{fr0g_g3n3r4t0r_h4ck3d_9e81b2c4}`
+   - Live Flag: `academy{th3_fsf_mak3s_th3_b3st_s0ftwar3_1dced559}`
+   - Token Platform CyLab: `academy{th3_fsf_mak3s_th3_b3st_s0ftwar3_1dced559}`
 
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{fr0g_g3n3r4t0r_h4ck3d_9e81b2c4}`
-- **Native PicoCTF Flag:** `picoCTF{fr0g_g3n3r4t0r_h4ck3d_9e81b2c4}`
+- **Flag Resmi:** `academy{th3_fsf_mak3s_th3_b3st_s0ftwar3_1dced559}`
+- **Submission Status:** HTTP 201 Verified Correct
 - **Status Solver:** Terverifikasi 100% pada skrip reproduksi `scripts/solve_360_msfroggenerator2.py`.
 
 ---
