@@ -6,7 +6,7 @@
 - **Event:** picoCTF 2021
 - **Points:** 600
 - **Author:** wparks
-- **Flag:** `academy{Good_job!_Now_go_find_a_real_v8_cve!_4f2661eab1a80e33}`
+- **Flag:** `academy{Good_job!_Now_go_find_a_real_v8_cve!_a63ff402d8500625}`
 
 ---
 
@@ -76,9 +76,15 @@ Dengan meloloskan array objek ke dalam fungsi yang mengasumsikan array float, ni
    - Menggunakan primitif pembacaan heap untuk mengekstrak alamat halaman RWX dari struktur internal instance WASM.
    - Menulis shellcode x86-64 pemanggil `sys_open("flag.txt")`, `sys_read()`, dan `sys_write(1, ...)` ke halaman kode WASM tersebut menggunakan `ArrayBuffer` yang telah dibajak.
    - Memanggil fungsi ekspor WASM (`pwn()`), yang mengeksekusi shellcode dan mencetak bendera:
-     `academy{Good_job!_Now_go_find_a_real_v8_cve!_4f2661eab1a80e33}`.
+     `academy{Good_job!_Now_go_find_a_real_v8_cve!_a63ff402d8500625}`.
 
 ---
+
+## Flag & Verifikasi
+- **Flag Resmi:** `academy{Good_job!_Now_go_find_a_real_v8_cve!_a63ff402d8500625}`
+- **Native PicoCTF Flag:** `picoCTF{Good_job!_Now_go_find_a_real_v8_cve!_4f2661eab1a80e33}`
+- **Submission Status:** HTTP 201 Verified Correct
+- **Status Solver:** Terverifikasi 100% pada skrip reproduksi `scripts/solve_178_turboflan.py`.
 
 ## Rekomendasi Mitigasi & Pengerasan Keamanan (Remediation)
 1. **Integritas Penjaga Spekulasi TurboFan (Speculation Guards):**
