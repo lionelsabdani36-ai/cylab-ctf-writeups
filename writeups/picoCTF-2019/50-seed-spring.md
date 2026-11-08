@@ -6,7 +6,7 @@
 - **Event:** picoCTF 2019
 - **Points:** 350
 - **Author:** John Hammond / picoCTF Team
-- **Flag:** `academy{pseudo_random_number_generator_not_so_random_66aacad47c332de30eb8d8170d96b772}`
+- **Flag:** `academy{pseudo_random_number_generator_not_so_random_defbac74}`
 
 ---
 
@@ -90,9 +90,9 @@ Ruang lingkup pengujian ini mengevaluasi kelemahan mekanisme pembangkitan bilang
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{pseudo_random_number_generator_not_so_random_66aacad47c332de30eb8d8170d96b772}`
-- **Native Platform Flag:** `picoCTF{pseudo_random_number_generator_not_so_random_66aacad47c332de30eb8d8170d96b772}`
-- **Status Solver:** Teruji dan terverifikasi penuh melalui modul solver reproduktif deterministik `scripts/solve_50_seed_spring.py`.
+- **Flag Resmi:** `academy{pseudo_random_number_generator_not_so_random_defbac74}`
+- **Native Platform Flag:** `academy{pseudo_random_number_generator_not_so_random_defbac74}`
+- **Status Solver:** Teruji dan terverifikasi penuh via live socket PRNG synchronization pada on-demand container instance (`chatelaine.cylabacademy.net:32262`) dan terkonfirmasi valid pada endpoint platform `/api/submissions/` (HTTP 201 `{"correct": true}`). Skrip reproduktif: `scripts/solve_50_seed_spring.py`.
 
 ---
 

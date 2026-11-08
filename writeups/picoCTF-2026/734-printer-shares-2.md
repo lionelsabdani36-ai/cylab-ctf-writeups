@@ -6,7 +6,7 @@
 - **Event:** picoCTF 2026
 - **Points:** 200
 - **Author:** CyLab Engineering Team
-- **Flag:** `academy{5mb_pr1nter_5h4re5_5ecure_b243735c}`
+- **Flag:** `academy{5mb_pr1nter_5h4re5_5ecure_5db9cacb}`
 
 ---
 
@@ -74,10 +74,10 @@ Setelah kebocoran dokumen penting pada implementasi print server awal (Printer S
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{5mb_pr1nter_5h4re5_5ecure_b243735c}`
-- **Native PicoCTF Flag:** `picoCTF{5mb_pr1nter_5h4re5_5ecure_b243735c}`
+- **Flag Resmi:** `academy{5mb_pr1nter_5h4re5_5ecure_5db9cacb}`
+- **Native PicoCTF Flag:** `picoCTF{5mb_pr1nter_5h4re5_5ecure_5db9cacb}`
 - **Kredensial Valid:** `joe:popcorn`
-- **Status Solver:** Terverifikasi melalui skrip reproduktif `scripts/solve_734_printer_shares_2.py`.
+- **Status Solver:** Teruji dan terverifikasi penuh via live SMB share extraction pada on-demand container instance (`xebec.cylabacademy.net:18513`) dan terkonfirmasi valid pada endpoint platform `/api/submissions/` (HTTP 201 `{"correct": true}`). Skrip reproduktif: `scripts/solve_734_printer_shares_2.py`.
 
 ---
 
