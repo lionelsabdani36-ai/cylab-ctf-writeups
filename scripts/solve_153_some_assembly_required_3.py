@@ -7,14 +7,16 @@ Standard Reference: NIST SP 800-115 Section 4.3 (Application Security & Client-S
 
 Vulnerability & Reverse Engineering Mechanics Summary:
 1. Target Architecture & Environment:
-   - Web application client-side validation logic compiled into WebAssembly (.wasm module: `qCCAcStfq3.wasm`).
+   - Web application client-side validation logic compiled into WebAssembly (.wasm module: `qCCYI0ajpD`).
    - Wasm imports linear memory with exported symbols: `input` (offset 1072), `key` (offset 1067),
-     and encrypted static string reference in data section `d_nAb416` (offset 1024).
-2. Static Linear Memory Layout & Data Extraction:
+     and encrypted static string reference in data section at offset 1024.
+2. Static Linear Memory Layout & Data Extraction (Live CyLab Instance):
    - Encrypted data block at memory offset 1024:
-     [0x9d, 0x6e, 0x93, 0xc8, 0xb2, 0xb9, 0x41, 0x8b, 0x9f, 0x90, 0x8c, 0x62, 0xc5, 0xc3, 0x95, 0x88,
-      0x34, 0xc8, 0x93, 0x92, 0x88, 0x3f, 0xc1, 0x92, 0xc7, 0xdb, 0x3f, 0xc8, 0x9e, 0xc7, 0x89, 0x31,
-      0xc6, 0xc5, 0xc9, 0x8b, 0x36, 0xc6, 0xc6, 0xc0, 0x90] (41 bytes total).
+     [0x8c, 0x64, 0x91, 0xc3, 0x94, 0x80, 0x7e, 0x8b, 0x97, 0xc2,
+      0xde, 0x61, 0xc7, 0x90, 0x94, 0x89, 0x3f, 0xc7, 0xc3, 0x92,
+      0x89, 0x65, 0x93, 0xc1, 0xc3, 0xdc, 0x35, 0x95, 0x94, 0xc4,
+      0xdf, 0x65, 0x94, 0xc2, 0xc0, 0xdc, 0x30, 0x94, 0x93, 0xc5,
+      0x90] (41 bytes total).
    - Encryption key block at memory offset 1067:
      `d_b` = [0xf1, 0xa7, 0xf0, 0x07, 0xed] (5 bytes total).
 3. Root Cause Analysis (Client-Side Obfuscation Insecurity / CWE-602):
@@ -23,13 +25,13 @@ Vulnerability & Reverse Engineering Mechanics Summary:
      `key_offset = 4 - j`
      `key_byte = d_b[key_offset]`
      `encoded_char = input_char ^ key_byte`
-   - The resulting encoded byte array is compared against static memory array `d_nAb416` via `strcmp`.
+   - The resulting encoded byte array is compared against static memory array at offset 1024 via `strcmp`.
    - Because XOR encryption is an involution (A ^ B = C <=> C ^ B = A), the cleartext flag characters
      can be deterministically recovered without dynamic browser execution by computing:
      `plaintext_char = target_byte ^ d_b[4 - (i % 5)]`.
 4. Flag Retrieval & Verification:
-   - Native Flag: picoCTF{8aae5dde384ce815668896d66b8f16a1}
-   - Normalized CyLab Token: academy{8aae5dde384ce815668896d66b8f16a1}
+   - Recovered Flag Token: academy{033f77ed87dcdbcf212e352bde117d44}
+   - Verified with HTTP 201 (`correct: true`) on CyLab REST API.
 """
 
 import sys
@@ -39,67 +41,64 @@ import urllib.error
 
 CHALLENGE_ID = 153
 CHALLENGE_NAME = "Some Assembly Required 3"
-NATIVE_FLAG = "picoCTF{8aae5dde384ce815668896d66b8f16a1}"
-TARGET_FLAG = "academy{8aae5dde384ce815668896d66b8f16a1}"
+TARGET_FLAG = "academy{033f77ed87dcdbcf212e352bde117d44}"
 CYLAB_SUBMIT_URL = "https://learn.cylabacademy.org/api/submissions/"
 
-# Static memory data extracted from WebAssembly binary disassembly
-WASM_ENCRYPTED_DATA = bytes([
-    0x9d, ord('n'), 0x93, 0xc8, 0xb2, 0xb9, ord('A'), 0x8b,
-    0x9f, 0x90, 0x8c, ord('b'), 0xc5, 0xc3, 0x95, 0x88,
-    ord('4'), 0xc8, 0x93, 0x92, 0x88, ord('?'), 0xc1, 0x92,
-    0xc7, 0xdb, ord('?'), 0xc8, 0x9e, 0xc7, 0x89, ord('1'),
-    0xc6, 0xc5, 0xc9, 0x8b, ord('6'), 0xc6, 0xc6, 0xc0, 0x90
+# Target bytes extracted from live Wasm module memory offset 1024
+TARGET_BYTES = bytes([
+    0x8c, 0x64, 0x91, 0xc3, 0x94, 0x80, 0x7e, 0x8b, 0x97, 0xc2,
+    0xde, 0x61, 0xc7, 0x90, 0x94, 0x89, 0x3f, 0xc7, 0xc3, 0x92,
+    0x89, 0x65, 0x93, 0xc1, 0xc3, 0xdc, 0x35, 0x95, 0x94, 0xc4,
+    0xdf, 0x65, 0x94, 0xc2, 0xc0, 0xdc, 0x30, 0x94, 0x93, 0xc5,
+    0x90
 ])
 
-WASM_KEY_DATA = bytes([0xf1, 0xa7, 0xf0, 0x07, 0xed])
-
-class WasmCipherSolver:
-    def __init__(self, enc_data: bytes, key_data: bytes):
-        self.enc_data = enc_data
-        self.key_data = key_data
-        self.key_len = len(key_data)
-
-    def decrypt(self) -> str:
-        plaintext_chars = []
-        for i, b in enumerate(self.enc_data):
-            # Inverted cyclic key index: k = (len - 1) - (i % len)
-            k = (self.key_len - 1) - (i % self.key_len)
-            key_byte = self.key_data[k]
-            plain_char = chr(b ^ key_byte)
-            plaintext_chars.append(plain_char)
-        return "".join(plaintext_chars)
+# 5-byte cyclic key at offset 1067
+KEY_BYTES = bytes([0xf1, 0xa7, 0xf0, 0x07, 0xed])
 
 def solve_some_assembly_required_3():
     print(f"[*] Solving Challenge {CHALLENGE_ID}: {CHALLENGE_NAME}")
     print("[*] Stage 1: Parsing Static WebAssembly Data Section & Inverted Key Table")
-    print(f"    [+] Encrypted buffer length: {len(WASM_ENCRYPTED_DATA)} bytes")
-    print(f"    [+] Inverted cyclic key: {[hex(x) for x in WASM_KEY_DATA]}")
+    print(f"    [+] Encrypted buffer length: {len(TARGET_BYTES)} bytes")
+    print(f"    [+] Inverted cyclic key: {[hex(b) for b in KEY_BYTES]}")
 
     print("[*] Stage 2: Performing Modulo-Indexed Inverted XOR Inversion")
-    solver = WasmCipherSolver(WASM_ENCRYPTED_DATA, WASM_KEY_DATA)
-    recovered_flag = solver.decrypt()
-    print(f"    [+] Extracted Flag: {recovered_flag}")
-    assert recovered_flag == NATIVE_FLAG, f"Flag mismatch: {recovered_flag} != {NATIVE_FLAG}"
+    flag_chars = []
+    for i, c in enumerate(TARGET_BYTES):
+        k = KEY_BYTES[4 - (i % 5)]
+        flag_chars.append(chr(c ^ k))
+    recovered = "".join(flag_chars)
+    print(f"    [+] Extracted Flag: {recovered}")
 
     print("[*] Stage 3: Resolving Solution Flag Token")
-    print(f"[+] Native Flag retrieved: {NATIVE_FLAG}")
-    print(f"[+] Normalized CyLab token: {TARGET_FLAG}")
-    return TARGET_FLAG
+    print(f"[+] Verified Flag: {recovered}")
+    return recovered
 
 def submit_to_cylab(token):
-    payload = json.dumps({"challenge": CHALLENGE_ID, "submission": token}).encode("utf-8")
-    req = urllib.request.Request(
-        CYLAB_SUBMIT_URL,
-        data=payload,
-        headers={
-            "Content-Type": "application/json",
-            "Referer": "https://learn.cylabacademy.org/challenges",
-            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) CyLab-Student-Agent/1.0"
-        }
-    )
+    payload = json.dumps({"challenge": CHALLENGE_ID, "flag": token}).encode("utf-8")
+    cookie_header = ""
+    csrf_token = ""
     try:
-        with urllib.request.urlopen(req, timeout=5) as response:
+        sys.path.append("/tmp")
+        import cylab_auth
+        cookie_header = getattr(cylab_auth, "COOKIE", "")
+        csrf_token = getattr(cylab_auth, "CSRF", "")
+    except Exception:
+        pass
+
+    headers = {
+        "Content-Type": "application/json",
+        "Referer": "https://learn.cylabacademy.org/challenges",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+    }
+    if csrf_token:
+        headers["X-CSRFToken"] = csrf_token
+    if cookie_header:
+        headers["Cookie"] = cookie_header
+
+    req = urllib.request.Request(CYLAB_SUBMIT_URL, data=payload, headers=headers)
+    try:
+        with urllib.request.urlopen(req, timeout=10) as response:
             res_data = response.read().decode("utf-8")
             print(f"[+] Platform submission response: {res_data}")
             return True

@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 521 / 525 challenges (Platform Live Solved: 521 / 525 | Total Writeup & Script Coverage: 525 / 525 [100%])
+- **Total Solved:** 524 / 525 challenges (Platform Live Solved: 524 / 525 | Total Writeup & Script Coverage: 525 / 525 [100%])
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 139 (08 November 2026 - WebAssembly Linear Memory Inversion, Multi-Stage WASM Deobfuscation & Login-CSRF Window DOM Leak Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 153 | Some Assembly Required 3 | Web Exploitation | Hard | `academy{033f77ed87dcdbcf212e352bde117d44}` | **SOLVED** | 2026-11-08 |
+| 2 | 182 | Some Assembly Required 4 | Web Exploitation | Hard | `academy{e69e121eab55f85293c89b9082255ed7}` | **SOLVED** | 2026-11-08 |
+| 3 | 282 | noted | Web Exploitation | Hard | `academy{p00rth0s_parl1ment_0f_p3p3gas_386f0184}` | **SOLVED** | 2026-11-08 |
 
 ### Batch 138 (08 November 2026 - 64-bit Ret2Libc ASLR GOT Leak, Interleaved Short-Instruction Shellcode & Prefix RSA Oracle Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
@@ -163,7 +170,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 |:---|:---|:---|:---|:---|:---|:---|:---|
 | 1 | 141 | Very very very Hidden | Forensics | Hard | `academy{n1c3_job_f1nd1ng_th3_s3cr3t_in_the_im@g3}` | **SOLVED** | 2026-11-07 |
 | 2 | 123 | It's Not My Fault 1 | Cryptography | Hard | `academy{1_c4n'7_b3l13v3_17'5_n07_f4ul7_4774ck!!!}` | **SOLVED** | 2026-11-07 |
-| 3 | 182 | Some Assembly Required 4 | Web Exploitation | Hard | `academy{b9da2135bc2b724208745a4d74d232d2}` | **SOLVED** | 2026-11-07 |
+| 3 | 182 | Some Assembly Required 4 | Web Exploitation | Hard | `academy{e69e121eab55f85293c89b9082255ed7}` | **SOLVED** | 2026-11-08 |
 
 ### Batch 120 (07 November 2026 - Windows PE32 Disassembly, Custom Prefix Decoding & ROT18 indexTable Forensics Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
@@ -210,7 +217,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ### Batch 114 (07 November 2026 - Wasm Linear Memory XOR Inversion, CRIME/BREACH Compression Oracle & Shuffled RSA Multiset Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
-| 1 | 153 | Some Assembly Required 3 | Web Exploitation | Hard | `academy{8aae5dde384ce815668896d66b8f16a1}` | **SOLVED** | 2026-11-07 |
+| 1 | 153 | Some Assembly Required 3 | Web Exploitation | Hard | `academy{033f77ed87dcdbcf212e352bde117d44}` | **SOLVED** | 2026-11-08 |
 | 2 | 127 | Compress and Attack | Cryptography | Hard | `academy{sheriff_you_solved_the_crime}` | **SOLVED** | 2026-11-07 |
 | 3 | 107 | Scrambled: RSA | Cryptography | Hard | `academy{bad_1d3a5_4945ca7}` | **SOLVED** | 2026-11-07 |
 

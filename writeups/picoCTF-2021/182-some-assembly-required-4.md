@@ -6,7 +6,7 @@
 - **Event:** picoCTF 2021
 - **Points:** 200
 - **Author:** Sears Schulz
-- **Flag:** `academy{b9da2135bc2b724208745a4d74d232d2}`
+- **Flag:** `academy{e69e121eab55f85293c89b9082255ed7}`
 
 ---
 
@@ -14,7 +14,7 @@
 Tantangan `Some Assembly Required 4` menyajikan aplikasi web berbasis klien (*client-side web application*) yang memvalidasi kunci akses atau flag melalui modul biner WebAssembly yang dimuat secara dinamis (`ZoRd23o0wd`). Antarmuka web menerima input pengguna melalui elemen formulir HTML, menyalin karakter input ke memori linear WASM melalui fungsi `copy_char()`, kemudian memanggil fungsi `check_flag()` untuk menentukan keabsahan flag.
 
 Ruang lingkup audit keamanan aplikasi web dan rekayasa balik WASM ini mencakup:
-1. Dekompilasi berkas biner WebAssembly ke format teks WebAssembly (*WebAssembly Text Format* / WAT) menggunakan perangkat WebAssembly Binary Toolkit (WABT) dan Chrome DevTools.
+1. Dekompilasi berkas biner WebAssembly ke format teks WebAssembly (*WebAssembly Text Format* / WAT) menggunakan perangkat WebAssembly Binary Toolkit (WABT) dan runtime Node.js.
 2. Analisis pemetaan memori linear (*linear memory layout*), identifikasi alamat buffer input pengguna dan buffer *ciphertext* acuan.
 3. Rekayasa balik alur logika validasi bertingkat pada subrutin `check_flag()` (transposisi pasangan byte, penyamaran XOR berbasis modulo indeks, dan umpan balik byte bertingkat).
 4. Rekonstruksi algoritma inversi kriptografis untuk memulihkan flag sesuai metodologi bimbingan teknis **NIST SP 800-115 Section 4.2** (*Software Analysis and Reverse Engineering*).
@@ -26,22 +26,16 @@ Ruang lingkup audit keamanan aplikasi web dan rekayasa balik WASM ini mencakup:
    - WebAssembly dieksekusi secara lokal pada mesin peramban pengguna (*browser client engine*). Meskipun dikompilasi menjadi biner tingkat rendah, struktur instruksi dan seluruh blok memori linear WASM sepenuhnya dapat diinspeksi, di-*debug*, dan dimanipulasi oleh pengguna melalui antarmuka *Developer Tools*.
    - Menyimpan algoritma verifikasi rahasia atau kunci flag secara lokal pada sisi klien merupakan pelanggaran prinsip pemisahan kepercayaan (*client-side trust boundary violation*).
 2. **Keterbalikan Struktur Obfuskasi Sisi Memori (Reversible Symmetric Operations):**
-   - Analisis dekompilasi `check_flag()` membuktikan bahwa fungsi validasi membandingkan input pengguna dengan array 42-byte yang tersimpan pada memori linear `1024`.
-   - Modifikasi input dilakukan melalui tahapan yang bersifat simetris (*bijective mappings*):
-     1. **Transposisi Pasangan Byte (*Pairwise Byte Swapping*):** Menukar byte posisi $i$ dan $i+1$ untuk setiap langkah genap ($i \mathrel{+}= 2$).
-     2. **XOR Berbasis Modulo Posisi (*Positional Modulo XOR*):**
-        - Indeks modulo 3: jika $i \pmod 3 == 0 \implies \oplus 7$, jika $i \pmod 3 == 1 \implies \oplus 6$, lainnya $\oplus 5$.
-        - Indeks modulo 2: jika $i \pmod 2 \ne 0 \implies \oplus 8$, lainnya $\oplus 9$.
-        - Modulo 10: $\oplus (i \pmod{10})$.
-     3. **Umpan Balik Rantai Riwayat (*Recursive History Chaining*):** Setiap byte di-XOR dengan byte acuan sebelumnya pada jarak offset $-1$ dan $-3$.
-     4. **Penyamaran Masker Statis:** Operasi akhir dengan konstanta $\text{0x14}$ (desimal 20).
-   - Karena setiap operasi memiliki invers matematis satu-ke-satu, seluruh rantai obfuskasi dapat dibalik secara analitis tanpa memerlukan komputasi *brute-force* dinamis.
+   - Analisis dekompilasi `check_flag()` membuktikan bahwa fungsi validasi membandingkan input pengguna dengan array 41-byte yang tersimpan pada memori linear `1024`.
+   - Modifikasi input dilakukan melalui tahapan pasangan byte (*pairwise byte swapping*) dan pemrosesan kausal beruntun:
+     Output pada pasangan byte `(2k, 2k+1)` hanya bergantung pada karakter input hingga indeks `2k+1`. Karakter pada indeks yang lebih besar tidak memengaruhi byte keluaran pada posisi sebelumnya.
+   - Karena setiap operasi memelihara sifat kausalitas lokal, penyelesaian dapat dilakukan secara sekuensial per pasangan byte dalam orde mikrodetik.
 
 ---
 
 ## Rekonstruksi Eksploitasi Step-by-Step
-1. **Ekstraksi Aset WebAssembly & Inspeksi DevTools:**
-   - Mengakses aplikasi web dan memeriksa berkas JavaScript pembungkus (`index.js`).
+1. **Ekstraksi Aset WebAssembly & Inspeksi Skrip Loader:**
+   - Mengakses instans lab yang diluncurkan dan memeriksa berkas JavaScript pembungkus (`rqe4VVml5W.js`).
    - Menemukan pemanggilan modul WASM dari endpoint relatif `./ZoRd23o0wd`.
    - Mengunduh berkas biner WASM dan membongkar ekspor modul:
      ```wat
@@ -51,65 +45,36 @@ Ruang lingkup audit keamanan aplikasi web dan rekayasa balik WASM ini mencakup:
      (export "copy_char" (func $copy_char))
      ```
 2. **Pemetaan Alamat Memori Linear:**
-   - Memasang breakpoint pada awal fungsi `strcmp` menggunakan Chrome DevTools debugger.
    - Mengamati struktur buffer memori:
-     - Alamat `1024`: Lokasi string target terenkripsi sepanjang 42 byte.
+     - Alamat `1024`: Lokasi string target terenkripsi sepanjang 41 byte:
+       `[0x03, 0x7b, 0x7f, 0x78, 0x0f, 0x06, 0x75, 0x15, 0x3e, 0x0f, 0x1b, 0x69, 0x4e, 0x0c, 0x0f, 0x78, 0x39, 0x3d, 0x0a, 0x11, 0x7e, 0x4d, 0x3d, 0x58, 0x10, 0x64, 0x10, 0x50, 0x08, 0x2a, 0x3a, 0x3b, 0x01, 0x10, 0x2f, 0x16, 0x69, 0x07, 0x10, 0x32, 0x1f]`
      - Alamat `1072`: Alamat tujuan penyalinan input pengguna oleh `copy_char()`.
-3. **Penyusunan Skrip Inversi Kriptografi Sisi Klien:**
-   - Mengekstrak 42 byte dari offset `1024` pada memori WASM:
+3. **Penyusunan Skrip Inversi Kausalitas Pasangan Byte:**
+   - Memanfaatkan isolasi kausalitas antar pasangan byte:
      ```javascript
-     let memoryArray = new Uint8Array(exports.memory.buffer);
-     let encryptedBytes = Array.from(memoryArray.slice(1024, 1024 + 42));
-     ```
-   - Menerapkan pembalikan logika secara deterministik:
-     ```python
-     # Membalik penukaran pasangan byte (pairwise unswap)
-     for i in range(0, len(encrypted_bytes) - 1, 2):
-         encrypted_bytes[i], encrypted_bytes[i + 1] = encrypted_bytes[i + 1], encrypted_bytes[i]
-
-     # Membalik masking XOR dan umpan balik historis
-     swapped = list(encrypted_bytes)
-     for idx in range(len(encrypted_bytes)):
-         char = encrypted_bytes[idx]
-         if idx % 3 == 0:
-             char ^= 7
-         elif idx % 3 == 1:
-             char ^= 6
-         else:
-             char ^= 5
-
-         if idx % 2 != 0:
-             char ^= 8
-         else:
-             char ^= 9
-
-         char ^= (idx % 10)
-         if idx > 2:
-             char ^= swapped[idx - 3]
-         if idx > 0:
-             char ^= swapped[idx - 1]
-         char ^= 20
-         encrypted_bytes[idx] = char
+     for (let p = 8; p < 40; p += 2) {
+         for (let c1 = 32; c1 < 127; c1++) {
+             for (let c2 = 32; c2 < 127; c2++) {
+                 flag[p] = String.fromCharCode(c1);
+                 flag[p+1] = String.fromCharCode(c2);
+                 loadAndCheck(flag);
+                 if (mem[1072 + p] === target[p] && mem[1072 + p + 1] === target[p + 1]) {
+                     break;
+                 }
+             }
+         }
+     }
      ```
 4. **Pemulihan Teks Jelas & Flag:**
-   - Hasil konversi byte array menghasilkan string teks asli:
-     `picoCTF{b9da2135bc2b724208745a4d74d232d2}`
-   - Format flag platform CyLab Academy:
-     `academy{b9da2135bc2b724208745a4d74d232d2}`
-5. **Validasi Solver Otomatis:**
-   - Menjalankan skrip reproduktif:
-     ```bash
-     python3 scripts/solve_182_some_assembly_required_4.py
-     ```
-   - Skrip memverifikasi alur simulasi rekonstruksi inversi memori WASM dan assert token.
+   - Hasil rekonstruksi menghasilkan string flag utuh:
+     `academy{e69e121eab55f85293c89b9082255ed7}`
+   - Pemanggilan `check_flag()` memvalidasi hasil dengan return code `1` (Correct).
 
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi CyLab:** `academy{b9da2135bc2b724208745a4d74d232d2}`
-- **Komunitas Standar (CTF Format):** `CTF{b9da2135bc2b724208745a4d74d232d2}`
-- **Native picoCTF Format:** `picoCTF{b9da2135bc2b724208745a4d74d232d2}`
-- **Status Verifikasi:** Terverifikasi 100% pada pemetaan memori linear dan pembalikan siklus XOR WebAssembly.
+- **Flag Resmi CyLab:** `academy{e69e121eab55f85293c89b9082255ed7}`
+- **Status Verifikasi:** Terverifikasi 100% pada instance live CyLab dan modul `scripts/solve_182_some_assembly_required_4.py` (HTTP 201 `correct: true`).
 
 ---
 

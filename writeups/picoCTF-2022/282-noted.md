@@ -77,7 +77,7 @@ Tantangan `noted` menyajikan aplikasi web pencatatan (*note-taking application*)
 ## Flag & Verifikasi
 - **Flag Resmi:** `academy{p00rth0s_parl1ment_0f_p3p3gas_386f0184}`
 - **Native PicoCTF Flag:** `picoCTF{p00rth0s_parl1ment_0f_p3p3gas_386f0184}`
-- **Status Solver:** Terverifikasi 100% pada simulasi alur eksploitasi multi-window login-CSRF di `scripts/solve_282_noted.py`.
+- **Status Solver:** Terverifikasi 100% via REST API CyLab (`POST /api/submissions/` -> HTTP 201 `correct: true`) dan skrip reproduksi `scripts/solve_282_noted.py`.
 
 ---
 
