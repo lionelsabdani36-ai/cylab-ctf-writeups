@@ -63,9 +63,10 @@ Tantangan `cancri-sp` menyajikan arsitektur browser-bot otomatis berskala besar.
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{d0ce6edc}`
-- **Native PicoCTF Flag:** `picoCTF{d0ce6edc}`
-- **Status Solver:** Terverifikasi 100% pada simulasi alur argument injection & CDP exfiltration di `scripts/solve_344_cancri_sp.py`.
+- **Flag Resmi:** `academy{11790d7c}`
+- **Submission Status:** HTTP 201 Verified Correct
+- **Live Flag File:** `flag-e2c177ac618158c06fff16a6e8820cc9`
+- **Status Solver:** Terverifikasi 100% pada eksekusi live argument injection & CDP exfiltration di `scripts/solve_344_cancri_sp.py`.
 
 ---
 
