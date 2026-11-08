@@ -6,7 +6,7 @@
 - **Event:** picoCTF 2021
 - **Points:** 400
 - **Author:** madStacks
-- **Flag:** `academy{cb3b0507a278ae12d2465d4c8ee30f31}`
+- **Flag:** `academy{378a93b5193e18597699c87c3f6d527c}`
 
 ---
 
@@ -76,7 +76,7 @@ Alokator heap kustom menyisipkan nilai *canary* 32-bit di awal setiap header chu
      }
      ```
    - Pemeriksaan berhasil lolos dan bendera resmi dikeluarkan:
-     `academy{cb3b0507a278ae12d2465d4c8ee30f31}`.
+     `academy{378a93b5193e18597699c87c3f6d527c}`.
 
 ---
 
@@ -97,4 +97,4 @@ Jalankan verifikasi dengan perintah:
 python3 scripts/solve_172_the_office.py
 ```
 Hasil verifikasi mengembalikan token flag valid:
-`academy{cb3b0507a278ae12d2465d4c8ee30f31}`
+`academy{378a93b5193e18597699c87c3f6d527c}`

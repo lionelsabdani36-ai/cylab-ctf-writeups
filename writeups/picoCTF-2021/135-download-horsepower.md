@@ -6,7 +6,7 @@
 - **Event:** picoCTF 2021
 - **Points:** 450
 - **Author:** wparks
-- **Flag:** `academy{sh0u1d_hAv3_d0wnl0ad3d_m0r3_rAm_3a9ef72562166255}`
+- **Flag:** `academy{sh0u1d_hAv3_d0wnl0ad3d_m0r3_rAm_97137af90089497a}`
 - **Native Flag:** `picoCTF{sh0u1d_hAv3_d0wnl0ad3d_m0r3_rAm_3a9ef72562166255}`
 
 ---
@@ -86,7 +86,7 @@ Dengan menempatkan sebuah `oob_arr` bertipe double tepat di sebelah array objek 
 
 5. **Pengekstrakan Token Flag:**
    Payload membaca berkas `flag.txt` dan mengalirkannya ke stdout:
-   `academy{sh0u1d_hAv3_d0wnl0ad3d_m0r3_rAm_3a9ef72562166255}`.
+   `academy{sh0u1d_hAv3_d0wnl0ad3d_m0r3_rAm_97137af90089497a}`.
 
 ---
 
@@ -107,4 +107,4 @@ Jalankan verifikasi dengan perintah:
 python3 scripts/solve_135_download_horsepower.py
 ```
 Hasil verifikasi mengembalikan token flag valid:
-`academy{sh0u1d_hAv3_d0wnl0ad3d_m0r3_rAm_3a9ef72562166255}`
+`academy{sh0u1d_hAv3_d0wnl0ad3d_m0r3_rAm_97137af90089497a}`

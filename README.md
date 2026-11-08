@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 143 (08 November 2026 - Custom Heap Canary UAF, V8 JSArray OOB Horsepower & Dynamic PTRACE JIT Indirection Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 172 | The Office | Binary Exploitation | Hard | `academy{378a93b5193e18597699c87c3f6d527c}` | **SOLVED** | 2026-11-08 |
+| 2 | 135 | Download Horsepower | Binary Exploitation | Hard | `academy{sh0u1d_hAv3_d0wnl0ad3d_m0r3_rAm_97137af90089497a}` | **SOLVED** | 2026-11-08 |
+| 3 | 737 | JITFP | Reverse Engineering | Hard | `academy{pr0cf5_d36ugg3r_d43a8ae7}` | **SOLVED** | 2026-11-08 |
+
 ### Batch 142 (08 November 2026 - Heap Callback Control Hijack, Analog Differential Gear Kinematics & V8 Float64 Shellcode Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
