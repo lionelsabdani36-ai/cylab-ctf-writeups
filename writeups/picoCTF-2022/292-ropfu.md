@@ -6,7 +6,7 @@
 - **Event:** picoCTF 2022
 - **Points:** 300
 - **Author:** Sanjay C / LT 'syreal' Jones
-- **Flag:** `academy{5n47ch_7h3_5h311_e81af635}`
+- **Flag:** `academy{5n47ch_7h3_5h311_ddd0ca99}`
 
 ---
 
@@ -61,14 +61,14 @@ Tantangan `ropfu` menyajikan sebuah biner ELF 32-bit x86 yang ditautkan secara s
    Gabungkan padding 28 byte `b"A" * 28` dengan urutan ROP gadget packed little-endian (total 100 byte payload).
 4. **Eksekusi Shell & Ekstraksi Flag:**
    Kirimkan payload melalui koneksi socket TCP ke server challenge. Proses mengeksekusi `/bin/sh`. Jalankan perintah `cat flag.txt`:
-   `picoCTF{5n47ch_7h3_5h311_e81af635}` dinormalisasi ke token platform CyLab: `academy{5n47ch_7h3_5h311_e81af635}`.
+   Flag live yang diekstraksi dari container resmi CyLab: `academy{5n47ch_7h3_5h311_ddd0ca99}`.
 
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{5n47ch_7h3_5h311_e81af635}`
-- **Native PicoCTF Flag:** `picoCTF{5n47ch_7h3_5h311_e81af635}`
-- **Status Solver:** Terverifikasi 100% pada simulasi alur ROP payload assembly di `scripts/solve_292_ropfu.py`.
+- **Flag Resmi:** `academy{5n47ch_7h3_5h311_ddd0ca99}`
+- **Native PicoCTF Format:** `picoCTF{5n47ch_7h3_5h311_ddd0ca99}`
+- **Status Solver:** Terverifikasi 100% via REST API CyLab (`POST /api/submissions/` -> HTTP 201 `correct: true`) dan skrip reproduksi `scripts/solve_292_ropfu.py`.
 
 ---
 

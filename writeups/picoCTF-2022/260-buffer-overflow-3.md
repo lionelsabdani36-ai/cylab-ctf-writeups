@@ -6,7 +6,7 @@
 - **Event:** picoCTF 2022
 - **Points:** 300
 - **Author:** Sanjay C / Palash Oswal
-- **Flag:** `academy{Stat1C_c4n4r13s_4R3_b4D_f9792127}`
+- **Flag:** `academy{Stat1C_c4n4r13s_4R3_b4D_ceaa3353}`
 
 ---
 
@@ -44,18 +44,18 @@ Tantangan `buffer overflow 3` menyajikan program biner ELF 32-bit (`i386-32-litt
    - Offset menuju canary: 64 byte (`b"A" * 64`)
    - Canary valid: 4 byte (`b"BiRd"`)
    - Padding menuju Saved EIP: 16 byte (`b"B" * 16`)
-   - Target EIP (`win()`): Alamat fungsi `win()` yang terletak pada alamat statis `0x08049367` (dikarenakan No PIE).
+   - Target EIP (`win()`): Alamat fungsi `win()` yang terletak pada alamat statis `0x08049236` (dikarenakan No PIE).
 4. **Eksekusi Eksploit & Ekstraksi Flag:**
    Payload dikirim dengan panjang `count = 88`. Program melewati verifikasi `memcmp()` tanpa memicu peringatan *stack smashing*, dan saat `vuln()` mengembalikan eksekusi via opcode `ret`, kontrol CPU melompat ke `win()`, membuka `flag.txt`, dan mencetak flag ke terminal.
 5. **Hasil Verifikasi Flag:**
-   `picoCTF{Stat1C_c4n4r13s_4R3_b4D_f9792127}` dinormalisasi ke token resmi CyLab: `academy{Stat1C_c4n4r13s_4R3_b4D_f9792127}`.
+   Flag live yang diekstraksi dari container resmi CyLab: `academy{Stat1C_c4n4r13s_4R3_b4D_ceaa3353}`.
 
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{Stat1C_c4n4r13s_4R3_b4D_f9792127}`
-- **Native PicoCTF Flag:** `picoCTF{Stat1C_c4n4r13s_4R3_b4D_f9792127}`
-- **Status Solver:** Terverifikasi 100% pada skrip reproduksi `scripts/solve_260_buffer_overflow_3.py`.
+- **Flag Resmi:** `academy{Stat1C_c4n4r13s_4R3_b4D_ceaa3353}`
+- **Native PicoCTF Format:** `picoCTF{Stat1C_c4n4r13s_4R3_b4D_ceaa3353}`
+- **Status Solver:** Terverifikasi 100% via REST API CyLab (`POST /api/submissions/` -> HTTP 201 `correct: true`) dan skrip reproduksi `scripts/solve_260_buffer_overflow_3.py`.
 
 ---
 

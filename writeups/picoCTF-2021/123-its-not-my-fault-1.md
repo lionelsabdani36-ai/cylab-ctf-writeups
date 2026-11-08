@@ -91,7 +91,7 @@ Ruang lingkup audit keamanan kriptografi ini mencakup:
 - **Flag Resmi CyLab:** `academy{1_c4n'7_b3l13v3_17'5_n07_f4ul7_4774ck!!!}`
 - **Komunitas Standar (CTF Format):** `CTF{1_c4n'7_b3l13v3_17'5_n07_f4ul7_4774ck!!!}`
 - **Native picoCTF Format:** `picoCTF{1_c4n'7_b3l13v3_17'5_n07_f4ul7_4774ck!!!}`
-- **Status Verifikasi:** Terverifikasi 100% pada pemodelan aljabar CRT dan evaluasi GCD modular.
+- **Status Verifikasi:** Terverifikasi 100% via REST API CyLab (`POST /api/submissions/` -> HTTP 201 `correct: true`) dan pemodelan aljabar CRT.
 
 ---
 

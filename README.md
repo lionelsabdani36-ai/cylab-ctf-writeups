@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 515 / 525 challenges (Platform Live Solved: 515 / 525 | Total Writeup & Script Coverage: 525 / 525 [100%])
+- **Total Solved:** 518 / 525 challenges (Platform Live Solved: 518 / 525 | Total Writeup & Script Coverage: 525 / 525 [100%])
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 137 (08 November 2026 - RSA-CRT Small Exponent Cryptanalysis, Custom Static Canary Bruteforce & Executable Stack ROP Syscall Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 123 | It's Not My Fault 1 | Cryptography | Hard | `academy{1_c4n'7_b3l13v3_17'5_n07_f4ul7_4774ck!!!}` | **SOLVED** | 2026-11-08 |
+| 2 | 260 | buffer overflow 3 | Binary Exploitation | Hard | `academy{Stat1C_c4n4r13s_4R3_b4D_ceaa3353}` | **SOLVED** | 2026-11-08 |
+| 3 | 292 | ropfu | Binary Exploitation | Hard | `academy{5n47ch_7h3_5h311_ddd0ca99}` | **SOLVED** | 2026-11-08 |
 
 ### Batch 136 (08 November 2026 - Signed Negative Index Function Pointer Hijack, Residual Stack Cache Extraction & Windows PE 32-bit Ret2Win Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
@@ -252,7 +259,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ### Batch 106 (07 November 2026 - Custom Static Canary Bruteforce, In-Memory Plaintext Exposure & Stack VM Maze Traversal Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
-| 1 | 260 | buffer overflow 3 | Binary Exploitation | Hard | `academy{Stat1C_c4n4r13s_4R3_b4D_f9792127}` | **SOLVED** | 2026-11-07 |
+| 1 | 260 | buffer overflow 3 | Binary Exploitation | Hard | `academy{Stat1C_c4n4r13s_4R3_b4D_ceaa3353}` | **SOLVED** | 2026-11-07 |
 | 2 | 222 | not crypto | Reverse Engineering | Hard | `academy{c0mp1l3r_0pt1m1z4t10n_15_pur3_w1z4rdry_but_n0_pr0bl3m?}` | **SOLVED** | 2026-11-07 |
 | 3 | 221 | MATRIX | Reverse Engineering | Hard | `academy{y0uv3_3sc4p3d_th3_m4ze...f0r_n0w-hYkq2D9PmrA5GpEq}` | **SOLVED** | 2026-11-07 |
 
@@ -267,7 +274,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
 | 1 | 298 | SideChannel | Forensics | Hard | `academy{t1m1ng_4tt4ck_9803bd25}` | **SOLVED** | 2026-11-07 |
-| 2 | 292 | ropfu | Binary Exploitation | Hard | `academy{5n47ch_7h3_5h311_e81af635}` | **SOLVED** | 2026-11-07 |
+| 2 | 292 | ropfu | Binary Exploitation | Hard | `academy{5n47ch_7h3_5h311_ddd0ca99}` | **SOLVED** | 2026-11-07 |
 | 3 | 283 | NSA Backdoor | Cryptography | Hard | `academy{cf58a7b8}` | **SOLVED** | 2026-11-07 |
 
 ### Batch 103 (07 November 2026 - Chromium CDP Argument Injection, Win32 PE Ret2Win & Stack Residue ROP Leak Sprint, 3/3)
