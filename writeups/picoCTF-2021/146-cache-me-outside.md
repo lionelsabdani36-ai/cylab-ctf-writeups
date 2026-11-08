@@ -6,7 +6,7 @@
 - **Event:** picoCTF 2021
 - **Points:** 70
 - **Author:** madStacks
-- **Flag:** `academy{5c9838eff837a883a30c38001280f07d}`
+- **Flag:** `academy{25c1ef805422cbdb95ddc243646718c6}`
 
 ---
 
@@ -91,9 +91,9 @@ Program membaca isi `flag.txt` ke dalam buffer, mengalokasikan 7 chunk berturut-
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{5c9838eff837a883a30c38001280f07d}`
-- **Native PicoCTF Flag:** `picoCTF{5c9838eff837a883a30c38001280f07d}`
-- **Status Solver:** Terverifikasi 100% pada skrip reproduksi `scripts/solve_146_cache_me_outside.py`.
+- **Flag Resmi:** `academy{25c1ef805422cbdb95ddc243646718c6}`
+- **Native PicoCTF Flag:** `picoCTF{25c1ef805422cbdb95ddc243646718c6}`
+- **Status Solver:** Terverifikasi 100% pada platform REST API CyLab (`POST /api/submissions/` -> HTTP 201 `correct: true`) via live socket injection.
 
 ---
 

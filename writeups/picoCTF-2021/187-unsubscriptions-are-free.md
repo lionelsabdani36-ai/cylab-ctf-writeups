@@ -6,7 +6,7 @@
 - **Event:** picoCTF 2021
 - **Points:** 100
 - **Author:** thelshell
-- **Flag:** `academy{d0ubl3_j30p4rdy_cff1f12d}`
+- **Flag:** `academy{d0ubl3_j30p4rdy_70474142}`
 
 ---
 
@@ -107,9 +107,9 @@ Tantangan ini menuntut peserta untuk menganalisis pengelolaan memori dinamis gli
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{d0ubl3_j30p4rdy_cff1f12d}`
-- **Native PicoCTF Flag:** `picoCTF{d0ubl3_j30p4rdy_cff1f12d}`
-- **Status Solver:** Terverifikasi 100% pada skrip reproduksi `scripts/solve_187_unsubscriptions_are_free.py`.
+- **Flag Resmi:** `academy{d0ubl3_j30p4rdy_70474142}`
+- **Native PicoCTF Flag:** `picoCTF{d0ubl3_j30p4rdy_70474142}`
+- **Status Solver:** Terverifikasi 100% pada platform REST API CyLab (`POST /api/submissions/` -> HTTP 201 `correct: true`) via live UAF exploit.
 
 ---
 

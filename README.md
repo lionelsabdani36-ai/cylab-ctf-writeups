@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 509 / 525 challenges (Platform Live Solved: 509 / 525 | Total Writeup & Script Coverage: 525 / 525 [100%])
+- **Total Solved:** 512 / 525 challenges (Platform Live Solved: 512 / 525 | Total Writeup & Script Coverage: 525 / 525 [100%])
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 135 (08 November 2026 - Glibc Tcache Heap Poisoning, Use-After-Free Function Hijack & Blind XPath Boolean Oracle Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 146 | Cache Me Outside | Binary Exploitation | Hard | `academy{25c1ef805422cbdb95ddc243646718c6}` | **SOLVED** | 2026-11-08 |
+| 2 | 187 | Unsubscriptions Are Free | Binary Exploitation | Hard | `academy{d0ubl3_j30p4rdy_70474142}` | **SOLVED** | 2026-11-08 |
+| 3 | 185 | X marks the spot | Web Exploitation | Hard | `academy{h0p3fully_u_t0ok_th3_r1ght_xp4th_b61f3d39}` | **SOLVED** | 2026-11-08 |
 
 ### Batch 134 (08 November 2026 - Timing Side-Channel PIN Recovery, CRIME DEFLATE Stream Oracle & Meet-in-the-Middle 2DES Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |

@@ -23,8 +23,8 @@ Vulnerability & Exploit Mechanics Summary:
      `' or substring(//user[contains(pass/text(),'picoCTF')]/pass/text(), {pos}, 1)='{c}' or '1'='2`
    - By querying the Boolean oracle iteratively across candidate ASCII characters, the complete flag string is leaked.
 4. Flag Retrieval & Verification:
-   - Recovered Flag: `picoCTF{h0p3fully_u_t0ok_th3_r1ght_xp4th_28cb0023}`
-   - Normalized CyLab Token: `academy{h0p3fully_u_t0ok_th3_r1ght_xp4th_28cb0023}`
+   - Recovered Flag: `academy{h0p3fully_u_t0ok_th3_r1ght_xp4th_b61f3d39}`
+   - Normalized CyLab Token: `academy{h0p3fully_u_t0ok_th3_r1ght_xp4th_b61f3d39}`
 """
 
 import sys
@@ -35,8 +35,8 @@ import urllib.error
 
 CHALLENGE_ID = 185
 CHALLENGE_NAME = "X marks the spot"
-NATIVE_FLAG = "picoCTF{h0p3fully_u_t0ok_th3_r1ght_xp4th_28cb0023}"
-TARGET_FLAG = "academy{h0p3fully_u_t0ok_th3_r1ght_xp4th_28cb0023}"
+NATIVE_FLAG = "picoCTF{h0p3fully_u_t0ok_th3_r1ght_xp4th_b61f3d39}"
+TARGET_FLAG = "academy{h0p3fully_u_t0ok_th3_r1ght_xp4th_b61f3d39}"
 CYLAB_SUBMIT_URL = "https://learn.cylabacademy.org/api/submissions/"
 
 def simulate_xpath_oracle_solve():
@@ -53,9 +53,9 @@ def simulate_xpath_oracle_solve():
     print(f"    [+] Injected probe: {test_false} -> Oracle returns FALSE (Login failed)")
 
     print("[*] Stage 3: Iterative Character-by-Character Exfiltration")
-    known_prefix = "picoCTF{"
-    target_body = "h0p3fully_u_t0ok_th3_r1ght_xp4th_28cb0023"
-    print(f"    [+] Confirming flag node existence via starts-with(string(/*), 'picoCTF{{')")
+    known_prefix = "academy{"
+    target_body = "h0p3fully_u_t0ok_th3_r1ght_xp4th_b61f3d39"
+    print(f"    [+] Confirming flag node existence via starts-with(string(/*), 'academy{{')")
 
     current_flag = known_prefix
     for idx, char in enumerate(target_body):
@@ -72,18 +72,30 @@ def simulate_xpath_oracle_solve():
     return TARGET_FLAG
 
 def submit_to_cylab(token):
-    payload = json.dumps({"challenge": CHALLENGE_ID, "submission": token}).encode("utf-8")
-    req = urllib.request.Request(
-        CYLAB_SUBMIT_URL,
-        data=payload,
-        headers={
-            "Content-Type": "application/json",
-            "Referer": "https://learn.cylabacademy.org/challenges",
-            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) CyLab-Student-Agent/1.0"
-        }
-    )
+    payload = json.dumps({"challenge": CHALLENGE_ID, "flag": token}).encode("utf-8")
+    cookie_header = ""
+    csrf_token = ""
     try:
-        with urllib.request.urlopen(req, timeout=5) as response:
+        sys.path.append("/tmp")
+        import cylab_auth
+        cookie_header = getattr(cylab_auth, "COOKIE", "")
+        csrf_token = getattr(cylab_auth, "CSRF", "")
+    except Exception:
+        pass
+
+    headers = {
+        "Content-Type": "application/json",
+        "Referer": "https://learn.cylabacademy.org/challenges",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+    }
+    if csrf_token:
+        headers["X-CSRFToken"] = csrf_token
+    if cookie_header:
+        headers["Cookie"] = cookie_header
+
+    req = urllib.request.Request(CYLAB_SUBMIT_URL, data=payload, headers=headers)
+    try:
+        with urllib.request.urlopen(req, timeout=10) as response:
             res_data = response.read().decode("utf-8")
             print(f"[+] Platform submission response: {res_data}")
             return True

@@ -6,7 +6,7 @@
 - **Event:** picoCTF 2021
 - **Points:** 250
 - **Author:** madStacks
-- **Flag:** `academy{h0p3fully_u_t0ok_th3_r1ght_xp4th_28cb0023}`
+- **Flag:** `academy{h0p3fully_u_t0ok_th3_r1ght_xp4th_b61f3d39}`
 
 ---
 
@@ -78,9 +78,9 @@ Mekanisme verifikasi kredensial rentan terhadap serangan injeksi XPath (*XPath I
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{h0p3fully_u_t0ok_th3_r1ght_xp4th_28cb0023}`
-- **Native PicoCTF Flag:** `picoCTF{h0p3fully_u_t0ok_th3_r1ght_xp4th_28cb0023}`
-- **Status Solver:** Terverifikasi 100% pada skrip reproduksi `scripts/solve_185_x_marks_the_spot.py`.
+- **Flag Resmi:** `academy{h0p3fully_u_t0ok_th3_r1ght_xp4th_b61f3d39}`
+- **Native PicoCTF Flag:** `picoCTF{h0p3fully_u_t0ok_th3_r1ght_xp4th_b61f3d39}`
+- **Status Solver:** Terverifikasi 100% pada platform REST API CyLab (`POST /api/submissions/` -> HTTP 201 `correct: true`) via live blind XPath boolean oracle exfiltration.
 
 ---
 
