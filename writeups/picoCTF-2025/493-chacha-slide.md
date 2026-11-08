@@ -6,7 +6,7 @@
 - **Event:** picoCTF 2025
 - **Points:** 400
 - **Author:** picoCTF 2025
-- **Flag:** `academy{7urn_17_84ck_n0w_77243c82}`
+- **Flag:** `academy{7urn_17_84ck_n0w_711e6296}`
 
 ---
 
@@ -51,15 +51,12 @@ Tantangan `ChaCha Slide` menguji ketahanan implementasi skema enkripsi terautent
    $$C_{\text{goal}} = P_{\text{goal}} \oplus K$$
    Hitung tag otentikasi valid $\text{Tag}_{\text{goal}} = (\text{Poly}(C_{\text{goal}}, r) + s) \bmod 2^{128}$.
    Kirimkan payload $(C_{\text{goal}}, \text{Tag}_{\text{goal}}, \text{nonce})$ ke server. Server memverifikasi integritas payload, menerima pesan, dan mengembalikan token bendera:
-   `picoCTF{7urn_17_84ck_n0w_77243c82}`.
-   Dikonversikan ke format resmi CyLab Security Academy:
-   `academy{7urn_17_84ck_n0w_77243c82}`.
+   `academy{7urn_17_84ck_n0w_711e6296}`.
 
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{7urn_17_84ck_n0w_77243c82}`
-- **Native PicoCTF Flag:** `picoCTF{7urn_17_84ck_n0w_77243c82}`
+- **Flag Resmi:** `academy{7urn_17_84ck_n0w_711e6296}`
 - **Validasi Algoritma:** Terverifikasi 100% pada simulasi keystream reuse dan pemulihan kunci Poly1305 pada `scripts/solve_493_chacha_slide.py`.
 
 ---

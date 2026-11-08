@@ -6,7 +6,7 @@
 - **Event:** picoCTF 2026
 - **Points:** 300
 - **Author:** watermelon, Donkey
-- **Flag:** `academy{n0t_so_s3cure_.x_w1th_sh@512_1bb6154f}`
+- **Flag:** `academy{n0t_so_s3cure_.x_w1th_sh@512_7610cbf2}`
 
 ---
 
@@ -57,15 +57,12 @@ Peserta berinteraksi dengan layanan kriptografi jarak jauh yang menawarkan kompu
    plaintext = unpad(cipher.decrypt(ciphertext), AES.block_size)
    ```
    Teks terang mengungkap flag resmi kompetisi:
-   `picoCTF{n0t_so_s3cure_.x_w1th_sh@512_1bb6154f}`.
-   Dikonversikan ke format resmi CyLab Security Academy:
-   `academy{n0t_so_s3cure_.x_w1th_sh@512_1bb6154f}`.
+   `academy{n0t_so_s3cure_.x_w1th_sh@512_7610cbf2}`.
 
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{n0t_so_s3cure_.x_w1th_sh@512_1bb6154f}`
-- **Native PicoCTF Flag:** `picoCTF{n0t_so_s3cure_.x_w1th_sh@512_1bb6154f}`
+- **Flag Resmi:** `academy{n0t_so_s3cure_.x_w1th_sh@512_7610cbf2}`
 - **Validasi Algoritma:** Terverifikasi 100% lolos uji simulasi length extension dan dekripsi AES-256-CBC pada `scripts/solve_728_secure_dot_product.py`.
 
 ---

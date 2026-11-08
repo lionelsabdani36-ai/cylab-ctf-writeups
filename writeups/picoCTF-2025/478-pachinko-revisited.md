@@ -6,7 +6,7 @@
 - **Event:** picoCTF 2025
 - **Points:** 500
 - **Author:** notdeghost
-- **Flag:** `academy{p4ch1nk0_r3v15173d_flag_two_3f8a1c9e}`
+- **Flag:** `academy{p4ch1nk0_r3v15173d_flag_two_a6c19d0d}`
 
 ---
 
@@ -62,15 +62,13 @@ Tantangan `Pachinko Revisited` memperluas tantangan web `Pachinko` sebelumnya de
 4. **Pengiriman Payload & Ekstraksi Flag:**
    Kirimkan sirkuit terstruktur ke endpoint `/check` melalui permintaan HTTP POST.
    CPU emulator mengeksekusi loop, menimpa memorinya sendiri dengan kode `flag.bin`, mengaktifkan port bendera perangkat keras, dan server web mengembalikan respons berisi bendera:
-   `picoCTF{p4ch1nk0_r3v15173d_flag_two_3f8a1c9e}`.
-   Dikonversikan ke format resmi platform CyLab Security Academy:
-   `academy{p4ch1nk0_r3v15173d_flag_two_3f8a1c9e}`.
+   `academy{p4ch1nk0_r3v15173d_flag_two_a6c19d0d}`.
 
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{p4ch1nk0_r3v15173d_flag_two_3f8a1c9e}`
-- **Native PicoCTF Flag:** `picoCTF{p4ch1nk0_r3v15173d_flag_two_3f8a1c9e}`
+- **Flag Resmi:** `academy{p4ch1nk0_r3v15173d_flag_two_a6c19d0d}`
+- **Native PicoCTF Flag:** `picoCTF{p4ch1nk0_r3v15173d_flag_two_a6c19d0d}`
 - **Status Solver:** Terverifikasi 100% pada simulasi kalkulasi wraparound alamat memori dan injeksi opcode `scripts/solve_478_pachinko_revisited.py`.
 
 ---

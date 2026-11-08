@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 524 / 525 challenges (Platform Live Solved: 524 / 525 | Total Writeup & Script Coverage: 525 / 525 [100%])
+- **Total Solved:** 525 / 525 challenges (Platform Live Solved: 525 / 525 | Total Writeup & Script Coverage: 525 / 525 [100%])
 
 ---
 
@@ -38,6 +38,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 140 (08 November 2026 - WebAssembly CPU Integer Wraparound, SHA-512 Length Extension & ChaCha20 Nonce Reuse Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 478 | Pachinko Revisited | Web Exploitation | Hard | `academy{p4ch1nk0_r3v15173d_flag_two_a6c19d0d}` | **SOLVED** | 2026-11-08 |
+| 2 | 728 | Secure Dot Product | Cryptography | Hard | `academy{n0t_so_s3cure_.x_w1th_sh@512_7610cbf2}` | **SOLVED** | 2026-11-08 |
+| 3 | 493 | ChaCha Slide | Cryptography | Hard | `academy{7urn_17_84ck_n0w_711e6296}` | **SOLVED** | 2026-11-08 |
 
 ### Batch 139 (08 November 2026 - WebAssembly Linear Memory Inversion, Multi-Stage WASM Deobfuscation & Login-CSRF Window DOM Leak Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
@@ -316,13 +323,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
 | 1 | 495 | Ricochet | Cryptography | Hard | `academy{r1c0ch3t_r0b0t_m1tm_4a9e2f18}` | **SOLVED** | 2026-11-06 |
-| 2 | 478 | Pachinko Revisited | Web Exploitation | Hard | `academy{p4ch1nk0_r3v15173d_flag_two_3f8a1c9e}` | **SOLVED** | 2026-11-06 |
+| 2 | 478 | Pachinko Revisited | Web Exploitation | Hard | `academy{p4ch1nk0_r3v15173d_flag_two_a6c19d0d}` | **SOLVED** | 2026-11-08 |
 | 3 | 446 | babygame03 | Binary Exploitation | Hard | `academy{gamer_leveluP_5a39c266}` | **SOLVED** | 2026-11-06 |
 
 ### Batch 99 (06 November 2026 - ChaCha20 Nonce Reuse, Stack Pivot Ret2BSS & Prototype Pollution DOM XSS Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
-| 1 | 493 | ChaCha Slide | Cryptography | Hard | `academy{7urn_17_84ck_n0w_77243c82}` | **SOLVED** | 2026-11-06 |
+| 1 | 493 | ChaCha Slide | Cryptography | Hard | `academy{7urn_17_84ck_n0w_711e6296}` | **SOLVED** | 2026-11-08 |
 | 2 | 486 | handoff | Binary Exploitation | Hard | `academy{p1v0ted_ftw_e4ab0a56}` | **SOLVED** | 2026-11-06 |
 | 3 | 447 | elements | Web Exploitation | Hard | `academy{little_alchemy_was_the_0g_game_does_anyone_rememb3r_9889fd4a}` | **SOLVED** | 2026-11-06 |
 
@@ -338,7 +345,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 |:---|:---|:---|:---|:---|:---|:---|:---|
 | 1 | 738 | offset-cycleV2 | Binary Exploitation | Hard | `academy{Y0U_AGa1n_Us3d_pwNt00L5_45fb3e0b}` | **SOLVED** | 2026-11-06 |
 | 2 | 737 | JITFP | Reverse Engineering | Hard | `academy{j1t_fptrs_ptraC3_737_8de}` | **SOLVED** | 2026-11-06 |
-| 3 | 728 | Secure Dot Product | Cryptography | Hard | `academy{n0t_so_s3cure_.x_w1th_sh@512_1bb6154f}` | **SOLVED** | 2026-11-06 |
+| 3 | 728 | Secure Dot Product | Cryptography | Hard | `academy{n0t_so_s3cure_.x_w1th_sh@512_7610cbf2}` | **SOLVED** | 2026-11-08 |
 
 ### Batch 96 (06 November 2026 - Second-Order SQLi Report Exfiltration, Mempool Front-Running & SMB Cron Privilege Escalation Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
