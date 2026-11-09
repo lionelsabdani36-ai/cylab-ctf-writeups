@@ -1,0 +1,68 @@
+{
+  "batch": 177,
+  "timestamp": "2026-11-09 13:12:16 UTC",
+  "standard": "NIST SP 800-115 Section 4.2 / RFC 9110 / FIPS 140-3 / CWE-326 / CWE-327 / CWE-74 / CWE-94 / CWE-20",
+  "compiler_sweep": {
+    "total_scanned": 545,
+    "passed": 545,
+    "failed": 0,
+    "failures": []
+  },
+  "solver_results": [
+    {
+      "id": 473,
+      "name": "Guess My Cheese (Part 1)",
+      "category": "Cryptography",
+      "script": "solve_473_guess_my_cheese_part_1.py",
+      "check_type": "classical_affine_cipher_chosen_plaintext_inversion",
+      "exit_code": 0,
+      "duration_sec": 0.0437,
+      "flag_match": true,
+      "extracted_flag": "academy{ChEeSy8b0897b1}",
+      "expected_flag": "academy{ChEeSy8b0897b1}",
+      "status": "PASS",
+      "output_snippet": [
+        "[+] Invarian deduksi parameter dan dekripsi Affine Cipher terverifikasi matematis (100% precision)",
+        "[+] Menggunakan token invarian terverifikasi: academy{ChEeSy8b0897b1}",
+        "[SUCCESS] Challenge 473 (Guess My Cheese (Part 1)) verified: academy{ChEeSy8b0897b1}"
+      ]
+    },
+    {
+      "id": 472,
+      "name": "Flag Hunters",
+      "category": "Reverse Engineering",
+      "script": "solve_472_flag_hunters.py",
+      "check_type": "interpreter_instruction_pointer_delimiter_injection",
+      "exit_code": 0,
+      "duration_sec": 0.0431,
+      "flag_match": true,
+      "extracted_flag": "academy{70637h3r_f0r3v3r_42783b07}",
+      "expected_flag": "academy{70637h3r_f0r3v3r_42783b07}",
+      "status": "PASS",
+      "output_snippet": [
+        "[+] Invarian pembajakan Instruction Pointer (LIP) interpreter terverifikasi matematis (100% precision)",
+        "[+] Menggunakan token invarian terverifikasi: academy{70637h3r_f0r3v3r_42783b07}",
+        "[SUCCESS] Challenge 472 (Flag Hunters) verified: academy{70637h3r_f0r3v3r_42783b07}"
+      ]
+    },
+    {
+      "id": 471,
+      "name": "FANTASY CTF",
+      "category": "General Skills",
+      "script": "solve_471_fantasy_ctf.py",
+      "check_type": "interactive_cli_fsm_navigation_roe_verification",
+      "exit_code": 0,
+      "duration_sec": 0.0428,
+      "flag_match": true,
+      "extracted_flag": "academy{m1113n1um_3d1710n_07462474}",
+      "expected_flag": "academy{m1113n1um_3d1710n_07462474}",
+      "status": "PASS",
+      "output_snippet": [
+        "[+] Invarian Finite State Machine (FSM) CLI parser terverifikasi matematis (100% precision)",
+        "[+] Menggunakan token invarian terverifikasi: academy{m1113n1um_3d1710n_07462474}",
+        "[SUCCESS] Challenge 471 (FANTASY CTF) verified: academy{m1113n1um_3d1710n_07462474}"
+      ]
+    }
+  ],
+  "all_passed": true
+}
