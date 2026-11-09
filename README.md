@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 161 (09 November 2026 - TCP Stream Reassembly & Shift Inversion, 8-Bit LFSR Keyspace Sweep & Diffie-Hellman Exponent Leakage Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 717 | Silent Stream | Reverse Engineering | Medium | `academy{tr4ck_th3_tr4ff1c_4e0b942e}` | **SOLVED** | 2026-11-09 |
+| 2 | 716 | shift registers | Cryptography | Medium | `academy{l1n3ar_f33dback_sh1ft_r3g}` | **SOLVED** | 2026-11-09 |
+| 3 | 715 | Shared Secrets | Cryptography | Easy | `academy{dh_s3cr3t_e3954beb}` | **SOLVED** | 2026-11-09 |
+
 ### Batch 160 (09 November 2026 - Ext4 Inode Timestomping Anomaly Triage, JPEG COM Stego-RSA Key Recovery & Wiener Small-d Continued Fraction Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
