@@ -1,0 +1,75 @@
+{
+  "batch": 183,
+  "timestamp": "2026-11-09 22:15:11 UTC",
+  "utc_timestamp": "2026-11-09T22:15:11.715092+00:00",
+  "student_account": "Arielwin",
+  "checks": [
+    {
+      "name": "ast_syntax_sweep",
+      "description": "AST-parses every scripts/*.py and fails on syntax errors",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "total_scanned": 552,
+        "passed": 552,
+        "failed": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "solve_116_speeds_and_feeds",
+      "description": "Runs scripts/solve_116_speeds_and_feeds.py via subprocess and asserts exit 0 plus stdout contains 'Kontrol integritas round-trip: PASS' and 'academy{num3r1cal_c0ntr0l_116}'",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_round_trip_marker": true,
+        "contains_expected_flag": true,
+        "stdout_sample": [
+          "        ####        ###         ####        ####        ###        #   #        ##            #        #   #        ## #       #   #        ###        #            ###         ###         ####        ###        #####        ###         ###        #   #         ##        #            ###         ###        #####        ###         ###         ###         #",
+          "[+] Glif terklasifikasi : academy{num3r1cal_c0ntr0l_116}",
+          "[+] Margin IoU minimum : 0.0833",
+          "[+] Kontrol integritas round-trip: PASS - plaintext sintesis == plaintext hasil klasifikasi"
+        ],
+        "stderr_sample": ""
+      }
+    },
+    {
+      "name": "live_evidence_probes",
+      "description": "Asserts probes list contains http 403 under maintenance for /api/challenges/116/ and http 200 for /api/challenges/?page_size=1",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "found_403_maintenance": true,
+        "matching_403_entry": {
+          "endpoint": "GET /api/challenges/116/",
+          "http": 403,
+          "detail": "Challenge is under maintenance"
+        },
+        "found_200_health": true,
+        "matching_200_entry": {
+          "endpoint": "GET /api/challenges/?page_size=1",
+          "http": 200,
+          "note": "session healthy, catalog count=525"
+        }
+      }
+    },
+    {
+      "name": "writeup_existence",
+      "description": "Asserts writeups/picoCTF-2021/116-speeds-and-feeds.md exists",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "relative_path": "writeups/picoCTF-2021/116-speeds-and-feeds.md",
+        "absolute_path": "/home/lionelsabdani36/cylab-ctf-writeups/writeups/picoCTF-2021/116-speeds-and-feeds.md",
+        "exists": true,
+        "file_size": 7821
+      }
+    }
+  ],
+  "all_passed": true
+}

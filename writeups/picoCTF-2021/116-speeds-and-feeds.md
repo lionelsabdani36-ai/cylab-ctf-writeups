@@ -10,7 +10,7 @@
 - **Difficulty:** Medium (diff=2)
 - **Points:** 50
 - **Flag:** `academy{num3r1cal_c0ntr0l_116}` (kandidat; status `UNVERIFIED` / gerbang pemeliharaan platform, lihat seksi Flag & Verifikasi)
-- **Status Audit:** `BLOCKED_MAINTENANCE` (Batch 182, 2026-11-09)
+- **Status Audit:** `BLOCKED_MAINTENANCE` (Batch 182, 2026-11-09; dikonfirmasi ulang Batch 183, 2026-11-09: `GET /api/challenges/116/`, `.../instance/`, dan `POST /api/submissions/` tetap HTTP 403 "under maintenance", sementara health-check sesi `GET /api/challenges/?page_size=1` HTTP 200 dan `/api/user_status/` bersih; kontrol integritas round-trip G-code->lattice->OCR PASS, margin IoU min 0.0833)
 
 ---
 

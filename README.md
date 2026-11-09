@@ -42,6 +42,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 183 (09 November 2026 - Maintenance-Gate Re-Audit & Deterministic Round-Trip Re-verification, 1/1 dari kuota maksimal 3)
+| No | ID | Nama | Kategori | Diff | Token Diuji | Status Live (POST /api/submissions/) | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 116 | speeds and feeds | Reverse Engineering | Medium | `academy{num3r1cal_c0ntr0l_116}` | **BLOCKED 403 (under maintenance, re-audit)** - round-trip OCR G-code PASS (harness batch 183, sweep AST 552/552), token tetap UNVERIFIED | 2026-11-09 |
+
+Temuan audit batch 183: (a) sinkronisasi sesi REST OK (`GET /api/challenges/?page_size=1` -> 200, katalog 525; `/api/user_status/` -> 200, `instances: []`); (b) sapu katalog penuh `page_size=100`: hanya #116 yang `solved_by_user: false` - gerbang maintenance bertahan di `GET /api/challenges/116/`, `.../instance/`, dan `POST /api/submissions/` (semua 403, disambiguasi: sesi sehat, jadi 403 = gerbang modul, bukan auth); (c) seluruh 20 playlist gym `fully_completed=true` dan audit gap dokumentasi deterministik (solved_ids vs scripts/writeups) = 0 gap, sehingga kuota 3 modul menyusut ke 1 kandidat nyata; tidak ada re-dokumentasi batch 182 (hemat kuota, sesuai aturan backport-vs-live); (d) eksekutor: Omnirush CLI tidak tersedia (maintenance + upload 401), fallback ke Antigravity (`agy --dangerously-skip-permissions`) yang membangun & meluluskan `scripts/test_batch_183_harness.py` -> `batch_183_verification_report.json` (HARNESS OK).
+
 ### Batch 182 (09 November 2026 - CNC G-Code Round-Trip Integrity Control & Native-Wrapper Crypto Flag Re-verification Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Token Diuji | Status Live (POST /api/submissions/) | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
