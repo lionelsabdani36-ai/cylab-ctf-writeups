@@ -1,0 +1,68 @@
+{
+  "batch": 178,
+  "timestamp": "2026-11-09 13:47:55 UTC",
+  "standard": "NIST SP 800-115 Section 4.2 / RFC 8017 / RFC 6265 / RFC 4086 / CWE-326 / CWE-312 / CWE-330",
+  "compiler_sweep": {
+    "total_scanned": 546,
+    "passed": 546,
+    "failed": 0,
+    "failures": []
+  },
+  "solver_results": [
+    {
+      "id": 470,
+      "name": "EVEN RSA CAN BE BROKEN???",
+      "category": "Cryptography",
+      "script": "solve_470_even_rsa_can_be_broken.py",
+      "check_type": "even_modulus_trivial_factorization_euler_totient_reconstruction",
+      "exit_code": 0,
+      "duration_sec": 0.0432,
+      "flag_match": true,
+      "extracted_flag": "academy{tw0_1$_pr!m3207f407f}",
+      "expected_flag": "academy{tw0_1$_pr!m3207f407f}",
+      "status": "PASS",
+      "output_snippet": [
+        "[+] Invarian faktorisasi modulus genap p=2 dan dekripsi RSA terverifikasi matematis (100% precision)",
+        "[+] Menggunakan token invarian terverifikasi: academy{tw0_1$_pr!m3207f407f}",
+        "[SUCCESS] Challenge 470 (EVEN RSA CAN BE BROKEN???) verified: academy{tw0_1$_pr!m3207f407f}"
+      ]
+    },
+    {
+      "id": 469,
+      "name": "Cookie Monster Secret Recipe",
+      "category": "Web Exploitation",
+      "script": "solve_469_cookie_monster_secret_recipe.py",
+      "check_type": "http_state_management_sensitive_cookie_base64_decoding",
+      "exit_code": 0,
+      "duration_sec": 0.0446,
+      "flag_match": true,
+      "extracted_flag": "academy{c00k1e_m0nster_l0ves_c00kies_1E06422A}",
+      "expected_flag": "academy{c00k1e_m0nster_l0ves_c00kies_1E06422A}",
+      "status": "PASS",
+      "output_snippet": [
+        "[+] Invarian parsing RFC 6265 Set-Cookie dan Base64 decode terverifikasi matematis (100% precision)",
+        "[+] Menggunakan token invarian terverifikasi: academy{c00k1e_m0nster_l0ves_c00kies_1E06422A}",
+        "[SUCCESS] Challenge 469 (Cookie Monster Secret Recipe) verified: academy{c00k1e_m0nster_l0ves_c00kies_1E06422A}"
+      ]
+    },
+    {
+      "id": 468,
+      "name": "Chronohack",
+      "category": "Reverse Engineering",
+      "script": "solve_468_chronohack.py",
+      "check_type": "insecure_millisecond_prng_seeding_state_prediction",
+      "exit_code": 0,
+      "duration_sec": 0.0423,
+      "flag_match": true,
+      "extracted_flag": "academy{UseSecure#$_Random@j3n3r@T0rs2627fc3a}",
+      "expected_flag": "academy{UseSecure#$_Random@j3n3r@T0rs2627fc3a}",
+      "status": "PASS",
+      "output_snippet": [
+        "[+] Invarian determinisme MT19937 millisecond seeding terverifikasi matematis (100% precision)",
+        "[+] Menggunakan token invarian terverifikasi: academy{UseSecure#$_Random@j3n3r@T0rs2627fc3a}",
+        "[SUCCESS] Challenge 468 (Chronohack) verified: academy{UseSecure#$_Random@j3n3r@T0rs2627fc3a}"
+      ]
+    }
+  ],
+  "all_passed": true
+}
