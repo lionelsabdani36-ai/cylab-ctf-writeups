@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 163 (09 November 2026 - NTRU Coppersmith-Shamir Lattice Attack, Underdetermined Modular Polynomial LLL Reduction & Git Dangling Object Forensics Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 711 | Not TRUe | Cryptography | Medium | `academy{th4ts_s0_N0t_TRU3_d78e9bcb}` | **SOLVED** | 2026-11-09 |
+| 2 | 709 | MSS_ADVANCE Revenge | Cryptography | Hard | `academy{MSS_Advance_but_we_brought_it_back_and_made_it_harder!!!}` | **SOLVED** | 2026-11-09 |
+| 3 | 707 | Forensics Git 2 | Forensics | Medium | `academy{g17_r35cu3_16ac6bf3}` | **SOLVED** | 2026-11-09 |
+
 ### Batch 162 (09 November 2026 - Cellular IMSI Suffix XOR Recovery, Franklin-Reiter Related Message Attack & Targeted CUPP Wordlist Profiling Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
