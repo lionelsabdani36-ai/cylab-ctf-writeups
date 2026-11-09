@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 157 (09 November 2026 - Kubernetes Secret Base64 Decoding, Multi-Base Logic Contradiction & Non-PIE ELF Symbol Table Resolution Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 732 | KSECRETS | General Skills | Medium | `academy{ks3cr375_41n7_s4f3_766edbce}` | **SOLVED** | 2026-11-09 |
+| 2 | 731 | Gatekeeper | Reverse Engineering | Medium | `academy{3_digit_hex_GT_999_fed7fa16}` | **SOLVED** | 2026-11-09 |
+| 3 | 730 | bytemancy 3 | General Skills | Hard | `academy{0bjdump_m4g1c_c79394e0}` | **SOLVED** | 2026-11-09 |
+
 ### Batch 156 (09 November 2026 - Flawed fgets() Stack Bounding, Sudoers Emacs GTFOBins & De Bruijn Dynamic Ret2Win Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
