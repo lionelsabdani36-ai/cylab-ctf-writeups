@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 168 (09 November 2026 - Android APK Base32 Resource Carving, Glibc Heap Overflow Redirection Bypass & Stack Frame Strcpy Command Injection Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 528 | M1n10n'5_53cr37 | Reverse Engineering | Medium | `academy{1t_w4sn7_h4rd_unr4v3l1n9_th3_m0b1l3_c0d3}` | **SOLVED** | 2026-11-09 |
+| 2 | 526 | Input Injection 2 | Binary Exploitation | Medium | `academy{us3rn4m3_2_sh3ll_819f0acb}` | **SOLVED** | 2026-11-09 |
+| 3 | 525 | Input Injection 1 | Binary Exploitation | Medium | `academy{0v3rfl0w_c0mm4nd_72792d0d}` | **SOLVED** | 2026-11-09 |
+
 ### Batch 167 (09 November 2026 - Browser Extension Fernet Cryptanalysis, PDF Information Dictionary Metadata Carving & Android APK Static OTP Bypass Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
