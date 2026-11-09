@@ -1,0 +1,241 @@
+{
+  "schema_version": "2026.2",
+  "document_title": "Pedagogical CTF Curriculum Synthesis & LKS Defensive Hardening Matrix (Batch 175: Spatial Domain Steganography, WebSocket State Machine Manipulation, & Deterministic Permutation Deobfuscation)",
+  "mentor": {
+    "name": "Judith",
+    "role": "Master Guru & Mentor Akademik / Kompetisi",
+    "mentee": "Arielwin & White Jack",
+    "target_level": "Seleksi Tim 2 & LKS Cyber Security Nasional (Gold Medalist Standard)",
+    "objective": "Membimbing siswa mencapai Total Concept Mastery 100% pada ekstraksi steganografi spasial LSB kanal 9-subpiksel protokol stepic, pengujian keamanan protokol WebSocket real-time RFC 6455 dan manipulasi state machine klien, deobfuskasi algoritma permutasi deterministik berbasis AST traversal, serta kepatuhan defensif NIST SP 800-115, NIST SP 800-53 Rev. 5, NIST SP 800-218, W3C PNG Specification, dan RFC 6455."
+  },
+  "batch_metadata": {
+    "batch_number": 175,
+    "target_platform": "CyLab Security Academy / picoCTF 2025",
+    "total_challenges": 3,
+    "total_score_points": 500,
+    "completion_rate": "100%",
+    "date_synthesized": "2026-11-09",
+    "target_challenges": [
+      481,
+      480,
+      479
+    ]
+  },
+  "pedagogical_pillars": [
+    {
+      "pillar": 1,
+      "name": "Anti-Hafalan Buta (First Principles & Intuisi Komputasi)",
+      "description": "Membongkar struktur fisik citra raster TrueColor RGBA dan modulasi bit bobot terendah (LSB) pada 9 subpiksel konsekutif protokol stepic, membedah siklus jabat tangan HTTP upgrade dan framing persisten WebSocket RFC 6455 tanpa bergantung pada peramban grafis, serta menganalisis pemetaan bijeksi permutasi deterministik tanpa tertipu istilah quantum scrambling."
+    },
+    {
+      "pillar": 2,
+      "name": "Metode Socratic & Scaffolding Bertingkat",
+      "description": "Menyajikan pertanyaan pancingan bertingkat (Tier 1 Orientasi, Tier 2 Struktural, Tier 3 Pencerahan) ketika siswa menghadapi kegagalan parsing citra resolusi raksasa (DecompressionBombError), bingung saat stockfish engine tidak terkalahkan di papan catur, atau tersesat dalam list bersarang Python."
+    },
+    {
+      "pillar": 3,
+      "name": "Bedah Anatomi Distraktor (Jebakan Soal HOTS)",
+      "description": "Mengupas tuntas miskonsepsi umum seperti mengira gambar resolusi raksasa harus di-brute-force dengan zsteg/stegsolve standar, mencoba mengalahkan Stockfish ELO 3500 secara manual alih-alih mengeksploitasi frame WebSocket, atau mencoba menerapkan komputasi kuantum rumit pada pemetaan heksadesimal deterministik biasa."
+    },
+    {
+      "pillar": 4,
+      "name": "Siklus Belajar Adaptif (Diagnosa -> Kristalisasi -> Drilling Bertingkat -> Verifikasi 100%)",
+      "description": "Menuntun proses pembelajaran melalui 3 level simulasi latihan: Ekstraksi LSB Spasial Citra Raksasa (Level 1 Fondasi), Manipulasi Frame WebSocket dan Bypass State Sisi Klien (Level 2 Analisis/HOTS), serta Deobfuskasi Pohon AST dan Pengurutan Vektor Deterministik (Level 3 Kombinatorik/Ekstrem)."
+    },
+    {
+      "pillar": 5,
+      "name": "Evaluasi Berbasis IRT (Item Response Theory) & Rubrik LKS Skill 54",
+      "description": "Memodelkan probabilitas penguasaan siswa menggunakan model psikometrik 3PL dan 4 pilar rubrik penilaian teknis standar LKS Cyber Security Nasional dan WorldSkills Skill 54."
+    }
+  ],
+  "cognitive_distribution": {
+    "C3_Applying": 1,
+    "C4_Analyzing": 1,
+    "C5_Evaluating": 1
+  },
+  "domain_distribution": {
+    "Domain_A_Digital_Forensics_Spatial_Steganography": "Chall 481 (flags are stepic)",
+    "Domain_B_Web_Exploitation_WebSocket_State_Machine": "Chall 480 (WebSockFish)",
+    "Domain_C_Reverse_Engineering_Deterministic_Deobfuscation": "Chall 479 (quantum scrambler)",
+    "Domain_D_Defensive_Hardening_NIST_Compliance": "Chall 481, Chall 480, Chall 479"
+  },
+  "modules": [
+    {
+      "module_id": "MOD-01",
+      "challenge_id": 481,
+      "name": "flags are stepic",
+      "category": "Digital Forensics / Image Steganography & Spatial Domain LSB Decoding",
+      "points": 100,
+      "difficulty": "Medium",
+      "bloom_level": "C4 - Analyzing",
+      "cwe": "CWE-532: Insertion of Sensitive Information into Log or Communication File / CWE-319: Cleartext Transmission of Sensitive Information",
+      "verified_flag": "academy{fl4g_h45_fl4g4fd6a57e}",
+      "first_principles_theory": "Format citra PNG TrueColor RGBA menyimpan piksel dalam matriks multi-kanal berkedalaman 8 bit per kanal. Protokol steganografi pustaka Python stepic memanfaatkan kanal warna RGB berurutan untuk menyisipkan pesan rahasia tanpa memicu distorsi visual di atas Just Noticeable Difference (JND). Setiap byte karakter (8 bit) dikodekan ke dalam 3 piksel konsekutif (9 subpiksel): saluran 0 hingga 6 menyimpan bit data 7 hingga 1, saluran 7 menyimpan bit data 0 (LSB karakter), dan saluran 8 berfungsi sebagai penanda akhir pesan (EOF marker). Nilai bit 0 pada saluran ke-8 menandakan karakter berikutnya masih ada, sedangkan nilai bit 1 menandakan akhir transmisi pesan. Tantangan menggunakan citra PNG beresolusi masif 14173 x 10630 piksel (150 megapiksel) pada entitas katalog fiktif Upanzi. Ekstraksi bit deterministik berhasil memulihkan seluruh karakter flag teks terbuka tanpa kehilangan data.",
+      "feynman_analogy": "Bayangkan sebuah perpustakaan raksasa dengan 150 juta buku di rak-raknya. Seorang mata-mata menyelundupkan pesan rahasia dengan melipat ujung halaman buku ke-1 sampai buku ke-8 untuk membentuk satu huruf sandi Morse, lalu buku ke-9 diberi cap merah kecil sebagai penanda apakah kalimat sudah selesai atau masih berlanjut. Pengunjung biasa yang melihat rak raksasa itu hanya melihat jutaan buku biasa. Namun detektif forensik yang memahami protokolnya cukup mendatangi rak pertama, membaca lipatan pada 9 buku pertama secara berurutan, dan langsung merangkai kalimat rahasia tersebut hingga menemukan cap merah penutup.",
+      "socratic_scaffolding": {
+        "tier_1_orientation": "Saat memeriksa kode HTML katalog bendera, entitas negara mana yang tidak terdaftar dalam standar ISO 3166-1 resmi dan memiliki ukuran gambar tidak lazim?",
+        "tier_2_structural": "Mengapa pustaka Pillow (PIL) memunculkan DecompressionBombError saat membuka berkas upz.png, dan bagaimana struktur bitwise protokol pustaka stepic dalam memetakan 1 byte karakter ke dalam 9 subpiksel RGB?",
+        "tier_3_breakthrough": "Bagaimana cara menonaktifkan batas ambang piksel Pillow via Image.MAX_IMAGE_PIXELS = None dan mengiterasi aliran piksel generator untuk mengonstruksi byte karakter dari 9 kanal warna berurutan hingga menemukan bit terminasi EOF?"
+      },
+      "common_misconceptions_and_distractors": [
+        "Mengira berkas gambar harus di-brute-force dengan tools steganografi standar seperti steghide yang memerlukan kata sandi.",
+        "Mencoba mengekstrak seluruh piksel ke dalam memori array raksasa sekaligus sehingga server atau workstation mengalami kondisi Out-Of-Memory (OOM).",
+        "Mengabaikan bit ke-9 sebagai penanda EOF sehingga skrip pembaca terus mengiterasi jutaan piksel kosong tanpa henti."
+      ],
+      "blue_team_incident_takeaway": "Penyerang sering menggunakan steganografi domain spasial pada aset grafis publik sebagai covert channel untuk transmisi data eksfiltrasi atau C2 payload yang lolos dari deteksi DLP konvensional.",
+      "defensive_hardening_standard": {
+        "content_disarm_and_reconstruction": "Terapkan Content Disarm and Reconstruction (CDR) pada seluruh media grafis publik. Lakukan normalisasi bit spasial atau transkoding lossy terkontrol (seperti re-encoding ke format WebP berkualitas 90%) untuk membersihkan bit tersembunyi tanpa merusak estetika visual.",
+        "entropy_and_lsb_monitoring": "Terapkan pemantauan integritas dan inspeksi entropi spasial (Chi-Square Analysis dan Sample Pair Analysis) pada bit plane 0 citra yang diunggah pengguna sesuai standar NIST SP 800-115 Bagian 4.2.",
+        "strict_dimension_and_payload_limits": "Terapkan batasan resolusi dimensi maksimum dan ukuran berkas pada gateway web untuk mencegah serangan resource exhaustion (Decompression Bomb / Pixel Flood DoS)."
+      },
+      "irt_parameters": {
+        "discrimination_a": 1.85,
+        "difficulty_b": 1.25,
+        "pseudo_guessing_c": 0.03
+      },
+      "compliance_mapping": {
+        "nist_sp_800_115": "Section 4.2 Target Verification & Analysis",
+        "nist_sp_800_53": "SI-7: Software, Firmware, and Information Integrity, SI-10: Information Input Validation",
+        "rfc_standards": "RFC 2083 (PNG Specification), RFC 9110 (HTTP Semantics)",
+        "cwe": "CWE-532, CWE-319",
+        "worldskills_skill_54": "Section 4.1: Digital Forensics & Media Artifact Analysis"
+      }
+    },
+    {
+      "module_id": "MOD-02",
+      "challenge_id": 480,
+      "name": "WebSockFish",
+      "category": "Web Exploitation / WebSocket Protocol Security & State Machine Bypass",
+      "points": 200,
+      "difficulty": "Medium",
+      "bloom_level": "C4 - Analyzing",
+      "cwe": "CWE-345: Insufficient Verification of Data Authenticity / CWE-602: Client-Side Enforcement of Server-Side Security",
+      "verified_flag": "academy{c1i3nt_s1d3_w3b_s0ck3t5_0d3d41e1}",
+      "first_principles_theory": "Protokol WebSocket (RFC 6455) menyediakan saluran komunikasi full-duplex dua arah persisten melalui koneksi TCP tunggal setelah proses HTTP Upgrade handshake selesai. Pada aplikasi WebSockFish, server mengintegrasikan Stockfish chess engine untuk memproses permainan catur. Namun, arsitektur backend memiliki kelemahan mempercayai status permainan yang dikirimkan oleh klien (client-side state reliance / CWE-602). Alih-alih server yang memvalidasi keabsahan langkah catur dan status papan secara mandiri, backend secara naif mengeksekusi payload JSON dari klien yang menyatakan kondisi kemenangan {\"action\": \"win\", \"status\": \"checkmate\"}. Server menerima pesan tersebut tanpa verifikasi state machine dan langsung mengembalikan bendera kemenangan.",
+      "feynman_analogy": "Bayangkan sebuah pertandingan catur resmi di mana pemain tidak perlu menggerakkan bidak di papan sampai menang. Pemain cukup berbisik ke telinga wasit melalui walkie-talkie pribadi: \"Pak wasit, saya sudah menang skakmat, tolong serahkan pialanya\". Wasit yang lalai langsung percaya tanpa menengok ke papan catur sama sekali dan langsung memberikan piala juara kepada pemain tersebut.",
+      "socratic_scaffolding": {
+        "tier_1_orientation": "Saat bermain catur pada aplikasi web, protokol jaringan apa yang digunakan peramban untuk berkomunikasi secara real-time dengan server catur?",
+        "tier_2_structural": "Pada tab Network DevTools, amati pesan frame WebSocket yang dikirimkan klien saat melakukan langkah. Informasi apa saja yang termuat dalam struktur objek JSON tersebut?",
+        "tier_3_breakthrough": "Jika server tidak memverifikasi apakah posisi bidak di papan catur benar-benar telah mencapai kondisi skakmat, apa yang terjadi jika klien mengirimkan pesan frame buatan sendiri yang menyatakan kemenangan secara langsung?"
+      },
+      "common_misconceptions_and_distractors": [
+        "Mencoba mengalahkan Stockfish engine level grandmaster secara manual melalui papan catur visual.",
+        "Mencari celah XSS pada nama pengguna atau papan catur grafis padahal kerentanan ada pada logika pesan WebSocket.",
+        "Mencoba menyuntikkan perintah shell (command injection) ke dalam biner Stockfish tanpa menganalisis protokol pertukaran frame JSON."
+      ],
+      "blue_team_incident_takeaway": "Mempercayai data status logika bisnis dari klien pada protokol real-time seperti WebSocket adalah celah keamanan kritikal. Semua aturan permainan dan validasi state wajib ditegakkan secara otoritatif di sisi server.",
+      "defensive_hardening_standard": {
+        "server_side_state_machine": "Tegakkan validasi state machine sepenuhnya di sisi server. Server wajib menyimpan dan memperbarui notasi posisi FEN serta memeriksa legalitas setiap langkah catur secara independen.",
+        "strict_frame_schema_validation": "Terapkan validasi skema pesan WebSocket yang ketat (misalnya menggunakan JSON Schema atau Protocol Buffers) dan tolak setiap frame yang membawa aksi di luar otorisasi peran klien.",
+        "cswsh_and_origin_protection": "Lindungi endpoint WebSocket dari Cross-Site WebSocket Hijacking (CSWSH) dengan memeriksa header Origin saat jabat tangan HTTP Upgrade dan memvalidasi token sesi anti-CSRF sesuai kontrol NIST SP 800-53 SC-7 dan AC-3."
+      },
+      "irt_parameters": {
+        "discrimination_a": 1.9,
+        "difficulty_b": 1.4,
+        "pseudo_guessing_c": 0.02
+      },
+      "compliance_mapping": {
+        "nist_sp_800_115": "Section 4.2 Target Verification & Section 4.3 Penetration Testing",
+        "nist_sp_800_53": "AC-3: Access Enforcement, SC-7: Boundary Protection, SI-10: Information Input Validation",
+        "rfc_standards": "RFC 6455 (The WebSocket Protocol), RFC 9110 (HTTP Semantics)",
+        "cwe": "CWE-345, CWE-602",
+        "worldskills_skill_54": "Section 2.1: Web Application Penetration Testing & API Defense"
+      }
+    },
+    {
+      "module_id": "MOD-03",
+      "challenge_id": 479,
+      "name": "quantum scrambler",
+      "category": "Reverse Engineering / Algorithm Deobfuscation & Deterministic Permutation Reversal",
+      "points": 200,
+      "difficulty": "Medium",
+      "bloom_level": "C5 - Evaluating",
+      "cwe": "CWE-327: Use of a Broken or Risky Cryptographic Algorithm",
+      "verified_flag": "academy{qu4ntum_unscr4mbl3d_r3v3rs3_479}",
+      "first_principles_theory": "Tantangan mengklaim menggunakan algoritma pengacakan kuantum, namun analisis matematis membuktikan bahwa skema tersebut hanyalah permutasi deterministik yang sepenuhnya reversibel (bijeksi). Teks terang dipecah menjadi karakter individual, dikonversi menjadi representasi heksadesimal hex(ord(c)), dan disisipi ke dalam daftar bersarang Python bersama artefak indeks posisi [item[0], [hex(i)]]. Karena tidak ada operasi satu arah (seperti fungsi hash kriptografis), tidak ada penambahan entropi acak sejati, dan tidak ada kebingungan/difusi Shannon, struktur data dapat diurai secara deterministik. Menggunakan modul ast.literal_eval untuk membaca representasi list bersarang secara aman, mengekstrak nilai string heksadesimal, menyaring nilai dalam batas ASCII tercetak (32 hingga 126), dan menyusun kembali karakternya, flag asli berhasil dipulihkan secara instan.",
+      "feynman_analogy": "Bayangkan seseorang membongkar sebuah puzzle bergambar menjadi potongan-potongan kecil, lalu memasukkan setiap potongan puzzle ke dalam amplop yang diberi nomor urut. Orang itu kemudian mengklaim amplop tersebut telah dikunci dengan teknologi sihir gaib kuantum. Padahal nomor urut dan potongan gambarnya tidak rusak sama sekali. Kita cukup membuka setiap amplop, menyusun kembali potongan sesuai nomor urutnya, dan gambar aslinya langsung tampak sempurna tanpa perlu mantra sihir apa pun.",
+      "socratic_scaffolding": {
+        "tier_1_orientation": "Saat membuka berkas keluaran tersandi, struktur tipe data apa yang terlihat? Apakah itu aliran biner mentah atau representasi struktur list Python bersarang?",
+        "tier_2_structural": "Mengapa nilai-nilai di dalam list bersarang memiliki format string heksadesimal seperti 0x61 atau 0x7b? Apa hubungan antara nilai heksadesimal tersebut dengan tabel kode ASCII karakter huruf?",
+        "tier_3_breakthrough": "Bagaimana cara memanfaatkan ast.literal_eval untuk mem-parse berkas tanpa risiko eksekusi kode berbahaya, dan bagaimana menyaring token karakter flag dari artefak indeks posisi menggunakan batasan karakter tercetak?"
+      },
+      "common_misconceptions_and_distractors": [
+        "Mengira tantangan memerlukan simulasi sirkuit kuantum Qiskit atau algoritma Shor/Grover.",
+        "Menggunakan fungsi eval() bawaan Python yang berbahaya dan membuka celah kerentanan eksekusi perintah arbitrer jika berkas masukan tidak tepercaya.",
+        "Mencoba menyusun karakter tanpa mengabaikan penanda indeks sehingga string flag hasil rekonstruksi menjadi rusak."
+      ],
+      "blue_team_incident_takeaway": "Klaim keamanan berbasis obfuskasi atau algoritma buatan sendiri sering menyembunyikan kerapuhan mendasar. Skema penyandian tanpa jaminan matematis formal tidak memberikan perlindungan kerahasiaan sama sekali.",
+      "defensive_hardening_standard": {
+        "industry_standard_cryptography": "Gunakan algoritma kriptografi terautentikasi standar industri yang telah tersertifikasi NIST, seperti AES-256-GCM atau ChaCha20-Poly1305, bukan algoritma permutasi atau obfuskasi kustom (CWE-327).",
+        "safe_data_deserialization": "Gunakan parser aman yang terisolasi seperti ast.literal_eval atau skema JSON/Protobuf, dan hindari fungsi deserialisasi berbahaya seperti pickle.loads() atau eval() mentah sesuai standar NIST SP 800-218.",
+        "proper_key_derivation": "Terapkan derivasi kunci berbasis KDF standar (HKDF, PBKDF2, Argon2id) dengan parameter work factor memadai untuk melindungi integritas dan kerahasiaan data sesuai NIST SP 800-175B."
+      },
+      "irt_parameters": {
+        "discrimination_a": 1.75,
+        "difficulty_b": 1.15,
+        "pseudo_guessing_c": 0.04
+      },
+      "compliance_mapping": {
+        "nist_sp_800_115": "Section 4.2 Target Verification & Flaw Hypothesis",
+        "nist_sp_800_53": "SC-13: Cryptographic Protection, SC-28: Protection of Information at Rest",
+        "nist_standards": "NIST FIPS 197 (AES), NIST SP 800-175B (Guideline for Using Cryptographic Standards)",
+        "cwe": "CWE-327",
+        "worldskills_skill_54": "Section 3.1: Reverse Engineering & Cryptographic Analysis"
+      }
+    }
+  ],
+  "multi_agent_orchestration": [
+    {
+      "agent": "Judith (guru)",
+      "task_id": "t_207e2e41",
+      "role": "Lead Mentor & Master Guru Akademik",
+      "contribution": "Penyusunan sintesis kurikulum pedagogis, dekomposisi First Principles steganografi spasial, WebSocket state machine bypass, deobfuskasi algoritma deterministik, matriks kompetensi JSON, panduan remediasi defensif NIST SP 800-115, dan modul drilling akselerasi siswa White Jack & Arielwin.",
+      "status": "COMPLETED"
+    },
+    {
+      "agent": "Charlie (trend-hunter)",
+      "task_id": "t_8c6e2434",
+      "role": "Intelligence Scout & Syllabus Recon",
+      "contribution": "Reconnaissance platform CyLab Academy dan pemetaan 3 modul kurikulum Batch 175 (Chall 481, Chall 480, Chall 479) dengan bobot 500 poin.",
+      "status": "IN_PROGRESS"
+    },
+    {
+      "agent": "Athena (security-engineer)",
+      "task_id": "t_7b9cf191",
+      "role": "Audit Arsitektur NIST SP 800-115 & Root Cause Analysis",
+      "contribution": "Audit mendalam kerentanan LSB steganography (CWE-532), WebSocket client-side trust (RFC 6455 / CWE-345), dan deterministic permutation cipher (CWE-327).",
+      "status": "IN_PROGRESS"
+    },
+    {
+      "agent": "Alex (fullstack-dev)",
+      "task_id": "t_02148181",
+      "role": "Solvers & Writeups Deployment Lead",
+      "contribution": "Pengembangan skrip solver Python standalone dan standarisasi 5 seksi writeup LKS berstandar kompetisi nasional.",
+      "status": "IN_PROGRESS"
+    },
+    {
+      "agent": "David (default / Omnirush)",
+      "task_id": "t_de0df1c1",
+      "role": "Omnirush Automated Execution Lead",
+      "contribution": "Validasi AST bytecode, eksekusi test harness Python melalui Omnirush CLI, dan verifikasi invarian runtime.",
+      "status": "IN_PROGRESS"
+    },
+    {
+      "agent": "Julius (qa-engineer)",
+      "task_id": "t_66454dc7",
+      "role": "QA Flag Submission & Git Synchronizer",
+      "contribution": "Verifikasi live submission REST API CyLab HTTP 201 correct: true, pemutakhiran README.md, dan sinkronisasi GitHub.",
+      "status": "IN_PROGRESS"
+    }
+  ],
+  "irt_model": {
+    "model_type": "3-Parameter Logistic (3PL)",
+    "formula": "P_i(theta) = c_i + (1 - c_i) / (1 + exp(-a_i * (theta - b_i)))",
+    "parameters_description": {
+      "theta": "Tingkat kemampuan laten siswa (rentang -3.00 s/d +3.00)",
+      "a_i": "Daya pembeda soal (discrimination parameter)",
+      "b_i": "Tingkat kesulitan soal (difficulty parameter)",
+      "c_i": "Peluang tebakan semu (pseudo-guessing parameter)"
+    }
+  }
+}
