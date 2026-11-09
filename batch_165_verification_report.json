@@ -1,0 +1,56 @@
+{
+  "timestamp": 1794203284,
+  "batch": 165,
+  "engine": "David / Omnirush Automated Solvers Execution Engine",
+  "omnirush_cli_status": "ready (Omnirush v2.7.1 available; deterministic test harness engine active)",
+  "total_targets": 3,
+  "passed": 3,
+  "failed": 0,
+  "details": [
+    {
+      "id": 703,
+      "name": "cryptomaze",
+      "category": "Cryptography",
+      "script": "solve_703_cryptomaze.py",
+      "check_type": "lfsr_key_derivation_aes_ecb",
+      "py_compile": true,
+      "runtime_exec": true,
+      "extracted_flag": "academy{scr8mbledt_flvg_cc02eb30}",
+      "flag_match": true,
+      "duration_seconds": 0.061,
+      "error": null
+    },
+    {
+      "id": 702,
+      "name": "ClusterRSA",
+      "category": "Cryptography",
+      "script": "solve_702_clusterrsa.py",
+      "check_type": "multiprime_rsa_clustered_factordb",
+      "py_compile": true,
+      "runtime_exec": true,
+      "extracted_flag": "academy{mul71_rsa_411fc267}",
+      "flag_match": true,
+      "duration_seconds": 0.341,
+      "error": null
+    },
+    {
+      "id": 701,
+      "name": "Black Cobra Pepper",
+      "category": "Cryptography",
+      "script": "solve_701_black_cobra_pepper.py",
+      "check_type": "aes_without_sbox_affine_inversion",
+      "py_compile": true,
+      "runtime_exec": true,
+      "extracted_flag": "academy{spi1cy!}",
+      "flag_match": true,
+      "duration_seconds": 0.043,
+      "error": null
+    }
+  ],
+  "repo_syntax_sweep": {
+    "total_scanned": 533,
+    "passed": 533,
+    "failed": 0,
+    "failures": []
+  }
+}
