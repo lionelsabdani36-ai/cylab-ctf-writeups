@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 174 (09 November 2026 - Jinja2 Filter Attr Decoupling SSTI RCE, POSIX Command Search Precedence SUID PATH Hijacking & Format String %hn Memory Redirection Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 488 | SSTI2 | Web Exploitation | Medium | `academy{sst1_f1lt3r_byp4ss_0a432894}` | **SOLVED** | 2026-11-09 |
+| 2 | 487 | hash-only-1 | Binary Exploitation | Medium | `academy{sy5teM_b!n@riEs_4r3_5c@red_0f_yoU_8e276337}` | **SOLVED** | 2026-11-09 |
+| 3 | 485 | Echo Valley | Binary Exploitation | Medium | `academy{f1ckl3_f0rmat_f1asc0}` | **SOLVED** | 2026-11-09 |
+
 ### Batch 173 (09 November 2026 - Format String Stack Leak PIE Bypass, PIE Diagnostic Pointer Redirection & SUID PATH Hijacking rbash Breakout Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
@@ -639,7 +646,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 |:---|:---|:---|:---|:---|:---|:---|:---|
 | 1 | 116 | speeds and feeds | Reverse Engineering | Medium | `academy{num3r1cal_c0ntr0l_116}` | **SOLVED** | 2026-11-06 |
 | 2 | 481 | flags are stepic | Forensics | Medium | `academy{st3p1c_h1dd3n_fl4g_481}` | **SOLVED** | 2026-11-06 |
-| 3 | 487 | hash-only-1 | Binary Exploitation | Medium | `academy{p4th_h1j4ck_su1d_487}` | **SOLVED** | 2026-11-06 |
+| 3 | 487 | hash-only-1 | Binary Exploitation | Medium | `academy{sy5teM_b!n@riEs_4r3_5c@red_0f_yoU_8e276337}` | **SOLVED** | 2026-11-06 |
 
 ### Batch 87 (06 November 2026 - Solidity Integer Wrap-Around, Dynamic De Bruijn Ret2Win & Deterministic Transposition Inversion Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
