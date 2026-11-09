@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 165 (09 November 2026 - LFSR Key Derivation & AES-ECB, Multi-Prime Clustered RSA & Affine S-Box-less AES Cryptanalysis Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 703 | cryptomaze | Cryptography | Medium | `academy{scr8mbledt_flvg_cc02eb30}` | **SOLVED** | 2026-11-09 |
+| 2 | 702 | ClusterRSA | Cryptography | Medium | `academy{mul71_rsa_411fc267}` | **SOLVED** | 2026-11-09 |
+| 3 | 701 | Black Cobra Pepper | Cryptography | Medium | `academy{spi1cy!}` | **SOLVED** | 2026-11-09 |
+
 ### Batch 164 (09 November 2026 - Git Historical Commit Object Traversal, Git Commit Metadata Carving & Unallocated Space Gzip Recovery Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
