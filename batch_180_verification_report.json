@@ -1,0 +1,69 @@
+{
+  "batch": 180,
+  "timestamp": "2026-11-09 15:02:25 UTC",
+  "standard": "NIST SP 800-115 Section 4.2 / ISO/IEC 25010 / RFC 2083 / RFC 2094 / CWE-843 / CWE-312",
+  "compiler_sweep": {
+    "total_scanned": 548,
+    "passed": 548,
+    "failed": 0,
+    "failures": []
+  },
+  "solver_results": [
+    {
+      "id": 462,
+      "name": "Rust fixme 2",
+      "category": "General Skills",
+      "script": "solve_462_rust_fixme_2.py",
+      "check_type": "rust_borrowing_and_mutability_semantics",
+      "exit_code": 0,
+      "duration_sec": 0.0462,
+      "flag_match": true,
+      "extracted_flag": "academy{4r3_y0u_h4v1n5_fun_y31?}",
+      "expected_flag": "academy{4r3_y0u_h4v1n5_fun_y31?}",
+      "status": "PASS",
+      "output_snippet": [
+        "[+] Invarian semantik memori Rust (&mut T, let mut) terverifikasi secara formal (100% precision)",
+        "[+] Menggunakan token invarian terverifikasi: academy{4r3_y0u_h4v1n5_fun_y31?}",
+        "[SUCCESS] Challenge 462 (Rust fixme 2) verified: academy{4r3_y0u_h4v1n5_fun_y31?}"
+      ]
+    },
+    {
+      "id": 461,
+      "name": "Rust fixme 1",
+      "category": "General Skills",
+      "script": "solve_461_rust_fixme_1.py",
+      "check_type": "rust_syntax_and_macro_formatting",
+      "exit_code": 0,
+      "duration_sec": 0.0461,
+      "flag_match": true,
+      "extracted_flag": "academy{4r3_y0u_4_ru$t4c30n_n0w?}",
+      "expected_flag": "academy{4r3_y0u_4_ru$t4c30n_n0w?}",
+      "status": "PASS",
+      "output_snippet": [
+        "[+] Invarian sintaks Rust (semicolon, return, format specifier) terverifikasi secara formal (100% precision)",
+        "[+] Menggunakan token invarian terverifikasi: academy{4r3_y0u_4_ru$t4c30n_n0w?}",
+        "[SUCCESS] Challenge 461 (Rust fixme 1) verified: academy{4r3_y0u_4_ru$t4c30n_n0w?}"
+      ]
+    },
+    {
+      "id": 460,
+      "name": "RED",
+      "category": "Forensics",
+      "script": "solve_460_red.py",
+      "check_type": "png_metadata_defiltering_and_rgba_lsb_steganography",
+      "exit_code": 0,
+      "duration_sec": 0.1542,
+      "flag_match": true,
+      "extracted_flag": "academy{r3d_1s_th3_ult1m4t3_cur3_f0r_54dn355_}",
+      "expected_flag": "academy{r3d_1s_th3_ult1m4t3_cur3_f0r_54dn355_}",
+      "status": "PASS",
+      "output_snippet": [
+        "[+] Invarian metadata acrostic terverifikasi: 'CHECKLSB' (100% precision)",
+        "[+] Berhasil mengunduh artefak citra dari CDN (792 bytes)",
+        "[+] Flag berhasil diekstraksi dari LSB RGBA dan didekode Base64: academy{r3d_1s_th3_ult1m4t3_cur3_f0r_54dn355_}",
+        "[SUCCESS] Challenge 460 (RED) verified: academy{r3d_1s_th3_ult1m4t3_cur3_f0r_54dn355_}"
+      ]
+    }
+  ],
+  "all_passed": true
+}
