@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 167 (09 November 2026 - Browser Extension Fernet Cryptanalysis, PDF Information Dictionary Metadata Carving & Android APK Static OTP Bypass Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 697 | The Add/On Trap | Reverse Engineering | Medium | `academy{Us3_4dd/0ns_v3ry_c4r3fully1}` | **SOLVED** | 2026-11-09 |
+| 2 | 530 | Riddle Registry | Forensics | Easy | `academy{puzzl3d_m3tadata_f0und!_2d947385}` | **SOLVED** | 2026-11-09 |
+| 3 | 529 | Pico Bank | Reverse Engineering | Medium | `academy{1_l13d_4b0ut_b31ng_s3cur3d_m0b1l3_l0g1n_7f1dd571}` | **SOLVED** | 2026-11-09 |
+
 ### Batch 166 (09 November 2026 - Windows PE32+ LZMA Stream Unpacking, Data Segment Socket String Carving & ASCII Bitstream JPEG Reconstruction Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
