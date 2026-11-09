@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 175 (09 November 2026 - Spatial Domain LSB Steganography Decoding, WebSocket Client-Side State Injection & Deterministic Permutation Cipher Deobfuscation Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 481 | flags are stepic | Forensics | Medium | `academy{fl4g_h45_fl4g4fd6a57e}` | **SOLVED** | 2026-11-09 |
+| 2 | 480 | WebSockFish | Web Exploitation | Medium | `academy{c1i3nt_s1d3_w3b_s0ck3t5_96466159}` | **SOLVED** | 2026-11-09 |
+| 3 | 479 | Quantum Scrambler | Reverse Engineering | Medium | `academy{python_is_weirdade7472a}` | **SOLVED** | 2026-11-09 |
+
 ### Batch 174 (09 November 2026 - Jinja2 Filter Attr Decoupling SSTI RCE, POSIX Command Search Precedence SUID PATH Hijacking & Format String %hn Memory Redirection Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
