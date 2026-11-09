@@ -1,0 +1,88 @@
+{
+  "batch": 178,
+  "date": "2026-11-09",
+  "curriculum_scope": "LKS Cyber Security 2026 / NIST SP 800-115 / WorldSkills Skill 54",
+  "modules": [
+    {
+      "challenge_id": 470,
+      "challenge_name": "EVEN RSA CAN BE BROKEN???",
+      "category": "Cryptography",
+      "difficulty": "Easy (1)",
+      "points": 200,
+      "event": "picoCTF 2025",
+      "author": "Michael Crotty",
+      "flag": "academy{tw0_1$_pr!m3207f407f}",
+      "standards": [
+        "NIST SP 800-115 §4.2",
+        "FIPS 186-5",
+        "RFC 8017",
+        "CWE-326",
+        "CWE-327"
+      ],
+      "vulnerability": {
+        "title": "Even RSA Modulus Trivial Factorization",
+        "root_cause": "The RSA key generation process fails to reject the even prime p=2, yielding an even composite modulus N (N % 2 == 0) that factors instantly via division by 2.",
+        "impact": "Complete collapse of RSA confidentiality and total recovery of private exponent d."
+      },
+      "remediation": {
+        "primary": "Enforce strict candidate prime range checking and Miller-Rabin primality testing ensuring p, q > 2 are distinct odd primes of at least 1024 bits.",
+        "standard": "FIPS 186-5 Section A.1 / NIST SP 800-56B Rev. 2"
+      }
+    },
+    {
+      "challenge_id": 469,
+      "challenge_name": "Cookie Monster Secret Recipe",
+      "category": "Web Exploitation",
+      "difficulty": "Easy (1)",
+      "points": 50,
+      "event": "picoCTF 2025",
+      "author": "Brhane Giday and Prince Niyonshuti N.",
+      "flag": "academy{c00k1e_m0nster_l0ves_c00kies_1E06422A}",
+      "standards": [
+        "NIST SP 800-115 §4.2",
+        "RFC 6265",
+        "RFC 9110",
+        "OWASP Top 10 A01:2021",
+        "OWASP Top 10 A04:2021",
+        "CWE-312",
+        "CWE-319",
+        "CWE-522"
+      ],
+      "vulnerability": {
+        "title": "Cleartext / Reversible Sensitive Flag Storage in HTTP Set-Cookie Header",
+        "root_cause": "The web application stores the secret flag inside the Set-Cookie HTTP response header encoded only in Base64.",
+        "impact": "Direct information disclosure of secret credentials/data to any unauthenticated client."
+      },
+      "remediation": {
+        "primary": "Never store secret application data in client-side cookies. Implement server-side session stores with opaque high-entropy UUID session IDs and enforce HttpOnly, Secure, and SameSite attributes.",
+        "standard": "RFC 6265bis / OWASP Session Management Cheat Sheet"
+      }
+    },
+    {
+      "challenge_id": 468,
+      "challenge_name": "Chronohack",
+      "category": "Reverse Engineering",
+      "difficulty": "Medium (2)",
+      "points": 200,
+      "event": "picoCTF 2025",
+      "author": "Theoneste Byagutangaza",
+      "flag": "academy{UseSecure#$_Random@j3n3r@T0rs2627fc3a}",
+      "standards": [
+        "NIST SP 800-115 §4.2",
+        "NIST SP 800-90A Rev. 1",
+        "RFC 4086",
+        "CWE-330",
+        "CWE-338"
+      ],
+      "vulnerability": {
+        "title": "Predictable PRNG Seeding via Millisecond Epoch Time",
+        "root_cause": "Python standard random module (MT19937) is seeded with int(time.time() * 1000), reducing the key space to a tight millisecond window predictable from network connection time.",
+        "impact": "Deterministic state recovery and authentication token spoofing within 50 attempts."
+      },
+      "remediation": {
+        "primary": "Migrate from Mersenne Twister (random module) to Cryptographically Secure Pseudo-Random Number Generators (CSPRNG) such as Python's secrets module or os.urandom().",
+        "standard": "NIST SP 800-90A / RFC 4086"
+      }
+    }
+  ]
+}
