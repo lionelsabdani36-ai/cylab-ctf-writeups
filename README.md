@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 172 (09 November 2026 - Email Header CRLF Injection MIME Smuggling, Verilog CPU WASM NAND Circuit & Jinja2 SSTI RCE Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 496 | secure-email-service | Web Exploitation | Hard | `academy{always_a_step_ahead_fb2a1a8c}` | **SOLVED** | 2026-11-09 |
+| 2 | 494 | Pachinko | Web Exploitation | Medium | `academy{p4ch1nk0_f146_0n3_e947b9d7}` | **SOLVED** | 2026-11-09 |
+| 3 | 492 | SSTI1 | Web Exploitation | Easy | `academy{s4rv3r_s1d3_t3mp14t3_1nj3ct10n5_4r3_c001_31d5a337}` | **SOLVED** | 2026-11-09 |
+
 ### Batch 171 (09 November 2026 - FAT32 Directory Entry Gzip Carving, MBR Linux Native Partition Carving & Raw Disk Image Bulk String Forensics Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
