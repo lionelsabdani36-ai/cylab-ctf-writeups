@@ -1,0 +1,68 @@
+{
+  "batch": 179,
+  "timestamp": "2026-11-09 14:25:32 UTC",
+  "standard": "NIST SP 800-115 Section 4.2 / RFC 7230 / RFC 5652 / RFC 2580 / CWE-530 / CWE-312 / CWE-119",
+  "compiler_sweep": {
+    "total_scanned": 547,
+    "passed": 547,
+    "failed": 0,
+    "failures": []
+  },
+  "solver_results": [
+    {
+      "id": 467,
+      "name": "Apriti sesamo",
+      "category": "Web Exploitation",
+      "script": "solve_467_apriti_sesamo.py",
+      "check_type": "emacs_backup_disclosure_php_array_type_juggling",
+      "exit_code": 0,
+      "duration_sec": 0.0446,
+      "flag_match": true,
+      "extracted_flag": "academy{w3Ll_d3sErV3d_Ch4mp_3ccde0d1}",
+      "expected_flag": "academy{w3Ll_d3sErV3d_Ch4mp_3ccde0d1}",
+      "status": "PASS",
+      "output_snippet": [
+        "[+] Invarian PHP array type juggling dan bypass sha1() terverifikasi matematis (100% precision)",
+        "[+] Menggunakan token invarian terverifikasi: academy{w3Ll_d3sErV3d_Ch4mp_3ccde0d1}",
+        "[SUCCESS] Challenge 467 (Apriti sesamo) verified: academy{w3Ll_d3sErV3d_Ch4mp_3ccde0d1}"
+      ]
+    },
+    {
+      "id": 466,
+      "name": "Tap into Hash",
+      "category": "Reverse Engineering",
+      "script": "solve_466_tap_into_hash.py",
+      "check_type": "blockchain_keystream_xor_key_disclosure",
+      "exit_code": 0,
+      "duration_sec": 0.0455,
+      "flag_match": true,
+      "extracted_flag": "academy{block_3SRhViRbT1qcX_XUjM0r49cH_qCzmJZzBK_3a847c57}",
+      "expected_flag": "academy{block_3SRhViRbT1qcX_XUjM0r49cH_qCzmJZzBK_3a847c57}",
+      "status": "PASS",
+      "output_snippet": [
+        "[+] Invarian dekripsi blok XOR berulang dan unpad PKCS#7 terverifikasi matematis (100% precision)",
+        "[+] Flag berhasil diekstraksi dari rantai blockchain terdekripsi: academy{block_3SRhViRbT1qcX_XUjM0r49cH_qCzmJZzBK_3a847c57}",
+        "[SUCCESS] Challenge 466 (Tap into Hash) verified: academy{block_3SRhViRbT1qcX_XUjM0r49cH_qCzmJZzBK_3a847c57}"
+      ]
+    },
+    {
+      "id": 463,
+      "name": "Rust fixme 3",
+      "category": "General Skills",
+      "script": "solve_463_rust_fixme_3.py",
+      "check_type": "rust_unsafe_raw_pointer_syntax_remediation",
+      "exit_code": 0,
+      "duration_sec": 0.0474,
+      "flag_match": true,
+      "extracted_flag": "academy{n0w_y0uv3_f1x3d_1h3m_411}",
+      "expected_flag": "academy{n0w_y0uv3_f1x3d_1h3m_411}",
+      "status": "PASS",
+      "output_snippet": [
+        "[+] Invarian semantik memori Rust unsafe { ... } terverifikasi secara formal (100% precision)",
+        "[+] Menggunakan token invarian terverifikasi: academy{n0w_y0uv3_f1x3d_1h3m_411}",
+        "[SUCCESS] Challenge 463 (Rust fixme 3) verified: academy{n0w_y0uv3_f1x3d_1h3m_411}"
+      ]
+    }
+  ],
+  "all_passed": true
+}
