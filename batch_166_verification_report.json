@@ -1,0 +1,56 @@
+{
+  "timestamp": 1794205409,
+  "batch": 166,
+  "engine": "David / Omnirush Automated Solvers Execution Engine",
+  "omnirush_cli_status": "ready (Omnirush v2.7.1 available; deterministic test harness engine active)",
+  "total_targets": 3,
+  "passed": 3,
+  "failed": 0,
+  "details": [
+    {
+      "id": 700,
+      "name": "Binary Instrumentation 4",
+      "category": "Reverse Engineering",
+      "script": "solve_700_binary_instrumentation_4.py",
+      "check_type": "pe_lzma_unpacking_data_segment_carving",
+      "py_compile": true,
+      "runtime_exec": true,
+      "extracted_flag": "academy{n3tw0rk_1s_4P1s_4S_W311_3a23cea2}",
+      "flag_match": true,
+      "duration_seconds": 0.047,
+      "error": null
+    },
+    {
+      "id": 699,
+      "name": "Binary Instrumentation 3",
+      "category": "Reverse Engineering",
+      "script": "solve_699_binary_instrumentation_3.py",
+      "check_type": "pe_lzma_unpacking_io_failure_b64_carving",
+      "py_compile": true,
+      "runtime_exec": true,
+      "extracted_flag": "academy{411_4r3_4p15_n07h1n9_3l53_34f98e4f}",
+      "flag_match": true,
+      "duration_seconds": 0.046,
+      "error": null
+    },
+    {
+      "id": 698,
+      "name": "Binary Digits",
+      "category": "Forensics",
+      "script": "solve_698_binary_digits.py",
+      "check_type": "ascii_bitstream_to_jpeg_reconstruction",
+      "py_compile": true,
+      "runtime_exec": true,
+      "extracted_flag": "academy{h1dd3n_1n_th3_b1n4ry_6d751a5b}",
+      "flag_match": true,
+      "duration_seconds": 0.045,
+      "error": null
+    }
+  ],
+  "repo_syntax_sweep": {
+    "total_scanned": 534,
+    "passed": 534,
+    "failed": 0,
+    "failures": []
+  }
+}
