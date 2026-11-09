@@ -1,0 +1,88 @@
+{
+  "batch": 180,
+  "date": "2026-11-09",
+  "curriculum_scope": "LKS Cyber Security 2026 / NIST SP 800-115 / WorldSkills Skill 54",
+  "modules": [
+    {
+      "challenge_id": 462,
+      "challenge_name": "Rust fixme 2",
+      "category": "General Skills",
+      "difficulty": "Easy (1)",
+      "points": 100,
+      "event": "picoCTF 2025",
+      "author": "Taylor McCampbell",
+      "flag": "academy{4r3_y0u_h4v1n5_fun_y31?}",
+      "standards": [
+        "NIST SP 800-115 §4.2",
+        "ISO/IEC 25010",
+        "Rust Reference §8.2.2",
+        "RFC 2094",
+        "CWE-843",
+        "CWE-662"
+      ],
+      "vulnerability": {
+        "title": "Rust Mutable Borrowing and Reference Semantic Violation",
+        "root_cause": "The function decrypt attempts to mutate a borrowed buffer via push_str while the parameter is typed as an immutable reference (&String) and the caller binds the variable as immutable without &mut passing.",
+        "impact": "Compilation abort (error[E0596] & error[E0308]); program cannot build or execute until ownership and borrowing rules are satisfied."
+      },
+      "remediation": {
+        "primary": "Enforce explicit mutable borrowing contracts by typing parameters as &mut String, binding mutable variables via let mut, and passing mutable references &mut var.",
+        "standard": "Rust API Guidelines / RFC 2094 Non-Lexical Lifetimes"
+      }
+    },
+    {
+      "challenge_id": 461,
+      "challenge_name": "Rust fixme 1",
+      "category": "General Skills",
+      "difficulty": "Easy (1)",
+      "points": 100,
+      "event": "picoCTF 2025",
+      "author": "Taylor McCampbell",
+      "flag": "academy{4r3_y0u_4_ru$t4c30n_n0w?}",
+      "standards": [
+        "NIST SP 800-115 §4.2",
+        "ISO/IEC 25010",
+        "Rust Reference §8.1",
+        "std::fmt Macro Formatting",
+        "CWE-843",
+        "CWE-704"
+      ],
+      "vulnerability": {
+        "title": "Rust AST Statement Termination and Macro Format Malformation",
+        "root_cause": "Omission of statement terminator semicolon (;), non-existent control keyword (ret; instead of return;), and malformed format specifier string (\":?\" lacking {} placeholder) in println!.",
+        "impact": "Immediate compiler rejection due to grammar parsing and compile-time macro parameter validation failures."
+      },
+      "remediation": {
+        "primary": "Adopt automated rustfmt code formatting, compiler diagnostic analysis, and standard std::fmt Display ({}) and Debug ({:?}) placeholder syntax.",
+        "standard": "Rust Style Guidelines / NIST SP 800-115 §4.2"
+      }
+    },
+    {
+      "challenge_id": 460,
+      "challenge_name": "RED",
+      "category": "Forensics",
+      "difficulty": "Easy (1)",
+      "points": 100,
+      "event": "picoCTF 2025",
+      "author": "Shuailin Pan (LeConjuror)",
+      "flag": "academy{r3d_1s_th3_ult1m4t3_cur3_f0r_54dn355_}",
+      "standards": [
+        "NIST SP 800-115 §4.2",
+        "ISO/IEC 15948:2004",
+        "RFC 2083",
+        "RFC 4648",
+        "CWE-312",
+        "CWE-530"
+      ],
+      "vulnerability": {
+        "title": "PNG Extensible Metadata Exposure and Spatial Interleaved RGBA LSB Steganography",
+        "root_cause": "Cleartext acrostic instruction embedded within PNG tEXt metadata chunk ('CHECK LSB') and unencrypted Base64 payload encoded across the lowest bit of all 4 color channels (RGBA) without cryptographic secrecy.",
+        "impact": "Extraction of confidential payload via trivial scanline defiltering and LSB bit extraction without requiring authentication or secret keys."
+      },
+      "remediation": {
+        "primary": "Implement automated metadata scrubbing (exiftool/image reprocessing) and apply statistical chi-square steganalysis and data loss prevention (DLP) monitoring.",
+        "standard": "ISO/IEC 15948 / OWASP Digital Media Hardening"
+      }
+    }
+  ]
+}
