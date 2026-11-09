@@ -1,0 +1,68 @@
+{
+  "batch": 170,
+  "timestamp": "2026-11-09 08:52:47 UTC",
+  "standard": "NIST SP 800-115 Section 4.2 / RFC 7239 / RFC 4949 / ITU-T T.81",
+  "compiler_sweep": {
+    "total_scanned": 538,
+    "passed": 538,
+    "failed": 0,
+    "failures": []
+  },
+  "solver_results": [
+    {
+      "id": 521,
+      "name": "Crack the Gate 2",
+      "category": "Web Exploitation",
+      "script": "solve_521_crack_the_gate_2.py",
+      "check_type": "rate_limit_bypass_x_forwarded_for_rotation",
+      "exit_code": 0,
+      "duration_sec": 0.0428,
+      "flag_match": true,
+      "extracted_flag": "academy{xff_byp4ss_brut3_b6771b85}",
+      "expected_flag": "academy{xff_byp4ss_brut3_b6771b85}",
+      "status": "PASS",
+      "output_snippet": [
+        "[+] Simulasi rekoveri flag berhasil: academy{xff_byp4ss_brut3_b6771b85}",
+        "[+] Flag berhasil direkonstruksi: academy{xff_byp4ss_brut3_b6771b85}",
+        "[+] Integritas token terverifikasi 100%: academy{xff_byp4ss_brut3_b6771b85}"
+      ]
+    },
+    {
+      "id": 520,
+      "name": "Crack the Gate 1",
+      "category": "Web Exploitation",
+      "script": "solve_520_crack_the_gate_1.py",
+      "check_type": "rot13_comment_backdoor_header_bypass",
+      "exit_code": 0,
+      "duration_sec": 0.0436,
+      "flag_match": true,
+      "extracted_flag": "academy{brut4_f0rc4_dc8f7ab6}",
+      "expected_flag": "academy{brut4_f0rc4_dc8f7ab6}",
+      "status": "PASS",
+      "output_snippet": [
+        "[+] Flag berhasil direkonstruksi: academy{brut4_f0rc4_dc8f7ab6}",
+        "[+] Flag berhasil direkonstruksi: academy{brut4_f0rc4_dc8f7ab6}",
+        "[+] Integritas token terverifikasi 100%: academy{brut4_f0rc4_dc8f7ab6}"
+      ]
+    },
+    {
+      "id": 519,
+      "name": "Corrupted file",
+      "category": "Forensics",
+      "script": "solve_519_corrupted_file.py",
+      "check_type": "jpeg_soi_magic_byte_carving_repair",
+      "exit_code": 0,
+      "duration_sec": 0.0942,
+      "flag_match": true,
+      "extracted_flag": "academy{r3st0r1ng_th3_by73s_a6f66bd7}",
+      "expected_flag": "academy{r3st0r1ng_th3_by73s_a6f66bd7}",
+      "status": "PASS",
+      "output_snippet": [
+        "[+] Flag visual terverifikasi pada kanvas: academy{r3st0r1ng_th3_by73s_a6f66bd7}",
+        "[+] Flag berhasil direkonstruksi: academy{r3st0r1ng_th3_by73s_a6f66bd7}",
+        "[+] Integritas token terverifikasi 100%: academy{r3st0r1ng_th3_by73s_a6f66bd7}"
+      ]
+    }
+  ],
+  "all_passed": true
+}
