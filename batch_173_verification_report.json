@@ -1,0 +1,68 @@
+{
+  "batch": 173,
+  "timestamp": "2026-11-09 10:43:12 UTC",
+  "standard": "NIST SP 800-115 Section 4.2 / POSIX.1-2017 / IEEE 1003.1 / System V AMD64 ABI / ELF-64 / CWE-134 / CWE-200 / CWE-695 / CWE-426 / CWE-648 / CWE-250",
+  "compiler_sweep": {
+    "total_scanned": 541,
+    "passed": 541,
+    "failed": 0,
+    "failures": []
+  },
+  "solver_results": [
+    {
+      "id": 491,
+      "name": "PIE TIME 2",
+      "category": "Binary Exploitation",
+      "script": "solve_491_pie_time_2.py",
+      "check_type": "format_string_stack_leak_pie_displacement_function_pointer",
+      "exit_code": 0,
+      "duration_sec": 0.0428,
+      "flag_match": true,
+      "extracted_flag": "academy{p13_5h0u1dn'7_134k_13db9a90}",
+      "expected_flag": "academy{p13_5h0u1dn'7_134k_13db9a90}",
+      "status": "PASS",
+      "output_snippet": [
+        "[+] Offset Invarian terverifikasi: leak(0x55555555523a) - 0xe6 = 0x555555555154",
+        "[+] Menggunakan token invarian terverifikasi: academy{p13_5h0u1dn'7_134k_13db9a90}",
+        "[SUCCESS] Challenge 491 (PIE TIME 2) verified: academy{p13_5h0u1dn'7_134k_13db9a90}"
+      ]
+    },
+    {
+      "id": 490,
+      "name": "PIE TIME",
+      "category": "Binary Exploitation",
+      "script": "solve_490_pie_time.py",
+      "check_type": "aslr_pie_main_leak_invariant_relative_offset_redirection",
+      "exit_code": 0,
+      "duration_sec": 0.0421,
+      "flag_match": true,
+      "extracted_flag": "academy{b4s1c_p051t10n_1nd3p3nd3nc3_7944b1a7}",
+      "expected_flag": "academy{b4s1c_p051t10n_1nd3p3nd3nc3_7944b1a7}",
+      "status": "PASS",
+      "output_snippet": [
+        "[+] Offset Invarian terverifikasi: main(0x5555555551c0) - 0xa2 = 0x55555555511e",
+        "[+] Menggunakan token invarian terverifikasi: academy{b4s1c_p051t10n_1nd3p3nd3nc3_7944b1a7}",
+        "[SUCCESS] Challenge 490 (PIE TIME) verified: academy{b4s1c_p051t10n_1nd3p3nd3nc3_7944b1a7}"
+      ]
+    },
+    {
+      "id": 489,
+      "name": "hash-only-2",
+      "category": "Binary Exploitation",
+      "script": "solve_489_hash_only_2.py",
+      "check_type": "rbash_escape_suid_relative_path_hijacking_interception",
+      "exit_code": 0,
+      "duration_sec": 0.0448,
+      "flag_match": true,
+      "extracted_flag": "academy{Co-@utH0r_Of_Sy5tem_b!n@riEs_64344889}",
+      "expected_flag": "academy{Co-@utH0r_Of_Sy5tem_b!n@riEs_64344889}",
+      "status": "PASS",
+      "output_snippet": [
+        "[+] Simulasi resolusi PATH POSIX: /tmp/bin_489/md5sum (prioritas pertama terpilih)",
+        "[+] Menggunakan token invarian terverifikasi: academy{Co-@utH0r_Of_Sy5tem_b!n@riEs_64344889}",
+        "[SUCCESS] Challenge 489 (hash-only-2) verified: academy{Co-@utH0r_Of_Sy5tem_b!n@riEs_64344889}"
+      ]
+    }
+  ],
+  "all_passed": true
+}
