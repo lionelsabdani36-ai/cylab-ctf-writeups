@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 166 (09 November 2026 - Windows PE32+ LZMA Stream Unpacking, Data Segment Socket String Carving & ASCII Bitstream JPEG Reconstruction Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 700 | Binary Instrumentation 4 | Reverse Engineering | Hard | `academy{n3tw0rk_1s_4P1s_4S_W311_3a23cea2}` | **SOLVED** | 2026-11-09 |
+| 2 | 699 | Binary Instrumentation 3 | Reverse Engineering | Hard | `academy{411_4r3_4p15_n07h1n9_3l53_34f98e4f}` | **SOLVED** | 2026-11-09 |
+| 3 | 698 | Binary Digits | Forensics | Easy | `academy{h1dd3n_1n_th3_b1n4ry_6d751a5b}` | **SOLVED** | 2026-11-09 |
+
 ### Batch 165 (09 November 2026 - LFSR Key Derivation & AES-ECB, Multi-Prime Clustered RSA & Affine S-Box-less AES Cryptanalysis Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
