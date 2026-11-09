@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 173 (09 November 2026 - Format String Stack Leak PIE Bypass, PIE Diagnostic Pointer Redirection & SUID PATH Hijacking rbash Breakout Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 491 | PIE TIME 2 | Binary Exploitation | Medium | `academy{p13_5h0u1dn'7_134k_13db9a90}` | **SOLVED** | 2026-11-09 |
+| 2 | 490 | PIE TIME | Binary Exploitation | Easy | `academy{b4s1c_p051t10n_1nd3p3nd3nc3_7944b1a7}` | **SOLVED** | 2026-11-09 |
+| 3 | 489 | hash-only-2 | Binary Exploitation | Medium | `academy{Co-@utH0r_Of_Sy5tem_b!n@riEs_64344889}` | **SOLVED** | 2026-11-09 |
+
 ### Batch 172 (09 November 2026 - Email Header CRLF Injection MIME Smuggling, Verilog CPU WASM NAND Circuit & Jinja2 SSTI RCE Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
