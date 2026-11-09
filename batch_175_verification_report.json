@@ -1,6 +1,6 @@
 {
   "batch": 175,
-  "timestamp": "2026-11-09 11:59:08 UTC",
+  "timestamp": "2026-11-09 12:00:19 UTC",
   "standard": "NIST SP 800-115 Section 4.2 / RFC 6455 / W3C PNG / FIPS 140-3 / CWE-532 / CWE-319 / CWE-602 / CWE-345 / CWE-327 / CWE-695",
   "compiler_sweep": {
     "total_scanned": 543,
@@ -16,7 +16,7 @@
       "script": "solve_481_flags_are_stepic.py",
       "check_type": "spatial_domain_lsb_stepic_decoding",
       "exit_code": 0,
-      "duration_sec": 2.3181,
+      "duration_sec": 2.1799,
       "flag_match": true,
       "extracted_flag": "academy{fl4g_h45_fl4g4fd6a57e}",
       "expected_flag": "academy{fl4g_h45_fl4g4fd6a57e}",
@@ -53,7 +53,7 @@
       "script": "solve_479_quantum_scrambler.py",
       "check_type": "deterministic_transposition_permutation_inversion",
       "exit_code": 0,
-      "duration_sec": 0.0685,
+      "duration_sec": 0.0682,
       "flag_match": true,
       "extracted_flag": "academy{python_is_weirdade7472a}",
       "expected_flag": "academy{python_is_weirdade7472a}",

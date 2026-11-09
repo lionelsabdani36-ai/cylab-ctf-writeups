@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Omnirush Automated Test Harness & Verification Suite — CyLab Batch 175
+Omnirush Automated Test Harness & Verification Suite : CyLab Batch 175
 Lead: David (Leader of AI Team / Agent Nyawit) & Omnirush CLI Automated Engine
 Standard Reference: NIST SP 800-115 Section 4.2 (Target Verification & Analysis)
 
@@ -110,7 +110,7 @@ def execute_target_solver(script_info: dict):
 
 def main():
     print("=" * 70)
-    print("  OMNIRUSH TEST HARNESS & VERIFICATION SUITE — BATCH 175")
+    print("  OMNIRUSH TEST HARNESS & VERIFICATION SUITE : BATCH 175")
     print("  Standard: NIST SP 800-115 Section 4.2 / RFC 6455 / W3C PNG / FIPS 140-3")
     print("=" * 70)
 
