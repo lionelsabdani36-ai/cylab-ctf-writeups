@@ -1,0 +1,120 @@
+{
+  "schema_version": "2026.2",
+  "document_title": "Pedagogical CTF Curriculum Synthesis & LKS Defensive Hardening Matrix (Batch 177: Affine Cipher Inversion, Interpreter Instruction Pointer Overwrite, & CLI FSM RoE Verification)",
+  "mentor": {
+    "name": "Judith",
+    "role": "Master Guru & Mentor Akademik / Kompetisi",
+    "mentee": "Arielwin & White Jack",
+    "target_level": "Seleksi Tim 2 & LKS Cyber Security Nasional (Gold Medalist Standard)",
+    "objective": "Membimbing siswa mencapai Total Concept Mastery 100% pada kriptanalisis inversi affine cipher berbasis oracle chosen-plaintext, dekonstruksi eksploitasi pembajakan pointer instruksi interpreter custom melalui injeksi pembatas sintaksis, serta navigasi otomatis CLI berbasis Finite State Machine yang patuh terhadap Rules of Engagement standar NIST SP 800-115 §3.1, FIPS 140-3, dan RFC 9110."
+  },
+  "batch_metadata": {
+    "batch_number": 177,
+    "target_platform": "CyLab Security Academy / picoCTF 2025",
+    "total_challenges": 3,
+    "total_score_points": 325,
+    "completion_rate": "100%",
+    "date_synthesized": "2026-11-09",
+    "target_challenges": [
+      473,
+      472,
+      471
+    ]
+  },
+  "pedagogical_pillars": [
+    {
+      "pillar": 1,
+      "name": "Anti-Hafalan Buta (First Principles & Intuisi Komputasi)",
+      "description": "Membedah struktur aljabar modulo 26 pada affine cipher E(x) = (ax + b) mod 26 beserta syarat keterbalikannya gcd(a, 26) = 1, memahami bagaimana loop eksekusi interpreter membaca instruksi dan array song_lines termutasi oleh input pengguna, serta memodelkan percabangan dialog CLI sebagai graf status berarah FSM."
+    },
+    {
+      "pillar": 2,
+      "name": "Metode Socratic & Scaffolding Bertingkat",
+      "description": "Menyajikan pertanyaan pancingan bertingkat (Tier 1 Orientasi, Tier 2 Struktural, Tier 3 Pencerahan) ketika siswa bingung menentukan nilai modular multiplicative inverse, gagal memahami mengapa input Crowd tidak langsung memicu flag, atau terjebak dalam alur dialog CLI yang berulang."
+    },
+    {
+      "pillar": 3,
+      "name": "Bedah Anatomi Distraktor (Jebakan Soal HOTS)",
+      "description": "Mengupas tuntas distraktor seperti mencoba analisis frekuensi pada ciphertext affine yang terlalu pendek alih-alih memanfaatkan oracle chosen-plaintext, mencoba buffer overflow biner pada skrip Python lyric-reader alih-alih mengeksploitasi injeksi titik koma pada logika parser, atau memilih opsi curang/ilegal dalam simulasi RoE CTF."
+    },
+    {
+      "pillar": 4,
+      "name": "Siklus Belajar Adaptif (Diagnosa -> Kristalisasi -> Drilling Bertingkat -> Verifikasi 100%)",
+      "description": "Menuntun proses pembelajaran melalui 3 level simulasi latihan: Otomasi Navigasi FSM CLI dan Kepatuhan RoE (Level 1 Fondasi), Rekayasa Payload Injeksi Delimiter dan Instruction Pointer Hijacking (Level 2 Analisis/HOTS), serta Solusi Sistem Kongruensi Linear Affine dan Oracle Inversion (Level 3 Kriptanalisis)."
+    },
+    {
+      "pillar": 5,
+      "name": "Evaluasi Berbasis IRT (Item Response Theory) & Rubrik LKS Skill 54",
+      "description": "Memodelkan probabilitas penguasaan siswa menggunakan model psikometrik 3PL dan 4 pilar rubrik penilaian teknis standar LKS Cyber Security Nasional dan WorldSkills Skill 54."
+    }
+  ],
+  "cognitive_distribution": {
+    "C3_Applying": 1,
+    "C4_Analyzing": 1,
+    "C5_Evaluating": 1
+  },
+  "domain_distribution": {
+    "Domain_A_Applied_Cryptography_Affine_Ciphers": "Chall 473 (Guess My Cheese (Part 1))",
+    "Domain_B_Software_Security_Interpreter_Logic_Subversion": "Chall 472 (Flag Hunters)",
+    "Domain_C_Operational_Security_FSM_RoE_Verification": "Chall 471 (FANTASY CTF)",
+    "Domain_D_Defensive_Hardening_NIST_Compliance": "Chall 473, Chall 472, Chall 471"
+  },
+  "modules": [
+    {
+      "module_id": "MOD-01",
+      "challenge_id": 473,
+      "name": "Guess My Cheese (Part 1)",
+      "category": "Cryptography / Classical Substitution Ciphers & Linear Congruence Oracle Analysis",
+      "points": 200,
+      "difficulty": "Medium",
+      "bloom_level": "C4 - Analyzing",
+      "cwe": [
+        "CWE-326",
+        "CWE-327"
+      ],
+      "standards": [
+        "NIST SP 800-115 Section 4.2",
+        "RFC 9110",
+        "FIPS 140-3"
+      ],
+      "flag": "academy{ChEeSy8b0897b1}"
+    },
+    {
+      "module_id": "MOD-02",
+      "challenge_id": 472,
+      "name": "Flag Hunters",
+      "category": "Reverse Engineering / Python Interpreter Logic Subversion & Instruction Pointer Hijacking",
+      "points": 75,
+      "difficulty": "Easy",
+      "bloom_level": "C4 - Analyzing",
+      "cwe": [
+        "CWE-20",
+        "CWE-74",
+        "CWE-94"
+      ],
+      "standards": [
+        "NIST SP 800-115 Section 4.2",
+        "RFC 9110"
+      ],
+      "flag": "academy{70637h3r_f0r3v3r_42783b07}"
+    },
+    {
+      "module_id": "MOD-03",
+      "challenge_id": 471,
+      "name": "FANTASY CTF",
+      "category": "General Skills / Interactive CLI Automation & Rules of Engagement Verification",
+      "points": 50,
+      "difficulty": "Easy",
+      "bloom_level": "C3 - Applying",
+      "cwe": [
+        "CWE-20"
+      ],
+      "standards": [
+        "NIST SP 800-115 Section 3.1",
+        "RFC 9110",
+        "IEEE 829"
+      ],
+      "flag": "academy{m1113n1um_3d1710n_07462474}"
+    }
+  ]
+}
