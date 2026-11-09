@@ -4,8 +4,9 @@
 - ID: 467 | Event: picoCTF 2025
 - Category: Web Exploitation | Difficulty: Medium (2)
 - Author: Junias Bonou
-- Points: 300 Pts
+- Points: 300 Pts (CyLab) / 100 Pts (picoCTF)
 - Flag: `academy{w3Ll_d3sErV3d_Ch4mp_3ccde0d1}`
+- Standard Reference: NIST SP 800-115 §4.2, OWASP WSTG-INFO-05, OWASP WSTG-INPV-12, RFC 7230/7231, CWE-530, CWE-843
 
 ## Problem Statement & Scope
 Aplikasi web menyediakan antarmuka login yang diklaim "mustahil diretas" (*impossible to hack*).
@@ -17,7 +18,7 @@ Deskripsi menyatakan:
 Objektif pengujian (NIST SP 800-115 / OWASP WSTG-INFO-05 Review Webserver Metafiles & OWASP WSTG-INPV-12 Testing for Type Confusion / PHP Type Juggling):
 Mengidentifikasi kebocoran berkas cadangan (*editor backup file leakage*), merekonstruksi logika validasi otentikasi PHP, mengeksploitasi anomali *type juggling* fungsi hash `sha1()` saat menerima parameter bertipe array, dan mengekstrak token flag dari berkas `../flag.txt`.
 
-## Teori & Analisis Arsitektur Kerentanan
+## Teori & Akar Kerentanan (Root Cause Theory)
 1. **Source Code Disclosure via Editor Backup Files (CWE-530):**
    Text editor populer (seperti GNU Emacs) secara default membuat salinan cadangan otomatis dengan menambahkan akhiran tilde (`~`) pada nama berkas yang diedit (misalnya `filename.php~`).
    Karena server web Apache umumnya hanya memetakan handler interpreter PHP pada berkas berekstensi `.php` murni, berkas berekstensi `.php~` disajikan langsung sebagai plain text (`Content-Type: text/plain` atau `application/octet-stream`). Hal ini mengakibatkan pengungkapan kode sumber backend (*backend source code disclosure*).
@@ -38,7 +39,7 @@ Mengidentifikasi kebocoran berkas cadangan (*editor backup file leakage*), merek
        }
    }
    ```
-3. **Flaw Analisis: PHP Type Juggling & Array Handling:**
+3. **Flaw Analisis: PHP Type Juggling & Array Handling (CWE-843):**
    - Kondisi pertama: `$username != $pwd` (nilai username dan password tidak boleh sama).
    - Kondisi kedua: `sha1($username) === sha1($pwd)` (nilai hash sha1 dari keduanya harus identik secara ketat).
    - Fungsi bawaan PHP `sha1()` dirancang untuk memproses string. Jika tipe data yang diteruskan berupa array (misalnya diinputkan via form dengan sintaks HTTP array `username[]=a&pwd[]=b`):
@@ -78,6 +79,7 @@ Mengidentifikasi kebocoran berkas cadangan (*editor backup file leakage*), merek
 ## Flag & Bukti Verifikasi
 - Flag Resmi: `academy{w3Ll_d3sErV3d_Ch4mp_3ccde0d1}`
 - Bukti Validasi: REST API CyLab `POST /api/submissions/` merespons dengan status HTTP 201 Created (`correct: true`, user 1072359).
+- Reproduktifitas Solver: Terverifikasi 100% via `scripts/solve_467_apriti_sesamo.py`.
 
 ## Takeaway Kompetensi LKS & Mitigasi Defensif
 - **Pembersihan Berkas Cadangan Editor:** Jangan pernah menyimpan atau membiarkan berkas cadangan otomatis editor (`*~`, `*.bak`, `*.swp`, `.#*`) tertinggal pada direktori root web publik (`webroot`). Konfigurasikan `.gitignore` dan pipeline deployment CI/CD untuk mengecualikan berkas artefak editor.
@@ -93,4 +95,4 @@ Mengidentifikasi kebocoran berkas cadangan (*editor backup file leakage*), merek
       die("Invalid input type");
   }
   ```
-- **Gunakan Algoritma Password Hashing Modern:** Jangan gunakan fungsi hash cepat/usang seperti `sha1()` atau `md5()` untuk otentikasi. Wajibkan penggunaan `password_hash()` dan `password_verify()` dengan algoritma Argon2id atau Bcrypt.
+- **Gunakan Algoritma Password Hashing Modern:** Jangan gunakan fungsi hash cepat/usang seperti `sha1()` atau `md5()` untuk otentikasi. Wajibkan penggunaan `password_hash()` dan `password_verify()` dengan algoritma Argon2id atau Bcrypt sesuai panduan OWASP Password Storage Cheat Sheet.

@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 179 (09 November 2026 - Emacs Backup Artifact Disclosure & PHP Type Juggling, Keystream-XOR Blockchain Decryption & Rust Memory Safety AST Remediation Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 467 | Apriti sesamo | Web Exploitation | Medium | `academy{w3Ll_d3sErV3d_Ch4mp_3ccde0d1}` | **SOLVED** | 2026-11-09 |
+| 2 | 466 | Tap into Hash | Reverse Engineering | Medium | `academy{block_3SRhViRbT1qcX_XUjM0r49cH_qCzmJZzBK_3a847c57}` | **SOLVED** | 2026-11-09 |
+| 3 | 463 | Rust fixme 3 | General Skills | Easy | `academy{n0w_y0uv3_f1x3d_1h3m_411}` | **SOLVED** | 2026-11-09 |
+
 ### Batch 178 (09 November 2026 - Even Modulus Trivial Factorization, RFC 6265 Set-Cookie Inspection & Predictable Millisecond PRNG Seeding Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
