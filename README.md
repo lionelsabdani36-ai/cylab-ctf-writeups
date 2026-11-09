@@ -34,10 +34,20 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
   - [x] Module 143: PowerAnalysis: Part 1 (Challenge 364) -> `academy{b13adff8b4d1a89da8ba668043276276}`
   - [x] Module 144: PowerAnalysis: Part 2 (Challenge 365) -> `academy{a202f6234c28153cf01c4dce23b7f9f5}`
   - [x] Module 145: Outro (Theory)
+- [x] **Learning Path: Investigation Encoded Series** (Playlist 6) — **2/2 Modules Completed (100%)**
+  - [x] Module 62: investigation_encoded_1 (Challenge 47) -> `encodedxxkpbxrzrn` (format RAW, tanpa wrapper)
+  - [x] Module 63: investigation_encoded_2 (Challenge 36) -> `t1m3f1i35000000000004f54f0f0` (format RAW, tanpa wrapper)
 
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 181 (09 November 2026 - Learning Path Module Verification Sprint: Rekey Format Flag & Custom Prefix Codebook Static Extraction, 3/3)
+| No | Modul | ID Chall | Nama | Playlist | Flag Terverifikasi (Live) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 62 | 47 | investigation_encoded_1 | 6 | `encodedxxkpbxrzrn` (RAW) | **VERIFIED correct:true** | 2026-11-09 |
+| 2 | 63 | 36 | investigation_encoded_2 | 6 | `t1m3f1i35000000000004f54f0f0` (RAW) | **VERIFIED correct:true** | 2026-11-09 |
+| 3 | 60 | 90 | Guessing Game 1 | 5 | `academy{r0p_y0u_l1k3_4_hurr1c4n3_3ea9d94813b570b2}` | **VERIFIED correct:true** | 2026-11-09 |
 
 ### Batch 180 (09 November 2026 - Rust Borrowing & Mutability Invariants, Rust Syntax AST Remediation & PNG Metadata RGBA LSB Steganography Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |

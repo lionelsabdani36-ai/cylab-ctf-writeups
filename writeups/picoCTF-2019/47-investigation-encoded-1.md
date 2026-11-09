@@ -96,6 +96,16 @@ Ruang lingkup pengujian mencakup dekompilasi kode biner x86_64, pembedahan struk
 - **Native picoCTF Format:** `picoCTF{encodedxxkpbxrzrn}`
 - **Status Verifikasi:** Terverifikasi 100% pada dekompilasi biner `mystery` dan inversi kamus aliran bit Huffman.
 
+### Addendum Audit Verifikasi Batch 181 (09 November 2026)
+- **Konteks:** Modul Learning Path resmi Playlist 6 "Investigation Encoded Series" (Module ID 62, `module_type: C`, `content: 47`). Tracker playlist sebelumnya menunjukan 0/2 karena rekey format flag platform.
+- **Verifikasi Live Ulang:** `POST /api/submissions/` dengan `X-CSRFToken` (HTTP 201):
+  - `academy{encodedxxkpbxrzrn}` -> `"correct": false`
+  - `encodedxxkpbxrzrn` -> `"correct": true, "historical": false`
+- **Temuan Normalisasi Format:** Deskripsi lab memuat NOTE eksplisit "The flag is not in the normal academy{XXX} format." Validator challenge 47 menerima **raw token tanpa wrapper**. Lesson LKS: selalu re-read statement lab sebelum submit; format wrapper tidak universal lintas challenge CyLab.
+- **Verifikasi Artefak Dinamis:** Biner di-unduh ulang dari CDN (`challenge-files.cylabacademy.net/library/4a85bdcac.../investigation-encoded-1-mystery`), kodebook diekstraksi ulang secara statis via objdump (27 entri `matrix (len,start)` + `secret` 37 byte), dekode greedy menghasilkan token identik.
+- **Status Playlist:** `GET /api/gym/playlists/6/` -> **2/2 (100%)** pasca-submit terverifikasi.
+- **Script Reproduktif:** `scripts/verify_module_62_investigation_encoded_1.py`
+
 ---
 
 ## Takeaway Kompetensi LKS & Mitigasi Defensif
