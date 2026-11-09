@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 169 (09 November 2026 - JPEG Steghide DCT Carving, Log Obfuscation PNG Hex Carving & Textbook RSA Low Exponent Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 524 | Hidden in plainsight | Forensics | Easy | `academy{h1dd3n_1n_1m4g3_d0c4a4e2}` | **SOLVED** | 2026-11-09 |
+| 2 | 523 | Flag in Flame | Forensics | Easy | `academy{forensics_analysis_is_amazing_2043dbd1}` | **SOLVED** | 2026-11-09 |
+| 3 | 522 | Crack the Power | Cryptography | Medium | `academy{t1ny_e_227220c9}` | **SOLVED** | 2026-11-09 |
+
 ### Batch 168 (09 November 2026 - Android APK Base32 Resource Carving, Glibc Heap Overflow Redirection Bypass & Stack Frame Strcpy Command Injection Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
