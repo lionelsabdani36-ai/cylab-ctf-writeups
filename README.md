@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 178 (09 November 2026 - Even Modulus Trivial Factorization, RFC 6265 Set-Cookie Inspection & Predictable Millisecond PRNG Seeding Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 470 | EVEN RSA CAN BE BROKEN??? | Cryptography | Easy | `academy{tw0_1$_pr!m3207f407f}` | **SOLVED** | 2026-11-09 |
+| 2 | 469 | Cookie Monster Secret Recipe | Web Exploitation | Easy | `academy{c00k1e_m0nster_l0ves_c00kies_1E06422A}` | **SOLVED** | 2026-11-09 |
+| 3 | 468 | Chronohack | Reverse Engineering | Medium | `academy{UseSecure#$_Random@j3n3r@T0rs2627fc3a}` | **SOLVED** | 2026-11-09 |
+
 ### Batch 177 (09 November 2026 - Classical Affine Cipher Chosen-Plaintext Inversion, Custom Interpreter Instruction Pointer Hijacking & Interactive FSM Dialogue Automation Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
