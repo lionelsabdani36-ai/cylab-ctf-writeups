@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 159 (09 November 2026 - Raw Byte Socket I/O, Low-Entropy KDF Timestamp Brute-Force & Forensics MACB Timeline Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 724 | bytemancy 2 | General Skills | Medium | `academy{3ff5_4_d4yz_31bc4875}` | **SOLVED** | 2026-11-09 |
+| 2 | 722 | Timestamped Secrets | Cryptography | Medium | `academy{sa3S_sEc9t_3b464909}` | **SOLVED** | 2026-11-09 |
+| 3 | 721 | Timeline 1 | Forensics | Hard | `academy{573417h13r_7h4n_7h3_1457_58527bb222}` | **SOLVED** | 2026-11-09 |
+
 ### Batch 158 (09 November 2026 - SQLite UNION Injection & MD5 Cracking, Stack Mitigation Triage & GeoIP2 Socket Routing Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
