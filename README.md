@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 177 (09 November 2026 - Classical Affine Cipher Chosen-Plaintext Inversion, Custom Interpreter Instruction Pointer Hijacking & Interactive FSM Dialogue Automation Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 473 | Guess My Cheese (Part 1) | Cryptography | Medium | `academy{ChEeSy8b0897b1}` | **SOLVED** | 2026-11-09 |
+| 2 | 472 | Flag Hunters | Reverse Engineering | Easy | `academy{70637h3r_f0r3v3r_42783b07}` | **SOLVED** | 2026-11-09 |
+| 3 | 471 | FANTASY CTF | General Skills | Easy | `academy{m1113n1um_3d1710n_07462474}` | **SOLVED** | 2026-11-09 |
+
 ### Batch 176 (09 November 2026 - V8 Heap Snapshot Memory Carving, Fast Cryptographic Hash Deconstruction & Low-Entropy Salt Exhaustion Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
