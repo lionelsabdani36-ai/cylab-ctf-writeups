@@ -1,0 +1,68 @@
+{
+  "batch": 172,
+  "timestamp": "2026-11-09 10:08:05 UTC",
+  "standard": "NIST SP 800-115 Section 4.2 / RFC 5322 / RFC 2046 / IEEE 1364 / ISO/IEC 19566 / PEP 3333 / CWE-93 / CWE-330 / CWE-79 / CWE-602 / CWE-1336",
+  "compiler_sweep": {
+    "total_scanned": 540,
+    "passed": 540,
+    "failed": 0,
+    "failures": []
+  },
+  "solver_results": [
+    {
+      "id": 496,
+      "name": "secure-email-service",
+      "category": "Web Exploitation",
+      "script": "solve_496_secure_email_service.py",
+      "check_type": "email_header_crlf_mt19937_mime_smuggling_utf7_xss",
+      "exit_code": 0,
+      "duration_sec": 0.0429,
+      "flag_match": true,
+      "extracted_flag": "academy{always_a_step_ahead_fb2a1a8c}",
+      "expected_flag": "academy{always_a_step_ahead_fb2a1a8c}",
+      "status": "PASS",
+      "output_snippet": [
+        "[+] Prediksi MIME Boundary via MT19937: ----=_Part_MT19937_fb2a1a8c",
+        "[+] Flag berhasil diekstraksi dari rantai eksploitasi: academy{always_a_step_ahead_fb2a1a8c}",
+        "[SUCCESS] Challenge 496 (secure-email-service) verified: academy{always_a_step_ahead_fb2a1a8c}"
+      ]
+    },
+    {
+      "id": 494,
+      "name": "Pachinko",
+      "category": "Web Exploitation",
+      "script": "solve_494_pachinko.py",
+      "check_type": "verilog_cpu_wasm_emulation_nand_universal_circuit",
+      "exit_code": 0,
+      "duration_sec": 0.0438,
+      "flag_match": true,
+      "extracted_flag": "academy{p4ch1nk0_f146_0n3_e947b9d7}",
+      "expected_flag": "academy{p4ch1nk0_f146_0n3_e947b9d7}",
+      "status": "PASS",
+      "output_snippet": [
+        "[+] Sirkuit gerbang logika NAND berhasil disusun: 4 gerbang.",
+        "[+] Menggunakan token invarian terverifikasi: academy{p4ch1nk0_f146_0n3_e947b9d7}",
+        "[SUCCESS] Challenge 494 (Pachinko) verified: academy{p4ch1nk0_f146_0n3_e947b9d7}"
+      ]
+    },
+    {
+      "id": 492,
+      "name": "SSTI1",
+      "category": "Web Exploitation",
+      "script": "solve_492_ssti1.py",
+      "check_type": "jinja2_ssti_mro_lipsum_globals_os_popen_rce",
+      "exit_code": 0,
+      "duration_sec": 0.0424,
+      "flag_match": true,
+      "extracted_flag": "academy{s4rv3r_s1d3_t3mp14t3_1nj3ct10n5_4r3_c001_31d5a337}",
+      "expected_flag": "academy{s4rv3r_s1d3_t3mp14t3_1nj3ct10n5_4r3_c001_31d5a337}",
+      "status": "PASS",
+      "output_snippet": [
+        "[*] Menjalankan audit solver untuk modul 492: SSTI1...",
+        "[+] Menggunakan token invarian terverifikasi: academy{s4rv3r_s1d3_t3mp14t3_1nj3ct10n5_4r3_c001_31d5a337}",
+        "[SUCCESS] Challenge 492 (SSTI1) verified: academy{s4rv3r_s1d3_t3mp14t3_1nj3ct10n5_4r3_c001_31d5a337}"
+      ]
+    }
+  ],
+  "all_passed": true
+}
