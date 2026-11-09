@@ -1,0 +1,56 @@
+{
+  "timestamp": 1794207702,
+  "batch": 167,
+  "engine": "David / Omnirush Automated Solvers Execution Engine",
+  "omnirush_cli_status": "ready (Omnirush v2.7.1 available; deterministic test harness engine active)",
+  "total_targets": 3,
+  "passed": 3,
+  "failed": 0,
+  "details": [
+    {
+      "id": 697,
+      "name": "The Add/On Trap",
+      "category": "Reverse Engineering",
+      "script": "solve_697_the_add_on_trap.py",
+      "check_type": "fernet_symmetric_token_decryption",
+      "py_compile": true,
+      "runtime_exec": true,
+      "extracted_flag": "academy{Us3_4dd/0ns_v3ry_c4r3fully1}",
+      "flag_match": true,
+      "duration_seconds": 0.132,
+      "error": null
+    },
+    {
+      "id": 530,
+      "name": "Riddle Registry",
+      "category": "Forensics",
+      "script": "solve_530_riddle_registry.py",
+      "check_type": "pdf_info_author_metadata_carving",
+      "py_compile": true,
+      "runtime_exec": true,
+      "extracted_flag": "academy{puzzl3d_m3tadata_f0und!_2d947385}",
+      "flag_match": true,
+      "duration_seconds": 0.123,
+      "error": null
+    },
+    {
+      "id": 529,
+      "name": "Pico Bank",
+      "category": "Reverse Engineering",
+      "script": "solve_529_pico_bank.py",
+      "check_type": "apk_smali_profiling_static_otp_reconstruction",
+      "py_compile": true,
+      "runtime_exec": true,
+      "extracted_flag": "academy{1_l13d_4b0ut_b31ng_s3cur3d_m0b1l3_l0g1n_7f1dd571}",
+      "flag_match": true,
+      "duration_seconds": 0.04,
+      "error": null
+    }
+  ],
+  "repo_syntax_sweep": {
+    "total_scanned": 535,
+    "passed": 535,
+    "failed": 0,
+    "failures": []
+  }
+}
