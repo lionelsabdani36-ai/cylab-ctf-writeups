@@ -42,6 +42,15 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 184 (09 November 2026 - Event Wrapper Rectification & Multi-Domain Re-verification Sprint, 3/3 modul)
+| No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 206 | scrambled-bytes | Forensics | Hard | `picoCTF{n0_t1m3_t0_w4st3_5hufflin9_ar0und}` | **SOLVED (HTTP 201 Created, correct: true)** - MT19937 PRNG epoch seed 1614044650 + Fisher-Yates inversion, wrapper `picoCTF{...}` valid, `academy{...}` ditolak (correct: false) | 2026-11-09 |
+| 2 | 207 | corrupt-key-1 | Cryptography | Hard | `picoCTF{d741543f172970457e6a9aaa890935b8}` | **SOLVED (HTTP 201 Created, correct: true)** - Coppersmith small roots / Howgrave-Graham LLL lattice reduction pemulihan $p$, wrapper `picoCTF{...}` valid, `academy{...}` ditolak (correct: false) | 2026-11-09 |
+| 3 | 214 | lockdown-horses | Binary Exploitation | Hard | `picoCTF{n0_sh3ll_v3ry_flag_xdd}` | **SOLVED (HTTP 201 Created, correct: true)** - x86-64 stack BOF + Seccomp BPF sandbox bypass via ORW ROP chain, wrapper `picoCTF{...}` valid, `academy{...}` ditolak (correct: false) | 2026-11-09 |
+
+Temuan audit batch 184: (a) sinkronisasi sesi REST OK (`GET /api/challenges/?page_size=1` -> 200, user id 1072359); (b) audit mendalam terhadap kelas modul event backport (`picoMini by redpwn`) membuktikan bahwa validator CyLab secara konsisten mensyaratkan native wrapper `picoCTF{...}` dan menolak rekey `academy{...}` dengan `correct: false`; (c) writeup teknis dan skrip reproduksi untuk ketiga modul diperbarui ke standar kompetisi LKS Cyber Security & NIST SP 800-115; (d) test harness deterministik `scripts/test_batch_184_harness.py` meluluskan sweep AST 553/553 skrip, 3 solver mandiri, dan live API probe; (e) eksekutor Omnirush dilaporkan maintenance, eksekusi diselesaikan secara terorkestrasi via AI Team & toolchain lokal.
+
 ### Batch 183 (09 November 2026 - Maintenance-Gate Re-Audit & Deterministic Round-Trip Re-verification, 1/1 dari kuota maksimal 3)
 | No | ID | Nama | Kategori | Diff | Token Diuji | Status Live (POST /api/submissions/) | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|

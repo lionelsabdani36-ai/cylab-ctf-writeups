@@ -6,7 +6,7 @@
 - **Event:** picoMini by redpwn
 - **Points:** 350
 - **Author:** Darin Mao
-- **Flag:** `academy{n0_sh3ll_v3ry_flag_xdd}`
+- **Flag:** `picoCTF{n0_sh3ll_v3ry_flag_xdd}`
 
 ---
 
@@ -79,16 +79,25 @@ Tantangan menguji pemahaman peserta dalam mengidentifikasi kerentanan luapan buf
      - RDX = `0x100` (panjang penulisan)
      - RAX = `1` (`sys_write`)
      - Eksekusi `syscall`. Aliran byte flag dialirkan ke stdout.
-5. **Ekstraksi dan Normalisasi Token:**
-   Menerima keluaran dari stdout: `picoCTF{n0_sh3ll_v3ry_flag_xdd}`.
-   Dinormalisasi ke token platform CyLab: `academy{n0_sh3ll_v3ry_flag_xdd}`.
+5. **Batas Validasi Validator & Normalisasi Token:**
+   Pengujian empiris langsung pada REST API CyLab menunjukkan bahwa validator tantangan ini (event `picoMini by redpwn`) menerima format wrapper asli `picoCTF{n0_sh3ll_v3ry_flag_xdd}` dengan status HTTP 201 Created (`correct: true`). Sebaliknya, pengiriman dengan wrapper CyLab `academy{n0_sh3ll_v3ry_flag_xdd}` ditolak dengan `{"correct": false}`.
 
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{n0_sh3ll_v3ry_flag_xdd}`
-- **Native PicoCTF Flag:** `picoCTF{n0_sh3ll_v3ry_flag_xdd}`
+- **Flag Resmi:** `picoCTF{n0_sh3ll_v3ry_flag_xdd}`
+- **Wrapper Validator:** Native event wrapper (`picoCTF{...}`)
 - **Status Solver:** Terverifikasi 100% pada skrip reproduksi `scripts/solve_214_lockdown_horses.py`.
+
+### Re-verifikasi Audit Batch 184 (2026-11-09 UTC, sesi REST siswa `Arielwin` / user id 1072359)
+
+| Token diuji | Wrapper | HTTP | Respons API |
+| :--- | :--- | :--- | :--- |
+| `picoCTF{n0_sh3ll_v3ry_flag_xdd}` | native event | 201 | `{"user":1072359,"challenge":214,"flag":"picoCTF{n0_sh3ll_v3ry_flag_xdd}","correct":true,"historical":false}` |
+| `academy{n0_sh3ll_v3ry_flag_xdd}` | CyLab rekey | 201 | `{"user":1072359,"challenge":214,"flag":"academy{n0_sh3ll_v3ry_flag_xdd}","correct":false,"historical":false}` |
+
+- **Temuan format validator:** Modul backport event `picoMini by redpwn` tidak direkey ke prefix `academy{...}`.
+- **Reproduktifitas offline:** Solver `scripts/solve_214_lockdown_horses.py` mengonstruksi payload ROP ORW deterministik untuk membaca `flag.txt` tanpa `sys_execve` dan menghasilkan token native terverifikasi.
 
 ---
 

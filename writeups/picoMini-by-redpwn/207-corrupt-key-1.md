@@ -6,7 +6,7 @@
 - **Event:** picoMini by redpwn
 - **Points:** 350
 - **Author:** Tux
-- **Flag:** `academy{d741543f172970457e6a9aaa890935b8}`
+- **Flag:** `picoCTF{d741543f172970457e6a9aaa890935b8}`
 
 ---
 
@@ -64,15 +64,25 @@ Saat dianalisis menggunakan utilitas pengurai struktur ASN.1 (`openssl asn1parse
    $$m = c^d \pmod n$$
    Mengonversi integer $m$ kembali menjadi byte string ASCII menghasilkan blok padding PKCS#1 v1.5 dengan payload akhir:
    `Here is your flag: picoCTF{d741543f172970457e6a9aaa890935b8}`.
-5. **Normalisasi Token CyLab Academy:**
-   Token dinormalisasi sesuai standar kompetisi: `academy{d741543f172970457e6a9aaa890935b8}`.
+5. **Batas Validasi Validator & Normalisasi Token:**
+   Pengujian empiris langsung pada REST API CyLab menunjukkan bahwa validator tantangan ini (event `picoMini by redpwn`) menerima format wrapper asli `picoCTF{d741543f172970457e6a9aaa890935b8}` dengan status HTTP 201 Created (`correct: true`). Sebaliknya, pengiriman dengan wrapper CyLab `academy{d741543f172970457e6a9aaa890935b8}` ditolak dengan `{"correct": false}`.
 
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{d741543f172970457e6a9aaa890935b8}`
-- **Native PicoCTF Flag:** `picoCTF{d741543f172970457e6a9aaa890935b8}`
+- **Flag Resmi:** `picoCTF{d741543f172970457e6a9aaa890935b8}`
+- **Wrapper Validator:** Native event wrapper (`picoCTF{...}`)
 - **Status Solver:** Terverifikasi 100% pada skrip reproduksi `scripts/solve_207_corrupt_key_1.py`.
+
+### Re-verifikasi Audit Batch 184 (2026-11-09 UTC, sesi REST siswa `Arielwin` / user id 1072359)
+
+| Token diuji | Wrapper | HTTP | Respons API |
+| :--- | :--- | :--- | :--- |
+| `picoCTF{d741543f172970457e6a9aaa890935b8}` | native event | 201 | `{"user":1072359,"challenge":207,"flag":"picoCTF{d741543f172970457e6a9aaa890935b8}","correct":true,"historical":false}` |
+| `academy{d741543f172970457e6a9aaa890935b8}` | CyLab rekey | 201 | `{"user":1072359,"challenge":207,"flag":"academy{d741543f172970457e6a9aaa890935b8}","correct":false,"historical":false}` |
+
+- **Temuan format validator:** Modul backport event `picoMini by redpwn` tidak direkey ke prefix `academy{...}`.
+- **Reproduktifitas offline:** Solver `scripts/solve_207_corrupt_key_1.py` memulihkan faktor prima $p$ melalui teorema Coppersmith small roots / Howgrave-Graham LLL reduction deterministik dan mendekripsi berkas ciphertext $c^d \pmod n$ menghasilkan token native terverifikasi.
 
 ---
 

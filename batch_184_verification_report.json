@@ -1,0 +1,133 @@
+{
+  "batch": 184,
+  "timestamp": "2026-11-09 22:54:50 UTC",
+  "utc_timestamp": "2026-11-09T22:54:50.907330+00:00",
+  "student_account": "Arielwin",
+  "user_id": 1072359,
+  "checks": [
+    {
+      "name": "ast_syntax_sweep",
+      "description": "AST-parses every scripts/*.py and fails on syntax errors",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "total_scanned": 553,
+        "passed": 553,
+        "failed": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "solve_206",
+      "description": "Executes solve_206_scrambled_bytes.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "picoCTF{n0_t1m3_t0_w4st3_5hufflin9_ar0und}"
+      }
+    },
+    {
+      "name": "solve_207",
+      "description": "Executes solve_207_corrupt_key_1.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "picoCTF{d741543f172970457e6a9aaa890935b8}"
+      }
+    },
+    {
+      "name": "solve_214",
+      "description": "Executes solve_214_lockdown_horses.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "picoCTF{n0_sh3ll_v3ry_flag_xdd}"
+      }
+    },
+    {
+      "name": "live_evidence_probes",
+      "description": "Verifies session health and live flag acceptance on CyLab submissions endpoint",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "session_healthy": true,
+        "all_tokens_verified": true,
+        "probes": [
+          {
+            "endpoint": "GET /api/challenges/?page_size=1",
+            "http": 200,
+            "healthy": true
+          },
+          {
+            "challenge_id": 206,
+            "flag": "picoCTF{n0_t1m3_t0_w4st3_5hufflin9_ar0und}",
+            "http": 201,
+            "correct": true,
+            "raw_response": "{\"user\": 1072359, \"challenge\": 206, \"flag\": \"picoCTF{n0_t1m3_t0_w4st3_5hufflin9_ar0und}\", \"correct\": true, \"historical\": false}"
+          },
+          {
+            "challenge_id": 207,
+            "flag": "picoCTF{d741543f172970457e6a9aaa890935b8}",
+            "http": 201,
+            "correct": true,
+            "raw_response": "{\"user\": 1072359, \"challenge\": 207, \"flag\": \"picoCTF{d741543f172970457e6a9aaa890935b8}\", \"correct\": true, \"historical\": false}"
+          },
+          {
+            "challenge_id": 214,
+            "flag": "picoCTF{n0_sh3ll_v3ry_flag_xdd}",
+            "http": 201,
+            "correct": true,
+            "raw_response": "{\"user\": 1072359, \"challenge\": 214, \"flag\": \"picoCTF{n0_sh3ll_v3ry_flag_xdd}\", \"correct\": true, \"historical\": false}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "writeup_documentation_audit",
+      "description": "Verifies existence, official flag format, and Batch 184 audit stamp across writeups",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "items": [
+          {
+            "id": "206",
+            "file": "writeups/picoMini-by-redpwn/206-scrambled-bytes.md",
+            "exists": true,
+            "has_expected_flag": true,
+            "has_batch_stamp": true,
+            "size": 8214
+          },
+          {
+            "id": "207",
+            "file": "writeups/picoMini-by-redpwn/207-corrupt-key-1.md",
+            "exists": true,
+            "has_expected_flag": true,
+            "has_batch_stamp": true,
+            "size": 7808
+          },
+          {
+            "id": "214",
+            "file": "writeups/picoMini-by-redpwn/214-lockdown-horses.md",
+            "exists": true,
+            "has_expected_flag": true,
+            "has_batch_stamp": true,
+            "size": 7828
+          }
+        ]
+      }
+    }
+  ],
+  "all_passed": true
+}

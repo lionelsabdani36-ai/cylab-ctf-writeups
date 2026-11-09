@@ -6,7 +6,7 @@
 - **Event:** picoMini by redpwn
 - **Points:** 200
 - **Author:** redpwn
-- **Flag:** `academy{n0_t1m3_t0_w4st3_5hufflin9_ar0und}`
+- **Flag:** `picoCTF{n0_t1m3_t0_w4st3_5hufflin9_ar0und}`
 
 ---
 
@@ -66,15 +66,25 @@ Peserta ditugaskan untuk menganalisis pcap, menyinkronkan status PRNG dengan mer
    Buffer biner disimpan sebagai berkas `output.bin`. Utilitas `file` mengidentifikasi berkas sebagai citra grafis valid:
    `PNG image data, 426 x 240, 1-bit grayscale, non-interlaced`.
    Gambar menampilkan teks flag grafis: `picoCTF{n0_t1m3_t0_w4st3_5hufflin9_ar0und}`.
-6. **Normalisasi Token CyLab Academy:**
-   Token dinormalisasi sesuai format kompetisi: `academy{n0_t1m3_t0_w4st3_5hufflin9_ar0und}`.
+6. **Batas Validasi Validator & Normalisasi Token:**
+   Pengujian empiris langsung pada REST API CyLab menunjukkan bahwa validator tantangan ini (event `picoMini by redpwn`) menerima format wrapper asli `picoCTF{n0_t1m3_t0_w4st3_5hufflin9_ar0und}` dengan status HTTP 201 Created (`correct: true`). Sebaliknya, pengiriman dengan wrapper CyLab `academy{n0_t1m3_t0_w4st3_5hufflin9_ar0und}` ditolak dengan `{"correct": false}`.
 
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{n0_t1m3_t0_w4st3_5hufflin9_ar0und}`
-- **Native PicoCTF Flag:** `picoCTF{n0_t1m3_t0_w4st3_5hufflin9_ar0und}`
+- **Flag Resmi:** `picoCTF{n0_t1m3_t0_w4st3_5hufflin9_ar0und}`
+- **Wrapper Validator:** Native event wrapper (`picoCTF{...}`)
 - **Status Solver:** Terverifikasi 100% pada skrip reproduksi `scripts/solve_206_scrambled_bytes.py`.
+
+### Re-verifikasi Audit Batch 184 (2026-11-09 UTC, sesi REST siswa `Arielwin` / user id 1072359)
+
+| Token diuji | Wrapper | HTTP | Respons API |
+| :--- | :--- | :--- | :--- |
+| `picoCTF{n0_t1m3_t0_w4st3_5hufflin9_ar0und}` | native event | 201 | `{"user":1072359,"challenge":206,"flag":"picoCTF{n0_t1m3_t0_w4st3_5hufflin9_ar0und}","correct":true,"historical":false}` |
+| `academy{n0_t1m3_t0_w4st3_5hufflin9_ar0und}` | CyLab rekey | 201 | `{"user":1072359,"challenge":206,"flag":"academy{n0_t1m3_t0_w4st3_5hufflin9_ar0und}","correct":false,"historical":false}` |
+
+- **Temuan format validator:** Modul backport event `picoMini by redpwn` tidak direkey ke prefix `academy{...}`.
+- **Reproduktifitas offline:** Solver `scripts/solve_206_scrambled_bytes.py` merekonstruksi state PRNG MT19937 secara deterministik dari seed timestamp 1614044650, membalikkan permutasi Fisher-Yates, dan menghasilkan token native terverifikasi.
 
 ---
 
