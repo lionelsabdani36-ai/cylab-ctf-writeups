@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 162 (09 November 2026 - Cellular IMSI Suffix XOR Recovery, Franklin-Reiter Related Message Attack & Targeted CUPP Wordlist Profiling Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 714 | Rogue Tower | Forensics | Medium | `academy{r0gu3_c3ll_t0w3r_931ea9c0}` | **SOLVED** | 2026-11-09 |
+| 2 | 713 | Related Messages | Cryptography | Medium | `academy{m3ssage_w1th_typ0}` | **SOLVED** | 2026-11-09 |
+| 3 | 712 | Password Profiler | General Skills | Easy | `academy{aliceaj7515}` | **SOLVED** | 2026-11-09 |
+
 ### Batch 161 (09 November 2026 - TCP Stream Reassembly & Shift Inversion, 8-Bit LFSR Keyspace Sweep & Diffie-Hellman Exponent Leakage Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
