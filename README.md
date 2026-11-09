@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 164 (09 November 2026 - Git Historical Commit Object Traversal, Git Commit Metadata Carving & Unallocated Space Gzip Recovery Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 706 | Forensics Git 1 | Forensics | Medium | `academy{g17_r3m3mb3r5_d4ddf904}` | **SOLVED** | 2026-11-09 |
+| 2 | 705 | Forensics Git 0 | Forensics | Medium | `academy{g17_1n_7h3_d15k_041217d8}` | **SOLVED** | 2026-11-09 |
+| 3 | 704 | DISKO 4 | Forensics | Medium | `academy{d3l_d0n7_h1d3_w3ll_9748d144}` | **SOLVED** | 2026-11-09 |
+
 ### Batch 163 (09 November 2026 - NTRU Coppersmith-Shamir Lattice Attack, Underdetermined Modular Polynomial LLL Reduction & Git Dangling Object Forensics Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
