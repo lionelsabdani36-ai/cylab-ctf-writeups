@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 160 (09 November 2026 - Ext4 Inode Timestomping Anomaly Triage, JPEG COM Stego-RSA Key Recovery & Wiener Small-d Continued Fraction Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 720 | Timeline 0 | Forensics | Easy | `academy{71m311n3_0u7113r_h3r_43a2e7af}` | **SOLVED** | 2026-11-09 |
+| 2 | 719 | StegoRSA | Cryptography | Easy | `academy{rs4_k3y_1n_1mg_21d0a083}` | **SOLVED** | 2026-11-09 |
+| 3 | 718 | Small Trouble | Cryptography | Medium | `academy{sm4ll_d_46c3352b}` | **SOLVED** | 2026-11-09 |
+
 ### Batch 159 (09 November 2026 - Raw Byte Socket I/O, Low-Entropy KDF Timestamp Brute-Force & Forensics MACB Timeline Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
