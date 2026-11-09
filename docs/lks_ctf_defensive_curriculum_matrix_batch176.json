@@ -1,0 +1,123 @@
+{
+  "schema_version": "2026.2",
+  "document_title": "Pedagogical CTF Curriculum Synthesis & LKS Defensive Hardening Matrix (Batch 176: V8 Heapdump Carving, Fast Hash Weaknesses, & Low-Entropy Salt Exhaustion)",
+  "mentor": {
+    "name": "Judith",
+    "role": "Master Guru & Mentor Akademik / Kompetisi",
+    "mentee": "Arielwin & White Jack",
+    "target_level": "Seleksi Tim 2 & LKS Cyber Security Nasional (Gold Medalist Standard)",
+    "objective": "Membimbing siswa mencapai Total Concept Mastery 100% pada ekstraksi memori runtime V8 proses heapdump via dokumentasi OpenAPI, identifikasi fungsi hash cepat (MD5/SHA-1/SHA-256) serta serangan kamus terarah, evaluasi batas keamanan entropi salt pada SHA-256 dan pembuatan tabel pelangi berbobot komputasi O(1), serta kepatuhan defensif standar NIST SP 800-115, NIST SP 800-63B, FIPS 180-4, dan RFC 9110."
+  },
+  "batch_metadata": {
+    "batch_number": 176,
+    "target_platform": "CyLab Security Academy / picoCTF 2025",
+    "total_challenges": 3,
+    "total_score_points": 450,
+    "completion_rate": "100%",
+    "date_synthesized": "2026-11-09",
+    "target_challenges": [
+      476,
+      475,
+      474
+    ]
+  },
+  "pedagogical_pillars": [
+    {
+      "pillar": 1,
+      "name": "Anti-Hafalan Buta (First Principles & Intuisi Komputasi)",
+      "description": "Membedah struktur alokasi heap memori JavaScript/V8 engine dan representasi string literal UTF-8 dalam snapshot biner, mengidentifikasi representasi bit dan panjang karakter digest heksadesimal fungsi hash tanpa menebak algoritma secara acak, serta menganalisis efek batas entropi salt terhadap ketahanan kriptografis fungsi hash satu arah."
+    },
+    {
+      "pillar": 2,
+      "name": "Metode Socratic & Scaffolding Bertingkat",
+      "description": "Menyajikan pertanyaan pancingan bertingkat (Tier 1 Orientasi, Tier 2 Struktural, Tier 3 Pencerahan) ketika siswa bingung mencari endpoint memori di aplikasi blog, kesulitan mengenali jenis hash yang disajikan socket TCP, atau mengira salt berukuran 2 nibble membuat hash tidak mungkin dipecahkan."
+    },
+    {
+      "pillar": 3,
+      "name": "Bedah Anatomi Distraktor (Jebakan Soal HOTS)",
+      "description": "Mengupas tuntas jebakan umum seperti melakukan SQL injection atau path traversal pada blog ketika celah sebenarnya ada pada dokumentasi API Swagger, menggunakan brute-force acak pada hash alih-alih memanfaatkan profil panjang digest dan kamus terarah, atau menyerah karena mengira salt 2-karakter heksadesimal memiliki entropi aman."
+    },
+    {
+      "pillar": 4,
+      "name": "Siklus Belajar Adaptif (Diagnosa -> Kristalisasi -> Drilling Bertingkat -> Verifikasi 100%)",
+      "description": "Menuntun proses pembelajaran melalui 3 level simulasi latihan: Ekstraksi Memori Heapdump dan Pemindaian String (Level 1 Fondasi), Profiling Digest Hash dan Otomasi Soket Netcat (Level 2 Analisis/HOTS), serta Rekonstruksi Tabel Pelangi SHA-256 Skala Penuh (Level 3 Kombinatorik/Ekstrem)."
+    },
+    {
+      "pillar": 5,
+      "name": "Evaluasi Berbasis IRT (Item Response Theory) & Rubrik LKS Skill 54",
+      "description": "Memodelkan probabilitas penguasaan siswa menggunakan model psikometrik 3PL dan 4 pilar rubrik penilaian teknis standar LKS Cyber Security Nasional dan WorldSkills Skill 54."
+    }
+  ],
+  "cognitive_distribution": {
+    "C3_Applying": 1,
+    "C4_Analyzing": 1,
+    "C5_Evaluating": 1
+  },
+  "domain_distribution": {
+    "Domain_A_Web_Security_API_Memory_Carving": "Chall 476 (head-dump)",
+    "Domain_B_Applied_Cryptography_Fast_Hashes": "Chall 475 (hashcrack)",
+    "Domain_C_Cryptanalysis_Salt_Exhaustion_Rainbow_Tables": "Chall 474 (Guess My Cheese (Part 2))",
+    "Domain_D_Defensive_Hardening_NIST_Compliance": "Chall 476, Chall 475, Chall 474"
+  },
+  "modules": [
+    {
+      "module_id": "MOD-01",
+      "challenge_id": 476,
+      "name": "head-dump",
+      "category": "Web Exploitation / API Documentation Reconnaissance & V8 Heapdump Carving",
+      "points": 50,
+      "difficulty": "Easy",
+      "bloom_level": "C3 - Applying",
+      "cwe": [
+        "CWE-200",
+        "CWE-532",
+        "CWE-16"
+      ],
+      "standards": [
+        "NIST SP 800-115 Section 4.2",
+        "RFC 9110"
+      ],
+      "flag": "academy{Pat!3nt_15_Th3_K3y_cc0f4fda}"
+    },
+    {
+      "module_id": "MOD-02",
+      "challenge_id": 475,
+      "name": "hashcrack",
+      "category": "Cryptography / Fast Hash Function Identification & Multi-Stage Dictionary Crack",
+      "points": 100,
+      "difficulty": "Easy",
+      "bloom_level": "C4 - Analyzing",
+      "cwe": [
+        "CWE-328",
+        "CWE-759",
+        "CWE-916"
+      ],
+      "standards": [
+        "NIST SP 800-115 Section 4.2",
+        "FIPS 180-4",
+        "RFC 1321"
+      ],
+      "flag": "academy{UseStr0nG_h@shEs_&PaSswDs!_062c2b77}"
+    },
+    {
+      "module_id": "MOD-03",
+      "challenge_id": 474,
+      "name": "Guess My Cheese (Part 2)",
+      "category": "Cryptography / Low-Entropy Salt Exhaustion & SHA-256 Precomputed Rainbow Table Analysis",
+      "points": 300,
+      "difficulty": "Medium",
+      "bloom_level": "C5 - Evaluating",
+      "cwe": [
+        "CWE-328",
+        "CWE-330",
+        "CWE-760"
+      ],
+      "standards": [
+        "NIST SP 800-115 Section 4.2",
+        "FIPS 180-4",
+        "RFC 6234"
+      ],
+      "flag": "academy{cHeEsYdaa8c59e}"
+    }
+  ]
+}
