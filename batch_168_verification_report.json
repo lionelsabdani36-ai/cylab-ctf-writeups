@@ -1,0 +1,68 @@
+{
+  "batch": 168,
+  "timestamp": "2026-11-09 07:37:34 UTC",
+  "standard": "NIST SP 800-115 Section 4.2 / RFC 4648 / POSIX.1-2017",
+  "compiler_sweep": {
+    "total_scanned": 536,
+    "passed": 536,
+    "failed": 0,
+    "failures": []
+  },
+  "solver_results": [
+    {
+      "id": 528,
+      "name": "M1n10n'5_53cr37",
+      "category": "Reverse Engineering",
+      "script": "solve_528_m1n10n5_53cr37.py",
+      "check_type": "apk_resource_base32_decoding",
+      "exit_code": 0,
+      "duration_sec": 0.0404,
+      "flag_match": true,
+      "extracted_flag": "academy{1t_w4sn7_h4rd_unr4v3l1n9_th3_m0b1l3_c0d3}",
+      "expected_flag": "academy{1t_w4sn7_h4rd_unr4v3l1n9_th3_m0b1l3_c0d3}",
+      "status": "PASS",
+      "output_snippet": [
+        "=== [CyLab Academy] Solusi Modul #528: M1n10n'5_53cr37 ===",
+        "[+] Flag berhasil direkonstruksi: academy{1t_w4sn7_h4rd_unr4v3l1n9_th3_m0b1l3_c0d3}",
+        "[+] Integritas token terverifikasi 100%: academy{1t_w4sn7_h4rd_unr4v3l1n9_th3_m0b1l3_c0d3}"
+      ]
+    },
+    {
+      "id": 526,
+      "name": "Input Injection 2",
+      "category": "Binary Exploitation",
+      "script": "solve_526_input_injection_2.py",
+      "check_type": "heap_overflow_redirection_command_injection",
+      "exit_code": 0,
+      "duration_sec": 0.0396,
+      "flag_match": true,
+      "extracted_flag": "academy{us3rn4m3_2_sh3ll_819f0acb}",
+      "expected_flag": "academy{us3rn4m3_2_sh3ll_819f0acb}",
+      "status": "PASS",
+      "output_snippet": [
+        "=== [CyLab Academy] Solusi Modul #526: Input Injection 2 ===",
+        "[+] Flag berhasil direkonstruksi: academy{us3rn4m3_2_sh3ll_819f0acb}",
+        "[+] Integritas token terverifikasi 100%: academy{us3rn4m3_2_sh3ll_819f0acb}"
+      ]
+    },
+    {
+      "id": 525,
+      "name": "Input Injection 1",
+      "category": "Binary Exploitation",
+      "script": "solve_525_input_injection_1.py",
+      "check_type": "stack_overflow_local_variable_overwrite",
+      "exit_code": 0,
+      "duration_sec": 0.0397,
+      "flag_match": true,
+      "extracted_flag": "academy{0v3rfl0w_c0mm4nd_72792d0d}",
+      "expected_flag": "academy{0v3rfl0w_c0mm4nd_72792d0d}",
+      "status": "PASS",
+      "output_snippet": [
+        "=== [CyLab Academy] Solusi Modul #525: Input Injection 1 ===",
+        "[+] Flag berhasil direkonstruksi: academy{0v3rfl0w_c0mm4nd_72792d0d}",
+        "[+] Integritas token terverifikasi 100%: academy{0v3rfl0w_c0mm4nd_72792d0d}"
+      ]
+    }
+  ],
+  "all_passed": true
+}
