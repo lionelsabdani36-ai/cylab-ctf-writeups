@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 156 (09 November 2026 - Flawed fgets() Stack Bounding, Sudoers Emacs GTFOBins & De Bruijn Dynamic Ret2Win Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 736 | Echo Escape 2 | Binary Exploitation | Medium | `academy{fgets_0v3rfl0w42_8cb8052a}` | **SOLVED** | 2026-11-09 |
+| 2 | 735 | SUDO MAKE ME A SANDWICH | General Skills | Easy | `academy{ju57_5ud0_17_d8ae35f9}` | **SOLVED** | 2026-11-09 |
+| 3 | 733 | offset-cycle | Binary Exploitation | Medium | `academy{u_Us3d_pwNt00L5_135aaff7}` | **SOLVED** | 2026-11-09 |
+
 ### Batch 155 (08 November 2026 - ASCII Decimal Socket Streaming, Split PKZIP Stream Reassembly & Flask Session Timeout Evasion Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
