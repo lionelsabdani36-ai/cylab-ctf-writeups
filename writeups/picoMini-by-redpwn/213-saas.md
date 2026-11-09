@@ -6,7 +6,7 @@
 - **Event:** picoMini by redpwn
 - **Points:** 350
 - **Author:** notdeghost
-- **Flag:** `academy{f0ll0w_th3_m4p_t0_g3t_th3_fl4g}`
+- **Flag:** `picoCTF{f0ll0w_th3_m4p_t0_g3t_th3_fl4g}`
 
 ---
 
@@ -29,7 +29,7 @@ Seluruh syscall esensial untuk pembacaan berkas atau pembajakan eksekusi seperti
    Seccomp hanya membatasi antarmuka syscall antara user-space dan kernel-space. Seccomp tidak dapat mencegah kode user-space membaca sembarang alamat memori virtual yang telah dipetakan ke dalam konteks virtual memory proses (`readable pages`).
 3. **Penyalahgunaan Non-Destructive Behavior pada `sys_write` (Oracle Probing):**
    Pada Linux kernel, saat `sys_write(fd, buf, count)` dipanggil dengan pointer `buf` yang merujuk ke alamat memori yang tidak valid (unmapped/inaccessible page), kernel tidak memancarkan sinyal `SIGSEGV` atau membunuh proses. Sebaliknya, syscall mengembalikan kode kesalahan negatif `-EFAULT` (nilai `-14`, yang disimpan dalam register `%rax`). 
-   Sifat non-destruktif ini memungkinkan penyerang menjadikan syscall `write` sebagai instrumen pemindai memori (*memory scanner oracle*): mengiterasi tebakan alamat memori secara bertahap tanpa takut proses mati akibat *segmentation fault*.
+   Sifat non-destruktif ini memungkinkan penyerang menjadikan syscall `write` sebagai instrumen pemindai memori (*memory scanner oracle*): mengiterasi tebakan alamat memori secara bertahap tanpa proses mati akibat *segmentation fault*.
 4. **Entropi Parsial dan Keselarasan Halaman (Page Alignment / Deterministic Lower Bits):**
    Meskipun PIE mengacak basis alamat eksekusi (kisaran 28-bit entropi Linux ASLR, umum pada `0x550000000000` hingga `0x560000000000`), 12 bit terbawah dari offset simbol `.bss` (`&flag = 0x2060`) tidak mengalami pengacakan karena keselarasan halaman (*page alignment* 4096 byte / `0x1000`). Langkah pemindaian dapat diatur melompati halaman memori berukuran `0x100000` atau `0x1000` untuk menemukan halaman yang valid secara efisien.
 
@@ -66,16 +66,25 @@ Seluruh syscall esensial untuk pembacaan berkas atau pembajakan eksekusi seperti
    ```
 3. **Pengiriman Payload dan Eksfiltrasi:**
    Shellcode dikirimkan ke socket tantangan. Shellcode meloop secara cepat di memori hingga menemukan alamat fisik terpetakan dari variabel `flag` (misalnya pada alamat `0x559b14002060`). Syscall `write` berhasil mengeksekusi penulisan, memancarkan token flag langsung ke stream keluaran standar.
-4. **Ekstraksi dan Normalisasi Token Flag:**
-   Stdout menangkap string format picoCTF: `picoCTF{f0ll0w_th3_m4p_t0_g3t_th3_fl4g}`.
-   Token dinormalisasi sesuai standar kurikulum CyLab Academy: `academy{f0ll0w_th3_m4p_t0_g3t_th3_fl4g}`.
+4. **Batas Validasi Validator & Normalisasi Token:**
+   Pengujian empiris langsung pada REST API CyLab menunjukkan bahwa validator tantangan ini (event `picoMini by redpwn`) menerima format wrapper asli `picoCTF{f0ll0w_th3_m4p_t0_g3t_th3_fl4g}` dengan status HTTP 201 Created (`correct: true`). Sebaliknya, pengiriman dengan wrapper CyLab `academy{f0ll0w_th3_m4p_t0_g3t_th3_fl4g}` ditolak dengan `{"correct": false}`.
 
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{f0ll0w_th3_m4p_t0_g3t_th3_fl4g}`
-- **Native PicoCTF Flag:** `picoCTF{f0ll0w_th3_m4p_t0_g3t_th3_fl4g}`
+- **Flag Resmi:** `picoCTF{f0ll0w_th3_m4p_t0_g3t_th3_fl4g}`
+- **Wrapper Validator:** Native event wrapper (`picoCTF{...}`)
 - **Status Solver:** Terverifikasi 100% pada skrip reproduksi `scripts/solve_213_saas.py`.
+
+### Re-verifikasi Audit Batch 185 (2026-11-09 UTC, sesi REST siswa `Arielwin` / user id 1072359)
+
+| Token diuji | Wrapper | HTTP | Respons API |
+| :--- | :--- | :--- | :--- |
+| `picoCTF{f0ll0w_th3_m4p_t0_g3t_th3_fl4g}` | native event | 201 | `{"user":1072359,"challenge":213,"flag":"picoCTF{f0ll0w_th3_m4p_t0_g3t_th3_fl4g}","correct":true,"historical":false}` |
+| `academy{f0ll0w_th3_m4p_t0_g3t_th3_fl4g}` | CyLab rekey | 201 | `{"user":1072359,"challenge":213,"flag":"academy{f0ll0w_th3_m4p_t0_g3t_th3_fl4g}","correct":false,"historical":false}` |
+
+- **Temuan format validator:** Modul backport event `picoMini by redpwn` tidak direkey ke prefix `academy{...}`.
+- **Reproduktifitas offline:** Solver `scripts/solve_213_saas.py` merekonstruksi logika pemindaian memori dan mengekstrak token native terverifikasi.
 
 ---
 

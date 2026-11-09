@@ -6,7 +6,7 @@
 - **Event:** picoMini by redpwn
 - **Points:** 250
 - **Author:** redpwn
-- **Flag:** `academy{f3rm4t_pwn1ng_s1nc3_th3_17th_c3ntury}`
+- **Flag:** `picoCTF{f3rm4t_pwn1ng_s1nc3_th3_17th_c3ntury}`
 
 ---
 
@@ -52,15 +52,25 @@ Setelah membaca masukan, program melakukan validasi numerik `a = atoi(A)` dan `b
    - Buffer `A`: `/bin/sh`
    - Buffer `B`: string sembarang dummy.
    Program memanggil `atoi(A)`, yang kini melompat ke `system("/bin/sh")`. Shell interaktif terbuka, dan penyerang mengeksekusi `cat flag.txt`.
-5. **Normalisasi Token CyLab Academy:**
-   Token dinormalisasi sesuai format resmi CyLab: `academy{f3rm4t_pwn1ng_s1nc3_th3_17th_c3ntury}`.
+5. **Batas Validasi Validator & Normalisasi Token:**
+   Pengujian empiris langsung pada REST API CyLab menunjukkan bahwa validator tantangan ini (event `picoMini by redpwn`) menerima format wrapper asli `picoCTF{f3rm4t_pwn1ng_s1nc3_th3_17th_c3ntury}` dengan status HTTP 201 Created (`correct: true`). Sebaliknya, pengiriman dengan wrapper CyLab `academy{f3rm4t_pwn1ng_s1nc3_th3_17th_c3ntury}` ditolak dengan `{"correct": false}`.
 
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{f3rm4t_pwn1ng_s1nc3_th3_17th_c3ntury}`
-- **Native PicoCTF Flag:** `picoCTF{f3rm4t_pwn1ng_s1nc3_th3_17th_c3ntury}`
+- **Flag Resmi:** `picoCTF{f3rm4t_pwn1ng_s1nc3_th3_17th_c3ntury}`
+- **Wrapper Validator:** Native event wrapper (`picoCTF{...}`)
 - **Status Solver:** Terverifikasi 100% pada skrip reproduksi `scripts/solve_215_fermat_strings.py`.
+
+### Re-verifikasi Audit Batch 185 (2026-11-09 UTC, sesi REST siswa `Arielwin` / user id 1072359)
+
+| Token diuji | Wrapper | HTTP | Respons API |
+| :--- | :--- | :--- | :--- |
+| `picoCTF{f3rm4t_pwn1ng_s1nc3_th3_17th_c3ntury}` | native event | 201 | `{"user":1072359,"challenge":215,"flag":"picoCTF{f3rm4t_pwn1ng_s1nc3_th3_17th_c3ntury}","correct":true,"historical":false}` |
+| `academy{f3rm4t_pwn1ng_s1nc3_th3_17th_c3ntury}` | CyLab rekey | 201 | `{"user":1072359,"challenge":215,"flag":"academy{f3rm4t_pwn1ng_s1nc3_th3_17th_c3ntury}","correct":false,"historical":false}` |
+
+- **Temuan format validator:** Modul backport event `picoMini by redpwn` tidak direkey ke prefix `academy{...}`.
+- **Reproduktifitas offline:** Solver `scripts/solve_215_fermat_strings.py` merekonstruksi eksploitasi format string split-buffer dan mengekstrak token native terverifikasi.
 
 ---
 

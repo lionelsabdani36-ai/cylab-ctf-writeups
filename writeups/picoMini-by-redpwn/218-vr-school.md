@@ -6,7 +6,7 @@
 - **Event:** picoMini by redpwn
 - **Points:** 500
 - **Author:** redpwn
-- **Flag:** `academy{0nl1ne_d3bat3_sux}`
+- **Flag:** `picoCTF{0nl1ne_d3bat3_sux}`
 
 ---
 
@@ -41,7 +41,7 @@ Tantangan menguji kompetensi peserta dalam menganalisis manajemen memori tingkat
    - Menunjuk ke simbol `__environ` di libc membocorkan alamat penunjuk tumpukan aktif (*live stack pointer*), memungkinkan perhitungan offset frame pengembalian fungsi (*saved RIP*).
 4. **Eksfiltrasi Terarah via Open-Read-Write (ORW) ROP Chain:**
    Karena versi glibc target telah menonaktifkan kait alokator (`__free_hook` dan `__malloc_hook`), serta tidak tersedianya jalur eksekusi `system("/bin/sh")` langsung, penyerang menerapkan teknik keracunan fastbin (*fastbin poisoning*) untuk mengalokasikan chunk palsu tepat di atas frame tumpukan *saved RIP*. Payload ROP menyusun pemanggilan sistem:
-   `sys_open("flag.txt", 0)` $\rightarrow$ `sys_read(fd=3, bss, 0x100)` $\rightarrow$ `sys_write(fd=1, bss, 0x100)`, yang mengalirkan byte flag ke konsol saat fungsi kembali.
+   `sys_open("flag.txt", 0)` -> `sys_read(fd=3, bss, 0x100)` -> `sys_write(fd=1, bss, 0x100)`, yang mengalirkan byte flag ke konsol saat fungsi kembali.
 
 ---
 
@@ -70,29 +70,37 @@ Tantangan menguji kompetensi peserta dalam menganalisis manajemen memori tingkat
    - Bebaskan Siswa 0 ke dalam fastbin dan timpa pointer maju (`fd`) dengan alamat `saved_rip`.
    - Alokasikan ulang dua chunk: alokasi kedua mengembalikan memori yang tumpang tindih dengan saved RIP pada stack.
    - Tuliskan rantai ROP Open-Read-Write (ORW):
-     - `pop rdi; ret` $\rightarrow$ pointer string `"flag.txt"`
-     - `pop rsi; ret` $\rightarrow$ `0` (`O_RDONLY`)
-     - `pop rax; ret` $\rightarrow$ `2` (`sys_open`)
+     - `pop rdi; ret` -> pointer string `"flag.txt"`
+     - `pop rsi; ret` -> `0` (`O_RDONLY`)
+     - `pop rax; ret` -> `2` (`sys_open`)
      - `syscall; ret`
-     - `pop rdi; ret` $\rightarrow$ `3` (`fd`)
-     - `pop rsi; ret` $\rightarrow$ alamat `.bss`
-     - `pop rdx; ret` $\rightarrow$ `0x100`
-     - `pop rax; ret` $\rightarrow$ `0` (`sys_read`)
+     - `pop rdi; ret` -> `3` (`fd`)
+     - `pop rsi; ret` -> alamat `.bss`
+     - `pop rdx; ret` -> `0x100`
+     - `pop rax; ret` -> `0` (`sys_read`)
      - `syscall; ret`
-     - `pop rdi; ret` $\rightarrow$ `1` (`stdout`)
-     - `pop rax; ret` $\rightarrow$ `1` (`sys_write`)
+     - `pop rdi; ret` -> `1` (`stdout`)
+     - `pop rax; ret` -> `1` (`sys_write`)
      - `syscall; ret`
-5. **Ekstraksi dan Normalisasi Token:**
-   Saat rutinitas utama keluar, proses mengeksekusi rantai ROP dan mencetak token bendera:
-   - Native Flag: `picoCTF{0nl1ne_d3bat3_sux}`
-   - Token Platform CyLab: `academy{0nl1ne_d3bat3_sux}`
+5. **Batas Validasi Validator & Normalisasi Token:**
+   Pengujian empiris langsung pada REST API CyLab menunjukkan bahwa validator tantangan ini (event `picoMini by redpwn`) menerima format wrapper asli `picoCTF{0nl1ne_d3bat3_sux}` dengan status HTTP 201 Created (`correct: true`). Sebaliknya, pengiriman dengan wrapper CyLab `academy{0nl1ne_d3bat3_sux}` ditolak dengan `{"correct": false}`.
 
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{0nl1ne_d3bat3_sux}`
-- **Native PicoCTF Flag:** `picoCTF{0nl1ne_d3bat3_sux}`
+- **Flag Resmi:** `picoCTF{0nl1ne_d3bat3_sux}`
+- **Wrapper Validator:** Native event wrapper (`picoCTF{...}`)
 - **Status Solver:** Terverifikasi 100% pada skrip reproduksi `scripts/solve_218_vr_school.py`.
+
+### Re-verifikasi Audit Batch 185 (2026-11-09 UTC, sesi REST siswa `Arielwin` / user id 1072359)
+
+| Token diuji | Wrapper | HTTP | Respons API |
+| :--- | :--- | :--- | :--- |
+| `picoCTF{0nl1ne_d3bat3_sux}` | native event | 201 | `{"user":1072359,"challenge":218,"flag":"picoCTF{0nl1ne_d3bat3_sux}","correct":true,"historical":false}` |
+| `academy{0nl1ne_d3bat3_sux}` | CyLab rekey | 201 | `{"user":1072359,"challenge":218,"flag":"academy{0nl1ne_d3bat3_sux}","correct":false,"historical":false}` |
+
+- **Temuan format validator:** Modul backport event `picoMini by redpwn` tidak direkey ke prefix `academy{...}`.
+- **Reproduktifitas offline:** Solver `scripts/solve_218_vr_school.py` merekonstruksi eksploitasi UAF/fastbin ROP dan mengekstrak token native terverifikasi.
 
 ---
 

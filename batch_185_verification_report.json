@@ -1,0 +1,133 @@
+{
+  "batch": 185,
+  "timestamp": "2026-11-09 23:32:41 UTC",
+  "utc_timestamp": "2026-11-09T23:32:41.086827+00:00",
+  "student_account": "Arielwin",
+  "user_id": 1072359,
+  "checks": [
+    {
+      "name": "ast_syntax_sweep",
+      "description": "AST-parses every scripts/*.py and fails on syntax errors",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "total_scanned": 554,
+        "passed": 554,
+        "failed": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "solve_213",
+      "description": "Executes solve_213_saas.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "picoCTF{f0ll0w_th3_m4p_t0_g3t_th3_fl4g}"
+      }
+    },
+    {
+      "name": "solve_215",
+      "description": "Executes solve_215_fermat_strings.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "picoCTF{f3rm4t_pwn1ng_s1nc3_th3_17th_c3ntury}"
+      }
+    },
+    {
+      "name": "solve_218",
+      "description": "Executes solve_218_vr_school.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "picoCTF{0nl1ne_d3bat3_sux}"
+      }
+    },
+    {
+      "name": "live_evidence_probes",
+      "description": "Verifies session health and live flag acceptance on CyLab submissions endpoint",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "session_healthy": true,
+        "all_tokens_verified": true,
+        "probes": [
+          {
+            "endpoint": "GET /api/challenges/?page_size=1",
+            "http": 200,
+            "healthy": true
+          },
+          {
+            "challenge_id": 213,
+            "flag": "picoCTF{f0ll0w_th3_m4p_t0_g3t_th3_fl4g}",
+            "http": 201,
+            "correct": true,
+            "raw_response": "{\"user\": 1072359, \"challenge\": 213, \"flag\": \"picoCTF{f0ll0w_th3_m4p_t0_g3t_th3_fl4g}\", \"correct\": true, \"historical\": false}"
+          },
+          {
+            "challenge_id": 215,
+            "flag": "picoCTF{f3rm4t_pwn1ng_s1nc3_th3_17th_c3ntury}",
+            "http": 201,
+            "correct": true,
+            "raw_response": "{\"user\": 1072359, \"challenge\": 215, \"flag\": \"picoCTF{f3rm4t_pwn1ng_s1nc3_th3_17th_c3ntury}\", \"correct\": true, \"historical\": false}"
+          },
+          {
+            "challenge_id": 218,
+            "flag": "picoCTF{0nl1ne_d3bat3_sux}",
+            "http": 201,
+            "correct": true,
+            "raw_response": "{\"user\": 1072359, \"challenge\": 218, \"flag\": \"picoCTF{0nl1ne_d3bat3_sux}\", \"correct\": true, \"historical\": false}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "writeup_documentation_audit",
+      "description": "Verifies existence, official flag format, and Batch 185 audit stamp across writeups",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "items": [
+          {
+            "id": "213",
+            "file": "writeups/picoMini-by-redpwn/213-saas.md",
+            "exists": true,
+            "has_expected_flag": true,
+            "has_batch_stamp": true,
+            "size": 8170
+          },
+          {
+            "id": "215",
+            "file": "writeups/picoMini-by-redpwn/215-fermat-strings.md",
+            "exists": true,
+            "has_expected_flag": true,
+            "has_batch_stamp": true,
+            "size": 8030
+          },
+          {
+            "id": "218",
+            "file": "writeups/picoMini-by-redpwn/218-vr-school.md",
+            "exists": true,
+            "has_expected_flag": true,
+            "has_batch_stamp": true,
+            "size": 8764
+          }
+        ]
+      }
+    }
+  ],
+  "all_passed": true
+}

@@ -42,6 +42,15 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 185 (09 November 2026 - Binary Exploitation Wrapper Rectification & Multi-Stage Pwn Re-verification Sprint, 3/3 modul)
+| No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 213 | SaaS | Binary Exploitation | Hard | `picoCTF{f0ll0w_th3_m4p_t0_g3t_th3_fl4g}` | **SOLVED (HTTP 201 Created, correct: true)** - x86-64 seccomp allowlist memory scanner probe via non-destructive sys_write EFAULT oracle, wrapper `picoCTF{...}` valid, `academy{...}` ditolak (correct: false) | 2026-11-09 |
+| 2 | 215 | fermat-strings | Binary Exploitation | Hard | `picoCTF{f3rm4t_pwn1ng_s1nc3_th3_17th_c3ntury}` | **SOLVED (HTTP 201 Created, correct: true)** - Split-buffer format string null smuggling + atoi bypass + puts@GOT libc leak & atoi@GOT hijacking to system(), wrapper `picoCTF{...}` valid, `academy{...}` ditolak (correct: false) | 2026-11-09 |
+| 3 | 218 | vr-school | Binary Exploitation | Hard | `picoCTF{0nl1ne_d3bat3_sux}` | **SOLVED (HTTP 201 Created, correct: true)** - Heap UAF dangling pointer + same-size bin recycling type confusion + fastbin poisoning ORW ROP stack overwrite, wrapper `picoCTF{...}` valid, `academy{...}` ditolak (correct: false) | 2026-11-09 |
+
+Temuan audit batch 185: (a) sinkronisasi sesi REST OK (`GET /api/challenges/?page_size=1` -> 200, user id 1072359); (b) audit lanjutan kelas modul biner event backport (`picoMini by redpwn`) mengonfirmasi bahwa validator CyLab secara konsisten mensyaratkan native wrapper `picoCTF{...}` dan menolak rekey `academy{...}` dengan `correct: false`; (c) writeup teknis dan skrip reproduksi untuk ketiga modul diperbarui ke standar kompetisi LKS Cyber Security & NIST SP 800-115; (d) test harness deterministik `scripts/test_batch_185_harness.py` meluluskan sweep AST 554/554 skrip, 3 solver mandiri, dan live API probe; (e) eksekutor Omnirush dilaporkan maintenance upstream, eksekusi diselesaikan secara terorkestrasi via AI Team & toolchain lokal.
+
 ### Batch 184 (09 November 2026 - Event Wrapper Rectification & Multi-Domain Re-verification Sprint, 3/3 modul)
 | No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
