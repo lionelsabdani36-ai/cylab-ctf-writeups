@@ -1,0 +1,91 @@
+{
+  "batch": 179,
+  "date": "2026-11-09",
+  "curriculum_scope": "LKS Cyber Security 2026 / NIST SP 800-115 / WorldSkills Skill 54",
+  "modules": [
+    {
+      "challenge_id": 467,
+      "challenge_name": "Apriti sesamo",
+      "category": "Web Exploitation",
+      "difficulty": "Medium (2)",
+      "points": 300,
+      "event": "picoCTF 2025",
+      "author": "Junias Bonou",
+      "flag": "academy{w3Ll_d3sErV3d_Ch4mp_3ccde0d1}",
+      "standards": [
+        "NIST SP 800-115 §4.2",
+        "OWASP WSTG-INFO-05",
+        "OWASP WSTG-INPV-12",
+        "RFC 7230",
+        "RFC 7231",
+        "CWE-530",
+        "CWE-843"
+      ],
+      "vulnerability": {
+        "title": "Emacs Backup Artifact Disclosure and PHP Array Type Juggling",
+        "root_cause": "The web server serves uncompiled editor backup files (.php~) containing raw source code, and backend authentication relies on sha1() which returns NULL on array parameters, allowing strict comparison bypass (NULL === NULL).",
+        "impact": "Complete authentication bypass and unauthorized disclosure of sensitive server files."
+      },
+      "remediation": {
+        "primary": "Configure web server rules to deny access to editor backup extensions and enforce strict input parameter type validation with password_verify().",
+        "standard": "OWASP Secure Configuration Guide / CWE-530 Mitigation"
+      }
+    },
+    {
+      "challenge_id": 466,
+      "challenge_name": "Tap into Hash",
+      "category": "Reverse Engineering",
+      "difficulty": "Medium (2)",
+      "points": 200,
+      "event": "picoCTF 2025",
+      "author": "Taylor McCampbell",
+      "flag": "academy{block_3SRhViRbT1qcX_XUjM0r49cH_qCzmJZzBK_3a847c57}",
+      "standards": [
+        "NIST SP 800-115 §4.2",
+        "FIPS 180-4",
+        "RFC 8018",
+        "RFC 5652",
+        "CWE-312",
+        "CWE-321",
+        "CWE-327"
+      ],
+      "vulnerability": {
+        "title": "Cleartext Key Disclosure and Keystream-XOR Blockchain Obfuscation",
+        "root_cause": "The generation tool outputs both the 32-byte encryption key and the ciphertext into the distributed artifact, using a static 16-byte repeated SHA-256 keystream without IV or MAC.",
+        "impact": "Total loss of confidentiality; instant mathematical plaintext and flag recovery via symmetric XOR inversion."
+      },
+      "remediation": {
+        "primary": "Enforce strict separation between cryptographic keys and encrypted artifacts using KMS/HSM, and replace ad-hoc XOR logic with authenticated ciphers like AES-256-GCM.",
+        "standard": "NIST SP 800-57 Part 1 Rev. 5 / FIPS 140-3"
+      }
+    },
+    {
+      "challenge_id": 463,
+      "challenge_name": "Rust fixme 3",
+      "category": "General Skills",
+      "difficulty": "Easy (1)",
+      "points": 100,
+      "event": "picoCTF 2025",
+      "author": "Taylor McCampbell",
+      "flag": "academy{n0w_y0uv3_f1x3d_1h3m_411}",
+      "standards": [
+        "NIST SP 800-115 §4.2",
+        "ISO/IEC 25010",
+        "Rust Reference §10.1",
+        "RFC 2580",
+        "CWE-119",
+        "CWE-787",
+        "CWE-125"
+      ],
+      "vulnerability": {
+        "title": "Rust Unsafe Block Boundary Omission for Raw Pointer Slicing",
+        "root_cause": "Attempting to invoke std::slice::from_raw_parts without an enclosing unsafe { ... } block violates the Rust compiler safety contract, causing build failure under error[E0133].",
+        "impact": "Compilation abort; binary cannot be generated or executed until sound memory boundary encapsulations are restored."
+      },
+      "remediation": {
+        "primary": "Wrap raw pointer dereferencing and slice creation within a minimal, strictly validated unsafe block with documented safety invariants.",
+        "standard": "Rust API Guidelines / RFC 2580"
+      }
+    }
+  ]
+}
