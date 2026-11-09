@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 180 (09 November 2026 - Rust Borrowing & Mutability Invariants, Rust Syntax AST Remediation & PNG Metadata RGBA LSB Steganography Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 462 | Rust fixme 2 | General Skills | Easy | `academy{4r3_y0u_h4v1n5_fun_y31?}` | **SOLVED** | 2026-11-09 |
+| 2 | 461 | Rust fixme 1 | General Skills | Easy | `academy{4r3_y0u_4_ru$t4c30n_n0w?}` | **SOLVED** | 2026-11-09 |
+| 3 | 460 | RED | Forensics | Easy | `academy{r3d_1s_th3_ult1m4t3_cur3_f0r_54dn355_}` | **SOLVED** | 2026-11-09 |
+
 ### Batch 179 (09 November 2026 - Emacs Backup Artifact Disclosure & PHP Type Juggling, Keystream-XOR Blockchain Decryption & Rust Memory Safety AST Remediation Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
