@@ -1,0 +1,68 @@
+{
+  "batch": 169,
+  "timestamp": "2026-11-09 08:16:09 UTC",
+  "standard": "NIST SP 800-115 Section 4.2 / ITU-T T.81 / RFC 4648 / RFC 8017",
+  "compiler_sweep": {
+    "total_scanned": 537,
+    "passed": 537,
+    "failed": 0,
+    "failures": []
+  },
+  "solver_results": [
+    {
+      "id": 524,
+      "name": "Hidden in plainsight",
+      "category": "Forensics",
+      "script": "solve_524_hidden_in_plainsight.py",
+      "check_type": "jpeg_com_steghide_dct_extraction",
+      "exit_code": 0,
+      "duration_sec": 0.1153,
+      "flag_match": true,
+      "extracted_flag": "academy{h1dd3n_1n_1m4g3_d0c4a4e2}",
+      "expected_flag": "academy{h1dd3n_1n_1m4g3_d0c4a4e2}",
+      "status": "PASS",
+      "output_snippet": [
+        "[*] Steghide Passphrase berhasil didekode: 'pAzzword'",
+        "[+] Flag berhasil direkonstruksi: academy{h1dd3n_1n_1m4g3_d0c4a4e2}",
+        "[+] Integritas token terverifikasi 100%: academy{h1dd3n_1n_1m4g3_d0c4a4e2}"
+      ]
+    },
+    {
+      "id": 523,
+      "name": "Flag in Flame",
+      "category": "Forensics",
+      "script": "solve_523_flag_in_flame.py",
+      "check_type": "log_obfuscation_png_hex_carving",
+      "exit_code": 0,
+      "duration_sec": 0.1676,
+      "flag_match": true,
+      "extracted_flag": "academy{forensics_analysis_is_amazing_2043dbd1}",
+      "expected_flag": "academy{forensics_analysis_is_amazing_2043dbd1}",
+      "status": "PASS",
+      "output_snippet": [
+        "[*] Berhasil memvalidasi PNG signature (1194153 bytes).",
+        "[+] Flag berhasil direkonstruksi: academy{forensics_analysis_is_amazing_2043dbd1}",
+        "[+] Integritas token terverifikasi 100%: academy{forensics_analysis_is_amazing_2043dbd1}"
+      ]
+    },
+    {
+      "id": 522,
+      "name": "Crack the Power",
+      "category": "Cryptography",
+      "script": "solve_522_crack_the_power.py",
+      "check_type": "rsa_low_exponent_integer_root_bisection",
+      "exit_code": 0,
+      "duration_sec": 0.0893,
+      "flag_match": true,
+      "extracted_flag": "academy{t1ny_e_227220c9}",
+      "expected_flag": "academy{t1ny_e_227220c9}",
+      "status": "PASS",
+      "output_snippet": [
+        "[+] Plaintext berhasil dipulihkan: academy{t1ny_e_227220c9}",
+        "[+] Flag berhasil direkonstruksi: academy{t1ny_e_227220c9}",
+        "[+] Integritas token terverifikasi 100%: academy{t1ny_e_227220c9}"
+      ]
+    }
+  ],
+  "all_passed": true
+}
