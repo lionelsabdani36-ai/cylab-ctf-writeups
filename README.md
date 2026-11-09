@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 176 (09 November 2026 - V8 Heap Snapshot Memory Carving, Fast Cryptographic Hash Deconstruction & Low-Entropy Salt Exhaustion Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 476 | head-dump | Web Exploitation | Easy | `academy{Pat!3nt_15_Th3_K3y_cc0f4fda}` | **SOLVED** | 2026-11-09 |
+| 2 | 475 | hashcrack | Cryptography | Easy | `academy{UseStr0nG_h@shEs_&PaSswDs!_062c2b77}` | **SOLVED** | 2026-11-09 |
+| 3 | 474 | Guess My Cheese (Part 2) | Cryptography | Medium | `academy{cHeEsYdaa8c59e}` | **SOLVED** | 2026-11-09 |
+
 ### Batch 175 (09 November 2026 - Spatial Domain LSB Steganography Decoding, WebSocket Client-Side State Injection & Deterministic Permutation Cipher Deobfuscation Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
