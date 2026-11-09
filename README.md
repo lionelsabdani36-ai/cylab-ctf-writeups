@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 170 (09 November 2026 - Authentication Rate Limiting X-Forwarded-For Spoofing, HTML ROT13 Comment Backdoor Injection & JPEG SOI Magic Byte Carving Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 521 | Crack the Gate 2 | Web Exploitation | Medium | `academy{xff_byp4ss_brut3_b6771b85}` | **SOLVED** | 2026-11-09 |
+| 2 | 520 | Crack the Gate 1 | Web Exploitation | Easy | `academy{brut4_f0rc4_dc8f7ab6}` | **SOLVED** | 2026-11-09 |
+| 3 | 519 | Corrupted file | Forensics | Easy | `academy{r3st0r1ng_th3_by73s_a6f66bd7}` | **SOLVED** | 2026-11-09 |
+
 ### Batch 169 (09 November 2026 - JPEG Steghide DCT Carving, Log Obfuscation PNG Hex Carving & Textbook RSA Low Exponent Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
