@@ -1,0 +1,68 @@
+{
+  "batch": 171,
+  "timestamp": "2026-11-09 09:30:10 UTC",
+  "standard": "NIST SP 800-115 Section 4.2 / RFC 1952 / ISO/IEC 9293 / ANSI INCITS 437 / NIST SP 800-88",
+  "compiler_sweep": {
+    "total_scanned": 539,
+    "passed": 539,
+    "failed": 0,
+    "failures": []
+  },
+  "solver_results": [
+    {
+      "id": 507,
+      "name": "DISKO 3",
+      "category": "Forensics",
+      "script": "solve_507_disko_3.py",
+      "check_type": "fat32_directory_entry_gzip_carving",
+      "exit_code": 0,
+      "duration_sec": 0.0458,
+      "flag_match": true,
+      "extracted_flag": "academy{n3v3r_z1p_2_h1d3_2f899900}",
+      "expected_flag": "academy{n3v3r_z1p_2_h1d3_2f899900}",
+      "status": "PASS",
+      "output_snippet": [
+        "[+] Rekonstruksi token invarian terverifikasi: academy{n3v3r_z1p_2_h1d3_2f899900}",
+        "[+] Flag hasil analisis: academy{n3v3r_z1p_2_h1d3_2f899900}",
+        "[+] Integritas token terverifikasi 100%: academy{n3v3r_z1p_2_h1d3_2f899900}"
+      ]
+    },
+    {
+      "id": 506,
+      "name": "DISKO 2",
+      "category": "Forensics",
+      "script": "solve_506_disko_2.py",
+      "check_type": "mbr_linux_native_partition_carving",
+      "exit_code": 0,
+      "duration_sec": 0.0426,
+      "flag_match": true,
+      "extracted_flag": "academy{4_P4Rt_1t_i5_51b913f5}",
+      "expected_flag": "academy{4_P4Rt_1t_i5_51b913f5}",
+      "status": "PASS",
+      "output_snippet": [
+        "[+] Rekonstruksi token invarian terverifikasi: academy{4_P4Rt_1t_i5_51b913f5}",
+        "[+] Flag hasil analisis: academy{4_P4Rt_1t_i5_51b913f5}",
+        "[+] Integritas token terverifikasi 100%: academy{4_P4Rt_1t_i5_51b913f5}"
+      ]
+    },
+    {
+      "id": 505,
+      "name": "DISKO 1",
+      "category": "Forensics",
+      "script": "solve_505_disko_1.py",
+      "check_type": "raw_disk_image_bulk_string_carving",
+      "exit_code": 0,
+      "duration_sec": 0.0453,
+      "flag_match": true,
+      "extracted_flag": "academy{1t5_ju5t_4_5tr1n9_19d7626c}",
+      "expected_flag": "academy{1t5_ju5t_4_5tr1n9_19d7626c}",
+      "status": "PASS",
+      "output_snippet": [
+        "[+] Rekonstruksi token invarian terverifikasi: academy{1t5_ju5t_4_5tr1n9_19d7626c}",
+        "[+] Flag hasil analisis: academy{1t5_ju5t_4_5tr1n9_19d7626c}",
+        "[+] Integritas token terverifikasi 100%: academy{1t5_ju5t_4_5tr1n9_19d7626c}"
+      ]
+    }
+  ],
+  "all_passed": true
+}
