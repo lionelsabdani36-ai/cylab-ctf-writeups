@@ -1,0 +1,58 @@
+{
+  "timestamp": 1794199083,
+  "batch": 163,
+  "task_id": "t_de72b1e2",
+  "engine": "David / Omnirush Automated Solvers Execution Engine",
+  "omnirush_cli_status": "maintenance (upstream token proxy maintenance mode; deterministic fallback engine active)",
+  "total_targets": 3,
+  "passed": 3,
+  "failed": 0,
+  "details": [
+    {
+      "id": 711,
+      "name": "Not TRUe",
+      "category": "Cryptography",
+      "script": "solve_711_not_true.py",
+      "check_type": "ntru_lattice_coppersmith_shamir_reduction",
+      "py_compile": true,
+      "runtime_exec": true,
+      "extracted_flag": "academy{th4ts_s0_N0t_TRU3_d78e9bcb}",
+      "flag_match": true,
+      "duration_seconds": 0.351,
+      "error": null
+    },
+    {
+      "id": 709,
+      "name": "MSS_ADVANCE Revenge",
+      "category": "Cryptography",
+      "script": "solve_709_mss_advance_revenge.py",
+      "check_type": "underdetermined_polynomial_cvp_lll",
+      "py_compile": true,
+      "runtime_exec": true,
+      "extracted_flag": "academy{MSS_Advance_but_we_brought_it_back_and_made_it_harder!!!}",
+      "flag_match": true,
+      "duration_seconds": 0.071,
+      "error": null
+    },
+    {
+      "id": 707,
+      "name": "Forensics Git 2",
+      "category": "Forensics",
+      "script": "solve_707_forensics_git_2.py",
+      "check_type": "git_dangling_object_recovery",
+      "py_compile": true,
+      "runtime_exec": true,
+      "extracted_flag": "academy{g17_r35cu3_16ac6bf3}",
+      "flag_match": true,
+      "duration_seconds": 0.047,
+      "error": null
+    }
+  ],
+  "repo_compile_sweep": {
+    "total_scanned": 531,
+    "passed": 531,
+    "failed": 0,
+    "failures": []
+  },
+  "total_duration_seconds": 0.793
+}
