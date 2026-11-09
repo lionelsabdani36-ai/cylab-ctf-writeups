@@ -39,6 +39,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 171 (09 November 2026 - FAT32 Directory Entry Gzip Carving, MBR Linux Native Partition Carving & Raw Disk Image Bulk String Forensics Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 507 | DISKO 3 | Forensics | Easy | `academy{n3v3r_z1p_2_h1d3_2f899900}` | **SOLVED** | 2026-11-09 |
+| 2 | 506 | DISKO 2 | Forensics | Easy | `academy{4_P4Rt_1t_i5_51b913f5}` | **SOLVED** | 2026-11-09 |
+| 3 | 505 | DISKO 1 | Forensics | Easy | `academy{1t5_ju5t_4_5tr1n9_19d7626c}` | **SOLVED** | 2026-11-09 |
+
 ### Batch 170 (09 November 2026 - Authentication Rate Limiting X-Forwarded-For Spoofing, HTML ROT13 Comment Backdoor Injection & JPEG SOI Magic Byte Carving Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
