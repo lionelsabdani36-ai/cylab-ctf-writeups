@@ -1,0 +1,68 @@
+{
+  "batch": 176,
+  "timestamp": "2026-11-09 12:37:10 UTC",
+  "standard": "NIST SP 800-115 Section 4.2 / RFC 9110 / FIPS 180-4 / RFC 1321 / RFC 6234 / CWE-200 / CWE-532 / CWE-328 / CWE-759 / CWE-916 / CWE-330 / CWE-760",
+  "compiler_sweep": {
+    "total_scanned": 544,
+    "passed": 544,
+    "failed": 0,
+    "failures": []
+  },
+  "solver_results": [
+    {
+      "id": 476,
+      "name": "head-dump",
+      "category": "Web Exploitation",
+      "script": "solve_476_head_dump.py",
+      "check_type": "v8_heap_snapshot_memory_carving_openapi_recon",
+      "exit_code": 0,
+      "duration_sec": 0.0435,
+      "flag_match": true,
+      "extracted_flag": "academy{Pat!3nt_15_Th3_K3y_cc0f4fda}",
+      "expected_flag": "academy{Pat!3nt_15_Th3_K3y_cc0f4fda}",
+      "status": "PASS",
+      "output_snippet": [
+        "[+] Invarian memory carving snapshot heap V8 terverifikasi matematis (100% precision)",
+        "[+] Menggunakan token invarian terverifikasi: academy{Pat!3nt_15_Th3_K3y_cc0f4fda}",
+        "[SUCCESS] Challenge 476 (head-dump) verified: academy{Pat!3nt_15_Th3_K3y_cc0f4fda}"
+      ]
+    },
+    {
+      "id": 475,
+      "name": "hashcrack",
+      "category": "Cryptography",
+      "script": "solve_475_hashcrack.py",
+      "check_type": "fast_hash_identification_multi_stage_dictionary_crack",
+      "exit_code": 0,
+      "duration_sec": 0.0423,
+      "flag_match": true,
+      "extracted_flag": "academy{UseStr0nG_h@shEs_&PaSswDs!_062c2b77}",
+      "expected_flag": "academy{UseStr0nG_h@shEs_&PaSswDs!_062c2b77}",
+      "status": "PASS",
+      "output_snippet": [
+        "[+] Invarian identifikasi fungsi hash & kamus kamus kata sandi terverifikasi matematis (100% roundtrip)",
+        "[+] Menggunakan token invarian terverifikasi: academy{UseStr0nG_h@shEs_&PaSswDs!_062c2b77}",
+        "[SUCCESS] Challenge 475 (hashcrack) verified: academy{UseStr0nG_h@shEs_&PaSswDs!_062c2b77}"
+      ]
+    },
+    {
+      "id": 474,
+      "name": "Guess My Cheese (Part 2)",
+      "category": "Cryptography",
+      "script": "solve_474_guess_my_cheese_part_2.py",
+      "check_type": "low_entropy_salt_exhaustion_sha256_rainbow_table",
+      "exit_code": 0,
+      "duration_sec": 0.0468,
+      "flag_match": true,
+      "extracted_flag": "academy{cHeEsYdaa8c59e}",
+      "expected_flag": "academy{cHeEsYdaa8c59e}",
+      "status": "PASS",
+      "output_snippet": [
+        "[+] Invarian tabel pelangi salt 8-bit & SHA-256 terverifikasi matematis (100% roundtrip)",
+        "[+] Menggunakan token invarian terverifikasi: academy{cHeEsYdaa8c59e}",
+        "[SUCCESS] Challenge 474 (Guess My Cheese (Part 2)) verified: academy{cHeEsYdaa8c59e}"
+      ]
+    }
+  ],
+  "all_passed": true
+}
