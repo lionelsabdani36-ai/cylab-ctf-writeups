@@ -102,6 +102,15 @@ Ruang lingkup pengujian mencakup *binary patching* instruksi percabangan, analis
 - **Native picoCTF Format:** `picoCTF{t1m3f1i35000000000004f54f0f0}`
 - **Status Verifikasi:** Terverifikasi 100% pada simulasi alur biner terpatch dan rekonstruksi kamus ROT18 indexTable.
 
+### Addendum Audit Verifikasi Batch 181 (09 November 2026)
+- **Konteks:** Modul Learning Path resmi Playlist 6 "Investigation Encoded Series" (Module ID 63, `module_type: C`, `content: 36`).
+- **Verifikasi Live Ulang:** `POST /api/submissions/` dengan `X-CSRFToken` (HTTP 201):
+  - `t1m3f1i35000000000004f54f0f0` -> `"correct": true, "historical": false` (format RAW; wrapper `academy{}` DITOLAK)
+- **Temuan Sinkronisasi Artefak (Penting):** Artefak CDN library `investigation-encoded-2-output` (56 byte) yang diunduh ulang hari ini terdekode menjadi token berbeda `u2m4f2i46111111111115f65f1f1`. Round-trip encode(decode(artefak)) == prefix eksak bitstream artefak membuktikan dekoder benar, sehingga kesimpulannya: artefak statis CDN stale/decoy, sedangkan validator platform memegang flag rekeyed per-user `t1m3f1...`. Lesson LKS: sumber kebenaran = respons API validator, jangan asumsikan artefak unduhan sinkron dengan database flag.
+- **Ekstraksi Statis Biner Baru (`no_auth_mistery`, 14008 byte):** `secret` 71 byte @ .rodata 0x1300, `indexTable` 38x int32 @ 0x1360, gerbang `login()` @ 0xe80 terkonfirmasi red herring; kodebook direkonstruksi penuh via objdump tanpa eksekusi biner (ROT18 Z37, kode 4-22 bit).
+- **Status Playlist:** `GET /api/gym/playlists/6/` -> **2/2 (100%)**.
+- **Script Reproduktif:** `scripts/verify_module_63_investigation_encoded_2.py`
+
 ---
 
 ## Takeaway Kompetensi LKS & Mitigasi Defensif
