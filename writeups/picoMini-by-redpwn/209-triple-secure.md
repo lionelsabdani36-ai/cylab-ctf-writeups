@@ -65,6 +65,22 @@ Menganalisis skema enkripsi RSA bertingkat tiga yang menggunakan tiga modulus te
 - **Flag Resmi:** `picoCTF{1_gu3ss_tr1pl3_rs4_1snt_tr1pl3_s3cur3!!!!!!}`
 - **Bukti Validasi:** REST API CyLab `POST /api/submissions/` merespons dengan status `HTTP 201 Created` (`correct: true`, user `1072359`).
 
+### Re-verifikasi Audit Batch 182 (2026-11-09 UTC, sesi REST siswa `Arielwin` / user id 1072359)
+
+| Token diuji | Wrapper | HTTP | Respons API |
+| --- | --- | --- | --- |
+| `picoCTF{1_gu3ss_tr1pl3_rs4_1snt_tr1pl3_s3cur3!!!!!!}` | native event | 201 | `{"user":1072359,"challenge":209,"correct":true,"historical":false}` |
+| `academy{1_gu3ss_tr1pl3_rs4_1snt_tr1pl3_s3cur3!!!!!!}` | CyLab rekey | 201 | `{"user":1072359,"challenge":209,"correct":false,"historical":false}` |
+
+- **Tidak ada re-key drift:** validator masih menerima token wrapper asli `picoCTF{...}`.
+- **Temuan format (penting untuk pipeline otomasi LKS):** modul hasil backport event
+  (picoMini-by-redpwn) TIDAK direkey ke `academy{...}`. Submissi dengan wrapper CyLab
+  ditolak `correct: false` walau inner token identik. Gerbang verifikasi otomatis wajib
+  memakai wrapper native untuk kelas modul ini, bukan asumsi `academy{...}` global
+  (kontras dengan modul CyLab-native seperti seri Investigation Encoded, batch 181).
+- **Reproduktif offline:** `scripts/solve_209_triple_secure.py` mencetak flag tanpa akses
+  jaringan (shared-prime GCD lintas keypair), output cocok 100% dengan token yang diterima validator.
+
 ## Takeaway Kompetensi LKS & Mitigasi Defensif
 - **Akar Masalah:** Developer berasumsi bahwa menumpuk lapisan enkripsi (defense-in-depth semu) akan meningkatkan keamanan. Namun, penggunaan kembali komponen prima (*prime reuse / factor sharing*) di beberapa kunci publik menghancurkan asumsi keamanan RSA secara mendasar.
 - **Mitigasi Defensif:**

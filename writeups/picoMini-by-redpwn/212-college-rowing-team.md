@@ -57,6 +57,22 @@ Menganalisis implementasi RSA textbook tanpa padding di mana pesan yang sama dik
 - **Flag Resmi:** `picoCTF{1_gu3ss_p30pl3_p4d_m3ss4g3s_f0r_4_r34s0n}`
 - **Bukti Validasi:** REST API CyLab `POST /api/submissions/` merespons dengan status `HTTP 201 Created` (`correct: true`, user `1072359`).
 
+### Re-verifikasi Audit Batch 182 (2026-11-09 UTC, sesi REST siswa `Arielwin` / user id 1072359)
+
+| Token diuji | Wrapper | HTTP | Respons API |
+| --- | --- | --- | --- |
+| `picoCTF{1_gu3ss_p30pl3_p4d_m3ss4g3s_f0r_4_r34s0n}` | native event | 201 | `{"user":1072359,"challenge":212,"correct":true,"historical":false}` |
+| `academy{1_gu3ss_p30pl3_p4d_m3ss4g3s_f0r_4_r34s0n}` | CyLab rekey | 201 | `{"user":1072359,"challenge":212,"correct":false,"historical":false}` |
+
+- **Tidak ada re-key drift:** validator masih menerima token wrapper asli `picoCTF{...}`;
+  sinkronisasi sesi REST divalidasi lebih dulu via `GET /api/challenges/?page_size=1` (HTTP 200).
+- **Temuan format:** konsisten dengan modul 209, kelas backport event picoMini-by-redpwn
+  tidak direkey ke `academy{...}`. Gerbang verifikasi otomatis wajib memilih wrapper native
+  untuk modul ini, jika tidak solve resmi akan tercatat `correct: false` (phantom failure).
+- **Reproduktif offline:** `scripts/solve_212_college_rowing_team.py` memulihkan plaintext dari
+  kriptogram CRT broadcast (Hastad/root extraction + validasi padding PKCS#1 v1.5) tanpa jaringan,
+  output identik dengan token yang diterima validator.
+
 ## Takeaway Kompetensi LKS & Mitigasi Defensif
 - **Akar Masalah:** Penggunaan textbook RSA tanpa skema padding acak (randomized padding). Mengirim pesan deterministik yang sama ke $e$ penerima yang menggunakan eksponen publik yang sama ($e = 3$) secara matematis memungkinkan pemulihan plaintext tanpa mengetahui satu pun private key.
 - **Mitigasi Defensif:**

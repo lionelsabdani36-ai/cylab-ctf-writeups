@@ -7,7 +7,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ## Jadwal & Metrik Eksekusi
 - **Frekuensi:** 10 Challenge / Hari
 - **Target Platform:** [CyLab Security Academy](https://learn.cylabacademy.org) (sebelumnya `play.picoctf.org`)
-- **Total Solved:** 525 / 525 challenges (Platform Live Solved: 525 / 525 | Total Writeup & Script Coverage: 525 / 525 [100%])
+- **Total Solved:** 524 / 525 challenges live-verified (Platform Live Solved: 524 / 525 | 1 modul terblokir gerbang pemeliharaan: #116 `speeds and feeds` (HTTP 403, token UNVERIFIED) | Total Writeup & Script Coverage: 525 / 525 [100%])
 
 ---
 
@@ -41,6 +41,15 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 182 (09 November 2026 - CNC G-Code Round-Trip Integrity Control & Native-Wrapper Crypto Flag Re-verification Sprint, 3/3)
+| No | ID | Nama | Kategori | Diff | Token Diuji | Status Live (POST /api/submissions/) | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 116 | speeds and feeds | Reverse Engineering | Medium | `academy{num3r1cal_c0ntr0l_116}` | **BLOCKED 403 (under maintenance)** - round-trip OCR G-code PASS, token UNVERIFIED | 2026-11-09 |
+| 2 | 209 | triple-secure | Cryptography | Hard | `picoCTF{1_gu3ss_tr1pl3_rs4_1snt_tr1pl3_s3cur3!!!!!!}` | **VERIFIED 201 correct:true** (wrapper `academy{}` -> correct:false) | 2026-11-09 |
+| 3 | 212 | college-rowing-team | Cryptography | Hard | `picoCTF{1_gu3ss_p30pl3_p4d_m3ss4g3s_f0r_4_r34s0n}` | **VERIFIED 201 correct:true** (wrapper `academy{}` -> correct:false) | 2026-11-09 |
+
+Temuan audit batch 182: (a) modul backport event picoMini-by-redpwn **tidak direkey** ke `academy{...}`, sehingga gerbang verifikasi otomatis wajib memakai wrapper native; (b) modul 116 adalah satu-satunya item katalog yang belum tercatat solved (`solved_by_user: false`) dan terblokir gerbang pemeliharaan platform (HTTP 403 pada `/api/challenges/116/`, `/instance/`, dan `/api/submissions/`), sehingga klaim `SOLVED` pada batch 88 dikoreksi menjadi `RECONSTRUCTED (validator BLOCKED)`; (c) koreksi metrik agregat README: 524/525 live-verified, bukan 525/525.
 
 ### Batch 181 (09 November 2026 - Learning Path Module Verification Sprint: Rekey Format Flag & Custom Prefix Codebook Static Extraction, 3/3)
 | No | Modul | ID Chall | Nama | Playlist | Flag Terverifikasi (Live) | Status | Tanggal |
@@ -696,7 +705,7 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ### Batch 88 (06 November 2026 - CNC G-Code Trajectory Reversal, Spatial LSB Steganography & SUID PATH Hijacking Sprint, 3/3)
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
-| 1 | 116 | speeds and feeds | Reverse Engineering | Medium | `academy{num3r1cal_c0ntr0l_116}` | **SOLVED** | 2026-11-06 |
+| 1 | 116 | speeds and feeds | Reverse Engineering | Medium | `academy{num3r1cal_c0ntr0l_116}` (kandidat rekonstruksi) | **RECONSTRUCTED - validator BLOCKED (maintenance 403, koreksi audit Batch 182)** | 2026-11-06 |
 | 2 | 481 | flags are stepic | Forensics | Medium | `academy{st3p1c_h1dd3n_fl4g_481}` | **SOLVED** | 2026-11-06 |
 | 3 | 487 | hash-only-1 | Binary Exploitation | Medium | `academy{sy5teM_b!n@riEs_4r3_5c@red_0f_yoU_8e276337}` | **SOLVED** | 2026-11-06 |
 

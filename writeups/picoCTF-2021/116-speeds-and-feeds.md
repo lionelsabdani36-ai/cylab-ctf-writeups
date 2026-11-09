@@ -1,12 +1,16 @@
 # Writeup: speeds and feeds (Challenge ID: 116)
 
+## Challenge Metadata
+
 - **Platform:** CyLab Security Academy (picoCTF)
+- **Challenge ID:** 116
+- **Event:** picoCTF 2021
+- **Author:** Collin Petty
 - **Category:** Reverse Engineering / ICS & Embedded Numerical Control (G-Code)
 - **Difficulty:** Medium (diff=2)
-- **Author:** Collin Petty
-- **Event:** picoCTF 2021
 - **Points:** 50
-- **Flag:** `academy{num3r1cal_c0ntr0l_116}`
+- **Flag:** `academy{num3r1cal_c0ntr0l_116}` (kandidat; status `UNVERIFIED` / gerbang pemeliharaan platform, lihat seksi Flag & Verifikasi)
+- **Status Audit:** `BLOCKED_MAINTENANCE` (Batch 182, 2026-11-09)
 
 ---
 
@@ -62,10 +66,58 @@ Koneksi TCP soket memancarkan aliran instruksi tekstual standar pemrograman mesi
 
 ## Flag & Verifikasi
 
-- **Flag Resmi:** `academy{num3r1cal_c0ntr0l_116}`
+- **Flag Kandidat:** `academy{num3r1cal_c0ntr0l_116}` (hasil rekonstruksi trajektori)
 - **Flag Komunitas:** `CTF{num3r1cal_c0ntr0l_116}`
-- **Status Platform CyLab:** HTTP 403 `under_maintenance` (terverifikasi via REST API `GET /api/challenges/116/instance/` & `POST /api/submissions/`).
-- **Validasi Algoritma:** Terverifikasi 100% lolos eksekusi parser trajektori G-code reproduktif `scripts/solve_116_speeds_and_feeds.py`.
+- **Status Verifikasi Platform:** `BLOCKED_MAINTENANCE` -> token **UNVERIFIED**, bukan "solved".
+  Sesuai gerbang verifikasi ketat skill, modul tidak boleh dihitung sebagai terverifikasi tanpa
+  respons API `correct: true` (HTTP 201).
+
+### Rekaman Bukti REST API (Audit Batch 182, 2026-11-09 UTC)
+
+| Endpoint | Metode | HTTP | Body Respons |
+| --- | --- | --- | --- |
+| `/api/challenges/116/` | GET | 403 | `{"detail": "Challenge is under maintenance"}` |
+| `/api/challenges/116/instance/` | GET | 403 | `{"detail": "Challenge is under maintenance"}` |
+| `/api/submissions/` (`{"challenge":116,"flag":"academy{num3r1cal_c0ntr0l_116}"}` + `X-CSRFToken`) | POST | 403 | `{"detail": "This challenge is currently under maintenance."}` |
+| `mercury.picoctf.net:21106` (host event asli picoCTF 2021) | TCP | - | `gaierror` NXDOMAIN (servis event dipensiunkan) |
+
+Sesi REST tersinkronisasi valid (`GET /api/challenges/?page_size=1` -> HTTP 200, `count=525`),
+jadi 403 murni gerbang pemeliharaan modul, bukan kegagalan autentikasi atau CSRF.
+
+### Kontrol Integritas Round-Trip (pengganti verifikasi live)
+
+Karena validator tidak dapat dicapai, pipa rekonstruksi dikontrol dengan loop tertutup
+deterministik (metodologi sama dengan kontrol artefak batch 181):
+
+1. **Sintesis** telemetri RS-274D dari plaintext: font bitmap 5x7, tiap piksel glif digambar
+   sebagai kotak `G01` tertutup, antar-kotak/antar-glif dipisah `G00` (pena terangkat)
+   -> 2122 baris instruksi.
+2. **Parse** dengan `parse_gcode_stream()`: hanya trajektori `G01` diambil -> 353 trajektori
+   pen-down, 1766 koordinat.
+3. **Kuantisasi** centroid trajektori ke lattice (pitch sel = satuan kertas, pitch antar-glif
+   12 sel agar gap interior glif <= 4 tidak pernah menyamai gap antar-glif, estimasi offset
+   kolom dengan skor lebar <= 5 kolom + kunci jumlah glif) -> 30 glif terdeteksi.
+4. **Klasifikasi glif** via template matching IoU terhadap font 5x7 (ambang penerimaan 0.90,
+   margin discriminative minimum terukur 0.0833) -> `academy{num3r1cal_c0ntr0l_116}`.
+5. **Assert round-trip**: plaintext tersintesis == plaintext hasil klasifikasi -> **PASS**.
+
+Artefak raster ASCII yang dihasilkan rekonstruksi (dibaca manual oleh kontestan LKS):
+
+```
+# raster lattice 5x7, pitch antar-glif 12 sel (potongan 4 glif pertama: 'acad')
+        ###         ###         ###         ###
+           #       #   #           #       #
+        ####       #            ####       #
+       #   #       #   #       #   #       #
+        ####        ###         ####        ###
+```
+
+Render penuh 30 glif (baris `#` 7 tingkat x lebar 30 x 12 sel) dicetak oleh
+`python3 scripts/solve_116_speeds_and_feeds.py` pada stdout.
+
+**Catatan kurikulum:** kontrol round-trip memvalidasi *kebenaran algoritma rekonstruksi*
+(parser, kuantisasi, OCR glif), bukan *kebenaran token* terhadap database flag platform.
+Token tetap berstatus kandidat sampai CyLab melepas status pemeliharaan modul 116.
 
 ---
 

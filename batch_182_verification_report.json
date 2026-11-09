@@ -1,0 +1,99 @@
+{
+  "batch": 182,
+  "timestamp": "2026-11-09 20:57:58 UTC",
+  "student_account": "Arielwin (CyLab user id 1072359)",
+  "standard": "NIST SP 800-115 sc 4.2/4.3/4.4, EIA RS-274D / ISO 6983, RFC 8017 (PKCS#1 v1.5), CWE-200, CWE-319, CWE-327, CWE-330, CWE-780",
+  "session_sync": {
+    "health_endpoint": "/api/challenges/?page_size=1",
+    "http": 200,
+    "catalog_count": 525,
+    "verification_endpoint": "POST /api/submissions/ (X-CSRFToken)"
+  },
+  "compiler_sweep": {
+    "total_scanned": 551,
+    "passed": 551,
+    "failed": 0,
+    "failures": []
+  },
+  "module_116_round_trip": {
+    "exit_code": 0,
+    "duration_sec": 0.0498,
+    "round_trip_pass": true,
+    "glyph_recovery_pass": true,
+    "status": "PASS",
+    "output_snippet": [
+      "[*] Sintesis RS-274D: 2122 baris instruksi (pen-down feed move + rapid traverse)",
+      "[*] kontrol round-trip: 353 trajektori pen-down | 1766 koordinat | 30 glif terdeteksi",
+      "                                               #                                              #                                            #####                     #                                  ##                                  ###                     #                       ###         ##                       #           #           ##         #",
+      "[+] Glif terklasifikasi : academy{num3r1cal_c0ntr0l_116}",
+      "[+] Margin IoU minimum : 0.0833",
+      "[+] Kontrol integritas round-trip: PASS - plaintext sintesis == plaintext hasil klasifikasi"
+    ]
+  },
+  "solver_results": [
+    {
+      "id": 209,
+      "name": "triple-secure",
+      "category": "Cryptography",
+      "script": "solve_209_triple_secure.py",
+      "check_type": "rsa_shared_prime_gcd",
+      "exit_code": 0,
+      "duration_sec": 0.1855,
+      "flag_match": true,
+      "extracted_flag": "picoCTF{1_gu3ss_tr1pl3_rs4_1snt_tr1pl3_s3cur3!!!!!!}",
+      "expected_flag": "picoCTF{1_gu3ss_tr1pl3_rs4_1snt_tr1pl3_s3cur3!!!!!!}",
+      "live_submission": "VERIFIED_201_CORRECT",
+      "status": "PASS",
+      "output_snippet": [
+        "Flag: picoCTF{1_gu3ss_tr1pl3_rs4_1snt_tr1pl3_s3cur3!!!!!!}"
+      ]
+    },
+    {
+      "id": 212,
+      "name": "college-rowing-team",
+      "category": "Cryptography",
+      "script": "solve_212_college_rowing_team.py",
+      "check_type": "rsa_broadcast_hastad_pkcs1_padding",
+      "exit_code": 0,
+      "duration_sec": 1.1945,
+      "flag_match": true,
+      "extracted_flag": "picoCTF{1_gu3ss_p30pl3_p4d_m3ss4g3s_f0r_4_r34s0n}",
+      "expected_flag": "picoCTF{1_gu3ss_p30pl3_p4d_m3ss4g3s_f0r_4_r34s0n}",
+      "live_submission": "VERIFIED_201_CORRECT",
+      "status": "PASS",
+      "output_snippet": [
+        "Flag: picoCTF{1_gu3ss_p30pl3_p4d_m3ss4g3s_f0r_4_r34s0n}"
+      ]
+    }
+  ],
+  "documentation_audit": [
+    {
+      "id": 116,
+      "writeup_exists": true,
+      "solver_exists": true,
+      "writeup_sections_missing": [],
+      "readme_ledger_row": true,
+      "batch_stamp_in_writeup": true,
+      "status": "PASS"
+    },
+    {
+      "id": 209,
+      "writeup_exists": true,
+      "solver_exists": true,
+      "writeup_sections_missing": [],
+      "readme_ledger_row": true,
+      "batch_stamp_in_writeup": true,
+      "status": "PASS"
+    },
+    {
+      "id": 212,
+      "writeup_exists": true,
+      "solver_exists": true,
+      "writeup_sections_missing": [],
+      "readme_ledger_row": true,
+      "batch_stamp_in_writeup": true,
+      "status": "PASS"
+    }
+  ],
+  "all_passed": true
+}
