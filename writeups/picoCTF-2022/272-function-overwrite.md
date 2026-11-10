@@ -63,7 +63,16 @@ Tantangan `function overwrite` menyajikan program biner ELF 32-bit (`vuln`) dan 
 ## Flag & Verifikasi
 - **Flag Resmi:** `academy{0v3rwrit1ng_P01nt3rs_2ba33ab3}`
 - **Native PicoCTF Flag:** `picoCTF{0v3rwrit1ng_P01nt3rs_2ba33ab3}`
-- **Status Solver:** Terverifikasi 100% pada platform REST API CyLab (`POST /api/submissions/` -> HTTP 201 `correct: true`) via live socket injection.
+- **Verifikasi API Platform:** Penyerahan token melalui endpoint REST API `POST /api/submissions/` menghasilkan status **HTTP 201 Created**:
+  ```json
+  {
+    "user": 1072359,
+    "challenge": 272,
+    "flag": "academy{0v3rwrit1ng_P01nt3rs_2ba33ab3}",
+    "correct": true,
+    "historical": false
+  }
+  ```
 
 ---
 

@@ -1,0 +1,164 @@
+{
+  "timestamp": "2026-11-10T16:29:55.221675+00:00",
+  "batch": 202,
+  "events": [
+    "picoCTF 2022"
+  ],
+  "modules": [
+    {
+      "id": 270,
+      "name": "Forbidden Paths",
+      "category": "Web Exploitation",
+      "event": "picoCTF 2022",
+      "flag": "academy{7h3_p47h_70_5ucc355_afd5d939}"
+    },
+    {
+      "id": 271,
+      "name": "Fresh Java",
+      "category": "Reverse Engineering",
+      "event": "picoCTF 2022",
+      "flag": "academy{700l1ng_r3qu1r3d_5e462060}"
+    },
+    {
+      "id": 272,
+      "name": "function overwrite",
+      "category": "Binary Exploitation",
+      "event": "picoCTF 2022",
+      "flag": "academy{0v3rwrit1ng_P01nt3rs_2ba33ab3}"
+    }
+  ],
+  "summary": {
+    "total_checks": 6,
+    "passed": 6,
+    "failed": 0,
+    "all_passed": true
+  },
+  "checks": [
+    {
+      "name": "ast_syntax_sweep",
+      "description": "AST-parses every scripts/*.py and fails on syntax errors",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "total_scanned": 571,
+        "passed": 571,
+        "failed": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "solve_270",
+      "description": "Executes solve_270_forbidden_paths.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{7h3_p47h_70_5ucc355_afd5d939}"
+      }
+    },
+    {
+      "name": "solve_271",
+      "description": "Executes solve_271_fresh_java.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{700l1ng_r3qu1r3d_5e462060}"
+      }
+    },
+    {
+      "name": "solve_272",
+      "description": "Executes solve_272_function_overwrite.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{0v3rwrit1ng_P01nt3rs_2ba33ab3}"
+      }
+    },
+    {
+      "name": "live_evidence_probes",
+      "description": "Validates session health (200) and live flag acceptance (201 correct:true) on CyLab API",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_verified": true,
+        "probes": [
+          {
+            "endpoint": "GET /api/challenges/?page_size=1",
+            "http": 200,
+            "healthy": true
+          },
+          {
+            "challenge_id": 270,
+            "endpoint": "POST /api/submissions/",
+            "http": 201,
+            "flag": "academy{7h3_p47h_70_5ucc355_afd5d939}",
+            "correct": true,
+            "response": "{\"user\": 1072359, \"challenge\": 270, \"flag\": \"academy{7h3_p47h_70_5ucc355_afd5d939}\", \"correct\": true, \"historical\": false}"
+          },
+          {
+            "challenge_id": 271,
+            "endpoint": "POST /api/submissions/",
+            "http": 201,
+            "flag": "academy{700l1ng_r3qu1r3d_5e462060}",
+            "correct": true,
+            "response": "{\"user\": 1072359, \"challenge\": 271, \"flag\": \"academy{700l1ng_r3qu1r3d_5e462060}\", \"correct\": true, \"historical\": false}"
+          },
+          {
+            "challenge_id": 272,
+            "endpoint": "POST /api/submissions/",
+            "http": 201,
+            "flag": "academy{0v3rwrit1ng_P01nt3rs_2ba33ab3}",
+            "correct": true,
+            "response": "{\"user\": 1072359, \"challenge\": 272, \"flag\": \"academy{0v3rwrit1ng_P01nt3rs_2ba33ab3}\", \"correct\": true, \"historical\": false}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "writeup_documentation_audit",
+      "description": "Validates existence, flag presence, and LKS takeaway sections in writeup files",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_passed": true,
+        "writeups": [
+          {
+            "challenge_id": 270,
+            "path": "writeups/picoCTF-2022/270-forbidden-paths.md",
+            "exists": true,
+            "has_flag": true,
+            "has_lks_takeaway": true,
+            "pass": true
+          },
+          {
+            "challenge_id": 271,
+            "path": "writeups/picoCTF-2022/271-fresh-java.md",
+            "exists": true,
+            "has_flag": true,
+            "has_lks_takeaway": true,
+            "pass": true
+          },
+          {
+            "challenge_id": 272,
+            "path": "writeups/picoCTF-2022/272-function-overwrite.md",
+            "exists": true,
+            "has_flag": true,
+            "has_lks_takeaway": true,
+            "pass": true
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -12,13 +12,13 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 ---
 
 ## Assignments & Learning Paths Completed
-- [x] **Assignment: Seleksi Tim 2 (Guardian 71)** — **4/4 Learning Paths (100% Completed)**
+- [x] **Assignment: Seleksi Tim 2 (Guardian 71)** : **4/4 Learning Paths (100% Completed)**
   - [x] General Skills in CTF's (Playlist 14)
   - [x] The Beginner's Guide to the Challenge Library (Playlist 18)
   - [x] Python in CTF's (Playlist 15)
   - [x] Cryptography and Challenge Library Learning Intro (Playlist 17)
-- [x] **Learning Path: Python in CTF's** (Playlist 15) — **6/6 Modules Completed (100%)**
-- [x] **Learning Path: Cryptography and Challenge Library Learning Intro** (Playlist 17) — **15/15 Modules Completed (100%)**
+- [x] **Learning Path: Python in CTF's** (Playlist 15) : **6/6 Modules Completed (100%)**
+- [x] **Learning Path: Cryptography and Challenge Library Learning Intro** (Playlist 17) : **15/15 Modules Completed (100%)**
   - [x] Module 131: PicoLock (Game)
   - [x] Module 132: Caesar Ciphers Explanation (Theory)
   - [x] Module 133: caesar (Challenge 64) -> `academy{crossingtherubiconulqcojpd}`
@@ -34,13 +34,22 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
   - [x] Module 143: PowerAnalysis: Part 1 (Challenge 364) -> `academy{b13adff8b4d1a89da8ba668043276276}`
   - [x] Module 144: PowerAnalysis: Part 2 (Challenge 365) -> `academy{a202f6234c28153cf01c4dce23b7f9f5}`
   - [x] Module 145: Outro (Theory)
-- [x] **Learning Path: Investigation Encoded Series** (Playlist 6) — **2/2 Modules Completed (100%)**
+- [x] **Learning Path: Investigation Encoded Series** (Playlist 6) : **2/2 Modules Completed (100%)**
   - [x] Module 62: investigation_encoded_1 (Challenge 47) -> `encodedxxkpbxrzrn` (format RAW, tanpa wrapper)
   - [x] Module 63: investigation_encoded_2 (Challenge 36) -> `t1m3f1i35000000000004f54f0f0` (format RAW, tanpa wrapper)
 
 ---
 
 ## Log Tantangan Terselesaikan
+
+### Batch 202 (10 November 2026 - Path Traversal Filter Bypass, Java Bytecode Analysis & Function Pointer Overwrite Sprint, 3/3 modul)
+| No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 270 | Forbidden Paths | Web Exploitation | Medium | `academy{7h3_p47h_70_5ucc355_afd5d939}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis kelemahan filter blacklist parsial absolut vs traversal relatif pada formulir web read.php, bypass leading slash check via relative traversal 3-level ../../../flag.txt (CWE-22 / OWASP A01 / NIST SP 800-115 §4.3), kelanjutan audit event picoCTF 2022 (18/65), wrapper `academy{...}` valid | 2026-11-10 |
+| 2 | 271 | Fresh Java | Reverse Engineering | Medium | `academy{700l1ng_r3qu1r3d_5e462060}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis statis bytecode JVM KeygenMe.class tanpa dekompiler, pemindaian pola opcode primitif String.charAt (0xb6) dan bipush (0x10) untuk pemulihan lisensi linear 34 karakter (CWE-312 / CWE-798 / NIST SP 800-115 §4.3), kelanjutan audit event picoCTF 2022 (19/65), wrapper `academy{...}` valid | 2026-11-10 |
+| 3 | 272 | function overwrite | Binary Exploitation | Hard | `academy{0v3rwrit1ng_P01nt3rs_2ba33ab3}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis kerentanan omitasi batas bawah pada signed integer array index (fun[num1] += num2), eksploitasi indeks negatif num1 = -11 untuk write-what-where pada function pointer global check, pengalihan control flow ke easy_checker dengan rekayasa skor ASCII 1337 via '~~~~~~~~~~M' (CWE-129 / CWE-822 / NIST SP 800-115 §5.3), kelanjutan audit event picoCTF 2022 (20/65), wrapper `academy{...}` valid | 2026-11-10 |
+
+Temuan audit batch 202: (a) sinkronisasi sesi REST OK (`GET /api/challenges/?page_size=1` -> 200, user id 1072359); (b) kelanjutan audit event `picoCTF 2022` (20/65 modul) mencakup #270 Forbidden Paths, #271 Fresh Java, dan #272 function overwrite; (c) pengujian live REST API pada ketiga modul berhasil memperoleh status HTTP 201 Created dengan `correct: true`; (d) seluruh 3 skrip solver mandiri tuntas dieksekusi offline dan live, serta writeup LKS diperbarui lengkap; (e) test harness deterministik `scripts/test_batch_202_harness.py` meluluskan sweep AST 571/571 skrip, 3 solver mandiri, dan live API probe (PASS 6/6); (f) eksekusi terorkestrasi via AI Team & toolchain lokal.
 
 ### Batch 201 (10 November 2026 - Argument Validation, Nested Compression Forensics & Stack Format String Leak Sprint, 3/3 modul)
 | No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
