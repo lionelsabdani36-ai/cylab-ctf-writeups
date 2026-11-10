@@ -42,6 +42,15 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 208 (10 November 2026 - Stack Out-Of-Bounds Hijacking, PCAP Covert Channel & HTTP 302 Redirection Chain Sprint, 3/3 modul)
+| No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 346 | babygame02 | Binary Exploitation | Hard | `academy{gamer_jump1ng_4r0unD_5bc4b2bd}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis biner ELF 32-bit x86 labirin terminal, eksploitasi ketiadaan validasi batas indeks larik untuk menimpa LSB alamat kembali move_player pada offset stack relatif -39 byte (col=51, row=-1, tile 0x60) menuju fungsi win() di 0x08049760 (CWE-129 / CWE-787 / NIST SP 800-115 §4.2), kelanjutan audit event picoCTF 2023 (4/42), wrapper `academy{...}` valid | 2026-11-10 |
+| 2 | 348 | FindAndOpen | Forensics | Medium | `academy{R34DING_LOKd_fil56_succ3ss_9989a41b}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis tangkapan lalu lintas jaringan format libpcap dump.pcap, ekstraksi muatan Base64 saluran terselubung Ethernet mentah, diferensiasi kata sandi arsip vs token akhir, dan dekripsi kontainer ZIP stream cipher ZipCrypto (CWE-312 / CWE-327 / NIST SP 800-115 §4.2), kelanjutan audit event picoCTF 2023 (5/42), wrapper `academy{...}` valid | 2026-11-10 |
+| 3 | 349 | findme | Web Exploitation | Medium | `academy{proxies_all_the_way_661fc398}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis aplikasi web Node.js Express perbankan daring, penelusuran rantai pengalihan HTTP 302 Location header dan skrip timer JavaScript DOM sisi klien, rekonstruksi token terfragmentasi Base64 pada jalur parameter URI tanpa enkripsi (CWE-200 / CWE-598 / RFC 7231 / NIST SP 800-115 §4.2), kelanjutan audit event picoCTF 2023 (6/42), wrapper `academy{...}` valid | 2026-11-10 |
+
+Temuan audit batch 208: (a) sinkronisasi sesi REST OK (`GET /api/challenges/?page_size=1` -> 200, user id 1072359); (b) kelanjutan audit event `picoCTF 2023` (6/42 modul) mencakup #346 babygame02, #348 FindAndOpen, dan #349 findme; (c) pengujian live REST API pada ketiga modul berhasil memperoleh status HTTP 201 Created dengan `correct: true`; (d) seluruh 3 skrip solver mandiri tuntas dieksekusi offline dan live, serta writeup LKS diperbarui lengkap; (e) test harness deterministik `scripts/test_batch_208_harness.py` meluluskan sweep AST 577/577 skrip, 3 solver mandiri, dan live API probe (PASS 6/6); (f) eksekusi terorkestrasi via AI Team & toolchain lokal.
+
 ### Batch 207 (10 November 2026 - CDP Argument Injection, Stack Tile Grid Indexing & Crontab Reconnaissance Sprint, 3/3 modul)
 | No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|

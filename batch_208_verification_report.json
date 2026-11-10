@@ -1,0 +1,191 @@
+{
+  "timestamp": "2026-11-10T22:44:20.527834+00:00",
+  "batch": 208,
+  "events": [
+    "picoCTF 2023"
+  ],
+  "modules": [
+    {
+      "id": 346,
+      "name": "babygame02",
+      "category": "Binary Exploitation",
+      "event": "picoCTF 2023",
+      "flag": "academy{gamer_jump1ng_4r0unD_5bc4b2bd}"
+    },
+    {
+      "id": 348,
+      "name": "FindAndOpen",
+      "category": "Forensics",
+      "event": "picoCTF 2023",
+      "flag": "academy{R34DING_LOKd_fil56_succ3ss_9989a41b}"
+    },
+    {
+      "id": 349,
+      "name": "findme",
+      "category": "Web Exploitation",
+      "event": "picoCTF 2023",
+      "flag": "academy{proxies_all_the_way_661fc398}"
+    }
+  ],
+  "summary": {
+    "total_checks": 6,
+    "passed": 6,
+    "failed": 0,
+    "all_passed": true
+  },
+  "checks": [
+    {
+      "name": "ast_syntax_sweep",
+      "description": "AST-parses every scripts/*.py and fails on syntax errors",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "total_scanned": 577,
+        "passed": 577,
+        "failed": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "solve_346",
+      "description": "Executes solve_346_babygame02.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{gamer_jump1ng_4r0unD_5bc4b2bd}",
+        "stdout_tail": "   [+] win() invoked successfully, reading flag artifact from container\n[+] Reconstructed CyLab Token: academy{gamer_jump1ng_4r0unD_5bc4b2bd}\n[+] Platform submission response: {\"user\": 1072359, \"challenge\": 346, \"flag\": \"academy{gamer_jump1ng_4r0unD_5bc4b2bd}\", \"correct\": true, \"historical\": false}\n\n[SUCCESS] Module 346 (babygame02) fully audited and solved: academy{gamer_jump1ng_4r0unD_5bc4b2bd}\n",
+        "stderr_tail": ""
+      }
+    },
+    {
+      "name": "solve_348",
+      "description": "Executes solve_348_findandopen.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{R34DING_LOKd_fil56_succ3ss_9989a41b}",
+        "stdout_tail": "\n    [+] Unpacking encrypted entry 'flag' (45 bytes)\n[+] Reconstructed CyLab Token: academy{R34DING_LOKd_fil56_succ3ss_9989a41b}\n[+] Platform submission response: {\"user\": 1072359, \"challenge\": 348, \"flag\": \"academy{R34DING_LOKd_fil56_succ3ss_9989a41b}\", \"correct\": true, \"historical\": false}\n\n[SUCCESS] Module 348 (FindAndOpen) fully audited and solved: academy{R34DING_LOKd_fil56_succ3ss_9989a41b}\n",
+        "stderr_tail": ""
+      }
+    },
+    {
+      "name": "solve_349",
+      "description": "Executes solve_349_findme.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{proxies_all_the_way_661fc398}",
+        "stdout_tail": "coding URI Segment 2 (Base64)\n    [+] Segment 2 decoded: 'l_the_way_661fc398}'\n[+] Reconstructed CyLab Token: academy{proxies_all_the_way_661fc398}\n[+] Platform submission response: {\"user\": 1072359, \"challenge\": 349, \"flag\": \"academy{proxies_all_the_way_661fc398}\", \"correct\": true, \"historical\": false}\n\n[SUCCESS] Module 349 (findme) fully audited and solved: academy{proxies_all_the_way_661fc398}\n",
+        "stderr_tail": ""
+      }
+    },
+    {
+      "name": "live_evidence_probes",
+      "description": "Validates session health (200) and live flag acceptance (201 correct:true) on CyLab API",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_verified": true,
+        "probes": [
+          {
+            "endpoint": "GET /api/challenges/?page_size=1",
+            "http": 200,
+            "healthy": true
+          },
+          {
+            "challenge_id": 346,
+            "flag": "academy{gamer_jump1ng_4r0unD_5bc4b2bd}",
+            "http": 201,
+            "correct": true,
+            "response": {
+              "user": 1072359,
+              "challenge": 346,
+              "flag": "academy{gamer_jump1ng_4r0unD_5bc4b2bd}",
+              "correct": true,
+              "historical": false
+            }
+          },
+          {
+            "challenge_id": 348,
+            "flag": "academy{R34DING_LOKd_fil56_succ3ss_9989a41b}",
+            "http": 201,
+            "correct": true,
+            "response": {
+              "user": 1072359,
+              "challenge": 348,
+              "flag": "academy{R34DING_LOKd_fil56_succ3ss_9989a41b}",
+              "correct": true,
+              "historical": false
+            }
+          },
+          {
+            "challenge_id": 349,
+            "flag": "academy{proxies_all_the_way_661fc398}",
+            "http": 201,
+            "correct": true,
+            "response": {
+              "user": 1072359,
+              "challenge": 349,
+              "flag": "academy{proxies_all_the_way_661fc398}",
+              "correct": true,
+              "historical": false
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "writeup_documentation_audit",
+      "description": "Validates existence, LKS structure, flag token accuracy, and zero em dash in writeups",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_verified": true,
+        "files": [
+          {
+            "file": "writeups/picoCTF-2023/346-babygame02.md",
+            "challenge_id": 346,
+            "exists": true,
+            "flag_present": true,
+            "sections_present": true,
+            "missing_sections": [],
+            "anti_slop_clean": true,
+            "pass": true
+          },
+          {
+            "file": "writeups/picoCTF-2023/348-findandopen.md",
+            "challenge_id": 348,
+            "exists": true,
+            "flag_present": true,
+            "sections_present": true,
+            "missing_sections": [],
+            "anti_slop_clean": true,
+            "pass": true
+          },
+          {
+            "file": "writeups/picoCTF-2023/349-findme.md",
+            "challenge_id": 349,
+            "exists": true,
+            "flag_present": true,
+            "sections_present": true,
+            "missing_sections": [],
+            "anti_slop_clean": true,
+            "pass": true
+          }
+        ]
+      }
+    }
+  ]
+}
