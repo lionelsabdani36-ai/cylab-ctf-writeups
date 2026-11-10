@@ -42,6 +42,15 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 197 (10 November 2026 - Modular Inversion GF(41), PIE Dead-Code Bloat & Obfuscated Python AST Sprint, 3/3 modul)
+| No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 254 | basic-mod2 | Cryptography | Medium | `academy{1NV3R53LY_H4RD_471A6111}` | **SOLVED (HTTP 201 Created, correct: true)** - Inversi perkalian modular unkeyed pada lapangan hingga GF(41) via Teorema Kecil Fermat & pemetaan 23 token bilangan bulat (CWE-327 / NIST SP 800-115 §4.2), kelanjutan audit event picoCTF 2022, wrapper `academy{...}` valid | 2026-11-10 |
+| 2 | 255 | Bbbbloat | Reverse Engineering | Medium | `academy{cu7_7h3_bl047_1cf3a481}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis biner x86-64 stripped PIE, eliminasi instruksi aritmetika bloat / dead-code (CWE-1164), ekstraksi konstanta pembanding masukan 549255 (0x86187) & emulasi ROT47 stack string (CWE-798 / CWE-200), kelanjutan audit event picoCTF 2022, wrapper `academy{...}` valid | 2026-11-10 |
+| 3 | 256 | bloat.py | Reverse Engineering | Medium | `academy{d30bfu5c4710n_f7w_d77083fe}` | **SOLVED (HTTP 201 Created, correct: true)** - Deobfuskasi pengindeksan larik karakter alfabet Python untuk ekstraksi kredensial hardcoded kata sandi 'happychance' & kunci 'rapscallion', dekripsi cipher aliran repeating-key XOR 35 bita (CWE-200 / CWE-798 / CWE-327 / NIST SP 800-115 §4.2), kelanjutan audit event picoCTF 2022, wrapper `academy{...}` valid | 2026-11-10 |
+
+Temuan audit batch 197: (a) sinkronisasi sesi REST OK (`GET /api/challenges/?page_size=1` -> 200, user id 1072359); (b) kelanjutan audit event `picoCTF 2022` (5/65 modul) mencakup #254 basic-mod2, #255 Bbbbloat, dan #256 bloat.py; (c) pengujian matriks wrapper membuktikan validator CyLab secara konsisten menerima wrapper native CyLab `academy{...}` dan menolak `picoCTF{...}` (`correct: false`); (d) seluruh 3 skrip solver mandiri tuntas dieksekusi offline dan live, serta writeup LKS diperbarui lengkap; (e) test harness deterministik `scripts/test_batch_197_harness.py` meluluskan sweep AST 566/566 skrip, 3 solver mandiri, dan live API probe (PASS 6/6); (f) eksekusi terorkestrasi via AI Team & toolchain lokal.
+
 ### Batch 196 (10 November 2026 - Control Flow Dead Code, POSIX strtol Ambiguity & Unkeyed Modular Substitution Sprint, 3/3 modul)
 | No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|

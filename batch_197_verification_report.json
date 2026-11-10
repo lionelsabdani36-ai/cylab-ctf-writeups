@@ -1,0 +1,158 @@
+{
+  "timestamp": "2026-11-10T09:55:22.145922+00:00",
+  "batch": 197,
+  "events": [
+    "picoCTF 2022"
+  ],
+  "modules": [
+    {
+      "id": 254,
+      "name": "basic-mod2",
+      "category": "Cryptography",
+      "event": "picoCTF 2022",
+      "flag": "academy{1NV3R53LY_H4RD_471A6111}"
+    },
+    {
+      "id": 255,
+      "name": "Bbbbloat",
+      "category": "Reverse Engineering",
+      "event": "picoCTF 2022",
+      "flag": "academy{cu7_7h3_bl047_1cf3a481}"
+    },
+    {
+      "id": 256,
+      "name": "bloat.py",
+      "category": "Reverse Engineering",
+      "event": "picoCTF 2022",
+      "flag": "academy{d30bfu5c4710n_f7w_d77083fe}"
+    }
+  ],
+  "summary": {
+    "total_checks": 6,
+    "passed": 6,
+    "failed": 0,
+    "all_passed": true
+  },
+  "checks": [
+    {
+      "name": "ast_syntax_sweep",
+      "description": "AST-parses every scripts/*.py and fails on syntax errors",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "total_scanned": 566,
+        "passed": 566,
+        "failed": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "solve_254",
+      "description": "Executes solve_254_basic_mod2.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{1NV3R53LY_H4RD_471A6111}"
+      }
+    },
+    {
+      "name": "solve_255",
+      "description": "Executes solve_255_bbbbloat.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{cu7_7h3_bl047_1cf3a481}"
+      }
+    },
+    {
+      "name": "solve_256",
+      "description": "Executes solve_256_bloat.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{d30bfu5c4710n_f7w_d77083fe}"
+      }
+    },
+    {
+      "name": "live_evidence_probes",
+      "description": "Validates session health (200) and live flag acceptance (201 correct:true) on CyLab API",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_verified": true,
+        "probes": [
+          {
+            "endpoint": "GET /api/challenges/?page_size=1",
+            "http": 200,
+            "healthy": true
+          },
+          {
+            "challenge_id": 254,
+            "flag": "academy{1NV3R53LY_H4RD_471A6111}",
+            "http": 201,
+            "correct": true
+          },
+          {
+            "challenge_id": 255,
+            "flag": "academy{cu7_7h3_bl047_1cf3a481}",
+            "http": 201,
+            "correct": true
+          },
+          {
+            "challenge_id": 256,
+            "flag": "academy{d30bfu5c4710n_f7w_d77083fe}",
+            "http": 201,
+            "correct": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "writeup_documentation_audit",
+      "description": "Asserts existence and LKS-compliant structure of writeups for modules 254, 255, 256",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_valid": true,
+        "writeups": [
+          {
+            "challenge_id": 254,
+            "path": "writeups/picoCTF-2022/254-basic-mod2.md",
+            "exists": true,
+            "flag_matched": true,
+            "lks_mitigation_present": true,
+            "valid": true
+          },
+          {
+            "challenge_id": 255,
+            "path": "writeups/picoCTF-2022/255-bbbbloat.md",
+            "exists": true,
+            "flag_matched": true,
+            "lks_mitigation_present": true,
+            "valid": true
+          },
+          {
+            "challenge_id": 256,
+            "path": "writeups/picoCTF-2022/256-bloat-py.md",
+            "exists": true,
+            "flag_matched": true,
+            "lks_mitigation_present": true,
+            "valid": true
+          }
+        ]
+      }
+    }
+  ]
+}
