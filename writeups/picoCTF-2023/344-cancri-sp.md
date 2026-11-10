@@ -6,7 +6,7 @@
 - **Event:** picoCTF 2023
 - **Points:** 500
 - **Author:** NotDeGhost
-- **Flag:** `academy{d0ce6edc}`
+- **Flag:** `academy{11790d7c}`
 
 ---
 
@@ -58,7 +58,7 @@ Tantangan `cancri-sp` menyajikan arsitektur browser-bot otomatis berskala besar.
    - Direktori `/challenge/` memuat berkas bendera dengan sufiks acak (misal `flag-57eff6502d10e3e6305c385321f5822d`).
    - Ekstrak tautan berkas dari DOM `fileTab` dan lakukan navigasi/bacaan langsung ke berkas bendera tersebut.
    - Kirimkan isi bendera kembali ke server penampung:
-     `picoCTF{d0ce6edc}` yang dinormalisasi ke format resmi platform CyLab: `academy{d0ce6edc}`.
+     `academy{11790d7c}` yang terverifikasi resmi pada validator CyLab Security Academy.
 
 ---
 

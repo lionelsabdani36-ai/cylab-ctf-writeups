@@ -42,6 +42,15 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 207 (10 November 2026 - CDP Argument Injection, Stack Tile Grid Indexing & Crontab Reconnaissance Sprint, 3/3 modul)
+| No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 344 | cancri-sp | Web Exploitation | Hard | `academy{11790d7c}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis bot Chromium headless unquoted variable expansion ($1 pada run.sh), injeksi argumen CLI --remote-debugging-port=9222 (CWE-88), eksfiltrasi berkas acak /challenge/ via antarmuka Chrome DevTools Protocol (CDP), inisiasi audit event picoCTF 2023 (1/42), wrapper `academy{...}` valid | 2026-11-10 |
+| 2 | 345 | babygame01 | Binary Exploitation | Medium | `academy{gamer_m0d3_enabled_9ad09239}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis biner ELF 32-bit labirin teks ASCII, eksploitasi ketiadaan validasi batas bawah larik (row=0, col=-4) untuk menimpa variabel boolean has_flag pada stack di ebp-0xa9c (CWE-129 / CWE-787 / NIST SP 800-115 §4.2), eksekusi kemenangan via backdoor pintasan pengembang 'p', inisiasi audit event picoCTF 2023 (2/42), wrapper `academy{...}` valid | 2026-11-10 |
+| 3 | 347 | chrono | General Skills | Medium | `academy{Sch3DUL7NG_T45K3_L1NUX_9bb09823}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis administrasi sistem Linux dan subsistem penjadwalan Vixie Cron, audit berkas /etc/crontab berizin longgar (POSIX 644 -rw-r--r--), ekstraksi komentar rahasia tersembunyi pada header konfigurasi sistem tanpa eskalasi privilese (CWE-312 / CWE-200 / NIST SP 800-115 §4.2), inisiasi audit event picoCTF 2023 (3/42), wrapper `academy{...}` valid | 2026-11-10 |
+
+Temuan audit batch 207: (a) sinkronisasi sesi REST OK (`GET /api/challenges/?page_size=1` -> 200, user id 1072359); (b) inisiasi audit event `picoCTF 2023` (3/42 modul) mencakup #344 cancri-sp, #345 babygame01, dan #347 chrono; (c) pengujian live REST API pada ketiga modul berhasil memperoleh status HTTP 201 Created dengan `correct: true`; (d) seluruh 3 skrip solver mandiri tuntas dieksekusi offline dan live, serta writeup LKS diperbarui lengkap; (e) test harness deterministik `scripts/test_batch_207_harness.py` meluluskan sweep AST 576/576 skrip, 3 solver mandiri, dan live API probe (PASS 6/6); (f) eksekusi terorkestrasi via AI Team & toolchain lokal.
+
 ### Batch 206 (10 November 2026 - Cookie Tampering Escalation, 4-Rail Transposition & Polyalphabetic Modular Decryption Sprint, 3/3 modul)
 | No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|

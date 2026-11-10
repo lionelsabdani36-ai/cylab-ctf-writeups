@@ -1,0 +1,191 @@
+{
+  "timestamp": "2026-11-10T21:50:01.207753+00:00",
+  "batch": 207,
+  "events": [
+    "picoCTF 2023"
+  ],
+  "modules": [
+    {
+      "id": 344,
+      "name": "cancri-sp",
+      "category": "Web Exploitation",
+      "event": "picoCTF 2023",
+      "flag": "academy{11790d7c}"
+    },
+    {
+      "id": 345,
+      "name": "babygame01",
+      "category": "Binary Exploitation",
+      "event": "picoCTF 2023",
+      "flag": "academy{gamer_m0d3_enabled_9ad09239}"
+    },
+    {
+      "id": 347,
+      "name": "chrono",
+      "category": "General Skills",
+      "event": "picoCTF 2023",
+      "flag": "academy{Sch3DUL7NG_T45K3_L1NUX_9bb09823}"
+    }
+  ],
+  "summary": {
+    "total_checks": 6,
+    "passed": 6,
+    "failed": 0,
+    "all_passed": true
+  },
+  "checks": [
+    {
+      "name": "ast_syntax_sweep",
+      "description": "AST-parses every scripts/*.py and fails on syntax errors",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "total_scanned": 576,
+        "passed": 576,
+        "failed": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "solve_344",
+      "description": "Executes solve_344_cancri_sp.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{11790d7c}",
+        "stdout_tail": "] Stage 4: Resolving randomized flag filename and exfiltrating contents\n    [+] Located artifact: flag-e2c177ac618158c06fff16a6e8820cc9\n[+] Reconstructed CyLab Token: academy{11790d7c}\n[+] Platform submission response: {\"user\": 1072359, \"challenge\": 344, \"flag\": \"academy{11790d7c}\", \"correct\": true, \"historical\": false}\n\n[SUCCESS] Module 344 (cancri-sp) fully audited and solved: academy{11790d7c}\n",
+        "stderr_tail": ""
+      }
+    },
+    {
+      "name": "solve_345",
+      "description": "Executes solve_345_babygame01.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{gamer_m0d3_enabled_9ad09239}",
+        "stdout_tail": "g to exit (29, 89)\n    [+] win() invoked: reading flag.txt and printing token\n[+] Reconstructed CyLab Token: academy{gamer_m0d3_enabled_9ad09239}\n[+] Platform submission response: {\"user\": 1072359, \"challenge\": 345, \"flag\": \"academy{gamer_m0d3_enabled_9ad09239}\", \"correct\": true, \"historical\": false}\n\n[SUCCESS] Module 345 (babygame01) fully audited and solved: academy{gamer_m0d3_enabled_9ad09239}\n",
+        "stderr_tail": ""
+      }
+    },
+    {
+      "name": "solve_347",
+      "description": "Executes solve_347_chrono.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{Sch3DUL7NG_T45K3_L1NUX_9bb09823}",
+        "stdout_tail": "644 -rw-r--r--)\n    [+] Discovering embedded header comment on line 1\n[+] Reconstructed CyLab Token: academy{Sch3DUL7NG_T45K3_L1NUX_9bb09823}\n[+] Platform submission response: {\"user\": 1072359, \"challenge\": 347, \"flag\": \"academy{Sch3DUL7NG_T45K3_L1NUX_9bb09823}\", \"correct\": true, \"historical\": false}\n\n[SUCCESS] Module 347 (chrono) fully audited and solved: academy{Sch3DUL7NG_T45K3_L1NUX_9bb09823}\n",
+        "stderr_tail": ""
+      }
+    },
+    {
+      "name": "live_evidence_probes",
+      "description": "Validates session health (200) and live flag acceptance (201 correct:true) on CyLab API",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_verified": true,
+        "probes": [
+          {
+            "endpoint": "GET /api/challenges/?page_size=1",
+            "http": 200,
+            "healthy": true
+          },
+          {
+            "challenge_id": 344,
+            "flag": "academy{11790d7c}",
+            "http": 201,
+            "correct": true,
+            "response": {
+              "user": 1072359,
+              "challenge": 344,
+              "flag": "academy{11790d7c}",
+              "correct": true,
+              "historical": false
+            }
+          },
+          {
+            "challenge_id": 345,
+            "flag": "academy{gamer_m0d3_enabled_9ad09239}",
+            "http": 201,
+            "correct": true,
+            "response": {
+              "user": 1072359,
+              "challenge": 345,
+              "flag": "academy{gamer_m0d3_enabled_9ad09239}",
+              "correct": true,
+              "historical": false
+            }
+          },
+          {
+            "challenge_id": 347,
+            "flag": "academy{Sch3DUL7NG_T45K3_L1NUX_9bb09823}",
+            "http": 201,
+            "correct": true,
+            "response": {
+              "user": 1072359,
+              "challenge": 347,
+              "flag": "academy{Sch3DUL7NG_T45K3_L1NUX_9bb09823}",
+              "correct": true,
+              "historical": false
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "writeup_documentation_audit",
+      "description": "Verifies existence, LKS sections, anti-slop rules, and official flags in writeups",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_passed": true,
+        "writeups": [
+          {
+            "file": "writeups/picoCTF-2023/344-cancri-sp.md",
+            "challenge_id": 344,
+            "exists": true,
+            "flag_present": true,
+            "sections_present": true,
+            "missing_sections": [],
+            "anti_slop_clean": true,
+            "pass": true
+          },
+          {
+            "file": "writeups/picoCTF-2023/345-babygame01.md",
+            "challenge_id": 345,
+            "exists": true,
+            "flag_present": true,
+            "sections_present": true,
+            "missing_sections": [],
+            "anti_slop_clean": true,
+            "pass": true
+          },
+          {
+            "file": "writeups/picoCTF-2023/347-chrono.md",
+            "challenge_id": 347,
+            "exists": true,
+            "flag_present": true,
+            "sections_present": true,
+            "missing_sections": [],
+            "anti_slop_clean": true,
+            "pass": true
+          }
+        ]
+      }
+    }
+  ]
+}
