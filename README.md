@@ -42,6 +42,15 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 205 (10 November 2026 - Regex Text Carving, Acoustic Signal Demodulation & Cross-Window DOM Leak Sprint, 3/3 modul)
+| No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 279 | Lookey here | Forensics | Medium | `academy{gr3p_15_@w3s0m3_33595e98}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis artefak korpus teks novel Anthem 108 KB (2.146 baris), ekstraksi linier O(N) pola token tanpa enkripsi via POSIX grep / regex (CWE-312 / CWE-200 / NIST SP 800-115 §5.3), kelanjutan audit event picoCTF 2022 (27/65), wrapper `academy{...}` valid | 2026-11-10 |
+| 2 | 280 | morse-code | Cryptography | Medium | `academy{WH47_H47H_90D_W20U9H7}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis sinyal rekaman audio Microsoft PCM 16-bit mono 44.1 kHz, deteksi pulsa nada gelombang sinusoidal ~800 Hz via energi RMS jendela 10 ms, rekonstruksi pesan ITU-R M.1677-1 leetspeak via run-length encoding (ITU-R M.1677-1 / CWE-319 / NIST SP 800-115 §5.3), kelanjutan audit event picoCTF 2022 (28/65), wrapper `academy{...}` valid | 2026-11-10 |
+| 3 | 282 | noted | Web Exploitation | Hard | `academy{p00rth0s_parl1ment_0f_p3p3gas_386f0184}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis aplikasi web pencatatan Node.js Express & bot Puppeteer, eksploitasi kombinasi Self-XSS pada perenderan catatan HTML dan Login CSRF pada /login tanpa token anti-CSRF, pembacaan dokumen body DOM lintas jendela Same-Origin Policy via window.name (CWE-352 / CWE-79 / NIST SP 800-115 §4.3), kelanjutan audit event picoCTF 2022 (29/65), wrapper `academy{...}` valid | 2026-11-10 |
+
+Temuan audit batch 205: (a) sinkronisasi sesi REST OK (`GET /api/challenges/?page_size=1` -> 200, user id 1072359); (b) kelanjutan audit event `picoCTF 2022` (29/65 modul) mencakup #279 Lookey here, #280 morse-code, dan #282 noted; (c) pengujian live REST API pada ketiga modul berhasil memperoleh status HTTP 201 Created dengan `correct: true`; (d) seluruh 3 skrip solver mandiri tuntas dieksekusi offline dan live, serta writeup LKS diperbarui lengkap; (e) test harness deterministik `scripts/test_batch_205_harness.py` meluluskan sweep AST 574/574 skrip, 3 solver mandiri, dan live API probe (PASS 6/6); (f) eksekusi terorkestrasi via AI Team & toolchain lokal.
+
 ### Batch 204 (10 November 2026 - Keygen Reconstruction, W3C Custom Elements XSS & Client-Side Auth Bypass Sprint, 3/3 modul)
 | No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|

@@ -92,3 +92,10 @@ Tantangan `noted` menyajikan aplikasi web pencatatan (*note-taking application*)
    Content-Security-Policy: default-src 'self'; script-src 'self'; object-src 'none'; frame-ancestors 'none';
    ```
    Kebijakan ini menonaktifkan eksekusi skrip *inline* (`unsafe-inline`) sehingga payload XSS tidak dapat dieksekusi meskipun berhasil disuntikkan ke dalam dokumen HTML.
+
+---
+
+## Solver
+
+Skrip otomatis mandiri tersedia pada `scripts/solve_282_noted.py`.
+

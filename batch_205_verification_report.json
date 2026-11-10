@@ -1,0 +1,191 @@
+{
+  "timestamp": "2026-11-10T20:15:10.910227+00:00",
+  "batch": 205,
+  "events": [
+    "picoCTF 2022"
+  ],
+  "modules": [
+    {
+      "id": 279,
+      "name": "Lookey here",
+      "category": "Forensics",
+      "event": "picoCTF 2022",
+      "flag": "academy{gr3p_15_@w3s0m3_33595e98}"
+    },
+    {
+      "id": 280,
+      "name": "morse-code",
+      "category": "Cryptography",
+      "event": "picoCTF 2022",
+      "flag": "academy{WH47_H47H_90D_W20U9H7}"
+    },
+    {
+      "id": 282,
+      "name": "noted",
+      "category": "Web Exploitation",
+      "event": "picoCTF 2022",
+      "flag": "academy{p00rth0s_parl1ment_0f_p3p3gas_386f0184}"
+    }
+  ],
+  "summary": {
+    "total_checks": 6,
+    "passed": 6,
+    "failed": 0,
+    "all_passed": true
+  },
+  "checks": [
+    {
+      "name": "ast_syntax_sweep",
+      "description": "AST-parses every scripts/*.py and fails on syntax errors",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "total_scanned": 574,
+        "passed": 574,
+        "failed": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "solve_279",
+      "description": "Executes solve_279_lookey_here.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{gr3p_15_@w3s0m3_33595e98}",
+        "stdout_tail": "[*] Solving Challenge 279: Lookey here\n[*] Stage 1: Locating and loading target text corpus (Anthem text)\n    [+] Loaded corpus (107994 characters, 2146 lines)\n[*] Stage 2: Performing regex pattern search for academy{...} flag token\n[+] Recovered Flag: academy{gr3p_15_@w3s0m3_33595e98}\n\n[SUCCESS] Module 279 (Lookey here) fully audited and solved: academy{gr3p_15_@w3s0m3_33595e98}\n",
+        "stderr_tail": ""
+      }
+    },
+    {
+      "name": "solve_280",
+      "description": "Executes solve_280_morse_code.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{WH47_H47H_90D_W20U9H7}",
+        "stdout_tail": " waveform (morse_chal.wav)\n    [+] Processing audio file: /tmp/c280/morse_chal.wav\n    [+] Audio spec: 1274490 frames, 44100 Hz, 1 channel(s)\n[*] Stage 2: Performing RMS energy burst detection\n[*] Stage 3: Demodulating pulses into Morse code characters\n[+] Reconstructed Flag: academy{WH47_H47H_90D_W20U9H7}\n\n[SUCCESS] Module 280 (morse-code) fully audited and solved: academy{WH47_H47H_90D_W20U9H7}\n",
+        "stderr_tail": ""
+      }
+    },
+    {
+      "name": "solve_282",
+      "description": "Executes solve_282_noted.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{p00rth0s_parl1ment_0f_p3p3gas_386f0184}",
+        "stdout_tail": "ved: picoCTF{p00rth0s_parl1ment_0f_p3p3gas_386f0184}\n[+] Normalized CyLab token: academy{p00rth0s_parl1ment_0f_p3p3gas_386f0184}\n[+] Platform submission response: {\"user\": 1072359, \"challenge\": 282, \"flag\": \"academy{p00rth0s_parl1ment_0f_p3p3gas_386f0184}\", \"correct\": true, \"historical\": false}\n\n[SUCCESS] Module 282 (noted) fully audited and solved: academy{p00rth0s_parl1ment_0f_p3p3gas_386f0184}\n",
+        "stderr_tail": ""
+      }
+    },
+    {
+      "name": "live_evidence_probes",
+      "description": "Validates session health (200) and live flag acceptance (201 correct:true) on CyLab API",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_verified": true,
+        "probes": [
+          {
+            "endpoint": "GET /api/challenges/?page_size=1",
+            "http": 200,
+            "healthy": true
+          },
+          {
+            "challenge_id": 279,
+            "flag": "academy{gr3p_15_@w3s0m3_33595e98}",
+            "http": 201,
+            "correct": true,
+            "response": {
+              "user": 1072359,
+              "challenge": 279,
+              "flag": "academy{gr3p_15_@w3s0m3_33595e98}",
+              "correct": true,
+              "historical": false
+            }
+          },
+          {
+            "challenge_id": 280,
+            "flag": "academy{WH47_H47H_90D_W20U9H7}",
+            "http": 201,
+            "correct": true,
+            "response": {
+              "user": 1072359,
+              "challenge": 280,
+              "flag": "academy{WH47_H47H_90D_W20U9H7}",
+              "correct": true,
+              "historical": false
+            }
+          },
+          {
+            "challenge_id": 282,
+            "flag": "academy{p00rth0s_parl1ment_0f_p3p3gas_386f0184}",
+            "http": 201,
+            "correct": true,
+            "response": {
+              "user": 1072359,
+              "challenge": 282,
+              "flag": "academy{p00rth0s_parl1ment_0f_p3p3gas_386f0184}",
+              "correct": true,
+              "historical": false
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "writeup_documentation_audit",
+      "description": "Verifies existence, LKS sections, anti-slop rules, and official flags in writeups",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_passed": true,
+        "writeups": [
+          {
+            "file": "writeups/picoCTF-2022/279-lookey-here.md",
+            "challenge_id": 279,
+            "exists": true,
+            "flag_present": true,
+            "sections_present": true,
+            "missing_sections": [],
+            "anti_slop_clean": true,
+            "pass": true
+          },
+          {
+            "file": "writeups/picoCTF-2022/280-morse-code.md",
+            "challenge_id": 280,
+            "exists": true,
+            "flag_present": true,
+            "sections_present": true,
+            "missing_sections": [],
+            "anti_slop_clean": true,
+            "pass": true
+          },
+          {
+            "file": "writeups/picoCTF-2022/282-noted.md",
+            "challenge_id": 282,
+            "exists": true,
+            "flag_present": true,
+            "sections_present": true,
+            "missing_sections": [],
+            "anti_slop_clean": true,
+            "pass": true
+          }
+        ]
+      }
+    }
+  ]
+}

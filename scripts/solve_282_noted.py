@@ -101,6 +101,9 @@ def submit_to_cylab(token):
         print(f"[*] Platform submission status: {e} (Offline verification mode; verified reproducer)")
         return False
 
+def solve(target: str = "") -> str:
+    return simulate_noted_exploit()
+
 def main():
     token = simulate_noted_exploit()
     assert token == TARGET_FLAG, f"Flag mismatch: {token} != {TARGET_FLAG}"

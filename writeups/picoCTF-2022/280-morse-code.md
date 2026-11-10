@@ -80,3 +80,10 @@ Diberikan sebuah berkas rekaman audio mono dalam format Microsoft PCM WAV 16-bit
 ## Takeaway Kompetensi LKS & Mitigasi Defensif
 - **Otomasi Pemrosesan Sinyal Tanpa GUI:** Peserta lomba LKS Cyber Security sering kali mengandalkan alat visual GUI seperti Audacity atau Sonic Visualiser yang membutuhkan waktu lama untuk menyeleksi dan mencatat tiap karakter manual. Penguasaan skrip demodulasi berbasis pustaka standar (`wave`, `struct`) memungkinkan ekstraksi data audio berkecepatan tinggi dalam hitungan detik.
 - **Kerahasiaan Data & Obfuskasi Sinyal (Acoustic Steganography):** Pengiriman data dalam format modulasi audio polos (*unencrypted audible carrier*) rentan disadap dan didekode oleh pihak ketiga melalui perekaman pasif. Transmisi radio atau akustik wajib dilindungi enkripsi kriptografis modern (seperti AES-GCM) sebelum dimodulasi ke saluran fisik.
+
+---
+
+## Solver
+
+Skrip otomatis mandiri tersedia pada `scripts/solve_280_morse_code.py`.
+
