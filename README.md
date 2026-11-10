@@ -42,6 +42,15 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 199 (10 November 2026 - Custom Canary Oracle, Credential Leak ROT13 & PrintNightmare RCE Sprint, 3/3 modul)
+| No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 260 | buffer overflow 3 | Binary Exploitation | Hard | `academy{Stat1C_c4n4r13s_4R3_b4D_ceaa3353}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis pembobolan custom userland stack canary 4 bita via boolean oracle linier byte-by-byte (CWE-121 / CWE-697), pembajakan frame EIP ke win() 0x08049236 (NIST SP 800-115 §4.2), kelanjutan audit event picoCTF 2022 (9/65), wrapper `academy{...}` valid | 2026-11-10 |
+| 2 | 261 | credstuff | Cryptography | Easy | `academy{C7r1F_54V35_71M3}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis kebocoran data otentikasi paralel & dekripsi rotasi monoalfabetik ROT13 (CWE-256 / CWE-327 / OAT-008), rektifikasi token validator live dari 'e' ke 'r' terverifikasi resmi (NIST SP 800-115 §4.2), kelanjutan audit event picoCTF 2022 (10/65), wrapper `academy{...}` valid | 2026-11-10 |
+| 3 | 262 | CVE-XXXX-XXXX | Binary Exploitation | Easy | `academy{CVE-2021-34527}` | **SOLVED (HTTP 201 Created, correct: true)** - Riset intelijen ancaman siber & analisis kerentanan RPC Windows Print System RCE PrintNightmare (CWE-269 / CWE-829 / CVE-2021-34527) dengan pembedaan tegas terhadap CVE-2021-1675 LPE (NIST SP 800-115 §4.2), kelanjutan audit event picoCTF 2022 (11/65), wrapper `academy{...}` valid | 2026-11-10 |
+
+Temuan audit batch 199: (a) sinkronisasi sesi REST OK (`GET /api/challenges/?page_size=1` -> 200, user id 1072359); (b) kelanjutan audit event `picoCTF 2022` (11/65 modul) mencakup #260 buffer overflow 3, #261 credstuff, dan #262 CVE-XXXX-XXXX; (c) rektifikasi penting pada #261 credstuff di mana validator CyLab secara sah menerima token native ROT13 `academy{C7r1F_54V35_71M3}` dengan `correct: true`; (d) seluruh 3 skrip solver mandiri tuntas dieksekusi offline dan live, serta writeup LKS diperbarui lengkap; (e) test harness deterministik `scripts/test_batch_199_harness.py` meluluskan sweep AST 568/568 skrip, 3 solver mandiri, dan live API probe (PASS 6/6); (f) eksekusi terorkestrasi via AI Team & toolchain lokal.
+
 ### Batch 198 (10 November 2026 - Stack Smashing, Control Flow Hijacking & cdecl Stack Argument Sprint, 3/3 modul)
 | No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|

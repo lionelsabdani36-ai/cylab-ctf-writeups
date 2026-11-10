@@ -1,0 +1,164 @@
+{
+  "timestamp": "2026-11-10T11:33:43.591748+00:00",
+  "batch": 199,
+  "events": [
+    "picoCTF 2022"
+  ],
+  "modules": [
+    {
+      "id": 260,
+      "name": "buffer overflow 3",
+      "category": "Binary Exploitation",
+      "event": "picoCTF 2022",
+      "flag": "academy{Stat1C_c4n4r13s_4R3_b4D_ceaa3353}"
+    },
+    {
+      "id": 261,
+      "name": "credstuff",
+      "category": "Cryptography",
+      "event": "picoCTF 2022",
+      "flag": "academy{C7r1F_54V35_71M3}"
+    },
+    {
+      "id": 262,
+      "name": "CVE-XXXX-XXXX",
+      "category": "Binary Exploitation",
+      "event": "picoCTF 2022",
+      "flag": "academy{CVE-2021-34527}"
+    }
+  ],
+  "summary": {
+    "total_checks": 6,
+    "passed": 6,
+    "failed": 0,
+    "all_passed": true
+  },
+  "checks": [
+    {
+      "name": "ast_syntax_sweep",
+      "description": "AST-parses every scripts/*.py and fails on syntax errors",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "total_scanned": 568,
+        "passed": 568,
+        "failed": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "solve_260",
+      "description": "Executes solve_260_buffer_overflow_3.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{Stat1C_c4n4r13s_4R3_b4D_ceaa3353}"
+      }
+    },
+    {
+      "name": "solve_261",
+      "description": "Executes solve_261_credstuff.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{C7r1F_54V35_71M3}"
+      }
+    },
+    {
+      "name": "solve_262",
+      "description": "Executes solve_262_cve.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{CVE-2021-34527}"
+      }
+    },
+    {
+      "name": "live_evidence_probes",
+      "description": "Validates session health (200) and live flag acceptance (201 correct:true) on CyLab API",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_verified": true,
+        "probes": [
+          {
+            "endpoint": "GET /api/challenges/?page_size=1",
+            "http": 200,
+            "healthy": true
+          },
+          {
+            "challenge_id": 260,
+            "endpoint": "POST /api/submissions/",
+            "http": 201,
+            "flag": "academy{Stat1C_c4n4r13s_4R3_b4D_ceaa3353}",
+            "correct": true,
+            "response": "{\"user\": 1072359, \"challenge\": 260, \"flag\": \"academy{Stat1C_c4n4r13s_4R3_b4D_ceaa3353}\", \"correct\": true, \"historical\": false}"
+          },
+          {
+            "challenge_id": 261,
+            "endpoint": "POST /api/submissions/",
+            "http": 201,
+            "flag": "academy{C7r1F_54V35_71M3}",
+            "correct": true,
+            "response": "{\"user\": 1072359, \"challenge\": 261, \"flag\": \"academy{C7r1F_54V35_71M3}\", \"correct\": true, \"historical\": false}"
+          },
+          {
+            "challenge_id": 262,
+            "endpoint": "POST /api/submissions/",
+            "http": 201,
+            "flag": "academy{CVE-2021-34527}",
+            "correct": true,
+            "response": "{\"user\": 1072359, \"challenge\": 262, \"flag\": \"academy{CVE-2021-34527}\", \"correct\": true, \"historical\": false}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "writeup_documentation_audit",
+      "description": "Asserts existence and LKS-compliant structure of writeups for modules 260, 261, 262",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_valid": true,
+        "writeups": [
+          {
+            "challenge_id": 260,
+            "path": "writeups/picoCTF-2022/260-buffer-overflow-3.md",
+            "exists": true,
+            "flag_matched": true,
+            "lks_mitigation_present": true,
+            "valid": true
+          },
+          {
+            "challenge_id": 261,
+            "path": "writeups/picoCTF-2022/261-credstuff.md",
+            "exists": true,
+            "flag_matched": true,
+            "lks_mitigation_present": true,
+            "valid": true
+          },
+          {
+            "challenge_id": 262,
+            "path": "writeups/picoCTF-2022/262-cve-xxxx-xxxx.md",
+            "exists": true,
+            "flag_matched": true,
+            "lks_mitigation_present": true,
+            "valid": true
+          }
+        ]
+      }
+    }
+  ]
+}
