@@ -42,6 +42,15 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 191 (10 November 2026 - Format String Canary Leak, Ret2Syscall Static ROP & OTP Jumble Inversion Sprint, 3/3 modul)
+| No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 89 | Guessing Game 2 | Binary Exploitation | Hard | `academy{p0p_r0p_4nd_dr0p_1t_7e7a20729a190e8d}` | **SOLVED (HTTP 201 Created, correct: true)** - 32-bit ELF Format String leak (%135$p canary) & Ret2Libc multi-stage ROP on gets() buffer overflow (512B buf + canary + 12B pad + puts@plt/system), rektifikasi token live kontainer terverifikasi (static flag 506b81e98597929e ditolak correct:false) | 2026-11-10 |
+| 2 | 90 | Guessing Game 1 | Binary Exploitation | Medium | `academy{r0p_y0u_l1k3_4_hurr1c4n3_3ea9d94813b570b2}` | **SOLVED (HTTP 201 Created, correct: true)** - 64-bit static non-PIE Ret2Syscall two-stage ROP (read ke BSS -> pivot -> execve /bin/sh) via deterministic unseeded glibc rand() % 100 + 1 prediction (ans=84), stack frame 0x70, RIP offset 120 | 2026-11-10 |
+| 3 | 92 | OTP Implementation | Reverse Engineering | Hard | `academy{cust0m_jumbl3s_4r3nt_4_g0Od_1d3A_731cd140}` | **SOLVED (HTTP 201 Created, correct: true)** - Inversi kendala mesin keadaan 4-bit nibble jumble O(16 * 100) iterasi linier terhadap string kendala 100 karakter, rekonstruksi keystream OTP heksadesimal & XOR dekripsi flag terenkripsi 50 byte | 2026-11-10 |
+
+Temuan audit batch 191: (a) sinkronisasi sesi REST OK (`GET /api/challenges/?page_size=1` -> 200, user id 1072359); (b) seluruh 6/6 modul pada event `picoCTF 2020 Mini-Competition` resmi tuntas 100% diaudit, diverifikasi live, disinkronkan, dan didokumentasikan sesuai standar LKS Cyber Security & NIST SP 800-115; (c) rektifikasi biner live pada modul #89 guessing-game-2 mengekstrak token dinamis aktual kontainer `academy{p0p_r0p_4nd_dr0p_1t_7e7a20729a190e8d}` dan lulus validasi live HTTP 201; (d) test harness deterministik `scripts/test_batch_191_harness.py` meluluskan sweep AST 560/560 skrip, 3 solver mandiri, dan live API probe (PASS 6/6); (e) eksekusi terorkestrasi via AI Team & toolchain lokal.
+
 ### Batch 190 (10 November 2026 - Forensics Slack Space, SQLite Evasion & Cleartext Asset Sprint, 3/3 modul)
 | No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
@@ -517,7 +526,7 @@ Temuan audit batch 182: (a) modul backport event picoMini-by-redpwn **tidak dire
 | No | ID | Nama | Kategori | Diff | Flag (CyLab asli) | Status | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
 | 1 | 119 | Powershelly | Reverse Engineering | Hard | `academy{2018highw@y_2_pow3r!}` | **SOLVED** | 2026-11-07 |
-| 2 | 89 | Guessing Game 2 | Binary Exploitation | Hard | `academy{p0p_r0p_4nd_dr0p_1t_506b81e98597929e}` | **SOLVED** | 2026-11-07 |
+| 2 | 89 | Guessing Game 2 | Binary Exploitation | Hard | `academy{p0p_r0p_4nd_dr0p_1t_7e7a20729a190e8d}` | **VERIFIED correct:true** | 2026-11-10 |
 | 3 | 55 | sice_cream | Binary Exploitation | Hard | `academy{th3_r3al_questi0n_is_why_1s_libc_2.23_still_4_th1ng_8d25b643}` | **SOLVED** | 2026-11-07 |
 
 ### Batch 124 (07 November 2026 - Go Element-Wise XOR Reversal, Resistant Code Shellcode Synthesis & Glibc 2.29 Tcache Double Free Sprint, 3/3)

@@ -1,0 +1,153 @@
+{
+  "timestamp": "2026-11-10T04:25:33.707387+00:00",
+  "batch": 191,
+  "event": "picoCTF 2020 Mini-Competition",
+  "modules": [
+    {
+      "id": 89,
+      "name": "guessing-game-2",
+      "category": "Binary Exploitation",
+      "flag": "academy{p0p_r0p_4nd_dr0p_1t_7e7a20729a190e8d}"
+    },
+    {
+      "id": 90,
+      "name": "guessing-game-1",
+      "category": "Binary Exploitation",
+      "flag": "academy{r0p_y0u_l1k3_4_hurr1c4n3_3ea9d94813b570b2}"
+    },
+    {
+      "id": 92,
+      "name": "otp-implementation",
+      "category": "Reverse Engineering",
+      "flag": "academy{cust0m_jumbl3s_4r3nt_4_g0Od_1d3A_731cd140}"
+    }
+  ],
+  "summary": {
+    "total_checks": 6,
+    "passed": 6,
+    "failed": 0,
+    "all_passed": true
+  },
+  "checks": [
+    {
+      "name": "ast_syntax_sweep",
+      "description": "AST-parses every scripts/*.py and fails on syntax errors",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "total_scanned": 560,
+        "passed": 560,
+        "failed": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "solve_89",
+      "description": "Executes solve_89_guessing_game_2.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{p0p_r0p_4nd_dr0p_1t_7e7a20729a190e8d}"
+      }
+    },
+    {
+      "name": "solve_90",
+      "description": "Executes solve_90_guessing_game_1.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{r0p_y0u_l1k3_4_hurr1c4n3_3ea9d94813b570b2}"
+      }
+    },
+    {
+      "name": "solve_92",
+      "description": "Executes solve_92_otp_implementation.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{cust0m_jumbl3s_4r3nt_4_g0Od_1d3A_731cd140}"
+      }
+    },
+    {
+      "name": "live_evidence_probes",
+      "description": "Validates session health (200) and live flag acceptance (201 correct:true) on CyLab API",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_verified": true,
+        "probes": [
+          {
+            "endpoint": "GET /api/challenges/?page_size=1",
+            "http": 200,
+            "healthy": true
+          },
+          {
+            "challenge_id": 89,
+            "flag": "academy{p0p_r0p_4nd_dr0p_1t_7e7a20729a190e8d}",
+            "http": 201,
+            "correct": true
+          },
+          {
+            "challenge_id": 90,
+            "flag": "academy{r0p_y0u_l1k3_4_hurr1c4n3_3ea9d94813b570b2}",
+            "http": 201,
+            "correct": true
+          },
+          {
+            "challenge_id": 92,
+            "flag": "academy{cust0m_jumbl3s_4r3nt_4_g0Od_1d3A_731cd140}",
+            "http": 201,
+            "correct": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "writeup_documentation_audit",
+      "description": "Asserts existence and LKS-compliant structure of writeups for modules 89, 90, 92",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_valid": true,
+        "writeups": [
+          {
+            "challenge_id": 89,
+            "path": "writeups/picoCTF-2020-Mini-Competition/89-guessing-game-2.md",
+            "exists": true,
+            "flag_matched": true,
+            "lks_mitigation_present": true,
+            "valid": true
+          },
+          {
+            "challenge_id": 90,
+            "path": "writeups/picoCTF-2020-Mini-Competition/90-guessing-game-1.md",
+            "exists": true,
+            "flag_matched": true,
+            "lks_mitigation_present": true,
+            "valid": true
+          },
+          {
+            "challenge_id": 92,
+            "path": "writeups/picoCTF-2020-Mini-Competition/92-otp-implementation.md",
+            "exists": true,
+            "flag_matched": true,
+            "lks_mitigation_present": true,
+            "valid": true
+          }
+        ]
+      }
+    }
+  ]
+}
