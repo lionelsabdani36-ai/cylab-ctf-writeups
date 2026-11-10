@@ -42,6 +42,15 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 206 (10 November 2026 - Cookie Tampering Escalation, 4-Rail Transposition & Polyalphabetic Modular Decryption Sprint, 3/3 modul)
+| No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 288 | Power Cookie | Web Exploitation | Medium | `academy{gr4d3_A_c00k13_6cf86b5a}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis aplikasi web Online Gradebook PHP, eksploitasi otorisasi berbasis manipulasi header Cookie isAdmin=1 pada endpoint /check.php tanpa tanda tangan kriptografis server (CWE-565 / CWE-287 / NIST SP 800-115 §4.2), penuntasan audit event picoCTF 2022 (63/65), wrapper `academy{...}` valid | 2026-11-10 |
+| 2 | 289 | rail-fence | Cryptography | Medium | `academy{WH3R3_D035_7H3_F3NC3_8361N_4ND_3ND_D3AB175F}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis berkas sandi message.txt 56 karakter, rekonstruksi matematis matriks gelombang periodik segitiga transposisi 4 rel (periode P=6), pemulihan teks terbuka tanpa konfusi Shannon (CWE-327 / NIST SP 800-115 §4.2), penuntasan audit event picoCTF 2022 (64/65), wrapper `academy{...}` valid | 2026-11-10 |
+| 3 | 316 | Vigenere | Cryptography | Medium | `academy{D0NT_US3_V1G3N3R3_C1PH3R_y0393es7}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis berkas cipher.txt 42 karakter, dekripsi pengurangan modular substitusi polialfabetik Vigenere dengan kunci terbuka CYLAB dan sinkronisasi pointer khusus karakter alfabetikal (CWE-327 / NIST SP 800-115 §4.2), penuntasan audit event picoCTF 2022 (65/65, 100% tuntas), wrapper `academy{...}` valid | 2026-11-10 |
+
+Temuan audit batch 206: (a) sinkronisasi sesi REST OK (`GET /api/challenges/?page_size=1` -> 200, user id 1072359); (b) penuntasan audit event `picoCTF 2022` mencapai 65/65 modul (100% tuntas) mencakup #288 Power Cookie, #289 rail-fence, dan #316 Vigenere; (c) pengujian live REST API pada ketiga modul berhasil memperoleh status HTTP 201 Created dengan `correct: true`; (d) seluruh 3 skrip solver mandiri tuntas dieksekusi offline dan live, serta writeup LKS diperbarui lengkap; (e) test harness deterministik `scripts/test_batch_206_harness.py` meluluskan sweep AST 575/575 skrip, 3 solver mandiri, dan live API probe (PASS 6/6); (f) eksekusi terorkestrasi via AI Team & toolchain lokal.
+
 ### Batch 205 (10 November 2026 - Regex Text Carving, Acoustic Signal Demodulation & Cross-Window DOM Leak Sprint, 3/3 modul)
 | No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
