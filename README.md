@@ -42,6 +42,15 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 189 (10 November 2026 - Cryptography & Binary Exploitation Event Finalization Sprint, 3/3 modul)
+| No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 210 | spelling-quiz | Cryptography | Medium | `picoCTF{perhaps_the_dog_jumped_over_was_just_tired}` | **SOLVED (HTTP 201 Created, correct: true)** - Monoalphabetic substitution word-pattern & isomorph constraint propagation over 272k study guide corpus, wrapper `picoCTF{...}` valid, `academy{...}` ditolak (correct: false) | 2026-11-10 |
+| 2 | 216 | clutter-overflow | Binary Exploitation | Medium | `picoCTF{c0ntr0ll3d_clutt3r_1n_my_buff3r}` | **SOLVED (HTTP 201 Created, correct: true)** - Stack buffer overflow on unbounded gets() over 264B padding to overwrite control variable code with 0xdeadbeef, wrapper `picoCTF{...}` valid, `academy{...}` ditolak (correct: false) | 2026-11-10 |
+| 3 | 217 | homework | Binary Exploitation | Hard | `picoCTF{good_job_full_score_X7OIj4HI903RG2YO}` | **SOLVED (HTTP 201 Created, correct: true)** - Custom Befunge-93 2D VM off-by-one array bounds validation (<= vs <) overwriting cols metadata & in-VM memory exfiltration of live flag, wrapper `picoCTF{...}` valid, `academy{...}` ditolak (correct: false) | 2026-11-10 |
+
+Temuan audit batch 189: (a) sinkronisasi sesi REST OK (`GET /api/challenges/?page_size=1` -> 200, user id 1072359); (b) seluruh 21 modul pada event backport `picoMini by redpwn` resmi tuntas 100% diaudit, diverifikasi live, disinkronkan ke native wrapper `picoCTF{...}`, dan didokumentasikan sesuai standar LKS Cyber Security & NIST SP 800-115; (c) rektifikasi biner live pada modul #217 homework mengekstrak token dinamis aktual `picoCTF{good_job_full_score_X7OIj4HI903RG2YO}` dan lulus validasi live HTTP 201; (d) test harness deterministik `scripts/test_batch_189_harness.py` meluluskan sweep AST 558/558 skrip, 3 solver mandiri, dan live API probe (PASS 6/6); (e) eksekusi terorkestrasi via AI Team & toolchain lokal.
+
 ### Batch 188 (10 November 2026 - Web, Forensics & Cryptography Event Wrapper Rectification Sprint, 3/3 modul)
 | No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|

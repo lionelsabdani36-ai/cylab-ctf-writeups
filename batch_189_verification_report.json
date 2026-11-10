@@ -1,0 +1,160 @@
+{
+  "timestamp": "2026-11-10T02:51:11.263815+00:00",
+  "batch": 189,
+  "event": "picoMini by redpwn",
+  "modules": [
+    {
+      "id": 210,
+      "name": "spelling-quiz",
+      "category": "Cryptography",
+      "flag": "picoCTF{perhaps_the_dog_jumped_over_was_just_tired}"
+    },
+    {
+      "id": 216,
+      "name": "clutter-overflow",
+      "category": "Binary Exploitation",
+      "flag": "picoCTF{c0ntr0ll3d_clutt3r_1n_my_buff3r}"
+    },
+    {
+      "id": 217,
+      "name": "homework",
+      "category": "Binary Exploitation",
+      "flag": "picoCTF{good_job_full_score_X7OIj4HI903RG2YO}"
+    }
+  ],
+  "summary": {
+    "total_checks": 6,
+    "passed": 6,
+    "failed": 0,
+    "all_passed": true
+  },
+  "checks": [
+    {
+      "name": "ast_syntax_sweep",
+      "description": "AST-parses every scripts/*.py and fails on syntax errors",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "total_scanned": 558,
+        "passed": 558,
+        "failed": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "solve_210",
+      "description": "Executes solve_210_spelling_quiz.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "picoCTF{perhaps_the_dog_jumped_over_was_just_tired}"
+      }
+    },
+    {
+      "name": "solve_216",
+      "description": "Executes solve_216_clutter_overflow.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "picoCTF{c0ntr0ll3d_clutt3r_1n_my_buff3r}"
+      }
+    },
+    {
+      "name": "solve_217",
+      "description": "Executes solve_217_homework.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "picoCTF{good_job_full_score_X7OIj4HI903RG2YO}"
+      }
+    },
+    {
+      "name": "live_evidence_probes",
+      "description": "Verifies session health and live flag acceptance on CyLab submissions endpoint",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "session_healthy": true,
+        "all_tokens_verified": true,
+        "probes": [
+          {
+            "endpoint": "GET /api/challenges/?page_size=1",
+            "http": 200,
+            "healthy": true
+          },
+          {
+            "challenge_id": 210,
+            "flag": "picoCTF{perhaps_the_dog_jumped_over_was_just_tired}",
+            "http": 201,
+            "correct": true,
+            "raw_response": "{\"user\": 1072359, \"challenge\": 210, \"flag\": \"picoCTF{perhaps_the_dog_jumped_over_was_just_tired}\", \"correct\": true, \"historical\": false}"
+          },
+          {
+            "challenge_id": 216,
+            "flag": "picoCTF{c0ntr0ll3d_clutt3r_1n_my_buff3r}",
+            "http": 201,
+            "correct": true,
+            "raw_response": "{\"user\": 1072359, \"challenge\": 216, \"flag\": \"picoCTF{c0ntr0ll3d_clutt3r_1n_my_buff3r}\", \"correct\": true, \"historical\": false}"
+          },
+          {
+            "challenge_id": 217,
+            "flag": "picoCTF{good_job_full_score_X7OIj4HI903RG2YO}",
+            "http": 201,
+            "correct": true,
+            "raw_response": "{\"user\": 1072359, \"challenge\": 217, \"flag\": \"picoCTF{good_job_full_score_X7OIj4HI903RG2YO}\", \"correct\": true, \"historical\": false}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "writeup_documentation_audit",
+      "description": "Audits writeup files for modules 210, 216, 217 ensuring flag and Batch 189 stamp",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_writeups_valid": true,
+        "results": [
+          {
+            "challenge_id": "210",
+            "path": "writeups/picoMini-by-redpwn/210-spelling-quiz.md",
+            "exists": true,
+            "has_flag": true,
+            "has_batch_stamp": true,
+            "size_bytes": 7402,
+            "status": "pass"
+          },
+          {
+            "challenge_id": "216",
+            "path": "writeups/picoMini-by-redpwn/216-clutter-overflow.md",
+            "exists": true,
+            "has_flag": true,
+            "has_batch_stamp": true,
+            "size_bytes": 7238,
+            "status": "pass"
+          },
+          {
+            "challenge_id": "217",
+            "path": "writeups/picoMini-by-redpwn/217-homework.md",
+            "exists": true,
+            "has_flag": true,
+            "has_batch_stamp": true,
+            "size_bytes": 9059,
+            "status": "pass"
+          }
+        ]
+      }
+    }
+  ]
+}
