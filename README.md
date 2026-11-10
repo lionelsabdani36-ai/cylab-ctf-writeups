@@ -42,6 +42,15 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 196 (10 November 2026 - Control Flow Dead Code, POSIX strtol Ambiguity & Unkeyed Modular Substitution Sprint, 3/3 modul)
+| No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 251 | Serpentine | General Skills | Easy | `academy{7h3_r04d_l355_7r4v3l3d_825b10ae}` | **SOLVED (HTTP 201 Created, correct: true)** - Inspeksi kode sumber statis & analisis aliran kendali (CWE-670 / CWE-798) serta inversi dekripsi stream XOR 40 bita 'enkidu' (CWE-327 / NIST SP 800-115 §4.2), penuntasan 13/13 event Beginner picoMini 2022, wrapper `academy{...}` valid | 2026-11-10 |
+| 2 | 252 | basic-file-exploit | Binary Exploitation | Medium | `academy{M4K3_5UR3_70_CH3CK_Y0UR_1NPU75_6A9F6821}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis logika masukan C & eksploitasi ambiguitas nilai kembali fungsi POSIX strtol() sentinel 0 (CWE-20 / CWE-704 / CWE-670 / NIST SP 800-115 §4.2) pada layanan basis data memori, inisiasi audit event picoCTF 2022, wrapper `academy{...}` valid | 2026-11-10 |
+| 3 | 253 | basic-mod1 | Cryptography | Medium | `academy{R0UND_N_R0UND_65371195}` | **SOLVED (HTTP 201 Created, correct: true)** - Evaluasi aritmetika ring modular Z_37 pada 22 token bilangan bulat & pemetaan substitusi monoalfabetik unkeyed (CWE-327 / NIST SP 800-115 §4.2), kelanjutan audit event picoCTF 2022, wrapper `academy{...}` valid | 2026-11-10 |
+
+Temuan audit batch 196: (a) sinkronisasi sesi REST OK (`GET /api/challenges/?page_size=1` -> 200, user id 1072359); (b) penuntasan tuntas 13/13 modul pada event `Beginner picoMini 2022` (#251 Serpentine) dan inisiasi audit event `picoCTF 2022` (#252 basic-file-exploit, #253 basic-mod1); (c) pengujian matriks wrapper membuktikan validator CyLab secara konsisten menerima wrapper native CyLab `academy{...}` dan menolak `picoCTF{...}` (`correct: false`); (d) seluruh 3 skrip solver mandiri tuntas dieksekusi offline dan live, serta writeup LKS diperbarui lengkap; (e) test harness deterministik `scripts/test_batch_196_harness.py` meluluskan sweep AST 565/565 skrip, 3 solver mandiri, dan live API probe (PASS 6/6); (f) eksekusi terorkestrasi via AI Team & toolchain lokal.
+
 ### Batch 195 (10 November 2026 - Scaled Dictionary Attack, Exhaustive Keyspace Enumeration & Script Static Source Sprint, 3/3 modul)
 | No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
