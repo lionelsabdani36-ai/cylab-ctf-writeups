@@ -2,8 +2,8 @@
 """
 Solver for CyLab Challenge ID 247: PW Crack 3 (Beginner picoMini 2022)
 Category: General Skills / Dictionary Hash Pre-image & Password Cracking
-Difficulty: Medium (diff=2)
-Standard Reference: NIST SP 800-115 (Password Hash Analysis & Dictionary Attack Verification)
+Difficulty: Medium | Points: 75
+Standard Reference: NIST SP 800-115 Section 5 (Password Hash Analysis & Dictionary Attack Verification)
 CWE: CWE-327 (Use of a Broken or Risky Cryptographic Algorithm - MD5), CWE-798 (Use of Hard-coded Credentials)
 
 Description:
@@ -16,17 +16,17 @@ There are 7 potential passwords with 1 being correct.
 
 Vulnerability Analysis & Core Concept:
 - Restricted Candidate Space & Dictionary Attack (NIST SP 800-115 Password Assessment):
-  The script enumerates 7 candidate passwords in `pos_pw_list`:
+  The script enumerates 7 candidate passwords in pos_pw_list:
   ["6997", "3ac8", "f0ac", "4b17", "ec27", "4e66", "865e"].
 - Cryptographic Hashing Flaw (MD5 Pre-image Evaluation):
-  The target authentication hash stored in `level3.hash.bin` is generated via MD5.
+  The target authentication hash stored in level3.hash.bin is generated via MD5.
   Because the search space contains only 7 candidate tokens, hashing each item takes <1 millisecond.
-  MD5("ec27") perfectly matches the 16 bytes stored in `level3.hash.bin`.
+  MD5("ec27") perfectly matches the 16 bytes stored in level3.hash.bin.
 - Flag Decryption via Stream XOR:
-  Once the valid password "ec27" is isolated, `str_xor(flag_enc, "ec27")` produces the plaintext flag.
+  Once the valid password "ec27" is isolated, str_xor(flag_enc, "ec27") produces the plaintext flag.
 
 Recovered Flag: academy{m45h_fl1ng1ng_b8034615}
-Verified: POST /api/submissions/ -> correct: true
+Verified: POST /api/submissions/ -> HTTP 201 Created (correct: true)
 """
 
 import hashlib
@@ -41,6 +41,8 @@ HASH_BIN_URL = "https://challenge-files.cylabacademy.net/library/0b854ebb7dc61ea
 POSSIBLE_PW_LIST = ["6997", "3ac8", "f0ac", "4b17", "ec27", "4e66", "865e"]
 EXPECTED_FLAG = "academy{m45h_fl1ng1ng_b8034615}"
 CORRECT_PW = "ec27"
+EMBEDDED_ENC = b"\x04\x00SS\x00\x0eKL\x08W\x07_:\x05^\x06\x0b\x04\x03Y\x02<P\x0fUP\x06\x01TVO"
+EMBEDDED_HASH = b"\xf4\x17\x198\x89\x02\xe5\x1c\x11\x1aWx\xb4f\x9f\xcb"
 
 
 def str_xor(secret: str, key: str) -> str:
@@ -64,16 +66,19 @@ def solve(enc_file_path: str | None = None, hash_file_path: str | None = None) -
     else:
         try:
             req = urllib.request.Request(HASH_BIN_URL, headers={"User-Agent": "Mozilla/5.0"})
-            with urllib.request.urlopen(req, timeout=15) as resp:
+            with urllib.request.urlopen(req, timeout=10) as resp:
                 target_hash = resp.read()
         except Exception:
-            target_hash = hashlib.md5(CORRECT_PW.encode()).digest()
+            target_hash = EMBEDDED_HASH
+
+    if not target_hash:
+        target_hash = EMBEDDED_HASH
 
     # 2. Perform dictionary attack across candidates
     matched_pw = None
     for pw in POSSIBLE_PW_LIST:
         h = hashlib.md5(pw.encode()).digest()
-        if target_hash and h == target_hash:
+        if h == target_hash:
             matched_pw = pw
             break
     if not matched_pw:
@@ -90,23 +95,23 @@ def solve(enc_file_path: str | None = None, hash_file_path: str | None = None) -
     else:
         try:
             req = urllib.request.Request(ENC_FLAG_URL, headers={"User-Agent": "Mozilla/5.0"})
-            with urllib.request.urlopen(req, timeout=15) as resp:
+            with urllib.request.urlopen(req, timeout=10) as resp:
                 enc_data = resp.read()
         except Exception:
-            pass
+            enc_data = EMBEDDED_ENC
 
-    if enc_data:
-        flag = str_xor(enc_data.decode("latin-1", errors="ignore"), matched_pw)
-        assert flag == EXPECTED_FLAG, f"Flag mismatch: {flag} vs {EXPECTED_FLAG}"
-        return flag
+    if not enc_data:
+        enc_data = EMBEDDED_ENC
 
-    return EXPECTED_FLAG
+    flag = str_xor(enc_data.decode("latin-1", errors="ignore"), matched_pw)
+    assert flag == EXPECTED_FLAG, f"Flag mismatch: {flag} vs {EXPECTED_FLAG}"
+    return flag
 
 
 if __name__ == "__main__":
-    enc_path = sys.argv[1] if len(sys.argv) > 1 else None
-    hash_path = sys.argv[2] if len(sys.argv) > 2 else None
-    recovered = solve(enc_path, hash_path)
+    enc_p = sys.argv[1] if len(sys.argv) > 1 else None
+    hash_p = sys.argv[2] if len(sys.argv) > 2 else None
+    recovered = solve(enc_p, hash_p)
     print(f"[+] Isolated Password: {CORRECT_PW}")
     print(f"[+] Recovered Flag: {recovered}")
     assert recovered == EXPECTED_FLAG

@@ -42,6 +42,15 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 194 (10 November 2026 - Hardcoded Credential Extraction, ASCII Hex Deobfuscation & MD5 Dictionary Sprint, 3/3 modul)
+| No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 245 | PW Crack 1 | General Skills | Easy | `academy{545h_r1ng1ng_4a96bf39}` | **SOLVED (HTTP 201 Created, correct: true)** - Inspeksi statis kredensial hardcoded (CWE-259 / CWE-798) pada percabangan logika ('1e1a') & dekripsi stream XOR 33 bita, wrapper `academy{...}` valid, `picoCTF{...}` ditolak (correct: false) | 2026-11-10 |
+| 2 | 246 | PW Crack 2 | General Skills | Easy | `academy{tr45h_51ng1ng_ab548076}` | **SOLVED (HTTP 201 Created, correct: true)** - Deobfuskasi representasi karakter ordinal ASCII heksadesimal chr(0x64)+chr(0x65)+chr(0x37)+chr(0x36) -> 'de76' (CWE-259/CWE-798 bypass) & dekripsi stream XOR 33 bita, wrapper `academy{...}` valid, `picoCTF{...}` ditolak (correct: false) | 2026-11-10 |
+| 3 | 247 | PW Crack 3 | General Skills | Medium | `academy{m45h_fl1ng1ng_b8034615}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis hash pre-image RFC 1321 MD5 & serangan kamus terarah pada 7 kandidat kata sandi ('ec27') sesuai standar NIST SP 800-115 §5 & dekripsi stream XOR 33 bita, wrapper `academy{...}` valid, `picoCTF{...}` ditolak (correct: false) | 2026-11-10 |
+
+Temuan audit batch 194: (a) sinkronisasi sesi REST OK (`GET /api/challenges/?page_size=1` -> 200, user id 1072359); (b) kelanjutan audit terstandarisasi LKS & NIST SP 800-115 pada event `Beginner picoMini 2022` (9/13 modul); (c) pengujian matriks wrapper membuktikan validator CyLab pada event `Beginner picoMini 2022` secara konsisten menerima wrapper native CyLab `academy{...}` dan menolak `picoCTF{...}` (`correct: false`); (d) seluruh 3 skrip solver mandiri tuntas dieksekusi offline dan live, serta writeup LKS diperbarui lengkap; (e) test harness deterministik `scripts/test_batch_194_harness.py` meluluskan sweep AST 563/563 skrip, 3 solver mandiri, dan live API probe (PASS 6/6); (f) eksekusi terorkestrasi via AI Team & toolchain lokal.
+
 ### Batch 193 (10 November 2026 - Python AST Operator Remediation, Glitch Stream Safe Evaluation & MD5 Socket Sprint, 3/3 modul)
 | No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
