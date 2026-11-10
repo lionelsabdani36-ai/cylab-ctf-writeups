@@ -6,7 +6,7 @@
 - **Event:** picoMini by redpwn
 - **Points:** 400
 - **Author:** redpwn
-- **Flag:** `academy{4ny0n3_g0t_r1scv_h4rdw4r3?_LGUfwl8xyMUlpgvz}`
+- **Flag:** `picoCTF{4ny0n3_g0t_r1scv_h4rdw4r3?_LGUfwl8xyMUlpgvz}`
 
 ---
 
@@ -58,15 +58,26 @@ Saat dieksekusi, program meminta input string pengguna dari `stdin`, memprosesny
 4. **Hasil Ekstraksi Flag:**
    Iterasi berjalan deterministik hingga menemukan kurung kurawal penutup `}` pada indeks ke-51:
    `picoCTF{4ny0n3_g0t_r1scv_h4rdw4r3?_LGUfwl8xyMUlpgvz}`.
-5. **Normalisasi Token CyLab Academy:**
-   Token dinormalisasi sesuai format resmi CyLab: `academy{4ny0n3_g0t_r1scv_h4rdw4r3?_LGUfwl8xyMUlpgvz}`.
+5. **Batas Validasi Validator & Normalisasi Token:**
+   Iterasi deterministik menemukan kurung kurawal penutup `}` pada indeks ke-51: `picoCTF{4ny0n3_g0t_r1scv_h4rdw4r3?_LGUfwl8xyMUlpgvz}`.
+   Pengujian empiris langsung pada REST API CyLab menunjukkan bahwa validator tantangan ini (event `picoMini by redpwn`) menerima format wrapper asli `picoCTF{4ny0n3_g0t_r1scv_h4rdw4r3?_LGUfwl8xyMUlpgvz}` dengan status HTTP 201 Created (`correct: true`). Sebaliknya, pengiriman dengan wrapper CyLab `academy{4ny0n3_g0t_r1scv_h4rdw4r3?_LGUfwl8xyMUlpgvz}` ditolak dengan `{"correct": false}`.
 
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{4ny0n3_g0t_r1scv_h4rdw4r3?_LGUfwl8xyMUlpgvz}`
-- **Native PicoCTF Flag:** `picoCTF{4ny0n3_g0t_r1scv_h4rdw4r3?_LGUfwl8xyMUlpgvz}`
+- **Flag Resmi:** `picoCTF{4ny0n3_g0t_r1scv_h4rdw4r3?_LGUfwl8xyMUlpgvz}`
+- **Wrapper Validator:** Native event wrapper (`picoCTF{...}`)
 - **Status Solver:** Terverifikasi 100% pada skrip reproduksi `scripts/solve_219_riscy_business.py`.
+
+### Re-verifikasi Audit Batch 186 (2026-11-10 UTC, sesi REST siswa `Arielwin` / user id 1072359)
+
+| Token diuji | Wrapper | HTTP | Respons API |
+| :--- | :--- | :--- | :--- |
+| `picoCTF{4ny0n3_g0t_r1scv_h4rdw4r3?_LGUfwl8xyMUlpgvz}` | native event | 201 | `{"user":1072359,"challenge":219,"flag":"picoCTF{4ny0n3_g0t_r1scv_h4rdw4r3?_LGUfwl8xyMUlpgvz}","correct":true,"historical":false}` |
+| `academy{4ny0n3_g0t_r1scv_h4rdw4r3?_LGUfwl8xyMUlpgvz}` | CyLab rekey | 201 | `{"user":1072359,"challenge":219,"flag":"academy{4ny0n3_g0t_r1scv_h4rdw4r3?_LGUfwl8xyMUlpgvz}","correct":false,"historical":false}` |
+
+- **Temuan format validator:** Modul backport event `picoMini by redpwn` tidak direkey ke prefix `academy{...}`.
+- **Reproduktifitas offline:** Solver `scripts/solve_219_riscy_business.py` merekonstruksi pemulihan karakter linear melalui simulasi oracle prefiks hingga token native terverifikasi penuh.
 
 ---
 

@@ -1,0 +1,133 @@
+{
+  "batch": 186,
+  "timestamp": "2026-11-10 00:11:16 UTC",
+  "utc_timestamp": "2026-11-10T00:11:16.052365+00:00",
+  "student_account": "Arielwin",
+  "user_id": 1072359,
+  "checks": [
+    {
+      "name": "ast_syntax_sweep",
+      "description": "AST-parses every scripts/*.py and fails on syntax errors",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "total_scanned": 555,
+        "passed": 555,
+        "failed": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "solve_204",
+      "description": "Executes solve_204_notepad.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "picoCTF{styl1ng_susp1c10usly_s1m1l4r_t0_p4steb1n}"
+      }
+    },
+    {
+      "name": "solve_219",
+      "description": "Executes solve_219_riscy_business.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "picoCTF{4ny0n3_g0t_r1scv_h4rdw4r3?_LGUfwl8xyMUlpgvz}"
+      }
+    },
+    {
+      "name": "solve_220",
+      "description": "Executes solve_220_breadth.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "picoCTF{VnDB2LUf1VFJkdfDJtdYtFlMexPxXS6X}"
+      }
+    },
+    {
+      "name": "live_evidence_probes",
+      "description": "Verifies session health and live flag acceptance on CyLab submissions endpoint",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "session_healthy": true,
+        "all_tokens_verified": true,
+        "probes": [
+          {
+            "endpoint": "GET /api/challenges/?page_size=1",
+            "http": 200,
+            "healthy": true
+          },
+          {
+            "challenge_id": 204,
+            "flag": "picoCTF{styl1ng_susp1c10usly_s1m1l4r_t0_p4steb1n}",
+            "http": 201,
+            "correct": true,
+            "raw_response": "{\"user\": 1072359, \"challenge\": 204, \"flag\": \"picoCTF{styl1ng_susp1c10usly_s1m1l4r_t0_p4steb1n}\", \"correct\": true, \"historical\": false}"
+          },
+          {
+            "challenge_id": 219,
+            "flag": "picoCTF{4ny0n3_g0t_r1scv_h4rdw4r3?_LGUfwl8xyMUlpgvz}",
+            "http": 201,
+            "correct": true,
+            "raw_response": "{\"user\": 1072359, \"challenge\": 219, \"flag\": \"picoCTF{4ny0n3_g0t_r1scv_h4rdw4r3?_LGUfwl8xyMUlpgvz}\", \"correct\": true, \"historical\": false}"
+          },
+          {
+            "challenge_id": 220,
+            "flag": "picoCTF{VnDB2LUf1VFJkdfDJtdYtFlMexPxXS6X}",
+            "http": 201,
+            "correct": true,
+            "raw_response": "{\"user\": 1072359, \"challenge\": 220, \"flag\": \"picoCTF{VnDB2LUf1VFJkdfDJtdYtFlMexPxXS6X}\", \"correct\": true, \"historical\": false}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "writeup_documentation_audit",
+      "description": "Verifies existence, official flag format, and Batch 186 audit stamp across writeups",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "items": [
+          {
+            "id": "204",
+            "file": "writeups/picoMini-by-redpwn/204-notepad.md",
+            "exists": true,
+            "has_expected_flag": true,
+            "has_batch_stamp": true,
+            "size": 9189
+          },
+          {
+            "id": "219",
+            "file": "writeups/picoMini-by-redpwn/219-riscy-business.md",
+            "exists": true,
+            "has_expected_flag": true,
+            "has_batch_stamp": true,
+            "size": 7513
+          },
+          {
+            "id": "220",
+            "file": "writeups/picoMini-by-redpwn/220-breadth.md",
+            "exists": true,
+            "has_expected_flag": true,
+            "has_batch_stamp": true,
+            "size": 7513
+          }
+        ]
+      }
+    }
+  ],
+  "all_passed": true
+}

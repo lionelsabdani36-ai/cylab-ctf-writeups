@@ -6,7 +6,7 @@
 - **Event:** picoMini by redpwn
 - **Points:** 200
 - **Author:** redpwn
-- **Flag:** `academy{VnDB2LUf1VFJkdfDJtdYtFlMexPxXS6X}`
+- **Flag:** `picoCTF{VnDB2LUf1VFJkdfDJtdYtFlMexPxXS6X}`
 
 ---
 
@@ -63,15 +63,26 @@ Ketika dianalisis secara statis melalui utilitas `strings`, kedua biner memuat p
    Perhitungan: `0x95077 + 0xc0e91 = 0x155f08`.
    Membaca memori `.rodata` pada alamat `0x155ef8` (tepat 16 byte sebelum offset tengah) mengungkap string lengkap berterminasi null:
    `picoCTF{VnDB2LUf1VFJkdfDJtdYtFlMexPxXS6X}`.
-5. **Normalisasi Token CyLab Academy:**
-   Token dinormalisasi sesuai format resmi CyLab: `academy{VnDB2LUf1VFJkdfDJtdYtFlMexPxXS6X}`.
+5. **Batas Validasi Validator & Normalisasi Token:**
+   Membaca memori `.rodata` pada alamat `0x155ef8` mengungkap string lengkap berterminasi null: `picoCTF{VnDB2LUf1VFJkdfDJtdYtFlMexPxXS6X}`.
+   Pengujian empiris langsung pada REST API CyLab menunjukkan bahwa validator tantangan ini (event `picoMini by redpwn`) menerima format wrapper asli `picoCTF{VnDB2LUf1VFJkdfDJtdYtFlMexPxXS6X}` dengan status HTTP 201 Created (`correct: true`). Sebaliknya, pengiriman dengan wrapper CyLab `academy{VnDB2LUf1VFJkdfDJtdYtFlMexPxXS6X}` ditolak dengan `{"correct": false}`.
 
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{VnDB2LUf1VFJkdfDJtdYtFlMexPxXS6X}`
-- **Native PicoCTF Flag:** `picoCTF{VnDB2LUf1VFJkdfDJtdYtFlMexPxXS6X}`
+- **Flag Resmi:** `picoCTF{VnDB2LUf1VFJkdfDJtdYtFlMexPxXS6X}`
+- **Wrapper Validator:** Native event wrapper (`picoCTF{...}`)
 - **Status Solver:** Terverifikasi 100% pada skrip reproduksi `scripts/solve_220_breadth.py`.
+
+### Re-verifikasi Audit Batch 186 (2026-11-10 UTC, sesi REST siswa `Arielwin` / user id 1072359)
+
+| Token diuji | Wrapper | HTTP | Respons API |
+| :--- | :--- | :--- | :--- |
+| `picoCTF{VnDB2LUf1VFJkdfDJtdYtFlMexPxXS6X}` | native event | 201 | `{"user":1072359,"challenge":220,"flag":"picoCTF{VnDB2LUf1VFJkdfDJtdYtFlMexPxXS6X}","correct":true,"historical":false}` |
+| `academy{VnDB2LUf1VFJkdfDJtdYtFlMexPxXS6X}` | CyLab rekey | 201 | `{"user":1072359,"challenge":220,"flag":"academy{VnDB2LUf1VFJkdfDJtdYtFlMexPxXS6X}","correct":false,"historical":false}` |
+
+- **Temuan format validator:** Modul backport event `picoMini by redpwn` tidak direkey ke prefix `academy{...}`.
+- **Reproduktifitas offline:** Solver `scripts/solve_220_breadth.py` merekonstruksi analisis diferensial biner byte-level untuk mengekstrak token native secara deterministik.
 
 ---
 

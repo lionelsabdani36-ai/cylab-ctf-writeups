@@ -42,6 +42,15 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 186 (10 November 2026 - Web & Reverse Engineering Event Wrapper Rectification Sprint, 3/3 modul)
+| No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 204 | notepad | Web Exploitation | Hard | `picoCTF{styl1ng_susp1c10usly_s1m1l4r_t0_p4steb1n}` | **SOLVED (HTTP 201 Created, correct: true)** - Werkzeug url_fix backslash traversal to templates/errors/ + Jinja2 SSTI via request.args reflection & subprocess.Popen RCE, wrapper `picoCTF{...}` valid, `academy{...}` ditolak (correct: false) | 2026-11-10 |
+| 2 | 219 | riscy business | Reverse Engineering | Hard | `picoCTF{4ny0n3_g0t_r1scv_h4rdw4r3?_LGUfwl8xyMUlpgvz}` | **SOLVED (HTTP 201 Created, correct: true)** - RISC-V RV64 byte scrambling prefix invariance oracle via QEMU user emulation & GDB memory inspection, wrapper `picoCTF{...}` valid, `academy{...}` ditolak (correct: false) | 2026-11-10 |
+| 3 | 220 | breadth | Reverse Engineering | Hard | `picoCTF{VnDB2LUf1VFJkdfDJtdYtFlMexPxXS6X}` | **SOLVED (HTTP 201 Created, correct: true)** - ELF 64-bit x86-64 PIE binary patch diffing (offset 0x9504e cmp predicate inversion) & .rodata RIP-relative string isolation, wrapper `picoCTF{...}` valid, `academy{...}` ditolak (correct: false) | 2026-11-10 |
+
+Temuan audit batch 186: (a) sinkronisasi sesi REST OK (`GET /api/challenges/?page_size=1` -> 200, user id 1072359); (b) audit lanjutan modul event backport (`picoMini by redpwn`) mengonfirmasi bahwa validator CyLab secara konsisten mensyaratkan native wrapper `picoCTF{...}` dan menolak rekey `academy{...}` dengan `correct: false`; (c) writeup teknis dan skrip reproduksi untuk ketiga modul diperbarui ke standar kompetisi LKS Cyber Security & NIST SP 800-115; (d) test harness deterministik `scripts/test_batch_186_harness.py` meluluskan sweep AST 555/555 skrip, 3 solver mandiri, dan live API probe; (e) eksekutor Omnirush dilaporkan maintenance upstream, eksekusi diselesaikan secara terorkestrasi via AI Team & toolchain lokal.
+
 ### Batch 185 (09 November 2026 - Binary Exploitation Wrapper Rectification & Multi-Stage Pwn Re-verification Sprint, 3/3 modul)
 | No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|

