@@ -1,0 +1,191 @@
+{
+  "timestamp": "2026-11-10T23:25:57.929872+00:00",
+  "batch": 209,
+  "events": [
+    "picoCTF 2023"
+  ],
+  "modules": [
+    {
+      "id": 350,
+      "name": "hideme",
+      "category": "Forensics",
+      "event": "picoCTF 2023",
+      "flag": "academy{Hiddinng_An_imag3_within_@n_ima9e_404ff71e}"
+    },
+    {
+      "id": 351,
+      "name": "HideToSee",
+      "category": "Cryptography",
+      "event": "picoCTF 2023",
+      "flag": "academy{atbash_crack_6167bd8e}"
+    },
+    {
+      "id": 352,
+      "name": "hijacking",
+      "category": "Binary Exploitation",
+      "event": "picoCTF 2023",
+      "flag": "academy{pYth0nn_libraryH!j@CK!n9_15d0fa80}"
+    }
+  ],
+  "summary": {
+    "total_checks": 6,
+    "passed": 6,
+    "failed": 0,
+    "all_passed": true
+  },
+  "checks": [
+    {
+      "name": "ast_syntax_sweep",
+      "description": "AST-parses every scripts/*.py and fails on syntax errors",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "total_scanned": 578,
+        "passed": 578,
+        "failed": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "solve_350",
+      "description": "Executes solve_350_hideme.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{Hiddinng_An_imag3_within_@n_ima9e_404ff71e}",
+        "stdout_tail": "ct 'secret/flag.png' (5517 bytes)\n[+] Flag recovered from artifact: academy{Hiddinng_An_imag3_within_@n_ima9e_404ff71e}\n[+] Platform submission response: {\"user\": 1072359, \"challenge\": 350, \"flag\": \"academy{Hiddinng_An_imag3_within_@n_ima9e_404ff71e}\", \"correct\": true, \"historical\": false}\n\n[SUCCESS] Module 350 (hideme) fully audited and solved: academy{Hiddinng_An_imag3_within_@n_ima9e_404ff71e}\n",
+        "stderr_tail": ""
+      }
+    },
+    {
+      "name": "solve_351",
+      "description": "Executes solve_351_hidetosee.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{atbash_crack_6167bd8e}",
+        "stdout_tail": "g...\n    [+] Steghide extracted ciphertext: 'zxzwvnb{zgyzhs_xizxp_6167yw8v}'\n[+] Flag recovered via steghide and Atbash cipher: academy{atbash_crack_6167bd8e}\n[+] Platform submission response: {\"user\": 1072359, \"challenge\": 351, \"flag\": \"academy{atbash_crack_6167bd8e}\", \"correct\": true, \"historical\": false}\n\n[SUCCESS] Module 351 (HideToSee) fully audited and solved: academy{atbash_crack_6167bd8e}\n",
+        "stderr_tail": ""
+      }
+    },
+    {
+      "name": "solve_352",
+      "description": "Executes solve_352_hijacking.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{pYth0nn_libraryH!j@CK!n9_15d0fa80}",
+        "stdout_tail": " [+] Command: sudo /usr/bin/python3 /home/academy/.server.py\n[+] Reconstructed CyLab Token: academy{pYth0nn_libraryH!j@CK!n9_15d0fa80}\n[+] Platform submission response: {\"user\": 1072359, \"challenge\": 352, \"flag\": \"academy{pYth0nn_libraryH!j@CK!n9_15d0fa80}\", \"correct\": true, \"historical\": false}\n\n[SUCCESS] Module 352 (hijacking) fully audited and solved: academy{pYth0nn_libraryH!j@CK!n9_15d0fa80}\n",
+        "stderr_tail": ""
+      }
+    },
+    {
+      "name": "live_evidence_probes",
+      "description": "Validates session health (200) and live flag acceptance (201 correct:true) on CyLab API",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_verified": true,
+        "probes": [
+          {
+            "endpoint": "GET /api/challenges/?page_size=1",
+            "http": 200,
+            "healthy": true
+          },
+          {
+            "challenge_id": 350,
+            "flag": "academy{Hiddinng_An_imag3_within_@n_ima9e_404ff71e}",
+            "http": 201,
+            "correct": true,
+            "response": {
+              "user": 1072359,
+              "challenge": 350,
+              "flag": "academy{Hiddinng_An_imag3_within_@n_ima9e_404ff71e}",
+              "correct": true,
+              "historical": false
+            }
+          },
+          {
+            "challenge_id": 351,
+            "flag": "academy{atbash_crack_6167bd8e}",
+            "http": 201,
+            "correct": true,
+            "response": {
+              "user": 1072359,
+              "challenge": 351,
+              "flag": "academy{atbash_crack_6167bd8e}",
+              "correct": true,
+              "historical": false
+            }
+          },
+          {
+            "challenge_id": 352,
+            "flag": "academy{pYth0nn_libraryH!j@CK!n9_15d0fa80}",
+            "http": 201,
+            "correct": true,
+            "response": {
+              "user": 1072359,
+              "challenge": 352,
+              "flag": "academy{pYth0nn_libraryH!j@CK!n9_15d0fa80}",
+              "correct": true,
+              "historical": false
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "writeup_documentation_audit",
+      "description": "Validates existence, LKS structure, flag token accuracy, and zero em dash in writeups",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_verified": true,
+        "files": [
+          {
+            "file": "writeups/picoCTF-2023/350-hideme.md",
+            "challenge_id": 350,
+            "exists": true,
+            "flag_present": true,
+            "sections_present": true,
+            "missing_sections": [],
+            "anti_slop_clean": true,
+            "pass": true
+          },
+          {
+            "file": "writeups/picoCTF-2023/351-hidetosee.md",
+            "challenge_id": 351,
+            "exists": true,
+            "flag_present": true,
+            "sections_present": true,
+            "missing_sections": [],
+            "anti_slop_clean": true,
+            "pass": true
+          },
+          {
+            "file": "writeups/picoCTF-2023/352-hijacking.md",
+            "challenge_id": 352,
+            "exists": true,
+            "flag_present": true,
+            "sections_present": true,
+            "missing_sections": [],
+            "anti_slop_clean": true,
+            "pass": true
+          }
+        ]
+      }
+    }
+  ]
+}

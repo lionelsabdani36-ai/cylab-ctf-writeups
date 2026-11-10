@@ -42,6 +42,15 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 209 (10 November 2026 - PNG Trailing PKZIP Carving, Atbash Cipher Inversion & Sudo Module Hijacking Sprint, 3/3 modul)
+| No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 350 | hideme | Forensics | Medium | `academy{Hiddinng_An_imag3_within_@n_ima9e_404ff71e}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis artefak grafis format PNG, deteksi batas chunk penutup IEND (ISO/IEC 15948 / RFC 2083), ekstraksi kontainer PKZIP tersemat pada offset 15.929 (0x3E39), carving berkas secret/flag.png, dan pemulihan token via OCR visual (CWE-434 / CWE-200 / NIST SP 800-115 §4.2), kelanjutan audit event picoCTF 2023 (7/42), wrapper `academy{...}` valid | 2026-11-10 |
+| 2 | 351 | HideToSee | Cryptography | Medium | `academy{atbash_crack_6167bd8e}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis artefak grafis format JPEG atbash.jpg, ekstraksi saluran tersembunyi koefisien domain frekuensi DCT via Steghide kata sandi kosong, dekripsi teks sandi zxzwvnb{...} menggunakan transformasi substitusi monoalfabetik klasik Atbash (CWE-327 / CWE-319 / NIST SP 800-115 §4.2), kelanjutan audit event picoCTF 2023 (8/42), wrapper `academy{...}` valid | 2026-11-10 |
+| 3 | 352 | hijacking | Binary Exploitation | Medium | `academy{pYth0nn_libraryH!j@CK!n9_15d0fa80}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis lingkungan Linux interaktif SSH, audit privilese sudo -l NOPASSWD /usr/bin/python3 /home/academy/.server.py, eksploitasi kepemilikan direktori induk writable dan prioritas resolusi CPython sys.path[0] untuk pembajakan modul base64.py berhak akses root (CWE-250 / CWE-732 / CWE-427 / NIST SP 800-115 §4.2), kelanjutan audit event picoCTF 2023 (9/42), wrapper `academy{...}` valid | 2026-11-10 |
+
+Temuan audit batch 209: (a) sinkronisasi sesi REST OK (`GET /api/challenges/?page_size=1` -> 200, user id 1072359); (b) kelanjutan audit event `picoCTF 2023` (9/42 modul) mencakup #350 hideme, #351 HideToSee, dan #352 hijacking; (c) pengujian live REST API pada ketiga modul berhasil memperoleh status HTTP 201 Created dengan `correct: true`; (d) seluruh 3 skrip solver mandiri tuntas dieksekusi offline dan live, serta writeup LKS diperbarui lengkap; (e) test harness deterministik `scripts/test_batch_209_harness.py` meluluskan sweep AST 578/578 skrip, 3 solver mandiri, dan live API probe (PASS 6/6); (f) eksekusi terorkestrasi via AI Team & toolchain lokal.
+
 ### Batch 208 (10 November 2026 - Stack Out-Of-Bounds Hijacking, PCAP Covert Channel & HTTP 302 Redirection Chain Sprint, 3/3 modul)
 | No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
