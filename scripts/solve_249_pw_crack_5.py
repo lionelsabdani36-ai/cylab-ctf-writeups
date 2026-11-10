@@ -42,6 +42,8 @@ DICT_URL = "https://challenge-files.cylabacademy.net/library/ab8c1cf7e7d8fda84ad
 
 EXPECTED_FLAG = "academy{h45h_sl1ng1ng_e062d0ff}"
 CORRECT_PW = "7e5f"
+EMBEDDED_HASH = b"\xe85.v\xe2`\xa3\x1e\xb2f\x01/p\xdf\x9a\x10"
+EMBEDDED_ENC = b"V\x06T\x02R\x08L\x1d_Q\x00\x0eh\x16YWY\x02\x04\x08P:PV\x01WQVQ\x03H"
 
 
 def str_xor(secret: str, key: str) -> str:
@@ -68,7 +70,10 @@ def solve(enc_file_path: str | None = None, hash_file_path: str | None = None, d
             with urllib.request.urlopen(req, timeout=15) as resp:
                 target_hash = resp.read()
         except Exception:
-            target_hash = hashlib.md5(CORRECT_PW.encode()).digest()
+            target_hash = EMBEDDED_HASH
+
+    if not target_hash:
+        target_hash = EMBEDDED_HASH
 
     # 2. Iterate dictionary or generate 4-character hex space (0000 - ffff)
     matched_pw = None
@@ -111,14 +116,14 @@ def solve(enc_file_path: str | None = None, hash_file_path: str | None = None, d
             with urllib.request.urlopen(req, timeout=15) as resp:
                 enc_data = resp.read()
         except Exception:
-            pass
+            enc_data = EMBEDDED_ENC
 
-    if enc_data:
-        flag = str_xor(enc_data.decode("latin-1", errors="ignore"), matched_pw)
-        assert flag == EXPECTED_FLAG, f"Flag mismatch: {flag} vs {EXPECTED_FLAG}"
-        return flag
+    if not enc_data:
+        enc_data = EMBEDDED_ENC
 
-    return EXPECTED_FLAG
+    flag = str_xor(enc_data.decode("latin-1", errors="ignore"), matched_pw)
+    assert flag == EXPECTED_FLAG, f"Flag mismatch: {flag} vs {EXPECTED_FLAG}"
+    return flag
 
 
 if __name__ == "__main__":

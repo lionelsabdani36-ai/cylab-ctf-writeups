@@ -53,6 +53,8 @@ POSSIBLE_PW_LIST = [
 ]
 EXPECTED_FLAG = "academy{fl45h_5pr1ng1ng_c1e14a37}"
 CORRECT_PW = "bb8e"
+EMBEDDED_HASH = b"t\xcf\xfcY\xc2\x90\xc8\n8\x84c\xcc\x1c\x19\xffx"
+EMBEDDED_ENC = b"\x03\x01Y\x01\x07\x0fA\x1e\x04\x0e\x0cP\n=\r\x15\x10SV\x02S\x0c_:\x01S]TV\x03\x0bR\x1f"
 
 
 def str_xor(secret: str, key: str) -> str:
@@ -79,7 +81,10 @@ def solve(enc_file_path: str | None = None, hash_file_path: str | None = None) -
             with urllib.request.urlopen(req, timeout=15) as resp:
                 target_hash = resp.read()
         except Exception:
-            target_hash = hashlib.md5(CORRECT_PW.encode()).digest()
+            target_hash = EMBEDDED_HASH
+
+    if not target_hash:
+        target_hash = EMBEDDED_HASH
 
     # 2. Perform automated loop across 100 candidates
     matched_pw = None
@@ -105,14 +110,14 @@ def solve(enc_file_path: str | None = None, hash_file_path: str | None = None) -
             with urllib.request.urlopen(req, timeout=15) as resp:
                 enc_data = resp.read()
         except Exception:
-            pass
+            enc_data = EMBEDDED_ENC
 
-    if enc_data:
-        flag = str_xor(enc_data.decode("latin-1", errors="ignore"), matched_pw)
-        assert flag == EXPECTED_FLAG, f"Flag mismatch: {flag} vs {EXPECTED_FLAG}"
-        return flag
+    if not enc_data:
+        enc_data = EMBEDDED_ENC
 
-    return EXPECTED_FLAG
+    flag = str_xor(enc_data.decode("latin-1", errors="ignore"), matched_pw)
+    assert flag == EXPECTED_FLAG, f"Flag mismatch: {flag} vs {EXPECTED_FLAG}"
+    return flag
 
 
 if __name__ == "__main__":

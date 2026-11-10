@@ -1,0 +1,153 @@
+{
+  "timestamp": "2026-11-10T07:45:25.494099+00:00",
+  "batch": 195,
+  "event": "Beginner picoMini 2022",
+  "modules": [
+    {
+      "id": 248,
+      "name": "PW Crack 4",
+      "category": "General Skills",
+      "flag": "academy{fl45h_5pr1ng1ng_c1e14a37}"
+    },
+    {
+      "id": 249,
+      "name": "PW Crack 5",
+      "category": "General Skills",
+      "flag": "academy{h45h_sl1ng1ng_e062d0ff}"
+    },
+    {
+      "id": 250,
+      "name": "runme.py",
+      "category": "General Skills",
+      "flag": "academy{run_s4n1ty_run}"
+    }
+  ],
+  "summary": {
+    "total_checks": 6,
+    "passed": 6,
+    "failed": 0,
+    "all_passed": true
+  },
+  "checks": [
+    {
+      "name": "ast_syntax_sweep",
+      "description": "AST-parses every scripts/*.py and fails on syntax errors",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "total_scanned": 564,
+        "passed": 564,
+        "failed": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "solve_248",
+      "description": "Executes solve_248_pw_crack_4.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{fl45h_5pr1ng1ng_c1e14a37}"
+      }
+    },
+    {
+      "name": "solve_249",
+      "description": "Executes solve_249_pw_crack_5.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{h45h_sl1ng1ng_e062d0ff}"
+      }
+    },
+    {
+      "name": "solve_250",
+      "description": "Executes solve_250_runme.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{run_s4n1ty_run}"
+      }
+    },
+    {
+      "name": "live_evidence_probes",
+      "description": "Validates session health (200) and live flag acceptance (201 correct:true) on CyLab API",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_verified": true,
+        "probes": [
+          {
+            "endpoint": "GET /api/challenges/?page_size=1",
+            "http": 200,
+            "healthy": true
+          },
+          {
+            "challenge_id": 248,
+            "flag": "academy{fl45h_5pr1ng1ng_c1e14a37}",
+            "http": 201,
+            "correct": true
+          },
+          {
+            "challenge_id": 249,
+            "flag": "academy{h45h_sl1ng1ng_e062d0ff}",
+            "http": 201,
+            "correct": true
+          },
+          {
+            "challenge_id": 250,
+            "flag": "academy{run_s4n1ty_run}",
+            "http": 201,
+            "correct": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "writeup_documentation_audit",
+      "description": "Asserts existence and LKS-compliant structure of writeups for modules 248, 249, 250",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_valid": true,
+        "writeups": [
+          {
+            "challenge_id": 248,
+            "path": "writeups/Beginner-picoMini-2022/248-pw-crack-4.md",
+            "exists": true,
+            "flag_matched": true,
+            "lks_mitigation_present": true,
+            "valid": true
+          },
+          {
+            "challenge_id": 249,
+            "path": "writeups/Beginner-picoMini-2022/249-pw-crack-5.md",
+            "exists": true,
+            "flag_matched": true,
+            "lks_mitigation_present": true,
+            "valid": true
+          },
+          {
+            "challenge_id": 250,
+            "path": "writeups/Beginner-picoMini-2022/250-runme-py.md",
+            "exists": true,
+            "flag_matched": true,
+            "lks_mitigation_present": true,
+            "valid": true
+          }
+        ]
+      }
+    }
+  ]
+}

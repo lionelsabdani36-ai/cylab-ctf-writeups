@@ -42,6 +42,15 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 195 (10 November 2026 - Scaled Dictionary Attack, Exhaustive Keyspace Enumeration & Script Static Source Sprint, 3/3 modul)
+| No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 248 | PW Crack 4 | General Skills | Medium | `academy{fl45h_5pr1ng1ng_c1e14a37}` | **SOLVED (HTTP 201 Created, correct: true)** - Otomasi serangan kamus skala menengah 100 kandidat kata sandi ('bb8e') & evaluasi hash pre-image RFC 1321 MD5 serta dekripsi stream XOR 33 bita (CWE-327 / CWE-798), wrapper `academy{...}` valid | 2026-11-10 |
+| 2 | 249 | PW Crack 5 | General Skills | Medium | `academy{h45h_sl1ng1ng_e062d0ff}` | **SOLVED (HTTP 201 Created, correct: true)** - Enumerasi tuntas seluruh ruang kunci 65.536 kombinasi heksadesimal 4 karakter ('7e5f') pada kamus eksternal & evaluasi pre-image hash MD5 serta dekripsi stream XOR 33 bita (CWE-327 / CWE-521 / NIST SP 800-115 §5), wrapper `academy{...}` valid | 2026-11-10 |
+| 3 | 250 | runme.py | General Skills | Easy | `academy{run_s4n1ty_run}` | **SOLVED (HTTP 201 Created, correct: true)** - Inspeksi kode sumber statis (SAST) & analisis AST / ekstraksi variabel literal kredensial hardcoded (CWE-798 / NIST SP 800-115 §4.2) pada interpreter Python, wrapper `academy{...}` valid | 2026-11-10 |
+
+Temuan audit batch 195: (a) sinkronisasi sesi REST OK (`GET /api/challenges/?page_size=1` -> 200, user id 1072359); (b) kelanjutan audit terstandarisasi LKS & NIST SP 800-115 pada event `Beginner picoMini 2022` (12/13 modul); (c) pengujian matriks wrapper membuktikan validator CyLab pada event `Beginner picoMini 2022` secara konsisten menerima wrapper native CyLab `academy{...}`; (d) seluruh 3 skrip solver mandiri tuntas dieksekusi offline dan live, serta writeup LKS diperbarui lengkap; (e) test harness deterministik `scripts/test_batch_195_harness.py` meluluskan sweep AST 564/564 skrip, 3 solver mandiri, dan live API probe (PASS 6/6); (f) eksekusi terorkestrasi via AI Team & toolchain lokal.
+
 ### Batch 194 (10 November 2026 - Hardcoded Credential Extraction, ASCII Hex Deobfuscation & MD5 Dictionary Sprint, 3/3 modul)
 | No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
