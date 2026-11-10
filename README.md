@@ -42,6 +42,15 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 187 (10 November 2026 - Crypto Coppersmith Rectification & RE VM/Memcmp Multi-Domain Verification Sprint, 3/3 modul)
+| No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 211 | corrupt-key-2 | Cryptography | Hard | `picoCTF{1d68da1447328c3f11541d076c9c613957d86566}` | **SOLVED (HTTP 201 Created, correct: true)** - 1024-bit RSA 112-bit missing factor $p$ Coppersmith small-roots LLL reduction & msg_2.enc decryption, wrapper `picoCTF{...}` valid, `academy{...}` ditolak (correct: false) | 2026-11-10 |
+| 2 | 221 | MATRIX | Reverse Engineering | Hard | `picoCTF{y0uv3_3sc4p3d_th3_m4ze...f0r_n0w-hYkq2D9PmrA5GpEq}` | **SOLVED (HTTP 201 Created, correct: true)** - Custom stack-based VM bytecode maze traversal & BFS state-space HP checkpoint sequence, wrapper `picoCTF{...}` valid, `academy{...}` ditolak (correct: false) | 2026-11-10 |
+| 3 | 222 | not crypto | Reverse Engineering | Hard | `picoCTF{c0mp1l3r_0pt1m1z4t10n_15_pur3_w1z4rdry_but_n0_pr0bl3m?}` | **SOLVED (HTTP 201 Created, correct: true)** - x86-64 binary in-memory memcmp plaintext comparison extraction & GDB dynamic register inspection, wrapper `picoCTF{...}` valid, `academy{...}` ditolak (correct: false) | 2026-11-10 |
+
+Temuan audit batch 187: (a) sinkronisasi sesi REST OK (`GET /api/challenges/?page_size=1` -> 200, user id 1072359); (b) audit mendalam terhadap kelas modul event backport (`picoMini by redpwn`) membuktikan bahwa validator CyLab secara konsisten mensyaratkan native wrapper `picoCTF{...}` dan menolak rekey `academy{...}` dengan `correct: false`; (c) rektifikasi kunci privat RSA modul #211 via Coppersmith LLL memulihkan teks terang pesan asli dan mengekstraksi token definitif; (d) writeup teknis dan skrip reproduksi untuk ketiga modul diperbarui ke standar kompetisi LKS Cyber Security & NIST SP 800-115; (e) test harness deterministik `scripts/test_batch_187_harness.py` meluluskan sweep AST 556/556 skrip, 3 solver mandiri, dan live API probe; (f) eksekutor Omnirush dilaporkan maintenance upstream, eksekusi diselesaikan secara terorkestrasi via AI Team & toolchain lokal.
+
 ### Batch 186 (10 November 2026 - Web & Reverse Engineering Event Wrapper Rectification Sprint, 3/3 modul)
 | No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|

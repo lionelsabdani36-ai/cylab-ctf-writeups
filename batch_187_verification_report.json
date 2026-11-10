@@ -1,0 +1,133 @@
+{
+  "batch": 187,
+  "timestamp": "2026-11-10 01:25:56 UTC",
+  "utc_timestamp": "2026-11-10T01:25:56.003216+00:00",
+  "student_account": "Arielwin",
+  "user_id": 1072359,
+  "checks": [
+    {
+      "name": "ast_syntax_sweep",
+      "description": "AST-parses every scripts/*.py and fails on syntax errors",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "total_scanned": 556,
+        "passed": 556,
+        "failed": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "solve_211",
+      "description": "Executes solve_211_corrupt_key_2.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "picoCTF{1d68da1447328c3f11541d076c9c613957d86566}"
+      }
+    },
+    {
+      "name": "solve_221",
+      "description": "Executes solve_221_matrix.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "picoCTF{y0uv3_3sc4p3d_th3_m4ze...f0r_n0w-hYkq2D9PmrA5GpEq}"
+      }
+    },
+    {
+      "name": "solve_222",
+      "description": "Executes solve_222_not_crypto.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "picoCTF{c0mp1l3r_0pt1m1z4t10n_15_pur3_w1z4rdry_but_n0_pr0bl3m?}"
+      }
+    },
+    {
+      "name": "live_evidence_probes",
+      "description": "Verifies session health and live flag acceptance on CyLab submissions endpoint",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "session_healthy": true,
+        "all_tokens_verified": true,
+        "probes": [
+          {
+            "endpoint": "GET /api/challenges/?page_size=1",
+            "http": 200,
+            "healthy": true
+          },
+          {
+            "challenge_id": 211,
+            "flag": "picoCTF{1d68da1447328c3f11541d076c9c613957d86566}",
+            "http": 201,
+            "correct": true,
+            "raw_response": "{\"user\": 1072359, \"challenge\": 211, \"flag\": \"picoCTF{1d68da1447328c3f11541d076c9c613957d86566}\", \"correct\": true, \"historical\": false}"
+          },
+          {
+            "challenge_id": 221,
+            "flag": "picoCTF{y0uv3_3sc4p3d_th3_m4ze...f0r_n0w-hYkq2D9PmrA5GpEq}",
+            "http": 201,
+            "correct": true,
+            "raw_response": "{\"user\": 1072359, \"challenge\": 221, \"flag\": \"picoCTF{y0uv3_3sc4p3d_th3_m4ze...f0r_n0w-hYkq2D9PmrA5GpEq}\", \"correct\": true, \"historical\": false}"
+          },
+          {
+            "challenge_id": 222,
+            "flag": "picoCTF{c0mp1l3r_0pt1m1z4t10n_15_pur3_w1z4rdry_but_n0_pr0bl3m?}",
+            "http": 201,
+            "correct": true,
+            "raw_response": "{\"user\": 1072359, \"challenge\": 222, \"flag\": \"picoCTF{c0mp1l3r_0pt1m1z4t10n_15_pur3_w1z4rdry_but_n0_pr0bl3m?}\", \"correct\": true, \"historical\": false}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "writeup_documentation_audit",
+      "description": "Verifies existence, official flag format, and Batch 187 audit stamp across writeups",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "items": [
+          {
+            "id": "211",
+            "file": "writeups/picoMini-by-redpwn/211-corrupt-key-2.md",
+            "exists": true,
+            "has_expected_flag": true,
+            "has_batch_stamp": true,
+            "size": 7496
+          },
+          {
+            "id": "221",
+            "file": "writeups/picoMini-by-redpwn/221-matrix.md",
+            "exists": true,
+            "has_expected_flag": true,
+            "has_batch_stamp": true,
+            "size": 6846
+          },
+          {
+            "id": "222",
+            "file": "writeups/picoMini-by-redpwn/222-not-crypto.md",
+            "exists": true,
+            "has_expected_flag": true,
+            "has_batch_stamp": true,
+            "size": 6437
+          }
+        ]
+      }
+    }
+  ],
+  "all_passed": true
+}

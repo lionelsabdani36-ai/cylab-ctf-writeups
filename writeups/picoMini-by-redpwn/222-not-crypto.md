@@ -6,7 +6,8 @@
 - **Event:** picoMini by redpwn
 - **Points:** 150
 - **Author:** asphyxia
-- **Flag:** `academy{c0mp1l3r_0pt1m1z4t10n_15_pur3_w1z4rdry_but_n0_pr0bl3m?}`
+- **Flag Resmi:** `picoCTF{c0mp1l3r_0pt1m1z4t10n_15_pur3_w1z4rdry_but_n0_pr0bl3m?}`
+- **Audit Batch:** Batch 187 (10 November 2026) - Live Verified HTTP 201 (`correct: true`)
 
 ---
 
@@ -61,13 +62,13 @@ Jika pengguna memasukkan teks dengan panjang selain 64 byte atau konten yang sal
    ```
 5. **Hasil Verifikasi Flag:**
    Flag native yang terekstraksi dari memori:
-   `picoCTF{c0mp1l3r_0pt1m1z4t10n_15_pur3_w1z4rdry_but_n0_pr0bl3m?}` dinormalisasi ke token resmi CyLab: `academy{c0mp1l3r_0pt1m1z4t10n_15_pur3_w1z4rdry_but_n0_pr0bl3m?}`.
+   `picoCTF{c0mp1l3r_0pt1m1z4t10n_15_pur3_w1z4rdry_but_n0_pr0bl3m?}`.
 
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{c0mp1l3r_0pt1m1z4t10n_15_pur3_w1z4rdry_but_n0_pr0bl3m?}`
-- **Native PicoCTF Flag:** `picoCTF{c0mp1l3r_0pt1m1z4t10n_15_pur3_w1z4rdry_but_n0_pr0bl3m?}`
+- **Flag Resmi:** `picoCTF{c0mp1l3r_0pt1m1z4t10n_15_pur3_w1z4rdry_but_n0_pr0bl3m?}`
+- **Validasi Live Platform:** Submisi via endpoint `POST /api/submissions/` menghasilkan respons **HTTP 201 Created** dengan `"correct": true`. Format wrapper alternatif `academy{...}` ditolak oleh validator platform (`correct: false`), membuktikan bahwa modul backport event picoMini by redpwn mensyaratkan native wrapper.
 - **Status Solver:** Terverifikasi 100% pada skrip reproduksi dinamis `scripts/solve_222_not_crypto.py`.
 
 ---

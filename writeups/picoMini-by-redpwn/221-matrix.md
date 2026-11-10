@@ -6,7 +6,8 @@
 - **Event:** picoMini by redpwn
 - **Points:** 500
 - **Author:** asphyxia
-- **Flag:** `academy{y0uv3_3sc4p3d_th3_m4ze...f0r_n0w-hYkq2D9PmrA5GpEq}`
+- **Flag Resmi:** `picoCTF{y0uv3_3sc4p3d_th3_m4ze...f0r_n0w-hYkq2D9PmrA5GpEq}`
+- **Audit Batch:** Batch 187 (10 November 2026) - Live Verified HTTP 201 (`correct: true`)
 
 ---
 
@@ -58,13 +59,13 @@ Tantangan `MATRIX` menyajikan berkas biner ELF Linux 64-bit stripped (`x86_64-64
    - Langkah 63: Memasuki sel exit `$`.
 4. **Hasil Verifikasi Flag:**
    VM mengeksekusi loop output dan memancarkan string flag:
-   `picoCTF{y0uv3_3sc4p3d_th3_m4ze...f0r_n0w-hYkq2D9PmrA5GpEq}` dinormalisasi ke token resmi CyLab: `academy{y0uv3_3sc4p3d_th3_m4ze...f0r_n0w-hYkq2D9PmrA5GpEq}`.
+   `picoCTF{y0uv3_3sc4p3d_th3_m4ze...f0r_n0w-hYkq2D9PmrA5GpEq}`.
 
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{y0uv3_3sc4p3d_th3_m4ze...f0r_n0w-hYkq2D9PmrA5GpEq}`
-- **Native PicoCTF Flag:** `picoCTF{y0uv3_3sc4p3d_th3_m4ze...f0r_n0w-hYkq2D9PmrA5GpEq}`
+- **Flag Resmi:** `picoCTF{y0uv3_3sc4p3d_th3_m4ze...f0r_n0w-hYkq2D9PmrA5GpEq}`
+- **Validasi Live Platform:** Submisi via endpoint `POST /api/submissions/` menghasilkan respons **HTTP 201 Created** dengan `"correct": true`. Format wrapper alternatif `academy{...}` ditolak oleh validator platform (`correct: false`), membuktikan bahwa modul backport event picoMini by redpwn mensyaratkan native wrapper.
 - **Status Solver:** Terverifikasi 100% pada skrip reproduksi `scripts/solve_221_matrix.py`.
 
 ---

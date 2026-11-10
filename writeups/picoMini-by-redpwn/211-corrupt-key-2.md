@@ -6,17 +6,18 @@
 - **Event:** picoMini by redpwn
 - **Points:** 500
 - **Author:** redpwn
-- **Flag:** `academy{b7a39d8461f0e25c8291aa89c03b47f1}`
+- **Flag Resmi:** `picoCTF{1d68da1447328c3f11541d076c9c613957d86566}`
+- **Audit Batch:** Batch 187 (10 November 2026) - Live Verified HTTP 201 (`correct: true`)
 
 ---
 
 ## Problem Statement & Scope
-Tantangan `corrupt-key-2` menyajikan skenario rekonstruksi kunci asimetris RSA 1024-bit yang rusak secara parsial (`private.pem`) beserta berkas terenkripsi `msg.enc`. Berbeda dengan tantangan pendahulunya (`corrupt-key-1`) di mana bidang-bidang kunci tertentu hilang sepenuhnya, pada tantangan ini struktur ASN.1 menyimpan modulus $N$, eksponen publik $e = 65537$, dan faktor prima $p$. Namun, representasi heksadesimal dari faktor $p$ mengalami korupsi pada tiga segmen terpisah (dibuat bernilai nol / *zeroed out*):
+Tantangan `corrupt-key-2` menyajikan skenario rekonstruksi kunci asimetris RSA 1024-bit yang rusak secara parsial (`private.pem`) beserta berkas terenkripsi `msg_2.enc`. Berbeda dengan tantangan pendahulunya (`corrupt-key-1`) di mana bidang-bidang kunci tertentu hilang sepenuhnya, pada tantangan ini struktur ASN.1 menyimpan modulus $N$, eksponen publik $e = 65537$, dan faktor prima $p$. Namun, representasi heksadesimal dari faktor $p$ mengalami korupsi pada tiga segmen terpisah (dibuat bernilai nol / *zeroed out*):
 1. Segmen 0: 40 bit hilang pada offset bit ke-16 (variabel $x_0 < 2^{40}$).
 2. Segmen 1: 32 bit hilang pada offset bit ke-240 (variabel $x_1 < 2^{32}$).
 3. Segmen 2: 40 bit hilang pada offset bit ke-352 (variabel $x_2 < 2^{40}$).
 
-Total bit yang hilang berjumlah $40 + 32 + 40 = 112$ bit. Peserta dituntut untuk memodelkan masalah ini ke dalam persamaan polinomial multivariat modulo faktor pembagi $p$, membuktikan keterpenuhan teorema *Coppersmith Small-Roots*, membangun basis kisi (*lattice matrix*), mereduksi kisi menggunakan algoritma Lenstra-Lenstra-Lovász (LLL), memulihkan faktor $p$, serta mendekripsi teks sandi `msg.enc` untuk memperoleh token bendera.
+Total bit yang hilang berjumlah $40 + 32 + 40 = 112$ bit. Peserta dituntut untuk memodelkan masalah ini ke dalam persamaan polinomial multivariat modulo faktor pembagi $p$, membuktikan keterpenuhan teorema *Coppersmith Small-Roots*, membangun basis kisi (*lattice matrix*), mereduksi kisi menggunakan algoritma Lenstra-Lenstra-Lovász (LLL), memulihkan faktor $p$, serta mendekripsi teks sandi `msg_2.enc` untuk memperoleh token bendera.
 
 ---
 
@@ -36,7 +37,9 @@ Total bit yang hilang berjumlah $40 + 32 + 40 = 112$ bit. Peserta dituntut untuk
    $$g_{i,j,k}(x_0, x_1, x_2) = x_0^i x_1^j x_2^k \cdot f(x_0, x_1, x_2) \cdot N^m$$
    Dengan menerapkan algoritma *Lenstra-Lenstra-Lovász* (LLL), vektor-vektor terpendek pada basis tereduksi menghasilkan polinomial baru yang akarnya pada bilangan bulat $\mathbb{Z}$ identik dengan akar modulo $p$.
 4. **Eliminasi Aljabar & Dekripsi RSA:**
-   Melalui metode resultan aljabar silang atau komputasi *Gröbner basis*, nilai bulat unik $(x_0, x_1, x_2)$ diperoleh secara deterministik. Rekonstruksi penuh $p$ memungkinkan penurunan faktor sekunder $q = N / p$, perhitungan fungsi totient Euler $\phi(N) = (p-1)(q-1)$, komputasi eksponen dekripsi privat $d \equiv e^{-1} \pmod{\phi(N)}$, serta dekripsi eksponensial modular $m \equiv c^d \pmod N$.
+   Melalui metode resultan aljabar silang atau komputasi *Gröbner basis*, nilai bulat unik $(x_0, x_1, x_2)$ diperoleh secara deterministik:
+   $$p = 13331193528989238711281209084398307362804767638940062463831686008684031051105241659991501990308217733345218358352985573809576597628552151562857633661821019$$
+   Rekonstruksi penuh $p$ memungkinkan penurunan faktor sekunder $q = N / p$, perhitungan fungsi totient Euler $\phi(N) = (p-1)(q-1)$, komputasi eksponen dekripsi privat $d \equiv e^{-1} \pmod{\phi(N)}$, serta dekripsi eksponensial modular $m \equiv c^d \pmod N$.
 
 ---
 
@@ -51,15 +54,11 @@ Total bit yang hilang berjumlah $40 + 32 + 40 = 112$ bit. Peserta dituntut untuk
    - $X_2 = 2^{40}$
    - Total produk batas: $X = X_0 X_1 X_2 = 2^{112} < 2^{256}$.
 3. **Penyusunan Matriks Kisi dan Reduksi LLL:**
-   - Bentuk matriks pergeseran berdimensi $14 \times 14$ yang mencakup monom-monom utama $f(x_0, x_1, x_2)$.
+   - Bentuk matriks pergeseran berdimensi yang mencakup monom-monom utama $f(x_0, x_1, x_2)$.
    - Jalankan reduksi LLL (Gram-Schmidt orthogonalization).
-   - Ekstrak dua polinomial terpendek $h_1(x_0, x_1, x_2)$ dan $h_2(x_0, x_1, x_2)$.
+   - Ekstrak polinomial-polinomial terpendek untuk eliminasi resultan.
 4. **Penyelesaian Sistem Polinomial & Pemulihan Kunci:**
-   - Hitung resultan aljabar: $\text{res}(h_1, h_2, x_2)$ untuk mengeliminasi variabel $x_2$.
-   - Selesaikan akar-akar bulat univariat:
-     - $x_0 = \text{0x8a1b2c3d4e}$
-     - $x_1 = \text{0x7f4a2b1c}$
-     - $x_2 = \text{0x9e2a1d0f5c}$
+   - Selesaikan akar-akar bulat univariat $(x_0, x_1, x_2)$.
    - Hitung $p = \tilde{p} + 2^{16} x_0 + 2^{240} x_1 + 2^{352} x_2$.
    - Uji validitas pembagian: $N \pmod p == 0$ (bernilai benar).
 5. **Dekripsi Ciphertext & Ekstraksi Flag:**
@@ -68,14 +67,15 @@ Total bit yang hilang berjumlah $40 + 32 + 40 = 112$ bit. Peserta dituntut untuk
    - Turunkan kunci privat $d = \text{pow}(e, -1, \phi(N))$.
    - Dekripsi pesan: $m = \text{pow}(c, d, N)$.
    - Konversi integer $m$ ke representasi teks ASCII:
-     - Native Flag: `picoCTF{b7a39d8461f0e25c8291aa89c03b47f1}`
-     - Token Platform CyLab: `academy{b7a39d8461f0e25c8291aa89c03b47f1}`
+     ```text
+     b'\x02\x17\xa4...Message successfully decrypted - your flag: picoCTF{1d68da1447328c3f11541d076c9c613957d86566}'
+     ```
 
 ---
 
 ## Flag & Verifikasi
-- **Flag Resmi:** `academy{b7a39d8461f0e25c8291aa89c03b47f1}`
-- **Native PicoCTF Flag:** `picoCTF{b7a39d8461f0e25c8291aa89c03b47f1}`
+- **Flag Resmi:** `picoCTF{1d68da1447328c3f11541d076c9c613957d86566}`
+- **Validasi Live Platform:** Submisi via endpoint `POST /api/submissions/` menghasilkan respons **HTTP 201 Created** dengan `"correct": true`. Format wrapper alternatif `academy{...}` ditolak oleh validator platform (`correct: false`), membuktikan bahwa modul backport event picoMini by redpwn mensyaratkan native wrapper.
 - **Status Solver:** Terverifikasi 100% pada skrip reproduksi `scripts/solve_211_corrupt_key_2.py`.
 
 ---
