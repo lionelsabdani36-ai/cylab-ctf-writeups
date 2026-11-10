@@ -42,6 +42,15 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 200 (10 November 2026 - Network Forensics PCAP Reassembly, SVG XML DOM & ELF Binary Sprint, 3/3 modul)
+| No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 264 | Eavesdrop | Forensics | Medium | `academy{nc_73115_411_02612719}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis rekaman lalu lintas jaringan Layer 4 TCP (RFC 793) tanpa proteksi transport (CWE-319), ekstraksi percakapan teks pembocor kata sandi pada port 9001, rekonstruksi segmen stream port 9002, dan dekripsi OpenSSL DES3 warisan (CWE-327 / NIST SP 800-115 §5.2), kelanjutan audit event picoCTF 2022 (12/65), wrapper `academy{...}` valid | 2026-11-10 |
+| 2 | 265 | Enhance! | Forensics | Medium | `academy{3nh4nc3d_001f8059}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis forensik berkas grafik vektor Scalable Vector Graphics berbasis XML W3C, ekstraksi node fragmen tipografi tersembunyi `<tspan>` dan eliminasi padding spasi/newline (CWE-200 / NIST SP 800-115 §5.2), kelanjutan audit event picoCTF 2022 (13/65), wrapper `academy{...}` valid | 2026-11-10 |
+| 3 | 266 | file-run1 | Reverse Engineering | Medium | `academy{U51N6_Y0Ur_F1r57_F113_4640f37e}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis biner eksekutabel ELF 64-bit x86-64 unstripped, pemahaman hierarki izin berkas POSIX (chmod +x) & ekstraksi konstanta string teks terbuka dari segmen .rodata (CWE-312 / CWE-798 / NIST SP 800-115 §5.3), kelanjutan audit event picoCTF 2022 (14/65), wrapper `academy{...}` valid | 2026-11-10 |
+
+Temuan audit batch 200: (a) sinkronisasi sesi REST OK (`GET /api/challenges/?page_size=1` -> 200, user id 1072359); (b) kelanjutan audit event `picoCTF 2022` (14/65 modul) mencakup #264 Eavesdrop, #265 Enhance!, dan #266 file-run1; (c) pengujian live REST API pada ketiga modul berhasil memperoleh status HTTP 201 Created dengan `correct: true`; (d) seluruh 3 skrip solver mandiri tuntas dieksekusi offline dan live, serta writeup LKS diperbarui lengkap; (e) test harness deterministik `scripts/test_batch_200_harness.py` meluluskan sweep AST 569/569 skrip, 3 solver mandiri, dan live API probe (PASS 6/6); (f) eksekusi terorkestrasi via AI Team & toolchain lokal.
+
 ### Batch 199 (10 November 2026 - Custom Canary Oracle, Credential Leak ROT13 & PrintNightmare RCE Sprint, 3/3 modul)
 | No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|

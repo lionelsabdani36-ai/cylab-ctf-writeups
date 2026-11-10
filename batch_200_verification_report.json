@@ -1,0 +1,164 @@
+{
+  "timestamp": "2026-11-10T12:21:53.402243+00:00",
+  "batch": 200,
+  "events": [
+    "picoCTF 2022"
+  ],
+  "modules": [
+    {
+      "id": 264,
+      "name": "Eavesdrop",
+      "category": "Forensics",
+      "event": "picoCTF 2022",
+      "flag": "academy{nc_73115_411_02612719}"
+    },
+    {
+      "id": 265,
+      "name": "Enhance!",
+      "category": "Forensics",
+      "event": "picoCTF 2022",
+      "flag": "academy{3nh4nc3d_001f8059}"
+    },
+    {
+      "id": 266,
+      "name": "file-run1",
+      "category": "Reverse Engineering",
+      "event": "picoCTF 2022",
+      "flag": "academy{U51N6_Y0Ur_F1r57_F113_4640f37e}"
+    }
+  ],
+  "summary": {
+    "total_checks": 6,
+    "passed": 6,
+    "failed": 0,
+    "all_passed": true
+  },
+  "checks": [
+    {
+      "name": "ast_syntax_sweep",
+      "description": "AST-parses every scripts/*.py and fails on syntax errors",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "total_scanned": 569,
+        "passed": 569,
+        "failed": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "solve_264",
+      "description": "Executes solve_264_eavesdrop.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{nc_73115_411_02612719}"
+      }
+    },
+    {
+      "name": "solve_265",
+      "description": "Executes solve_265_enhance.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{3nh4nc3d_001f8059}"
+      }
+    },
+    {
+      "name": "solve_266",
+      "description": "Executes solve_266_file_run1.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{U51N6_Y0Ur_F1r57_F113_4640f37e}"
+      }
+    },
+    {
+      "name": "live_evidence_probes",
+      "description": "Validates session health (200) and live flag acceptance (201 correct:true) on CyLab API",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_verified": true,
+        "probes": [
+          {
+            "endpoint": "GET /api/challenges/?page_size=1",
+            "http": 200,
+            "healthy": true
+          },
+          {
+            "challenge_id": 264,
+            "endpoint": "POST /api/submissions/",
+            "http": 201,
+            "flag": "academy{nc_73115_411_02612719}",
+            "correct": true,
+            "response": "{\"user\": 1072359, \"challenge\": 264, \"flag\": \"academy{nc_73115_411_02612719}\", \"correct\": true, \"historical\": false}"
+          },
+          {
+            "challenge_id": 265,
+            "endpoint": "POST /api/submissions/",
+            "http": 201,
+            "flag": "academy{3nh4nc3d_001f8059}",
+            "correct": true,
+            "response": "{\"user\": 1072359, \"challenge\": 265, \"flag\": \"academy{3nh4nc3d_001f8059}\", \"correct\": true, \"historical\": false}"
+          },
+          {
+            "challenge_id": 266,
+            "endpoint": "POST /api/submissions/",
+            "http": 201,
+            "flag": "academy{U51N6_Y0Ur_F1r57_F113_4640f37e}",
+            "correct": true,
+            "response": "{\"user\": 1072359, \"challenge\": 266, \"flag\": \"academy{U51N6_Y0Ur_F1r57_F113_4640f37e}\", \"correct\": true, \"historical\": false}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "writeup_documentation_audit",
+      "description": "Asserts existence and LKS-compliant structure of writeups for modules 264, 265, 266",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_valid": true,
+        "writeups": [
+          {
+            "challenge_id": 264,
+            "path": "writeups/picoCTF-2022/264-eavesdrop.md",
+            "exists": true,
+            "flag_matched": true,
+            "lks_mitigation_present": true,
+            "valid": true
+          },
+          {
+            "challenge_id": 265,
+            "path": "writeups/picoCTF-2022/265-enhance.md",
+            "exists": true,
+            "flag_matched": true,
+            "lks_mitigation_present": true,
+            "valid": true
+          },
+          {
+            "challenge_id": 266,
+            "path": "writeups/picoCTF-2022/266-file-run1.md",
+            "exists": true,
+            "flag_matched": true,
+            "lks_mitigation_present": true,
+            "valid": true
+          }
+        ]
+      }
+    }
+  ]
+}
