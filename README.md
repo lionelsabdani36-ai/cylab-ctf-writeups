@@ -42,6 +42,15 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 203 (10 November 2026 - Instruction Flow Control Debugging, External Asset Parsing & HTML Source Reconnaissance Sprint, 3/3 modul)
+| No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 273 | GDB Test Drive | Reverse Engineering | Medium | `academy{d3bugg3r_dr1v3_4cc75120}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis alur eksekusi biner dinamis ($rip instruction pointer manipulation) via GDB batch mode, bypass sleep delay stall (100.000s) pada main+99 via jump *(main+104) dan dekripsi statis ROT47 (CWE-215 / NIST SP 800-115 §4.3), kelanjutan audit event picoCTF 2022 (21/65), wrapper `academy{...}` valid | 2026-11-10 |
+| 2 | 274 | Includes | Web Exploitation | Easy | `academy{1nclu51v17y_1of2_f7w_2of2_ce526b3b}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis enumerasi dependensi aset eksternal dokumen web (style.css & script.js), ekstraksi komentar kode sumber terdistribusi dua segmen (CWE-615 / OWASP A05 / NIST SP 800-115 §4.3), kelanjutan audit event picoCTF 2022 (22/65), wrapper `academy{...}` valid | 2026-11-10 |
+| 3 | 275 | Inspect HTML | Web Exploitation | Easy | `academy{1n5p3t0r_0f_h7ml_cdc35adf}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis inspeksi kode sumber markup HTML dan pohon DOM klien, ekstraksi komentar tersembunyi pre-closing body (CWE-615 / OWASP A05 / NIST SP 800-115 §4.3), kelanjutan audit event picoCTF 2022 (23/65), wrapper `academy{...}` valid | 2026-11-10 |
+
+Temuan audit batch 203: (a) sinkronisasi sesi REST OK (`GET /api/challenges/?page_size=1` -> 200, user id 1072359); (b) kelanjutan audit event `picoCTF 2022` (23/65 modul) mencakup #273 GDB Test Drive, #274 Includes, dan #275 Inspect HTML; (c) pengujian live REST API pada ketiga modul berhasil memperoleh status HTTP 201 Created dengan `correct: true`; (d) seluruh 3 skrip solver mandiri tuntas dieksekusi offline dan live, serta writeup LKS diperbarui lengkap; (e) test harness deterministik `scripts/test_batch_203_harness.py` meluluskan sweep AST 572/572 skrip, 3 solver mandiri, dan live API probe (PASS 6/6); (f) eksekusi terorkestrasi via AI Team & toolchain lokal.
+
 ### Batch 202 (10 November 2026 - Path Traversal Filter Bypass, Java Bytecode Analysis & Function Pointer Overwrite Sprint, 3/3 modul)
 | No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|

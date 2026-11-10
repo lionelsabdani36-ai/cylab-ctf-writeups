@@ -1,0 +1,188 @@
+{
+  "timestamp": "2026-11-10T18:29:42.373654+00:00",
+  "batch": 203,
+  "events": [
+    "picoCTF 2022"
+  ],
+  "modules": [
+    {
+      "id": 273,
+      "name": "GDB Test Drive",
+      "category": "Reverse Engineering",
+      "event": "picoCTF 2022",
+      "flag": "academy{d3bugg3r_dr1v3_4cc75120}"
+    },
+    {
+      "id": 274,
+      "name": "Includes",
+      "category": "Web Exploitation",
+      "event": "picoCTF 2022",
+      "flag": "academy{1nclu51v17y_1of2_f7w_2of2_ce526b3b}"
+    },
+    {
+      "id": 275,
+      "name": "Inspect HTML",
+      "category": "Web Exploitation",
+      "event": "picoCTF 2022",
+      "flag": "academy{1n5p3t0r_0f_h7ml_cdc35adf}"
+    }
+  ],
+  "summary": {
+    "total_checks": 6,
+    "passed": 6,
+    "failed": 0,
+    "all_passed": true
+  },
+  "checks": [
+    {
+      "name": "ast_syntax_sweep",
+      "description": "AST-parses every scripts/*.py and fails on syntax errors",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "total_scanned": 572,
+        "passed": 572,
+        "failed": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "solve_273",
+      "description": "Executes solve_273_gdb_test_drive.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{d3bugg3r_dr1v3_4cc75120}",
+        "stdout_tail": "  [+] Target jump offset  : main+104 (bypasses sleep, enters rotate_encrypt)\n[*] Stage 2: Attempting dynamic instruction pointer diversion via GDB on '/tmp/c273/gdbme'\n    [+] GDB diversion succeeded. Recovered: academy{d3bugg3r_dr1v3_4cc75120}\n[+] Reconstructed Flag: academy{d3bugg3r_dr1v3_4cc75120}\n\n[SUCCESS] Module 273 (GDB Test Drive) fully audited and solved: academy{d3bugg3r_dr1v3_4cc75120}\n",
+        "stderr_tail": ""
+      }
+    },
+    {
+      "name": "solve_274",
+      "description": "Executes solve_274_includes.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{1nclu51v17y_1of2_f7w_2of2_ce526b3b}",
+        "stdout_tail": "s\n    [+] Carved CSS comment token (Part 1) : 'academy{1nclu51v17y_1of2_'\n    [+] Carved JS comment token (Part 2)  : 'f7w_2of2_ce526b3b}'\n[*] Stage 3: Assembling multipart segments -> academy{1nclu51v17y_1of2_f7w_2of2_ce526b3b}\n[+] Reconstructed Flag: academy{1nclu51v17y_1of2_f7w_2of2_ce526b3b}\n\n[SUCCESS] Module 274 (Includes) fully audited and solved: academy{1nclu51v17y_1of2_f7w_2of2_ce526b3b}\n",
+        "stderr_tail": ""
+      }
+    },
+    {
+      "name": "solve_275",
+      "description": "Executes solve_275_inspect_html.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{1n5p3t0r_0f_h7ml_cdc35adf}",
+        "stdout_tail": ": Pre-closing </body> section\n[*] Stage 2: Carving comment token from HTML DOM markup\n    [+] Extracted HTML comment   : '<!--academy{1n5p3t0r_0f_h7ml_cdc35adf}-->'\n[*] Stage 3: Normalizing recovered flag -> academy{1n5p3t0r_0f_h7ml_cdc35adf}\n[+] Reconstructed Flag: academy{1n5p3t0r_0f_h7ml_cdc35adf}\n\n[SUCCESS] Module 275 (Inspect HTML) fully audited and solved: academy{1n5p3t0r_0f_h7ml_cdc35adf}\n",
+        "stderr_tail": ""
+      }
+    },
+    {
+      "name": "live_evidence_probes",
+      "description": "Validates session health (200) and live flag acceptance (201 correct:true) on CyLab API",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_verified": true,
+        "probes": [
+          {
+            "endpoint": "GET /api/challenges/?page_size=1",
+            "http": 200,
+            "healthy": true
+          },
+          {
+            "challenge_id": 273,
+            "flag": "academy{d3bugg3r_dr1v3_4cc75120}",
+            "http": 201,
+            "correct": true,
+            "response": {
+              "user": 1072359,
+              "challenge": 273,
+              "flag": "academy{d3bugg3r_dr1v3_4cc75120}",
+              "correct": true,
+              "historical": false
+            }
+          },
+          {
+            "challenge_id": 274,
+            "flag": "academy{1nclu51v17y_1of2_f7w_2of2_ce526b3b}",
+            "http": 201,
+            "correct": true,
+            "response": {
+              "user": 1072359,
+              "challenge": 274,
+              "flag": "academy{1nclu51v17y_1of2_f7w_2of2_ce526b3b}",
+              "correct": true,
+              "historical": false
+            }
+          },
+          {
+            "challenge_id": 275,
+            "flag": "academy{1n5p3t0r_0f_h7ml_cdc35adf}",
+            "http": 201,
+            "correct": true,
+            "response": {
+              "user": 1072359,
+              "challenge": 275,
+              "flag": "academy{1n5p3t0r_0f_h7ml_cdc35adf}",
+              "correct": true,
+              "historical": false
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "writeup_documentation_audit",
+      "description": "Verifies markdown writeups exist, include LKS curriculum sections, contain expected flags, and zero em dashes",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_writeups_valid": true,
+        "audits": [
+          {
+            "file": "writeups/picoCTF-2022/273-gdb-test-drive.md",
+            "exists": true,
+            "size_bytes": 6774,
+            "flag_present": true,
+            "missing_sections": [],
+            "has_em_dash": false,
+            "passed": true
+          },
+          {
+            "file": "writeups/picoCTF-2022/274-includes.md",
+            "exists": true,
+            "size_bytes": 6983,
+            "flag_present": true,
+            "missing_sections": [],
+            "has_em_dash": false,
+            "passed": true
+          },
+          {
+            "file": "writeups/picoCTF-2022/275-inspect-html.md",
+            "exists": true,
+            "size_bytes": 5834,
+            "flag_present": true,
+            "missing_sections": [],
+            "has_em_dash": false,
+            "passed": true
+          }
+        ]
+      }
+    }
+  ]
+}
