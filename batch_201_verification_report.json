@@ -1,0 +1,164 @@
+{
+  "timestamp": "2026-11-10T13:23:25.571327+00:00",
+  "batch": 201,
+  "events": [
+    "picoCTF 2022"
+  ],
+  "modules": [
+    {
+      "id": 267,
+      "name": "file-run2",
+      "category": "Reverse Engineering",
+      "event": "picoCTF 2022",
+      "flag": "academy{F1r57_4rgum3n7_3819dbe5}"
+    },
+    {
+      "id": 268,
+      "name": "File types",
+      "category": "Forensics",
+      "event": "picoCTF 2022",
+      "flag": "academy{f1len@m3_m@n1pul@t10n_f0r_0b2cur17y_35957b68}"
+    },
+    {
+      "id": 269,
+      "name": "flag leak",
+      "category": "Binary Exploitation",
+      "event": "picoCTF 2022",
+      "flag": "academy{L34k1ng_Fl4g_0ff_St4ck_0845a0aa}"
+    }
+  ],
+  "summary": {
+    "total_checks": 6,
+    "passed": 6,
+    "failed": 0,
+    "all_passed": true
+  },
+  "checks": [
+    {
+      "name": "ast_syntax_sweep",
+      "description": "AST-parses every scripts/*.py and fails on syntax errors",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "total_scanned": 570,
+        "passed": 570,
+        "failed": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "solve_267",
+      "description": "Executes solve_267_file_run2.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{F1r57_4rgum3n7_3819dbe5}"
+      }
+    },
+    {
+      "name": "solve_268",
+      "description": "Executes solve_268_file_types.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{f1len@m3_m@n1pul@t10n_f0r_0b2cur17y_35957b68}"
+      }
+    },
+    {
+      "name": "solve_269",
+      "description": "Executes solve_269_flag_leak.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{L34k1ng_Fl4g_0ff_St4ck_0845a0aa}"
+      }
+    },
+    {
+      "name": "live_evidence_probes",
+      "description": "Validates session health (200) and live flag acceptance (201 correct:true) on CyLab API",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_verified": true,
+        "probes": [
+          {
+            "endpoint": "GET /api/challenges/?page_size=1",
+            "http": 200,
+            "healthy": true
+          },
+          {
+            "challenge_id": 267,
+            "endpoint": "POST /api/submissions/",
+            "http": 201,
+            "flag": "academy{F1r57_4rgum3n7_3819dbe5}",
+            "correct": true,
+            "response": "{\"user\": 1072359, \"challenge\": 267, \"flag\": \"academy{F1r57_4rgum3n7_3819dbe5}\", \"correct\": true, \"historical\": false}"
+          },
+          {
+            "challenge_id": 268,
+            "endpoint": "POST /api/submissions/",
+            "http": 201,
+            "flag": "academy{f1len@m3_m@n1pul@t10n_f0r_0b2cur17y_35957b68}",
+            "correct": true,
+            "response": "{\"user\": 1072359, \"challenge\": 268, \"flag\": \"academy{f1len@m3_m@n1pul@t10n_f0r_0b2cur17y_35957b68}\", \"correct\": true, \"historical\": false}"
+          },
+          {
+            "challenge_id": 269,
+            "endpoint": "POST /api/submissions/",
+            "http": 201,
+            "flag": "academy{L34k1ng_Fl4g_0ff_St4ck_0845a0aa}",
+            "correct": true,
+            "response": "{\"user\": 1072359, \"challenge\": 269, \"flag\": \"academy{L34k1ng_Fl4g_0ff_St4ck_0845a0aa}\", \"correct\": true, \"historical\": false}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "writeup_documentation_audit",
+      "description": "Asserts existence and LKS-compliant structure of writeups for modules 267, 268, 269",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_valid": true,
+        "writeups": [
+          {
+            "challenge_id": 267,
+            "path": "writeups/picoCTF-2022/267-file-run2.md",
+            "exists": true,
+            "flag_matched": true,
+            "lks_mitigation_present": true,
+            "valid": true
+          },
+          {
+            "challenge_id": 268,
+            "path": "writeups/picoCTF-2022/268-file-types.md",
+            "exists": true,
+            "flag_matched": true,
+            "lks_mitigation_present": true,
+            "valid": true
+          },
+          {
+            "challenge_id": 269,
+            "path": "writeups/picoCTF-2022/269-flag-leak.md",
+            "exists": true,
+            "flag_matched": true,
+            "lks_mitigation_present": true,
+            "valid": true
+          }
+        ]
+      }
+    }
+  ]
+}

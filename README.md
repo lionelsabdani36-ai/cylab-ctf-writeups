@@ -42,6 +42,15 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 201 (10 November 2026 - Argument Validation, Nested Compression Forensics & Stack Format String Leak Sprint, 3/3 modul)
+| No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 267 | file-run2 | Reverse Engineering | Medium | `academy{F1r57_4rgum3n7_3819dbe5}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis penanganan argumen baris perintah POSIX (argc/argv) pada biner ELF 64-bit x86-64 unstripped, bypass perbandingan string statis 'Hello!' & ekstraksi konstanta kredensial (CWE-312 / CWE-798 / NIST SP 800-115 §5.3), kelanjutan audit event picoCTF 2022 (15/65), wrapper `academy{...}` valid | 2026-11-10 |
+| 2 | 268 | File types | Forensics | Medium | `academy{f1len@m3_m@n1pul@t10n_f0r_0b2cur17y_35957b68}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis forensik tanda tangan biner (magic bytes) vs penyamaran ekstensi PDF, otomasi dekompresi rantai arsip bertingkat 10 lapis (shar -> uuencode -> ar -> cpio -> bzip2 -> gzip -> lzip -> lz4 -> lzma -> lzop -> lzip -> xz -> hex) (CWE-434 / CWE-20 / NIST SP 800-115 §5.2), kelanjutan audit event picoCTF 2022 (16/65), wrapper `academy{...}` valid | 2026-11-10 |
+| 3 | 269 | flag leak | Binary Exploitation | Medium | `academy{L34k1ng_Fl4g_0ff_St4ck_0845a0aa}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis kerentanan string pemformat tidak terkontrol (Format String Vulnerability) pada biner 32-bit x86 cdecl, eksfiltrasi buffer rahasia stack via dereferensi penentu format posisional %20$s (CWE-134 / NIST SP 800-115 §5.3), kelanjutan audit event picoCTF 2022 (17/65), wrapper `academy{...}` valid | 2026-11-10 |
+
+Temuan audit batch 201: (a) sinkronisasi sesi REST OK (`GET /api/challenges/?page_size=1` -> 200, user id 1072359); (b) kelanjutan audit event `picoCTF 2022` (17/65 modul) mencakup #267 file-run2, #268 File types, dan #269 flag leak; (c) pengujian live REST API pada ketiga modul berhasil memperoleh status HTTP 201 Created dengan `correct: true`; (d) seluruh 3 skrip solver mandiri tuntas dieksekusi offline dan live, serta writeup LKS diperbarui lengkap; (e) test harness deterministik `scripts/test_batch_201_harness.py` meluluskan sweep AST 570/570 skrip, 3 solver mandiri, dan live API probe (PASS 6/6); (f) eksekusi terorkestrasi via AI Team & toolchain lokal.
+
 ### Batch 200 (10 November 2026 - Network Forensics PCAP Reassembly, SVG XML DOM & ELF Binary Sprint, 3/3 modul)
 | No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|

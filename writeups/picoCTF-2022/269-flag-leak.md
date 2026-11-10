@@ -73,3 +73,10 @@ Objektif pengujian (NIST SP 800-115 / OWASP Binary Security Analysis): Menganali
 - **Compiler Security Hardening Flag:** Aktifkan peringatan dan proteksi kompilasi GCC:
   `-Wformat=2 -Werror=format-security -D_FORTIFY_SOURCE=2`. Opsi ini membuat kompilator menolak kompilasi format string yang tidak konstan atau berpotensi bahaya.
 - **Secure Buffer Lifecycle & Ephemeral Secrets (NIST SP 800-115 Defensif):** Rahasia sensitif (seperti token, kunci kriptografi, atau flag) harus segera dibersihkan dari memori stack menggunakan `explicit_bzero()` atau `memset_s()` setelah selesai digunakan, guna mencegah eksfiltrasi melalui kebocoran memori (memory leak/disclosure) pada fungsi lanjutan.
+
+---
+
+## Solver
+
+Skrip otomatis mandiri tersedia pada `scripts/solve_269_flag_leak.py`.
+
