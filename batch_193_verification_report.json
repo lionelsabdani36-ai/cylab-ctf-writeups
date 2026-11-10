@@ -1,0 +1,153 @@
+{
+  "timestamp": "2026-11-10T06:00:16.843276+00:00",
+  "batch": 193,
+  "event": "Beginner picoMini 2022",
+  "modules": [
+    {
+      "id": 241,
+      "name": "fixme2.py",
+      "category": "General Skills",
+      "flag": "academy{3qu4l1ty_n0t_4551gnm3nt_ad29eab9}"
+    },
+    {
+      "id": 242,
+      "name": "Glitch Cat",
+      "category": "General Skills",
+      "flag": "academy{gl17ch_m3_n07_3881dce3}"
+    },
+    {
+      "id": 243,
+      "name": "HashingJobApp",
+      "category": "General Skills",
+      "flag": "academy{4ppl1c4710n_r3c31v3d_467e06bf}"
+    }
+  ],
+  "summary": {
+    "total_checks": 6,
+    "passed": 6,
+    "failed": 0,
+    "all_passed": true
+  },
+  "checks": [
+    {
+      "name": "ast_syntax_sweep",
+      "description": "AST-parses every scripts/*.py and fails on syntax errors",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "total_scanned": 562,
+        "passed": 562,
+        "failed": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "solve_241",
+      "description": "Executes solve_241_fixme2.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{3qu4l1ty_n0t_4551gnm3nt_ad29eab9}"
+      }
+    },
+    {
+      "name": "solve_242",
+      "description": "Executes solve_242_glitch_cat.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{gl17ch_m3_n07_3881dce3}"
+      }
+    },
+    {
+      "name": "solve_243",
+      "description": "Executes solve_243_hashingjobapp.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{4ppl1c4710n_r3c31v3d_467e06bf}"
+      }
+    },
+    {
+      "name": "live_evidence_probes",
+      "description": "Validates session health (200) and live flag acceptance (201 correct:true) on CyLab API",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_verified": true,
+        "probes": [
+          {
+            "endpoint": "GET /api/challenges/?page_size=1",
+            "http": 200,
+            "healthy": true
+          },
+          {
+            "challenge_id": 241,
+            "flag": "academy{3qu4l1ty_n0t_4551gnm3nt_ad29eab9}",
+            "http": 201,
+            "correct": true
+          },
+          {
+            "challenge_id": 242,
+            "flag": "academy{gl17ch_m3_n07_3881dce3}",
+            "http": 201,
+            "correct": true
+          },
+          {
+            "challenge_id": 243,
+            "flag": "academy{4ppl1c4710n_r3c31v3d_467e06bf}",
+            "http": 201,
+            "correct": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "writeup_documentation_audit",
+      "description": "Asserts existence and LKS-compliant structure of writeups for modules 241, 242, 243",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_valid": true,
+        "writeups": [
+          {
+            "challenge_id": 241,
+            "path": "writeups/Beginner-picoMini-2022/241-fixme2.md",
+            "exists": true,
+            "flag_matched": true,
+            "lks_mitigation_present": true,
+            "valid": true
+          },
+          {
+            "challenge_id": 242,
+            "path": "writeups/Beginner-picoMini-2022/242-glitch-cat.md",
+            "exists": true,
+            "flag_matched": true,
+            "lks_mitigation_present": true,
+            "valid": true
+          },
+          {
+            "challenge_id": 243,
+            "path": "writeups/Beginner-picoMini-2022/243-hashingjobapp.md",
+            "exists": true,
+            "flag_matched": true,
+            "lks_mitigation_present": true,
+            "valid": true
+          }
+        ]
+      }
+    }
+  ]
+}

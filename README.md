@@ -42,6 +42,15 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 193 (10 November 2026 - Python AST Operator Remediation, Glitch Stream Safe Evaluation & MD5 Socket Sprint, 3/3 modul)
+| No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 241 | fixme2.py | General Skills | Easy | `academy{3qu4l1ty_n0t_4551gnm3nt_ad29eab9}` | **SOLVED (HTTP 201 Created, correct: true)** - Remediasi operator kesetaraan AST Python (PEP 8 SyntaxError invalid syntax '=' vs '==') & dekripsi XOR stream enkidu 41 byte, wrapper `academy{...}` valid, `picoCTF{...}` ditolak (correct: false) | 2026-11-10 |
+| 2 | 242 | Glitch Cat | General Skills | Easy | `academy{gl17ch_m3_n07_3881dce3}` | **SOLVED (HTTP 201 Created, correct: true)** - Ekstraksi safe regex AST (zero eval) pada output stream sintaksis Python ASCII heksadesimal chr(0x..) suffix 3881dce3, wrapper `academy{...}` valid, `picoCTF{...}` ditolak (correct: false) | 2026-11-10 |
+| 3 | 243 | HashingJobApp | General Skills | Easy | `academy{4ppl1c4710n_r3c31v3d_467e06bf}` | **SOLVED (HTTP 201 Created, correct: true)** - Otomasi interaktif protokol TCP RFC 9293 & komputasi real-time RFC 1321 MD5 128-bit digest eliminasi timeout (CWE-799), wrapper `academy{...}` valid, `picoCTF{...}` ditolak (correct: false) | 2026-11-10 |
+
+Temuan audit batch 193: (a) sinkronisasi sesi REST OK (`GET /api/challenges/?page_size=1` -> 200, user id 1072359); (b) kelanjutan audit terstandarisasi LKS & NIST SP 800-115 pada event `Beginner picoMini 2022` (6/13 modul); (c) pengujian matriks wrapper membuktikan validator CyLab pada event `Beginner picoMini 2022` secara konsisten menerima wrapper native CyLab `academy{...}` dan menolak `picoCTF{...}` (`correct: false`); (d) seluruh 3 skrip solver mandiri tuntas dieksekusi offline dan live, serta writeup LKS diperbarui lengkap; (e) test harness deterministik `scripts/test_batch_193_harness.py` meluluskan sweep AST 562/562 skrip, 3 solver mandiri, dan live API probe (PASS 6/6); (f) eksekusi terorkestrasi via AI Team & toolchain lokal.
+
 ### Batch 192 (10 November 2026 - Key Schedule Inversion, Radix Transformation & Python AST Indentation Remediation Sprint, 3/3 modul)
 | No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
