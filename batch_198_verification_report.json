@@ -1,0 +1,164 @@
+{
+  "timestamp": "2026-11-10T10:45:10.243840+00:00",
+  "batch": 198,
+  "events": [
+    "picoCTF 2022"
+  ],
+  "modules": [
+    {
+      "id": 257,
+      "name": "buffer overflow 0",
+      "category": "Binary Exploitation",
+      "event": "picoCTF 2022",
+      "flag": "academy{ov3rfl0ws_ar3nt_that_bad_1e25e28f}"
+    },
+    {
+      "id": 258,
+      "name": "buffer overflow 1",
+      "category": "Binary Exploitation",
+      "event": "picoCTF 2022",
+      "flag": "academy{addr3ss3s_ar3_3asy_b53c45d8}"
+    },
+    {
+      "id": 259,
+      "name": "buffer overflow 2",
+      "category": "Binary Exploitation",
+      "event": "picoCTF 2022",
+      "flag": "academy{argum3nt5_4_d4yZ_0f3d7e91}"
+    }
+  ],
+  "summary": {
+    "total_checks": 6,
+    "passed": 6,
+    "failed": 0,
+    "all_passed": true
+  },
+  "checks": [
+    {
+      "name": "ast_syntax_sweep",
+      "description": "AST-parses every scripts/*.py and fails on syntax errors",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "total_scanned": 567,
+        "passed": 567,
+        "failed": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "solve_257",
+      "description": "Executes solve_257_buffer_overflow_0.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{ov3rfl0ws_ar3nt_that_bad_1e25e28f}"
+      }
+    },
+    {
+      "name": "solve_258",
+      "description": "Executes solve_258_buffer_overflow_1.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{addr3ss3s_ar3_3asy_b53c45d8}"
+      }
+    },
+    {
+      "name": "solve_259",
+      "description": "Executes solve_259_buffer_overflow_2.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{argum3nt5_4_d4yZ_0f3d7e91}"
+      }
+    },
+    {
+      "name": "live_evidence_probes",
+      "description": "Validates session health (200) and live flag acceptance (201 correct:true) on CyLab API",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_verified": true,
+        "probes": [
+          {
+            "endpoint": "GET /api/challenges/?page_size=1",
+            "http": 200,
+            "healthy": true
+          },
+          {
+            "challenge_id": 257,
+            "endpoint": "POST /api/submissions/",
+            "http": 201,
+            "flag": "academy{ov3rfl0ws_ar3nt_that_bad_1e25e28f}",
+            "correct": true,
+            "response": "{\"user\": 1072359, \"challenge\": 257, \"flag\": \"academy{ov3rfl0ws_ar3nt_that_bad_1e25e28f}\", \"correct\": true, \"historical\": false}"
+          },
+          {
+            "challenge_id": 258,
+            "endpoint": "POST /api/submissions/",
+            "http": 201,
+            "flag": "academy{addr3ss3s_ar3_3asy_b53c45d8}",
+            "correct": true,
+            "response": "{\"user\": 1072359, \"challenge\": 258, \"flag\": \"academy{addr3ss3s_ar3_3asy_b53c45d8}\", \"correct\": true, \"historical\": false}"
+          },
+          {
+            "challenge_id": 259,
+            "endpoint": "POST /api/submissions/",
+            "http": 201,
+            "flag": "academy{argum3nt5_4_d4yZ_0f3d7e91}",
+            "correct": true,
+            "response": "{\"user\": 1072359, \"challenge\": 259, \"flag\": \"academy{argum3nt5_4_d4yZ_0f3d7e91}\", \"correct\": true, \"historical\": false}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "writeup_documentation_audit",
+      "description": "Asserts existence and LKS-compliant structure of writeups for modules 257, 258, 259",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_valid": true,
+        "writeups": [
+          {
+            "challenge_id": 257,
+            "path": "writeups/picoCTF-2022/257-buffer-overflow-0.md",
+            "exists": true,
+            "flag_matched": true,
+            "lks_mitigation_present": true,
+            "valid": true
+          },
+          {
+            "challenge_id": 258,
+            "path": "writeups/picoCTF-2022/258-buffer-overflow-1.md",
+            "exists": true,
+            "flag_matched": true,
+            "lks_mitigation_present": true,
+            "valid": true
+          },
+          {
+            "challenge_id": 259,
+            "path": "writeups/picoCTF-2022/259-buffer-overflow-2.md",
+            "exists": true,
+            "flag_matched": true,
+            "lks_mitigation_present": true,
+            "valid": true
+          }
+        ]
+      }
+    }
+  ]
+}

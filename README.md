@@ -42,6 +42,15 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 198 (10 November 2026 - Stack Smashing, Control Flow Hijacking & cdecl Stack Argument Sprint, 3/3 modul)
+| No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 257 | buffer overflow 0 | Binary Exploitation | Medium | `academy{ov3rfl0ws_ar3nt_that_bad_1e25e28f}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis luapan buffer tumpukan 16 bita tanpa canaries (CWE-121 / CWE-676), perusakan frame %ebp/%eip pemicu sinyal kernel SIGSEGV (Signal 11), dan pemanggilan sigsegv_handler pencetak bendera (NIST SP 800-115 §4.2), kelanjutan audit event picoCTF 2022 (6/65), wrapper `academy{...}` valid | 2026-11-10 |
+| 2 | 258 | buffer overflow 1 | Binary Exploitation | Medium | `academy{addr3ss3s_ar3_3asy_b53c45d8}` | **SOLVED (HTTP 201 Created, correct: true)** - Pembajakan alur kontrol (%eip) pada tata letak memori tumpukan 32-bit x86 non-PIE (CWE-121 / CWE-676) dengan offset 44 bita dari pangkal buffer lokal menuju fungsi target win() pada alamat 0x080491E6, kelanjutan audit event picoCTF 2022 (7/65), wrapper `academy{...}` valid | 2026-11-10 |
+| 3 | 259 | buffer overflow 2 | Binary Exploitation | Medium | `academy{argum3nt5_4_d4yZ_0f3d7e91}` | **SOLVED (HTTP 201 Created, correct: true)** - Eksploitasi ret2win dengan penyusunan bingkai tumpukan tiruan (fake stack frame) konvensi cdecl 32-bit System V i386 ABI (CWE-121 / CWE-676) pada offset 112 bita, dummy return 0xDEADBEEF, serta validasi dua argumen 0xCAFEF00D dan 0xF00DF00D, kelanjutan audit event picoCTF 2022 (8/65), wrapper `academy{...}` valid | 2026-11-10 |
+
+Temuan audit batch 198: (a) sinkronisasi sesi REST OK (`GET /api/challenges/?page_size=1` -> 200, user id 1072359); (b) kelanjutan audit event `picoCTF 2022` (8/65 modul) mencakup #257 buffer overflow 0, #258 buffer overflow 1, dan #259 buffer overflow 2; (c) pengujian matriks wrapper membuktikan validator CyLab secara konsisten menerima wrapper native CyLab `academy{...}` dan menolak `picoCTF{...}` (`correct: false`); (d) seluruh 3 skrip solver mandiri tuntas dieksekusi offline dan live, serta writeup LKS diperbarui lengkap; (e) test harness deterministik `scripts/test_batch_198_harness.py` meluluskan sweep AST 567/567 skrip, 3 solver mandiri, dan live API probe (PASS 6/6); (f) eksekusi terorkestrasi via AI Team & toolchain lokal.
+
 ### Batch 197 (10 November 2026 - Modular Inversion GF(41), PIE Dead-Code Bloat & Obfuscated Python AST Sprint, 3/3 modul)
 | No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
