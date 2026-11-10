@@ -42,6 +42,15 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 192 (10 November 2026 - Key Schedule Inversion, Radix Transformation & Python AST Indentation Remediation Sprint, 3/3 modul)
+| No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 238 | Codebook | General Skills | Easy | `academy{c0d3b00k_455157_570b049a}` | **SOLVED (HTTP 201 Created, correct: true)** - Inversi key schedule pada string codebook.txt (chthonian) & dekripsi repeating-key stream XOR 33 byte, wrapper `academy{...}` valid, `picoCTF{...}` ditolak (correct: false) | 2026-11-10 |
+| 2 | 239 | convertme.py | General Skills | Easy | `academy{4ll_y0ur_b4535_fff0af3d}` | **SOLVED (HTTP 201 Created, correct: true)** - Radix transformation decimal-to-binary (POSIX/RFC) & ekstraksi kriptografis statis XOR stream enkidu 32 byte (CWE-807 bypass), wrapper `academy{...}` valid, `picoCTF{...}` ditolak (correct: false) | 2026-11-10 |
+| 3 | 240 | fixme1.py | General Skills | Easy | `academy{1nd3nt1ty_cr1515_f63757ad}` | **SOLVED (HTTP 201 Created, correct: true)** - Remediasi tata bahasa sintaks Python AST (PEP 8 IndentationError unexpected indent) & dekripsi XOR stream enkidu 34 byte, wrapper `academy{...}` valid, `picoCTF{...}` ditolak (correct: false) | 2026-11-10 |
+
+Temuan audit batch 192: (a) sinkronisasi sesi REST OK (`GET /api/challenges/?page_size=1` -> 200, user id 1072359); (b) inisiasi audit terstandarisasi LKS & NIST SP 800-115 pada event `Beginner picoMini 2022` (3/13 modul); (c) pengujian matriks wrapper membuktikan validator CyLab pada event `Beginner picoMini 2022` secara konsisten menerima wrapper native CyLab `academy{...}` dan menolak `picoCTF{...}` (`correct: false`); (d) seluruh 3 skrip solver mandiri tuntas dieksekusi offline dan live, serta writeup LKS diperbarui lengkap; (e) test harness deterministik `scripts/test_batch_192_harness.py` meluluskan sweep AST 561/561 skrip, 3 solver mandiri, dan live API probe (PASS 6/6); (f) eksekusi terorkestrasi via AI Team & toolchain lokal.
+
 ### Batch 191 (10 November 2026 - Format String Canary Leak, Ret2Syscall Static ROP & OTP Jumble Inversion Sprint, 3/3 modul)
 | No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|

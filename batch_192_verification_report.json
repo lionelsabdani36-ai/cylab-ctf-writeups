@@ -1,0 +1,153 @@
+{
+  "timestamp": "2026-11-10T05:17:09.447986+00:00",
+  "batch": 192,
+  "event": "Beginner picoMini 2022",
+  "modules": [
+    {
+      "id": 238,
+      "name": "Codebook",
+      "category": "General Skills",
+      "flag": "academy{c0d3b00k_455157_570b049a}"
+    },
+    {
+      "id": 239,
+      "name": "convertme.py",
+      "category": "General Skills",
+      "flag": "academy{4ll_y0ur_b4535_fff0af3d}"
+    },
+    {
+      "id": 240,
+      "name": "fixme1.py",
+      "category": "General Skills",
+      "flag": "academy{1nd3nt1ty_cr1515_f63757ad}"
+    }
+  ],
+  "summary": {
+    "total_checks": 6,
+    "passed": 6,
+    "failed": 0,
+    "all_passed": true
+  },
+  "checks": [
+    {
+      "name": "ast_syntax_sweep",
+      "description": "AST-parses every scripts/*.py and fails on syntax errors",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "total_scanned": 561,
+        "passed": 561,
+        "failed": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "solve_238",
+      "description": "Executes solve_238_codebook.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{c0d3b00k_455157_570b049a}"
+      }
+    },
+    {
+      "name": "solve_239",
+      "description": "Executes solve_239_convertme.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{4ll_y0ur_b4535_fff0af3d}"
+      }
+    },
+    {
+      "name": "solve_240",
+      "description": "Executes solve_240_fixme1.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{1nd3nt1ty_cr1515_f63757ad}"
+      }
+    },
+    {
+      "name": "live_evidence_probes",
+      "description": "Validates session health (200) and live flag acceptance (201 correct:true) on CyLab API",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_verified": true,
+        "probes": [
+          {
+            "endpoint": "GET /api/challenges/?page_size=1",
+            "http": 200,
+            "healthy": true
+          },
+          {
+            "challenge_id": 238,
+            "flag": "academy{c0d3b00k_455157_570b049a}",
+            "http": 201,
+            "correct": true
+          },
+          {
+            "challenge_id": 239,
+            "flag": "academy{4ll_y0ur_b4535_fff0af3d}",
+            "http": 201,
+            "correct": true
+          },
+          {
+            "challenge_id": 240,
+            "flag": "academy{1nd3nt1ty_cr1515_f63757ad}",
+            "http": 201,
+            "correct": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "writeup_documentation_audit",
+      "description": "Asserts existence and LKS-compliant structure of writeups for modules 238, 239, 240",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_valid": true,
+        "writeups": [
+          {
+            "challenge_id": 238,
+            "path": "writeups/Beginner-picoMini-2022/238-codebook.md",
+            "exists": true,
+            "flag_matched": true,
+            "lks_mitigation_present": true,
+            "valid": true
+          },
+          {
+            "challenge_id": 239,
+            "path": "writeups/Beginner-picoMini-2022/239-convertme.md",
+            "exists": true,
+            "flag_matched": true,
+            "lks_mitigation_present": true,
+            "valid": true
+          },
+          {
+            "challenge_id": 240,
+            "path": "writeups/Beginner-picoMini-2022/240-fixme1.md",
+            "exists": true,
+            "flag_matched": true,
+            "lks_mitigation_present": true,
+            "valid": true
+          }
+        ]
+      }
+    }
+  ]
+}
