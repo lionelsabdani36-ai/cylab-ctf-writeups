@@ -1,0 +1,142 @@
+{
+  "batch": 188,
+  "timestamp": "2026-11-10 02:08:05 UTC",
+  "utc_timestamp": "2026-11-10T02:08:05.129747+00:00",
+  "student_account": "Arielwin",
+  "user_id": 1072359,
+  "checks": [
+    {
+      "name": "ast_syntax_sweep",
+      "description": "AST-parses every scripts/*.py and fails on syntax errors",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "total_scanned": 557,
+        "passed": 557,
+        "failed": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "solve_202",
+      "description": "Executes solve_202_caas.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "picoCTF{moooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo0o}"
+      }
+    },
+    {
+      "name": "solve_205",
+      "description": "Executes solve_205_advanced_potion_making.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "picoCTF{w1z4rdry}"
+      }
+    },
+    {
+      "name": "solve_208",
+      "description": "Executes solve_208_xtraordinary.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "picoCTF{w41t_s0_1_d1dnt_1nv3nt_x0r???}"
+      }
+    },
+    {
+      "name": "live_evidence_probes",
+      "description": "Verifies session health and live flag acceptance on CyLab submissions endpoint",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "session_healthy": true,
+        "all_tokens_verified": true,
+        "probes": [
+          {
+            "endpoint": "GET /api/challenges/?page_size=1",
+            "http": 200,
+            "healthy": true
+          },
+          {
+            "challenge_id": 202,
+            "flag": "picoCTF{moooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo0o}",
+            "http": 201,
+            "correct": true,
+            "raw_response": "{\"user\": 1072359, \"challenge\": 202, \"flag\": \"picoCTF{moooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo0o}\", \"correct\": true, \"historical\":"
+          },
+          {
+            "challenge_id": 205,
+            "flag": "picoCTF{w1z4rdry}",
+            "http": 201,
+            "correct": true,
+            "raw_response": "{\"user\": 1072359, \"challenge\": 205, \"flag\": \"picoCTF{w1z4rdry}\", \"correct\": true, \"historical\": false}"
+          },
+          {
+            "challenge_id": 208,
+            "flag": "picoCTF{w41t_s0_1_d1dnt_1nv3nt_x0r???}",
+            "http": 201,
+            "correct": true,
+            "raw_response": "{\"user\": 1072359, \"challenge\": 208, \"flag\": \"picoCTF{w41t_s0_1_d1dnt_1nv3nt_x0r???}\", \"correct\": true, \"historical\": false}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "writeup_documentation_audit",
+      "description": "Verifies existence, official flag format, and Batch 188 audit stamp across writeups",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_writeups_valid": true,
+        "items": [
+          {
+            "challenge_id": "202",
+            "path": "writeups/picoMini-by-redpwn/202-caas.md",
+            "exists": true,
+            "has_flag": true,
+            "has_batch_stamp": true,
+            "size_chars": 6072,
+            "pass": true
+          },
+          {
+            "challenge_id": "205",
+            "path": "writeups/picoMini-by-redpwn/205-advanced-potion-making.md",
+            "exists": true,
+            "has_flag": true,
+            "has_batch_stamp": true,
+            "size_chars": 6691,
+            "pass": true
+          },
+          {
+            "challenge_id": "208",
+            "path": "writeups/picoMini-by-redpwn/208-xtraordinary.md",
+            "exists": true,
+            "has_flag": true,
+            "has_batch_stamp": true,
+            "size_chars": 6341,
+            "pass": true
+          }
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "total_checks": 6,
+    "passed_checks": 6,
+    "failed_checks": 0,
+    "overall_status": "PASS"
+  }
+}

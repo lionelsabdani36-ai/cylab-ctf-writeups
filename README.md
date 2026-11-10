@@ -42,6 +42,15 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 188 (10 November 2026 - Web, Forensics & Cryptography Event Wrapper Rectification Sprint, 3/3 modul)
+| No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 202 | caas | Web Exploitation | Medium | `picoCTF{moooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo0o}` | **SOLVED (HTTP 201 Created, correct: true)** - Node.js Express child_process.exec OS command injection via URL-encoded semicolon delimiter (%3B) & falg.txt exfiltration, wrapper `picoCTF{...}` valid, `academy{...}` ditolak (correct: false) | 2026-11-10 |
+| 2 | 205 | advanced-potion-making | Forensics | Medium | `picoCTF{w1z4rdry}` | **SOLVED (HTTP 201 Created, correct: true)** - RFC 2083 PNG 8-byte signature & 4-byte IHDR length patching + CRC-32 validation + Red plane steganography glyph extraction, wrapper `picoCTF{...}` valid, `academy{...}` ditolak (correct: false) | 2026-11-10 |
+| 3 | 208 | XtraORdinary | Cryptography | Medium | `picoCTF{w41t_s0_1_d1dnt_1nv3nt_x0r???}` | **SOLVED (HTTP 201 Created, correct: true)** - Mathematical XOR involution reduction (2^5 = 32 states) & known-plaintext attack on picoCTF{ prefix recovering repeating key Africa!, wrapper `picoCTF{...}` valid, `academy{...}` ditolak (correct: false) | 2026-11-10 |
+
+Temuan audit batch 188: (a) sinkronisasi sesi REST OK (`GET /api/challenges/?page_size=1` -> 200, user id 1072359); (b) audit mendalam terhadap modul event backport (`picoMini by redpwn`) membuktikan bahwa validator CyLab secara konsisten mensyaratkan native wrapper `picoCTF{...}` dan menolak rekey `academy{...}` dengan `correct: false`; (c) writeup teknis dan skrip reproduksi untuk ketiga modul diperbarui ke standar kompetisi LKS Cyber Security & NIST SP 800-115; (d) test harness deterministik `scripts/test_batch_188_harness.py` meluluskan sweep AST 557/557 skrip, 3 solver mandiri, dan live API probe (PASS 6/6); (e) eksekusi terorkestrasi via AI Team & toolchain lokal.
+
 ### Batch 187 (10 November 2026 - Crypto Coppersmith Rectification & RE VM/Memcmp Multi-Domain Verification Sprint, 3/3 modul)
 | No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
