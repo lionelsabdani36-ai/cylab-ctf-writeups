@@ -1,0 +1,153 @@
+{
+  "timestamp": "2026-11-10T03:34:33.477617+00:00",
+  "batch": 190,
+  "event": "picoCTF 2020 Mini-Competition",
+  "modules": [
+    {
+      "id": 87,
+      "name": "pitter-patter-platters",
+      "category": "Forensics",
+      "flag": "academy{b3_5t111_mL|_<3_d18a1e1e}"
+    },
+    {
+      "id": 88,
+      "name": "web-gauntlet",
+      "category": "Web Exploitation",
+      "flag": "academy{y0u_m4d3_1t_ecb312a6}"
+    },
+    {
+      "id": 91,
+      "name": "nothing-up-my-sleeve",
+      "category": "General Skills",
+      "flag": "academy{c0ngr4ts_0n_y0ur_s4n1ty}"
+    }
+  ],
+  "summary": {
+    "total_checks": 6,
+    "passed": 6,
+    "failed": 0,
+    "all_passed": true
+  },
+  "checks": [
+    {
+      "name": "ast_syntax_sweep",
+      "description": "AST-parses every scripts/*.py and fails on syntax errors",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "total_scanned": 559,
+        "passed": 559,
+        "failed": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "solve_87",
+      "description": "Executes solve_87_pitter_patter_platters.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{b3_5t111_mL|_<3_d18a1e1e}"
+      }
+    },
+    {
+      "name": "solve_88",
+      "description": "Executes solve_88_web_gauntlet.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{y0u_m4d3_1t_ecb312a6}"
+      }
+    },
+    {
+      "name": "solve_91",
+      "description": "Executes solve_91_nothing_up_my_sleeve.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{c0ngr4ts_0n_y0ur_s4n1ty}"
+      }
+    },
+    {
+      "name": "live_evidence_probes",
+      "description": "Validates session health (200) and live flag acceptance (201 correct:true) on CyLab API",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_verified": true,
+        "probes": [
+          {
+            "endpoint": "GET /api/challenges/?page_size=1",
+            "http": 200,
+            "healthy": true
+          },
+          {
+            "challenge_id": 87,
+            "flag": "academy{b3_5t111_mL|_<3_d18a1e1e}",
+            "http": 201,
+            "correct": true
+          },
+          {
+            "challenge_id": 88,
+            "flag": "academy{y0u_m4d3_1t_ecb312a6}",
+            "http": 201,
+            "correct": true
+          },
+          {
+            "challenge_id": 91,
+            "flag": "academy{c0ngr4ts_0n_y0ur_s4n1ty}",
+            "http": 201,
+            "correct": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "writeup_documentation_audit",
+      "description": "Verifies presence of LKS & NIST SP 800-115 standardized writeups and verified flag tokens",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_passed": true,
+        "writeups": [
+          {
+            "challenge_id": 87,
+            "path": "writeups/picoCTF-2020-Mini-Competition/87-pitter-patter-platters.md",
+            "exists": true,
+            "has_flag": true,
+            "has_lks_section": true,
+            "passed": true
+          },
+          {
+            "challenge_id": 88,
+            "path": "writeups/picoCTF-2020-Mini-Competition/88-web-gauntlet.md",
+            "exists": true,
+            "has_flag": true,
+            "has_lks_section": true,
+            "passed": true
+          },
+          {
+            "challenge_id": 91,
+            "path": "writeups/picoCTF-2020-Mini-Competition/91-nothing-up-my-sleeve.md",
+            "exists": true,
+            "has_flag": true,
+            "has_lks_section": true,
+            "passed": true
+          }
+        ]
+      }
+    }
+  ]
+}

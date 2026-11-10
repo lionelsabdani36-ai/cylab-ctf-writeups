@@ -42,6 +42,15 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 190 (10 November 2026 - Forensics Slack Space, SQLite Evasion & Cleartext Asset Sprint, 3/3 modul)
+| No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 87 | Pitter, Patter, Platters | Forensics | Medium | `academy{b3_5t111_mL|_<3_d18a1e1e}` | **SOLVED (HTTP 201 Created, correct: true)** - Ext3 filesystem file slack space carving on inode 12 suspicious-file.txt (block 2049, 4041B slack) decoding reversed UTF-16LE stream, wrapper `academy{...}` valid, `picoCTF{...}` ditolak (correct: false) | 2026-11-10 |
+| 2 | 88 | Web Gauntlet | Web Exploitation | Medium | `academy{y0u_m4d3_1t_ecb312a6}` | **SOLVED (HTTP 201 Created, correct: true)** - Multi-stage SQLite3 injection blacklist evasion across 5 rounds using C-style block comments `/*` and string concatenation `\|\|` (`admi'\|\|'n'/*`), wrapper `academy{...}` valid, `picoCTF{...}` ditolak (correct: false) | 2026-11-10 |
+| 3 | 91 | Nothing Up My Sleeve | General Skills | Medium | `academy{c0ngr4ts_0n_y0ur_s4n1ty}` | **SOLVED (HTTP 201 Created, correct: true)** - Cleartext secret retrieval via HTTPS (RFC 9110) & cryptographic integrity validation (SHA-256 ebf27742...254205dd), wrapper `academy{...}` valid, `picoCTF{...}` ditolak (correct: false) | 2026-11-10 |
+
+Temuan audit batch 190: (a) sinkronisasi sesi REST OK (`GET /api/challenges/?page_size=1` -> 200, user id 1072359); (b) audit mendalam terhadap event `picoCTF 2020 Mini-Competition` membuktikan validator CyLab menerima CyLab-native wrapper `academy{...}` dan menolak varian `picoCTF{...}` (`correct: false`); (c) rekayasa balik forensik pada modul #87 mengungkap struktur residual slack space 4041 byte dengan penyandian UTF-16LE terbalik; (d) writeup teknis dan skrip reproduksi untuk ketiga modul diperbarui ke standar kompetisi LKS Cyber Security & NIST SP 800-115; (e) test harness deterministik `scripts/test_batch_190_harness.py` meluluskan sweep AST 559/559 skrip, 3 solver mandiri, dan live API probe (PASS 6/6); (f) eksekusi terorkestrasi via AI Team & toolchain lokal.
+
 ### Batch 189 (10 November 2026 - Cryptography & Binary Exploitation Event Finalization Sprint, 3/3 modul)
 | No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
