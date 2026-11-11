@@ -68,8 +68,16 @@ Tantangan ini menyajikan aplikasi web Java Spring Boot bernama **BookShelf Pico*
 
 ---
 
-## Remediasi & Mitigasi (Perspektif Defensive LKS)
+## Takeaway Kompetensi LKS & Mitigasi Defensif (NIST SP 800-115)
 
-1. Gunakan generator kriptografis *CSPRNG* seperti `java.security.SecureRandom` untuk membuat kunci rahasia JWT dengan entropi minimal 256-bit (32 bytes).
-2. Simpan rahasia JWT di *environment variable* atau sistem pengelola rahasia (HashiCorp Vault, AWS Secrets Manager), bukan dalam basis kode atau generator statis fallback.
-3. Terapkan verifikasi integritas peran ganda dan batasi operasi peningkatan hak istimewa (*role assignment*) hanya melalui otorisasi berlapis dan pencatatan audit ketat.
+1. **Pembangkitan Kunci Kriptografis Berentropi Tinggi (CSPRNG):**
+   Hindari segala bentuk fallback hardcoded pada generator rahasia. Gunakan `java.security.SecureRandom` untuk menghasilkan kunci minimal 256-bit (32 byte) secara kriptografis aman:
+   ```java
+   byte[] secretBytes = new byte[32];
+   new SecureRandom().nextBytes(secretBytes);
+   String secret = Base64.getEncoder().encodeToString(secretBytes);
+   ```
+2. **Penyimpanan Rahasia Terisolasi (Secrets Management):**
+   Kunci rahasia penandatanganan token wajib diinjeksikan secara dinamis melalui environment variable atau modul pengelola rahasia (HashiCorp Vault, AWS Secrets Manager), dengan kebijakan rotasi kunci berkala.
+3. **Validasi Kontrol Akses Bertingkat (Defense in Depth):**
+   Operasi eskalasi peran sistem tidak boleh hanya bergantung pada pembacaan klaim stateless JWT sisi klien. Validasi wajib memverifikasi ulang status pengguna secara langsung pada entitas basis data aktif serta menerapkan otentikasi multifaktor (MFA) untuk operasi pengubahan privilese administratif.

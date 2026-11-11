@@ -1,0 +1,191 @@
+{
+  "timestamp": "2026-11-11T00:04:36.712088+00:00",
+  "batch": 210,
+  "events": [
+    "picoCTF 2023"
+  ],
+  "modules": [
+    {
+      "id": 353,
+      "name": "Horsetrack",
+      "category": "Binary Exploitation",
+      "event": "picoCTF 2023",
+      "flag": "academy{t_cache_4ll_th3_w4y_2_th4_b4nk_744fb97a}"
+    },
+    {
+      "id": 354,
+      "name": "Invisible WORDs",
+      "category": "Forensics",
+      "event": "picoCTF 2023",
+      "flag": "academy{w0rd_d4wg_y0u_f0und_5h3113ys_m4573rp13c3_75527d56}"
+    },
+    {
+      "id": 355,
+      "name": "Java Code Analysis!?!",
+      "category": "Web Exploitation",
+      "event": "picoCTF 2023",
+      "flag": "academy{w34k_jwt_n0t_g00d_d3a1bea8}"
+    }
+  ],
+  "summary": {
+    "total_checks": 6,
+    "passed": 6,
+    "failed": 0,
+    "all_passed": true
+  },
+  "checks": [
+    {
+      "name": "ast_syntax_sweep",
+      "description": "AST-parses every scripts/*.py and fails on syntax errors",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "total_scanned": 579,
+        "passed": 579,
+        "failed": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "solve_353",
+      "description": "Executes solve_353_horsetrack.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{t_cache_4ll_th3_w4y_2_th4_b4nk_744fb97a}",
+        "stdout_tail": "[*] Solving Challenge 353: Horsetrack\n[+] Verified dynamic token: academy{t_cache_4ll_th3_w4y_2_th4_b4nk_744fb97a}\n[+] Platform submission response: {\"user\": 1072359, \"challenge\": 353, \"flag\": \"academy{t_cache_4ll_th3_w4y_2_th4_b4nk_744fb97a}\", \"correct\": true, \"historical\": false}\n\n[SUCCESS] Module 353 (Horsetrack) fully audited and solved: academy{t_cache_4ll_th3_w4y_2_th4_b4nk_744fb97a}\n",
+        "stderr_tail": ""
+      }
+    },
+    {
+      "name": "solve_354",
+      "description": "Executes solve_354_invisible_words.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{w0rd_d4wg_y0u_f0und_5h3113ys_m4573rp13c3_75527d56}",
+        "stdout_tail": "75527d56}\n[+] Verified dynamic token: academy{w0rd_d4wg_y0u_f0und_5h3113ys_m4573rp13c3_75527d56}\n[+] Platform submission response: {\"user\": 1072359, \"challenge\": 354, \"flag\": \"academy{w0rd_d4wg_y0u_f0und_5h3113ys_m4573rp13c3_75527d56}\", \"correct\": true, \"historical\": false}\n\n[SUCCESS] Module 354 (Invisible WORDs) fully audited and solved: academy{w0rd_d4wg_y0u_f0und_5h3113ys_m4573rp13c3_75527d56}\n",
+        "stderr_tail": ""
+      }
+    },
+    {
+      "name": "solve_355",
+      "description": "Executes solve_355_java_code_analysis.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{w34k_jwt_n0t_g00d_d3a1bea8}",
+        "stdout_tail": "ode Analysis!?!\n[+] Offline JWT HS256 forgery algorithm verified cleanly\n[+] Verified dynamic token: academy{w34k_jwt_n0t_g00d_d3a1bea8}\n[+] Platform submission response: {\"user\": 1072359, \"challenge\": 355, \"flag\": \"academy{w34k_jwt_n0t_g00d_d3a1bea8}\", \"correct\": true, \"historical\": false}\n\n[SUCCESS] Module 355 (Java Code Analysis!?!) fully audited and solved: academy{w34k_jwt_n0t_g00d_d3a1bea8}\n",
+        "stderr_tail": ""
+      }
+    },
+    {
+      "name": "live_evidence_probes",
+      "description": "Validates session health (200) and live flag acceptance (201 correct:true) on CyLab API",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_verified": true,
+        "probes": [
+          {
+            "endpoint": "GET /api/challenges/?page_size=1",
+            "http": 200,
+            "healthy": true
+          },
+          {
+            "challenge_id": 353,
+            "flag": "academy{t_cache_4ll_th3_w4y_2_th4_b4nk_744fb97a}",
+            "http": 201,
+            "correct": true,
+            "response": {
+              "user": 1072359,
+              "challenge": 353,
+              "flag": "academy{t_cache_4ll_th3_w4y_2_th4_b4nk_744fb97a}",
+              "correct": true,
+              "historical": false
+            }
+          },
+          {
+            "challenge_id": 354,
+            "flag": "academy{w0rd_d4wg_y0u_f0und_5h3113ys_m4573rp13c3_75527d56}",
+            "http": 201,
+            "correct": true,
+            "response": {
+              "user": 1072359,
+              "challenge": 354,
+              "flag": "academy{w0rd_d4wg_y0u_f0und_5h3113ys_m4573rp13c3_75527d56}",
+              "correct": true,
+              "historical": false
+            }
+          },
+          {
+            "challenge_id": 355,
+            "flag": "academy{w34k_jwt_n0t_g00d_d3a1bea8}",
+            "http": 201,
+            "correct": true,
+            "response": {
+              "user": 1072359,
+              "challenge": 355,
+              "flag": "academy{w34k_jwt_n0t_g00d_d3a1bea8}",
+              "correct": true,
+              "historical": false
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "writeup_documentation_audit",
+      "description": "Validates existence, LKS structure, flag token accuracy, and zero em dash in writeups",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_verified": true,
+        "files": [
+          {
+            "file": "writeups/picoCTF-2023/353-horsetrack.md",
+            "challenge_id": 353,
+            "exists": true,
+            "flag_present": true,
+            "sections_present": true,
+            "missing_sections": [],
+            "anti_slop_clean": true,
+            "pass": true
+          },
+          {
+            "file": "writeups/picoCTF-2023/354-invisible-words.md",
+            "challenge_id": 354,
+            "exists": true,
+            "flag_present": true,
+            "sections_present": true,
+            "missing_sections": [],
+            "anti_slop_clean": true,
+            "pass": true
+          },
+          {
+            "file": "writeups/picoCTF-2023/355-java-code-analysis.md",
+            "challenge_id": 355,
+            "exists": true,
+            "flag_present": true,
+            "sections_present": true,
+            "missing_sections": [],
+            "anti_slop_clean": true,
+            "pass": true
+          }
+        ]
+      }
+    }
+  ]
+}

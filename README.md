@@ -42,6 +42,15 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 210 (11 November 2026 - Safe-Linking Heap Tcache GOT Overwrite, 16-Bit WORD Steganography & Spring Security JWT Forgery Sprint, 3/3 modul)
+| No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 353 | Horsetrack | Binary Exploitation | Hard | `academy{t_cache_4ll_th3_w4y_2_th4_b4nk_744fb97a}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis biner ELF 64-bit x86-64 manajemen pacuan kuda glibc 2.33, eksploitasi Use-After-Free pada fungsi cheat dan kebocoran heap key Safe-Linking (P' = (L >> 12) ^ P), peracunan tcache bin untuk menimpa free@GOT menjadi system@plt (CWE-416 / CWE-822 / CWE-78 / NIST SP 800-115 §4.2), kelanjutan audit event picoCTF 2023 (10/42), wrapper `academy{...}` valid | 2026-11-11 |
+| 2 | 354 | Invisible WORDs | Forensics | Hard | `academy{w0rd_d4wg_y0u_f0und_5h3113ys_m4573rp13c3_75527d56}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis gambar format Windows BMP 32-bit output.bmp, deteksi steganografi interleaving muatan biner pada pasangan 2-byte WORD rendah (saluran Blue-Green) mulai offset 0x8c, carving kontainer PKZIP terkompresi dengan pemotongan padding EOCD, dan ekstraksi naskah novel Frankenstein (CWE-200 / CWE-532 / NIST SP 800-115 §4.2), kelanjutan audit event picoCTF 2023 (11/42), wrapper `academy{...}` valid | 2026-11-11 |
+| 3 | 355 | Java Code Analysis!?! | Web Exploitation | Medium | `academy{w34k_jwt_n0t_g00d_d3a1bea8}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis aplikasi web Java Spring Boot BookShelf Pico, identifikasi pembangkitan rahasia statis fallback "1234" pada SecretGenerator.java, fabrikasi token JWT HMAC-SHA256 (HS256) peran Admin, eskalasi privilese vertikal akun via PATCH /base/users/role, dan pembacaan berkas PDF rahasia (CWE-321 / CWE-798 / CWE-285 / NIST SP 800-115 §4.2), kelanjutan audit event picoCTF 2023 (12/42), wrapper `academy{...}` valid | 2026-11-11 |
+
+Temuan audit batch 210: (a) sinkronisasi sesi REST OK (`GET /api/challenges/?page_size=1` -> 200, user id 1072359); (b) kelanjutan audit event `picoCTF 2023` (12/42 modul) mencakup #353 Horsetrack, #354 Invisible WORDs, dan #355 Java Code Analysis!?!; (c) pengujian live REST API pada ketiga modul berhasil memperoleh status HTTP 201 Created dengan `correct: true`; (d) seluruh 3 skrip solver mandiri tuntas dieksekusi offline dan live, serta writeup LKS diperbarui lengkap; (e) test harness deterministik `scripts/test_batch_210_harness.py` meluluskan sweep AST 579/579 skrip, 3 solver mandiri, dan live API probe (PASS 6/6); (f) eksekusi terorkestrasi via AI Team & toolchain lokal.
+
 ### Batch 209 (10 November 2026 - PNG Trailing PKZIP Carving, Atbash Cipher Inversion & Sudo Module Hijacking Sprint, 3/3 modul)
 | No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
