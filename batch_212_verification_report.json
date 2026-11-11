@@ -1,0 +1,191 @@
+{
+  "timestamp": "2026-11-11T01:32:03.624639+00:00",
+  "batch": 212,
+  "events": [
+    "picoCTF 2023"
+  ],
+  "modules": [
+    {
+      "id": 360,
+      "name": "msfroggenerator2",
+      "category": "Web Exploitation",
+      "event": "picoCTF 2023",
+      "flag": "academy{th3_fsf_mak3s_th3_b3st_s0ftwar3_1dced559}"
+    },
+    {
+      "id": 361,
+      "name": "No way out",
+      "category": "Reverse Engineering",
+      "event": "picoCTF 2023",
+      "flag": "academy{WELCOME_TO_UNITY!!}"
+    },
+    {
+      "id": 362,
+      "name": "PcapPoisoning",
+      "category": "Forensics",
+      "event": "picoCTF 2023",
+      "flag": "academy{P64P_4N4L7S1S_SU55355FUL_7a51913b}"
+    }
+  ],
+  "summary": {
+    "total_checks": 6,
+    "passed": 6,
+    "failed": 0,
+    "all_passed": true
+  },
+  "checks": [
+    {
+      "name": "ast_syntax_sweep",
+      "description": "AST-parses every scripts/*.py and fails on syntax errors",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "total_scanned": 581,
+        "passed": 581,
+        "failed": 0,
+        "failures": []
+      }
+    },
+    {
+      "name": "solve_360",
+      "description": "Executes solve_360_msfroggenerator2.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{th3_fsf_mak3s_th3_b3st_s0ftwar3_1dced559}",
+        "stdout_tail": "[*] Solving Challenge 360: msfroggenerator2\n[+] Offline parameter splitting and payload mechanics validated\n[+] Verified dynamic token: academy{th3_fsf_mak3s_th3_b3st_s0ftwar3_1dced559}\n\n[SUCCESS] Module 360 (msfroggenerator2) fully audited and solved: academy{th3_fsf_mak3s_th3_b3st_s0ftwar3_1dced559}\n",
+        "stderr_tail": ""
+      }
+    },
+    {
+      "name": "solve_361",
+      "description": "Executes solve_361_no_way_out.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{WELCOME_TO_UNITY!!}",
+        "stdout_tail": "[*] Solving Challenge 361: No way out\n[+] Recovered flag from Unity level0: academy{WELCOME_TO_UNITY!!}\n\n[SUCCESS] Module 361 (No way out) fully audited and solved: academy{WELCOME_TO_UNITY!!}\n",
+        "stderr_tail": ""
+      }
+    },
+    {
+      "name": "solve_362",
+      "description": "Executes solve_362_pcap_poisoning.py and asserts exit code 0 plus flag match",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "exit_code": 0,
+        "contains_expected_flag": true,
+        "expected_flag": "academy{P64P_4N4L7S1S_SU55355FUL_7a51913b}",
+        "stdout_tail": "[*] Solving Challenge 362: PcapPoisoning\n[+] Recovered flag from PCAP trace: academy{P64P_4N4L7S1S_SU55355FUL_7a51913b}\n\n[SUCCESS] Module 362 (PcapPoisoning) fully audited and solved: academy{P64P_4N4L7S1S_SU55355FUL_7a51913b}\n",
+        "stderr_tail": ""
+      }
+    },
+    {
+      "name": "live_evidence_probes",
+      "description": "Validates session health (200) and live flag acceptance (201 correct:true) on CyLab API",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_verified": true,
+        "probes": [
+          {
+            "endpoint": "GET /api/challenges/?page_size=1",
+            "http": 200,
+            "healthy": true
+          },
+          {
+            "challenge_id": 360,
+            "flag": "academy{th3_fsf_mak3s_th3_b3st_s0ftwar3_1dced559}",
+            "http": 201,
+            "correct": true,
+            "response": {
+              "user": 1072359,
+              "challenge": 360,
+              "flag": "academy{th3_fsf_mak3s_th3_b3st_s0ftwar3_1dced559}",
+              "correct": true,
+              "historical": false
+            }
+          },
+          {
+            "challenge_id": 361,
+            "flag": "academy{WELCOME_TO_UNITY!!}",
+            "http": 201,
+            "correct": true,
+            "response": {
+              "user": 1072359,
+              "challenge": 361,
+              "flag": "academy{WELCOME_TO_UNITY!!}",
+              "correct": true,
+              "historical": false
+            }
+          },
+          {
+            "challenge_id": 362,
+            "flag": "academy{P64P_4N4L7S1S_SU55355FUL_7a51913b}",
+            "http": 201,
+            "correct": true,
+            "response": {
+              "user": 1072359,
+              "challenge": 362,
+              "flag": "academy{P64P_4N4L7S1S_SU55355FUL_7a51913b}",
+              "correct": true,
+              "historical": false
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "writeup_documentation_audit",
+      "description": "Validates existence, LKS structure, flag token accuracy, and zero em dash in writeups",
+      "status": "pass",
+      "pass": true,
+      "passed": true,
+      "details": {
+        "all_verified": true,
+        "files": [
+          {
+            "file": "writeups/picoCTF-2023/360-msfroggenerator2.md",
+            "challenge_id": 360,
+            "exists": true,
+            "flag_present": true,
+            "sections_present": true,
+            "missing_sections": [],
+            "anti_slop_clean": true,
+            "pass": true
+          },
+          {
+            "file": "writeups/picoCTF-2023/361-no-way-out.md",
+            "challenge_id": 361,
+            "exists": true,
+            "flag_present": true,
+            "sections_present": true,
+            "missing_sections": [],
+            "anti_slop_clean": true,
+            "pass": true
+          },
+          {
+            "file": "writeups/picoCTF-2023/362-pcap-poisoning.md",
+            "challenge_id": 362,
+            "exists": true,
+            "flag_present": true,
+            "sections_present": true,
+            "missing_sections": [],
+            "anti_slop_clean": true,
+            "pass": true
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -42,6 +42,15 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 212 (11 November 2026 - Traefik Parameter Pollution, Unity Scene Asset Carving & PCAP Stream Carving Sprint, 3/3 modul)
+| No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 360 | msfroggenerator2 | Web Exploitation | Hard | `academy{th3_fsf_mak3s_th3_b3st_s0ftwar3_1dced559}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis aplikasi microservices multi-container (OpenResty, Traefik, Puppeteer), eksploitasi HTTP Parameter Pollution titik koma pada Traefik (CWE-20), bypass origin sandbox Chromium via Data URI download stager ke `file:///root/Downloads/exploit.html`, dan pemanfaatan timing window race condition (CWE-362 / NIST SP 800-115 §4.2) untuk mengeksfiltrasi tangkapan layar `file:///flag.txt` ke `/api/reports/get`, kelanjutan audit event picoCTF 2023 (16/42), wrapper `academy{...}` valid | 2026-11-11 |
+| 2 | 361 | No way out | Reverse Engineering | Hard | `academy{WELCOME_TO_UNITY!!}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis game 3D Unity Engine mandiri (`win.zip`, password `picoctf`), identifikasi penyimpanan plaintext teks 3D pada serialisasi scene asset biner `pico_Data/level0` (CWE-312 / CWE-693 / NIST SP 800-115 §4.2), rekonstruksi pemulihan string `WELCOME_TO_UNITY!!` tanpa dekompilasi runtime, kelanjutan audit event picoCTF 2023 (17/42), wrapper `academy{...}` valid | 2026-11-11 |
+| 3 | 362 | PcapPoisoning | Forensics | Medium | `academy{P64P_4N4L7S1S_SU55355FUL_7a51913b}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis rekaman lalu lintas jaringan `trace.pcap`, identifikasi transmisi data sensitif tanpa enkripsi transport (CWE-319 / RFC 793 / NIST SP 800-115 §4.2), ekstraksi muatan segmen TCP paket #507 via regex carving byte stream secara instan, kelanjutan audit event picoCTF 2023 (18/42), wrapper `academy{...}` valid | 2026-11-11 |
+
+Temuan audit batch 212: (a) sinkronisasi sesi REST OK (`GET /api/challenges/?page_size=1` -> 200, user id 1072359); (b) kelanjutan audit event `picoCTF 2023` (18/42 modul) mencakup #360 msfroggenerator2, #361 No way out, dan #362 PcapPoisoning; (c) pengujian live REST API pada ketiga modul berhasil memperoleh status HTTP 201 Created dengan `correct: true`; (d) seluruh 3 skrip solver mandiri tuntas dieksekusi offline dan live, serta writeup LKS diperbarui lengkap; (e) test harness deterministik `scripts/test_batch_212_harness.py` meluluskan sweep AST 581/581 skrip, 3 solver mandiri, dan live API probe (PASS 6/6); (f) eksekusi terorkestrasi via AI Team & toolchain lokal.
+
 ### Batch 211 (11 November 2026 - Client-Side Regex Leakage, SQLite Authentication Bypass & PNG Most Significant Bit Extraction Sprint, 3/3 modul)
 | No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
