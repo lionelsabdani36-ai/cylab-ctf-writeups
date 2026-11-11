@@ -42,6 +42,15 @@ Repository dokumentasi pemecahan challenge, writeup teknis, dan pengembangan ski
 
 ## Log Tantangan Terselesaikan
 
+### Batch 211 (11 November 2026 - Client-Side Regex Leakage, SQLite Authentication Bypass & PNG Most Significant Bit Extraction Sprint, 3/3 modul)
+| No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | 356 | MatchTheRegex | Web Exploitation | Medium | `academy{succ3ssfully_matchtheregex_4d5352dc}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis kode sumber JavaScript validasi formulir klien `send_request()`, identifikasi pola regex bocor `^a.....y!?`, crafting parameter masukan query `academy` (panjang 7 karakter, anchor `^a` dan `y`), bypass verifikasi regex backend dan ekstraksi flag JSON (CWE-200 / CWE-20 / NIST SP 800-115 §4.2), kelanjutan audit event picoCTF 2023 (13/42), wrapper `academy{...}` valid | 2026-11-11 |
+| 2 | 358 | More SQLi | Web Exploitation | Medium | `academy{G3tting_5QL_1nJ3c7I0N_l1k3_y0u_sh0ulD_b5ff84c8}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis aplikasi web PHP basis data SQLite embedded, bypass otentikasi login via injeksi SQL boolean `' OR 1=1 -- `, enumerasi metadata skema internal via tabel `sqlite_master` untuk menemukan tabel rahasia `more_table`, dan eksfiltrasi data via UNION-based SQL Injection 3 kolom (CWE-89 / OWASP A03 / NIST SP 800-115 §4.2), kelanjutan audit event picoCTF 2023 (14/42), wrapper `academy{...}` valid | 2026-11-11 |
+| 3 | 359 | MSB | Forensics | Medium | `academy{15_y0ur_que57_qu1x071c_0r_h3r01c_80119e7f}` | **SOLVED (HTTP 201 Created, correct: true)** - Analisis citra grafis format PNG 24-bit 1074x1500 piksel, deteksi steganografi spasial bidang bit Most Significant Bit (MSB / bit 7) kanal RGB, rekonstruksi pembalikan filter scanline (RFC 2083 defiltering) prediktor Paeth murni Python, ekstraksi aliran bit sekuensial dan perakitan byte untuk pemulihan token (CWE-200 / CWE-532 / NIST SP 800-115 §4.2), kelanjutan audit event picoCTF 2023 (15/42), wrapper `academy{...}` valid | 2026-11-11 |
+
+Temuan audit batch 211: (a) sinkronisasi sesi REST OK (`GET /api/challenges/?page_size=1` -> 200, user id 1072359); (b) kelanjutan audit event `picoCTF 2023` (15/42 modul) mencakup #356 MatchTheRegex, #358 More SQLi, dan #359 MSB; (c) pengujian live REST API pada ketiga modul berhasil memperoleh status HTTP 201 Created dengan `correct: true`; (d) seluruh 3 skrip solver mandiri tuntas dieksekusi offline dan live, serta writeup LKS diperbarui lengkap; (e) test harness deterministik `scripts/test_batch_211_harness.py` meluluskan sweep AST 580/580 skrip, 3 solver mandiri, dan live API probe (PASS 6/6); (f) eksekusi terorkestrasi via AI Team & toolchain lokal.
+
 ### Batch 210 (11 November 2026 - Safe-Linking Heap Tcache GOT Overwrite, 16-Bit WORD Steganography & Spring Security JWT Forgery Sprint, 3/3 modul)
 | No | ID | Nama | Kategori | Diff | Token Terverifikasi | Status Live (POST /api/submissions/) | Tanggal |
 |:---|:---|:---|:---|:---|:---|:---|:---|
